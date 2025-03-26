@@ -1,0 +1,48 @@
+# befriend
+# alliance
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# contain
+# area_priority
+# declare_war
+
+FRA_lend_lease_for_bfa = {
+	allowed = { tag = FRA }
+	enable = {
+		BFA = {
+			has_completed_focus = BFA_protect_our_resources
+			NOT = { has_war_with = ROOT }
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = BFA value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = BFA value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = BFA value = 500 }
+}
+
+FRA_lend_lease_for_ngr = {
+	allowed = { tag = FRA }
+	enable = {
+		NGR = {
+			has_completed_focus = NGR_develop_relations_with_france
+			NOT = { has_war_with = ROOT }
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = NGR value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = NGR value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = NGR value = 500 }
+}

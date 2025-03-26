@@ -1,0 +1,110 @@
+bookmarks = {
+	bookmark = {
+		name = "AFRICAN_STORM_NAME"
+		desc = "AFRICAN_STORM_DESC"
+		date = 2020.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "MLI"
+		default = yes
+		"EQG" = {
+			history = "EQG_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+				EQG_dependence_on_oil_revenues_idea
+				EQG_mongomo_clan_idea
+				EQG_threat_of_a_coup_from_the_opposition_idea
+			}
+			focuses = {
+				EQG_country_of_the_hydrocarbon_miracle
+				EQG_return_what_is_rightfully_yours
+				EQG_construction_of_a_wall_along_the_border_with_cameroon
+			}
+		}
+		"CAR" = {
+			history = "CAR_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+				CAR_khartoum_agreement_idea
+				CAR_embargo_on_the_sale_of_diamonds_from_the_un_idea
+				CAR_weakness_of_the_armed_forces_idea
+			}
+			focuses = {
+				CAR_year_of_the_khartoum_accords
+				CAR_thwarting_the_bandits_plan
+				CAR_by_the_will_of_ngakola
+			}
+		}
+		"MLI" = {
+			history = "MLI_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+				MLI_ethnic_fragmentation_idea
+				MLI_algerian_peace_agreement_idea
+				MLI_legacy_of_colonialism_idea
+			}
+			focuses = {
+				MLI_go_with_the_flow
+				MLI_cancellation_of_the_second_round
+				MLI_goita_revolution	
+			}
+		}
+		"BFA" = {
+			history = "BFA_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+				BFA_balai_citoyen_idea
+				BFA_protracted_war_idea
+				BFA_volunteers_for_the_defense_of_the_motherland_idea
+			}
+			focuses = {
+				BFA_christian_cabor_second_term
+				BFA_paul_henri_sandaogo_damiba
+				BFA_homeland_or_death
+			}
+		}
+		"NGR" = {
+			history = "NGR_STORM_DESC"
+			ideology = social_democracy
+			ideas = {
+				NGR_protracted_war_idea
+				NGR_movement_for_the_democratic_revolution_idea
+				NGR_disparity_between_the_center_and_the_outskirts_idea
+			}
+			focuses = {
+				NGR_new_gendarme_of_the_sahel
+				NGR_soft_authoritarianism
+				NGR_establishment_of_chiani_power
+			}
+		}
+		"GNA" = {
+			history = "GNA_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"LBY" = {
+			history = "LBY_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"SEN" = {
+			history = "SEN_STORM_DESC"
+			ideology = centrism 
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		effect = {
+			# <- Obligatory in every bookmark !
+			randomize_weather = 12345
+			#123 = { rain_light = yes }
+		}
+	}
+}

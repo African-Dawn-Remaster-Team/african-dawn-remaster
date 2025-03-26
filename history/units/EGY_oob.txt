@@ -1,0 +1,509 @@
+division_template = {
+	name = "Infantry Brigade"
+	priority = 1
+	regiments={
+		Infantry = { x=0 y=0 }
+		Infantry = { x=0 y=1 }
+		Infantry = { x=0 y=2 }
+		Infantry = { x=1 y=0 }
+		Infantry = { x=1 y=1 }
+		Infantry = { x=1 y=2 }
+		Infantry = { x=2 y=0 }
+		Infantry = { x=2 y=1 }
+		Infantry = { x=2 y=2 }
+	}
+}
+
+division_template = {
+	name = "Light Infantry Brigade"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck = { x=0 y=0 }
+		light_infantry_opol_on_guntruck = { x=0 y=1 }
+		light_infantry_opol_on_guntruck = { x=0 y=2 }
+		light_infantry_opol_on_guntruck = { x=1 y=0 }
+		light_infantry_opol_on_guntruck = { x=1 y=1 }
+		light_infantry_opol_on_guntruck = { x=1 y=2 }
+		light_infantry_opol_on_guntruck = { x=2 y=0 }
+		light_infantry_opol_on_guntruck = { x=2 y=1 }
+		light_infantry_opol_on_guntruck = { x=2 y=2 }
+	}
+}
+
+division_template = {
+	name = "Airborne forces"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+		speznaz = { x=1 y=0 }
+		speznaz = { x=1 y=1 }
+		speznaz = { x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Armoured Recce Regiment"
+	priority = 1
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=0 y=4 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Mechanised Brigade"
+	priority = 1
+	regiments={
+		medium_armor_unit ={ x=0 y=0 }
+		medium_armor_unit ={ x=0 y=1 }
+		medium_armor_unit ={ x=0 y=2 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Motorised Brigade"
+	priority = 1
+	regiments={
+		infantry_on_truck ={ x=0 y=0 }
+		infantry_on_truck ={ x=0 y=1 }
+		infantry_on_truck ={ x=0 y=2 }
+		infantry_on_truck ={ x=0 y=3 }
+		infantry_on_truck ={ x=0 y=4 }
+		infantry_on_truck={ x=1 y=0 }
+		infantry_on_truck={ x=1 y=1 }
+		infantry_on_truck={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Mechanised Brigade"
+		location = 3369
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Infantry Brigade"
+		location = 3369
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

@@ -1,0 +1,19 @@
+state={
+	id=150
+	name="STATE_150"
+	provinces={
+		50 777 877 978 1095 1189 1199 1304 1406 1574 1584 1585 1630 1710 1871 1964 2036 2050 2060 2209 2250 2619 2717 2783 3017 3020 3127 3436 3445 3450 3455 3470 5048 5059 
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 1585 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=26207
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

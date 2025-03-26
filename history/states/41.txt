@@ -1,0 +1,18 @@
+state={
+	id=41
+	name="STATE_41"
+	provinces={
+		3921 
+	}
+	history={
+		owner = SNT
+		add_core_of = SNT
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=31856
+	buildings_max_level_factor=1.000
+	state_category=tiny_island
+	local_supplies=0.000
+}

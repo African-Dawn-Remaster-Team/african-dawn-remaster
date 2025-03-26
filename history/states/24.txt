@@ -1,0 +1,27 @@
+
+state={
+	id=24
+	name="STATE_24"
+	provinces={
+		74 759 3135 3851 3852 3853 3854 3855 3856 
+	}
+	resources = {
+		oil = 16
+	}
+	history={
+		owner = EQG
+		add_core_of = EQG
+		victory_points = { 3854 10 }
+		victory_points = { 3851 5 }
+		victory_points = { 759 5 }
+		buildings = {
+			infrastructure = 2
+			3854 = { naval_base = 3 }
+			3855 = { dam = 1 }
+		}
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

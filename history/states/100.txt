@@ -1,0 +1,26 @@
+state={
+	id=100
+	name="STATE_100"
+	provinces={
+		215 229 348 521 795 926 982 1285 1380 1757 1916 1936 2077 2103 2263 2408 2439 2793 2837 3302 3717 3722 3723 3729 4668 4671 4674 4675 4678 4680 4681 4685 4686 4691 
+	}
+	resources = {
+		diamond = 4
+	}
+	history={
+		owner = IVO
+		add_core_of = IVO
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+		}
+		victory_points = { 4668 5 }
+		victory_points = { 2263 3 }
+		victory_points = { 2077 3 }
+		victory_points = { 1285 3 }
+	}
+	manpower=4930622
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

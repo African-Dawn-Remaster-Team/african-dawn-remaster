@@ -1,0 +1,59 @@
+capital = 29
+# set_oob = "_GENERIC_OOB"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+}
+
+recruit_character = UGA_Yoweri_Museveni
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 91
+	social_democracy = 9
+}
+
+set_variable = { AD_fog_source_of_power = 1 }
+set_variable = { AD_fog_power_structure = 0 }
+
+create_dynamic_country = {
+	original_tag = UGA
+	copy_tag = UGA
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = UGA_lord_resistance_army
+	set_popularities = { centrism = 100 }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_country_flag = militia_bandits
+	recruit_character = UGA_Joseph_Kony
+	recruit_character = UGA_Doctor_Achaye
+	promote_character = UGA_Joseph_Kony
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		UGA_lord_resistance_army_idea
+		AD_lack_of_social_programs
+	}
+	
+	transfer_state = 77
+	transfer_state = 193
+	transfer_state = 194
+	77 = { add_core_of = PREV }
+	193 = { add_core_of = PREV }
+	194 = { add_core_of = PREV }
+	
+	set_oob = "LRA_oob"
+
+	declare_war_on = { target = UGA type = civil_war }
+	add_civil_war_target = UGA
+	UGA = { add_civil_war_target = PREV }
+}
+
+set_convoys = 3
+starting_train_buffer = 5
+
+set_research_slots = 2
+set_stability = -0.93
+set_war_support = -0.67

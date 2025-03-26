@@ -1,0 +1,529 @@
+#################################
+### Generic scripted effects ####
+#################################
+
+AD_check_political_situation_effect = {
+	clamp_variable = { var = AD_fo_position min = -1 max = 1 }
+	
+	set_temp_variable = { discount = AD_fo_position }
+	multiply_temp_variable = { discount = 0.25 }
+	#
+	set_variable = { AD_m_discount@RUS = 0 }
+	set_variable = { AD_m_discount@FRA = 0 } # TODO мб инвертировать знак, чтобы было проще в локе?
+	add_to_variable = { AD_m_discount@RUS = discount } # если значение >0, скидка увеличивается, если отрицательна - уменьшается
+	subtract_from_variable = { AD_m_discount@FRA = discount } # если значение >0, скидка уменьшается, если отрицательна - увеличивается 
+	
+	add_to_variable = { AD_market_gui_update = 1 }
+	
+	# TODO наверно это можно упростить?
+	set_temp_variable = { rus_discount = position_change }
+	multiply_temp_variable = { rus_discount = -0.25 }
+	set_temp_variable = { fra_discount = position_change }
+	multiply_temp_variable = { fra_discount = 0.25 }
+	custom_effect_tooltip = {
+		localization_key = AD_fo_position_discount_effect_tt
+		RUS_DISC = AD_market_discount_RUS_tt
+		FRA_DISC = AD_market_discount_FRA_tt
+	}
+}
+
+corruption_grow = {
+	if = {
+		limit = {
+			has_idea = low_corruption
+		}
+		swap_ideas = {
+			add_idea = med_corruption
+			remove_idea = low_corruption
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = med_corruption
+		}
+		swap_ideas = {
+			add_idea = high_corruption
+			remove_idea = med_corruption
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_corruption
+		}
+		swap_ideas = {
+			add_idea = extr_corruption
+			remove_idea = high_corruption
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = extr_corruption
+		}
+		add_political_power = -50
+	}
+}
+
+corruption_low = {
+	if = {
+		limit = {
+			has_idea = extr_corruption
+		}
+		swap_ideas = {
+			add_idea = high_corruption
+			remove_idea = extr_corruption
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_corruption
+		}
+		swap_ideas = {
+			add_idea = med_corruption
+			remove_idea = high_corruption
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = med_corruption
+		}
+		swap_ideas = {
+			add_idea = low_corruption
+			remove_idea = med_corruption
+		}
+	}
+}
+
+AD_social_security_grow_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_welfare_state } }
+		if = {
+			limit = { has_idea = AD_lack_of_social_programs }
+			swap_ideas = {
+				remove_idea = AD_lack_of_social_programs
+				add_idea = AD_very_low_social_investments
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_lack_of_social_programs, added idea AD_very_low_social_investments"
+		}
+		else_if = {
+			limit = { has_idea = AD_very_low_social_investments }
+			swap_ideas = {
+				remove_idea = AD_very_low_social_investments
+				add_idea = AD_low_social_investments
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_very_low_social_investments, added idea AD_low_social_investments"
+		}
+		else_if = {
+			limit = { has_idea = AD_low_social_investments }
+			swap_ideas = {
+				remove_idea = AD_low_social_investments
+				add_idea = AD_acceptable_social_investments
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_low_social_investments, added idea AD_acceptable_social_investments"
+		}
+		else_if = {
+			limit = { has_idea = AD_acceptable_social_investments }
+			swap_ideas = {
+				remove_idea = AD_acceptable_social_investments
+				add_idea = AD_average_social_investments
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_acceptable_social_investments, added idea AD_average_social_investments"
+		}
+		else_if = {
+			limit = { has_idea = AD_average_social_investments }
+			swap_ideas = {
+				remove_idea = AD_average_social_investments
+				add_idea = AD_significant_social_investments
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_average_social_investments, added idea AD_significant_social_investments"
+		}
+		else_if = {
+			limit = { has_idea = AD_significant_social_investments }
+			swap_ideas = {
+				remove_idea = AD_significant_social_investments
+				add_idea = AD_high_social_investments
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_significant_social_investments, added idea AD_high_social_investments"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_high_social_investments
+				add_idea = AD_welfare_state
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_high_social_investments, added idea AD_welfare_state"
+		}
+	}
+}
+
+AD_poverty_level_grow_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_almost_a_european_society } }
+		if = {
+			limit = { has_idea = AD_appalling_poverty }
+			swap_ideas = {
+				remove_idea = AD_appalling_poverty
+				add_idea = AD_poverty
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_appalling_poverty, added idea AD_poverty"
+		}
+		else_if = {
+			limit = { has_idea = AD_poverty }
+			swap_ideas = {
+				remove_idea = AD_poverty
+				add_idea = AD_poorness
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_poverty, added idea AD_poorness"
+		}
+		else_if = {
+			limit = { has_idea = AD_poorness }
+			swap_ideas = {
+				remove_idea = AD_poorness
+				add_idea = AD_difficulties_with_average_income
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_poorness, added idea AD_difficulties_with_average_income"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_difficulties_with_average_income
+				add_idea = AD_almost_a_european_society
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_difficulties_with_average_income, added idea AD_almost_a_european_society"
+		}
+	}
+}
+
+AD_poverty_level_down_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_appalling_poverty } }
+		if = {
+			limit = { has_idea = AD_almost_a_european_society }
+			swap_ideas = {
+				remove_idea = AD_almost_a_european_society
+				add_idea = AD_difficulties_with_average_income
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_almost_a_european_society, added idea AD_difficulties_with_average_income"
+		}
+		else_if = {
+			limit = { has_idea = AD_difficulties_with_average_income }
+			swap_ideas = {
+				remove_idea = AD_difficulties_with_average_income
+				add_idea = AD_poorness
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_difficulties_with_average_income, added idea AD_poorness"
+		}
+		else_if = {
+			limit = { has_idea = AD_poorness }
+			swap_ideas = {
+				remove_idea = AD_poorness
+				add_idea = AD_poverty
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_poorness, added idea AD_poverty"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_poverty
+				add_idea = AD_appalling_poverty
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_poverty, added idea AD_appalling_poverty"
+		}
+	}
+}
+
+AD_unemployment_rate_level_grow_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_widespread_unemployment } }
+		if = {
+			limit = { has_idea = AD_low_unemployment }
+			swap_ideas = {
+				remove_idea = AD_low_unemployment
+				add_idea = AD_average_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_low_unemployment, added idea AD_average_unemployment"
+		}
+		else_if = {
+			limit = { has_idea = AD_average_unemployment }
+			swap_ideas = {
+				remove_idea = AD_average_unemployment
+				add_idea = AD_extensive_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_average_unemployment, added idea AD_extensive_unemployment"
+		}
+		else_if = {
+			limit = { has_idea = AD_extensive_unemployment }
+			swap_ideas = {
+				remove_idea = AD_extensive_unemployment
+				add_idea = AD_high_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_extensive_unemployment, added idea AD_high_unemployment"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_high_unemployment
+				add_idea = AD_widespread_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_high_unemployment, added idea AD_widespread_unemployment"
+		}
+	}
+}
+
+AD_unemployment_rate_level_down_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_low_unemployment } }
+		if = {
+			limit = { has_idea = AD_widespread_unemployment }
+			swap_ideas = {
+				remove_idea = AD_widespread_unemployment
+				add_idea = AD_high_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_widespread_unemployment, added idea AD_high_unemployment"
+		}
+		else_if = {
+			limit = { has_idea = AD_high_unemployment }
+			swap_ideas = {
+				remove_idea = AD_high_unemployment
+				add_idea = AD_extensive_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_high_unemployment, added idea AD_extensive_unemployment"
+		}
+		else_if = {
+			limit = { has_idea = AD_extensive_unemployment }
+			swap_ideas = {
+				remove_idea = AD_extensive_unemployment
+				add_idea = AD_average_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_extensive_unemployment, added idea AD_average_unemployment"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_average_unemployment
+				add_idea = AD_low_unemployment
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_average_unemployment, added idea AD_low_unemployment"
+		}
+	}
+}
+
+AD_society_development_level_grow_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_stable_state_apparatus } }
+		if = {
+			limit = { has_idea = AD_chaotic_orders }
+			swap_ideas = {
+				remove_idea = AD_chaotic_orders
+				add_idea = AD_weak_state_apparatus
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_chaotic_orders, added idea AD_weak_state_apparatus"
+		}
+		else_if = {
+			limit = { has_idea = AD_weak_state_apparatus }
+			swap_ideas = {
+				remove_idea = AD_weak_state_apparatus
+				add_idea = AD_moving_towards_progress
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_weak_state_apparatus, added idea AD_moving_towards_progress"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_moving_towards_progress
+				add_idea = AD_stable_state_apparatus
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_moving_towards_progress, added idea AD_stable_state_apparatus"
+		}
+	}
+}
+
+AD_society_development_level_down_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_chaotic_orders } }
+		if = {
+			limit = { has_idea = AD_stable_state_apparatus }
+			swap_ideas = {
+				remove_idea = AD_stable_state_apparatus
+				add_idea = AD_moving_towards_progress
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_stable_state_apparatus, added idea AD_moving_towards_progress"
+		}
+		else_if = {
+			limit = { has_idea = AD_moving_towards_progress }
+			swap_ideas = {
+				remove_idea = AD_moving_towards_progress
+				add_idea = AD_weak_state_apparatus
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_moving_towards_progress, added idea AD_weak_state_apparatus"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_weak_state_apparatus
+				add_idea = AD_chaotic_orders
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_weak_state_apparatus, added idea AD_chaotic_orders"
+		}
+	}
+}
+
+AD_food_supply_level_grow_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_three_meals_a_day_for_the_majority_of_the_population } }
+		if = {
+			limit = { has_idea = AD_total_hunger }
+			swap_ideas = {
+				remove_idea = AD_total_hunger
+				add_idea = AD_hunger
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_total_hunger, added idea AD_hunger"
+		}
+		else_if = {
+			limit = { has_idea = AD_hunger }
+			swap_ideas = {
+				remove_idea = AD_hunger
+				add_idea = AD_problems_with_nutrition_in_the_majority_of_the_population
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_hunger, added idea AD_problems_with_nutrition_in_the_majority_of_the_population"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_problems_with_nutrition_in_the_majority_of_the_population
+				add_idea = AD_three_meals_a_day_for_the_majority_of_the_population
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_problems_with_nutrition_in_the_majority_of_the_population, added idea AD_three_meals_a_day_for_the_majority_of_the_population"
+		}
+	}
+}
+
+AD_food_supply_level_down_effect = {
+	if = {
+		limit = { NOT = { has_idea = AD_total_hunger } }
+		if = {
+			limit = { has_idea = AD_three_meals_a_day_for_the_majority_of_the_population }
+			swap_ideas = {
+				remove_idea = AD_three_meals_a_day_for_the_majority_of_the_population
+				add_idea = AD_problems_with_nutrition_in_the_majority_of_the_population
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_three_meals_a_day_for_the_majority_of_the_population, added idea AD_problems_with_nutrition_in_the_majority_of_the_population"
+		}
+		else_if = {
+			limit = { has_idea = AD_problems_with_nutrition_in_the_majority_of_the_population }
+			swap_ideas = {
+				remove_idea = AD_problems_with_nutrition_in_the_majority_of_the_population
+				add_idea = AD_hunger
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_problems_with_nutrition_in_the_majority_of_the_population, added idea AD_hunger"
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = AD_hunger
+				add_idea = AD_total_hunger
+			}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): removed idea AD_hunger, added idea AD_total_hunger"
+		}
+	}
+}
+
+AD_political_regime_update = {
+	if = {
+		limit = { has_country_leader_ideology = conservatism_subtype_conservatism }
+		if = {
+			limit = { check_variable = { AD_fog_source_of_power = 0 } }
+			set_country_leader_ideology = conservatism_subtype_conservative_democracy
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 1 } }
+			random_list = {
+				1 = { set_country_leader_ideology = conservatism_subtype_paternalism }
+				1 = { set_country_leader_ideology = conservatism_subtype_oligarchic_conservatism }
+			}
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 2 } }
+			set_country_leader_ideology = conservatism_subtype_despotism
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 3 } } # не предполагается
+			set_country_leader_ideology = conservatism_subtype_anarchy
+		}
+	}
+	else_if = {
+		limit = { has_country_leader_ideology = centrism_subtype_centrism }
+		if = {
+			limit = { check_variable = { AD_fog_source_of_power = 0 } }
+			set_country_leader_ideology = centrism_subtype_right_wing_populism
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 1 } }
+			set_country_leader_ideology = centrism_subtype_anocracy
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 2 } }
+			set_country_leader_ideology = centrism_subtype_personalist_dictatorship
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 3 } }
+			set_country_leader_ideology = centrism_subtype_irregular_organization # centrism_subtype_tribalism
+		}
+	}
+	else_if = {
+		limit = { has_country_leader_ideology = liberalism_subtype_liberalism }
+		if = {
+			limit = { check_variable = { AD_fog_source_of_power = 0 } }
+			random_list = {
+				1 = { set_country_leader_ideology = liberalism_subtype_liberal_democracy }
+				1 = { set_country_leader_ideology = liberalism_subtype_market_liberalism }
+			}
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 1 } }
+			random_list = {
+				1 = { set_country_leader_ideology = liberalism_subtype_national_liberalism }
+				1 = { set_country_leader_ideology = liberalism_subtype_conservative_liberalism }
+			}
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 2 } }
+			set_country_leader_ideology = liberalism_subtype_authoritarian_democracy
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 3 } }
+			set_country_leader_ideology = liberalism_subtype_anarcho_capitalism
+		}
+	}
+	else_if = {
+		limit = { has_country_leader_ideology = social_democracy_subtype_social_democracy }
+		if = {
+			limit = { check_variable = { AD_fog_source_of_power = 0 } }
+			set_country_leader_ideology = social_democracy_subtype_social_democracy
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 1 } }
+			set_country_leader_ideology = social_democracy_subtype_left_wing_populism
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 2 } }
+			set_country_leader_ideology = social_democracy_subtype_african_socialism
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 3 } } # не предполагается
+			set_country_leader_ideology = social_democracy_subtype_anarchy
+		}
+	}
+	else_if = {
+		limit = { has_country_leader_ideology = socialism_subtype_socialism }
+		if = {
+			limit = { check_variable = { AD_fog_source_of_power = 0 } }
+			random_list = {
+				1 = { set_country_leader_ideology = socialism_subtype_socialism }
+				1 = { set_country_leader_ideology = socialism_subtype_african_socialism }
+			}
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 1 } }
+			set_country_leader_ideology = socialism_subtype_left_wing_nationalism
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 2 } }
+			set_country_leader_ideology = socialism_subtype_totalitarian_socialism
+		}
+		else_if = {
+			limit = { check_variable = { AD_fog_source_of_power = 3 } }
+			set_country_leader_ideology = socialism_subtype_anarcho_communism
+		}
+	}
+}

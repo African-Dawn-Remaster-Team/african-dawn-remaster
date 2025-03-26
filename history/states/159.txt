@@ -1,0 +1,27 @@
+state={
+	id=159
+	name="STATE_159"
+	provinces={
+		172 260 286 353 492 703 865 887 1219 2052 2510 2563 2651 3090 3203 3370 3375 5082 5091 5092 5095 5096 5099 5102 5103 5106 
+	}
+	resources = {
+		oil = 24
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 5106 5 }
+		victory_points = { 5095 3 }
+		victory_points = { 5102 3 }
+		victory_points = { 5096 3 }
+		victory_points = { 260 3 }
+		victory_points = { 887 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=304159
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

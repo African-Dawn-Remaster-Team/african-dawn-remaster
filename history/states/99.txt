@@ -1,0 +1,29 @@
+state={
+	id=99
+	name="STATE_99"
+	provinces={
+		59 95 421 453 457 904 1069 1227 1372 1698 1720 1924 2444 2866 3022 3093 3152 3300 3757 4640 4643 4645 
+	}
+	resources = {
+		steel = 4
+		aluminium = 4 #Nickel&Cobalt
+		diamond = 4
+		oil = 8
+	}
+	history={
+		owner = IVO
+		add_core_of = IVO
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			1372 = { naval_base = 1 }
+		}
+		victory_points = { 1372 5 }
+		victory_points = { 95 3 }
+		victory_points = { 421 3 }
+	}
+	manpower=10523515
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

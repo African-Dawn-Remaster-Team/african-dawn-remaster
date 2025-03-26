@@ -1,0 +1,18 @@
+characters = {
+
+	TUR_Hulusi_Akar = {
+		name = TUR_Hulusi_Akar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_Hulusi_Akar.dds"
+			}
+			army = {
+				large = "gfx/leaders/TUR/TUR_Hulusi_Akar.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_TUR_HULUSI_AKAR_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

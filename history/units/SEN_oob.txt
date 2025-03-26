@@ -1,0 +1,136 @@
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon commando"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+		speznaz = { x=1 y=0 }
+		speznaz = { x=1 y=1 }
+		speznaz = { x=1 y=2 }
+		speznaz = { x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Bataillon motorisé"
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=0 y=4 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "22 Bataillon motorisé"
+		location = 1242
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "24 Bataillon motorisé"
+		location = 4614
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "25 Bataillon motorisé"
+		location = 4613
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "Bataillon de reconnaissance et d'Appui"
+		location = 1667
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "3rd Bataillon d'infanterie"
+		location = 2382
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "4th Bataillon d'infanterie"
+		location = 4612
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "6th Bataillon d'infanterie"
+		location = 3614
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "12th Bataillon d'infanterie"
+		location = 4630
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "1st Bataillon commando"
+		location = 1062
+		division_template = "Bataillon commando"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+}

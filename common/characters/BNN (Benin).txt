@@ -1,0 +1,18 @@
+characters = {
+
+	BNN_Patrice_Talon = {
+		name = BNN_Patrice_Talon
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BNN/BNN_Patrice_Talon.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PATRICE_TALON_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

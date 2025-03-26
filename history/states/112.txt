@@ -1,0 +1,25 @@
+state={
+	id=112
+	name="STATE_112"
+	provinces={
+		65 91 168 270 297 410 643 859 927 955 1089 1397 1525 1546 1564 1565 1620 1738 1748 1894 1985 2020 2023 2039 2086 2088 2099 2192 2207 2325 2331 2357 2377 2422 2674 2682 2804 2849 2883 2972 2999 3030 3238 3595 3601 3604 3612 3617 3618 3622 3624 3632 4805 4832 4834 4835 4836 4837 4838 
+	}
+	resources = {
+		oil = 8
+	}
+	history={
+		owner = CHA
+		add_core_of = CHA
+		victory_points = { 2039 3 }
+		victory_points = { 1894 5 }
+		victory_points = { 1546 3 }
+		buildings = {
+			infrastructure = 2
+			air_base = 4
+		}
+	}
+	manpower=1841386
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

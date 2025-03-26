@@ -1,0 +1,158 @@
+focus = {
+	current = "NGR_mahamadou_issoufou_last_term"
+	progress = 1
+}
+
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon motorisé"
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=1 y=0 }
+		infantry_on_jeep={ x=1 y=1 }
+		infantry_on_jeep={ x=1 y=2 }
+		infantry_on_jeep={ x=1 y=3 }
+	}
+}
+#the following combined arms battalions existed in the Niger Army: 12th, 13th, 22nd, 23rd, 24th, 32nd, 33rd, 42nd, 43rd, 52nd, 53rd, 62nd, 63rd, 72nd and 73rd.
+units = {
+	division= {	
+		name = "12e bataillon d'infanterie interarmes"
+		location = 1545
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "13e bataillon d'infanterie interarmes"
+		location = 1538
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "22e bataillon d'infanterie interarmes"
+		location = 258
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "23e bataillon d'infanterie interarmes"
+		location = 2677
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "24e bataillon d'infanterie interarmes"
+		location = 760
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "32e bataillon d'infanterie interarmes"
+		location = 740
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "33e bataillon d'infanterie interarmes"
+		location = 232
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "42e bataillon d'infanterie interarmes"
+		location = 4868
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "43e bataillon d'infanterie interarmes"
+		location = 4868
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "52e bataillon d'infanterie interarmes"
+		location = 697
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "53e bataillon d'infanterie interarmes"
+		location = 156
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "62e bataillon d'infanterie interarmes"
+		location = 645
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "63e bataillon d'infanterie interarmes"
+		location = 3627
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "72e bataillon d'infanterie interarmes"
+		location = 1499
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "73e bataillon d'infanterie interarmes"
+		location = 3283
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.61
+	}
+}

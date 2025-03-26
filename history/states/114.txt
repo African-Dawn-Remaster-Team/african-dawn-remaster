@@ -1,0 +1,20 @@
+state={
+	id=114
+	name="STATE_114"
+	provinces={
+		27 190 321 331 753 921 925 952 967 1061 1063 1072 1097 1317 1488 1516 1547 1632 1634 1727 1745 2165 2186 2274 2370 2413 2473 2516 2676 2700 2807 2995 3046 3082 3305 3557 3588 3590 3597 4842 4843 4844 4853 
+	}
+	history={
+		owner = MRT
+		add_core_of = MRT
+		victory_points = { 921 5 }
+		victory_points = { 925 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=2166530
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

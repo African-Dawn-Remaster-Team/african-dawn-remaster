@@ -1,0 +1,226 @@
+
+division_template = {
+	name = "Infantry Battalion"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=2 y=0 }
+		light_infantry_opol={ x=2 y=1 }
+		light_infantry_opol={ x=2 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+	}
+}
+
+division_template = {
+	name = "Presidential Guard"
+
+	regiments={
+		speznaz={ x=0 y=0 }
+		speznaz={ x=0 y=1 }
+		speznaz={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Inter-Arms Regiment"
+
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry_on_btr={ x=0 y=2 }
+		light_armor_unit={ x=0 y=3 }
+		light_infantry_opol_on_guntruck={ x=1 y=0 }
+		light_infantry_opol_on_guntruck={ x=1 y=1 }
+		light_infantry_opol_on_guntruck={ x=1 y=2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "National Gendarmerie"
+
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+		light_infantry_opol_on_guntruck={ x=0 y=3 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Libyan Presidential Guard"
+		location = 5111
+		division_template = "Presidential Guard"
+		start_experience_factor = 0.66
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "Al-Ghiran Brigade"
+		location = 409
+		division_template = "Inter-Arms Regiment"
+		start_experience_factor = 0.31
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Al-Ghiran Brigade"
+		location = 5098
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Al-Sumood Brigade"
+		location = 664
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.41
+	}
+	division= {	
+		name = "Al-Mahjoob Brigade"
+		location = 768
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.44
+	}
+	division= {	
+		name = "Nimr Brigade"
+		location = 2599
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "Asswehly Brigade"
+		location = 744
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.51
+	}
+	division= {	
+		name = "Shahid Brigade"
+		location = 1716
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "Aswid Brigade"
+		location = 5106
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Al-Horia Brigade"
+		location = 5110
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "Arise Brigade"
+		location = 5114
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.23
+	}
+	division= {	
+		name = "Al-Nasr Unit"
+		location = 3184
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.21
+	}
+	division= {	
+		name = "Lions of the Valley Brigade"
+		location = 5058
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.64
+	}
+	division= {	
+		name = "604th Infantry Battalion "
+		location = 3184
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.34
+	}
+	division= {	
+		name = "Sirte Protection and Security Force"
+		location = 3184
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.44
+	}
+	division= {	
+		name = "The Lightning Bolt Brigade"
+		location = 5102
+		division_template = "Inter-Arms Regiment"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "The Qaaqaa Brigade"
+		location = 5096
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.21
+		start_equipment_factor = 0.73
+	}
+	division= {	
+		name = "The Civic Brigade"
+		location = 2176
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.16
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Libya Shield Force"
+		location = 353
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "Sabratha Revolutionary Brigades"
+		location = 3068
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.16
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "4th Brigade"
+		location = 1676
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.57
+	}
+	division= {	
+		name = "7th al-Kaniyat Brigade"
+		location = 5097
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.21
+		start_equipment_factor = 0.71
+	}
+	division= {	
+		name = "301rd Halboos Infantry Battalion"
+		location = 187
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.21
+		start_equipment_factor = 0.71
+	}
+	division= {	
+		name = "Special Deterrence Force"
+		location = 5111
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.88
+	}
+}

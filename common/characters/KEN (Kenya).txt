@@ -1,0 +1,32 @@
+characters = {
+	KEN_Uhuru_Kenyatta = {
+		name = KEN_Uhuru_Kenyatta
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KEN/KEN_Uhuru_Kenyatta.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_UHURU_KENYATTA_DESC"
+			ideology = conservatism_subtype_christian_democracy
+		}
+	}
+	KEN_William_Ruto = {
+		name = KEN_William_Ruto
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KEN/KEN_William_Ruto.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WILLIAM_RUTO_DESC"
+			ideology = liberalism_subtype_liberal_democracy
+		}
+	}
+}

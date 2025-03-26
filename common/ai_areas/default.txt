@@ -1,0 +1,19 @@
+areas = {
+	africa = {
+		continents = {
+			africa
+		}
+	}
+	west_libya = {
+		strategic_regions = {
+			15
+			14
+		}
+	}
+	east_libya = {
+		strategic_regions = {
+			13
+			14
+		}
+	}
+}

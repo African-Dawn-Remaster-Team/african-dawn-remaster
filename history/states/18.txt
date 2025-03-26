@@ -1,0 +1,31 @@
+
+state={
+	id=18
+	name="STATE_18"
+	provinces={
+		173 218 512 563 618 668 672 1268 1390 1640 1647 1817 2115 2625 2673 2726 2787 3051 3255 3317 3321 3330 3336 3339 5122 5123 5125 5126 
+	}
+	resources = {
+		steel = 20
+		oil = 4
+	}
+	history={
+		owner = ALG
+		add_core_of = ALG
+		victory_points = { 5125 15 }
+		victory_points = { 563 3 }
+		victory_points = { 173 3 }
+		victory_points = { 3317 3 }
+		victory_points = { 672 3 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 3
+			5125 = { naval_base = 3 }
+		}
+	}
+	manpower=17161877
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

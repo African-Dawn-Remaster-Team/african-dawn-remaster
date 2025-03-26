@@ -1,0 +1,24 @@
+
+state={
+	id=47
+	name="STATE_47"
+	provinces={
+		1754 1892 2608 2797 3273 3726 3902 
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 3902 5 }
+		victory_points = { 3273 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=155517
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

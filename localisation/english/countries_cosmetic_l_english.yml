@@ -1,0 +1,92 @@
+﻿l_english:
+ CAR_anti_balaka: "Anti-Balaka"
+ CAR_anti_balaka_DEF: "Anti-Balaka"
+ CAR_anti_balaka_ADJ: "Anti-Balaka"
+
+ CAR_return_recovery_rehabilitation: "Return, Reclamation, Rehabilitation"
+ CAR_return_recovery_rehabilitation_DEF: "3R"
+ CAR_return_recovery_rehabilitation_ADJ: "3R"
+
+ CAR_central_african_peace_union: "Union for Peace in the Central African Republic"
+ CAR_central_african_peace_union_DEF: "UPC"
+ CAR_central_african_peace_union_ADJ: "UPC"
+
+ CAR_people_front_for_the_rebirth_of_central_africa: "Popular Front for the Rebirth of Central African Republic"
+ CAR_people_front_for_the_rebirth_of_central_africa_DEF: "FPRC"
+ CAR_people_front_for_the_rebirth_of_central_africa_ADJ: "FPRC"
+
+ CAR_movement_of_patriots_of_central_africa: "Central African Patriotic Movement"
+ CAR_movement_of_patriots_of_central_africa_DEF: "MPC"
+ CAR_movement_of_patriots_of_central_africa_ADJ: "MPC"
+
+ CAR_patriotic_movement_for_the_renewal_of_central_africa: "Patriotic Rally for the Renewal of the Central African Republic "
+ CAR_patriotic_movement_for_the_renewal_of_central_africa_DEF: "RPRC"
+ CAR_patriotic_movement_for_the_renewal_of_central_africa_ADJ: "RPRC"
+
+ CAR_party_of_the_rally_of_the_central_african_nation: "Party of the Rally of the Central African Nation"
+ CAR_party_of_the_rally_of_the_central_african_nation_DEF: "PRNC"
+ CAR_party_of_the_rally_of_the_central_african_nation_ADJ: "PRNC"
+
+ CAR_liberation_movement_for_justice_of_central_africa: "Movement of Central African Liberators for Justice"
+ CAR_liberation_movement_for_justice_of_central_africa_DEF: "MLCJ"
+ CAR_liberation_movement_for_justice_of_central_africa_ADJ: "MLCJ"
+
+ UGA_lord_resistance_army: "Lord's Resistance Army"
+ UGA_lord_resistance_army_DEF: "Lord's Resistance Army"
+ UGA_lord_resistance_army_ADJ: "LRA"
+
+ CAR_misseriya_arabs: "Misseriya Arabs"
+ CAR_misseriya_arabs_DEF: "Misseriya Arabs"
+ CAR_misseriya_arabs_ADJ: "Misseriya"
+
+ CAR_azande_militia: "Azande Militia"
+ CAR_azande_militia_DEF: "Azande Militia"
+ CAR_azande_militia_ADJ: "Azande."
+
+ AMB: "Federal Republic of Ambazonia"
+ AMB_DEF: "Federal Republic of Ambazonia"
+ AMB_ADJ: "Ambazonian"
+
+ NGA_islamic_state_west_africa_province: "Islamic State - West Africa Province"
+ NGA_islamic_state_west_africa_province_DEF: "ISWAP"
+ NGA_islamic_state_west_africa_province_ADJ: "ISWAP"
+
+ CHA_front_for_change_and_concord_in_chad: "Front for Change and Concord in Chad"
+ CHA_front_for_change_and_concord_in_chad_DEF: "Chad"
+ CHA_front_for_change_and_concord_in_chad_ADJ: "Chadian"
+
+ MLI_jamaat_nasr_alIslam_wal_muslimin: "Jama'at Nasr al-Islam wal Muslimin"
+ MLI_jamaat_nasr_alIslam_wal_muslimin_DEF: "JNIM"
+ MLI_jamaat_nasr_alIslam_wal_muslimin_ADJ: "JNIM"
+
+ MLI_islamic_state_sahel_province: "Islamic State - Sahel Province"
+ MLI_islamic_state_sahel_province_DEF: "ISSP"
+ MLI_islamic_state_sahel_province_ADJ: "ISSP"
+
+ MLI_imghad_tuareg_selfdefense_group_and_allies: "Imghad Tuareg Self-Defense Group and Allies"
+ MLI_imghad_tuareg_selfdefense_group_and_allies_DEF: "GATIA"
+ MLI_imghad_tuareg_selfdefense_group_and_allies_ADJ: "GATIA"
+
+ MLI_national_movement_for_the_liberation_of_azawad: "National Movement for the Liberation of Azawad"
+ MLI_national_movement_for_the_liberation_of_azawad_DEF: "MNLA"
+ MLI_national_movement_for_the_liberation_of_azawad_ADJ: "MNLA"
+
+ MLI_front_liberation_azawad: "Front for the Liberation of Azawad"
+ MLI_front_liberation_azawad_DEF: "FLA"
+ MLI_front_liberation_azawad_ADJ: "FLA"
+
+ LBY_toubou_front_for_the_salvation_of_libya: "Toubou Front for the Salvation of Libya"
+ LBY_toubou_front_for_the_salvation_of_libya_DEF: "TFSC"
+ LBY_toubou_front_for_the_salvation_of_libya_ADJ: "TFSC"
+
+ LBY_libyan_house_of_representatives: "Libyan House of Representatives"
+ LBY_libyan_house_of_representatives_DEF: "HoR"
+ LBY_libyan_house_of_representatives_ADJ: "HoR"
+
+ LBY_government_of_national_accord: "Government of National Accord"
+ LBY_government_of_national_accord_DEF: "GNA"
+ LBY_government_of_national_accord_ADJ: "GNA"
+
+ SUD_rapid_support_forces: "Rapid Support Forces"
+ SUD_rapid_support_forces_DEF: "RSF"
+ SUD_rapid_support_forces_ADJ: "Sudanese."

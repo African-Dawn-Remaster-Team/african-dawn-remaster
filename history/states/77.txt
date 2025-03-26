@@ -1,0 +1,19 @@
+state={
+	id=77
+	name="STATE_77"
+	provinces={
+		1509 
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 1509 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=1000
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,32 @@
+characters = {
+	NGA_Muhammadu_Buhari = {
+		name = NGA_Muhammadu_Buhari
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGA/NGA_Muhammadu_Buhari.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MUHAMMADU_BUHARI_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+	NGA_Bola_Tinubu = {
+		name = NGA_Bola_Tinubu
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGA/NGA_Bola_Tinubu.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MUHAMMADU_BUHARI_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

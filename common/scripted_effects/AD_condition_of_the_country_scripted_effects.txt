@@ -1,0 +1,110 @@
+AD_cc_list_open = {
+	clear_array = AD_coc_current_list
+	for_each_loop = {
+		array = global.AD_coc_list_@var:AD_cc_record_idea_idx
+		
+		add_to_array = { AD_coc_current_list = v }
+	}
+	
+	log = "[?AD_cc_record_idea_idx]"
+}
+
+AD_cc_list_init = {
+	# poverty_level (0)
+	if = {
+		limit = { has_idea = AD_appalling_poverty }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_appalling_poverty }
+	}
+	else_if = {
+		limit = { has_idea = AD_poverty }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_poverty }
+	}
+	else_if = {
+		limit = { has_idea = AD_poorness }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_poorness }
+	}
+	else_if = {
+		limit = { has_idea = AD_difficulties_with_average_income }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_difficulties_with_average_income }
+	}
+	else_if = {
+		limit = { has_idea = AD_almost_a_european_society }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_almost_a_european_society }
+	}
+	
+	# unemployment_rate_level (1)
+	if = {
+		limit = { has_idea = AD_widespread_unemployment }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_widespread_unemployment }
+	}
+	else_if = {
+		limit = { has_idea = AD_high_unemployment }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_high_unemployment }
+	}
+	else_if = {
+		limit = { has_idea = AD_extensive_unemployment }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_extensive_unemployment }
+	}
+	else_if = {
+		limit = { has_idea = AD_extensive_unemployment }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_extensive_unemployment }
+	}
+	else_if = {
+		limit = { has_idea = AD_low_unemployment }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_low_unemployment }
+	}
+	
+	# society_development_level (2)
+	if = {
+		limit = { has_idea = AD_chaotic_orders }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_chaotic_orders }
+	}
+	else_if = {
+		limit = { has_idea = AD_weak_state_apparatus }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_weak_state_apparatus }
+	}
+	else_if = {
+		limit = { has_idea = AD_moving_towards_progress }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_moving_towards_progress }
+	}
+	else_if = {
+		limit = { has_idea = AD_stable_state_apparatus }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_stable_state_apparatus }
+	}
+	
+	# food_supply_level (3)
+	if = {
+		limit = { has_idea = AD_total_hunger }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_total_hunger }
+	}
+	else_if = {
+		limit = { has_idea = AD_hunger }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_hunger }
+	}
+	else_if = {
+		limit = { has_idea = AD_problems_with_nutrition_in_the_majority_of_the_population }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_problems_with_nutrition_in_the_majority_of_the_population }
+	}
+	else_if = {
+		limit = { has_idea = AD_three_meals_a_day_for_the_majority_of_the_population }
+		add_to_array = { AD_condition_of_the_country_ideas = token:AD_three_meals_a_day_for_the_majority_of_the_population }
+	}
+	
+	# corruption_level (4)
+	if = {
+		limit = { has_idea = extr_corruption }
+		add_to_array = { AD_condition_of_the_country_ideas = token:extr_corruption }
+	}
+	else_if = {
+		limit = { has_idea = high_corruption }
+		add_to_array = { AD_condition_of_the_country_ideas = token:high_corruption }
+	}
+	else_if = {
+		limit = { has_idea = med_corruption }
+		add_to_array = { AD_condition_of_the_country_ideas = token:med_corruption }
+	}
+	else_if = {
+		limit = { has_idea = low_corruption }
+		add_to_array = { AD_condition_of_the_country_ideas = token:low_corruption }
+	}
+}

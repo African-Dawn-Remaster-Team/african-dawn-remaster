@@ -1,0 +1,23 @@
+
+state={
+	id=26
+	name="STATE_26"
+	provinces={
+		324 1665 2003 2835 3136 3137 3208 3801 3860 
+	}
+	history={
+		owner = GAB
+		add_core_of = GAB
+		victory_points = { 3860 5 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+			324 = { dam = 1 }
+		}
+	}
+	manpower=164285
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

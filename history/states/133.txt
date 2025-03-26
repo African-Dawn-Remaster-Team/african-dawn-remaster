@@ -1,0 +1,30 @@
+state={
+	id=133
+	name="STATE_133"
+	provinces={
+		188 249 265 319 1164 1221 1656 2239 2415 2716 2759 2765 3106 3134 3285 3573 3600 4942 4944 4947 4952 4954 4958 4960 4961 4964 4965 4967 1192
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 4965 5 }
+		victory_points = { 4964 3 }
+		victory_points = { 4958 3 }
+		victory_points = { 1164 3 }
+		victory_points = { 3600 3 }
+		victory_points = { 3573 3 }
+		victory_points = { 2765 3 }
+		victory_points = { 3285 3 }
+		victory_points = { 2759 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=975139
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

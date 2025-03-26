@@ -1,0 +1,19 @@
+state={
+	id=188
+	name="STATE_188"
+	provinces={
+		5135 
+	}
+	history={
+		owner = TOG
+		add_core_of = TOG
+		buildings = {
+			infrastructure = 1
+			air_base = 3
+		}
+	}
+	manpower=1
+	state_category=enclave
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,88 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_AD_member_of_g_five_sahel_idea"
+		texturefile = "gfx/interface/ideas/common/AD_member_of_g_five_sahel_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_ecowas_idea"
+		texturefile = "gfx/interface/ideas/common/AD_ecowas_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_ecowas_sanctions_idea"
+		texturefile = "gfx/interface/ideas/common/AD_ecowas_sanctions_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_african_corps_idea"
+		texturefile = "gfx/interface/ideas/common/AD_african_corps_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MLI_protracted_war_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_protracted_war_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_algerian_peace_agreement_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_algerian_peace_agreement_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_legacy_of_colonialism_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_legacy_of_colonialism_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_decline_of_the_malian_armed_forces_modifier"
+		texturefile = "gfx/interface/ideas/MLI/MLI_decline_of_the_malian_armed_forces_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_dependence_on_international_donors_modifier"
+		texturefile = "gfx/interface/ideas/MLI/MLI_dependence_on_international_donors_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_illegal_gold_mining_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_illegal_gold_mining_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_mass_protests_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_mass_protests_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_ethnic_fragmentation_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_ethnic_fragmentation_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_gatal_mli_support_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_gatal_mli_support_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_war_on_the_lakes_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_war_on_the_lakes_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_fighting_russian_influence_from_the_outside_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_fighting_russian_influence_from_the_outside_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_control_of_northern_mali_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_control_of_northern_mali_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_control_of_central_mali_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_control_of_central_mali_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_sahel_perspective_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_sahel_perspective_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_overall_strategy_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_overall_strategy_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_transition_to_civilian_rule_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_transition_to_civilian_rule_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_french_military_support_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_french_military_support_idea.dds"
+	}
+}

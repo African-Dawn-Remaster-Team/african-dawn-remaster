@@ -1,0 +1,23 @@
+state={
+	id=142
+	name="STATE_142"
+	provinces={
+		5015 5016 
+	}
+	history={
+		owner = SPA
+		add_core_of = SPA
+		add_claim_by = MOR
+		victory_points = { 5015 5 }
+		victory_points = { 5016 5 }
+		buildings = {
+			infrastructure = 1
+			5015 = { naval_base = 3 }
+			5016 = { naval_base = 3 }
+		}
+	}
+	manpower=170903
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

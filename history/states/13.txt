@@ -1,0 +1,24 @@
+
+state={
+	id=13
+	name="STATE_13"
+	provinces={
+		177 574 714 804 929 1595 1702 1759 1952 1984 2233 2616 2635 2853 3058 3767 3778 3789 
+	}
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 3767 10 }
+		victory_points = { 3778 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 2
+			arms_factory = 1
+		}
+	}
+	manpower=4159500
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

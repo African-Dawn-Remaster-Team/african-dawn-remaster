@@ -1,0 +1,196 @@
+guiTypes = {
+	containerWindowType = {
+		name = "AD_condition_of_the_country_gui"	
+		position = { x = 0 y = 474 } 
+		size = { width = 545 height = 130 }
+		clipping = no
+		
+		background ={
+			name ="category_header"
+			spriteType = "GFX_tiled_window_1b_border"
+		}
+		
+		iconType ={
+			name ="category_header"
+			spriteType = "GFX_category_header"
+			position = { x=8 y=12 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType ={
+			name ="category_icon"
+			spriteType = "GFX_idea_categories"
+			position = { x=21 y=18 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 87 y = 24 }
+			font = "hoi_20b"
+			text = condition_of_the_country
+			maxWidth = 300
+			maxHeight = 20
+		}
+		
+		gridboxtype = {
+			name = "ideas_grid"
+			position = { x = 56 y = 56 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 90 height = 64 }
+			max_slots = { x = 7 y = 1 }
+			format = "UPPER_LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "condition_of_the_country_idea_entry"
+		size = { width = 53 height = 53 }
+		clipping = no
+
+		iconType = {
+			name = "idea_status_down"
+			position = { x = -14 y = -8 }
+			spriteType = "GFX_division_priority_icon_strip"
+			frame = 1
+			pdx_tooltip = AD_coc_idea_status_down_tt
+		}
+		iconType = {
+			name = "idea_status_stability"
+			position = { x = -14 y = -8 }
+			spriteType = "GFX_division_priority_icon_strip"
+			frame = 2
+		}
+		iconType = {
+			name = "idea_status_up"
+			position = { x = -14 y = 0 }
+			spriteType = "GFX_division_priority_icon_strip"
+			frame = 3
+			pdx_tooltip = AD_coc_idea_status_up_tt
+		}
+		
+		buttonType = {
+			name = "idea_button"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_add_pol_idea_button"
+			clicksound = click_default
+			pdx_tooltip = AD_coc_idea_tooltip
+		}
+	}
+	
+	containerWindowType = {
+		name = "AD_condition_of_the_country_list_gui"
+		position = { x = 545 y = 500 }
+		size = { width=320 height=500 }
+		clipping = yes
+		
+		containerWindowType = { # This double container thing is just to ensure that the animation plays correctly and that the windows show up where they should be
+			name = "AD_condition_of_the_country_list_gui_content"
+			size = { width=320 height=500 }
+			position = { x = -1000 y = 0 }
+			hide_position = { x = -1000 y = 0 }
+			show_position = { x = 0 y = 0 }
+			hide_animation_type = accelerated
+			show_animation_type = decelerated
+			animation_time = 450
+			show_sound = open_sub_window
+		
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_tiled_plain_bg"
+			}
+			
+			instantTextboxType = {
+				name = "title"
+				position = { x = 10 y = 14 }
+				font = "hoi_20b"
+				text = "[AD_get_condition_category_name]"
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+
+			containerWindowType = {
+				name = "grid"
+				position = { x = 0 y = 42 }
+				size = { width=320 height=-4 }
+				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 37
+				smooth_scrolling = yes
+				margin = { top = 4 bottom = 12}	
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_window2_1b_border"
+				}
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_generic_overlay_bg1_small"
+					position = { x = -1 y = 0 }					
+				}
+
+				gridBoxType = {
+					name = "box_list"
+					position = { x = 10 y = 10 }
+					size = { width = 320 height = 1 }
+					slotsize = { width = 282 height = 74 }
+					add_horizontal = no
+					format = "UPPER_LEFT"
+				}
+			}
+			
+			buttonType = {
+				name = "close"
+				position = { x = -30 y = 5 }
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "Main_14_black"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+				scale = 0.7
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "AD_condition_of_the_country_item"
+		size = { width = 282 height = 74 }
+		clipping = no
+
+		iconType = {
+			name = "idea_entry_bg"
+			position = { x = 3 y = 0 }
+			spriteType = "GFX_idea_entry_bg_4"
+			pdx_tooltip = AD_coc_list_idea_tooltip
+		}
+		iconType = {
+			name = "idea_entry_highlight_bg"
+			position = { x = 3 y = 0 }
+			spriteType = "GFX_idea_entry_bg_4"
+			frame = 2
+			pdx_tooltip = AD_coc_list_idea_tooltip
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 42 y = 38 }
+			spriteType = "GFX_placeholder_bordered"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 83 y = -13 }
+			font = "hoi_18mbs"
+			fixedsize = yes			
+			text = "[?v.GetTokenLocalizedKey]"
+			maxWidth = 160
+			maxHeight = 100%%
+			format = left
+			vertical_alignment = center
+			alwaystransparent = yes			
+		}
+	}
+}

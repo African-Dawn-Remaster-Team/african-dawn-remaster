@@ -1,0 +1,28 @@
+ideas = {
+	
+	country = {
+	
+		AZW_algerian_peace_agreement_idea = {
+			name = MLI_algerian_peace_agreement_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_algerian_peace_agreement_idea
+			modifier = {
+				compliance_growth = 0.2
+				political_power_factor = -0.03
+				stability_factor = 0.01
+			}
+			cancel = {
+				OR = {
+					NOT = { country_exists = MLI }
+					NOT = { country_exists = AZW }
+				}
+			}
+			targeted_modifier = {
+				tag = MLI
+				attack_bonus_against = -1
+			}
+		}
+	}
+}

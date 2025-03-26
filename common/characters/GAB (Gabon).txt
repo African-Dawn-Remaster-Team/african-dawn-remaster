@@ -1,0 +1,34 @@
+characters = {
+
+	GAB_Ali_Bongo_Ondimba = {
+		name = GAB_Ali_Bongo_Ondimba
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GAB/GAB_Ali_Bongo_Ondimba.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALI_BONGO_ONDIMBA_DESC"
+			ideology = conservatism_subtype_islamic_democracy
+		}
+	}
+
+	GAB_Brice_Oligui_Nguema = {
+		name = GAB_Brice_Oligui_Nguema
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GAB/GAB_Brice_Oligui_Nguema.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BRICE_OLIGUI_NGUEMA_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=87
+	name="STATE_87"
+	provinces={
+		538 1290 1906 2620 3268 
+	}
+	resources = {
+		oil = 4
+	}
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 1290 5 }
+		victory_points = { 3268 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			1290 = { naval_base = 3 }
+			3268 = { dam = 1 }
+		}
+	}
+	manpower=3354978
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

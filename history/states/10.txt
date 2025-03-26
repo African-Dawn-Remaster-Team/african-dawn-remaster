@@ -1,0 +1,27 @@
+state={
+	id=10
+	name="STATE_10"
+	provinces={
+		180 344 435 725 3659 3663 4889 4890 4892 4894 4898 4899 4907 4908
+	}
+	resources = {
+		gold = 8
+	}
+	history={
+		owner = BFA
+		add_core_of = BFA
+		victory_points = { 3659 15 }
+		victory_points = { 4899 5 }
+		victory_points = { 344 5 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			4889 = { dam = 1 }
+		}
+	}
+	manpower=6455574
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,19 @@
+state={
+	id=70
+	name="STATE_70"
+	provinces={
+		3859 
+	}
+	history={
+		owner = GAB
+		add_core_of = GAB
+		add_claim_by = EQG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=1000
+	state_category=tiny_island
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,57 @@
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Bataillon de Mboki"
+		location = 149
+		division_template = "Milice rurale"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Bataillon de Dimbi"
+		location = 149
+		division_template = "Milice rurale"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Bataillon mobile de Ippi"
+		location = 2854
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "Bataillon mobile de Djema"
+		location = 3765
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "Bataillon mobile de Kuango"
+		location = 847
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.09
+		start_equipment_factor = 0.6
+	}
+}

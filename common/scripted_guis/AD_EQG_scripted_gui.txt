@@ -1,0 +1,21 @@
+scripted_gui = {
+	
+	EQG_split_in_the_mongomo_clan_scripted_gui = {
+		context_type = decision_category
+		window_name = "EQG_split_in_the_mongomo_clan_scripted_gui_window"
+		ai_enabled = { always = no }
+		
+		properties = {
+			EQG_fellow_clansmen = { image = "GFX_portrait_[?THIS.EQG_fellow_clansmen.GetTokenKey]" }
+			EQG_flag = { image = "[ROOT.GetFlag]" }
+		}
+		dynamic_lists = {
+			EQG_split_in_the_mongomo_clan_grid = {
+				array = EQG_split_in_the_mongomo_clan_ui_array
+				value = EQG_fellow_clansmen
+				change_scope = yes
+				entry_container = scripted_gui_EQG_split_in_the_mongomo_clan_ui_entry
+			}
+		}
+	}
+}

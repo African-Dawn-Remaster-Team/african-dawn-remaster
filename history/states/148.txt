@@ -1,0 +1,23 @@
+state={
+	id=148
+	name="STATE_148"
+	provinces={
+		130 204 322 431 505 554 594 796 1000 1018 1059 1127 1271 1298 1364 1461 1572 1621 1801 2044 2062 2085 2104 2184 2216 2379 2406 2573 2756 3248 3456 3496 5046 5047 
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 1059 3 }
+		victory_points = { 2085 2 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=16701
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,197 @@
+scripted_gui = {
+	AD_market_topbar_gui = {
+		window_name = "market_tab_top"
+		parent_window_token = trade_tab
+		context_type = player_context
+		
+		effects = {
+			resource_trade_click = {
+				set_variable = { AD_m_open = 0 }
+			}
+			weapon_trade_click = {
+				set_variable = { AD_m_open = 1 }
+				add_to_variable = { AD_market_gui_update = 1 }
+				add_to_variable = { AD_economy_gui_update = 1 }
+			}
+		}
+	}
+	
+	zatychka_AD_market_gui = {
+		window_name = "market_tab_rew"
+		parent_window_token = trade_tab
+		context_type = player_context
+		dirty = AD_market_gui_update
+		
+		visible = {
+			check_variable = { AD_m_open = 1 }
+			OR = {
+				tag = RUS
+				tag = FRN
+				tag = USA
+				tag = CHI
+				has_government = fundamentalism
+				has_country_flag = international_blockade
+				has_country_flag = militia_bandits
+			}
+		}
+	}
+	
+	AD_market_gui = {
+		window_name = "market_tab_rew"
+		parent_window_token = trade_tab
+		context_type = player_context
+		dirty = AD_market_gui_update
+		
+		visible = {
+			check_variable = { AD_m_open = 1 }
+			NOT = {
+				OR = {
+					tag = RUS
+					tag = FRN
+					tag = USA
+					tag = CHI
+					has_government = fundamentalism
+					has_country_flag = international_blockade
+					has_country_flag = militia_bandits
+				}
+			}
+		}
+		
+		dynamic_lists = {
+			market_offers = {
+				array = global.market_offers
+				value = AD_market_item
+				entry_container = market_offer_entry
+			}
+		}
+		
+		effects = { 
+			start_imports_market_click = {
+				set_variable = { AD_m_selected_item = AD_market_item }
+				set_variable = { AD_market_offer_open = 1 }
+				add_to_variable = { AD_market_buy_window_gui_update = 1 }
+				meta_effect = {
+					text = {
+						set_variable = { AD_m_producer = [TAG] }
+					}
+					TAG = "[AD_get_market_item_producer_tag]"
+				}
+				
+				set_variable = { amountbuyingformodal = global.AD_m_item_buying_amount@var:AD_market_item }
+				set_variable = { amountbuyingformodal10x = global.AD_m_item_buying_amount@var:AD_market_item }
+				multiply_variable = { amountbuyingformodal10x = 10 }
+				set_variable = { amountbuyingformodalmaximum = global.AD_m_item_buying_amount@var:AD_market_item }
+				multiply_variable = { amountbuyingformodalmaximum = 50 }
+				
+				set_variable = { costforbuymodal = global.AD_m_item_costper1@var:AD_market_item }
+				set_variable = { amount_selected_in_modal = 0 }
+				recalculate_modal_cost = yes
+			}
+		}
+		
+		properties = {
+			equipment_icon = { 
+				image = "[AD_get_market_item_icon]" 
+			}
+			creator_flag = { 
+				image = "[AD_get_market_item_producer_flag]" 
+			}
+		}
+		triggers = {
+			start_imports_market_click_enabled = { # TODO вывести в подсказку
+				NOT = { has_country_flag = buyed_weapons_not_delivered }
+				# has_political_power > -50
+				# meta_trigger = { 
+					# text = {
+						# [TAGSTRANY] = {
+							# has_opinion = {
+								# target = ROOT
+								# value > -50
+							# }
+						# }
+					# } 
+					# TAGSTRANY = "[AD_get_market_item_producer_tag]"
+				# } 
+			}
+		}
+	}
+	
+	AD_market_buy_window_gui = {
+		window_name = "market_buy_modal_window"
+		context_type = player_context
+		# dirty = AD_market_buy_window_gui_update
+		
+		visible = {
+			check_variable = { AD_market_offer_open = 1 }
+		}
+		
+		triggers = {
+			buybuttonclick_click_enabled = {
+				check_variable = { costmodal > 0 }
+				check_variable = { AD_current_money_var > costmodal }
+			}
+		}
+		effects = { 
+			cancel_button_click = { 
+				set_variable = { AD_market_offer_open = 0 }
+			}
+			add_more_button_click = {
+				add_to_variable = { amount_selected_in_modal = amountbuyingformodal }
+				clamp_variable = {
+					var = amount_selected_in_modal
+					max = amountbuyingformodalmaximum
+				}
+				recalculate_modal_cost = yes
+			}
+			add_more_button_control_click = {
+				add_to_variable = { amount_selected_in_modal = amountbuyingformodal10x }
+				clamp_variable = {
+					var = amount_selected_in_modal
+					max = amountbuyingformodalmaximum
+				}
+				recalculate_modal_cost = yes
+			}
+			remove_more_button_click = {
+				subtract_from_variable = { amount_selected_in_modal = amountbuyingformodal }
+				clamp_variable = {
+					var = amount_selected_in_modal
+					min = 0
+				}
+				recalculate_modal_cost = yes
+			}
+			remove_more_button_control_click = {
+				subtract_from_variable = { amount_selected_in_modal = amountbuyingformodal10x }
+				clamp_variable = {
+					var = amount_selected_in_modal
+					min = 0
+				}
+				recalculate_modal_cost = yes
+			}
+			buybuttonclick_click = {
+				subtract_from_variable = { AD_current_money_var = costmodal }
+				set_country_flag = buyed_weapons_not_delivered
+				
+				set_variable = { AD_m_record_producer = AD_m_producer }
+				set_variable = { AD_m_record_item = AD_m_selected_item }
+				set_variable = { AD_m_record_amount = amount_selected_in_modal }
+				
+				country_event = { id = market.1 days = 30 }
+				
+				set_variable = { AD_market_offer_open = 0 }
+				add_to_variable = { AD_market_gui_update = 1 }
+				# recalculate_amount_of_spendings = yes
+			}
+		}
+		properties = {
+			country_flag_ROOT = {
+				image = "[ROOT.GetFlag]"
+			}
+			country_flag_trader = {
+				image = "[?AD_m_producer.GetFlag]"
+			}
+			equipment_icon = { 
+				image = "[AD_get_market_item_icon_window]" 
+			}
+		}
+	}
+}

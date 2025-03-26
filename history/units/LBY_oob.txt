@@ -1,0 +1,217 @@
+
+division_template = {
+	name = "Infantry Battalion"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=2 y=0 }
+		light_infantry_opol={ x=2 y=1 }
+		light_infantry_opol={ x=2 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+	}
+}
+
+division_template = {
+	name = "Inter-Arms Regiment"
+
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry_on_btr={ x=0 y=2 }
+		light_armor_unit={ x=0 y=3 }
+		light_infantry_opol_on_guntruck={ x=1 y=0 }
+		light_infantry_opol_on_guntruck={ x=1 y=1 }
+		light_infantry_opol_on_guntruck={ x=1 y=2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "National Gendarmerie"
+
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+		light_infantry_opol_on_guntruck={ x=0 y=3 }
+	}
+}
+
+division_template = {
+	name = "Commando Parachute Regiment"
+	priority = 2
+
+	regiments={
+		speznaz={ x=0 y=0 }
+		speznaz={ x=0 y=1 }
+		speznaz={ x=0 y=2 }
+		speznaz={ x=1 y=0 }
+		speznaz={ x=1 y=1 }
+		speznaz={ x=1 y=2 }
+		speznaz={ x=2 y=0 }
+		speznaz={ x=2 y=1 }
+		speznaz={ x=2 y=2 }
+	}
+	support={
+		atgm_support_unit={ x=0 y=0 }
+		recon={ x=0 y=1 }
+		engineer={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "101st Battalion"
+		location = 2480
+		division_template = "Inter-Arms Regiment"
+		start_experience_factor = 0.66
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "123rd Battalion"
+		location = 1404
+		division_template = "Inter-Arms Regiment"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "126th Battalion"
+		location = 3084
+		division_template = "Inter-Arms Regiment"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.55
+	}
+	division= {	
+		name = "155th Battalion"
+		location = 5084
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.61
+	}
+	division= {	
+		name = "166th Battalion"
+		location = 1790
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.14
+		start_equipment_factor = 0.41
+	}
+	division= {	
+		name = "192nd Battalion"
+		location = 1354
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.42
+	}
+	division= {	
+		name = "270th Battalion"
+		location = 1971
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.35
+	}
+	division= {	
+		name = "322nd Artillery Battalion"
+		location = 5066
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "214th Tank Battalion"
+		location = 1333
+		division_template = "Inter-Arms Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {	
+		name = "Kaniyat militia"
+		location = 110
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.17
+		start_equipment_factor = 0.51
+	}
+	division= {	
+		name = "Tariq bin Ziyad Battalion"
+		location = 1590
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "Subul Al-Salam militia"
+		location = 5103
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "Al-Wadi Brigade"
+		location = 1804
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "Tawhid Battalion"
+		location = 887
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "604th Infantry Battalion"
+		location = 260
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "Brigade 93"
+		location = 1541
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.21
+		start_equipment_factor = 0.67
+	}
+	division= {	
+		name = "Warshefana militias"
+		location = 483
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.58
+	}
+	division= {	
+		name = "Green Resistance"
+		location = 1770
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Popular Front for the Liberation of Libya"
+		location = 1123
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.51
+	}
+	division= {	
+		name = "Libyan Special Forces"
+		location = 5105
+		division_template = "Commando Parachute Regiment"
+		start_experience_factor = 0.71
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Libyan Special Forces"
+		location = 5105
+		division_template = "Commando Parachute Regiment"
+		start_experience_factor = 0.71
+		start_equipment_factor = 0.88
+	}
+}

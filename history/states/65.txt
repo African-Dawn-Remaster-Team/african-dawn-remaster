@@ -1,0 +1,19 @@
+state={
+	id=65
+	name="STATE_65"
+	provinces={
+		98 100 362 415 660 897 1202 1453 1475 2069 2228 2302 2518 2751 2753 2821 2907 2920 2998 3231 3803 3804 3817 3824 3831 3832 
+	}
+	history={
+		owner = DRC
+		add_core_of = DRC
+		victory_points = { 1475 10 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=2582000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

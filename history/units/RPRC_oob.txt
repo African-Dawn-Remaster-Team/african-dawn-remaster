@@ -1,0 +1,43 @@
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Bataillon de Bria"
+		location = 196
+		division_template = "Milice rurale"
+		start_experience_factor = 0.08
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "Bataillon de Uadda"
+		location = 3720
+		division_template = "Milice rurale"
+		start_experience_factor = 0.08
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Bataillon mobile de Uanda-Djale"
+		location = 162
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.5
+	}
+}

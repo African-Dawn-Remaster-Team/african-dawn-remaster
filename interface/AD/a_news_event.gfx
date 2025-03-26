@@ -1,0 +1,192 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_news_1"
+		texturefile = "gfx/event_pictures/news/news_1.dds"
+	}
+	spriteType = {
+		name = "GFX_news_2"
+		texturefile = "gfx/event_pictures/news/news_2.dds"
+	}
+	spriteType = {
+		name = "GFX_news_3"
+		texturefile = "gfx/event_pictures/news/news_3.dds"
+	}
+	spriteType = {
+		name = "GFX_news_4"
+		texturefile = "gfx/event_pictures/news/news_4.dds"
+	}
+	spriteType = {
+		name = "GFX_news_6"
+		texturefile = "gfx/event_pictures/news/news_5.dds"
+	}
+	spriteType = {
+		name = "GFX_news_8"
+		texturefile = "gfx/event_pictures/news/news_8.dds"
+	}
+	spriteType = {
+		name = "GFX_news_11"
+		texturefile = "gfx/event_pictures/news/news_11.dds"
+	}
+	spriteType = {
+		name = "GFX_news_12"
+		texturefile = "gfx/event_pictures/news/news_12.dds"
+	}
+	spriteType = {
+		name = "GFX_news_14"
+		texturefile = "gfx/event_pictures/news/news_14.dds"
+	}
+	spriteType = {
+		name = "GFX_news_15"
+		texturefile = "gfx/event_pictures/news/news_15.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_17"
+		texturefile = "gfx/event_pictures/news/news_17.dds"
+	}
+	spriteType = {
+		name = "GFX_news_18"
+		texturefile = "gfx/event_pictures/news/news_18.dds"
+	}
+	spriteType = {
+		name = "GFX_news_27"
+		texturefile = "gfx/event_pictures/news/news_27.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_20"
+		texturefile = "gfx/event_pictures/news/news_20.dds"
+	}
+	spriteType = {
+		name = "GFX_news_21"
+		texturefile = "gfx/event_pictures/news/news_21.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_23"
+		texturefile = "gfx/event_pictures/news/news_23.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_24"
+		texturefile = "gfx/event_pictures/news/news_24.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_25"
+		texturefile = "gfx/event_pictures/news/news_25.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_26"
+		texturefile = "gfx/event_pictures/news/news_26.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_29"
+		texturefile = "gfx/event_pictures/news/news_29.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_32"
+		texturefile = "gfx/event_pictures/news/news_32.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_33"
+		texturefile = "gfx/event_pictures/news/news_33.dds"
+	}		
+	spriteType = {
+		name = "GFX_news_34"
+		texturefile = "gfx/event_pictures/news/news_34.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_35"
+		texturefile = "gfx/event_pictures/news/news_35.dds"
+	}
+	spriteType = {
+		name = "GFX_news_36"
+		texturefile = "gfx/event_pictures/news/news_36.dds"
+	}
+	spriteType = {
+		name = "GFX_news_37"
+		texturefile = "gfx/event_pictures/news/news_37.dds"
+	}
+	spriteType = {
+		name = "GFX_news_38"
+		texturefile = "gfx/event_pictures/news/news_38.dds"
+	}
+	spriteType = {
+		name = "GFX_news_39"
+		texturefile = "gfx/event_pictures/news/news_39.dds"
+	}
+	spriteType = {
+		name = "GFX_news_40"
+		texturefile = "gfx/event_pictures/news/news_40.dds"
+	}
+	spriteType = {
+		name = "GFX_news_41"
+		texturefile = "gfx/event_pictures/news/news_41.dds"
+	}
+	spriteType = {
+		name = "GFX_news_42"
+		texturefile = "gfx/event_pictures/news/news_42.dds"
+	}
+	spriteType = {
+		name = "GFX_news_43"
+		texturefile = "gfx/event_pictures/news/news_43.dds"
+	}
+	spriteType = {
+		name = "GFX_news_44"
+		texturefile = "gfx/event_pictures/news/news_44.dds"
+	}
+	spriteType = {
+		name = "GFX_news_45"
+		texturefile = "gfx/event_pictures/news/news_45.dds"
+	}
+	spriteType = {
+		name = "GFX_news_47"
+		texturefile = "gfx/event_pictures/news/news_47.dds"
+	}
+	spriteType = {
+		name = "GFX_news_48"
+		texturefile = "gfx/event_pictures/news/news_48.dds"
+	}
+	spriteType = {
+		name = "GFX_news_49"
+		texturefile = "gfx/event_pictures/news/news_49.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_election_0"
+		texturefile = "gfx/event_pictures/news/election_0.dds"
+	}
+	spriteType = {
+		name = "GFX_election_1"
+		texturefile = "gfx/event_pictures/news/election_1.dds"
+	}
+	spriteType = {
+		name = "GFX_election_2"
+		texturefile = "gfx/event_pictures/news/election_2.dds"
+	}
+	spriteType = {
+		name = "GFX_election_3"
+		texturefile = "gfx/event_pictures/news/election_3.dds"
+	}
+	spriteType = {
+		name = "GFX_election_4"
+		texturefile = "gfx/event_pictures/news/election_4.dds"
+	}
+	spriteType = {
+		name = "GFX_election_5"
+		texturefile = "gfx/event_pictures/news/election_5.dds"
+	}
+	spriteType = {
+		name = "GFX_election_6"
+		texturefile = "gfx/event_pictures/news/election_6.dds"
+	}
+	spriteType = {
+		name = "GFX_election_8"
+		texturefile = "gfx/event_pictures/news/election_8.dds"
+	}
+	spriteType = {
+		name = "GFX_election_7"
+		texturefile = "gfx/event_pictures/news/election_7.dds"
+	}
+
+}

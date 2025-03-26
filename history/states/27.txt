@@ -1,0 +1,21 @@
+
+state={
+	id=27
+	name="STATE_27"
+	provinces={
+		113 166 890 1035 1753 1868 2071 2418 2909 3147 3237 3811 3866 3867 
+	}
+	history={
+		owner = COG
+		add_core_of = COG
+		victory_points = { 890 6 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+	}
+	manpower=209807
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

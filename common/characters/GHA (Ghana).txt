@@ -1,0 +1,32 @@
+characters = {
+	GHA_Nana_Addo_Dankwa_Akufo_Addo = {
+		name = GHA_Nana_Addo_Dankwa_Akufo_Addo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GHA/GHA_Nana_Addo_Dankwa_Akufo_Addo.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NANA_ADDO_DANKWA_AKUFO_ADDO_DESC"
+			ideology = conservatism_subtype_islamic_democracy
+		}
+	}
+	GHA_John_Dramani_Mahama = {
+		name = GHA_John_Dramani_Mahama
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GHA/GHA_John_Dramani_Mahama.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOHN_MAHAMA_DESC"
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+}

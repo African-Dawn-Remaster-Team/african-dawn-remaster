@@ -1,0 +1,54 @@
+CAR_loyality_for_ccr_check_effect = {
+	hidden_effect = {
+		clamp_variable = { var = CAR_loyality_for_ccr min = 0 max = 10 }
+	}
+}
+
+CAR_weakness_of_the_armed_forces_modifier_check_effect = {
+	if = {
+		limit = { check_variable = { CAR_army_org_factor_var < -0.02 } }
+		custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_change
+		add_to_variable = { CAR_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+		add_to_variable = { CAR_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+		add_to_variable = { CAR_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+		add_to_variable = { CAR_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+		add_to_variable = { CAR_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+		add_to_variable = { CAR_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+	else = {
+		custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_remove
+		hidden_effect = { remove_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+	}
+}
+
+CAR_ngakola_and_tere_check_effect = {
+	add_to_variable = { CAR_ngakola_and_tere_var = CAR_ngakola_and_tere_temp_var tooltip = CAR_ngakola_and_tere_var_tt }
+	clamp_variable = { var = CAR_ngakola_and_tere_var min = 0 max = 100 }
+	
+	divide_temp_variable = { CAR_ngakola_and_tere_temp_var = 100 }
+	
+	set_temp_variable = { CAR_war_support_factor_temp_var = CAR_ngakola_and_tere_temp_var }
+	set_temp_variable = { CAR_stability_factor_temp_var = CAR_ngakola_and_tere_temp_var }
+	set_temp_variable = { CAR_compliance_growth_var = CAR_ngakola_and_tere_temp_var }
+	set_temp_variable = { CAR_resistance_target_temp_var = CAR_ngakola_and_tere_temp_var }
+	
+	multiply_temp_variable = { CAR_war_support_factor_temp_var = 0.1 }
+	set_temp_variable = { CAR_war_support_factor_old_var = CAR_war_support_factor_temp_var }	
+	
+	multiply_temp_variable = { CAR_stability_factor_temp_var = -0.15 }
+	set_temp_variable = { CAR_stability_factor_old_var = CAR_stability_factor_temp_var }	
+	
+	multiply_temp_variable = { CAR_compliance_growth_var = 0.2 }
+	set_temp_variable = { CAR_compliance_growth_old_var = CAR_compliance_growth_var }	
+	
+	multiply_temp_variable = { CAR_resistance_target_temp_var = -0.3 }
+	set_temp_variable = { CAR_resistance_target_old_var = CAR_resistance_target_temp_var }
+	
+	add_to_variable = { CAR_war_support_factor_var = CAR_war_support_factor_old_var tooltip = war_support_factor_tooltip }
+	add_to_variable = { CAR_stability_factor_var = CAR_stability_factor_old_var tooltip = stability_factor_tooltip }
+	add_to_variable = { CAR_compliance_growth_var = CAR_compliance_growth_old_var tooltip = compliance_growth_tooltip }
+	add_to_variable = { CAR_resistance_target_var = CAR_resistance_target_old_var tooltip = resistance_target_tooltip }
+	
+	force_update_dynamic_modifier = yes
+}

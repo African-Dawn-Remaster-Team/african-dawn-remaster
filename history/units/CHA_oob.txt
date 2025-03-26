@@ -1,0 +1,160 @@
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon motorisé"
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=1 y=0 }
+		infantry_on_jeep={ x=1 y=1 }
+		infantry_on_jeep={ x=1 y=2 }
+		infantry_on_jeep={ x=1 y=3 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Rapid Intervention Force"
+		location = 4831
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Rapid Intervention Force"
+		location = 4831
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Bataillon du lac Tchad"
+		location = 1748
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du lac Tchad"
+		location = 1748
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du lac Tchad"
+		location = 4837
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du lac Tchad"
+		location = 1992
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du lac Tchad"
+		location = 1992
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Mao"
+		location = 2039
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Fada"
+		location = 3568
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Faya-Largeau"
+		location = 2492
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Bardaï"
+		location = 3499
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Auzu"
+		location = 391
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Abéché"
+		location = 2066
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Ati"
+		location = 1894
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Am-Timan"
+		location = 1894
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon du Sar"
+		location = 1536
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.66
+	}
+}

@@ -1,0 +1,390 @@
+capital = 15
+set_convoys = 3
+starting_train_buffer = 5
+set_oob = "MLI_oob"
+set_air_oob = "MLI_air_oob"
+
+set_research_slots = 1
+set_stability = 0.13
+set_war_support = -0.17
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_atgm_tech = 1
+	modern_camouflage_tech = 1
+	handmade_manpads_tech = 1
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	tech_mrap = 1
+	basic_train = 1
+	tech_specnaz = 1
+	tech_support = 1
+	tech_ifv_1  = 1
+}
+
+recruit_character = MLI_Ibrahim_Boubacar_Keita
+recruit_character = MLI_Boubou_Cisse
+recruit_character = MLI_Assimi_Goita
+recruit_character = MLI_Amadu_Sankare
+recruit_character = MLI_Tyemoko_Sangare
+recruit_character = MLI_Mahmud_Dikko
+recruit_character = MLI_Bubu_Sisse
+recruit_character = MLI_Moktar_Yan
+recruit_character = MLI_Shogel_Maiga
+recruit_character = MLI_Suleiman_Dukure
+recruit_character = MLI_Sadio_Camara
+recruit_character = MLI_Oumar_Diarra
+recruit_character = MLI_Keba_Sangare
+recruit_character = MLI_Abdoulaye_Coulibaly
+recruit_character = MLI_Ismael_Wague
+recruit_character = MLI_Tyebile_Drame
+recruit_character = MLI_Abdulai_Diop
+recruit_character = MLI_Aliu_Badara_Diallo
+recruit_character = MLI_Fatumate_Nafo_Traore
+recruit_character = MLI_Mamadu_Kamara
+recruit_character = MLI_Imam_Mahmud_Dikko
+recruit_character = MLI_Aminata_Traore
+
+set_popularities = {
+	centrism = 45
+	liberalism = 28
+	social_democracy = 17
+	fundamentalism = 10
+}
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 0 }
+
+add_ideas = {
+	AD_ECOWAS
+	MLI_protracted_war_idea
+	MLI_algerian_peace_agreement_idea
+	MLI_legacy_of_colonialism_idea
+	MLI_illegal_gold_mining_idea
+	MLI_ethnic_fragmentation_idea
+	AD_member_of_g_five_sahel
+}
+
+set_variable = { MAL_army_org_factor_var = -0.2 }
+set_variable = { MAL_army_org_regain_var = -0.3 }
+set_variable = { MAL_training_time_army_factor_var = 0.2 }
+set_variable = { MAL_dig_in_speed_factor_var = -0.1 }
+set_variable = { MAL_army_leader_cost_factor_var = 0.2 }
+set_variable = { MAL_pocket_penalty_var = 1 }
+add_dynamic_modifier = { modifier = MLI_decline_of_the_malian_armed_forces_modifier }
+add_dynamic_modifier = { modifier = MLI_dependence_on_international_donors_modifier }
+
+127 = { add_dynamic_modifier = { modifier = MLI_dominance_of_local_militias_modifier } }
+132 = { add_dynamic_modifier = { modifier = MLI_dominance_of_local_militias_modifier } }
+
+activate_mission = MLI_threat_of_a_military_coup_mission
+
+create_dynamic_country = {
+	original_tag = MLI
+	copy_tag = MLI
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = MLI_national_movement_for_the_liberation_of_azawad
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 2 }
+	set_country_flag = militia_bandits
+	every_core_state = { remove_core_of = PREV }
+	
+	set_party_name = {
+		ideology = centrism
+		long_name = AZW_centrism_party_long
+		name = AZW_centrism_party
+	}
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		AMB_our_lands
+		AZW_algerian_peace_agreement_idea
+	}
+	
+	transfer_state = 129
+	transfer_state = 130
+	transfer_state = 135
+	129 = { add_core_of = PREV }
+	130 = { add_core_of = PREV }
+	135 = { add_core_of = PREV }
+	128 = { add_core_of = PREV }
+	133 = { add_core_of = PREV }
+	136 = { add_core_of = PREV }
+	134 = { add_core_of = PREV }
+	132 = { add_core_of = PREV }
+	131 = { add_core_of = PREV }
+	set_province_controller = 4941
+	set_province_controller = 3600
+	set_province_controller = 249
+	set_province_controller = 2239
+	set_province_controller = 265
+	set_province_controller = 3573
+	
+	set_oob = "AZW_oob"
+	
+	ALG = {
+		give_military_access = PREV
+	}
+	
+	MRT = {
+		give_military_access = PREV
+	}
+	
+	recruit_character = AZW_Bilal_Ag_Acherif 
+	recruit_character = AZW_Mohamed_Ag_Najem  
+	recruit_character = AZW_Inkinane_Ag_Attaher   
+	promote_character = AZW_Bilal_Ag_Acherif 
+	declare_war_on = { target = MLI type = civil_war }
+	add_civil_war_target = MLI
+	MLI = {
+		add_civil_war_target = PREV 
+		set_province_controller = 4968
+		set_province_controller = 4969
+	}
+	GTI = { add_civil_war_target = PREV }
+	ISS = { add_civil_war_target = PREV }
+	set_capital = { state = 130 }
+}
+
+create_dynamic_country = {
+	original_tag = MLI
+	copy_tag = MLI
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = MLI_jamaat_nasr_alIslam_wal_muslimin
+	set_popularities = { fundamentalism = 100 }
+	set_politics = { ruling_party = fundamentalism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	every_core_state = { remove_core_of = PREV }
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_fundamentalism
+		AD_lack_of_social_programs
+	}
+	
+	transfer_state = 128
+	transfer_state = 131
+	128 = { add_core_of = PREV }
+	131 = { add_core_of = PREV }
+	set_province_controller = 609
+	set_province_controller = 2403
+	set_province_controller = 4893
+	set_province_controller = 4897
+	set_province_controller = 4902
+	set_province_controller = 4903
+	set_province_controller = 4866
+	set_province_controller = 4864
+	set_province_controller = 4704
+	set_province_controller = 4703
+	set_province_controller = 3672
+	set_province_controller = 4702
+	set_province_controller = 94
+	set_province_controller = 4905
+	set_province_controller = 4906
+	set_province_controller = 4933
+	set_province_controller = 4928
+	set_province_controller = 4925
+	set_province_controller = 2452
+	set_province_controller = 4921
+	set_province_controller = 2759
+	set_province_controller = 3134
+	set_province_controller = 188
+	set_province_controller = 2716
+	set_province_controller = 3106
+	set_province_controller = 4938
+	set_province_controller = 3570
+	set_province_controller = 76
+	set_province_controller = 4884
+	set_province_controller = 4954
+
+	set_province_controller = 5166
+	set_province_controller = 5164
+	set_province_controller = 4920
+	set_province_controller = 5162
+	set_province_controller = 4895
+	set_province_controller = 419
+	set_province_controller = 5156
+	set_province_controller = 5155
+	set_province_controller = 5160
+	set_province_controller = 5153
+	set_province_controller = 3683
+	set_province_controller = 5154
+	set_province_controller = 5158
+	set_province_controller = 5167
+	set_province_controller = 4900
+	set_province_controller = 1221
+	set_province_controller = 1028
+	
+	set_oob = "JNA_oob"
+	add_manpower = 26000
+	recruit_character = JNA_Iyad_Ag_Ghaly    
+	recruit_character = JNA_Amadou_Koufa     
+	recruit_character = JNA_Djaffar_Dicko      
+	recruit_character = JNA_Abderrahmane_Talha     
+	recruit_character = JNA_Sidane_Ag_Hita     
+	promote_character = JNA_Iyad_Ag_Ghaly  
+	declare_war_on = { target = MLI type = civil_war }
+	declare_war_on = { target = BNN type = civil_war }
+	declare_war_on = { target = BFA type = civil_war }
+	declare_war_on = { target = NGR type = civil_war }
+	
+	MRT = {
+		give_military_access = PREV
+	}
+	
+	ALG = {
+		give_military_access = PREV
+	}
+	
+	IVO = {
+		give_military_access = PREV
+	}
+	
+	AZW = {
+		give_military_access = PREV
+	}
+
+	add_civil_war_target = MLI
+	give_military_access = AZW
+	MLI = { add_civil_war_target = PREV }
+	BNN = { add_civil_war_target = PREV }
+	BFA = { add_civil_war_target = PREV }
+	NGR = { add_civil_war_target = PREV }
+	set_capital = { state = 127 }
+}
+
+create_dynamic_country = {
+	original_tag = MLI
+	copy_tag = MLI
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = MLI_imghad_tuareg_selfdefense_group_and_allies
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	every_core_state = { remove_core_of = PREV }
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+	}
+	
+	transfer_state = 136
+	136 = { add_core_of = PREV }
+	
+	set_oob = "GTI_oob"
+	recruit_character = GTI_El_Hadj_Ag_Gamou    
+	recruit_character = GTI_Fahad_Ag_Almahmoud     
+	promote_character = GTI_El_Hadj_Ag_Gamou  
+	declare_war_on = { target = ISS type = civil_war }
+	declare_war_on = { target = AZW type = civil_war }
+
+	add_civil_war_target = ISS
+	add_civil_war_target = JNA
+	add_civil_war_target = AZW
+	ISS = { add_civil_war_target = PREV }
+	AZW = { add_civil_war_target = PREV }
+}
+
+create_dynamic_country = {
+	original_tag = MLI
+	copy_tag = MLI
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = MLI_islamic_state_sahel_province
+	set_popularities = { fundamentalism = 100 }
+	set_politics = { ruling_party = fundamentalism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	every_core_state = { remove_core_of = PREV }
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		AD_fundamentalism 
+	}
+	
+	transfer_state = 132
+	set_province_controller = 544
+	set_province_controller = 4870
+	set_province_controller = 3615
+	set_province_controller = 3197
+	set_province_controller = 1958
+	set_province_controller = 13
+	set_province_controller = 5
+	set_province_controller = 2276
+	set_province_controller = 3050
+	set_province_controller = 4936
+	set_province_controller = 2615
+	
+	set_oob = "ISS_oob"
+	add_manpower = 9000
+	recruit_character = ISS_Adnan_Abu_Walid_al_Sahrawi    
+	recruit_character = ISS_Abdulaziz_Mahwaz_Al_Jamal     
+	recruit_character = ISS_Abu_Huzeifa 
+	recruit_character = ISS_Abou_al_Bara_al_Sahraoui 
+	promote_character = ISS_Adnan_Abu_Walid_al_Sahrawi  
+	declare_war_on = { target = MLI type = civil_war }
+	declare_war_on = { target = JNA type = civil_war }
+	declare_war_on = { target = AZW type = civil_war }
+	declare_war_on = { target = GTI type = civil_war }
+	declare_war_on = { target = NGR type = civil_war }
+	declare_war_on = { target = BFA type = civil_war }
+
+	add_civil_war_target = MLI
+	add_civil_war_target = JNA
+	add_civil_war_target = AZW
+	add_civil_war_target = GTI
+	add_civil_war_target = NGR
+	add_civil_war_target = BFA
+	MLI = { 
+		add_civil_war_target = PREV 
+		set_province_controller = 4953
+		set_province_controller = 4955
+	}
+	JNA = { 
+		add_civil_war_target = PREV 
+		set_province_controller = 686
+		set_province_controller = 4956
+		set_province_controller = 2342
+		set_province_controller = 317
+		set_province_controller = 131
+		set_province_controller = 335
+		set_province_controller = 684
+		set_province_controller = 3563
+		set_province_controller = 4972
+		set_province_controller = 1911
+		set_province_controller = 4971
+		set_province_controller = 3565
+		set_province_controller = 3240
+		set_province_controller = 2221
+		set_province_controller = 4943
+		set_province_controller = 2759
+		set_province_controller = 2376
+		set_province_controller = 3104
+	}
+	AZW = { add_civil_war_target = PREV }
+	GTI = { add_civil_war_target = PREV }
+	NGR = { add_civil_war_target = PREV }
+	BFA = { add_civil_war_target = PREV }
+}
+MLI = {
+	set_autonomy = {
+		target = GTI
+		autonomous_state = autonomy_puppet
+	}
+}

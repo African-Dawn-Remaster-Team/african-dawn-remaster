@@ -1,0 +1,22 @@
+state={
+	id=93
+	name="STATE_93"
+	provinces={
+		490 564 1125 2808 4657 4667 4672 4679 4682 4684 
+	}
+	history={
+		owner = GHA
+		add_core_of = WTL
+		victory_points = { 4657 5 }
+		victory_points = { 2808 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+		}
+	}
+	manpower=4000000
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

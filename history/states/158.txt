@@ -1,0 +1,24 @@
+state={
+	id=158
+	name="STATE_158"
+	provinces={
+		483 793 805 861 1541 1626 1905 1940 2092 2176 2283 2554 2558 2901 3364 5094 5113 
+	}
+	resources = {
+		oil = 10
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 2176 5 }
+		victory_points = { 483 3 }
+		victory_points = { 1541 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=93224
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

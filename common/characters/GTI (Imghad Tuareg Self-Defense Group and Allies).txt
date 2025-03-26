@@ -1,0 +1,48 @@
+characters = {
+    GTI_El_Hadj_Ag_Gamou = {
+		name = GTI_El_Hadj_Ag_Gamou
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GTI/GTI_El_Hadj_Ag_Gamou.dds"
+			}
+			army = {
+				large = "gfx/leaders/GTI/GTI_El_Hadj_Ag_Gamou.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EL_HADJ_AG_GAMOU_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	GTI_Fahad_Ag_Almahmoud = {
+		name = GTI_Fahad_Ag_Almahmoud
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GTI/GTI_Fahad_Ag_Almahmoud.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/GTI/GTI_Fahad_Ag_Almahmoud.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher infantry_officer master_of_desert_warfare }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+}

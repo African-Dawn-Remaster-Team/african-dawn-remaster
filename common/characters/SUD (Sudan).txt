@@ -1,0 +1,50 @@
+characters = {
+
+	SUD_Abdel_Fattah_al_Burhan = {
+		name = SUD_Abdel_Fattah_al_Burhan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUD/SUD_Abdel_Fattah_al_Burhan.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABDEL_FATTAH_AL_BURHAN_DESC"
+			ideology = centrism_subtype_personalist_dictatorship
+		}
+		field_marshal = {
+			traits = { harsh_leader master_of_desert_warfare }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	SUD_Hemetti = {
+		name = SUD_Hemetti
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SUD/SUD_Hemetti.dds"
+			}
+			army = {
+				large = "gfx/leaders/SUD/SUD_Hemetti.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HEMETTI_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal = {
+			traits = { media_personality harsh_leader master_of_desert_warfare }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=45
+	name="STATE_45"
+	provinces={
+		674 834 1138 2326 2402 2544 3745 3891 3892 3893 3894 3896 3897 3904 
+	}
+	resources = {
+		gold = 8
+		diamond = 4
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 834 3 }
+		victory_points = { 674 10 }
+		victory_points = { 3893 3 }
+		victory_points = { 1138 3 }
+		victory_points = { 3894 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=199714
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

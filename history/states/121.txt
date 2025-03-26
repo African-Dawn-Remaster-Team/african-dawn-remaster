@@ -1,0 +1,27 @@
+state={
+	id=121
+	name="STATE_121"
+	provinces={
+		4 94 347 986 1284 1510 1531 2121 2267 2275 2329 2615 3626 3640 3646 4901 4903 4904 4905 4906 5163 5165 
+	}
+	resources = {
+		gold = 4
+		uranium = 4
+	}
+	history={
+		owner = BFA
+		add_core_of = BFA
+		victory_points = { 2267 5 }
+		victory_points = { 5163 3 }
+		victory_points = { 2275 3 }
+		victory_points = { 2615 3 }
+		victory_points = { 1531 3 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=4687941
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

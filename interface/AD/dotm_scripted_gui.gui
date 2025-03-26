@@ -1,0 +1,26 @@
+guiTypes = {
+	containerWindowType = {
+		name = "bottom_gui"
+		size = { width = 85 height = 90 }
+		position = { x = -80 y = -325 }
+		orientation = lower_right
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+
+		buttonType = {
+			name = "chita_small_custom_gui_opener"
+			spriteType = "GFX_chita_small_custom_gui_opener"
+			position = { x = 42 y = 45 }
+			centerposition = yes
+			pdx_tooltip = "CHT_Murder_Investigation_GUI_Open_Button_tt"
+		}
+		
+		
+		
+	}
+  
+	
+}

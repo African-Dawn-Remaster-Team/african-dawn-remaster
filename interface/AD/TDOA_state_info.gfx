@@ -1,0 +1,86 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_State_Info_background"
+		texturefile = "gfx/interface/state_info/background.dds"
+	}
+	spriteType = {
+		name = "GFX_info_exit_button"
+		texturefile = "gfx/interface/state_info/info_exit_button.dds"
+	}
+	spriteType = {
+		name = "GFX_State_Info_Tabs"
+		texturefile = "gfx/interface/state_info/info_tabs.dds"
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_State_Info_Tabs_Icon_1"
+		texturefile = "gfx/interface/state_info/info_tabs_icon_1.dds"
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_State_Info_Tabs_Icon_2"
+		texturefile = "gfx/interface/state_info/info_tabs_icon_2.dds"
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_State_Info_Tabs_Icon_3"
+		texturefile = "gfx/interface/state_info/info_tabs_icon_3.dds"
+		noofframes = 2
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_NoContent"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Placate_NoContent.dds"
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_BFA"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_BFA.dds"
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_RUS"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_RUS.dds"
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_CHA"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_CHA.dds"
+	}	
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_SEN"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_SEN.dds"
+	}	
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_EQG"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_EQG.dds"
+	}	
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_GNA"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_GNA.dds"
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_LBY"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_LBY.dds"
+	}
+		spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_MLI"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_MLI.dds"
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_NGR"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_NGR.dds"
+	}
+		spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_USA"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_USA.dds"
+	}
+		spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_FRA"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_FRA.dds"
+	}
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_NGA"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_NGA.dds"
+	}	
+	spriteType = {
+		name = "GFX_TDOA_State_Info_Placate_CAR"
+		textureFile = "gfx/interface/state_info/TDOA_State_Info_Picture_CAR.dds"
+	}
+}

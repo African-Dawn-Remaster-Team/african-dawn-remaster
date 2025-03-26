@@ -1,0 +1,184 @@
+division_template = {
+	name = "Infantry Brigade"
+	priority = 1
+	regiments={
+		Infantry = { x=0 y=0 }
+		Infantry = { x=0 y=1 }
+		Infantry = { x=0 y=2 }
+		Infantry = { x=1 y=0 }
+		Infantry = { x=1 y=1 }
+	}
+}
+
+division_template = {
+	name = "Light Infantry Brigade"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck = { x=0 y=0 }
+		light_infantry_opol_on_guntruck = { x=0 y=1 }
+		light_infantry_opol_on_guntruck = { x=0 y=2 }
+		light_infantry_opol_on_guntruck = { x=1 y=0 }
+		light_infantry_opol_on_guntruck = { x=1 y=1 }
+		light_infantry_opol_on_guntruck = { x=1 y=2 }
+	}
+}
+
+division_template = {
+	name = "Armoured Recce Regiment"
+	priority = 1
+	regiments={
+		infantry_on_truck={ x=0 y=0 }
+		infantry_on_truck={ x=0 y=1 }
+		infantry_on_truck={ x=0 y=2 }
+		infantry_on_truck={ x=0 y=3 }
+		infantry_on_truck={ x=0 y=4 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+}
+
+division_template = {
+	name = "Mechanised Brigade"
+	priority = 1
+	regiments={
+		medium_armor_unit ={ x=0 y=0 }
+		medium_armor_unit ={ x=0 y=1 }
+		medium_armor_unit ={ x=0 y=2 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+}
+division_template = {
+	name = "Motorised Brigade"
+	priority = 1
+	regiments={
+		infantry_on_jeep ={ x=0 y=0 }
+		infantry_on_jeep ={ x=0 y=1 }
+		infantry_on_jeep={ x=1 y=0 }
+		infantry_on_jeep={ x=1 y=1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1st battalion"
+		location = 1614
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "2nd armed battalion"
+		location = 1614
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "3nd armed battalion"
+		location = 1614
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "4th battalion"
+		location = 4987
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "5th battalion"
+		location = 2193
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "6th battalion"
+		location = 2193
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "7th battalion"
+		location = 4980
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "9th battalion"
+		location = 4981
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "10th battalion"
+		location = 4982
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "11th battalion"
+		location = 4983
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "12th battalion"
+		location = 4984
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "13th battalion"
+		location = 3013
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "14th battalion"
+		location = 2440
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "14th battalion"
+		location = 2440
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "15th battalion"
+		location = 1331
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "16th battalion"
+		location = 722
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+	division= {	
+		name = "17th battalion"
+		location = 722
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.33
+	}
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=53
+	name="STATE_53"
+	provinces={
+		89 269
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 269 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	manpower=22992
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

@@ -1,0 +1,5 @@
+From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
+2337;3859;sea;3987;-1;-1;-1;-1;;
+3858;3859;sea;3987;-1;-1;-1;-1;;
+3858;3135;sea;3987;-1;-1;-1;-1;;
+-1;-1;;-1;-1;-1;-1;-1;-1

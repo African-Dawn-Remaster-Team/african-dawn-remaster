@@ -1,0 +1,18 @@
+characters = {
+
+	RUS_Yunus-bek_Yevkurov = {
+		name = RUS_Yunus-bek_Yevkurov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/RUS_Yunus-bek_Yevkurov.dds"
+			}
+			army = {
+				large = "gfx/leaders/RUS/RUS_Yunus-bek_Yevkurov.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RUS_YUNUS-BEK_YEVKUROV_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

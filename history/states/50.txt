@@ -1,0 +1,26 @@
+state={
+	id=50
+	name="STATE_50"
+	provinces={
+		847 1335 1579 1786 2380 2514 2515 2547 2748 
+	}
+	resources = {
+		diamond = 4
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 2514 3 }
+		victory_points = { 2515 5 }
+		victory_points = { 847 3 }
+		victory_points = { 1786 3 }
+		victory_points = { 2380 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=328878
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

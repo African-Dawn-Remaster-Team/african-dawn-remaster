@@ -1,0 +1,25 @@
+state={
+	id=71
+	name="STATE_71"
+	provinces={
+		615 2337 3869 3870 3871 3872 
+	}
+	resources = {
+		oil = 8
+	}
+	history={
+		owner = GAB
+		add_core_of = GAB
+		victory_points = { 3871 10 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 1
+			3871 = { naval_base = 3 }
+		}
+	}
+	manpower=949430
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

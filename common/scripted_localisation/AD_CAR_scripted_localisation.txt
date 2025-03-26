@@ -1,0 +1,7 @@
+defined_text = {
+	name = CAR_ngakola_and_tere_get_desc
+	text = {
+		trigger = { always = yes }
+		localization_key = "CAR_ngakola_and_tere_tt_1"
+	}
+}

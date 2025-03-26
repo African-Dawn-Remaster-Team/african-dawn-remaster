@@ -1,0 +1,24 @@
+AD_resource_development_category = {
+	icon = generic_prospect_for_resources
+	allowed = {
+		OR = {
+			original_tag = EQG
+		}
+	}
+	priority = 0
+}
+
+AD_economy_view_category = {
+	icon = generic_prospect_for_resources
+	allowed = {
+		is_debug = yes
+		is_ai = no
+	}
+	visible_when_empty = yes
+	priority = 9999
+}
+
+AD_g_five_improvement_category = {
+	allowed = { always = no }
+	priority = 2000
+}

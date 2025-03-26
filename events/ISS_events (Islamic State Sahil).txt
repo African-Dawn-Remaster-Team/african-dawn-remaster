@@ -1,0 +1,16 @@
+add_namespace = AD_ISS
+
+country_event = {
+	id = AD_ISS.0
+	title = AD_ISS.0.t
+	desc = AD_ISS.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.0" }
+	option = {
+		name = AD_ISS.0.a
+		kill_country_leader = yes
+		add_threat = 0.01
+		promote_character = ISS_Abou_al_Bara_al_Sahraoui  
+	}
+}

@@ -1,0 +1,10 @@
+air_wings = {
+	76 = {
+		light_cas_airframe_0 =  {
+			owner = "CAR" 
+			creator = "RUS"
+			amount = 8
+			version_name = "L-39"
+		}
+	}
+}

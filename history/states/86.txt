@@ -1,0 +1,21 @@
+state={
+	id=86
+	name="STATE_86"
+	provinces={
+		358 597 1115 
+	}
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 358 5 }
+		victory_points = { 1115 3 }
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+	manpower=2770400
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

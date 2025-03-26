@@ -1,0 +1,119 @@
+BFA_political_situation_category = {
+
+	BFA_conduct_of_elections_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 326
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission BFA_conduct_of_elections_mission"
+			country_event = AD_BFA.0
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	BFA_pre_election_fuss_mission = {
+		priority = 999
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 50
+		is_good = no
+		selectable_mission = no
+		cancel_trigger = { NOT = { has_active_mission = BFA_conduct_of_elections_mission } }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission BFA_pre_election_fuss_mission"
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission BFA_pre_election_fuss_mission"
+			add_stability = -0.01
+			add_popularity = { ideology = social_democracy popularity = -0.02 }
+			custom_effect_tooltip = empty_line_tooltip
+			activate_mission = BFA_pre_election_fuss_mission
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	BFA_threat_of_a_military_coup_mission = {
+		priority = 998
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 1095
+		is_good = no
+		selectable_mission = no
+		cancel_trigger = { 
+			
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission BFA_threat_of_a_military_coup_mission"
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission BFA_threat_of_a_military_coup_mission"
+			if = {
+				limit = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+				country_event = AD_BFA.1
+			}
+			else = {
+				country_event = AD_BFA.3
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	BFA_jihadist_terrorist_attacks_mission = {
+		priority = 997
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 108
+		is_good = no
+		selectable_mission = no
+		cancel_trigger = { 
+			NOT = { has_war_with = ISS }
+			NOT = { has_war_with = JNA }
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission BFA_jihadist_terrorist_attacks_mission"
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission BFA_jihadist_terrorist_attacks_mission"
+			custom_effect_tooltip = BFA_jihadist_terrorist_attacks_mission_tt
+			custom_effect_tooltip = empty_line_tooltip
+			activate_mission = BFA_jihadist_terrorist_attacks_mission
+			hidden_effect = {
+				random_list = {
+					10 = {
+						set_country_flag = BFA_event_2_flag_1
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_2
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_3
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_4
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_5
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_6
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_7
+					}
+					10 = {
+						set_country_flag = BFA_event_2_flag_8
+					}
+				}
+				country_event = AD_BFA.2
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+}

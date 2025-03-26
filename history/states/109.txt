@@ -1,0 +1,30 @@
+state={
+	id=109
+	name="STATE_109"
+	provinces={
+		18 90 115 318 820 1088 1147 1222 1247 1451 1618 1713 1948 1980 2005 2007 2358 2594 2667 2801 3173 3707 3727 3728 3744 3748 4741 4742 4745 4746 4751 4755 
+	}
+	resources = {
+		steel = 4
+	}
+	history={
+		owner = NGA
+		add_core_of = NGA
+		add_core_of = ARW
+		victory_points = { 4755 15 }
+		victory_points = { 3728 5 }
+		victory_points = { 1451 5 }
+		victory_points = { 1147 3 }
+		victory_points = { 3727 3 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 4
+			air_base = 3
+		}
+	}
+	manpower=22236400
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

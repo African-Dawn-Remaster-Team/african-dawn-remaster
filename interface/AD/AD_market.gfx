@@ -1,0 +1,24 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_AD_economy_info_bg"
+		texturefile = "gfx/interface/gui/economy/economy_info_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_AD_CFA_franc_icon"
+		texturefile = "gfx/interface/gui/economy/CFA_franc_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_CFA_franc_debt_icon"
+		texturefile = "gfx/interface/gui/economy/CFA_franc_debt_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_topbar_splitter"
+		texturefile = "gfx/interface/gui/economy/topbar_splitter.dds"
+	}
+	
+	spriteType = { # TODO
+		name = "GFX_AD_trade_hide_last_res"
+		texturefile = "gfx/interface/gui/economy/trade_hide_last_res.dds"
+	}
+}

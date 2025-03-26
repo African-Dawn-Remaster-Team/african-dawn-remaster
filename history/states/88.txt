@@ -1,0 +1,26 @@
+state={
+	id=88
+	name="STATE_88"
+	provinces={
+		56 112 960 1649 1763 1902 2068 2174 2327 2581 2668 2731 2806 3021 3299 3354 3492 
+	}
+	resources = {
+		aluminium = 8
+	}
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 3021 5 }
+		victory_points = { 2581 3 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			1763 = { dam = 1 }
+			2581 = { dam = 1 }
+		}
+	}
+	manpower=3928248
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

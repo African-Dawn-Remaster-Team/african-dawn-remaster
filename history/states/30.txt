@@ -1,0 +1,22 @@
+
+state={
+	id=30
+	name="STATE_30"
+	provinces={
+		101 157 364 385 395 507 533 649 715 733 750 828 876 1179 1206 1353 1382 1426 1440 1456 1503 1639 1688 1805 1908 1914 1975 1982 2257 2259 2308 2410 2491 2595 2606 2609 2629 2680 2802 2861 2957 2975 3070 3078 3142 3160 3252 3257 3275 3798 3799 3802 3805 3810 
+	}
+	history={
+		owner = KEN
+		add_core_of = KEN
+		victory_points = { 1805 15 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+		}
+	}
+	manpower=51990000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

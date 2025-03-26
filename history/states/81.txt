@@ -1,0 +1,23 @@
+state={
+	id=81
+	name="STATE_81"
+	provinces={
+		447 1520 2116 2175 3217 3578 4773 4779 4798 4801 4804 
+	}
+	resources = {
+		uranium = 1
+	}
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 3578 5 }
+		victory_points = { 447 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=3993007
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

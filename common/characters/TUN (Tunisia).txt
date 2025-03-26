@@ -1,0 +1,18 @@
+characters = {
+
+	TUN_Kais_Saied = {
+		name = TUN_Kais_Saied
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUN/TUN_Kais_Saied.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KAIS_SAIED_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

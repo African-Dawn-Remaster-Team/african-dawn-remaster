@@ -1,0 +1,80 @@
+﻿l_russian:
+
+ modifier_army_sub_unit_light_infantry_opol_on_guntruck_attack_factor: "Атака §Yлёгкой пехоты на джипах§!"
+ modifier_army_sub_unit_light_infantry_opol_on_guntruck_defence_factor: "Защита §Yлёгкой пехоты на джипах§!"
+ modifier_army_sub_unit_light_infantry_opol_on_guntruck_speed_factor: "Скорость §Yлёгкой пехоты на джипах§!"
+ modifier_army_sub_unit_light_infantry_opol_on_guntruck_max_org_factor: "Организация §Yлёгкой пехоты на джипах§!"
+ 
+ modifier_army_sub_unit_light_infantry_opol_defense_factor: "Защита §Yлёгкой пехоты§!"
+ 
+ #######
+ modifier_production_speed_hospital_factor: "£build_texticon  Скорость строительства §Yгоспиталей§!"
+ modifier_production_speed_university_factor: "£build_texticon  Скорость строительства §Yуниверситетов§!"
+ 
+ ###DM###
+ AD_unplanned_offensive_state_modifier: "Незапланированное наступление"
+ 
+ ###ПОЛИТИКА###
+ fundamentalism_drift: "Ежедневная поддержка фундаментализма"
+ fundamentalism_drift_factor_tt: "$fundamentalism_drift$: $RIGHT|+=2$"
+ 
+ conservatism_drift: "Ежедневная поддержка консерватизма"
+ conservatism_drift_factor_tt: "$conservatism_drift$: $RIGHT|+=2$"
+ 
+ centrism_drift: "Ежедневная поддержка центризма"
+ centrism_drift_factor_tt: "$centrism_drift$: $RIGHT|+=2$"
+ 
+ liberalism_drift: "Ежедневная поддержка либерализма"
+ liberalism_drift_factor_tt: "$liberalism_drift$: $RIGHT|+=2$"
+ 
+ social_democracy_drift: "Ежедневная поддержка социал-демократии"
+ social_democracy_drift_factor_tt: "$social_democracy_drift$: $RIGHT|+=2$"
+ 
+ socialism_drift: "Ежедневная поддержка социализма"
+ socialism_drift_factor_tt: "$socialism_drift$: $RIGHT|+=2$"
+ 
+ AD_france_superiority_modifier_weekly: "Еженедельное изменение влияния §YФранции§!"
+ 
+ ###ЭКОНОМИКА###
+ AD_municipal_management_cost_modifier: "Затраты на муниципальное управление"
+ AD_military_expenses_cost_modifier: "Затраты на военные расходы"
+ AD_social_security_expenses_cost_modifier: "Затраты на социальное обеспечение"
+ 
+ AD_debt_threshold_modifier: "Пороговое отношение долга к ВВП"
+ 
+ AD_total_income_modifier: "Общие доходы"
+ AD_money_from_taxes_modifier: "Доход от налогов с населения"
+ AD_money_from_industry_modifier: "Доход от промышленности"
+ AD_money_from_resources_modifier: "Доход от ресурсов"
+ AD_money_from_oil_modifier: "Доход от ресурса £fuel_texticon   §Y$PRODUCTION_MATERIALS_OIL$§!"
+ AD_money_from_diamonds_modifier: "Доход от ресурса £fuel_texticon   §Y$PRODUCTION_MATERIALS_DIAMOND$§!"
+ AD_money_from_gold_modifier: "Доход от ресурса £fuel_texticon   §Y$PRODUCTION_MATERIALS_GOLD$§!"
+ 
+ AD_personal_value_modifier: "Личная ценность (на 100 тыс. населения)"
+ AD_personal_value_factor_modifier: "Фактор личной ценности"
+ AD_industrial_complex_value_modifier: "Ценность фабрики"
+ AD_industrial_complex_value_factor_modifier: "Фактор ценности фабрики"
+ 
+ AD_corporate_tax_modifier: "Корпоративный налог"
+ AD_individuals_tax_modifier: "Индивидуальный налог"
+ 
+ AD_conditions_of_the_country_modifier: "Ежемесячное изменение §Yсостояния государства§!"
+ AD_conditions_of_the_country_modifier_rapid_fall_tt: "§Y$condition_of_the_country$§! стремительно §Rухудшается§!"
+ AD_conditions_of_the_country_modifier_quickly_fall_tt: "§Y$condition_of_the_country$§! быстро §Rухудшается§!"
+ AD_conditions_of_the_country_modifier_fall_tt: "§Y$condition_of_the_country$§! §Rухудшается§!"
+ AD_conditions_of_the_country_modifier_slightly_fall_tt: "§Y$condition_of_the_country$§! незначительно §Rухудшается§!"
+ AD_conditions_of_the_country_modifier_slightly_grow_tt: "§Y$condition_of_the_country$§! незначительно §Gулучшается§!"
+ AD_conditions_of_the_country_modifier_grow_tt: "§Y$condition_of_the_country$§! §Gулучшается§!"
+ AD_conditions_of_the_country_modifier_rapid_grow_tt: "§Y$condition_of_the_country$§! стремительно §Gулучшается§!"
+ 
+ AD_unemployment_rate_modifier: "Ежемесячное изменение §Yситуации с безработицей§!"
+ AD_unemployment_rate_modifier_rapid_grow_tt: "§YСитуация с безработицей§! стремительно §Gулучшается§!"
+ AD_unemployment_rate_modifier_slightly_grow_tt: "§YСитуация с безработицей§! незначительно §Gулучшается§!"
+ 
+ AD_poverty_level_modifier_slightly_fall_tt: "§YСитуация с бедностью§! незначительно §Rухудшается§!"
+ 
+ AD_food_supply_modifier: "Ежемесячное изменение §Yситуации с доступом к продуктам питания§!"
+ AD_food_supply_modifier_rapid_grow_tt: "§YСитуация с доступом к продуктам питания§! стремительно §Gулучшается§!"
+ AD_food_supply_modifier_slightly_grow_tt: "§YСитуация с доступом к продуктам питания§! незначительно §Gулучшается§!"
+ 
+ AD_poverty_level_modifier: "Ежемесячное изменение §Yситуации с бедностью§!"

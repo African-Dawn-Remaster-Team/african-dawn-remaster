@@ -1,0 +1,20 @@
+state={
+	id=1
+	name="STATE_1"
+	provinces={ 
+		892 3635 3643 4619 4620 4621 4622 4623 
+	}
+	history={
+		owner = GMB
+		add_core_of = GMB
+		victory_points = { 4621 10 }
+		buildings = {
+			infrastructure = 1
+			4621 = { naval_base = 3 }
+		}
+	}
+	manpower=2574000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

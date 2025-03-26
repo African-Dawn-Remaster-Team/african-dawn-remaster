@@ -1,0 +1,119 @@
+defined_text = {
+	name = AD_get_foreign_orientation_icon
+	text = {
+		trigger = {
+			check_variable = { AD_fo_position > 0 }
+		}
+		localization_key = "GFX_AD_prorussian_icon"
+	}
+	text = {
+		localization_key = "GFX_AD_profrench_icon"
+	}
+}
+
+defined_text = {
+	name = AD_get_foreign_orientation_percent
+	text = {
+		trigger = {
+			check_variable = { AD_fo_position > 0 }
+			
+			set_temp_variable = { AD_fo_position_percent = AD_fo_position }
+		}
+		localization_key = AD_foreign_orientation_percent_RUS
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { AD_fo_position_percent = AD_fo_position }
+			multiply_temp_variable = { AD_fo_position_percent = -1 }
+		}
+		localization_key = AD_foreign_orientation_percent_FRA
+	}
+}
+
+# TODO ??
+defined_text = {
+	name = AD_get_foreign_orientation_discount_RUS
+	text = {
+		trigger = {
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_foreign_orientation_discount
+	}
+}
+defined_text = {
+	name = AD_get_foreign_orientation_discount_FRA
+	text = {
+		trigger = {
+			set_temp_variable = { discount = AD_m_discount@FRA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_foreign_orientation_discount
+	}
+}
+
+defined_text = {
+	name = AD_get_faction_logo
+	text = {
+		trigger = {
+			is_in_faction = yes
+			faction_leader = { has_country_flag = AD_faction_aes_leader }
+		}
+		localization_key = "GFX_faction_aes"
+	}
+	text = {
+		trigger = {
+			is_in_faction = yes
+			faction_leader = { has_country_flag = AD_faction_ecomog_leader }
+		}
+		localization_key = "GFX_faction_ecomog"
+	}
+	text = {
+		trigger = {
+			is_in_faction = yes
+			faction_leader = { has_country_flag = AD_faction_sdg_leader }
+		}
+		localization_key = "GFX_faction_sdg"
+	}
+	# text = {
+		# trigger = {
+			# OR = {
+				# tag = USA
+				# tag = FRA
+			# }
+		# }
+		# localization_key = "GFX_faction_nato"
+	# }
+	text = { # TODO на самом деле не нужно
+		localization_key = "GFX_faction_none"
+	}
+}
+
+# defined_text = {
+	# name = factionname
+	# text = {
+		# trigger = {
+			# OR = {
+				# tag = USA
+				# tag = FRA
+			# }
+		# }
+		# localization_key = "nato"
+	# }
+	# text = {
+		# localization_key = "nofaction"
+	# }
+# }
+# defined_text = {
+	# name = economic_faction_logo_scripted_gui_loc
+	# text = {
+		# trigger = {
+			# is_in_faction = yes
+			# faction_leader = { has_government = panafricanism }
+		# }
+		# localization_key = "GFX_faction_aes"
+	# }
+	# text = {
+		# localization_key = "GFX_faction_none"
+	# }
+# }

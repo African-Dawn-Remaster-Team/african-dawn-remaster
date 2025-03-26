@@ -1,0 +1,1605 @@
+CAR_field_commanders_category = {
+	
+	CAR_leave_the_post_in_birao = {
+		priority = 1000
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		visible = { country_exists = MLC }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_leave_the_post_in_birao"
+			MLC = {
+				add_to_variable = { CAR_loyality_for_ccr = 2 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_leave_obo = {
+		priority = 999
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		visible = { country_exists = MLC }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_leave_obo"
+			MLC = {
+				add_to_variable = { CAR_loyality_for_ccr = 2 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_leave_bria = {
+		priority = 998
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		visible = {
+			OR = {
+				country_exists = RPR
+				country_exists = FPR
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_leave_bria"
+			RPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			FPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_threaten_the_islamists = {
+		priority = 997
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 20
+		visible = {
+			OR = {
+				country_exists = RPR
+				country_exists = FPR
+				country_exists = MLC
+				country_exists = MPC
+				country_exists = RRR
+				country_exists = CAP
+			}
+		}
+		available = { NOT = { has_country_flag = CAR_give_free_rein_to_the_ex_seleka_flag } }
+		days_remove = 40
+		days_re_enable = 35
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_threaten_the_islamists"
+			set_country_flag = CAR_threaten_the_islamists_flag
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_threaten_the_islamists"
+			clr_country_flag = CAR_threaten_the_islamists_flag
+			add_popularity = { ideology = var:current_party_ideology_group popularity = -0.02 }
+			custom_effect_tooltip = empty_line_tooltip
+			RPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			FPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MLC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MPC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			RRR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			CAP = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+	
+	CAR_give_free_rein_to_the_ex_seleka = {
+		priority = 996
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 20
+		visible = {
+			OR = {
+				country_exists = RPR
+				country_exists = FPR
+				country_exists = MLC
+				country_exists = MPC
+				country_exists = RRR
+				country_exists = CAP
+			}
+		}
+		available = { NOT = { has_country_flag = CAR_threaten_the_islamists_flag } }
+		days_remove = 40
+		days_re_enable = 35
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_give_free_rein_to_the_ex_seleka"
+			set_country_flag = CAR_give_free_rein_to_the_ex_seleka_flag
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_give_free_rein_to_the_ex_seleka"
+			clr_country_flag = CAR_give_free_rein_to_the_ex_seleka_flag
+			add_popularity = { ideology = var:current_party_ideology_group popularity = -0.02 }
+			custom_effect_tooltip = empty_line_tooltip
+			RPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			FPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MLC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MPC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			RRR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			CAP = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+	
+	CAR_conduct_a_joint_patrol_with_the_anti_balaka = {
+		priority = 995
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 20
+		visible = {
+			OR = {
+				country_exists = ABK
+				country_exists = RPR
+				country_exists = FPR
+				country_exists = MLC
+				country_exists = MPC
+				country_exists = RRR
+				country_exists = CAP
+			}
+		}
+		available = { NOT = { has_country_flag = CAR_conduct_a_joint_patrol_with_the_ex_seleka_flag } }
+		days_remove = 20
+		days_re_enable = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_conduct_a_joint_patrol_with_the_anti_balaka"
+			set_country_flag = CAR_conduct_a_joint_patrol_with_the_anti_balaka_flag
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_conduct_a_joint_patrol_with_the_anti_balaka"
+			clr_country_flag = CAR_conduct_a_joint_patrol_with_the_anti_balaka_flag
+			army_experience = 10
+			custom_effect_tooltip = empty_line_tooltip
+			ABK = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			RPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			FPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MLC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MPC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			RRR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			CAP = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+	
+	CAR_conduct_a_joint_patrol_with_the_ex_seleka = {
+		priority = 994
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 20
+		visible = {
+			OR = {
+				country_exists = ABK
+				country_exists = RPR
+				country_exists = FPR
+				country_exists = MLC
+				country_exists = MPC
+				country_exists = RRR
+				country_exists = CAP
+			}
+		}
+		available = { NOT = { has_country_flag = CAR_conduct_a_joint_patrol_with_the_anti_balaka_flag } }
+		days_remove = 20
+		days_re_enable = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_conduct_a_joint_patrol_with_the_ex_seleka"
+			set_country_flag = CAR_conduct_a_joint_patrol_with_the_ex_seleka_flag
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_conduct_a_joint_patrol_with_the_ex_seleka"
+			clr_country_flag = CAR_conduct_a_joint_patrol_with_the_ex_seleka_flag
+			army_experience = 10
+			custom_effect_tooltip = empty_line_tooltip
+			ABK = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			RPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			FPR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MLC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			MPC = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			RRR = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+			CAP = {
+				if = {
+					limit = { exists = yes }
+					add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+					CAR_loyality_for_ccr_check_effect = yes
+				}
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+	
+	CAR_rrr_are_outraged = {
+		priority = 1001
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			RRR = {
+				OR = {
+					exists = no
+					set_temp_variable = { CAR_loyality_for_ccr_temp = 7 }
+					custom_trigger_tooltip = {
+						check_variable = { CAR_loyality_for_ccr > CAR_loyality_for_ccr_temp }
+						tooltip = CAR_loyality_for_ccr_check_tt_0
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission CAR_rrr_are_outraged"
+		}
+		days_mission_timeout = 80
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission CAR_rrr_are_outraged"
+			RRR = {
+				country_event = AD_CAR.0
+				custom_effect_tooltip = empty_line_tooltip
+				effect_tooltip = { remove_ideas = CAR_khartoum_agreement_idea }
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_tension_between_runga_and_gulu = {
+		priority = 1002
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			MLC = {
+				OR = {
+					exists = no
+					NOT = { can_declare_war_on = FPR }
+					is_subject = yes
+				}
+			}
+			RPR = {
+				OR = {
+					exists = no
+					NOT = { can_declare_war_on = FPR }
+					is_subject = yes
+				}
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission CAR_tension_between_runga_and_gulu"
+		}
+		days_mission_timeout = 70
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission CAR_tension_between_runga_and_gulu"
+			add_threat = 0.01
+			MLC = {
+				if = {
+					limit = { exists = yes can_declare_war_on = FPR is_subject = no }
+					declare_war_on = { target = FPR type = annex_everything }
+					custom_effect_tooltip = empty_line_tooltip
+					activate_mission = CAR_control_of_the_ndele
+				}
+			}
+			RPR = {
+				if = {
+					limit = { exists = yes can_declare_war_on = FPR is_subject = no }
+					declare_war_on = { target = FPR type = annex_everything }
+					custom_effect_tooltip = empty_line_tooltip
+					activate_mission = CAR_control_of_the_ndele
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_formation_of_an_anti_government_coalition = {
+		priority = 1003
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 353
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission CAR_formation_of_an_anti_government_coalition"
+			if = {
+				limit = { has_country_flag = CAR_bozize_is_suspended_flag }
+				custom_effect_tooltip = CAR_formation_of_an_anti_government_coalition_tt_1
+				custom_effect_tooltip = empty_line_tooltip
+				country_event = { id = AD_CAR.4 hours = 12 }
+				custom_effect_tooltip = empty_line_tooltip
+				random_country_with_original_tag = {
+					original_tag_to_check = ROOT
+					limit = {
+						NOT = { tag = ROOT tag = LRA tag = RPR tag = MLC tag = MSA }
+						is_in_faction = no
+						is_subject = no
+						check_variable = { CAR_loyality_for_ccr < 9 }
+					}
+					create_faction = CAR_coalition_of_patriots_for_change_faction
+					custom_effect_tooltip = empty_line_tooltip
+					activate_mission = CAR_control_of_the_bangui
+					custom_effect_tooltip = empty_line_tooltip
+					every_country_with_original_tag = {
+						original_tag_to_check = ROOT
+						limit = {
+							NOT = { tag = ROOT tag = PREV tag = LRA tag = RPR tag = MLC tag = MSA }
+							is_in_faction = no
+							is_subject = no
+							check_variable = { CAR_loyality_for_ccr < 9 }
+						}
+						PREV = { add_to_faction = PREV }
+						custom_effect_tooltip = empty_line_tooltip
+						activate_mission = CAR_control_of_the_bangui
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = CAR_formation_of_an_anti_government_coalition_tt_2
+				custom_effect_tooltip = empty_line_tooltip
+				country_event = { id = AD_CAR.1 hours = 12 }
+				custom_effect_tooltip = empty_line_tooltip
+				random_country_with_original_tag = {
+					original_tag_to_check = ROOT
+					limit = {
+						NOT = { tag = ROOT tag = LRA tag = RPR tag = MLC tag = MSA }
+						is_in_faction = no
+						is_subject = no
+						check_variable = { CAR_loyality_for_ccr < 7 }
+					}
+					create_faction = CAR_platform_of_the_liberation_movements_of_central_africa_faction
+					custom_effect_tooltip = empty_line_tooltip
+					activate_mission = CAR_control_of_the_bangui
+					custom_effect_tooltip = empty_line_tooltip
+					every_country_with_original_tag = {
+						original_tag_to_check = ROOT
+						limit = {
+							NOT = { tag = ROOT tag = PREV tag = LRA tag = RPR tag = MLC tag = MSA }
+							is_in_faction = no
+							is_subject = no
+							check_variable = { CAR_loyality_for_ccr < 7 }
+						}
+						PREV = { add_to_faction = PREV }
+						custom_effect_tooltip = empty_line_tooltip
+						activate_mission = CAR_control_of_the_bangui
+					}
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+
+
+CAR_war_operations = {
+	
+	#RPR#
+	CAR_control_of_the_ndele = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = { NOT = { has_war_with = FPR } }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission CAR_control_of_the_ndele"
+		}
+		days_mission_timeout = 90
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission CAR_control_of_the_ndele"
+			custom_effect_tooltip = CAR_control_of_the_ndele_tt
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { controls_state = 56 }
+				white_peace = FPR
+				transfer_state = 56
+			}
+			else = {
+				white_peace = FPR
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_control_of_the_bangui = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = { NOT = { has_war_with = CAR } }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission CAR_control_of_the_bangui"
+		}
+		days_mission_timeout = 90
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission CAR_control_of_the_bangui"
+			if = {
+				limit = { CAR = { controls_state = 76 } }
+				country_event = AD_CAR.2
+				custom_effect_tooltip = empty_line_tooltip
+				effect_tooltip = { add_timed_idea = { idea = CAR_disorganization_of_the_rebels_idea days = 200 } }
+			}
+			else = {
+				if = {
+					limit = {
+						CAR = {
+							has_country_flag = CAR_bozize_is_suspended_flag
+							NOT = { has_completed_focus = CAR_elections_have_been_held }
+						}
+					}
+					country_event = AD_CAR.5
+				}
+				else = {
+					country_event = AD_CAR.3
+					custom_effect_tooltip = empty_line_tooltip
+					effect_tooltip = {
+						if = {
+							limit = { is_faction_leader = yes }
+							dismantle_faction = yes
+						}
+						else = {
+							effect_tooltip = { leave_faction = yes }
+						}
+						custom_effect_tooltip = empty_line_tooltip
+						add_timed_idea = { idea = CAR_disorganization_of_the_rebels_idea days = 200 }
+					}
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	CAR_hold_of_the_bangui = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = { NOT = { controls_state = 76 } }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission CAR_hold_of_the_bangui"
+			country_event = AD_CAR.6
+		}
+		days_mission_timeout = 90
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission CAR_hold_of_the_bangui"
+			complete_national_focus = CAR_thwarting_the_bandits_plan
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+
+CAR_civil_war_category = {
+	
+	CAR_operations_on_the_border_with_cameroon = {
+		priority = 1000
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			OR = {
+				NOT = { 45 = { is_fully_controlled_by = ROOT } }
+				NOT = { 80 = { is_fully_controlled_by = ROOT } }
+				NOT = { 44 = { is_fully_controlled_by = ROOT } }
+				NOT = { 38 = { is_fully_controlled_by = ROOT } }
+				NOT = { 39 = { is_fully_controlled_by = ROOT } }
+			}
+		}
+		fire_only_once = yes
+		days_remove = 180
+		custom_cost_trigger = {
+			set_temp_variable = { army_experience_temp_cost = 5 }
+			set_temp_variable = { command_power_temp_cost = 20 }
+			set_temp_variable = { custom_cost_pp = 50 }
+			check_variable = { var = army_experience value = army_experience_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = army_experience_and_CP_and_pol_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_operations_on_the_border_with_cameroon"
+			hidden_effect = {
+				add_political_power = -50
+				add_command_power = -20
+				army_experience = -5
+			}
+			every_core_state = {
+				limit = {
+					NOT = { is_fully_controlled_by = ROOT }
+					OR = { state = 45 state = 80 state = 44 state = 38 state = 39 }
+				}
+				add_dynamic_modifier = {
+					modifier = CAR_cleansing_from_militants
+					days = 180
+					scope = ROOT
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_operations_on_the_border_with_cameroon"
+			if = {
+				limit = {
+					45 = { is_fully_controlled_by = ROOT }
+					80 = { is_fully_controlled_by = ROOT }
+					44 = { is_fully_controlled_by = ROOT }
+					38 = { is_fully_controlled_by = ROOT }
+					39 = { is_fully_controlled_by = ROOT }
+				}
+				add_war_support = 0.07
+			}
+			else = {
+				add_war_support = -0.03
+				custom_effect_tooltip = empty_line_tooltip
+				add_popularity = { ideology = var:current_party_ideology_group popularity = -0.04 }
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	CAR_squeeze_out_the_lord_resistance_army = {
+		allowed = { always = no }
+		priority = 999
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 15
+		available = {
+			can_declare_war_on = FROM
+			is_neighbor_of = FROM
+		}
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_squeeze_out_the_lord_resistance_army"
+			declare_war_on = { target = FROM type = annex_everything }
+		}
+	}
+	
+	CAR_support_the_rebel_factions_in_mclj = {
+		allowed = { always = no }
+		priority = 998
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 20 }
+			set_temp_variable = { custom_cost_pp = 120 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		days_remove = 45
+		modifier = {
+			political_power_factor = -0.2
+			command_power_gain_mult = -0.15
+			experience_gain_army_factor = -0.2
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_support_the_rebel_factions_in_mclj"
+			hidden_effect = {
+				add_political_power = -120
+				add_command_power = -20
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_support_the_rebel_factions_in_mclj"
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+	}
+	
+	CAR_support_the_rebel_factions_in_rprc = {
+		allowed = { always = no }
+		priority = 997
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 35 }
+			set_temp_variable = { custom_cost_pp = 125 }
+			set_temp_variable = { fuel_temp_cost = 2 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+			check_variable = { var = fuel_k value = fuel_temp_cost compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_CP_and_fuel_cost
+		days_remove = 55
+		modifier = {
+			political_power_factor = -0.2
+			command_power_gain_mult = -0.15
+			experience_gain_army_factor = -0.2
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_support_the_rebel_factions_in_rprc"
+			hidden_effect = {
+				add_political_power = -125
+				add_command_power = -35
+				add_fuel = -2000
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_support_the_rebel_factions_in_rprc"
+			FROM = { add_ideas = CAR_disloyalty_of_the_militants_idea }
+		}
+	}
+	
+	CAR_defeat_the_sultanate = {
+		allowed = { always = no }
+		priority = 996
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 15 }
+			set_temp_variable = { custom_cost_pp = 90 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_defeat_the_sultanate"
+			hidden_effect = {
+				add_political_power = -90
+				add_command_power = -15
+			}
+			every_core_state = {
+				limit = {
+					is_controlled_by = FPR
+					NOT = { has_dynamic_modifier = { modifier = CAR_cleansing_from_militants } }
+				}
+				add_dynamic_modifier = {
+					modifier = CAR_cleansing_from_militants
+					days = 120
+					scope = ROOT
+				}
+			}
+		}
+	}
+	
+	CAR_disarm_the_chadian_mercenaries = {
+		allowed = { always = no }
+		priority = 995
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 22 }
+			set_temp_variable = { custom_cost_pp = 70 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_disarm_the_chadian_mercenaries"
+			hidden_effect = {
+				add_political_power = -70
+				add_command_power = -22
+			}
+			every_core_state = {
+				limit = {
+					is_controlled_by = MPC
+					NOT = { has_dynamic_modifier = { modifier = CAR_cleansing_from_militants } }
+				}
+				add_dynamic_modifier = {
+					modifier = CAR_cleansing_from_militants
+					days = 120
+					scope = ROOT
+				}
+			}
+		}
+	}
+	
+	CAR_defeat_of_the_diamond_bandits = {
+		allowed = { always = no }
+		priority = 994
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 40 }
+			set_temp_variable = { custom_cost_pp = 75 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_defeat_of_the_diamond_bandits"
+			hidden_effect = {
+				add_political_power = -75
+				add_command_power = -40
+			}
+			every_core_state = {
+				limit = {
+					is_controlled_by = CAP
+					NOT = { has_dynamic_modifier = { modifier = CAR_cleansing_from_militants } }
+				}
+				add_dynamic_modifier = {
+					modifier = CAR_cleansing_from_militants
+					days = 200
+					scope = ROOT
+				}
+			}
+		}
+	}
+	
+	CAR_disarming_anti_balaka_units = {
+		allowed = { always = no }
+		priority = 994
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 150
+		available = {
+			FROM = {
+				set_temp_variable = { AD_num_armies_temp_var = 2 }
+				custom_trigger_tooltip = {
+					check_variable = { var = num_armies value = AD_num_armies_temp_var compare = greater_than_or_equals }
+					tooltip = AD_num_armies_greater_than_or_equals_tt
+				}
+			}
+		}
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 50 }
+			set_temp_variable = { custom_cost_pp = 10 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_disarming_anti_balaka_units"
+			hidden_effect = {
+				add_political_power = -50
+				add_command_power = -10
+			}
+			FROM = {
+				every_country_division = {
+					random_select_amount = 2
+					destroy_unit = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { CAR_disarmed_militants_var = 100 tooltip = CAR_disarmed_militants_var_tt }
+		}
+	}
+	
+	CAR_disarmament_of_detachments_of_southeastern_groups = {
+		allowed = { always = no }
+		priority = 993
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 150
+		available = {
+			FROM = {
+				set_temp_variable = { AD_num_armies_temp_var = 2 }
+				custom_trigger_tooltip = {
+					check_variable = { var = num_armies value = AD_num_armies_temp_var compare = greater_than_or_equals }
+					tooltip = AD_num_armies_greater_than_or_equals_tt
+				}
+			}
+		}
+		target_root_trigger = {
+			is_subject = no
+			has_civil_war = yes
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 25 }
+			set_temp_variable = { custom_cost_pp = 30 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_disarmament_of_detachments_of_southeastern_groups"
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -30
+			}
+			FROM = {
+				every_country_division = {
+					random_select_amount = 2
+					destroy_unit = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { CAR_disarmed_militants_var = 100 tooltip = CAR_disarmed_militants_var_tt }
+		}
+	}
+	
+	CAR_use_militants_to_lay_roads = {
+		allowed = { always = no }
+		priority = 992
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 250
+		available = { any_controlled_state = { infrastructure < 5 } }
+		custom_cost_trigger = {
+			set_temp_variable = { custom_cost_pp = 50 }
+			set_temp_variable = { CAR_disarmed_militants_var_temp = 200 }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+			check_variable = { var = CAR_disarmed_militants_var value = CAR_disarmed_militants_var_temp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_disarmed_militants_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_use_militants_to_lay_roads"
+			hidden_effect = {
+				add_political_power = -50
+				add_to_variable = { CAR_disarmed_militants_var = -200 }
+			}
+			random_owned_controlled_state = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	CAR_use_militants_to_build_factories = {
+		allowed = { always = no }
+		priority = 991
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 250
+		custom_cost_trigger = {
+			set_temp_variable = { custom_cost_pp = 100 }
+			set_temp_variable = { CAR_disarmed_militants_var_temp = 300 }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+			check_variable = { var = CAR_disarmed_militants_var value = CAR_disarmed_militants_var_temp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_disarmed_militants_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_use_militants_to_build_factories"
+			hidden_effect = {
+				add_political_power = -100
+				add_to_variable = { CAR_disarmed_militants_var = -300 }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes		
+				}
+			}
+		}
+	}
+	
+	CAR_reintegration_of_militants_into_the_army = {
+		allowed = { always = no }
+		priority = 990
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 200
+		target_root_trigger = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 10 }
+			set_temp_variable = { CAR_disarmed_militants_var_temp = 100 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = CAR_disarmed_militants_var value = CAR_disarmed_militants_var_temp compare = greater_than_or_equals }
+		}
+		custom_cost_text = command_power_and_disarmed_militants_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_reintegration_of_militants_into_the_army"
+			hidden_effect = {
+				add_command_power = -10
+				add_to_variable = { CAR_disarmed_militants_var = -100 }
+			}
+			add_manpower = 100
+			custom_effect_tooltip = empty_line_tooltip
+			CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+		}
+	}
+}
+
+CAR_ngakola_and_tere_category = {
+	
+	CAR_close_your_heart_against_evil = {
+		priority = 1000
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 365
+		cost = 200
+		days_remove = 80
+		available = { has_completed_focus = CAR_kanga_be }
+		modifier = {
+			production_speed_buildings_factor = 0.145
+			stability_weekly = 0.005
+			army_attack_factor = -0.2
+			army_defence_factor = -0.2
+			AD_personal_value_factor_modifier = 0.15
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_close_your_heart_against_evil"
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 85 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 15 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = CAR_ngakola_and_tere_tt_0
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_close_your_heart_against_evil"
+		}
+	}
+	
+	CAR_remind_of_the_times_of_bokassa = {
+		priority = 999
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 45
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_remind_of_the_times_of_bokassa"
+			subtract_from_variable = { AD_fo_position = 0.02 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.02 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_manpower = -4
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 95 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 5 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = CAR_ngakola_and_tere_tt_0
+			}
+		}
+	}
+	
+	CAR_finish_the_restoration_of_the_bokassa_palace = {
+		priority = 998
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 240
+		highlight_states = {
+			highlight_state_targets = {
+				state = 76
+			}
+		}
+		available = {
+			76 = {
+				is_controlled_by = ROOT
+				NOT = { has_dynamic_modifier = { modifier = CAR_fifth_kilometer_state_modifier } }
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_finish_the_restoration_of_the_bokassa_palace"
+			add_stability = 0.03
+			custom_effect_tooltip = empty_line_tooltip
+			76 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes		
+					}
+					custom_effect_tooltip = empty_line_tooltip
+					add_dynamic_modifier = { modifier = CAR_bokassa_palace_modifier }					
+				}				
+			}			
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 5 compare = greater_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = -5 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var > 0 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 0 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+		}
+	}
+	
+	CAR_draw_a_line_of_inheritance_from_bokassa = {
+		priority = 997
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		available = { has_completed_focus = CAR_use_the_authority_of_the_father }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_draw_a_line_of_inheritance_from_bokassa"
+			add_popularity = { ideology = conservatism popularity = 0.04 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 85 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 15 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = CAR_ngakola_and_tere_tt_0
+			}
+		}
+	}
+	
+	CAR_raise_the_profile_of_bokassa_in_bambari = {
+		priority = 996
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 49
+			}
+		}
+		available = { controls_state = 49 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_raise_the_profile_of_bokassa_in_bambari"
+			add_manpower = -2
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 95 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 5 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = CAR_ngakola_and_tere_tt_0
+			}
+		}
+	}
+	
+	CAR_give_money_to_passersby = {
+		priority = 995
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 290
+		custom_cost_trigger = {
+			set_temp_variable = { money_temp_cost = 2 }
+			check_variable = { var = AD_current_money_var value = money_temp_cost compare = greater_than_or_equals }
+		}
+		custom_cost_text = money_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_give_money_to_passersby"
+			hidden_effect = { add_to_variable = { AD_current_money_var = -2 } }
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 95 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 5 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = CAR_ngakola_and_tere_tt_0
+			}
+		}
+	}
+	
+	CAR_increase_financing_of_agriculture = {
+		priority = 994
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		custom_cost_trigger = {
+			set_temp_variable = { money_temp_cost = 10 }
+			check_variable = { var = AD_current_money_var value = money_temp_cost compare = greater_than_or_equals }
+		}
+		custom_cost_text = money_cost
+		available = { NOT = { has_idea = AD_three_meals_a_day_for_the_majority_of_the_population } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_increase_financing_of_agriculture"
+			hidden_effect = { add_to_variable = { AD_current_money_var = -10 } }
+			AD_food_supply_level_grow_effect = yes
+		}
+	}
+	
+	CAR_bangui_la_coquette = {
+		priority = 993
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 76
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { money_temp_cost = 40 }
+			check_variable = { var = AD_current_money_var value = money_temp_cost compare = greater_than_or_equals }
+		}
+		custom_cost_text = money_cost
+		available = {
+			has_completed_focus = CAR_end_bangui_la_roquette
+			controls_state = 76
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_bangui_la_coquette"
+			hidden_effect = { add_to_variable = { AD_current_money_var = -40 } }
+			76 = {
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes		
+					}
+				}
+				if = {
+					limit = {
+						free_building_slots = {
+							building = hospital
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = hospital
+						level = 1
+						instant_build = yes		
+					}
+				}
+				if = {
+					limit = {
+						free_building_slots = {
+							building = university
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = university
+						level = 1
+						instant_build = yes		
+					}
+				}
+			}
+		}
+	}
+	
+	CAR_crush_the_tere = {
+		priority = 992
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 250
+		available = {
+			has_completed_focus = CAR_dispel_the_power_of_tere
+			has_war = yes
+			set_temp_variable = { CAR_ngakola_and_tere_temp_var = 85 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_ngakola_and_tere_var value = CAR_ngakola_and_tere_temp_var compare = greater_than_or_equals }
+				tooltip = CAR_ngakola_and_tere_greater_than_or_equals_tt
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_crush_the_tere"
+			custom_effect_tooltip = CAR_crush_the_tere_tt
+			custom_effect_tooltip = empty_line_tooltip
+			show_ideas_tooltip = CAR_anger_of_ngakola_idea
+			hidden_effect = { every_enemy_country = { add_timed_idea = { idea = CAR_anger_of_ngakola_idea days = 90 } } }
+		}
+	}
+	
+	CAR_develop_the_cult_of_ngakola = {
+		priority = 991
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 185
+		days_remove = 360
+		modifier = {
+			CAR_ngakola_and_tere_monthly_modifier = 1
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_develop_the_cult_of_ngakola"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_develop_the_cult_of_ngakola"
+		}
+	}
+	
+	CAR_accept_the_title_of_black_bonaparte = {
+		priority = 990
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		available = {
+			set_temp_variable = { CAR_ngakola_and_tere_temp_var = 100 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_ngakola_and_tere_var value = CAR_ngakola_and_tere_temp_var compare = equals }
+				tooltip = CAR_ngakola_and_tere_equals_tt
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_accept_the_title_of_black_bonaparte"
+			add_popularity = { ideology = conservatism popularity = 0.14 }
+			custom_effect_tooltip = empty_line_tooltip
+			add_country_leader_trait = CAR_black_bonaparte
+		}
+	}
+	
+	CAR_bokassa_new_five_year_plan = {
+		priority = 989
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		available = {
+			has_completed_focus = CAR_new_great_construction_site
+			set_temp_variable = { CAR_ngakola_and_tere_temp_var = 50 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_ngakola_and_tere_var value = CAR_ngakola_and_tere_temp_var compare = greater_than_or_equals }
+				tooltip = CAR_ngakola_and_tere_greater_than_or_equals_tt
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_bokassa_new_five_year_plan"
+			add_timed_idea = { idea = CAR_bokassa_new_five_year_plan_idea days = 1825 }
+		}
+	}
+	
+	CAR_back_control_of_diamonds = {
+		priority = 988
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 0
+		available = {
+			set_temp_variable = { CAR_ngakola_and_tere_temp_var = 60 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_ngakola_and_tere_var value = CAR_ngakola_and_tere_temp_var compare = greater_than_or_equals }
+				tooltip = CAR_ngakola_and_tere_greater_than_or_equals_tt
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_back_control_of_diamonds"
+			remove_ideas = CAR_embargo_on_the_sale_of_diamonds_from_the_un_idea
+		}
+	}
+}
+
+CAR_integration_of_anti_balaka_category = {
+	
+	CAR_integration_of_anti_balaka_decision = {
+		priority = 1000
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		cost = 210
+		available = {
+			set_temp_variable = { CAR_integration_of_anti_balaka_progress_temp_var = 90 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_integration_of_anti_balaka_progress value = CAR_integration_of_anti_balaka_progress_temp_var compare = greater_than_or_equals }
+				tooltip = CAR_integration_of_anti_balaka_progress_greater_than_or_equals_tt
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_integration_of_anti_balaka_decision"
+			set_country_flag = CAR_integration_of_anti_balaka_category_completed
+			annex_country = { target = ABK transfer_troops = yes }
+		}
+	}
+	
+	CAR_expand_the_representation_in_the_region = {
+		priority = 999
+		state_target = yes
+		target_array = ABK.controlled_states
+		cancel_trigger = { NOT = { FROM = { is_controlled_by = ABK } } }
+		on_map_mode = map_and_decisions_view
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 25 }
+			set_temp_variable = { custom_cost_pp = 5 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		fire_only_once = yes
+		days_remove = 25
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel decision CAR_expand_the_representation_in_the_region"
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_expand_the_representation_in_the_region"
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -5
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision CAR_expand_the_representation_in_the_region"
+			add_to_variable = { CAR_integration_of_anti_balaka_progress = 10 tooltip = CAR_integration_of_anti_balaka_progress_tt }
+		}
+	}
+	
+	CAR_disarm_the_anti_balaka_units = {
+		priority = 998
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 75
+		days_re_enable = 200
+		available = {
+			ABK = {
+				set_temp_variable = { AD_num_armies_temp_var = 2 }
+				custom_trigger_tooltip = {
+					check_variable = { var = num_armies value = AD_num_armies_temp_var compare = greater_than_or_equals }
+					tooltip = AD_num_armies_greater_than_or_equals_tt
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_disarm_the_anti_balaka_units"
+			add_to_variable = { CAR_integration_of_anti_balaka_progress = 15 tooltip = CAR_integration_of_anti_balaka_progress_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_manpower = 400
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 40 producer = ABK }
+			custom_effect_tooltip = empty_line_tooltip
+			ABK = {
+				every_country_division = {
+					random_select_amount = 2
+					destroy_unit = yes
+				}
+			}
+		}
+	}
+	
+	CAR_provision_of_ministerial_posts = {
+		priority = 997
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 300
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision CAR_provision_of_ministerial_posts"
+			add_to_variable = { CAR_integration_of_anti_balaka_progress = 15 tooltip = CAR_integration_of_anti_balaka_progress_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = -0.02
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = social_democracy popularity = -0.1 }
+		}
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=21
+	name="STATE_21"
+	provinces={
+		992 1716 1804 3068 3259 5107 5108 5109 5110 5111 5112 5114
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 5111 15 }
+		victory_points = { 5110 5 }
+		victory_points = { 1716 3 }
+		victory_points = { 3068 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 4
+			5111 = { naval_base = 3 }
+			5110 = { naval_base = 3 }
+			3068 = { naval_base = 3 }
+		}
+	}
+	manpower=2629895
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

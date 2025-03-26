@@ -1,0 +1,18 @@
+characters = {
+
+	ERI_Isaias_Afwerki = {
+		name = ERI_Isaias_Afwerki
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ERI/ERI_Isaias_Afwerki.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ISAIAS_AFWERKI_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+}

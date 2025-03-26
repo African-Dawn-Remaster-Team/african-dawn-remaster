@@ -1,0 +1,35 @@
+NGR_sahel_military_initiative_check_effect = {
+	hidden_effect = {
+		set_temp_variable = { AD_smi_army_org_factor_temp_var = 0.03 }
+		set_temp_variable = { AD_smi_max_planning_factor_temp_var = 0.03 }
+		set_temp_variable = { AD_smi_initiative_factor_temp_var = 0.03 }
+		set_temp_variable = { AD_smi_drift_defence_factor_temp_var = 0.1 }
+		set_temp_variable = { AD_smi_stability_factor_temp_var = 0.03 }
+		
+		multiply_temp_variable = { AD_smi_army_org_factor_temp_var = NGR_num_of_allies }
+		multiply_temp_variable = { AD_smi_max_planning_factor_temp_var = NGR_num_of_allies }
+		multiply_temp_variable = { AD_smi_initiative_factor_temp_var = NGR_num_of_allies }
+		multiply_temp_variable = { AD_smi_drift_defence_factor_temp_var = NGR_num_of_allies }
+		multiply_temp_variable = { AD_smi_stability_factor_temp_var = NGR_num_of_allies }
+		
+		set_variable = { AD_smi_army_org_factor_var = AD_smi_army_org_factor_temp_var }
+		set_variable = { AD_smi_max_planning_factor_var = AD_smi_max_planning_factor_temp_var }
+		set_variable = { AD_smi_initiative_factor_var = AD_smi_initiative_factor_temp_var }
+		if = {
+			limit = { has_completed_focus = NGR_new_gendarme_of_the_sahel }
+			set_variable = { AD_smi_drift_defence_factor_var = AD_smi_drift_defence_factor_temp_var }
+			set_variable = { AD_smi_stability_factor_var = AD_smi_stability_factor_temp_var }
+		}
+		force_update_dynamic_modifier = yes
+		
+		every_other_country = {
+			limit = { has_dynamic_modifier = { modifier = AD_sahel_military_initiative_modifier } }
+			set_variable = { AD_smi_army_org_factor_var = PREV.AD_smi_army_org_factor_var }
+			set_variable = { AD_smi_max_planning_factor_var = PREV.AD_smi_max_planning_factor_var }
+			set_variable = { AD_smi_initiative_factor_var = PREV.AD_smi_initiative_factor_var }
+			set_variable = { AD_smi_drift_defence_factor_var = PREV.AD_smi_drift_defence_factor_var }
+			set_variable = { AD_smi_stability_factor_var = PREV.AD_smi_stability_factor_var }
+			force_update_dynamic_modifier = yes
+		}
+	}
+}

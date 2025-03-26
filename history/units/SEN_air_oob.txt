@@ -1,0 +1,10 @@
+air_wings = {
+	2 = {
+		attack_helicopter_airframe_0_ru =  {
+			owner = "SEN" 
+			creator = "RUS"
+			amount = 16
+			version_name = "Mi-24VB"
+		}
+	}
+}

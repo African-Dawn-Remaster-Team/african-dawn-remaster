@@ -1,0 +1,191 @@
+guiTypes = {
+	containerWindowType = {
+		name = "AD_forms_government_gui"
+		position = { x = 0 y = 381 } 
+		size = { width = 100 height = 100 }
+		# clipping = no
+		
+		instantTextboxType = {
+			name = "form_title"
+			position = { x = 98 y = -82 }
+			font = "hoi_16mbs"
+			text = AD_forms_of_government_title
+			maxWidth = 155
+			maxHeight = 32
+			vertical_alignment = center
+			pdx_tooltip = AD_forms_of_government_desc
+			pdx_tooltip_delayed = AD_forms_of_government_desc_delayed
+		}
+		instantTextboxType = {
+			name = "form"
+			position = { x = 98 y = -55 }
+			font = "hoi_20b"
+			text = "[AD_forms_of_government_name]"
+			maxWidth = 155
+			maxHeight = 32
+			vertical_alignment = center
+			pdx_tooltip = AD_forms_of_government_desc
+			pdx_tooltip_delayed = AD_forms_of_government_desc_delayed
+		}
+		
+		containerWindowType = {
+			name = "source_of_power"
+			position = { x = 10 y = 0 }
+			size = { width = 215 height = 100 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 6 left = 0 bottom = 5 right = 0 }
+			
+			background = {
+				name = "Background"		
+				spriteType ="GFX_tiled_bg_1_scrollbar"
+			}
+			
+			gridBoxType = {
+				name = "AD_source_of_power"
+				position = { x = -55 y = 0 }
+				size = { width = 130 height = 18 }
+				slotsize = { width = 130 height = 18 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+			}
+		}
+		containerWindowType = {
+			name = "power_structure"
+			position = { x = 220 y = 0 }
+			size = { width = 215 height = 100 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 6 left = 0 bottom = 5 right = 0 }
+			
+			background = {
+				name = "Background"		
+				spriteType ="GFX_tiled_bg_1_scrollbar"
+			}
+			
+			gridBoxType = {
+				name = "AD_power_structure"
+				position = { x = -55 y = 0 }
+				size = { width = 130 height = 18 }
+				slotsize = { width = 130 height = 18 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+			}
+		}
+		containerWindowType = {
+			name = "faction_status"
+			position = { x = 178 y = -155 }
+			
+			iconType = { # TODO background?
+				name = "faction_bg"
+				position = { x = 3 y = 0 }
+				spriteType = "GFX_AD_faction_bg"
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name = "faction"
+				position = { x = 28 y = 10 }
+				spriteType = "GFX_faction_none"
+				scale = 0.85
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "faction_none_for_tooltip"
+				position = { x = 28 y = 10 }
+				spriteType = "GFX_faction_none"
+				scale = 0.85
+				pdx_tooltip = AD_faction_status_tooltip
+				pdx_tooltip_delayed = DIPLOMACY_FACTION_DESC
+			}
+		}
+	} 
+	containerWindowType = {
+		name = "AD_fog_source_of_power_info_entry"
+		size = { width = 130 height = 18 }
+		clipping = no
+
+		iconType = {
+			name = "sop_leading_froms_bg"
+			position = { x = 60 y = 5 }
+			spriteType = "GFX_leading_pol_party_bg"
+		}		
+		
+		iconType = {
+			name = "color_block_bg"
+			position = { x = 60 y = 2 }
+			spriteType = "GFX_pol_party_colour_bg"
+		}
+		
+		iconType = {
+			name = "sop_color_block"
+			position = { x = 64 y = 6 }
+			spriteType = "GFX_pol_party_colour"
+		}
+		
+		# instantTextboxType = {
+			# name = "score"
+			# position = { x = 160 y = 4 }
+			# font = "hoi_16mbs"
+			# text = "[?AD_sop_scope]"
+			# maxWidth = 60
+			# maxHeight = 18
+		# }
+
+		instantTextboxType = {
+			name = "name"
+			position = { x = 82 y = 4 }
+			font = "hoi_16mbs"
+			text = "[AD_fog_source_of_power_name]"
+			fixedsize = yes
+			maxWidth = 175
+			maxHeight = 18
+			pdx_tooltip = AD_forms_of_government_sop
+			pdx_tooltip_delayed = AD_forms_of_government_sop_desc
+		}
+	}
+	containerWindowType = {
+		name = "AD_fog_power_structure_info_entry"
+		size = { width = 130 height = 18 }
+		clipping = no
+
+		iconType = {
+			name = "ps_leading_froms_bg"
+			position = { x = 60 y = 5 }
+			spriteType = "GFX_leading_pol_party_bg"
+		}		
+		
+		iconType = {
+			name = "color_block_bg"
+			position = { x = 60 y = 2 }
+			spriteType = "GFX_pol_party_colour_bg"
+		}
+		
+		iconType = {
+			name = "ps_color_block"
+			position = { x = 64 y = 6 }
+			spriteType = "GFX_pol_party_colour"
+		}
+		
+		# instantTextboxType = {
+			# name = "score"
+			# position = { x = 160 y = 4 }
+			# font = "hoi_16mbs"
+			# text = "[?AD_ps_scope]"
+			# maxWidth = 60
+			# maxHeight = 18
+		# }
+
+		instantTextboxType = {
+			name = "name"
+			position = { x = 82 y = 4 }
+			font = "hoi_16mbs"
+			text = "[AD_fog_power_structure_name]"
+			fixedsize = yes
+			maxWidth = 175
+			maxHeight = 18
+			pdx_tooltip = AD_forms_of_government_ps
+			pdx_tooltip_delayed = AD_forms_of_government_ps_desc
+		}
+	}
+}

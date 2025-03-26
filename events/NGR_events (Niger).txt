@@ -1,0 +1,253 @@
+add_namespace = AD_NGR
+add_namespace = AD_NGR_news
+
+#Первый тур выборов в Нигере
+country_event = {
+	id = AD_NGR.0
+	title = AD_NGR.0.t
+	desc = AD_NGR.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.0" }
+	option = {
+		name = AD_NGR.0.a
+		#TODO: -2F
+		add_popularity = { ideology = socialism popularity = 0.04 }
+		add_popularity = { ideology = social_democracy popularity = 0.08 }
+		add_popularity = { ideology = centrism popularity = 0.01 }
+	}
+}
+
+#Второй тур выборов в Нигере
+country_event = {
+	id = AD_NGR.1
+	title = AD_NGR.1.t
+	desc = AD_NGR.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.1" }
+	option = {
+		name = AD_NGR.1.a
+		add_popularity = { ideology = social_democracy popularity = 0.11 }
+		add_popularity = { ideology = socialism popularity = -0.02 }
+		add_popularity = { ideology = conservatism popularity = -0.03 }
+	}
+}
+
+#Попытка военного переворота
+country_event = {
+	id = AD_NGR.2
+	title = AD_NGR.2.t
+	desc = AD_NGR.2.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.2" }
+	option = {
+		name = AD_NGR.2.a
+		add_manpower = -4
+		add_stability = -0.02
+		add_popularity = { ideology = social_democracy popularity = -0.01 }
+		hidden_effect = { country_event = { id = AD_NGR.3 days = 2 } }
+	}
+}
+
+#Инаугурация Мохамеда Базума
+country_event = {
+	id = AD_NGR.3
+	title = AD_NGR.3.t
+	desc = AD_NGR.3.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.3" }
+	option = {
+		name = AD_NGR.3.a
+		complete_national_focus = NGR_transfer_of_power_to_mohammed_bazoum
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = {
+			add_stability = 0.02
+			custom_effect_tooltip = empty_line_tooltip
+			retire_country_leader = yes
+			custom_effect_tooltip = empty_line_tooltip
+			promote_character = NGR_Mohamed_Bazoum
+		}
+	}
+}
+
+#Образование партии «Демократическое и республиканское обновление»
+country_event = {
+	id = AD_NGR.4
+	title = AD_NGR.4.t
+	desc = AD_NGR.4.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.4" }
+	option = {
+		name = AD_NGR.4.a
+		set_party_name = { ideology = socialism long_name = NGR_socialism_party_1_long name = NGR_socialism_party_1 }
+		custom_effect_tooltip = empty_line_tooltip		
+		add_country_leader_role = {
+			character = NGR_Mahamane_Usmane
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism_subtype_african_socialism
+				traits = {  }
+			}
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		add_popularity = { ideology = socialism popularity = 0.06 }
+	}
+}
+
+#Военный переворот в Ниамее
+country_event = {
+	id = AD_NGR.5
+	title = AD_NGR.5.t
+	desc = AD_NGR.5.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.5" }
+	option = {
+		name = AD_NGR.5.a
+		complete_national_focus = NGR_establishment_of_chiani_power
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = {
+			subtract_from_variable = { AD_fo_position = 0.2 tooltip = AD_france_superiority_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.03
+			add_war_support = 0.07
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = centrism popularity = 0.2}
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = { promote_character = NGR_Abdourahamane_Tchiani }
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = AD_ECOWAS
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = AD_ECOWAS_sanctions_idea
+		}
+	}
+}
+
+# Военный переворот в Нигере
+news_event = {
+	id = AD_NGR_news.0
+	title = AD_NGR_news.0.t
+	desc = AD_NGR_news.0.d
+	picture = GFX_news_event_dutch_soldiers_indonesia
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = AD_NGR_news.0.a
+	}
+}
+
+#Выход Нигера из G5 Sahel
+country_event = {
+	id = AD_NGR.6
+	title = AD_NGR.6.t
+	desc = AD_NGR.6.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.6" }
+	option = {
+		name = AD_NGR.6.a
+		hidden_effect = { add_dynamic_modifier = { modifier = AD_sahel_military_initiative_modifier } }
+		remove_ideas = AD_member_of_g_five_sahel
+		custom_effect_tooltip = empty_line_tooltip
+		custom_effect_tooltip = NGR_dead_hand_g_five_tt
+		FROM = {
+			add_to_variable = { NGR_num_of_allies = 1 }
+			NGR_sahel_military_initiative_check_effect = yes
+		}
+	}
+	option = {
+		name = AD_NGR.6.b
+	}
+}
+
+#MLI Нигер выступает за переход к гражданскому правлению
+country_event = {
+	id = AD_NGR.7
+	title = AD_NGR.7.t
+	desc = AD_NGR.7.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.7" }
+	option = {
+		name = AD_NGR.7.a
+		trigger = { has_completed_focus = MLI_compliance_with_ecowas_requirements }
+		FROM = { country_event = { id = AD_NGR.8 hours = 12 } }
+	}
+	option = {
+		name = AD_NGR.7.b
+		custom_effect_tooltip = AD_NGR_7_b_tt
+		custom_effect_tooltip = empty_line_tooltip
+		FROM = { country_event = { id = AD_NGR.9 hours = 12 } }
+	}
+}
+
+#Малийцы подчиняются
+country_event = {
+	id = AD_NGR.8
+	title = AD_NGR.8.t
+	desc = AD_NGR.8.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.8" }
+	option = {
+		name = AD_NGR.8.a
+	}
+}
+
+#Малийцы оказывают сопротивление
+country_event = {
+	id = AD_NGR.9
+	title = AD_NGR.9.t
+	desc = AD_NGR.9.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.9" }
+	option = {
+		name = AD_NGR.9.a
+		set_country_flag = NGR_demand_loyalty_unlock_flag
+		effect_tooltip = { unlock_national_focus = NGR_demand_loyalty }
+	}
+}
+
+#Прозападные боевики консолидируются
+country_event = {
+	id = AD_NGR.10
+	title = AD_NGR.10.t
+	desc = AD_NGR.10.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.10" }
+	trigger = { controls_state = 116 }
+	option = {
+		name = AD_NGR.10.a
+		if = {
+			limit = { has_idea = NGR_movement_for_the_democratic_revolution_idea }
+			swap_ideas = {
+				remove_idea = NGR_movement_for_the_democratic_revolution_idea
+				add_idea = NGR_patriotic_liberation_front_idea
+			}
+		}
+		else_if = {
+			limit = { has_idea = NGR_movement_for_the_democratic_revolution_idea_1 }
+			swap_ideas = {
+				remove_idea = NGR_movement_for_the_democratic_revolution_idea_1
+				add_idea = NGR_patriotic_liberation_front_idea
+			}
+		}
+		else = {
+			add_ideas = NGR_patriotic_liberation_front_idea
+			hidden_effect = {
+				116 = {
+					force_enable_resistance = ROOT
+					start_resistance = yes
+					set_resistance = 10
+				}
+			}
+		}
+	}
+}

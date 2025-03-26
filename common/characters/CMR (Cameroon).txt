@@ -1,0 +1,251 @@
+characters = {
+	CMR_Paul_Biya = {
+		name = CMR_Paul_Biya
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CMR/CMR_Paul_Biya.dds"
+			}
+			army = {
+				large = "gfx/leaders/CMR/CMR_Paul_Biya.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PAUL_BIYA_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+
+	CMR_Tiokap_Pierre_Loti = {
+		name = CMR_Tiokap_Pierre_Loti
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer jungle_rat }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+
+	CMR_Mpans_Ndjem_Michel = {
+		name = CMR_Mpans_Ndjem_Michel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	CMR_Ezoo_Mvondo_Simon = {
+		name = CMR_Ezoo_Mvondo_Simon
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	CMR_Kodji_Jacob = {
+		name = CMR_Kodji_Jacob
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_4.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_4_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_4.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_4_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	
+	CMR_Nka_Valere = {
+		name = CMR_Nka_Valere
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_5.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_5_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_5.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_5_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ranger }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	
+	CMR_Ndjonkep_Mehomy_Frederic = {
+		name = CMR_Ndjonkep_Mehomy_Frederic
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_6.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_6_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_6.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_6_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	CMR_Bouba_Dobekreo = {
+		name = CMR_Bouba_Dobekreo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist  }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+
+	#AMB
+	AMB_Ngong_Emmanuel = {
+		name = AMB_Ngong_Emmanuel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AMB/AMB_Ngong_Emmanuel.dds"
+			}
+			army = {
+				large = "gfx/leaders/AMB/AMB_Ngong_Emmanuel.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NGONG_EMMANUEL_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+	}
+	AMB_General_No_Pity = {
+		name = AMB_General_No_Pity
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine harsh_leader ambusher media_personality logistics_wizard unyielding_defender politically_connected }
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	AMB_Benedict_Nwana_Kuah = {
+		name = AMB_Benedict_Nwana_Kuah
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer jungle_rat }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	AMB_Desmond_Koa = {
+		name = AMB_Desmond_Koa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless urban_assault_specialist }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+}

@@ -1,0 +1,1474 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
+focus_tree = {
+	
+	id = ad_equatorial_guinea_focus_tree
+	country = {
+		factor = 0	
+		modifier = {
+			add = 10
+			tag = EQG
+		}
+	}
+	default = no	
+	continuous_focus_position = { x = 0 y = 0 }
+	
+	
+	focus = {
+		id = EQG_country_of_the_hydrocarbon_miracle
+		icon = GFX_z_goal_EQG_country_of_the_hydrocarbon_miracle
+		x = 15
+		y = 0
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_country_of_the_hydrocarbon_miracle"
+			add_to_variable = { AD_current_money_var = 15 tooltip = AD_current_money_var_tt }
+		}
+	}
+	
+	focus = {
+		id = EQG_financing_of_the_african_intelligence_and_security_services_committee
+		icon = GFX_z_goal_EQG_financing_of_the_african_intelligence_and_security_services_committee
+		x = 0
+		y = 1
+		cost = 6
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_country_of_the_hydrocarbon_miracle }
+		relative_position_id = EQG_country_of_the_hydrocarbon_miracle
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_financing_of_the_african_intelligence_and_security_services_committee"
+			add_to_variable = { AD_current_money_var = -20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_threat_of_a_coup_from_the_opposition_idea
+				add_idea = EQG_threat_of_a_coup_from_the_opposition_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_ensuring_security_from_pirates
+		icon = GFX_z_goal_EQG_ensuring_security_from_pirates
+		x = 2
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = EQG_ensuring_security_from_pirates_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = EQG_ensuring_security_from_pirates_unlock_flag
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_country_of_the_hydrocarbon_miracle }
+		relative_position_id = EQG_country_of_the_hydrocarbon_miracle
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_ensuring_security_from_pirates"
+			add_war_support = 0.06
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = AD_volunteer_battalions_idea
+		}
+	}
+	
+	focus = {
+		id = EQG_concessions_for_the_opposition
+		icon = GFX_z_goal_EQG_concessions_for_the_opposition
+		x = -1
+		y = 1
+		cost = 11.5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_financing_of_the_african_intelligence_and_security_services_committee }
+		relative_position_id = EQG_financing_of_the_african_intelligence_and_security_services_committee
+		mutually_exclusive = { focus = EQG_outlaw_socialists }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_concessions_for_the_opposition"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = socialism popularity = 0.05 }
+			add_popularity = { ideology = conservatism popularity = 0.02 }
+			add_popularity = { ideology = liberalism popularity = 0.01 }
+		}
+	}
+	
+	focus = {
+		id = EQG_outlaw_socialists
+		icon = GFX_z_goal_EQG_outlaw_socialists
+		x = 1
+		y = 1
+		cost = 11.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_financing_of_the_african_intelligence_and_security_services_committee }
+		relative_position_id = EQG_financing_of_the_african_intelligence_and_security_services_committee
+		mutually_exclusive = { focus = EQG_concessions_for_the_opposition }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_outlaw_socialists"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { check_variable = { party_popularity@socialism > 0 } }
+				set_temp_variable = { var = ban_socialism_var value = party_popularity@socialism }
+				multiply_temp_variable = { var = ban_socialism_var value = -1 }
+				add_popularity = { ideology = socialism popularity = ban_socialism_var }
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_ciudad_de_la_paz
+		icon = GFX_z_goal_EQG_ciudad_de_la_paz
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 24 }
+		bypass = {  }
+		prerequisite = { focus = EQG_financing_of_the_african_intelligence_and_security_services_committee }
+		relative_position_id = EQG_financing_of_the_african_intelligence_and_security_services_committee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_ciudad_de_la_paz"
+			add_to_variable = { AD_current_money_var = -5 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.07
+			custom_effect_tooltip = empty_line_tooltip
+			24 = {
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					custom_effect_tooltip = empty_line_tooltip
+				}
+			}
+			add_victory_points = { province = 3851 value = 4 }
+		}
+	}
+	
+	focus = {
+		id = EQG_ensure_non_interference_of_the_west_in_the_elections
+		icon = GFX_z_goal_EQG_ensure_non_interference_of_the_west_in_the_elections
+		x = 2
+		y = 2
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_financing_of_the_african_intelligence_and_security_services_committee }
+		relative_position_id = EQG_financing_of_the_african_intelligence_and_security_services_committee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_ensure_non_interference_of_the_west_in_the_elections"
+			country_event = AD_EQG.8
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_completed_focus = EQG_closing_borders } }
+				effect_tooltip = { unlock_national_focus = EQG_closing_borders }
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_construction_of_a_wall_along_the_border_with_cameroon
+		icon = GFX_z_goal_EQG_construction_of_a_wall_along_the_border_with_cameroon
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+		available = {
+			controls_state = 24
+			CMR = {
+				controls_state = 13
+				is_neighbor_of = ROOT
+			    NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_ciudad_de_la_paz }
+		prerequisite = { focus = EQG_closing_borders }
+		relative_position_id = EQG_ciudad_de_la_paz
+		select_effect = { country_event = { id = AD_EQG.10 days = 45 } }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_construction_of_a_wall_along_the_border_with_cameroon"
+			every_controlled_state = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = CMR
+					}
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = EQG_foreign_traders_idea
+		}
+	}
+	
+	focus = {
+		id = EQG_visit_to_russia
+		icon = GFX_z_goal_EQG_visit_to_russia
+		x = -1
+		y = 1
+		cost = 2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = EQG_visit_to_russia_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = EQG_visit_to_russia_unlock_flag
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_ensure_non_interference_of_the_west_in_the_elections }
+		relative_position_id = EQG_ensure_non_interference_of_the_west_in_the_elections
+		select_effect = { add_country_leader_trait = AD_missing_in_place }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_visit_to_russia"
+			custom_effect_tooltip = AD_effects_at_the_beginning_of_the_focus
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = { add_country_leader_trait = AD_missing_in_place }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = AD_effects_at_the_end_of_the_focus
+			custom_effect_tooltip = empty_line_tooltip
+			remove_country_leader_trait = AD_missing_in_place
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { AD_current_money_var = 20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				prioritize = { 40 }
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_abolition_of_the_death_penalty
+		icon = GFX_z_goal_EQG_abolition_of_the_death_penalty
+		x = 0
+		y = 2
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_ensure_non_interference_of_the_west_in_the_elections }
+		relative_position_id = EQG_ensure_non_interference_of_the_west_in_the_elections
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_abolition_of_the_death_penalty"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = var:current_party_ideology_group popularity = 0.04 }
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_mongomo_clan_idea
+				add_idea = EQG_mongomo_clan_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_cooperation_with_the_ministry_of_energy
+		icon = GFX_z_goal_EQG_cooperation_with_the_ministry_of_energy
+		x = -3
+		y = 1
+		cost = 11.5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_completed_focus = EQG_cooperation_with_rosgeologiya }
+		bypass = {  }
+		prerequisite = { focus = EQG_visit_to_russia }
+		relative_position_id = EQG_visit_to_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_cooperation_with_the_ministry_of_energy"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			random_owned_controlled_state = {
+				prioritize = { 40 }
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_preferences_for_lukoil
+		icon = GFX_z_goal_EQG_preferences_for_lukoil
+		x = 1
+		y = 1
+		cost = 11.5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			controls_state = 40
+			controls_state = 24
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_cooperation_with_the_ministry_of_energy }
+		relative_position_id = EQG_cooperation_with_the_ministry_of_energy
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_preferences_for_lukoil"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_resource = { type = oil amount = 12 state = 40 }
+			add_resource = { type = oil amount = 4 state = 24 }
+			custom_effect_tooltip = empty_line_tooltip
+			unlock_decision_tooltip = AD_development_on_mbanye_island
+		}
+	}
+	
+	focus = {
+		id = EQG_crackdown_on_the_rebels_on_the_island_of_annobon
+		icon = GFX_z_goal_EQG_crackdown_on_the_rebels_on_the_island_of_annobon
+		x = -1
+		y = 1
+		cost = 6.5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = EQG_crackdown_on_the_rebels_on_the_island_of_annobon_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = EQG_crackdown_on_the_rebels_on_the_island_of_annobon_unlock_flag
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_abolition_of_the_death_penalty }
+		relative_position_id = EQG_abolition_of_the_death_penalty
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_crackdown_on_the_rebels_on_the_island_of_annobon"
+			add_stability = 0.03
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = EQG_mutiny_on_the_island_of_annobon_idea
+		}
+	}
+	
+	focus = {
+		id = EQG_raise_the_issue_of_the_mbanye_islands_again
+		icon = GFX_z_goal_EQG_raise_the_issue_of_the_mbanye_islands_again
+		x = 3
+		y = 1
+		cost = 11.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_crackdown_on_the_rebels_on_the_island_of_annobon }
+		relative_position_id = EQG_crackdown_on_the_rebels_on_the_island_of_annobon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_raise_the_issue_of_the_mbanye_islands_again"
+			country_event = AD_EQG.15
+		}
+	}
+	
+	focus = {
+		id = EQG_return_what_is_rightfully_yours
+		icon = GFX_z_goal_EQG_return_what_is_rightfully_yours
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = EQG_return_what_is_rightfully_yours_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = EQG_return_what_is_rightfully_yours_unlock_flag
+				}
+			}
+			else = {
+				can_declare_war_on = 70.controller
+				is_subject = no
+				controls_state = 73
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_raise_the_issue_of_the_mbanye_islands_again }
+		prerequisite = { focus = EQG_cooperation_through_the_ministry_of_defense }
+		relative_position_id = EQG_raise_the_issue_of_the_mbanye_islands_again
+		mutually_exclusive = { focus = EQG_accept_the_decision_in_the_hague }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_return_what_is_rightfully_yours"
+			activate_mission = EQG_attack_on_the_gabon
+			70 = { controller = { activate_mission = EQG_attack_on_the_gabon } }
+			custom_effect_tooltip = empty_line_tooltip
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 73
+					num_provinces = 1
+				}	
+				defender = {
+					state = 70
+					num_provinces = 3
+				}
+			}
+			custom_effect_tooltip = EQG_return_what_is_rightfully_yours_tt
+		}
+	}
+	
+	focus = {
+		id = EQG_accept_the_decision_in_the_hague
+		icon = GFX_z_goal_EQG_accept_the_decision_in_the_hague
+		x = 1
+		y = 1
+		cost = 6.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = EQG_accept_the_decision_in_the_hague_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = EQG_accept_the_decision_in_the_hague_unlock_flag
+				}
+			}
+			else = {
+				NOT = { controls_state = 70 }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_raise_the_issue_of_the_mbanye_islands_again }
+		relative_position_id = EQG_raise_the_issue_of_the_mbanye_islands_again
+		mutually_exclusive = { focus = EQG_return_what_is_rightfully_yours }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_accept_the_decision_in_the_hague"
+			add_political_power = 100
+			custom_effect_tooltip = empty_line_tooltip
+			remove_state_claim = 70
+			custom_effect_tooltip = empty_line_tooltip
+			70 = {
+				controller = {
+					add_opinion_modifier = {
+						modifier = EQG_accept_the_decision_in_the_hague_op
+						target = ROOT
+					}
+					reverse_add_opinion_modifier = {
+						modifier = EQG_accept_the_decision_in_the_hague_op
+						target = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_visit_to_moscow
+		icon = GFX_z_goal_EQG_visit_to_moscow
+		x = -1
+		y = 1
+		cost = 2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_visit_to_russia }
+		relative_position_id = EQG_visit_to_russia
+		select_effect = { add_country_leader_trait = AD_missing_in_place }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_visit_to_moscow"
+			custom_effect_tooltip = AD_effects_at_the_beginning_of_the_focus
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = { add_country_leader_trait = AD_missing_in_place }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = AD_effects_at_the_end_of_the_focus
+			custom_effect_tooltip = empty_line_tooltip
+			remove_country_leader_trait = AD_missing_in_place
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { AD_current_money_var = 20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				prioritize = { 24 }
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 40 }
+				limit = {
+					is_core_of = ROOT
+					hospital < 1
+				}
+				add_building_construction = {
+					type = hospital
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_cooperation_through_the_ministry_of_defense
+		icon = GFX_z_goal_EQG_cooperation_through_the_ministry_of_defense
+		x = 0
+		y = 2
+		cost = 11.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_visit_to_moscow }
+		relative_position_id = EQG_visit_to_moscow
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_cooperation_through_the_ministry_of_defense"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[RUS.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1200 producer = RUS }
+			add_equipment_to_stockpile = { type = jeep_equipment amount = 120 producer = RUS }
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = EQG_african_corps_idea
+		}
+	}
+	
+	focus = {
+		id = EQG_formation_of_a_rapid_response_team
+		icon = GFX_z_goal_EQG_formation_of_a_rapid_response_team
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_cooperation_through_the_ministry_of_defense }
+		relative_position_id = EQG_cooperation_through_the_ministry_of_defense
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_formation_of_a_rapid_response_team"
+			if = {
+				limit = { NOT = { has_template = "Equipo de respuesta rápida" } }
+				division_template = {
+					name = "Equipo de respuesta rápida"
+					is_locked = no
+					regiments = {
+						infantry_on_jeep = { x = 0 y = 0 }
+						infantry_on_jeep = { x = 0 y = 1 }
+						infantry_on_jeep = { x = 1 y = 0 }
+						infantry_on_jeep = { x = 1 y = 1 }
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Equipo de respuesta rápida\" division_template = \"Equipo de respuesta rápida\" start_equipment_factor = 1.0 start_experience_factor = 0.3"
+					owner = ROOT
+					count = 2
+				}	
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_expansion_of_the_fleet
+		icon = GFX_z_goal_EQG_expansion_of_the_fleet
+		x = 0
+		y = 2
+		cost = 11.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_cooperation_through_the_ministry_of_defense }
+		relative_position_id = EQG_cooperation_through_the_ministry_of_defense
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_expansion_of_the_fleet"
+			add_equipment_to_stockpile = { type = light_cas_airframe_0 amount = 10 producer = RUS }
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_african_corps_idea
+				add_idea = EQG_african_corps_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_covid_epidemic
+		icon = GFX_z_goal_EQG_covid_epidemic
+		x = -3
+		y = 1
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_country_of_the_hydrocarbon_miracle }
+		relative_position_id = EQG_country_of_the_hydrocarbon_miracle
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_covid_epidemic"
+			unlock_decision_category_tooltip = EQG_covid_epidemic_category
+			activate_mission = EQG_covid_outbreak_mission
+			hidden_effect = { country_event = { id = AD_EQG.17 days = 60 } }
+		}
+	}
+	
+	focus = {
+		id = EQG_appeal_to_cuban_doctors
+		icon = GFX_z_goal_EQG_appeal_to_cuban_doctors
+		x = 0
+		y = 1
+		cost = 5.8
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_covid_epidemic }
+		relative_position_id = EQG_covid_epidemic
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_appeal_to_cuban_doctors"
+			unlock_decision_tooltip = EQG_mobilization_of_cuban_doctors
+		}
+	}
+	
+	focus = {
+		id = EQG_falling_oil_revenues
+		icon = GFX_z_goal_EQG_falling_oil_revenues
+		x = -2
+		y = 1
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_covid_epidemic }
+		relative_position_id = EQG_covid_epidemic
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_falling_oil_revenues"
+			swap_ideas = {
+				remove_idea = EQG_dependence_on_oil_revenues_idea
+				add_idea = EQG_dependence_on_oil_revenues_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_cancellation_of_service_fees
+		icon = GFX_z_goal_EQG_cancellation_of_service_fees
+		x = -2
+		y = 2
+		cost = 11.5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_falling_oil_revenues }
+		relative_position_id = EQG_falling_oil_revenues
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_cancellation_of_service_fees"
+			swap_ideas = {
+				remove_idea = EQG_dependence_on_oil_revenues_idea_1
+				add_idea = EQG_dependence_on_oil_revenues_idea_2
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			AD_social_security_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = EQG_postpone_the_african_oil_and_investment_forum
+		icon = GFX_z_goal_EQG_postpone_the_african_oil_and_investment_forum
+		x = 0
+		y = 2
+		cost = 5.8
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_falling_oil_revenues }
+		relative_position_id = EQG_falling_oil_revenues
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_postpone_the_african_oil_and_investment_forum"
+			add_to_variable = { AD_current_money_var = 15 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = EQG_covid_outbreak_mission }
+				add_days_mission_timeout = { mission = EQG_covid_outbreak_mission days = 20 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					hospital < 2
+				}
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_help_bathe
+		icon = GFX_z_goal_EQG_help_bathe
+		x = -1
+		y = 2
+		cost = 5.8
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_covid_epidemic }
+		relative_position_id = EQG_covid_epidemic
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_help_bathe"
+			if = {
+				limit = { has_active_mission = EQG_covid_outbreak_mission }
+				add_days_mission_timeout = { mission = EQG_covid_outbreak_mission days = 20 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			random_owned_controlled_state = {
+				prioritize = { 24 }
+				limit = {
+					is_core_of = ROOT
+					hospital < 2
+				}
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_get_chinese_support
+		icon = GFX_z_goal_EQG_get_chinese_support
+		x = 0
+		y = 2
+		cost = 11.4
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			OR = {
+				has_idea = EQG_minor_spread_of_infection_idea
+				has_idea = EQG_average_spread_of_infection_idea
+				has_idea = EQG_high_spread_of_infection_idea
+				has_idea = EQG_total_spread_of_infection_idea
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_appeal_to_cuban_doctors }
+		prerequisite = { focus = EQG_help_bathe }
+		prerequisite = { focus = EQG_closing_borders }
+		relative_position_id = EQG_appeal_to_cuban_doctors
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_get_chinese_support"
+			activate_mission = EQG_vaccination_of_the_population_mission
+		}
+	}
+	
+	focus = {
+		id = EQG_closing_borders
+		icon = GFX_z_goal_EQG_closing_borders
+		x = 1
+		y = 2
+		cost = 5.8
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_completed_focus = EQG_ensure_non_interference_of_the_west_in_the_elections }
+		bypass = {  }
+		prerequisite = { focus = EQG_covid_epidemic }
+		relative_position_id = EQG_covid_epidemic
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_closing_borders"
+			add_stability = 0.04
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = conservatism popularity = -0.02 }
+			if = {
+				limit = { has_active_mission = EQG_covid_outbreak_mission }
+				custom_effect_tooltip = empty_line_tooltip
+				add_days_mission_timeout = { mission = EQG_covid_outbreak_mission days = 100 }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_threat_of_a_coup_from_the_opposition_idea_2
+				add_idea = EQG_threat_of_a_coup_from_the_opposition_idea_3
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_demand_the_exit_of_who
+		icon = GFX_z_goal_EQG_demand_the_exit_of_who
+		x = -3
+		y = 1
+		cost = 5.8
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_appeal_to_cuban_doctors }
+		relative_position_id = EQG_appeal_to_cuban_doctors
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_demand_the_exit_of_who"
+			add_to_variable = { AD_current_money_var = 5 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = conservatism popularity = -0.04 }
+			add_popularity = { ideology = socialism popularity = -0.04 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = EQG_covid_outbreak_mission }
+				add_days_mission_timeout = { mission = EQG_covid_outbreak_mission days = -40 }
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_recovery_from_the_coronacrisis
+		icon = GFX_z_goal_EQG_recovery_from_the_coronacrisis
+		x = -1
+		y = 1
+		cost = 11.4
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { NOT = { has_active_mission = EQG_covid_outbreak_mission } }
+		bypass = {  }
+		prerequisite = { focus = EQG_postpone_the_african_oil_and_investment_forum }
+		prerequisite = { focus = EQG_cancellation_of_service_fees }
+		relative_position_id = EQG_postpone_the_african_oil_and_investment_forum
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_recovery_from_the_coronacrisis"
+			if = {
+				limit = { NOT = { has_completed_focus = EQG_new_contracts_with_atlantic_partners } }
+				effect_tooltip = { unlock_national_focus = EQG_new_contracts_with_atlantic_partners }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_dependence_on_oil_revenues_idea_2
+				add_idea = EQG_dependence_on_oil_revenues_idea_3
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_basic_social_reforms
+		icon = GFX_z_goal_EQG_basic_social_reforms
+		x = 0
+		y = 1
+		cost = 5.8
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = { has_idea = AD_welfare_state }
+		prerequisite = { focus = EQG_recovery_from_the_coronacrisis }
+		relative_position_id = EQG_recovery_from_the_coronacrisis
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_basic_social_reforms"
+			AD_social_security_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = EQG_reforming_the_education_system
+		icon = GFX_z_goal_EQG_reforming_the_education_system
+		x = 1
+		y = 1
+		cost = 5.8
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { NOT = { has_idea = AD_welfare_state } }
+		bypass = {  }
+		prerequisite = { focus = EQG_basic_social_reforms }
+		relative_position_id = EQG_basic_social_reforms
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_reforming_the_education_system"
+			AD_social_security_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = EQG_continuation_of_the_construction_of_the_sendje_hydroelectric_power_station
+		icon = GFX_z_goal_EQG_continuation_of_the_construction_of_the_sendje_hydroelectric_power_station
+		x = 2
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_completed_focus = EQG_cooperation_with_rosgeologiya }
+		bypass = {  }
+		prerequisite = { focus = EQG_recovery_from_the_coronacrisis }
+		relative_position_id = EQG_recovery_from_the_coronacrisis
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_continuation_of_the_construction_of_the_sendje_hydroelectric_power_station"
+			random_owned_controlled_state = {
+				prioritize = { 24 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_cooperation_with_rosgeologiya
+		icon = GFX_z_goal_EQG_cooperation_with_rosgeologiya
+		x = -1
+		y = 1
+		cost = 9.3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_cancellation_of_service_fees }
+		relative_position_id = EQG_cancellation_of_service_fees
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_cooperation_with_rosgeologiya"
+			add_ideas = EQG_cooperation_with_rosgeologiya_idea
+		}
+	}
+	
+	focus = {
+		id = EQG_return_to_pndes
+		icon = GFX_z_goal_EQG_return_to_pndes
+		x = 3
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_basic_social_reforms }
+		relative_position_id = EQG_basic_social_reforms
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_return_to_pndes"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { NOT = { has_completed_focus = EQG_mine_expansion } }
+				effect_tooltip = { unlock_national_focus = EQG_mine_expansion }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_dependence_on_oil_revenues_idea_3
+				add_idea = EQG_dependence_on_oil_revenues_idea_4
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_give_up_business_with_gepetrol
+		icon = GFX_z_goal_EQG_give_up_business_with_gepetrol
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_return_to_pndes }
+		relative_position_id = EQG_return_to_pndes
+		mutually_exclusive = { focus = EQG_new_contracts_for_abc_construction }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_give_up_business_with_gepetrol"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_theodorian = -20 tooltip = EQG_influence_of_theodorian_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			random_owned_controlled_state = {
+				prioritize = { 24 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_resource = { type = aluminium amount = 12 state = 24 }
+		}
+	}
+	
+	focus = {
+		id = EQG_new_contracts_for_abc_construction
+		icon = GFX_z_goal_EQG_new_contracts_for_abc_construction
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_return_to_pndes }
+		relative_position_id = EQG_return_to_pndes
+		mutually_exclusive = { focus = EQG_give_up_business_with_gepetrol }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_new_contracts_for_abc_construction"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_gabrielle = -20 tooltip = EQG_influence_of_gabrielle_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			random_owned_controlled_state = {
+				prioritize = { 24 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_family_matters
+		icon = GFX_z_goal_EQG_family_matters
+		x = 4
+		y = 1
+		cost = 11.4
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_country_of_the_hydrocarbon_miracle }
+		relative_position_id = EQG_country_of_the_hydrocarbon_miracle
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_family_matters"
+			country_event = AD_EQG.18
+			custom_effect_tooltip = empty_line_tooltip
+			unlock_decision_tooltip = EQG_develop_contracts_with_western_corporations
+			unlock_decision_tooltip = EQG_support_gabriel_projects
+			unlock_decision_tooltip = EQG_reduce_theodorian_expenses
+			unlock_decision_tooltip = EQG_limit_gabriel_activities
+			custom_effect_tooltip = empty_line_tooltip
+			activate_mission = EQG_theodorian_support_from_nguema_mbasogo_mission
+		}
+	}
+	
+	focus = {
+		id = EQG_shopaholic_with_lamborghini
+		icon = GFX_z_goal_EQG_shopaholic_with_lamborghini
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_family_matters }
+		relative_position_id = EQG_family_matters
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_shopaholic_with_lamborghini"
+			country_event = AD_EQG.19
+		}
+	}
+	
+	focus = {
+		id = EQG_business_with_constance
+		icon = GFX_z_goal_EQG_business_with_constance
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_shopaholic_with_lamborghini }
+		relative_position_id = EQG_shopaholic_with_lamborghini
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_business_with_constance"
+			add_stability = 0.02
+			add_political_power = 45
+			custom_effect_tooltip = empty_line_tooltip
+			country_event = AD_EQG.20
+		}
+	}
+	
+	focus = {
+		id = EQG_the_grey_cardinal_efa_mbah
+		icon = GFX_z_goal_EQG_the_grey_cardinal_efa_mbah
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = EQG_the_grey_cardinal_efa_mbah_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = EQG_the_grey_cardinal_efa_mbah_unlock_flag
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_business_with_constance }
+		relative_position_id = EQG_business_with_constance
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_the_grey_cardinal_efa_mbah"
+			country_event = AD_EQG.21
+		}
+	}
+	
+	focus = {
+		id = EQG_cooperation_with_the_venezuelan_pdvsa
+		icon = GFX_z_goal_EQG_cooperation_with_the_venezuelan_pdvsa
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_business_with_constance }
+		relative_position_id = EQG_business_with_constance
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_cooperation_with_the_venezuelan_pdvsa"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+				EQG_fellow_clansmen_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			random_owned_controlled_state = {
+				prioritize = { 24 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_resource = { type = oil amount = 4 state = 24 }
+		}
+	}
+	
+	focus = {
+		id = EQG_business_architect
+		icon = GFX_z_goal_EQG_business_architect
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_family_matters }
+		relative_position_id = EQG_family_matters
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_business_architect"
+			country_event = AD_EQG.22
+		}
+	}
+	
+	focus = {
+		id = EQG_new_contracts_with_atlantic_partners
+		icon = GFX_z_goal_EQG_new_contracts_with_atlantic_partners
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_completed_focus = EQG_recovery_from_the_coronacrisis
+			controls_state = 40
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_business_architect }
+		relative_position_id = EQG_business_architect
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_new_contracts_with_atlantic_partners"
+			40 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = synthetic_refinery
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+					custom_effect_tooltip = empty_line_tooltip
+				}
+			}			
+			give_resource_rights = { receiver = USA state = 40 resources = { oil } }
+		}
+	}
+	
+	focus = {
+		id = EQG_mine_expansion
+		icon = GFX_z_goal_EQG_mine_expansion
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_completed_focus = EQG_return_to_pndes
+			controls_state = 24
+		}
+		bypass = {  }
+		prerequisite = { focus = EQG_new_contracts_with_atlantic_partners }
+		relative_position_id = EQG_new_contracts_with_atlantic_partners
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_mine_expansion"
+			add_resource = { type = aluminium amount = 8 state = 24 }
+			add_resource = { type = diamond amount = 10 state = 24 }
+		}
+	}
+	
+	focus = {
+		id = EQG_formation_of_a_new_cabinet
+		icon = GFX_z_goal_EQG_formation_of_a_new_cabinet
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { date > 2025.1.1 }
+		bypass = {  }
+		prerequisite = { focus = EQG_new_contracts_with_atlantic_partners focus = EQG_shopaholic_with_lamborghini }
+		relative_position_id = EQG_new_contracts_with_atlantic_partners
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_formation_of_a_new_cabinet"
+			if = {
+				limit = { has_country_flag = EQG_theodorian_consolidates_power_in_the_clan_flag }
+				add_country_leader_role = {
+					character = EQG_Teodoro_Nguema_Obiang_Manga
+					promote_leader = yes
+					country_leader = {
+						desc = "POLITICS_TEODORO_NGUEMA_OBIANG_MANGA_DESC"
+						ideology = centrism_subtype_right_wing_populism
+						traits = {  }
+					}
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_character = EQG_Teodoro_Nguema_Obiang_Manga } }
+				add_country_leader_role = {
+					character = EQG_Gabriel_Mbanga_Obiang_Lima
+					promote_leader = yes
+					country_leader = {
+						desc = "POLITICS_GABRIEL_MBANGA_OBIANG_LIMA_DESC"
+						ideology = centrism_subtype_right_wing_populism
+						traits = {  }
+					}
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				if = {
+					limit = { check_variable = { EQG_influence_of_gabrielle > EQG_influence_of_theodorian } }
+					add_country_leader_role = {
+						character = EQG_Gabriel_Mbanga_Obiang_Lima
+						promote_leader = yes
+						country_leader = {
+							desc = "POLITICS_GABRIEL_MBANGA_OBIANG_LIMA_DESC"
+							ideology = centrism_subtype_right_wing_populism
+							traits = {  }
+						}
+					}
+				}
+				else = {
+					add_country_leader_role = {
+						character = EQG_Teodoro_Nguema_Obiang_Manga
+						promote_leader = yes
+						country_leader = {
+							desc = "POLITICS_TEODORO_NGUEMA_OBIANG_MANGA_DESC"
+							ideology = centrism_subtype_right_wing_populism
+							traits = {  }
+						}
+					}
+				}
+			}
+			set_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_idea = EQG_mongomo_clan_idea_1 }
+				remove_ideas = EQG_mongomo_clan_idea_1
+			}
+			else = {
+				remove_ideas = EQG_mongomo_clan_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = EQG_secure_membership_in_the_imet
+		icon = GFX_z_goal_EQG_secure_membership_in_the_imet
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = EQG_new_contracts_with_atlantic_partners }
+		relative_position_id = EQG_new_contracts_with_atlantic_partners
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus EQG_secure_membership_in_the_imet"
+			if = {
+				limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+				add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+				EQG_fellow_clansmen_check_effect = yes
+			}
+			add_ideas = EQG_secure_membership_in_the_imet_idea
+		}
+	}
+}

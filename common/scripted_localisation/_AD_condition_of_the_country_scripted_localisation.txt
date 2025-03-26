@@ -1,0 +1,95 @@
+defined_text = {
+	name = AD_get_condition_category_name_tooltip
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 0 }
+		}
+		localization_key = poverty_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 1 }
+		}
+		localization_key = unemployment_rate_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 2 }
+		}
+		localization_key = society_development_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 3 }
+		}
+		localization_key = food_supply_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 4 }
+		}
+		localization_key = corruption_level
+	}
+}
+
+defined_text = {
+	name = AD_get_coc_idea_status_value
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 0 }
+		}
+		localization_key = AD_coc_idea_status_poverty
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 1 }
+		}
+		localization_key = AD_coc_idea_status_unemployment_rate
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 2 }
+		}
+		localization_key = AD_coc_idea_status_society_development
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_idea_idx = 3 }
+		}
+		localization_key = AD_coc_idea_status_food_supply
+	}
+}
+
+defined_text = {
+	name = AD_get_condition_category_name
+	text = {
+		trigger = {
+			check_variable = { AD_cc_record_idea_idx = 0 }
+		}
+		localization_key = poverty_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_record_idea_idx = 1 }
+		}
+		localization_key = unemployment_rate_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_record_idea_idx = 2 }
+		}
+		localization_key = society_development_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_record_idea_idx = 3 }
+		}
+		localization_key = food_supply_level
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_cc_record_idea_idx = 4 }
+		}
+		localization_key = corruption_level
+	}
+}

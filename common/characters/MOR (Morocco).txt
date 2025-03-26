@@ -1,0 +1,18 @@
+characters = {
+
+	MOR_Mohammed_VI = {
+		name = MOR_Mohammed_VI
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/MOR_Mohammed_VI.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MOHAMMED_VI_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+}

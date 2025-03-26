@@ -1,0 +1,86 @@
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+	}
+}
+
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Régiment d'Infanterie a Lere"
+		location = 3600
+		division_template = "Milice rurale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'mobile a Lere"
+		location = 4941
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Ber"
+		location = 3573
+		division_template = "Milice rurale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bourem"
+		location = 1274
+		division_template = "Milice rurale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment Inkinane"
+		location = 3544
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tinzawaten"
+		location = 3139
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Zarho"
+		location = 1856
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gao"
+		location = 3577
+		division_template = "Milice rurale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tomboctou"
+		location = 265
+		division_template = "Milice rurale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.77
+	}
+}

@@ -1,0 +1,9 @@
+NDefines_Graphics.NFrontend.CAMERA_MIN_HEIGHT = 30.5
+NDefines_Graphics.NFrontend.CAMERA_MAX_HEIGHT = 3000
+NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED = 35
+NDefines_Graphics.NGraphics.POLITICAL_GRID_SMALL_BOX_LIMIT = 999
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF_MIN = 500.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF_MAX = 1000.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_DOT_CUTOFF_MIN = 750.0
+NDefines_Graphics.NGraphics.VICTORY_POINT_MAP_ICON_DOT_CUTOFF_MAX = 1350.0
+NDefines_Graphics.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 1

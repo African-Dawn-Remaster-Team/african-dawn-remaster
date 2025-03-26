@@ -1,0 +1,257 @@
+﻿add_namespace = AD_MLI
+
+# Переворот в Бамако
+country_event = {
+	id = AD_MLI.0
+	title = AD_MLI.0.t
+	desc = AD_MLI.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.0" }
+	option = {
+		name = AD_MLI.0.a
+		add_threat = 0.02
+		add_stability = 0.1
+		add_war_support = 0.05
+		custom_effect_tooltip = empty_line_tooltip
+		remove_ideas = AD_ECOWAS
+		custom_effect_tooltip = empty_line_tooltip
+		add_ideas = AD_ECOWAS_sanctions_idea
+		custom_effect_tooltip = empty_line_tooltip
+		corruption_low = yes
+		custom_effect_tooltip = empty_line_tooltip
+		complete_national_focus = MLI_goita_revolution
+		custom_effect_tooltip = empty_line_tooltip
+		retire_country_leader = yes
+		custom_effect_tooltip = empty_line_tooltip
+		add_country_leader_role = {
+			character = MLI_Assimi_Goita
+			promote_leader = yes
+			country_leader = {
+				ideology = centrism_subtype_anocracy
+				traits = { MLI_military_reformer }
+			}
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		set_variable = { AD_fog_source_of_power = 1 } # TODO tooltip
+		set_party_name = { ideology = centrism long_name = MLI_centrism_party_1_long name = MLI_centrism_party_1 }
+		custom_effect_tooltip = empty_line_tooltip
+		activate_mission = MLI_demands_of_the_provisional_government_mission
+	}
+}
+
+# Проведение выборов
+country_event = {
+	id = AD_MLI.1
+	title = AD_MLI.1.t
+	desc = AD_MLI.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.1" }
+	option = {
+		name = AD_MLI.1.a
+		complete_national_focus = MLI_cancellation_of_the_second_round
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = MLI_threat_of_a_military_coup_mission }
+			custom_effect_tooltip = empty_line_tooltip
+			add_days_mission_timeout = { mission = MLI_threat_of_a_military_coup_mission days = 50 }
+		}
+	}
+	option = {
+		name = AD_MLI.1.b
+		complete_national_focus = MLI_go_with_the_flow
+		if = {
+			limit = { has_active_mission = MLI_threat_of_a_military_coup_mission }
+			custom_effect_tooltip = empty_line_tooltip
+			add_days_mission_timeout = { mission = MLI_threat_of_a_military_coup_mission days = 90 }
+		}
+	}
+}
+
+# AZW Предложение автономии
+country_event = {
+	id = AD_MLI.2
+	title = AD_MLI.2.t
+	desc = AD_MLI.2.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.2" }
+	option = {
+		name = AD_MLI.2.a
+		FROM = { set_autonomy = { target = ROOT autonomous_state = autonomy_integrated_puppet } }
+	}
+	option = {
+		name = AD_MLI.2.b
+		FROM = { country_event = { id = AD_MLI.3 hours = 12 } }
+	}
+}
+
+# Отказ сепаратистов
+country_event = {
+	id = AD_MLI.3
+	title = AD_MLI.3.t
+	desc = AD_MLI.3.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
+	option = {
+		name = AD_MLI.3.a
+		remove_ideas = MLI_algerian_peace_agreement_idea
+	}
+}
+
+# Предложение углубления сотрудничества
+country_event = {
+	id = AD_MLI.4
+	title = AD_MLI.4.t
+	desc = AD_MLI.4.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.4" }
+	option = {
+		name = AD_MLI.4.a
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = AD_MLI.4.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				OR = {
+					AND = {
+						original_tag = CHA
+						has_country_leader = { character = CHA_Mahamat_Deby ruling_only = yes }
+					}
+					AND = {
+						original_tag = BFA
+						has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+					}
+				}
+			}
+			modifier = {
+				add = -2
+				original_tag = MRT
+			}
+		}
+		FROM = { add_to_faction = ROOT }
+	}
+}
+
+# 113.controller Малийские требования
+country_event = {
+	id = AD_MLI.5
+	title = AD_MLI.5.t
+	desc = AD_MLI.5.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
+	option = {
+		name = AD_MLI.5.a
+		113 = { transfer_state_to = FROM }
+	}
+	option = {
+		name = AD_MLI.5.b
+		trigger = { is_subject = no }
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		create_wargoal = { type = topple_government target = FROM expire = 0 }
+	}
+}
+
+# Мали просит пересмотреть оборонные соглашения
+country_event = {
+	id = AD_MLI.6
+	title = AD_MLI.6.t
+	desc = AD_MLI.6.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
+	option = {
+		name = AD_MLI.6.a
+		ai_chance = {
+			base = 10
+		}
+		every_controlled_state = {
+			limit = { OR = { state = 179 state = 180 state = 181 state = 182 state = 183 } }
+			transfer_state_to = FROM
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		hidden_effect = { FROM = { country_event = { id = AD_MLI.7 hours = 12 } } }
+	}
+	option = {
+		name = AD_MLI.6.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -10
+				FROM = { is_ai = no }
+			}
+		}
+	}
+}
+
+# Французы согласны
+country_event = {
+	id = AD_MLI.7
+	title = AD_MLI.7.t
+	desc = AD_MLI.7.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
+	option = {
+		name = AD_MLI.7.a
+		subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+		add_to_temp_variable = { position_change = -0.1 } # for loc
+		AD_check_political_situation_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		
+		add_ideas = MLI_french_military_support_idea
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_dynamic_modifier = { modifier = MLI_decline_of_the_malian_armed_forces_modifier } }
+			if = {
+				limit = { check_variable = { MAL_army_org_factor_var < -0.02 } }
+				custom_effect_tooltip = MLI_decline_of_the_malian_armed_forces_modifier_tt_change
+				add_to_variable = { MAL_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+				add_to_variable = { MAL_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+				add_to_variable = { MAL_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+				add_to_variable = { MAL_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+				add_to_variable = { MAL_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+				add_to_variable = { MAL_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+			else = {
+				custom_effect_tooltip = MLI_decline_of_the_malian_armed_forces_modifier_tt_remove
+				hidden_effect = { remove_dynamic_modifier = { modifier = MLI_decline_of_the_malian_armed_forces_modifier } }
+			}
+		}
+	}
+}
+
+# Требования ЭКОВАС
+country_event = {
+	id = AD_MLI.8
+	title = AD_MLI.8.t
+	desc = AD_MLI.8.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
+	option = {
+		name = AD_MLI.8.a
+		set_country_flag = MLI_dissolution_of_the_government_of_moktar_one_UNLOCK_flag
+		effect_tooltip = { unlock_national_focus = MLI_dissolution_of_the_government_of_moktar_one }
+		custom_effect_tooltip = empty_line_tooltip
+		remove_ideas = AD_ECOWAS
+	}
+	option = {
+		name = AD_MLI.8.b
+		set_country_flag = MLI_compliance_with_ecowas_requirements_UNLOCK_flag
+		effect_tooltip = { unlock_national_focus = MLI_compliance_with_ecowas_requirements }
+	}
+}

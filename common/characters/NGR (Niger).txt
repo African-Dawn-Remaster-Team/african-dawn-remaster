@@ -1,0 +1,170 @@
+characters = {
+
+	NGR_Mahamadou_Issoufou = {
+		name = NGR_Mahamadou_Issoufou
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGR/NGR_Mahamadou_Issoufou.dds"
+			}
+			army = {
+				large = "gfx/leaders/NGR/NGR_Mahamadou_Issoufou.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAHAMADOU_ISSOUFOU_DESC"
+			ideology = social_democracy_subtype_social_democracy
+			traits = { NGR_gendarme_of_the_sahel }
+		}
+	}
+	
+	NGR_Mohamed_Bazoum = {
+		name = NGR_Mohamed_Bazoum
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGR/NGR_Mohamed_Bazoum.dds"
+			}
+			army = {
+				large = "gfx/leaders/NGR/NGR_Mohamed_Bazoum.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_democracy_subtype_social_democracy
+			traits = { NGR_trade_union_leader }
+		}
+	}
+	
+	NGR_Abdourahamane_Tchiani = {
+		name = NGR_Abdourahamane_Tchiani
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGR/NGR_Abdourahamane_Tchiani.dds"
+			}
+			army = {
+				large = "gfx/leaders/NGR/NGR_Abdourahamane_Tchiani.dds"
+			}
+		}
+		country_leader = {
+			ideology = centrism_subtype_right_wing_populism
+			traits = { NGR_general_of_the_revolution }
+		}
+		field_marshal = {
+			traits = { media_personality trait_cautious harsh_leader }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	NGR_Mahamane_Usmane = {
+		name = NGR_Mahamane_Usmane
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NGR/NGR_Mahamane_Usmane.dds"
+			}
+		}
+	}
+	
+	NGR_Abdou_Sidikou_Issa = {
+		name = NGR_Abdou_Sidikou_Issa
+		portraits = {
+			army = {
+				large = "gfx/leaders/NGR/NGR_Abdou_Sidikou_Issa.dds"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	NGR_Mamane_Sani_Kiaou = {
+		name = NGR_Mamane_Sani_Kiaou
+		portraits = {
+			army = {
+				large = "gfx/leaders/NGR/NGR_Mamane_Sani_Kiaou.dds"
+			}
+		}
+		corps_commander = {
+			traits = { expert_improviser skirmisher }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	NGR_Mohamed_Toumba = {
+		name = NGR_Mohamed_Toumba
+		portraits = {
+			army = {
+				large = "gfx/leaders/NGR/NGR_Mohamed_Toumba.dds"
+			}
+		}
+		field_marshal = {
+			traits = { media_personality master_of_desert_warfare  }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	NGR_Amadou_Abdramane = {
+		name = NGR_Amadou_Abdramane
+		portraits = {
+			army = {
+				large = "gfx/leaders/NGR/NGR_Amadou_Abdramane.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	NGR_Moussa_Salaou_Barmou = {
+		name = NGR_Moussa_Salaou_Barmou
+		portraits = {
+			army = {
+				large = "gfx/leaders/NGR/NGR_Moussa_Salaou_Barmou.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	NGR_Salifou_Mody = {
+		name = NGR_Salifou_Mody
+		portraits = {
+			army = {
+				large = "gfx/leaders/NGR/NGR_Salifou_Mody.dds"
+			}
+		}
+		corps_commander = {
+			traits = { organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

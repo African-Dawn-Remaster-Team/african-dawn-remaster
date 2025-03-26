@@ -1,0 +1,32 @@
+state={
+	id=94
+	name="STATE_94"
+	provinces={
+		359 1394 1441 1703 1885 2264 3032 4646 4648 
+	}
+	resources = {
+		aluminium = 4
+		gold = 20
+		oil = 18
+	}
+	history={
+		owner = GHA
+		add_core_of = GHA
+		victory_points = { 4646 15 }
+		victory_points = { 1394 3 }
+		victory_points = { 3032 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 3
+			4646 = { naval_base = 1 }
+			1394 = { naval_base = 1 }
+			3032 = { naval_base = 1 }
+			359 = { dam = 1 }
+		}
+	}
+	manpower=10376098
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

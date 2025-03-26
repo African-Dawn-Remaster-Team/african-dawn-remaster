@@ -1,0 +1,60 @@
+#Ого, у нас даже такое есть?
+
+air_wings = {
+	167 = {
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+		uav_airframe_0 =  {
+			owner = "TUR" 
+			creator = "TUR"
+			amount = 10
+			version_name = "Bayraktar TB2"
+		}
+	}
+}

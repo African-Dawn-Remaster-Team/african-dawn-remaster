@@ -1,0 +1,181 @@
+add_namespace = AD_elections
+
+#Выборы в Нигерии 2023
+country_event = {
+	id = AD_elections.0
+	title = AD_elections.0.t
+	desc = AD_elections.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.0" }
+	option = {
+		name = AD_elections.0.a
+		retire_character = NGA_Muhammadu_Buhari		
+		promote_character = NGA_Bola_Tinubu
+		news_event = news_election.0
+	}
+}
+
+
+#Выборы в Сомали 2022
+country_event = {
+	id = AD_elections.1
+	title = AD_elections.1.t
+	desc = AD_elections.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.1" }
+	option = {
+		name = AD_elections.1.a
+		retire_character = SOM_Mohamed_Abdullahi_Mohamed 		
+		promote_character = SOM_Hassan_Sheikh_Mohamud
+		news_event = news_election.1
+	}
+}
+
+#Выборы в Сан-Томе и Принсипи 2021
+country_event = {
+	id = AD_elections.2
+	title = AD_elections.2.t
+	desc = AD_elections.2.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.2" }
+	option = {
+		name = AD_elections.2.a
+		retire_character = SNT_Evaristo_Carvalho  		
+		promote_character = SNT_Carlos_Vila_Nova 
+		news_event = news_election.2
+	}
+}
+
+#Государственный переворот в Сан-Томе
+country_event = {
+	id = AD_elections.7
+	title = news_election.7.t
+	desc = news_election.7.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.7" }
+	option = {
+		name = news_election.7.a
+		random_list = {
+			89 = {
+				retire_character = SNT_Arlecio_Costa
+			}
+			11 = {
+				kill_country_leader = yes 
+				set_politics = { ruling_party = centrism elections_allowed = no }
+				add_popularity = {
+					ideology = centrism
+					popularity = 0.23
+				} 
+				news_event = news_election.7
+			}
+		}
+	}
+}
+
+#Выборы в Либерии 2023
+country_event = {
+	id = AD_elections.3
+	title = AD_elections.3.t
+	desc = AD_elections.3.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.3" }
+	option = {
+		name = AD_elections.3.a
+		set_politics = { ruling_party = centrism elections_allowed = no }
+		add_popularity = {
+			ideology = centrism
+			popularity = 0.31
+		}   
+		news_event = news_election.3
+	}
+}
+
+#Выборы в Кении 2022
+country_event = {
+	id = AD_elections.4
+	title = AD_elections.4.t
+	desc = AD_elections.4.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.4" }
+	option = {
+		name = AD_elections.4.a
+		set_politics = { ruling_party = liberalism elections_allowed = no }
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.11
+		}  
+		news_event = news_election.4
+	}
+}
+
+#Выборы в Гане 2025
+country_event = {
+	id = AD_elections.5
+	title = AD_elections.5.t
+	desc = AD_elections.5.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.5" }
+	option = {
+		name = AD_elections.5.a
+		set_politics = { ruling_party = social_democracy elections_allowed = no }
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.34
+		}
+		news_event = news_election.5
+	}
+}
+
+#Выборы в Бисау 2020
+country_event = {
+	id = AD_elections.6
+	title = AD_elections.6.t
+	desc = AD_elections.6.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.6" }
+	option = {
+		name = AD_elections.6.a
+		set_politics = { ruling_party = social_democracy elections_allowed = no }
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.14
+		} 
+		news_event = news_election.6
+	}
+}
+
+
+#Переворот? в Бисау 2023
+country_event = {
+	id = AD_elections.8
+	title = AD_elections.8.t
+	desc = AD_elections.8.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_elections.8" }
+	option = {
+		name = AD_NGA.1.a
+		random_list = {
+			89 = {
+				retire_character = GNB_Victor_Tchongo
+			}
+			11 = {
+				kill_country_leader = yes 
+				set_politics = { ruling_party = centrism elections_allowed = no }
+				add_popularity = {
+					ideology = centrism
+					popularity = 0.23
+				} 
+				news_event = news_election.8
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+search_filters = {
+	name = light_tanks
+	values = {light_tank_chassis}
+}
+
+search_filters = {
+	name = medium_tanks
+	values = {medium_tank_chassis}
+}
+	
+search_filters = {
+	name = heavy_tanks
+	values = {heavy_tank_chassis}
+}
+
+# TODO armored_support_vehicle_chassis, infantry_carrying_armored_vehicle?

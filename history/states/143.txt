@@ -1,0 +1,25 @@
+state={
+	id=143
+	name="STATE_143"
+	provinces={
+		346 694 803 1116 1141 1201 1265 1450 1491 1741 1839 1849 2657 3213 3341 3343 3348 3349 3351 3355 5017 5018 5019 5020 5021 5022 
+	}
+	resources = {
+		oil = 16
+	}
+	history={
+		owner = TUN
+		add_core_of = TUN
+		victory_points = { 2657 5 }
+		victory_points = { 803 3 }
+		victory_points = { 1839 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	manpower=1274708
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

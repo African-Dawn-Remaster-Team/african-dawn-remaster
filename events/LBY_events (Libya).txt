@@ -1,0 +1,75 @@
+add_namespace = AD_LBY
+
+country_event = { ##FOR LBY
+	id = AD_LBY.0
+	title = AD_LBY.0.t
+	desc = AD_LBY.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_LBY.0" }
+	option = {
+		name = AD_LBY.0.a
+		white_peace = GAT
+		add_ideas = LBY_Zheneva_Agreements
+		set_autonomy = {
+			target = TOU
+			autonomous_state = autonomy_puppet
+		}
+		complete_national_focus = LBY_Zheneva_Agreements_EAST
+		21 = {
+			teleport_armies = {
+				limit = {
+					has_defensive_war = yes
+				}
+				to_state = 146
+			}
+		}
+		157 = {
+			teleport_armies = {
+				limit = {
+					has_defensive_war = yes
+				}
+				to_state = 146
+			}
+		}
+		158 = {
+			teleport_armies = {
+				limit = {
+					has_defensive_war = yes
+				}
+				to_state = 146
+			}
+		}
+		160 = {
+			teleport_armies = {
+				limit = {
+					has_defensive_war = yes
+				}
+				to_state = 146
+			}
+		}
+		153 = {
+			teleport_armies = {
+				limit = {
+					has_defensive_war = yes
+				}
+				to_state = 146
+			}
+		}
+		DLG = { country_event = AD_LBY.1 }
+	}
+}
+
+country_event = { ##FOR DLG
+	id = AD_LBY.1
+	title = AD_LBY.0.t
+	desc = AD_LBY.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_LBY.1" }
+	option = {
+		name = AD_LBY.0.a
+		add_ideas = LBY_Zheneva_Agreements
+#		complete_national_focus = LBY_Zheneva_Agreements_WEST
+	}
+}

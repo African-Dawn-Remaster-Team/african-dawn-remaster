@@ -1,0 +1,255 @@
+defined_text = {
+	name = AD_forms_of_government_name
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_conservatism } # не предполагается
+		localization_key = conservatism_subtype_conservatism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_conservative_democracy }
+		localization_key = conservatism_subtype_conservative_democracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_paternalism }
+		localization_key = conservatism_subtype_paternalism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_oligarchic_conservatism }
+		localization_key = conservatism_subtype_oligarchic_conservatism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_despotism }
+		localization_key = conservatism_subtype_despotism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_anarchy } # не предполагается
+		localization_key = conservatism_subtype_anarchy
+	}
+	#
+	text = {
+		trigger = { has_country_leader_ideology = centrism_subtype_centrism } # не предполагается
+		localization_key = centrism_subtype_centrism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = centrism_subtype_right_wing_populism }
+		localization_key = centrism_subtype_right_wing_populism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = centrism_subtype_anocracy }
+		localization_key = centrism_subtype_anocracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = centrism_subtype_personalist_dictatorship }
+		localization_key = centrism_subtype_personalist_dictatorship
+	}
+	text = {
+		trigger = { has_country_leader_ideology = centrism_subtype_irregular_organization }
+		localization_key = centrism_subtype_irregular_organization
+	}
+	text = {
+		trigger = { has_country_leader_ideology = centrism_subtype_tribalism }
+		localization_key = centrism_subtype_tribalism
+	}
+	#
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_liberalism } # не предполагается
+		localization_key = liberalism_subtype_liberalism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_liberal_democracy }
+		localization_key = liberalism_subtype_liberal_democracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_market_liberalism }
+		localization_key = liberalism_subtype_market_liberalism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_national_liberalism }
+		localization_key = liberalism_subtype_national_liberalism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_conservative_liberalism }
+		localization_key = liberalism_subtype_conservative_liberalism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_authoritarian_democracy }
+		localization_key = liberalism_subtype_authoritarian_democracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = liberalism_subtype_anarcho_capitalism }
+		localization_key = liberalism_subtype_anarcho_capitalism
+	}
+	#
+	text = {
+		trigger = { has_country_leader_ideology = social_democracy_subtype_social_democracy }
+		localization_key = social_democracy_subtype_social_democracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = social_democracy_subtype_left_wing_populism }
+		localization_key = social_democracy_subtype_left_wing_populism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = social_democracy_subtype_african_socialism }
+		localization_key = social_democracy_subtype_african_socialism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = social_democracy_subtype_anarchy } # не предполагается
+		localization_key = social_democracy_subtype_anarchy
+	}
+	#
+	text = {
+		trigger = { has_country_leader_ideology = socialism_subtype_socialism }
+		localization_key = socialism_subtype_socialism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = socialism_subtype_african_socialism }
+		localization_key = socialism_subtype_african_socialism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = socialism_subtype_left_wing_nationalism }
+		localization_key = socialism_subtype_left_wing_nationalism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = socialism_subtype_totalitarian_socialism }
+		localization_key = socialism_subtype_totalitarian_socialism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = socialism_subtype_anarcho_communism }
+		localization_key = socialism_subtype_anarcho_communism
+	}
+	###
+	text = {
+		trigger = { has_country_leader_ideology = fundamentalism_subtype_takfirism }
+		localization_key = fundamentalism_subtype_takfirism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = fundamentalism_subtype_jihadism }
+		localization_key = fundamentalism_subtype_jihadism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = fundamentalism_subtype_salafism }
+		localization_key = fundamentalism_subtype_salafism
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_islamic_democracy }
+		localization_key = conservatism_subtype_islamic_democracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = conservatism_subtype_christian_democracy }
+		localization_key = conservatism_subtype_christian_democracy
+	}
+	text = {
+		trigger = { has_country_leader_ideology = socialism_subtype_third_world_theory }
+		localization_key = socialism_subtype_third_world_theory
+	}
+	
+	# text = {
+		# trigger = { check_variable = { AD_fog_power_ideology = 0 } }
+		# localization_key = "Демократическое государство"
+	# }
+	# text = {
+		# trigger = { check_variable = { AD_fog_power_ideology = 1 } }
+		# localization_key = "Авторитарный режим"
+	# }
+	# text = {
+		# trigger = { check_variable = { AD_fog_power_ideology = 2 } }
+		# localization_key = "Тоталитарный режим"
+	# }
+}
+
+defined_text = {
+	name = AD_fog_source_of_power_name
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 0 } }
+		localization_key = "Демократия"
+	}
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 1 } }
+		localization_key = "Олигархия"
+	}
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 2 } }
+		localization_key = "Автократия"
+	}
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 3 } }
+		localization_key = "Анархия"
+	}
+}
+
+defined_text = {
+	name = AD_fog_power_structure_name
+	text = {
+		trigger = { check_variable = { AD_ps_scope = 0 } }
+		localization_key = "Унитарное государство"
+	}
+	text = {
+		trigger = { check_variable = { AD_ps_scope = 1 } }
+		localization_key = "Федерация"
+	}
+	text = {
+		trigger = { check_variable = { AD_ps_scope = 2 } }
+		localization_key = "Конфедерация"
+	}
+}
+
+# TODO ??
+defined_text = {
+	name = AD_fog_source_of_power_status
+	text = {
+		trigger = { 
+			check_variable = { AD_fog_source_of_power = AD_sop_scope } 
+		}
+		localization_key = " (текущее)"
+	}
+}
+defined_text = {
+	name = AD_fog_power_structure_status
+	text = {
+		trigger = { 
+			check_variable = { AD_fog_power_structure = AD_ps_scope }
+		}
+		localization_key = " (текущее)"
+	}
+}
+
+defined_text = {
+	name = AD_sop_get_color_block
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 0 } }
+		localization_key = "GFX_AD_blue_block"
+	}
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 1 } }
+		localization_key = "GFX_pol_party_colour"
+	}
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 2 } }
+		localization_key = "GFX_AD_brown_block"
+	}
+	text = {
+		trigger = { check_variable = { AD_sop_scope = 3 } }
+		localization_key = "GFX_AD_dark_block"
+	}
+	text = {
+		localization_key = "GFX_pol_party_colour"
+	}
+}
+
+defined_text = {
+	name = AD_ps_get_color_block
+	text = {
+		trigger = { check_variable = { AD_ps_scope = 0 } }
+		localization_key = "GFX_AD_dark_blue_block"
+	}
+	text = {
+		trigger = { check_variable = { AD_ps_scope = 1 } }
+		localization_key = "GFX_AD_light_blue_block"
+	}
+	text = {
+		trigger = { check_variable = { AD_ps_scope = 2 } }
+		localization_key = "GFX_AD_green_block"
+	}
+	text = {
+		localization_key = "GFX_pol_party_colour"
+	}
+}

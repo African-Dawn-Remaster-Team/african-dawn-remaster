@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+		
+		AMB_our_lands = {
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			cancel = { has_full_control_of_state = 82 }
+			modifier = { 
+				supply_combat_penalties_on_core_factor = -0.3
+				army_core_attack_factor = 1
+				army_core_defence_factor = 0.75
+				army_defence_factor = -0.25
+				equipment_capture = 0.2
+				equipment_capture_factor = 0.15 
+				army_org_factor = 0.3
+				army_org_regain = 0.2
+				terrain_penalty_reduction = 0.3
+				dig_in_speed_factor = 0.5
+				max_dig_in_factor = 0.5
+				weekly_manpower = 12
+			}
+		}
+		CMR_anglophone_crisis = {
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			cancel = { has_full_control_of_state = 82 }
+			modifier = { 
+				82 = {
+					army_attack_factor = -0.35
+					army_defence_factor = -0.25
+				}
+			}
+		}
+	}
+}

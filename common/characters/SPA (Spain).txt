@@ -1,0 +1,18 @@
+characters = {
+
+	SPA_Pedro_Sanchez = {
+		name = SPA_Pedro_Sanchez
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPA/SPA_Pedro_Sanchez.dds"
+			}
+			army = {
+				large = "gfx/leaders/SPA/SPA_Pedro_Sanchez.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SPA_PEDRO_SANCHEZ_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

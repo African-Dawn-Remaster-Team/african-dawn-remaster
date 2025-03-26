@@ -1,0 +1,26 @@
+state={
+	id=134
+	name="STATE_134"
+	provinces={
+		76 544 1644 2221 3221 3240 3570 4934 4935 4936 4943 4945 4948 4949 4951 
+	}
+	resources = {
+		steel = 4
+		gold = 8
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 3221 5 }
+		victory_points = { 4935 3 }
+		victory_points = { 3240 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+		}
+	}
+	manpower=272060
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

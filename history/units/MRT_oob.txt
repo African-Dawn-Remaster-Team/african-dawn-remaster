@@ -1,0 +1,217 @@
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry={ x=0 y=0 }
+		infantry={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Bataillone de troupes à chameau"
+	regiments={
+		camelry={ x=0 y=0 }
+		camelry={ x=0 y=1 }
+		camelry={ x=0 y=2 }
+		camelry={ x=0 y=3 }
+		camelry={ x=1 y=0 }
+		camelry={ x=1 y=1 }
+		camelry={ x=1 y=2 }
+		camelry={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Bataillon motorisé"
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1er bataillone de troupes à chameau"
+		location = 4848
+		division_template = "Bataillone de troupes à chameau"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "2e bataillone de troupes à chameau"
+		location = 4848
+		division_template = "Bataillone de troupes à chameau"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "1e escadron de troupes à chameau"
+		location = 4848
+		division_template = "Bataillone de troupes à chameau"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "1er Régiment d'infanterie"
+		location = 1505
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "2e Régiment d'infanterie"
+		location = 925
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "3e Régiment d'infanterie"
+		location = 921
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "4e Régiment d'infanterie"
+		location = 2665
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "5e Régiment d'infanterie"
+		location = 2322
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "6e Régiment d'infanterie"
+		location = 2017
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "7e Régiment d'infanterie"
+		location = 4858
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "8e Régiment d'infanterie"
+		location = 2531
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "1er Bataillon motorisé"
+		location = 2665
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "2e Bataillon motorisé"
+		location = 282
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "3e Bataillon motorisé"
+		location = 282
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "4e Bataillon motorisé"
+		location = 921
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "5e Bataillon motorisé"
+		location = 1505
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "6e Bataillon motorisé"
+		location = 4848
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "7e Bataillon motorisé"
+		location = 1622
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "1 bataillon de garde présidentielle"
+		location = 1622
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "Groupements spéciaux d'intervention "
+		location = 282
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Groupements spéciaux d'intervention "
+		location = 2714
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Groupements spéciaux d'intervention "
+		location = 30
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Groupements spéciaux d'intervention "
+		location = 2456
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
+	}
+}

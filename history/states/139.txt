@@ -1,0 +1,32 @@
+state={
+	id=139
+	name="STATE_139"
+	provinces={
+		20 31 75 295 373 934 940 1245 1586 1726 1782 1901 1953 2287 2292 2311 2411 2627 3042 3421 3425 3430 3446 
+	}
+	history={
+		owner = MOR
+		add_claim_by = MOR
+		add_core_of = WSR
+		victory_points = { 295 5 }
+		victory_points = { 3042 3 }
+		victory_points = { 940 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			940 = { naval_base = 3 }
+			2292 = { bunker = 2 }
+			3446 = { bunker = 2 }
+			75 = { bunker = 2 }
+			3042 = { bunker = 2 }
+			934 = { bunker = 2 }
+			3421 = { bunker = 2 }
+			1782 = { bunker = 2 }
+			31 = { bunker = 2 }
+		}
+	}
+	manpower=163132
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

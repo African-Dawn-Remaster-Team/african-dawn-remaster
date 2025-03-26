@@ -1,0 +1,23 @@
+state={
+	id=153
+	name="STATE_153"
+	provinces={
+		995 1597 1884 2985 3439 5058 5062 5064 5066 5073 
+	}
+	resources = {
+		oil = 32
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 5066 5 }
+		victory_points = { 2985 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=76858
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

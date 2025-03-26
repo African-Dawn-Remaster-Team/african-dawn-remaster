@@ -1,0 +1,57 @@
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Bataillon mobile de Kaba-Bangoro"
+		location = 3902
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Bataillon mobile de Banmingi"
+		location = 2881
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Bataillon mobile de Yalinga"
+		location = 3162
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Bataillon de Am-Dafok"
+		location = 3687
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Bataillon de Ndele"
+		location = 3916
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+}

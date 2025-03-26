@@ -1,0 +1,21 @@
+
+state={
+	id=33
+	name="STATE_33"
+	provinces={
+		133 148 178 184 267 444 475 577 1407 1583 1775 1830 2070 2224 2299 2545 2767 2954 2963 3067 3187 3250 3608 3862 
+	}
+	history={
+		owner = ERI
+		add_core_of = ERI
+		victory_points = { 475 10 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	manpower=3556000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,597 @@
+﻿add_namespace = generic
+
+# Generic invitaton to join major Alliance
+country_event = {
+	id = generic.5
+	title = generic.5.t
+	desc = { # FROM and ROOT are democratic
+		text = generic.5.d.a
+		trigger = {
+			FROM = { is_democratic_ideology = yes }
+			is_democratic_ideology = yes
+		}
+	}
+	desc = { # FROM and ROOT are fundamentalism
+		text = generic.5.d.b
+		trigger = {
+			FROM = { is_radical_islamic_ideology = yes }
+			is_radical_islamic_ideology = yes
+		}
+	}
+	desc = { # FROM and ROOT are socialism
+		text = generic.5.d.c
+		trigger = {
+			FROM = { is_left_ideology = yes }
+			is_left_ideology = yes
+		}
+	}
+	desc = { # FROM and ROOT are different ideologies
+		text = generic.5.d.e
+		trigger = {
+			OR = {
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = yes
+				}
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = no
+				}
+				AND = {
+					FROM = { is_neutral_ideology = no }
+					is_neutral_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_democratic_ideology = yes }
+					is_democratic_ideology = no
+				}
+				AND = {
+					FROM = { is_democratic_ideology = no }
+					is_democratic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_radical_islamic_ideology = yes }
+					is_radical_islamic_ideology = no
+				}
+				AND = {
+					FROM = { is_radical_islamic_ideology = no }
+					is_radical_islamic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_left_ideology = yes }
+					is_left_ideology = no
+				}
+				AND = {
+					FROM = { is_left_ideology = no }
+					is_left_ideology = yes
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_generic_read_write
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_applicant
+			FROM = {
+				save_event_target_as = alliance_inviter
+			}
+		}
+	}
+	is_triggered_only = yes	
+	option = { #Agree / Both Democratic
+		name = generic.5.a
+		trigger = {
+			has_rule = can_join_factions
+			is_democratic_ideology = yes
+			FROM = {
+				has_rule = can_join_factions
+				is_democratic_ideology = yes
+			}
+			is_in_faction = no
+		}
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = { tag = MLI tag = BFA tag = NGR }
+						is_faction_leader = yes
+						OR = {
+							has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+							has_completed_focus = AD_SSA_establish_contacts_in_ghana
+							has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+						}
+						ROOT = { has_idea = AD_ECOWAS }
+					}
+				}
+				ROOT = { remove_ideas = AD_ECOWAS }
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+		hidden_effect = {
+			set_country_flag = alliance_applicant@ROOT
+			FROM = { set_country_flag = alliance_inviter@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+	}
+	option = { #Agree / Both fundamentalism
+		name = generic.5.b
+		trigger = {
+			has_rule = can_join_factions
+			is_radical_islamic_ideology = yes
+			FROM = {
+				has_rule = can_join_factions
+				is_radical_islamic_ideology = yes
+			}
+			is_in_faction = no
+		}
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = { tag = MLI tag = BFA tag = NGR }
+						is_faction_leader = yes
+						OR = {
+							has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+							has_completed_focus = AD_SSA_establish_contacts_in_ghana
+							has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+						}
+						ROOT = { has_idea = AD_ECOWAS }
+					}
+				}
+				ROOT = { remove_ideas = AD_ECOWAS }
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+		hidden_effect = {
+			set_country_flag = alliance_applicant@ROOT
+			FROM = { set_country_flag = alliance_inviter@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+	}
+	option = { #Agree / Both socialism
+		name = generic.5.c
+		trigger = {
+			has_rule = can_join_factions
+			is_left_ideology = yes
+			FROM = {
+				has_rule = can_join_factions
+				is_left_ideology = yes
+			}
+			is_in_faction = no
+		}
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = { tag = MLI tag = BFA tag = NGR }
+						is_faction_leader = yes
+						OR = {
+							has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+							has_completed_focus = AD_SSA_establish_contacts_in_ghana
+							has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+						}
+						ROOT = { has_idea = AD_ECOWAS }
+					}
+				}
+				ROOT = { remove_ideas = AD_ECOWAS }
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+		hidden_effect = {
+			set_country_flag = alliance_applicant@ROOT
+			FROM = { set_country_flag = alliance_inviter@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+	}
+	option = { #Agree / Both different
+		name = generic.5.e
+		trigger = {
+			has_rule = can_join_factions
+			FROM = { has_rule = can_join_factions }
+			is_in_faction = no
+			OR = {
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = yes
+				}
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = no
+				}
+				AND = {
+					FROM = { is_neutral_ideology = no }
+					is_neutral_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_democratic_ideology = yes }
+					is_democratic_ideology = no
+				}
+				AND = {
+					FROM = { is_democratic_ideology = no }
+					is_democratic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_radical_islamic_ideology = yes }
+					is_radical_islamic_ideology = no
+				}
+				AND = {
+					FROM = { is_radical_islamic_ideology = no }
+					is_radical_islamic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_left_ideology = yes }
+					is_left_ideology = no
+				}
+				AND = {
+					FROM = { is_left_ideology = no }
+					is_left_ideology = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = { tag = MLI tag = BFA tag = NGR }
+						is_faction_leader = yes
+						OR = {
+							has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+							has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+							has_completed_focus = AD_SSA_establish_contacts_in_ghana
+							has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+						}
+						ROOT = { has_idea = AD_ECOWAS }
+					}
+				}
+				ROOT = { remove_ideas = AD_ECOWAS }
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+		hidden_effect = {
+			set_country_flag = alliance_applicant@ROOT
+			FROM = { set_country_flag = alliance_inviter@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+	}
+	option = { #Reject
+		name = generic.2.f
+		trigger = {
+			is_in_faction = no
+		}
+		ai_chance = {
+			factor = 45			
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FROM
+					value > 65
+				}
+			}			
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FROM
+					value > 35
+				}
+			}			
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FROM
+					value > 5
+				}
+			}			
+			modifier = {
+				factor = 2.0
+				has_opinion = {
+					target = FROM
+					value < 35
+				}
+			}			
+			modifier = {
+				factor = 2.0
+				has_opinion = {
+					target = FROM
+					value < 65
+				}
+			}			
+			modifier = {
+				factor = 0.1
+				has_war = yes
+				FROM = {
+					has_war = no
+				}
+			}			
+			modifier = {
+				factor = 0.1
+				FROM = {
+					is_major = yes
+				}
+			}
+		}
+		FROM = { country_event = { id = generic.7 hours = 6 } }
+	}
+
+	option = { #Reject if in faction
+		name = generic.2.g
+		trigger = { is_in_faction = yes }
+		FROM = { country_event = { id = generic.7 hours = 6 } }
+	}
+}
+
+# Generic accepted invitation to join major Alliance
+country_event = {
+	id = generic.6
+	title = generic.6.t
+	desc = generic.6.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes	
+	option = {
+		name = generic.3.a
+		trigger = {
+			FROM = { is_democratic_ideology = yes }
+			is_democratic_ideology = yes
+		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				is_faction_leader = yes
+				OR = {
+					has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+					has_completed_focus = AD_SSA_establish_contacts_in_ghana
+					has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+				}
+				FROM = { has_idea = AD_ECOWAS }
+			}
+			FROM = { remove_ideas = AD_ECOWAS }
+		}
+	}
+	option = {
+		name = generic.3.b
+		trigger = {
+			FROM = { is_radical_islamic_ideology = yes }
+			is_radical_islamic_ideology = yes
+		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				is_faction_leader = yes
+				OR = {
+					has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+					has_completed_focus = AD_SSA_establish_contacts_in_ghana
+					has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+				}
+				FROM = { has_idea = AD_ECOWAS }
+			}
+			FROM = { remove_ideas = AD_ECOWAS }
+		}
+	}
+	option = {
+		name = generic.3.c
+		trigger = {
+			FROM = { is_left_ideology = yes }
+			is_left_ideology = yes
+		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				is_faction_leader = yes
+				OR = {
+					has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+					has_completed_focus = AD_SSA_establish_contacts_in_ghana
+					has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+				}
+				FROM = { has_idea = AD_ECOWAS }
+			}
+			FROM = { remove_ideas = AD_ECOWAS }
+		}
+	}
+	option = {
+		name = generic.3.e
+		trigger = {
+			OR = {
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = yes
+				}
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = no
+				}
+				AND = {
+					FROM = { is_neutral_ideology = no }
+					is_neutral_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_democratic_ideology = yes }
+					is_democratic_ideology = no
+				}
+				AND = {
+					FROM = { is_democratic_ideology = no }
+					is_democratic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_radical_islamic_ideology = yes }
+					is_radical_islamic_ideology = no
+				}
+				AND = {
+					FROM = { is_radical_islamic_ideology = no }
+					is_radical_islamic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_left_ideology = yes }
+					is_left_ideology = no
+				}
+				AND = {
+					FROM = { is_left_ideology = no }
+					is_left_ideology = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				is_faction_leader = yes
+				OR = {
+					has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance
+					has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance
+					has_completed_focus = AD_SSA_establish_contacts_in_ghana
+					has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance
+				}
+				FROM = { has_idea = AD_ECOWAS }
+			}
+			FROM = { remove_ideas = AD_ECOWAS }
+		}
+	}
+}
+
+# Generic rejected invitation to join major Alliance
+country_event = {
+	id = generic.7
+	title = generic.7.t
+	desc = generic.7.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = generic.7.a
+		trigger = {
+			FROM = { is_democratic_ideology = yes }
+			is_democratic_ideology = yes
+		}
+	}
+	option = {
+		name = generic.4.b
+		trigger = {
+			FROM = { is_radical_islamic_ideology = yes }
+			is_radical_islamic_ideology = yes
+		}
+	}
+	option = {
+		name = generic.4.c
+		trigger = {
+			FROM = { is_left_ideology = yes }
+			is_left_ideology = yes
+		}
+	}
+	option = {
+		name = generic.4.e
+		trigger = {
+			OR = {
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = yes
+				}
+				AND = {
+					FROM = { is_neutral_ideology = yes }
+					is_neutral_ideology = no
+				}
+				AND = {
+					FROM = { is_neutral_ideology = no }
+					is_neutral_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_democratic_ideology = yes }
+					is_democratic_ideology = no
+				}
+				AND = {
+					FROM = { is_democratic_ideology = no }
+					is_democratic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_radical_islamic_ideology = yes }
+					is_radical_islamic_ideology = no
+				}
+				AND = {
+					FROM = { is_radical_islamic_ideology = no }
+					is_radical_islamic_ideology = yes
+				}
+			}
+			OR = {
+				AND = {
+					FROM = { is_left_ideology = yes }
+					is_left_ideology = no
+				}
+				AND = {
+					FROM = { is_left_ideology = no }
+					is_left_ideology = yes
+				}
+			}
+		}
+	}
+}

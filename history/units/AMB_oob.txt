@@ -1,0 +1,97 @@
+division_template = {
+	name = "Separatist Battalion"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+	}
+}
+
+division_template = {
+	name = "Separatist Regiment"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Ambazonia Defence Forces"
+		location = 3704
+		division_template = "Separatist Battalion"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "Southern Cameroons Defence Forces Fako"
+		location = 1118
+		division_template = "Separatist Battalion"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Southern Cameroons Defence Forces Meme"
+		location = 1118
+		division_template = "Separatist Battalion"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Tigers of Ambazonia Toko"
+		location = 2942
+		division_template = "Separatist Battalion"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Tigers of Ambazonia Badj"
+		location = 2462
+		division_template = "Separatist Battalion"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Southern Cameroons Restoration Forces"
+		location = 1177
+		division_template = "Separatist Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "Ambazonia Restoration Forces"
+		location = 3486
+		division_template = "Separatist Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "Seven Karta"
+		location = 2660
+		division_template = "Separatist Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "Bambalang Marine Forces"
+		location = 3178
+		division_template = "Separatist Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.62
+	}
+	division= {	
+		name = "Bui Warriors"
+		location = 548
+		division_template = "Separatist Regiment"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.55
+	}
+	division= {	
+		name = "Red Dragon"
+		location = 3704
+		division_template = "Separatist Regiment"
+		start_experience_factor = 0.09
+		start_equipment_factor = 0.44
+	}
+}

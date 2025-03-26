@@ -1,0 +1,18 @@
+characters = {
+
+	ALG_Abdelmadjid_Tebboune = {
+		name = ALG_Abdelmadjid_Tebboune
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALG/ALG_Abdelmadjid_Tebboune.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_Abdelmadjid_Tebboune_DESC"
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+}

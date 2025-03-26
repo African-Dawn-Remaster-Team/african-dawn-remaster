@@ -1,0 +1,24 @@
+state={
+	id=32
+	name="STATE_32"
+	provinces={
+		57 2198 2574 3676 
+	}
+	resources = {
+		oil = 16
+	}
+	history={
+		owner = DJI
+		add_core_of = DJI
+		victory_points = { 57 10 }
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+	manpower=1090000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

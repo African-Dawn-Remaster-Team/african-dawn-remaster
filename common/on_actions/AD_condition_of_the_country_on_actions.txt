@@ -1,0 +1,111 @@
+on_actions = {
+	
+	on_startup = {
+		effect = {
+			### Списки идей для каждой категории (если добавляете/удаляете идею из категории, обязательно обновите тут)
+			add_to_array = { global.AD_coc_list_0 = token:AD_appalling_poverty } # Уровень бедности
+			add_to_array = { global.AD_coc_list_0 = token:AD_poverty }
+			add_to_array = { global.AD_coc_list_0 = token:AD_poorness }
+			add_to_array = { global.AD_coc_list_0 = token:AD_difficulties_with_average_income }
+			add_to_array = { global.AD_coc_list_0 = token:AD_almost_a_european_society }
+			
+			add_to_array = { global.AD_coc_list_1 = token:AD_widespread_unemployment } # Уровень безработицы
+			add_to_array = { global.AD_coc_list_1 = token:AD_high_unemployment }
+			add_to_array = { global.AD_coc_list_1 = token:AD_extensive_unemployment }
+			add_to_array = { global.AD_coc_list_1 = token:AD_average_unemployment }
+			add_to_array = { global.AD_coc_list_1 = token:AD_low_unemployment }
+			
+			add_to_array = { global.AD_coc_list_2 = token:AD_chaotic_orders } # Развитие общества
+			add_to_array = { global.AD_coc_list_2 = token:AD_weak_state_apparatus }
+			add_to_array = { global.AD_coc_list_2 = token:AD_moving_towards_progress }
+			add_to_array = { global.AD_coc_list_2 = token:AD_stable_state_apparatus }
+			
+			add_to_array = { global.AD_coc_list_3 = token:AD_total_hunger } # Уровень обеспечения продуктами питания
+			add_to_array = { global.AD_coc_list_3 = token:AD_hunger }
+			add_to_array = { global.AD_coc_list_3 = token:AD_problems_with_nutrition_in_the_majority_of_the_population }
+			add_to_array = { global.AD_coc_list_3 = token:AD_three_meals_a_day_for_the_majority_of_the_population }
+
+			add_to_array = { global.AD_coc_list_4 = token:extr_corruption } # Уровень коррупции
+			add_to_array = { global.AD_coc_list_4 = token:high_corruption }
+			add_to_array = { global.AD_coc_list_4 = token:med_corruption }
+			add_to_array = { global.AD_coc_list_4 = token:low_corruption }
+			
+			every_country = {
+				AD_cc_list_init = yes
+			
+				set_variable = { AD_food_supply_level_var = 30 }
+				set_variable = { AD_society_development_level_var = 30 }
+				set_variable = { AD_unemployment_rate_level_var = 30 }
+				set_variable = { AD_poverty_level_var = 30 }
+			}
+		}		
+	}
+
+	on_monthly = {
+		effect = {
+			###Уровень бедности###
+			set_variable = { AD_poverty_level_growth = modifier@AD_conditions_of_the_country_modifier  }
+			add_to_variable = { AD_poverty_level_growth = modifier@AD_poverty_level_modifier }
+			add_to_variable = { AD_poverty_level_var = AD_poverty_level_growth }
+			if = {
+				limit = { check_variable = { var = AD_poverty_level_var value = 100 compare = greater_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_poverty_level_var]"
+				AD_poverty_level_grow_effect = yes
+				set_variable = { AD_poverty_level_var = 0 }
+			}
+			else_if = {
+				limit = { check_variable = { var = AD_poverty_level_var value = 0 compare = less_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_poverty_level_var]"
+				AD_poverty_level_down_effect = yes
+				set_variable = { AD_poverty_level_var = 99 }
+			}
+			###Уровень безработицы###
+			set_variable = { AD_unemployment_rate_level_growth = modifier@AD_conditions_of_the_country_modifier  }
+			add_to_variable = { AD_unemployment_rate_level_growth = modifier@AD_unemployment_rate_modifier }
+			add_to_variable = { AD_unemployment_rate_level_var = AD_unemployment_rate_level_growth }
+			if = {
+				limit = { check_variable = { var = AD_unemployment_rate_level_var value = 100 compare = greater_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_unemployment_rate_level_var]"
+				AD_unemployment_rate_level_down_effect = yes
+				set_variable = { AD_unemployment_rate_level_var = 0 }
+			}
+			else_if = {
+				limit = { check_variable = { var = AD_unemployment_rate_level_var value = 0 compare = less_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_unemployment_rate_level_var]"
+				AD_unemployment_rate_level_grow_effect = yes
+				set_variable = { AD_unemployment_rate_level_var = 99 }
+			}
+			###Развитие общества###
+			set_variable = { AD_society_development_level_growth = modifier@AD_conditions_of_the_country_modifier  }
+			add_to_variable = { AD_society_development_level_var = AD_society_development_level_growth }
+			if = {
+				limit = { check_variable = { var = AD_society_development_level_var value = 100 compare = greater_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_society_development_level_var]"
+				AD_society_development_level_grow_effect = yes
+				set_variable = { AD_society_development_level_var = 0 }
+			}
+			else_if = {
+				limit = { check_variable = { var = AD_society_development_level_var value = 0 compare = less_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_society_development_level_var]"
+				AD_society_development_level_down_effect = yes
+				set_variable = { AD_society_development_level_var = 99 }
+			}
+			###Уровень обеспечения продуктами питания###
+			set_variable = { AD_food_supply_level_growth = modifier@AD_conditions_of_the_country_modifier  }
+			add_to_variable = { AD_food_supply_level_growth = modifier@AD_food_supply_modifier }
+			add_to_variable = { AD_food_supply_level_var = AD_food_supply_level_growth }
+			if = {
+				limit = { check_variable = { var = AD_food_supply_level_var value = 100 compare = greater_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_food_supply_level_var]"
+				AD_food_supply_level_grow_effect = yes
+				set_variable = { AD_food_supply_level_var = 0 }
+			}
+			else_if = {
+				limit = { check_variable = { var = AD_food_supply_level_var value = 0 compare = less_than_or_equals } }
+				log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): current level of the variable: [?AD_food_supply_level_var]"
+				AD_food_supply_level_down_effect = yes
+				set_variable = { AD_food_supply_level_var = 99 }
+			}
+		}
+	}
+}

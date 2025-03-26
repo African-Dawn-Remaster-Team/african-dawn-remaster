@@ -1,0 +1,19 @@
+state={
+	id=136
+	name="STATE_136"
+	provinces={
+		310 3598 4950 4957 4959 4962 4963 
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 4950 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=68015
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

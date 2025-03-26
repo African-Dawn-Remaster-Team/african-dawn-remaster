@@ -1,0 +1,10 @@
+air_wings = {
+	21 = {
+		uav_airframe_0 =  {
+			owner = "DLG" 
+			creator = "TUR"
+			amount = 8
+			version_name = "Bayraktar TB2"
+		}
+	}
+}

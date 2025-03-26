@@ -1,0 +1,307 @@
+﻿l_russian:
+ #EQG
+ EQG_Teodoro_Obiang_Nguema_Mbasogo: "Теодоро Обианг Нгема Мбасого"
+ POLITICS_TEODORO_OBIANG_NGUEMA_MBASOGO_DESC: "Правление Теодоро Обианг Нгема Мбасого привнесло значительные изменения в Экваториальную Гвинею, особенно в экономическом плане. После прихода к власти он добился открытия крупных нефтяных месторождений в 1990-х годах, что позволило значительно увеличить доходы страны. Эти средства были направлены на развитие инфраструктуры, включая строительство дорог, школ, больниц и улучшение условий жизни в городах. Экономика Экваториальной Гвинеи стала одной из наиболее быстрорастущих в Африке, что сделало страну важным игроком на мировом нефтяном рынке.\n\nКроме экономических преобразований, при Обианге была достигнута относительная стабильность после жестокого режима его предшественника. Он поддерживал порядок и национальное единство, а также работал над улучшением международных отношений страны. Правительство вложило средства в развитие образования и здравоохранения, что помогло повысить уровень грамотности и доступ к медицинским услугам. Стабильность и богатые ресурсы помогли Экваториальной Гвинее стать более значимой в региональной и международной политике."
+ EQG_Severo_Moto: "Северо Мото"
+ EQG_Andres_Esono_Ondo: "Андрес Эсоно Ондо"
+ EQG_Gabriel_Nse_Obiang: "Габриэль Нсе Обианг"
+ EQG_Teodoro_Biyogo_Nsue_Okomo: "Теодоро Бийого Нсуэ Окомо"
+ EQG_Victoriano_Bibang_Nsue_Okomo: "Викториано Бибанг Нсуэ Окомо"
+ EQG_Juan_Olo_Mbah_Nseng: "Хуан Оло Мба Нсенг"
+ EQG_Armengol_Ondo_Ngema: "Арменгол Ондо Нгема"
+ EQG_Antonio_Oburu_Ondo: "Антонио Обуру Ондо"
+ EQG_Teodoro_Nguema_Obiang_Manga: "Теодоро Нгема Обианг Манге"
+ EQG_Gabriel_Mbanga_Obiang_Lima: "Габриэль Мбанга Обианг Лима"
+ 
+ #GMB
+ GMB_Adama_Barrow: "Адама Барров"
+ 
+ #SEN
+ SEN_Maki_Sall: "Маки Салл"
+ SEN_Bassirou_Diomaye_Faye: "Бассиру Диомай Фай"
+ 
+ #CSM
+ CSM_Provisional_Government: "Временное Правительство"
+ 
+ #WSR
+ WSR_Brahim_Ghali: "Брахим Галли"
+ 
+ #SOM
+ SOM_Mohamed_Abdullahi_Mohamed: "Мохамед Абдуллахи Мохамед"
+ SOM_Hassan_Sheikh_Mohamud: "Хасан Шейх Махмуд"
+ 
+ #GNB
+ GNB_Jose_Mario_Vaz: "Жозе Мариу Ваш"
+ GNB_Umaro_Sissoco_Embalo: "Умару Сиссоку Эмбало"
+ GNB_Victor_Tchongo: "Виктор Чонго"
+ 
+ #SIE
+ SIE_Julius_Maada_Bio: "Джулиус Маада Био"
+ 
+ #GNA
+ GNA_Alpha_Conde: "Альфа Конде"
+ GNA_Mamady_Doumbouya: "Мамади Думбуя"
+ 
+ #LIB
+ LIB_George_Weah: "Джордж Веа"
+ LIB_Joseph_Boakai: "Джозеф Бокаи"
+ 
+ #IVO
+ IVO_Alassane_Dramane_Ouattara: "Алассан Уаттара"
+ 
+ #GHA
+ GHA_Nana_Addo_Dankwa_Akufo_Addo: "Нана Аддо Данква Акуфо-Аддо"
+ GHA_John_Dramani_Mahama: "Джон Драмани Махама"
+
+ #WTL
+ WTL_Provisional_Government: "Временное Правительство"
+ 
+ #TOG
+ TOG_Faure_Essozimna_Gnassingbe: "Фор Эссозимна Гнассингбе"
+ 
+ #CMR
+ CMR_Paul_Biya: "Поль Бийя"
+ CMR_Tiokap_Pierre_Loti: "Тиокап Пьерр Лоти"
+ CMR_Mpans_Ndjem_Michel: "Мпанс Нджем Мишель"
+ CMR_Ezoo_Mvondo_Simon: "Эзу Мвондо Симон"
+ CMR_Kodji_Jacob: "Коджи Якоб"
+ CMR_Nka_Valere: "Нка Валере"
+ CMR_Ndjonkep_Mehomy_Frederic: "Нджонкеп Мехони Фредерик"
+ CMR_Bouba_Dobekreo: "Буба Добекрео"
+    
+ #AMB
+ AMB_Ngong_Emmanuel: "Нгон Эманнуэль"
+ AMB_General_No_Pity: "Клемент Мбаши"
+ AMB_Benedict_Nwana_Kuah: "Бенедикт Нвана Куах"
+ AMB_Desmond_Koa: "Десмонд Коа"
+    
+ #NGA
+ NGA_Muhammadu_Buhari: "Мохаммаду Бухари"
+ NGA_Bola_Tinubu: "Бола Тинубу"
+ 
+ #ISW
+ ISW_Abu_Musab_Umar_Al_Barnawi: "Абу Мусаб аль-Барнави"
+ ISW_Abubakar_Shekau: "Абубакар Шекау"
+ 
+ #BIA
+ BIA_Nnamdi_Kanu: "Ннамди Кану"
+ 
+ #TUN
+ TUN_Kais_Saied: "Каис Саид"
+ 
+ #MLI
+ MLI_Ibrahim_Boubacar_Keita: "Ибрагим Бубакар Кейта"
+ POLITICS_IBRAHIM_BOUBACAR_KEITA_DESC: "Ибрагим Бубакар Кейта, опытный политик и президент Мали, стремится сохранить стабильность в стране, несмотря на растущие внутренние и внешние вызовы. Его решимость и связи с политической элитой помогают удерживать власть, но растущее недовольство населения и давление со стороны оппозиции ограничивают его возможности."
+ MLI_Boubou_Cisse: "Бубу Сиссе"
+ MLI_Assimi_Goita: "Ассими Гоита"
+ MLI_Amadu_Sankare: "Амаду Санкаре"
+ MLI_Tyemoko_Sangare: "Тьемоко Сангаре"
+ MLI_Mahmud_Dikko: "Махмуд Дикко"
+ MLI_Bubu_Sisse: "Бубу Сиссе"
+ MLI_Moktar_Yan: "Моктар Уан"
+ MLI_Shogel_Maiga: "Шогель Маига"
+ MLI_Suleiman_Dukure: "Сулейман Дукуре"
+ MLI_Tyebile_Drame: "Тьебиле Драме"
+ MLI_Abdulai_Diop: "Абдулай Диоп"
+ MLI_Aliu_Badara_Diallo: "Алиу Бадара Диалло"
+ MLI_Fatumate_Nafo_Traore: "Фатумата Нафо Траоре"
+ MLI_Mamadu_Kamara: "Мамаду Камара"
+ MLI_Imam_Mahmud_Dikko: "Имам Махмуд Дикко"
+ MLI_Aminata_Traore: "Амината Траоре"
+ MLI_Sadio_Camara: "Садио Камара"
+ MLI_Oumar_Diarra: "Умар Диарра"
+ MLI_Keba_Sangare: "Кеба Сангаре"
+ MLI_Abdoulaye_Coulibaly: "Абдулай Кулибали"
+ MLI_Ismael_Wague: "Исмаэль Ваге"
+ 
+ #AZW
+ AZW_Bilal_Ag_Acherif: "Билал Аг Ашериф"
+ AZW_Mohamed_Ag_Najem: "Альгабасс Аг Инталла"
+ AZW_Inkinane_Ag_Attaher: "Инкинан Аг Аттахер"
+ 
+ #GTI
+ GTI_El_Hadj_Ag_Gamou: "Эльхадж Аг Гаму"
+ GTI_Fahad_Ag_Almahmoud: "Фахад Аг Альмахмуд"
+ 
+ #JNA
+ JNA_Iyad_Ag_Ghaly: "Ияд Аг Гали"
+ JNA_Amadou_Koufa: "Амаду Куффа"
+ JNA_Djaffar_Dicko: "Джаффар Дико"
+ JNA_Sidane_Ag_Hita: "Сидан Аг Хита"
+ JNA_Abderrahmane_Talha: "Абдерахмане Тальха"
+ JNA_Mokhtar_Belmokhtar: "Мохтар Белмохтар"
+ 
+ #ISS
+ ISS_Adnan_Abu_Walid_al_Sahrawi: "Аднан Абу Валид ас-Сахрави"
+ ISS_Abou_al_Bara_al_Sahraoui: "Абу аль-Бара ас-Сахрави"
+ ISS_Abdulaziz_Mahwaz_Al_Jamal: "Абдулазиз Махваз аль-Джамаль"
+ ISS_Ibrahim_Doundou_Chefou: "Ибрагим Дунду Шеф"
+ ISS_Abu_Huzeifa: "Абу Хузейфа"
+ 
+ #BNN 
+ BNN_Patrice_Talon: "Патрис Талон"
+ 
+ #LBY
+ LBY_Mohamed_al_Menfi: "Мухаммад Юнис аль-Манфи"
+ LBY_Khalifa_Haftar: "Халифа Хафтар"
+ LBY_Fayez_al_Sarraj: "Фаиз Сарадж"
+ LBY_Issa_Abdel_Majid_Mansur: "Исса Абдель Маджид Мансур"
+
+ #GAT
+ GAT_Ali_Kanna_Sulayman: "Али Канна Сулейман"
+ 
+ #MRT
+ MRT_Mohamed_Ould_Ghazouani: "Мухаммед ульд Газуани"
+ 
+ #MOR
+ MOR_Mohammed_VI: "Мохаммед VI"
+ 
+ #CHA
+ CHA_Idriss_Deby: "Идрисс Деби"
+ CHA_Mahamat_Deby: "Махамат Деби"
+ CHA_Mahamat_Mahdi_Ali: "Махамат Махди Али"
+ 
+ #ALG
+ ALG_Abdelmadjid_Tebboune: "Абдельмаджид Теббун"
+ 
+ #SNT
+ SNT_Evaristo_Carvalho: "Эваришту Карвалью"
+ SNT_Carlos_Vila_Nova: "Карлуш Вила-Нова"
+ SNT_Arlecio_Costa: "Арлецио Коста"
+ 
+ #GAB
+ GAB_Ali_Bongo_Ondimba: "Али Бонго Ондимба"
+ GAB_Brice_Oligui_Nguema: "Брис Олиги Нгема"
+ 
+ #COG
+ COG_Denis_Sassou_Nguesso: "Дени Сассу-Нгессо"
+ 
+ #DRC
+ DRC_Felix_Tshisekedi: "Феликс Чисекеди"
+ 
+ #UGA
+ UGA_Yoweri_Museveni: "Йовери Мусевени"
+ UGA_Joseph_Kony: "Джозеф Кони"
+ UGA_Doctor_Achaye: "Доктор Ашайя"
+ 
+ #KEN
+ KEN_Uhuru_Kenyatta: "Ухуру Кениата"
+ KEN_William_Ruto: "Уильям Руто"
+ 
+ #DJI
+ DJI_Ismail_Omar_Guelleh: "Исмаил Омар Гелле"
+ 
+ #ETH
+ ETH_Abiy_Ahmed: "Абий Ахмед Али"
+
+ #TIG
+ TIG_Debretsion_Gebremichael: "Дебрецион Гебремикаэль"
+ 
+ #ERI
+ ERI_Isaias_Afwerki: "Исайяс Афеворки"
+ 
+ #SSD
+ SSD_Salva_Kiir_Mayardit: "Сальваторе Киир Маярдит"
+ 
+ #SUD
+ SUD_Abdel_Fattah_al_Burhan: "Абдель Фаттах аль-Бурхан"
+ SUD_Hemetti: "Мухаммад Хамдан Дагло"
+ 
+ #EGY
+ EGY_Abdel_Fattah_el_Sisi: "Абдул-Фаттах ас-Сиси"
+ 
+ #NGR
+ NGR_Mahamadou_Issoufou: "Махамаду Иссуфу"
+ POLITICS_MAHAMADOU_ISSOUFOU_DESC: "Махамаду Иссуфу — нигерский политик и государственный деятель, занимавший пост президента Нигера с 2011 года. Родившийся в 1952 году, Иссуфу начал свою политическую карьеру в 1970-х годах, став одним из ключевых деятелей оппозиции в период авторитарного правления. Он является основателем и лидером партии «Нигерская партия за демократию и социализм» (PNDS-Tarayya), которая играет важную роль в политической жизни страны.\n\nИссуфу пришел к власти после победы на выборах 2011 года, которые стали важным шагом в демократизации Нигера. Его правление было отмечено усилиями по борьбе с бедностью, развитию инфраструктуры и укреплению безопасности в условиях угрозы терроризма в регионе Сахеля. Однако его президентство также сопровождалось критикой за ограничение свободы слова и политические репрессии."
+ NGR_Mohamed_Bazoum: "Мохамед Базум"
+ NGR_Abdourahamane_Tchiani: "Абдурахман Чиани"
+ NGR_Mahamane_Usmane: "Махамане Усмане"
+ NGR_Abdou_Sidikou_Issa: "Абду Сидику Исса"
+ NGR_Mamane_Sani_Kiaou: "Мамане Сани Киау"
+ NGR_Mohamed_Toumba: "Мохамед Тумба"
+ NGR_Amadou_Abdramane: "Амаду Абдрамане"
+ NGR_Moussa_Salaou_Barmou: "Мусса Салау Барму"
+ NGR_Salifou_Mody: "Салифу Моду"
+ 
+ #CAR
+ CAR_Faustin_Archange_Touadera: "Фостен-Арканж Туадера"
+ CAR_Francois_Bozize: "Франсуа Бозизе"
+ CAR_Anicet_Georges_Dologuele: "Анисе-Жорж Дологеле"
+ CAR_Jan_Serj_Bocassa: "Жан-Серж Бокасса"
+ CAR_Felics_Molua: "Феликс Молуа"
+ CAR_Gerbert_Jono_Anaba: "Герберт Джоно Анаба"
+ CAR_Firmen_Ngrebada: "Фирмен Нгребада"
+ CAR_Silven_Ndoutingai: "Сильвен Ндоутингаи"
+ CAR_Nikola_Tyangai: "Никола Тьянгай"
+ CAR_Eli_Dote: "Эли Доте"
+ CAR_Kome_Tsumara: "Коме Зумара"
+ CAR_Zephlin_Mamadou: "Зефлин Мамаду"
+ CAR_Freddy_Sakama: "Фредди Сакама"
+ CAR_Marie_Noelle_Coyaroy: "Мари Ноэль Койарой"
+ CAR_Seregaza_Ralph_Igor: "Серегаза Ральф Игор"
+ CAR_Jean_Jacques_Ngombe: "Жан-Жак Нгомбе"
+ CAR_Abdou_Aziz_Fall: "Абду Азиз Фаль"
+ CAR_General_Liman: "Генерал Лиман"
+ CAR_Gilles_Potolot: "Гиллес Потолот"
+ 
+ #FPR
+ CAR_Noureddine_Adam: "Нуреддин Адам"
+ CAR_Abdoulaye_Hissene: "Абдулай Хиссен"
+    
+ #RPR
+ CAR_Zakaria_Damane: "Закария Дамане"
+    
+ #MLC
+ CAR_Abakar_Sabone: "Абакар Сабоне"
+    
+ #RRR
+ CAR_Bi_Sidi_Souleymane: "Сиди Сулейман"
+ CAR_Doborodje_Goska: "Доброродье Госка"
+    
+ #CAP
+ CAR_Ali_Darassa: "Али Дарасса Махамат"
+ CAR_Abakar_Amadou: "Абабакар Амаду"
+ CAR_Ibrahim_Garga: "Ибрагим Гарга"
+    
+ #ABK
+ CAR_Maxime_Mokom: "Максим Моком"
+ CAR_Bienvenue_Nguiambi: "Бьенвеню Нгиамби"
+ CAR_Dimitri_Ayoloma: "Дмитрий Айолома"
+ CAR_Marcel_Ndale: "Марсель Ндале"
+    
+ #MPC
+ CAR_Mahamat_Al_Khatim: "Махамат Аль-Хатим"
+ CAR_Ahmat_Bahar: "Ахмад Бахар"
+    
+ #MSA
+ CAR_Mohammed_Adam: "Мохаммед Адам"
+
+ #BFA
+ BFA_Roch_Christian_Kabore: "Рок Марк Кристиан Каборе"
+ POLITICS_ROCH_CHRISTIAN_KABORE_DESC: "Рок Марк Кристиан Каборе — опытный политик и президент Буркина-Фасо, который стремится укрепить демократические институты и стабилизировать страну после периода политических потрясений. Выходец из политической элиты, Каборе начал свою карьеру как сторонник бывшего президента Блэза Компаоре, но позже дистанцировался от него, став символом демократических перемен. Его программа сосредоточена на борьбе с коррупцией, улучшении управления и развитии экономики, особенно в сельских районах. Каборе выступает за социальную справедливость и стремился привлечь инвестиции для создания рабочих мест и улучшения инфраструктуры.\n\nОднако его правление омрачено растущей угрозой терроризма в регионе Сахель, что стало главным вызовом для его администрации. Каборе делал акцент на укреплении безопасности, сотрудничая с международными партнёрами, включая Францию и страны G5 Sahel. Несмотря на усилия, его правительство критикуют за недостаточную эффективность в борьбе с джихадистами и за медленные темпы экономических реформ."
+ BFA_Paul_Henri_Sandaogo_Damiba: "Поль-Анри Сандаого Дамиба"
+ BFA_Ibrahim_Traore: "Ибрагим Траоре"
+ BFA_Eddie_Komboigo: "Эдди Комбойго"
+ BFA_Zephirin_Diabre: "Зефирин Диабре"
+ BFA_Serj_Bambara: "Серж Бамбара"
+ BFA_Thomas_Sawadogo: "Томас Савадого"
+ BFA_David_Kabre: "Давид Кабре"
+ BFA_Kiswendsida_Farouk_Azaria_Tobouan: "Кисвендсида Фарук Азариа Тубуан"
+ BFA_Moussa_Diallo: "Мусса Диалло"
+ BFA_Celestin_Simpore: "Селестин Симпоре"
+ 
+ #FRA
+ FRA_Ianni_Pascal: "Йанни Паскаль"
+
+ #USA
+ USA_Michael_Langley: "Майкл Лэнгли"
+ USA_Stephen_Townsend: "Стивен Таунсенд"
+
+ #RUS
+ RUS_Yunus-bek_Yevkurov: "Юнус-Бек Евкуров"
+
+ #TUR
+ TUR_Hulusi_Akar: "Хулуси Акар"
+
+ #SPA
+ SPA_Pedro_Sanchez: "Педро Санчес"

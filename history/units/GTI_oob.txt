@@ -1,0 +1,43 @@
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Bataillon mobile de In-Kak"
+		location = 4950
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.65
+	}
+	division= {	
+		name = "Bataillon mobile de Borenta"
+		location = 4959
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Bataillon mobile de Takalafat"
+		location = 4950
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+}

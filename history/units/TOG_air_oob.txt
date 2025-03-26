@@ -1,0 +1,16 @@
+air_wings = {
+	9 = {
+		attack_helicopter_airframe_0_ru =  {
+			owner = "TOG" 
+			creator = "RUS"
+			amount = 7
+			version_name = "Mi-24VB"
+		}
+		uav_airframe_0 =  {
+			owner = "TOG" 
+			creator = "TUR"
+			amount = 2
+			version_name = "Bayraktar TB2"
+		}
+	}
+}

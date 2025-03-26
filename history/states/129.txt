@@ -1,0 +1,19 @@
+state={
+	id=129
+	name="STATE_129"
+	provinces={
+		54 164 279 470 491 514 766 785 844 1246 1430 1519 1617 1695 1792 1852 1882 1934 2057 2074 2096 2482 2520 2735 2786 2800 2911 2993 3114 3491 3506 3512 3546 3567 4973 4975 4977 4978 
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 3546 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=6053
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

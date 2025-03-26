@@ -1,0 +1,150 @@
+#	Example:
+#
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+#
+
+has_same_ideology = {
+	custom_trigger_tooltip = {
+		tooltip = has_same_ideology_tt
+		OR = {
+			AND = {
+				has_government = fundamentalism
+				ROOT = { has_government = fundamentalism }
+			}
+			AND = {
+				has_government = conservatism
+				ROOT = { has_government = conservatism }
+			}
+			AND = {
+				has_government = centrism
+				ROOT = { has_government = centrism }
+			}
+			AND = {
+				has_government = liberalism
+				ROOT = { has_government = liberalism }
+			}
+			AND = {
+				has_government = social_democracy
+				ROOT = { has_government = social_democracy }
+			}
+			AND = {
+				has_government = socialism
+				ROOT = { has_government = socialism }
+			}
+		}
+	}
+}
+has_same_ideology_group = {
+	custom_trigger_tooltip = {
+		tooltip = has_same_ideology_tt	# TODO?
+		OR = {
+			AND = {
+				is_democratic_ideology = yes
+				ROOT = { is_democratic_ideology = yes }
+			}
+			AND = {
+				is_left_ideology = yes
+				ROOT = { is_left_ideology = yes }
+			}
+			AND = {
+				is_neutral_ideology = yes
+				ROOT = { is_neutral_ideology = yes }
+			}
+			AND = {
+				is_radical_islamic_ideology = yes
+				ROOT = { is_radical_islamic_ideology = yes }
+			}
+		}
+	}
+}
+
+# is_unlikely_country_tag = {	TODO
+	# OR = {
+	    # # tag = BRI
+	# }
+# }
+
+can_ROOT_get_wargoal_on_THIS = {
+	exists = yes
+	NOT = { is_in_faction_with = ROOT }
+	NOT = { is_subject_of = ROOT }
+}
+
+is_border_conflict_defender_vs_FROM = {
+	has_variable = ROOT.defender_state_vs_@FROM
+}
+
+has_not_initiated_border_incident_with_FROM = {
+	custom_trigger_tooltip = {
+		tooltip = not_initiated_border_incident_with_FROM
+		NOT = {
+			any_state = {
+				check_variable = { FROM.defender_state_vs_@PREV = id }
+			}
+		}
+	}
+}
+
+has_not_initiated_border_incident_with_ROOT = {
+	custom_trigger_tooltip = {
+		tooltip = not_initiated_border_incident_with_ROOT
+		NOT = {
+			any_state = {
+				check_variable = { ROOT.defender_state_vs_@PREV = id }
+			}
+		}
+	}
+}
+
+#State scope
+has_ROOT_at_least_1_div_in_current_state_scope = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_one_division_in_state
+		ROOT = { divisions_in_state = { state = PREV size > 0 } }
+	}
+}
+
+#State scope
+is_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_subject
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+#Country scope
+is_free_or_subject_of_root = {
+	OR = {
+		is_subject = no
+		is_subject_of = ROOT
+	}
+}
+
+#State scope
+is_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_ally
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=69
+	name="STATE_69"
+	provinces={
+		132 160 601 723 868 1156 1241 1569 1602 1687 1743 1749 1955 2140 2179 2306 2522 2530 2650 2789 3775 3785 3814 3816 3843 3844 3845 3846 3847 3848 3849 
+	}
+	resources = {
+		rubber = 100
+		tungsten = 100
+		chromium = 100
+	}
+	history={
+		owner = DRC
+		add_core_of = DRC
+		victory_points = { 868 5 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=1250000 
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

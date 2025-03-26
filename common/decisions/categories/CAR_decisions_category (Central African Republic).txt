@@ -1,0 +1,47 @@
+CAR_field_commanders_category = {
+	allowed = { tag = CAR }
+	priority = 1000
+	visible = {
+		NOT = {
+			has_completed_focus = CAR_thwarting_the_bandits_plan
+			has_completed_focus = CAR_no_mercy_for_the_militants
+			has_completed_focus = CAR_bozize_seizes_power
+			has_completed_focus = CAR_consolidation_around_bozize
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = CAR_field_commanders_scripted_gui
+}
+
+CAR_war_operations = {
+	allowed = { always = no }
+	priority = 1500
+}
+
+CAR_civil_war_category = {
+	allowed = { tag = CAR }
+	priority = 998
+	visible = { has_completed_focus = CAR_regain_control_of_the_border_with_cameroon }
+	visible_when_empty = yes
+}
+
+CAR_ngakola_and_tere_category = {
+	allowed = { tag = CAR }
+	priority = 999
+	visible = {
+		has_completed_focus = CAR_by_the_will_of_ngakola
+		has_government = conservatism
+	}
+	visible_when_empty = yes
+	scripted_gui = CAR_ngakola_and_tere_scripted_gui
+}
+
+CAR_integration_of_anti_balaka_category = {
+	allowed = { tag = CAR }
+	priority = 998
+	visible = {
+		has_completed_focus = CAR_integration_of_anti_balaka
+		country_exists = ABK
+	}
+	scripted_gui = CAR_integration_of_anti_balaka_scripted_gui
+}

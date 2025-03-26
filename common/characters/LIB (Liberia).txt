@@ -1,0 +1,32 @@
+characters = {
+	LIB_George_Weah = {
+		name = LIB_George_Weah
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/LIB_George_Weah.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GEORGE_WEAH_BIO_VAZ_DESC"
+			ideology = conservatism_subtype_christian_democracy
+		}
+	}
+	LIB_Joseph_Boakai = {
+		name = LIB_Joseph_Boakai
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/LIB_Joseph_Boakai.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSEPH_BOKAI_BIO_VAZ_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

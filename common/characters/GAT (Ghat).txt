@@ -1,0 +1,17 @@
+characters = {
+	GAT_Ali_Kanna_Sulayman = {
+		name = GAT_Ali_Kanna_Sulayman
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GAT/GAT_Ali_Kanna_Sulayman.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALI_KANA_SULAYMAN_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+	}
+}

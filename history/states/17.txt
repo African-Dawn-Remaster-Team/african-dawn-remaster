@@ -1,0 +1,35 @@
+state={
+	id=17
+	name="STATE_17"
+	provinces={
+		63 83 122 430 665 676 746 748 874 896 953 1002 1182 1191 1213 1254 1277 1379 1443 1535 1552 1596 1600 1747 1808 1877 1920 1925 2009 2056 2102 2147 2173 2220 2226 2303 2367 2571 2845 2871 2918 2984 3229 3277 3324 3329 3334 3335 3338 3344 3350 3356 4993 4997 4998 4999 5000 5001 5002 5003 5004 5005 5006 5007 5008 5009 5010 5011 5012 5013 5014 
+	}
+	resources = {
+		uranium = 12
+		gold = 24
+		oil = 8
+	}
+	history={
+		owner = MOR
+		add_core_of = MOR
+		victory_points = { 5008 15 }
+		victory_points = { 5006 10 }
+		victory_points = { 1191 5 }
+		victory_points = { 3356 5 }
+		victory_points = { 1379 5 }
+		victory_points = { 3350 3 }
+		victory_points = { 1277 3 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 2
+			5008 = { naval_base = 1 }
+			5006 = { naval_base = 1 }
+			3350 = { naval_base = 1 }
+		}
+	}
+	manpower=24865241
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

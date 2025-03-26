@@ -1,0 +1,431 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_z_goal_MLI_conduct_of_elections"
+		texturefile = "gfx/interface/goals/z_goal_MLI_conduct_of_elections.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_cancellation_of_the_second_round"
+		texturefile = "gfx/interface/goals/z_goal_MLI_cancellation_of_the_second_round.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_rally_the_army_circles"
+		texturefile = "gfx/interface/goals/z_goal_MLI_rally_the_army_circles.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_remove_heavy_equipment_from_bamako"
+		texturefile = "gfx/interface/goals/z_goal_MLI_remove_heavy_equipment_from_bamako.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_restore_order_in_the_cities"
+		texturefile = "gfx/interface/goals/z_goal_MLI_restore_order_in_the_cities.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_thunderclaps_are_over"
+		texturefile = "gfx/interface/goals/z_goal_MLI_thunderclaps_are_over.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_strengthen_the_army_combat_capability"
+		texturefile = "gfx/interface/goals/z_goal_MLI_strengthen_the_army_combat_capability.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_training_of_civilian_workers_by_the_eu_mission"
+		texturefile = "gfx/interface/goals/z_goal_MLI_training_of_civilian_workers_by_the_eu_mission.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_police_training"
+		texturefile = "gfx/interface/goals/z_goal_MLI_police_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_develop_agreements_with_france"
+		texturefile = "gfx/interface/goals/z_goal_MLI_develop_agreements_with_france.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_benefits_for_french_ngos"
+		texturefile = "gfx/interface/goals/z_goal_MLI_benefits_for_french_ngos.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_working_with_french_humanitarian_organizations"
+		texturefile = "gfx/interface/goals/z_goal_MLI_working_with_french_humanitarian_organizations.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_three_borders_project"
+		texturefile = "gfx/interface/goals/z_goal_MLI_three_borders_project.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_offer_gold_deposits"
+		texturefile = "gfx/interface/goals/z_goal_MLI_offer_gold_deposits.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_develop_ways_to_import_electricity"
+		texturefile = "gfx/interface/goals/z_goal_MLI_develop_ways_to_import_electricity.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_g_five_cooperation"
+		texturefile = "gfx/interface/goals/z_goal_MLI_g_five_cooperation.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_loyalty_to_a_single_cause"
+		texturefile = "gfx/interface/goals/z_goal_MLI_loyalty_to_a_single_cause.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_punish_the_traitors"
+		texturefile = "gfx/interface/goals/z_goal_MLI_punish_the_traitors.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_resolve_issues_with_mauritania"
+		texturefile = "gfx/interface/goals/z_goal_MLI_resolve_issues_with_mauritania.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_help_the_chadian_contingent"
+		texturefile = "gfx/interface/goals/z_goal_MLI_help_the_chadian_contingent.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_creation_of_a_free_trade_area_with_senegal"
+		texturefile = "gfx/interface/goals/z_goal_MLI_creation_of_a_free_trade_area_with_senegal.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_the_question_of_barkhan"
+		texturefile = "gfx/interface/goals/z_goal_MLI_the_question_of_barkhan.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_fighting_russian_influence_from_the_outside"
+		texturefile = "gfx/interface/goals/z_goal_MLI_fighting_russian_influence_from_the_outside.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_fighting_the_opposition"
+		texturefile = "gfx/interface/goals/z_goal_MLI_fighting_the_opposition.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_expansion_of_the_french_military_presence"
+		texturefile = "gfx/interface/goals/z_goal_MLI_expansion_of_the_french_military_presence.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_support_american_missions"
+		texturefile = "gfx/interface/goals/z_goal_MLI_support_american_missions.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_new_benefits_for_french_soldiers"
+		texturefile = "gfx/interface/goals/z_goal_MLI_new_benefits_for_french_soldiers.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_coordinate_operations_with_gatal"
+		texturefile = "gfx/interface/goals/z_goal_MLI_coordinate_operations_with_gatal.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_preparation_of_gtia"
+		texturefile = "gfx/interface/goals/z_goal_MLI_preparation_of_gtia.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_offer_autonomy_to_azawad"
+		texturefile = "gfx/interface/goals/z_goal_MLI_offer_autonomy_to_azawad.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_geological_work_in_the_north_of_the_country"
+		texturefile = "gfx/interface/goals/z_goal_MLI_geological_work_in_the_north_of_the_country.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_integrate_dogons_into_the_army"
+		texturefile = "gfx/interface/goals/z_goal_MLI_integrate_dogons_into_the_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_call_the_militia_to_solidarity"
+		texturefile = "gfx/interface/goals/z_goal_MLI_call_the_militia_to_solidarity.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_gatal_integration"
+		texturefile = "gfx/interface/goals/z_goal_MLI_gatal_integration.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_bring_peace_to_the_land_of_the_dogons"
+		texturefile = "gfx/interface/goals/z_goal_MLI_bring_peace_to_the_land_of_the_dogons.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_go_with_the_flow"
+		texturefile = "gfx/interface/goals/z_goal_MLI_go_with_the_flow.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_raise_the_issue_of_the_ransom_of_prisoners"
+		texturefile = "gfx/interface/goals/z_goal_MLI_raise_the_issue_of_the_ransom_of_prisoners.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_calm_the_protests"
+		texturefile = "gfx/interface/goals/z_goal_MLI_calm_the_protests.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_benefits_for_the_army"
+		texturefile = "gfx/interface/goals/z_goal_MLI_benefits_for_the_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_expand_the_powers_of_the_gendarmes"
+		texturefile = "gfx/interface/goals/z_goal_MLI_expand_the_powers_of_the_gendarmes.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_goita_revolution"
+		texturefile = "gfx/interface/goals/z_goal_MLI_goita_revolution.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_formation_of_the_provisional_government"
+		texturefile = "gfx/interface/goals/z_goal_MLI_formation_of_the_provisional_government.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_closing_borders"
+		texturefile = "gfx/interface/goals/z_goal_MLI_closing_borders.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_dissolution_of_the_government_of_moktar_one"
+		texturefile = "gfx/interface/goals/z_goal_MLI_dissolution_of_the_government_of_moktar_one.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_extend_the_transition_period"
+		texturefile = "gfx/interface/goals/z_goal_MLI_extend_the_transition_period.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_compliance_with_ecowas_requirements"
+		texturefile = "gfx/interface/goals/z_goal_MLI_compliance_with_ecowas_requirements.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_negotiations_with_the_opposition"
+		texturefile = "gfx/interface/goals/z_goal_MLI_negotiations_with_the_opposition.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_transition_to_civilian_rule"
+		texturefile = "gfx/interface/goals/z_goal_MLI_transition_to_civilian_rule.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_restoring_contacts_with_the_west"
+		texturefile = "gfx/interface/goals/z_goal_MLI_restoring_contacts_with_the_west.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_restoration_of_control_over_the_national_territory"
+		texturefile = "gfx/interface/goals/z_goal_MLI_restoration_of_control_over_the_national_territory.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_strengthen_roadblocks_in_the_north"
+		texturefile = "gfx/interface/goals/z_goal_MLI_strengthen_roadblocks_in_the_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_abort_the_algiers_agreement"
+		texturefile = "gfx/interface/goals/z_goal_MLI_abort_the_algiers_agreement.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_kidal_release_is_inevitable"
+		texturefile = "gfx/interface/goals/z_goal_MLI_kidal_release_is_inevitable.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_advance_to_the_algerian_border"
+		texturefile = "gfx/interface/goals/z_goal_MLI_advance_to_the_algerian_border.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_enlist_the_support_of_an_msa"
+		texturefile = "gfx/interface/goals/z_goal_MLI_enlist_the_support_of_an_msa.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_maintain_a_buffer_zone"
+		texturefile = "gfx/interface/goals/z_goal_MLI_maintain_a_buffer_zone.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_take_control_of_intahaka"
+		texturefile = "gfx/interface/goals/z_goal_MLI_take_control_of_intahaka.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_strengthen_the_anti_drug_campaign"
+		texturefile = "gfx/interface/goals/z_goal_MLI_strengthen_the_anti_drug_campaign.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_negotiate_with_azawad"
+		texturefile = "gfx/interface/goals/z_goal_MLI_negotiate_with_azawad.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_damn_it_but_against_the_terrorists"
+		texturefile = "gfx/interface/goals/z_goal_MLI_damn_it_but_against_the_terrorists.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_develop_the_offensive_in_menaka"
+		texturefile = "gfx/interface/goals/z_goal_MLI_develop_the_offensive_in_menaka.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_blocking_french_media"
+		texturefile = "gfx/interface/goals/z_goal_MLI_blocking_french_media.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_demand_the_withdrawal_of_french_troops"
+		texturefile = "gfx/interface/goals/z_goal_MLI_demand_the_withdrawal_of_french_troops.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_close_the_un_mission"
+		texturefile = "gfx/interface/goals/z_goal_MLI_close_the_un_mission.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_reach_out_to_moscow"
+		texturefile = "gfx/interface/goals/z_goal_MLI_reach_out_to_moscow.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_request_military_support"
+		texturefile = "gfx/interface/goals/z_goal_MLI_request_military_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_invite_the_african_corps"
+		texturefile = "gfx/interface/goals/z_goal_MLI_invite_the_african_corps.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_our_place_on_the_world_stage"
+		texturefile = "gfx/interface/goals/z_goal_MLI_our_place_on_the_world_stage.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_restore_the_authority_of_the_malian_army"
+		texturefile = "gfx/interface/goals/z_goal_MLI_restore_the_authority_of_the_malian_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_development_of_the_military_industry"
+		texturefile = "gfx/interface/goals/z_goal_MLI_development_of_the_military_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_equipping_troops_with_armored_vehicles"
+		texturefile = "gfx/interface/goals/z_goal_MLI_equipping_troops_with_armored_vehicles.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_increase_grain_purchases"
+		texturefile = "gfx/interface/goals/z_goal_MLI_increase_grain_purchases.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_use_russian_developments_in_agriculture"
+		texturefile = "gfx/interface/goals/z_goal_MLI_use_russian_developments_in_agriculture.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_cooperation_with_rosatom"
+		texturefile = "gfx/interface/goals/z_goal_MLI_cooperation_with_rosatom.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_support_the_work_of_geologists"
+		texturefile = "gfx/interface/goals/z_goal_MLI_support_the_work_of_geologists.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_start_geological_exploration_in_the_liberated_territories"
+		texturefile = "gfx/interface/goals/z_goal_MLI_start_geological_exploration_in_the_liberated_territories.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_sahel_perspective"
+		texturefile = "gfx/interface/goals/z_goal_MLI_sahel_perspective.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_support_social_workers"
+		texturefile = "gfx/interface/goals/z_goal_MLI_support_social_workers.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_restoration_of_the_liberated_territories"
+		texturefile = "gfx/interface/goals/z_goal_MLI_restoration_of_the_liberated_territories.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_MLI_russian_house_in_bamako"
+		texturefile = "gfx/interface/goals/z_goal_MLI_russian_house_in_bamako.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_creation_of_the_sahel_states_alliance"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_creation_of_the_sahel_states_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_sgreements_within_the_framework_of_the_military_alliance"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_sgreements_within_the_framework_of_the_military_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_creation_of_the_united_armed_forces"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_creation_of_the_united_armed_forces.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_joint_air_operations"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_joint_air_operations.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_invite_russian_pilots"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_invite_russian_pilots.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_expand_intelligence_cooperation"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_expand_intelligence_cooperation.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_conducting_joint_exercises"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_conducting_joint_exercises.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_unite_the_general_staffs"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_unite_the_general_staffs.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_form_operational_groups"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_form_operational_groups.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_regain_control_of_borders"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_regain_control_of_borders.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_formation_of_the_confederation"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_formation_of_the_confederation.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_create_a_joint_investment_bank"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_create_a_joint_investment_bank.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_joint_geological_exploration"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_joint_geological_exploration.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_final_break_with_ecowas"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_final_break_with_ecowas.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_introduction_of_unified_passports"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_introduction_of_unified_passports.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_striving_for_confederation"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_striving_for_confederation.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_unite_the_parliaments"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_unite_the_parliaments.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_remove_trade_duties"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_remove_trade_duties.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_overcoming_ethnic_contradictions"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_overcoming_ethnic_contradictions.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_we_are_all_brothers_of_the_sahel"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_we_are_all_brothers_of_the_sahel.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_expel_the_colonialists_from_africa"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_expel_the_colonialists_from_africa.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_invite_togo_to_join_the_alliance"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_invite_togo_to_join_the_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_invite_benin_to_join_the_alliance"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_invite_benin_to_join_the_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_establish_contacts_in_ghana"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_establish_contacts_in_ghana.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_invite_senegal_to_join_the_alliance"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_invite_senegal_to_join_the_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_support_the_liberation_movement_of_the_south"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_support_the_liberation_movement_of_the_south.dds"
+	}
+	SpriteType = {
+		name = "GFX_z_goal_AD_SSA_invite_guinea_bissau_to_join_the_alliance"
+		texturefile = "gfx/interface/goals/z_goal_AD_SSA_invite_guinea_bissau_to_join_the_alliance.dds"
+	}
+}

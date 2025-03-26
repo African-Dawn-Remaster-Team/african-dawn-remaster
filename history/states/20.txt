@@ -1,0 +1,33 @@
+
+state={
+	id=20
+	name="STATE_20"
+	provinces={
+		5 13 222 254 258 496 826 1103 1186 1538 1545 1797 1848 1958 2392 2666 2989 3177 3197 3615 3630 4864 4865 4866 4867 4868 4869 4870 
+	}
+	resources = {
+		gold = 4
+		steel = 4
+	}
+	history={
+		owner = NGR
+		add_core_of = NGR
+		victory_points = { 4868 10 }
+		victory_points = { 1538 5 }
+		victory_points = { 258 5 }
+		victory_points = { 4870 3 }
+		victory_points = { 5 3 }
+		victory_points = { 1545 3 }
+		victory_points = { 4866 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			2666 = { dam = 1 }
+		}
+	}
+	manpower=8160250
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

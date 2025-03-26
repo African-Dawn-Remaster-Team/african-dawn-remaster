@@ -1,0 +1,32 @@
+characters = {
+	SOM_Mohamed_Abdullahi_Mohamed = {
+		name = SOM_Mohamed_Abdullahi_Mohamed
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOM/SOM_Mohamed_Abdullahi_Mohamed.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MOHAMED_ABDULLAHI_MOHAMED_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+	SOM_Hassan_Sheikh_Mohamud = {
+		name = SOM_Hassan_Sheikh_Mohamud
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOM/SOM_Hassan_Sheikh_Mohamud.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HASSAN_SHEIKH_MOHAMUD_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

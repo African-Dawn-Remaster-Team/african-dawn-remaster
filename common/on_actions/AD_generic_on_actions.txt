@@ -1,0 +1,628 @@
+on_actions = {
+
+	on_startup = {
+        effect = {
+			add_to_array = { global.AD_source_of_power_array = 0 } # TODO перенести?
+			add_to_array = { global.AD_source_of_power_array = 1 }
+			add_to_array = { global.AD_source_of_power_array = 2 }
+			add_to_array = { global.AD_source_of_power_array = 3 }
+			add_to_array = { global.AD_power_structure_array = 0 }
+			add_to_array = { global.AD_power_structure_array = 1 }
+			add_to_array = { global.AD_power_structure_array = 2 }
+			
+			every_possible_country = {
+				set_rule = { # блок рынка оружия
+					desc = cant_access_restriction
+					can_access_market = no
+				}
+
+				set_variable_to_random = { var = rand_X min = -5 max = 10 integer = yes } # TODO ?? перенести?
+				set_variable_to_random = { var = rand_Y min = -5 max = 10 integer = yes } # TODO ?? перенести?
+				
+				if = {
+					limit = {
+							OR = {
+								#tag = RUS
+								tag = USA
+								tag = CHI
+								tag = FRA
+							}
+						NOT = {
+							OR = {
+								has_idea = civilian_economy_mjr
+								has_idea = low_economic_mobilisation_mjr
+								has_idea = partial_economic_mobilisation_mjr
+								has_idea = war_economy_mjr
+							}
+						}
+					}
+					add_ideas = civilian_economy_mjr
+				}
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_idea = low_corruption
+								has_idea = med_corruption
+								has_idea = high_corruption
+								has_idea = extr_corruption
+							}
+						}
+					}
+					add_ideas = high_corruption
+				}
+			}
+
+			############################################### 
+			# Животный мир
+
+			create_entity = {
+				entity = hippo_01_entity
+				province = 795              
+				rotation = 17
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 941
+				rotation = 298
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 235
+				rotation = 85
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 4922
+				rotation = 221
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 4618
+				rotation = 35
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 4610
+				rotation = 150
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 4702
+				rotation = 310
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 956
+				rotation = 6
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 3151
+				rotation = 277
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 899
+				rotation = 190
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 3669
+				rotation = 93
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 929
+				rotation = 12
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 3135
+				rotation = 245
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 2942
+				rotation = 78
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 2011
+				rotation = 333
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 2443
+				rotation = 166
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 1966
+				rotation = 29
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 3100
+				rotation = 210
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 1863
+				rotation = 350
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 1748
+				rotation = 105
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 1479
+				rotation = 260
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 3864
+				rotation = 44
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 1035
+				rotation = 188
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 2580
+				rotation = 315
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 593
+				rotation = 55
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 1509
+				rotation = 230
+				scale = 1
+				min_zoom = 0
+			}
+			create_entity = {
+				entity = hippo_01_entity
+				province = 2122
+				rotation = 11
+				scale = 1
+				min_zoom = 0
+			}
+			#create_entity = {
+			#	entity = croc_entity
+			#	province = 2122
+			#	rotation = -1.5
+			#	scale = 1
+			#	min_zoom = 0
+			#}
+			add_threat = 0.19
+			##стартпак Нигерии 
+			NGA = { country_event = { id = AD_NGA.0 days = 346 } }
+			ISS = { country_event = { id = AD_ISS.0 days = 594 } }
+			##стартпак Судана
+			SUD = { country_event = { id = AD_SUD.0 days = 1200 } }
+			##стартпак Эфиопии
+			ETH = { country_event = { id = AD_ETH.0 days = 307 } }
+			##стартпак Чада
+			CHA = { country_event = { id = AD_CHA.0 days = 466 } country_event = { id = AD_CHA.1 days = 475 } }
+			##стартпак Ливии
+			LBY = { every_core_state = { add_dynamic_modifier = { modifier = unplanned_offensive } } country_event = { id = AD_LBY.0 days = 296 }  }
+			ISW = { every_core_state = { add_dynamic_modifier = { modifier = unplanned_offensive } } }
+			AMB = { every_core_state = { add_dynamic_modifier = { modifier = unplanned_offensive } } }
+		}
+	}
+	
+	on_war = {
+		effect = { 
+			every_country = { set_major = yes } # чтобы надо было всех захватывать
+		}
+	}
+	
+	### State mechanic
+	
+	on_ruling_party_change = {
+		## Генерик настройка нужного политического режима
+		effect = {
+			AD_political_regime_update = yes
+		}
+		
+		# temp var old_ideology_token is available for effects
+		effect = { # TODO ??
+			every_controlled_state = {
+				limit = {
+					has_resistance = yes
+				}
+				set_temp_variable = { new_compliance = compliance }
+				multiply_temp_variable = { new_compliance = 0.5 }
+				set_compliance = new_compliance
+			}
+		}
+	}
+	
+	### Army Leader
+	
+	# From is owner country
+	on_army_leader_daily = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = { random < 0.02 }
+					NOT = { has_trait = sick }
+					set_temp_variable = { temp = sum_unit_terrain_modifier@sickness_chance }
+					divide_temp_variable = { temp = num_units }
+					check_variable = { temp > 0.75 }
+					NOT = { has_unit_leader_flag = recently_sick }
+				}
+				add_timed_unit_leader_trait = {
+					trait = sick
+					days = 30
+				}
+				unit_leader_event = { id = generic.17 }
+			}
+		}
+	}
+	
+	# From is owner country
+	on_army_leader_won_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.001 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor }
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+	
+	# From is owner country
+	on_army_leader_lost_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.005 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor }
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+
+	on_army_leader_promoted = {
+		effect = {
+			add_timed_unit_leader_trait = {
+				trait = recently_promoted
+				days = 100
+			}
+		}
+	}
+	
+	### Justifying wargoal
+	
+	on_justifying_wargoal_pulse = {
+
+		random_events = {
+			100 = war_justification.1
+			100 = war_justification.2
+			100 = war_justification.3
+			100 = war_justification.4
+			100 = war_justification.5
+			100 = war_justification.6
+			100 = war_justification.7
+			100 = war_justification.8
+			100 = war_justification.9
+			100 = war_justification.10
+			100 = war_justification.11
+			100 = war_justification.12
+			100 = war_justification.13
+			100 = war_justification.14
+			100 = war_justification.15
+			100 = war_justification.16
+			100 = war_justification.17
+			100 = war_justification.18
+			100 = war_justification.19
+			17000 = 0
+		}
+	}
+
+	on_wargoal_expire = {
+		random_events = {
+			100 = war_justification.301
+		}
+	}
+	
+	###GREATPOWER STOCKPILE++
+
+	on_monthly_TUR = {
+		effect = {
+			add_equipment_to_stockpile = {
+				type = M16_1
+				amount = 120
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = spec_oborud_equipment_0
+				amount = 2
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 2
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_armored_transport_equipment_x_2
+				amount = 3
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = howitzer_m777_tech 
+				amount = 1
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = manpads_equipment_fim92
+				amount = 20
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = atgm_javelin_tech 
+				amount = 24
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = toyota_jeep 
+				amount = 19
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = mrap_car_equipment 
+				amount = 4
+				producer = TUR
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1  
+				amount = 1
+				producer = TUR
+			}
+		}
+	}
+
+	on_monthly_FRA = {
+		effect = {
+			add_equipment_to_stockpile = {
+				type = FAMAS_tech_2
+				amount = 400
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = spec_oborud_equipment_0
+				amount = 3
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 3
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_armored_transport_equipment_x_2
+				amount = 9
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = howitzer_m777_tech 
+				amount = 2
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = manpads_equipment_fim92
+				amount = 35
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = atgm_javelin_tech 
+				amount = 35
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = toyota_jeep 
+				amount = 12
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = mrap_car_equipment 
+				amount = 13
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1  
+				amount = 3
+				producer = FRA
+			}
+		}
+	}
+
+	on_monthly_USA = {
+		effect = {
+			add_equipment_to_stockpile = {
+				type = M16_1
+				amount = 400
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = spec_oborud_equipment_0
+				amount = 7
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 7
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_armored_transport_equipment_x_2
+				amount = 9
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = howitzer_m777_tech 
+				amount = 1
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = manpads_equipment_fim92
+				amount = 25
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = atgm_javelin_tech 
+				amount = 31
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = toyota_jeep 
+				amount = 20
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = mrap_car_equipment 
+				amount = 8
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1  
+				amount = 1
+				producer = USA
+			}
+		}
+	}
+	
+	on_monthly_RUS = {
+		effect = {
+			add_equipment_to_stockpile = {
+				type = ak_2
+				amount = 300
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = spec_oborud_equipment_0
+				amount = 4
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 40
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_armored_transport_equipment_x_2
+				amount = 12
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = howitzer_d30_tech  
+				amount = 4
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = manpads_igla_tech 
+				amount = 30
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = atgm_kornet_tech  
+				amount = 24
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = toyota_jeep  
+				amount = 20
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = mrap_car_equipment  
+				amount = 11
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1  
+				amount = 3
+				producer = RUS
+			}
+		}
+	}
+}

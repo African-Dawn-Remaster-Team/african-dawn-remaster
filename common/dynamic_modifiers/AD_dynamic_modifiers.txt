@@ -1,0 +1,292 @@
+AD_unplanned_offensive_state_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_attack_factor = -0.7
+}
+
+AD_sahel_military_initiative_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_org_factor = AD_smi_army_org_factor_var
+	max_planning_factor = AD_smi_max_planning_factor_var
+	initiative_factor = AD_smi_initiative_factor_var
+	drift_defence_factor = AD_smi_drift_defence_factor_var
+	stability_factor = AD_smi_stability_factor_var
+}
+
+BFA_situation_in_army = {
+	enable = { always = yes }
+
+	icon = GFX_idea_BFA_army_of_burkina_faso
+	
+	heat_attrition_factor = BFA.BFA_army_heat_attrition_factor
+	unit_upkeep_attrition_factor = BFA.BFA_army_unit_upkeep_attrition_factor
+	out_of_supply_factor = BFA.BFA_army_out_of_supply_factor
+	truck_attrition_factor = BFA.BFA_army_truck_attrition_factor
+	recon_factor = BFA.BFA_army_recon_factor
+	army_org_factor = BFA.BFA_army_army_org_factor
+	army_strength_factor = BFA.BFA_army_army_strength_factor
+	army_attack_factor = BFA.BFA_army_army_attack_factor
+	conscription_factor = BFA.BFA_army_conscription_factor
+	special_forces_training_time_factor = BFA.BFA_army_special_forces_training_time_factor
+	special_forces_cap_flat = BFA.BFA_army_special_forces_cap_flat
+	special_forces_no_supply_grace = BFA.BFA_army_special_forces_no_supply_grace
+	special_forces_out_of_supply_factor = BFA.BFA_army_special_forces_out_of_supply_factor
+}
+
+AFR_antiterror_experience = {
+	enable = { always = yes }
+
+	icon = GFX_idea_unknown
+	
+	breakthrough_factor = AFR_ineffective_antiterror_tactics_breakthrough_factor
+	army_armor_attack_factor = AFR_ineffective_antiterror_tactics_army_armor_attack_factor
+	coordination_bonus = AFR_ineffective_antiterror_tactics_coordination_bonus
+	recon_factor = AFR_ineffective_antiterror_tactics_recon_factor_bonus
+	resistance_target = AFR_ineffective_antiterror_tactics_resistance_target
+	supply_consumption_factor = AFR_ineffective_antiterror_tactics_supply_consumption_factor
+	training_time_factor = AFR_ineffective_antiterror_tactics_training_time_factor
+	experience_gain_army_factor = AFR_ineffective_antiterror_tactics_experience_gain_army_unit_factor
+	supply_factor = AFR_ineffective_antiterror_tactics_supply_factor
+	
+	heat_attrition_factor = AFR_ineffective_antiterror_tactics_heat_attrition_factor
+	unit_upkeep_attrition_factor = AFR_ineffective_antiterror_tactics_heat_unit_upkeep_attrition_factor
+	land_doctrine_cost_factor = AFR_ineffective_antiterror_tactics_land_doctrine_cost_factor
+	army_strength_factor = AFR_ineffective_antiterror_tactics_army_strength_factor
+	army_attack_factor = AFR_ineffective_antiterror_tactics_army_attack_factor
+	ground_attack_factor = AFR_ineffective_antiterror_tactics_ground_attack_factor
+	special_forces_attack_factor = AFR_ineffective_antiterror_tactics_special_forces_attack_factor
+	
+	army_speed_factor = AFR_ineffective_antiterror_tactics_army_speed_factor
+}
+
+CAR_fifth_kilometer_state_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	local_factories = -0.2
+	local_manpower = -0.25
+	mobilization_speed = -0.15
+}
+
+CAR_cleansing_from_militants = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_attack_factor = 0.25
+	breakthrough_factor = 0.15
+}
+
+CAR_weakness_of_the_armed_forces_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_org_factor = CAR_army_org_factor_var
+	army_org_regain = CAR_army_org_regain_var
+	training_time_army_factor = CAR_training_time_army_factor_var
+	dig_in_speed_factor = CAR_dig_in_speed_factor_var
+	army_leader_cost_factor = CAR_army_leader_cost_factor_var
+	pocket_penalty = CAR_pocket_penalty_var
+}
+
+CAR_ngakola_and_tere_modifier = {
+	enable = { always = yes }
+	remove_trigger = { NOT = { has_government = conservatism } }
+	
+	war_support_factor = CAR_war_support_factor_var
+	stability_factor = CAR_stability_factor_var
+	compliance_growth = CAR_compliance_growth_var
+	resistance_target = CAR_resistance_target_var
+}
+
+CAR_bokassa_palace_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_defence_factor = 0.06
+	local_manpower = 0.04
+	local_factories = 0.1
+}
+
+MLI_dominance_of_local_militias_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	local_manpower = -1
+	army_defence_factor = 0.06
+	equipment_capture_for_controller = 0.3
+	mobilization_speed = -0.5
+	compliance_growth = -0.2
+}
+
+MLI_dominance_of_local_militias_modifier_1 = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	local_manpower = -0.5
+	army_defence_factor = 0.03
+	equipment_capture_for_controller = 0.15
+	mobilization_speed = -0.25
+	compliance_growth = -0.1
+}
+
+MLI_decline_of_the_malian_armed_forces_modifier = {
+	icon = GFX_idea_MLI_decline_of_the_malian_armed_forces_modifier
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_org_factor = MAL_army_org_factor_var
+	army_org_regain = MAL_army_org_regain_var
+	training_time_army_factor = MAL_training_time_army_factor_var
+	dig_in_speed_factor = MAL_dig_in_speed_factor_var
+	army_leader_cost_factor = MAL_army_leader_cost_factor_var
+	pocket_penalty = MAL_pocket_penalty_var
+}
+
+MLI_dependence_on_international_donors_modifier = {
+	icon = GFX_idea_MLI_dependence_on_international_donors_modifier
+	enable = { always = yes }
+	remove_trigger = { num_of_factories > 15 }
+	
+	production_speed_infrastructure_factor = MLI_production_speed_infrastructure_factor_var
+	political_power_factor = MLI_political_power_factor_var
+	AD_money_from_taxes_modifier = MLI_money_from_taxes_modifier_var
+}
+
+BFA_collapse_of_the_armed_forces_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	army_org_factor = BFA_army_org_factor_var
+	army_org_regain = BFA_army_org_regain_var
+	training_time_army_factor = BFA_training_time_army_factor_var
+	dig_in_speed_factor = BFA_dig_in_speed_factor_var
+	army_leader_cost_factor = BFA_army_leader_cost_factor_var
+	pocket_penalty = BFA_pocket_penalty_var
+}
+
+BFA_volunteers_for_the_defense_of_the_motherland_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	conscription_factor = BFA_conscription_factor_var
+	modifier_army_sub_unit_light_infantry_opol_defense_factor = BFA_modifier_army_sub_unit_light_infantry_opol_defense_factor_var
+	pocket_penalty = BFA_pocket_penalty_var_1
+	training_time_army_factor = BFA_training_time_army_factor_var_1
+	minimum_training_level = BFA_minimum_training_level_var
+	army_speed_factor = BFA_army_speed_factor_var
+	special_forces_cap = BFA_special_forces_cap_var
+	army_defence_factor = BFA_army_defence_factor_var
+}
+
+BFA_homeland_or_death_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	surrender_limit = BFA_surrender_limit_var
+	war_stability_factor = BFA_war_stability_factor_var
+	civilian_intel_to_others = BFA_civilian_intel_to_others_var
+	army_bonus_air_superiority_factor = BFA_army_bonus_air_superiority_factor_var
+	army_fuel_consumption_factor = BFA_army_fuel_consumption_factor_var
+	monthly_population = BFA_monthly_population_var
+	consumer_goods_factor = BFA_consumer_goods_factor_var
+	production_speed_buildings_factor = BFA_production_speed_buildings_factor_var
+	industrial_capacity_factory = BFA_industrial_capacity_factory_var
+	terrain_penalty_reduction = BFA_terrain_penalty_reduction_var
+	recon_factor_while_entrenched = BFA_recon_factor_while_entrenched_var
+	land_doctrine_cost_factor = BFA_land_doctrine_cost_factor_var
+}
+
+NGR_french_military_dominance_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	stability_factor = NGR_stability_factor_var
+	army_attack_factor = NGR_army_attack_factor_var
+	army_defence_factor = NGR_army_defence_factor_var
+}
+
+NGR_disparity_between_the_center_and_the_outskirts_modifier = {
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	production_speed_industrial_complex_factor = NGR_production_speed_industrial_complex_factor_var
+	production_factory_max_efficiency_factor = NGR_production_factory_max_efficiency_factor_var
+	industrial_capacity_factory = NGR_industrial_capacity_factory_var
+	fundamentalism_drift = NGR_fundamentalism_drift_var
+}
+
+NGR_migration_flows_modifier = {
+	
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	monthly_population = NGR_monthly_population_var
+	AD_money_from_taxes_modifier = NGR_money_from_taxes_modifier_var
+}
+
+NGR_increased_control_in_the_lake_chad_area_modifier = {
+	
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	local_org_regain = 0.15
+	local_manpower = 0.07
+}
+
+AD_SSA_sahel_states_alliance_modifier = {
+	
+	icon = GFX_idea_unknown
+	enable = { always = yes }
+	remove_trigger = {  }
+	
+	political_power_gain = AD_SSA_political_power_gain_var
+	war_support_factor = AD_SSA_war_support_factor_var
+	stability_factor = AD_SSA_stability_factor_var
+	army_core_attack_factor = AD_SSA_army_core_attack_factor_var
+	initiative_factor = AD_SSA_initiative_factor_var
+	coordination_bonus = AD_SSA_coordination_bonus_var
+	planning_speed = AD_SSA_planning_speed_var
+	air_accidents_factor = AD_SSA_air_accidents_factor_var
+	air_interception_detect_factor = AD_SSA_air_interception_detect_factor_var
+	air_mission_efficiency = AD_SSA_air_mission_efficiency_var
+	air_range_factor = AD_SSA_air_range_factor_var
+	air_home_defence_factor = AD_SSA_air_home_defence_factor
+	air_cas_efficiency = AD_SSA_air_cas_efficiency
+	air_ace_generation_chance_factor = AD_SSA_air_ace_generation_chance_factor
+	intel_from_combat_factor = AD_SSA_intel_from_combat_factor_var
+	intel_network_gain = AD_SSA_intel_network_gain_var
+	foreign_subversive_activites = AD_SSA_foreign_subversive_activites_var
+	acclimatization_hot_climate_gain_factor = AD_SSA_acclimatization_hot_climate_gain_factor_var
+	experience_loss_factor = AD_SSA_experience_loss_factor_var
+	org_loss_at_low_org_factor = AD_SSA_org_loss_at_low_org_factor_var
+	max_planning_factor = AD_SSA_max_planning_factor_var
+	combat_width_factor = AD_SSA_combat_width_factor_var
+	field_officer_promotion_penalty = AD_SSA_field_officer_promotion_penalty_var
+	special_forces_cap = AD_SSA_special_forces_cap_var
+	defensive_war_stability_factor = AD_SSA_defensive_war_stability_factor_var
+	trade_opinion_factor = AD_SSA_trade_opinion_factor_var
+	political_advisor_cost_factor = AD_SSA_political_advisor_cost_factor_var
+	unit_leader_as_advisor_cp_cost_factor = AD_SSA_unit_leader_as_advisor_cp_cost_factor_var
+	AD_money_from_taxes_modifier = AD_SSA_money_from_taxes_modifier_var
+	local_resources_factor = AD_SSA_local_resources_factor_var
+	production_speed_infrastructure_factor = AD_SSA_production_speed_infrastructure_factor_var
+	party_popularity_stability_factor = AD_SSA_party_popularity_stability_factor_var
+}

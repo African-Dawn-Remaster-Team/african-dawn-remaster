@@ -1,0 +1,92 @@
+characters = {
+	CHA_Idriss_Deby = {
+		name = CHA_Idriss_Deby
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHA/CHA_Idriss_Deby.dds"
+			}
+			army = {
+				large = "gfx/leaders/CHA/CHA_Idriss_Deby.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IDRISS_DEBY_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	CHA_Mahamat_Deby = {
+		name = CHA_Mahamat_Deby
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHA/CHA_Mahamat_Deby.dds"
+			}
+			army = {
+				large = "gfx/leaders/CHA/CHA_Mahamat_Deby.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAHAMAT_DEBY_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	CHA_Abakar_Abdelkerim_Daoud = {
+		name = CHA_Abakar_Abdelkerim_Daoud
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	CHA_Mahamat_Mahdi_Ali = {
+		name = CHA_Mahamat_Mahdi_Ali
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHA/CHA_Mahamat_Mahdi_Ali.dds"
+			}
+			army = {
+				large = "gfx/leaders/CHA/CHA_Mahamat_Mahdi_Ali.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAHAMAT_MAHDI_ALI_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

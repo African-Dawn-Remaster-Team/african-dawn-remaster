@@ -1,0 +1,28 @@
+state={
+	id=123
+	name="STATE_123"
+	provinces={
+		316 372 419 605 779 854 1405 1637 1851 2476 2560 3049 3216 3665 3679 3683 4884 4885 4886 4887 4888 4891 4895 4900 4920 5153 5154 5156 5158 5159 5162 5164 5166 
+	}
+	resources = {
+		gold = 4
+		aluminium = 4
+	}
+	history={
+		owner = BFA
+		add_core_of = BFA
+		victory_points = { 4888 5 }
+		victory_points = { 4886 3 }
+		victory_points = { 3216 3 }
+		victory_points = { 2560 3 }
+		victory_points = { 4895 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+	}
+	manpower=5822600
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

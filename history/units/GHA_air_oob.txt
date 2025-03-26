@@ -1,0 +1,22 @@
+air_wings = {
+	95 = {
+		fighter_airframe_0_ru =  {
+			owner = "GHA" 
+			creator = "RUS"
+			amount = 5
+			version_name = "MIG-23"
+		}
+		light_cas_airframe_0 =  {
+			owner = "GHA" 
+			creator = "RUS"
+			amount = 6
+			version_name = "L-39"
+		}
+		attack_helicopter_airframe_0_ru =  {
+			owner = "GHA" 
+			creator = "RUS"
+			amount = 7
+			version_name = "Mi-24VB"
+		}
+	}
+}

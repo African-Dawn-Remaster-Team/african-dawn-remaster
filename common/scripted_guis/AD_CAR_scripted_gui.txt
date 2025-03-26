@@ -1,0 +1,207 @@
+scripted_gui = {
+	
+	CAR_ngakola_and_tere_scripted_gui = {
+		context_type = decision_category
+		window_name = "CAR_ngakola_and_tere_scripted_gui_window"
+		ai_enabled = { always = no }
+		
+		properties = {
+			CAR_ngakola_and_tere_circle_bar = { frame = CAR_ngakola_and_tere_var }
+		}
+	}
+	
+	CAR_integration_of_anti_balaka_scripted_gui = {
+		context_type = decision_category
+		window_name = "CAR_integration_of_anti_balaka_scripted_gui_window"
+		ai_enabled = { always = no }
+		
+		properties = {
+			CAR_integration_of_anti_balaka_circle_bar = { frame = CAR_integration_of_anti_balaka_progress }
+		}
+	}
+	
+	CAR_field_commanders_scripted_gui = {
+		context_type = decision_category
+		window_name = "CAR_field_commanders_scripted_gui_window"
+		ai_enabled = { always = no }	
+		properties = {
+			CAR_flag = { image = "[THIS.GetFlag]" }
+		}
+		dynamic_lists = {
+			CAR_field_commanders_grid = {
+				array = CAR_field_commanders_array
+				change_scope = yes
+				entry_container = CAR_field_commanders_ui_entry
+			}
+		}
+		triggers = {
+			CAR_leader_of_mpc_visible = { THIS = { tag = MPC } }
+			CAR_leader_of_antibalaka_visible = { THIS = { tag = ABK } }
+			CAR_leader_of_central_african_peace_union_visible = { THIS = { tag = CAP } }
+			CAR_leader_of_return_recovery_rehabilitation_visible = { THIS = { tag = RRR } }
+			CAR_leader_of_patriotic_movement_for_the_renewal_of_central_africa_visible = { THIS = { tag = RPR } }
+			CAR_leader_of_liberation_movement_for_justice_of_central_africa_visible = { THIS = { tag = MLC } }
+			CAR_leader_of_people_front_for_the_rebirth_of_central_africa_visible = { THIS = { tag = FPR } }
+			
+			GFX_23_CAR_visible = { 23 = { controller = { tag = CAR } } }
+			GFX_38_CAR_visible = { 38 = { controller = { tag = CAR } } }
+			GFX_39_CAR_visible = { 39 = { controller = { tag = CAR } } }
+			GFX_43_CAR_visible = { 43 = { controller = { tag = CAR } } }
+			GFX_44_CAR_visible = { 44 = { controller = { tag = CAR } } }
+			GFX_45_CAR_visible = { 45 = { controller = { tag = CAR } } }
+			GFX_46_CAR_visible = { 46 = { controller = { tag = CAR } } }
+			GFX_47_CAR_visible = { 47 = { controller = { tag = CAR } } }
+			GFX_48_CAR_visible = { 48 = { controller = { tag = CAR } } }
+			GFX_49_CAR_visible = { 49 = { controller = { tag = CAR } } }
+			GFX_50_CAR_visible = { 50 = { controller = { tag = CAR } } }
+			GFX_51_CAR_visible = { 51 = { controller = { tag = CAR } } }
+			GFX_53_CAR_visible = { 53 = { controller = { tag = CAR } } }
+			GFX_54_CAR_visible = { 54 = { controller = { tag = CAR } } }
+			GFX_56_CAR_visible = { 56 = { controller = { tag = CAR } } }
+			GFX_60_CAR_visible = { 60 = { controller = { tag = CAR } } }
+			GFX_76_CAR_visible = { 76 = { controller = { tag = CAR } } }
+			GFX_78_CAR_visible = { 78 = { controller = { tag = CAR } } }
+			GFX_80_CAR_visible = { 80 = { controller = { tag = CAR } } }
+			
+			GFX_23_ABK_visible = { 23 = { controller = { tag = ABK } } }
+			GFX_38_ABK_visible = { 38 = { controller = { tag = ABK } } }
+			GFX_39_ABK_visible = { 39 = { controller = { tag = ABK } } }
+			GFX_43_ABK_visible = { 43 = { controller = { tag = ABK } } }
+			GFX_44_ABK_visible = { 44 = { controller = { tag = ABK } } }
+			GFX_45_ABK_visible = { 45 = { controller = { tag = ABK } } }
+			GFX_46_ABK_visible = { 46 = { controller = { tag = ABK } } }
+			GFX_47_ABK_visible = { 47 = { controller = { tag = ABK } } }
+			GFX_48_ABK_visible = { 48 = { controller = { tag = ABK } } }
+			GFX_49_ABK_visible = { 49 = { controller = { tag = ABK } } }
+			GFX_50_ABK_visible = { 50 = { controller = { tag = ABK } } }
+			GFX_51_ABK_visible = { 51 = { controller = { tag = ABK } } }
+			GFX_53_ABK_visible = { 53 = { controller = { tag = ABK } } }
+			GFX_54_ABK_visible = { 54 = { controller = { tag = ABK } } }
+			GFX_56_ABK_visible = { 56 = { controller = { tag = ABK } } }
+			GFX_60_ABK_visible = { 60 = { controller = { tag = ABK } } }
+			GFX_76_ABK_visible = { 76 = { controller = { tag = ABK } } }
+			GFX_78_ABK_visible = { 78 = { controller = { tag = ABK } } }
+			GFX_80_ABK_visible = { 80 = { controller = { tag = ABK } } }
+			
+			GFX_23_FPR_visible = { 23 = { controller = { tag = FPR } } }
+			GFX_38_FPR_visible = { 38 = { controller = { tag = FPR } } }
+			GFX_39_FPR_visible = { 39 = { controller = { tag = FPR } } }
+			GFX_43_FPR_visible = { 43 = { controller = { tag = FPR } } }
+			GFX_44_FPR_visible = { 44 = { controller = { tag = FPR } } }
+			GFX_45_FPR_visible = { 45 = { controller = { tag = FPR } } }
+			GFX_46_FPR_visible = { 46 = { controller = { tag = FPR } } }
+			GFX_47_FPR_visible = { 47 = { controller = { tag = FPR } } }
+			GFX_48_FPR_visible = { 48 = { controller = { tag = FPR } } }
+			GFX_49_FPR_visible = { 49 = { controller = { tag = FPR } } }
+			GFX_50_FPR_visible = { 50 = { controller = { tag = FPR } } }
+			GFX_51_FPR_visible = { 51 = { controller = { tag = FPR } } }
+			GFX_53_FPR_visible = { 53 = { controller = { tag = FPR } } }
+			GFX_54_FPR_visible = { 54 = { controller = { tag = FPR } } }
+			GFX_56_FPR_visible = { 56 = { controller = { tag = FPR } } }
+			GFX_60_FPR_visible = { 60 = { controller = { tag = FPR } } }
+			GFX_76_FPR_visible = { 76 = { controller = { tag = FPR } } }
+			GFX_78_FPR_visible = { 78 = { controller = { tag = FPR } } }
+			GFX_80_FPR_visible = { 80 = { controller = { tag = FPR } } }
+			
+			GFX_23_MLC_visible = { 23 = { controller = { tag = MLC } } }
+			GFX_38_MLC_visible = { 38 = { controller = { tag = MLC } } }
+			GFX_39_MLC_visible = { 39 = { controller = { tag = MLC } } }
+			GFX_43_MLC_visible = { 43 = { controller = { tag = MLC } } }
+			GFX_44_MLC_visible = { 44 = { controller = { tag = MLC } } }
+			GFX_45_MLC_visible = { 45 = { controller = { tag = MLC } } }
+			GFX_46_MLC_visible = { 46 = { controller = { tag = MLC } } }
+			GFX_47_MLC_visible = { 47 = { controller = { tag = MLC } } }
+			GFX_48_MLC_visible = { 48 = { controller = { tag = MLC } } }
+			GFX_49_MLC_visible = { 49 = { controller = { tag = MLC } } }
+			GFX_50_MLC_visible = { 50 = { controller = { tag = MLC } } }
+			GFX_51_MLC_visible = { 51 = { controller = { tag = MLC } } }
+			GFX_53_MLC_visible = { 53 = { controller = { tag = MLC } } }
+			GFX_54_MLC_visible = { 54 = { controller = { tag = MLC } } }
+			GFX_56_MLC_visible = { 56 = { controller = { tag = MLC } } }
+			GFX_60_MLC_visible = { 60 = { controller = { tag = MLC } } }
+			GFX_76_MLC_visible = { 76 = { controller = { tag = MLC } } }
+			GFX_78_MLC_visible = { 78 = { controller = { tag = MLC } } }
+			GFX_80_MLC_visible = { 80 = { controller = { tag = MLC } } }
+			
+			GFX_23_CAP_visible = { 23 = { controller = { tag = CAP } } }
+			GFX_38_CAP_visible = { 38 = { controller = { tag = CAP } } }
+			GFX_39_CAP_visible = { 39 = { controller = { tag = CAP } } }
+			GFX_43_CAP_visible = { 43 = { controller = { tag = CAP } } }
+			GFX_44_CAP_visible = { 44 = { controller = { tag = CAP } } }
+			GFX_45_CAP_visible = { 45 = { controller = { tag = CAP } } }
+			GFX_46_CAP_visible = { 46 = { controller = { tag = CAP } } }
+			GFX_47_CAP_visible = { 47 = { controller = { tag = CAP } } }
+			GFX_48_CAP_visible = { 48 = { controller = { tag = CAP } } }
+			GFX_49_CAP_visible = { 49 = { controller = { tag = CAP } } }
+			GFX_50_CAP_visible = { 50 = { controller = { tag = CAP } } }
+			GFX_51_CAP_visible = { 51 = { controller = { tag = CAP } } }
+			GFX_53_CAP_visible = { 53 = { controller = { tag = CAP } } }
+			GFX_54_CAP_visible = { 54 = { controller = { tag = CAP } } }
+			GFX_56_CAP_visible = { 56 = { controller = { tag = CAP } } }
+			GFX_60_CAP_visible = { 60 = { controller = { tag = CAP } } }
+			GFX_76_CAP_visible = { 76 = { controller = { tag = CAP } } }
+			GFX_78_CAP_visible = { 78 = { controller = { tag = CAP } } }
+			GFX_80_CAP_visible = { 80 = { controller = { tag = CAP } } }
+			
+			GFX_23_MPC_visible = { 23 = { controller = { tag = MPC } } }
+			GFX_38_MPC_visible = { 38 = { controller = { tag = MPC } } }
+			GFX_39_MPC_visible = { 39 = { controller = { tag = MPC } } }
+			GFX_43_MPC_visible = { 43 = { controller = { tag = MPC } } }
+			GFX_44_MPC_visible = { 44 = { controller = { tag = MPC } } }
+			GFX_45_MPC_visible = { 45 = { controller = { tag = MPC } } }
+			GFX_46_MPC_visible = { 46 = { controller = { tag = MPC } } }
+			GFX_47_MPC_visible = { 47 = { controller = { tag = MPC } } }
+			GFX_48_MPC_visible = { 48 = { controller = { tag = MPC } } }
+			GFX_49_MPC_visible = { 49 = { controller = { tag = MPC } } }
+			GFX_50_MPC_visible = { 50 = { controller = { tag = MPC } } }
+			GFX_51_MPC_visible = { 51 = { controller = { tag = MPC } } }
+			GFX_53_MPC_visible = { 53 = { controller = { tag = MPC } } }
+			GFX_54_MPC_visible = { 54 = { controller = { tag = MPC } } }
+			GFX_56_MPC_visible = { 56 = { controller = { tag = MPC } } }
+			GFX_60_MPC_visible = { 60 = { controller = { tag = MPC } } }
+			GFX_76_MPC_visible = { 76 = { controller = { tag = MPC } } }
+			GFX_78_MPC_visible = { 78 = { controller = { tag = MPC } } }
+			GFX_80_MPC_visible = { 80 = { controller = { tag = MPC } } }
+			
+			GFX_23_RPR_visible = { 23 = { controller = { tag = RPR } } }
+			GFX_38_RPR_visible = { 38 = { controller = { tag = RPR } } }
+			GFX_39_RPR_visible = { 39 = { controller = { tag = RPR } } }
+			GFX_43_RPR_visible = { 43 = { controller = { tag = RPR } } }
+			GFX_44_RPR_visible = { 44 = { controller = { tag = RPR } } }
+			GFX_45_RPR_visible = { 45 = { controller = { tag = RPR } } }
+			GFX_46_RPR_visible = { 46 = { controller = { tag = RPR } } }
+			GFX_47_RPR_visible = { 47 = { controller = { tag = RPR } } }
+			GFX_48_RPR_visible = { 48 = { controller = { tag = RPR } } }
+			GFX_49_RPR_visible = { 49 = { controller = { tag = RPR } } }
+			GFX_50_RPR_visible = { 50 = { controller = { tag = RPR } } }
+			GFX_51_RPR_visible = { 51 = { controller = { tag = RPR } } }
+			GFX_53_RPR_visible = { 53 = { controller = { tag = RPR } } }
+			GFX_54_RPR_visible = { 54 = { controller = { tag = RPR } } }
+			GFX_56_RPR_visible = { 56 = { controller = { tag = RPR } } }
+			GFX_60_RPR_visible = { 60 = { controller = { tag = RPR } } }
+			GFX_76_RPR_visible = { 76 = { controller = { tag = RPR } } }
+			GFX_78_RPR_visible = { 78 = { controller = { tag = RPR } } }
+			GFX_80_RPR_visible = { 80 = { controller = { tag = RPR } } }
+			
+			GFX_23_RRR_visible = { 23 = { controller = { tag = RRR } } }
+			GFX_38_RRR_visible = { 38 = { controller = { tag = RRR } } }
+			GFX_39_RRR_visible = { 39 = { controller = { tag = RRR } } }
+			GFX_43_RRR_visible = { 43 = { controller = { tag = RRR } } }
+			GFX_44_RRR_visible = { 44 = { controller = { tag = RRR } } }
+			GFX_45_RRR_visible = { 45 = { controller = { tag = RRR } } }
+			GFX_46_RRR_visible = { 46 = { controller = { tag = RRR } } }
+			GFX_47_RRR_visible = { 47 = { controller = { tag = RRR } } }
+			GFX_48_RRR_visible = { 48 = { controller = { tag = RRR } } }
+			GFX_49_RRR_visible = { 49 = { controller = { tag = RRR } } }
+			GFX_50_RRR_visible = { 50 = { controller = { tag = RRR } } }
+			GFX_51_RRR_visible = { 51 = { controller = { tag = RRR } } }
+			GFX_53_RRR_visible = { 53 = { controller = { tag = RRR } } }
+			GFX_54_RRR_visible = { 54 = { controller = { tag = RRR } } }
+			GFX_56_RRR_visible = { 56 = { controller = { tag = RRR } } }
+			GFX_60_RRR_visible = { 60 = { controller = { tag = RRR } } }
+			GFX_76_RRR_visible = { 76 = { controller = { tag = RRR } } }
+			GFX_78_RRR_visible = { 78 = { controller = { tag = RRR } } }
+			GFX_80_RRR_visible = { 80 = { controller = { tag = RRR } } }
+		}
+	}
+}

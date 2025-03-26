@@ -1,0 +1,12 @@
+﻿focus_tree = {
+	id = NGA_initial_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NGA
+		}
+	}
+	default = no
+	continuous_focus_position = { x = -1000 y = 1000 }
+}

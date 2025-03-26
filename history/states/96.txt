@@ -1,0 +1,23 @@
+state={
+	id=96
+	name="STATE_96"
+	provinces={
+		549 909 2145 2454 2889 4673 4677 4687
+	}
+	resources = {
+		steel = 8
+	}
+	history={
+		owner = GNA
+		add_core_of = GNA
+		victory_points = { 2454 5 }
+		victory_points = { 4677 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=1663582
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

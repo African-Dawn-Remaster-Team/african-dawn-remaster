@@ -1,0 +1,19 @@
+state={
+	id=74
+	name="STATE_74"
+	provinces={
+		145 3864 3865 
+	}
+	history={
+		owner = COG
+		add_core_of = COG
+		victory_points = { 145 5 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=119328
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

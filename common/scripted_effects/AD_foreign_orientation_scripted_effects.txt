@@ -1,0 +1,189 @@
+AD_fo_update_coordinates = {
+	add_to_array = { ROOT.alignment_array = THIS }
+	set_variable = { alignment_array_X = 0 }
+	set_variable = { alignment_array_Y = 0 }
+	
+	set_temp_variable = { socialism_X = party_popularity@socialism }
+	set_temp_variable = { socialism_Y = party_popularity@socialism }
+	set_temp_variable = { mult_X = -115 } # 0
+	set_temp_variable = { mult_Y = -180 } # 0
+	if = {
+		limit = { check_variable = { AD_fo_position > 0 } } 
+		set_temp_variable = { influ_X = 180 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = 15 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	else = {
+		set_temp_variable = { influ_X = -15 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -285 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	add_to_temp_variable = { mult_X = rand_X }
+	add_to_temp_variable = { mult_Y = rand_Y }
+	multiply_temp_variable = { socialism_X = mult_X }
+	multiply_temp_variable = { socialism_Y = mult_Y }
+	
+	set_temp_variable = { social_democracy_X = party_popularity@social_democracy }
+	set_temp_variable = { social_democracy_Y = party_popularity@social_democracy }
+	set_temp_variable = { mult_X = -75 }
+	set_temp_variable = { mult_Y = -115 }
+	if = {
+		limit = { check_variable = { AD_fo_position > 0 } }
+		set_temp_variable = { influ_X = 140 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -50 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	else = {
+		set_temp_variable = { influ_X = 25 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -220 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	add_to_temp_variable = { mult_X = rand_X }
+	add_to_temp_variable = { mult_Y = rand_Y }
+	multiply_temp_variable = { social_democracy_X = mult_X }
+	multiply_temp_variable = { social_democracy_Y = mult_Y }
+	
+	set_temp_variable = { liberalism_X = party_popularity@liberalism }
+	set_temp_variable = { liberalism_Y = party_popularity@liberalism }
+	set_temp_variable = { mult_X = -30 }
+	set_temp_variable = { mult_Y = -50 }
+	if = {
+		limit = { check_variable = { AD_fo_position > 0 } }
+		set_temp_variable = { influ_X = 90 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -115 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	else = {
+		set_temp_variable = { influ_X = 70 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -155 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	add_to_temp_variable = { mult_X = rand_X }
+	add_to_temp_variable = { mult_Y = rand_Y }
+	multiply_temp_variable = { liberalism_X = mult_X }
+	multiply_temp_variable = { liberalism_Y = mult_Y }
+	
+	set_temp_variable = { centrism_X = party_popularity@centrism }
+	set_temp_variable = { centrism_Y = party_popularity@centrism }
+	set_temp_variable = { mult_X = 0 }
+	set_temp_variable = { mult_Y = 0 }
+	if = {
+		limit = { check_variable = { AD_fo_position > 0 } }
+		set_temp_variable = { influ_X = 60 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -165 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	else = {
+		set_temp_variable = { influ_X = 100 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -105 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	add_to_temp_variable = { mult_X = rand_X }
+	add_to_temp_variable = { mult_Y = rand_Y }
+	multiply_temp_variable = { centrism_X = mult_X }
+	multiply_temp_variable = { centrism_Y = mult_Y }
+	
+	set_temp_variable = { conservatism_X = party_popularity@conservatism }
+	set_temp_variable = { conservatism_Y = party_popularity@conservatism }
+	set_temp_variable = { mult_X = 40 }
+	set_temp_variable = { mult_Y = 60 }
+	if = {
+		limit = { check_variable = { AD_fo_position > 0 } }
+		set_temp_variable = { influ_X = 20 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -225 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	else = {
+		set_temp_variable = { influ_X = 140 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -45 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	add_to_temp_variable = { mult_X = rand_X }
+	add_to_temp_variable = { mult_Y = rand_Y }
+	multiply_temp_variable = { conservatism_X = mult_X }
+	multiply_temp_variable = { conservatism_Y = mult_Y }
+	
+	set_temp_variable = { fundamentalism_X = party_popularity@fundamentalism }
+	set_temp_variable = { fundamentalism_Y = party_popularity@fundamentalism }
+	set_temp_variable = { mult_X = 80 }
+	set_temp_variable = { mult_Y = 120 }
+	if = {
+		limit = { check_variable = { AD_fo_position > 0 } }
+		set_temp_variable = { influ_X = -15 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = -285 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	else = {
+		set_temp_variable = { influ_X = 180 }
+		multiply_temp_variable = { influ_X = AD_fo_position }
+		add_to_temp_variable = { mult_X = influ_X }
+		#
+		set_temp_variable = { influ_Y = 15 }
+		multiply_temp_variable = { influ_Y = AD_fo_position }
+		add_to_temp_variable = { mult_Y = influ_Y }
+	}
+	add_to_temp_variable = { mult_X = rand_X }
+	add_to_temp_variable = { mult_Y = rand_Y }
+	multiply_temp_variable = { fundamentalism_X = mult_X }
+	multiply_temp_variable = { fundamentalism_Y = mult_Y }
+
+	add_to_variable = { alignment_array_X = socialism_X }
+	add_to_variable = { alignment_array_X = social_democracy_X }
+	add_to_variable = { alignment_array_X = liberalism_X }
+	add_to_variable = { alignment_array_X = centrism_X }
+	add_to_variable = { alignment_array_X = conservatism_X }
+	add_to_variable = { alignment_array_X = fundamentalism_X }
+
+	add_to_variable = { alignment_array_Y = socialism_Y }
+	add_to_variable = { alignment_array_Y = social_democracy_Y }
+	add_to_variable = { alignment_array_Y = liberalism_Y }
+	add_to_variable = { alignment_array_Y = centrism_Y }
+	add_to_variable = { alignment_array_Y = conservatism_Y }
+	add_to_variable = { alignment_array_Y = fundamentalism_Y }
+	
+	# log =  "[THIS.GetTag] [?alignment_array_Y] (+[?rand_X]) [?alignment_array_X] (+[?rand_Y])"
+}

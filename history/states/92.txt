@@ -1,0 +1,23 @@
+state={
+	id=92
+	name="STATE_92"
+	provinces={
+		9 24 64 425 446 1255 1668 1756 2083 2656 2929 3000 3610 3616 4629 4630 
+	}
+	history={
+		owner = SEN
+		add_core_of = SEN
+		victory_points = { 4630 5}
+		victory_points = { 1668 3 }
+		victory_points = { 2929 3 }
+		buildings = {
+			infrastructure = 2
+			4630 = { naval_base = 1 }
+		}
+	}
+	manpower=3165639
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
+ 

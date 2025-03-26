@@ -1,0 +1,590 @@
+defined_text = {
+	name = Close_Button_Text
+
+	text = {
+		trigger = { tag = BFA }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_BFA
+	}
+	text = {
+		trigger = { tag = MLI }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_MLI
+	}
+	text = {
+		trigger = { tag = NGR }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_NGR
+	}
+
+	text = {
+		trigger = { tag = LBY }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_LBY
+	}
+
+	text = {
+		trigger = { tag = CHA }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_CHA
+	}
+	text = {
+		trigger = { tag = SEN }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_SEN
+	}
+	text = {
+		trigger = { tag = RUS }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_RUS
+	}	
+	text = {
+		trigger = { tag = EQG }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_RUS
+	}	
+	text = {
+		trigger = { tag = GNA }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_GNA
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_USA
+	}
+	text = {
+		trigger = { tag = FRA }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_FRA
+	}
+	text = {
+		trigger = { tag = NGA }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_NGA
+	}	
+	text = {
+		trigger = { tag = CAR }
+		localization_key = TDOA_STATE_INFO_EXIT_BUTTON_TEXT_CAR
+	}
+}
+
+defined_text = {
+	name = GET_PLACATE
+
+	text = {
+		trigger = { tag = BFA }
+		localization_key = "GFX_TDOA_State_Info_Placate_BFA"
+	}
+	text = {
+		trigger = { tag = MLI }
+		localization_key = "GFX_TDOA_State_Info_Placate_MLI"
+	}
+	text = {
+		trigger = { tag = NGR }
+		localization_key = "GFX_TDOA_State_Info_Placate_NGR"
+	}
+	text = {
+		trigger = { tag = LBY }
+		localization_key = "GFX_TDOA_State_Info_Placate_LBY"
+	}
+	text = {
+		trigger = { tag = CHA }
+		localization_key = "GFX_TDOA_State_Info_Placate_CHA"
+	}
+	text = {
+		trigger = { tag = SEN }
+		localization_key = "GFX_TDOA_State_Info_Placate_SEN"
+	}
+	text = {
+		trigger = { tag = RUS }
+		localization_key = "GFX_TDOA_State_Info_Placate_RUS"
+	}	
+	text = {
+		trigger = { tag = EQG }
+		localization_key = "GFX_TDOA_State_Info_Placate_EQG"
+	}	
+	text = {
+		trigger = { tag = GNA }
+		localization_key = "GFX_TDOA_State_Info_Placate_GNA"
+	}
+	text = {
+		trigger = { tag = FRA }
+		localization_key = "GFX_TDOA_State_Info_Placate_FRA"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = "GFX_TDOA_State_Info_Placate_USA"
+	}
+	text = {
+		trigger = { tag = NGA }
+		localization_key = "GFX_TDOA_State_Info_Placate_NGA"
+	}	
+	text = {
+		trigger = { tag = CAR }
+		localization_key = "GFX_TDOA_State_Info_Placate_CAR"
+	}
+}
+
+
+
+defined_text = {
+	name = State_Info_Title
+
+	text = {
+		trigger = {
+			check_variable = { State_Info_Tab = 2 }
+		}
+		localization_key = "[Get_Guide_Text_Pack]"
+	}
+	text = {
+		trigger = {
+			check_variable = { State_Info_Tab = 3 }
+		}
+		localization_key = "[Get_Disclaimer_Text_Pack]"
+	}
+	text = {
+		trigger = {
+			original_tag = BFA
+		}
+		localization_key = "[Get_Localised_Text_BFA]"
+	}
+	text = {
+		trigger = {
+			original_tag = MLI
+		}
+		localization_key = "[Get_Localised_Text_MLI]"
+	}
+	text = {
+		trigger = {
+			original_tag = NGR
+		}
+		localization_key = "[Get_Localised_Text_NGR]"
+	}
+	text = {
+		trigger = {
+			original_tag = LBY
+		}
+		localization_key = "[Get_Localised_Text_LBY]"
+	}
+	text = {
+		trigger = {
+			original_tag = CHA
+		}
+		localization_key = "[Get_Localised_Text_CHA]"
+	}
+	text = {
+		trigger = {
+			original_tag = SEN
+		}
+		localization_key = "[Get_Localised_Text_SEN]"
+	}
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = "[Get_Localised_Text_FRA]"
+	}
+	text = {
+		trigger = {
+			original_tag = USA
+		}
+		localization_key = "[Get_Localised_Text_USA]"
+	}
+	text = {
+		trigger = {
+			original_tag = NGA
+		}
+		localization_key = "[Get_Localised_Text_NGA]"
+	}
+	text = {
+		trigger = {
+			original_tag = RUS
+		}
+		localization_key = "[Get_Localised_Text_RUS]"
+	}
+	text = {
+		trigger = {
+			original_tag = GNA
+		}
+		localization_key = "[Get_Localised_Text_GNA]"
+	}
+	text = {
+		trigger = {
+			original_tag = EQG
+		}
+		localization_key = "[Get_Localised_Text_EQG]"
+	}
+	text = {
+		trigger = {
+			original_tag = CAR
+		}
+		localization_key = "[Get_Localised_Text_CAR]"
+	}
+}
+
+	defined_text = {
+		name = Get_Localised_Text_BFA
+		text = {
+			localization_key = BFA_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_MLI
+		text = {
+			localization_key = MLI_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_NGR
+		text = {
+			localization_key = NGR_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_LBY
+		text = {
+			localization_key = LBY_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_CHA
+		text = {
+			localization_key = CHA_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_SEN
+		text = {
+			localization_key = SEN_State_Info_Text.1
+		}
+	}	
+	defined_text = {
+		name = Get_Localised_Text_EQG
+		text = {
+			localization_key = EQG_State_Info_Text.1
+		}
+	}	
+	defined_text = {
+		name = Get_Localised_Text_CAR
+		text = {
+			localization_key = CAR_State_Info_Text.1
+		}
+	}	
+	defined_text = {
+		name = Get_Localised_Text_GNA
+		text = {
+			localization_key = GNA_State_Info_Text.1
+		}
+	}
+	defined_text = {
+		name = Get_Localised_Text_FRA
+		text = {
+			localization_key = FRA_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_USA
+		text = {
+			localization_key = USA_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_NGA
+		text = {
+			localization_key = NGA_State_Info_Text.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_RUS
+		text = {
+			localization_key = RUS_State_Info_Text.1
+		}
+	}
+
+
+defined_text = {
+	name = State_Info_Body
+	
+	text = {
+		trigger = {
+			check_variable = { State_Info_Tab = 2 }
+		}
+		localization_key = "[Get_Guide_Text_Pack_Desc]"
+	}
+	text = {
+		trigger = {
+			check_variable = { State_Info_Tab = 3 }
+		}
+		localization_key = "[Get_Disclaimer_Text_Pack_Desc]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = BFA
+		}
+		localization_key = "[Get_Localised_Text_desc_BFA]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = MLI
+		}
+		localization_key = "[Get_Localised_Text_desc_MLI]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = NGR
+		}
+		localization_key = "[Get_Localised_Text_desc_NGR]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = LBY
+		}
+		localization_key = "[Get_Localised_Text_desc_LBY]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = CHA
+		}
+		localization_key = "[Get_Localised_Text_desc_CHA]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = SEN
+		}
+		localization_key = "[Get_Localised_Text_desc_SEN]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = FRA
+		}
+		localization_key = "[Get_Localised_Text_desc_FRA]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = USA
+		}
+		localization_key = "[Get_Localised_Text_desc_USA]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = NGA
+		}
+		localization_key = "[Get_Localised_Text_desc_NGA]"
+	}	
+	text = {
+		trigger = {
+			original_tag = CAR
+		}
+		localization_key = "[Get_Localised_Text_desc_CAR]"
+	}
+	
+	text = {
+		trigger = {
+			original_tag = RUS
+		}
+		localization_key = "[Get_Localised_Text_desc_RUS]"
+	}	
+	text = {
+		trigger = {
+			original_tag = EQG
+		}
+		localization_key = "[Get_Localised_Text_desc_EQG]"
+	}	
+	text = {
+		trigger = {
+			original_tag = GNA
+		}
+		localization_key = "[Get_Localised_Text_desc_GNA]"
+	}
+	
+}
+
+
+	defined_text = {
+		name = Get_Localised_Text_desc_BFA
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = BFA_State_Info_Text_desc.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_desc_MLI
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = MLI_State_Info_Text_desc.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_desc_NGR
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = NGR_State_Info_Text_desc.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_desc_LBY
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = LBY_State_Info_Text_desc.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_desc_CHA
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = CHA_State_Info_Text_desc.1
+		}
+	}
+
+	defined_text = {
+		name = Get_Localised_Text_desc_SEN
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = SEN_State_Info_Text_desc.1
+		}
+	}
+	
+		defined_text = {
+		name = Get_Localised_Text_desc_FRA
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = FRA_State_Info_Text_desc.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_desc_USA
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = USA_State_Info_Text_desc.1
+		}
+	}
+	
+	defined_text = {
+		name = Get_Localised_Text_desc_NGA
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = NGA_State_Info_Text_desc.1
+		}
+	}	
+	defined_text = {
+		name = Get_Localised_Text_desc_CAR
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = CAR_State_Info_Text_desc.1
+		}
+	}
+
+	defined_text = {
+		name = Get_Localised_Text_desc_RUS
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = RUS_State_Info_Text_desc.1
+		}
+	}	
+	defined_text = {
+		name = Get_Localised_Text_desc_EQG
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = EQG_State_Info_Text_desc.1
+		}
+	}	
+	defined_text = {
+		name = Get_Localised_Text_desc_GNA
+		text = {
+			trigger = {
+				check_variable = { State_Info_Selected = 1 }
+			}
+			localization_key = GNA_State_Info_Text_desc.1
+		}
+	}
+
+defined_text = {
+	name = State_Info_Tab_Title
+	text = {
+		trigger = {
+			check_variable = { tab_value = 1 }
+		}
+		localization_key = "State_Info_Tab_State"
+	}
+	text = {
+		trigger = {
+			check_variable = { tab_value = 2 }
+		}
+		localization_key = "State_Info_Tab_Guide"
+	}
+	text = {
+		trigger = {
+			check_variable = { tab_value = 3 }
+		}
+		localization_key = "State_Info_Tab_Disclaimer"
+	}
+}
+
+
+defined_text = {
+	name = Get_Guide_Text_Pack
+	text = {
+		localization_key = State_Info_Guide_Text_Pack.1
+	}
+}
+
+defined_text = {
+	name = Get_Guide_Text_Pack_Desc
+	text = {
+		trigger = {
+			check_variable = { State_Info_Selected = 1 }
+		}
+		localization_key = State_Info_Guide_Text_Pack_desc.1
+	}
+}
+
+
+defined_text = {
+	name = Get_Disclaimer_Text_Pack
+	text = {
+		localization_key = State_Info_Development_Text_Pack.1
+	}
+}
+
+defined_text = {
+	name = Get_Disclaimer_Text_Pack_Desc
+	text = {
+		localization_key = State_Info_Development_Text_Pack_desc.1
+	}
+}
+

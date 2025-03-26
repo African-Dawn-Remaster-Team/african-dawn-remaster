@@ -1,0 +1,140 @@
+division_template = {
+	name = "Infantry Brigade"
+	priority = 1
+	regiments={
+		Infantry = { x=0 y=0 }
+		Infantry = { x=0 y=1 }
+		Infantry = { x=0 y=2 }
+		Infantry = { x=1 y=0 }
+		Infantry = { x=1 y=1 }
+		Infantry = { x=1 y=2 }
+		Infantry = { x=2 y=0 }
+		Infantry = { x=2 y=1 }
+		Infantry = { x=2 y=2 }
+	}
+}
+
+division_template = {
+	name = "Airborne forces"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+		speznaz = { x=1 y=0 }
+		speznaz = { x=1 y=1 }
+		speznaz = { x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Armoured Recce Regiment"
+	priority = 2
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=0 y=4 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "6th Battalion"
+		location = 1003
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "69th Airborne Force"
+		location = 2309
+		division_template = "Airborne forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "155th Armoured Recce Regiment"
+		location = 2601
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "3rd Battalion"
+		location = 2557
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "4th Battalion"
+		location = 1837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "154th Armoured Reconnaissance Regiment"
+		location = 2557
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "49th Engineer Regiment "
+		location = 1837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "1st Battalion"
+		location = 1703
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "2nd Battalion"
+		location = 3032
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "5th Infantry Battalion"
+		location = 4646
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "President's Own Guard Regiment"
+		location = 4646
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "153rd Armoured Reconnaissance Regiment"
+		location = 4646
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,22 @@
+air_wings = {
+	10 = {
+		light_cas_airframe_0 =  {
+			owner = "BFA" 
+			creator = "RUS"
+			amount = 3
+			version_name = "L-39"
+		}
+		attack_helicopter_airframe_0_ru =  {
+			owner = "BFA" 
+			creator = "RUS"
+			amount = 18
+			version_name = "Mi-24VB"
+		}
+		uav_airframe_0 =  {
+			owner = "BFA" 
+			creator = "TUR"
+			amount = 7
+			version_name = "Bayraktar TB2"
+		}
+	}
+}

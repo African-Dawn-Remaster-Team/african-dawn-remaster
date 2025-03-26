@@ -1,0 +1,30 @@
+capital = 5
+set_oob = "SIE_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_atgm_tech = 1
+}
+
+recruit_character = SIE_Julius_Maada_Bio
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 61
+	social_democracy = 39
+}
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 0 }
+
+set_convoys = 5
+starting_train_buffer = 5
+
+set_research_slots = 1
+set_stability = 0.43
+set_war_support = 0.03
+
+add_ideas = {
+	AD_ECOWAS
+}

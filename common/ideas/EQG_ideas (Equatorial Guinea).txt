@@ -1,0 +1,356 @@
+ideas = {
+	country = {
+		
+		EQG_dependence_on_oil_revenues_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				AD_money_from_oil_modifier = 0.3
+				AD_money_from_industry_modifier = -0.15
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.15
+				custom_modifier_tooltip = empty_line_tooltip
+				custom_modifier_tooltip = AD_ban_on_the_shift_of_trade_laws_tt
+			}
+		}
+		
+		EQG_dependence_on_oil_revenues_idea_1 = {
+			name = EQG_dependence_on_oil_revenues_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				AD_money_from_oil_modifier = 0.2
+				AD_money_from_industry_modifier = -0.15
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.15
+				custom_modifier_tooltip = empty_line_tooltip
+				custom_modifier_tooltip = AD_ban_on_the_shift_of_trade_laws_tt
+			}
+		}
+		
+		EQG_dependence_on_oil_revenues_idea_2 = {
+			name = EQG_dependence_on_oil_revenues_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				AD_money_from_oil_modifier = 0.2
+				AD_money_from_industry_modifier = -0.15
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.15
+				custom_modifier_tooltip = empty_line_tooltip
+				custom_modifier_tooltip = AD_ban_on_the_shift_of_trade_laws_tt
+			}
+		}
+		
+		EQG_dependence_on_oil_revenues_idea_3 = {
+			name = EQG_dependence_on_oil_revenues_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				AD_money_from_oil_modifier = 0.3
+				AD_money_from_industry_modifier = -0.15
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.15
+				custom_modifier_tooltip = empty_line_tooltip
+				custom_modifier_tooltip = AD_ban_on_the_shift_of_trade_laws_tt
+			}
+		}
+		
+		EQG_dependence_on_oil_revenues_idea_4 = {
+			name = EQG_dependence_on_oil_revenues_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				AD_money_from_oil_modifier = 0.4
+				AD_money_from_industry_modifier = -0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+		
+		EQG_mongomo_clan_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = 0.15
+				compliance_growth_on_our_occupied_states = 0.5
+				surrender_limit = -0.1
+			}
+		}
+		
+		EQG_mongomo_clan_idea_1 = {
+			name = EQG_mongomo_clan_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = 0.15
+				surrender_limit = -0.1
+			}
+		}
+		
+		EQG_foreign_traders_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				#TODO: налоги с Бата (STATE 24 }-40%
+			}
+		}
+		
+		EQG_foreign_traders_idea_1 = {
+			name = EQG_foreign_traders_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.07
+				#TODO: налоги с Бата (STATE 24 }-20%
+			}
+		}
+		
+		EQG_threat_of_a_coup_from_the_opposition_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.25
+				drift_defence_factor = -0.45
+				foreign_subversive_activites = 0.3
+				faction_trade_opinion_factor = -0.5
+				opinion_gain_monthly_factor = -0.5
+				ai_call_ally_desire_factor = -1
+				ai_get_ally_desire_factor = -1
+				ai_join_ally_desire_factor = -1
+			}
+		}
+		
+		EQG_threat_of_a_coup_from_the_opposition_idea_1 = {
+			name = EQG_threat_of_a_coup_from_the_opposition_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.15
+				drift_defence_factor = -0.2
+				foreign_subversive_activites = 0.3
+				faction_trade_opinion_factor = -0.5
+				ai_call_ally_desire_factor = -1
+				ai_get_ally_desire_factor = -1
+				ai_join_ally_desire_factor = -1
+			}
+		}
+		
+		EQG_threat_of_a_coup_from_the_opposition_idea_2 = {
+			name = EQG_threat_of_a_coup_from_the_opposition_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.05
+				drift_defence_factor = -0.1
+				faction_trade_opinion_factor = -0.5
+				ai_call_ally_desire_factor = -1
+				ai_get_ally_desire_factor = -1
+				ai_join_ally_desire_factor = -1
+			}
+		}
+		
+		EQG_threat_of_a_coup_from_the_opposition_idea_3 = {
+			name = EQG_threat_of_a_coup_from_the_opposition_idea
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.05
+				drift_defence_factor = -0.1
+				ai_call_ally_desire_factor = -1
+				ai_get_ally_desire_factor = -1
+				ai_join_ally_desire_factor = -1
+			}
+		}
+		
+		EQG_patient_zero_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				monthly_population = -0.02
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		EQG_mutiny_on_the_island_of_annobon_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.25
+				stability_factor = -0.11
+				centrism_drift = -0.03
+				AD_money_from_taxes_modifier = -0.2
+			}
+		}
+		
+		EQG_migration_crisis_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.2
+				consumer_goods_factor = 0.35
+				stability_factor = -0.28
+			}
+		}
+		
+		EQG_african_corps_idea = {
+			picture = AD_african_corps_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				command_power_gain_mult = 0.1
+				experience_gain_army_factor = 0.2
+				training_time_factor = -0.1
+				air_superiority_bonus_in_combat = 0.2
+				army_attack_factor = 0.06
+				army_attack_speed_factor = 0.13
+				army_strength_factor = 0.09
+				army_org_factor = 0.04
+				coordination_bonus = 0.1
+				dig_in_speed_factor = 0.2
+			}
+		}
+		
+		EQG_african_corps_idea_1 = {
+			name = EQG_african_corps_idea
+			picture = AD_african_corps_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				command_power_gain_mult = 0.1
+				experience_gain_army_factor = 0.2
+				training_time_factor = -0.1
+				air_superiority_bonus_in_combat = 0.2
+				army_attack_factor = 0.06
+				army_attack_speed_factor = 0.13
+				army_strength_factor = 0.09
+				army_org_factor = 0.04
+				coordination_bonus = 0.1
+				dig_in_speed_factor = 0.2
+				air_accidents_factor = -0.15
+				ace_effectiveness_factor = 0.5
+				air_mission_xp_gain_factor = 0.2
+				air_training_xp_gain_factor = 0.3
+			}
+		}
+		
+		EQG_minor_spread_of_infection_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.08
+				monthly_population = -0.06
+				industrial_capacity_factory = -0.08
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		EQG_average_spread_of_infection_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.12
+				monthly_population = -0.12
+				industrial_capacity_factory = -0.12
+				production_factory_max_efficiency_factor = -0.12
+				production_factory_efficiency_gain_factor = -0.12
+			}
+		}
+		
+		EQG_high_spread_of_infection_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.16
+				monthly_population = -0.16
+				industrial_capacity_factory = -0.16
+				production_factory_max_efficiency_factor = -0.16
+				production_factory_efficiency_gain_factor = -0.16
+			}
+		}
+		
+		EQG_total_spread_of_infection_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.22
+				monthly_population = -0.22
+				industrial_capacity_factory = -0.22
+				production_factory_max_efficiency_factor = -0.22
+				production_factory_efficiency_gain_factor = -0.22
+			}
+		}
+		
+		EQG_cooperation_with_rosgeologiya_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+		
+		EQG_secure_membership_in_the_imet_idea = {
+			picture = idea_BFA_political_instability
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = 0.15
+				navy_org_factor = 0.05
+			}
+		}
+	}
+}

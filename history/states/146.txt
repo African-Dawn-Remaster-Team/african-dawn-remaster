@@ -1,0 +1,24 @@
+state={
+	id=146
+	name="STATE_146"
+	provinces={
+		144 214 355 573 1076 1128 1631 1799 1847 2234 2307 2372 2396 2663 2727 2761 2809 3352 3360 3362 3373 3393 
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 2307 5 }
+		victory_points = { 1631 3 }
+		victory_points = { 1847 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			2307 = { naval_base = 3 }
+		}
+	}
+	manpower=195088
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

@@ -1,0 +1,16 @@
+air_wings = {
+	100 = {
+		fighter_airframe_0_ru =  {
+			owner = "IVO" 
+			creator = "RUS"
+			amount = 2
+			version_name = "MIG-23"
+		}
+		attack_helicopter_airframe_0_ru =  {
+			owner = "IVO" 
+			creator = "RUS"
+			amount = 2
+			version_name = "Mi-24VB"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=110
+	name="STATE_110"
+	provinces={
+		391 621 797 814 999 1515 1758 2038 2049 2336 2384 2626 2632 2912 3504 3516 3528 
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = CHA
+		add_core_of = CHA
+		victory_points = { 391 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+	}
+	manpower=49390
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

@@ -1,0 +1,55 @@
+defined_text = {
+	name = AD_get_debt_actions_window_title
+	text = {
+		trigger = { check_variable = { AD_e_debt_actions = 1 } }
+		localization_key = AD_economy_take_debt_title
+	}
+	text = {
+		trigger = { check_variable = { AD_e_debt_actions = 2 } }
+		localization_key = AD_economy_repayment_debt_title
+	}
+}
+defined_text = {
+	name = AD_get_debt_actions_window_subtitle
+	text = {
+		trigger = { check_variable = { AD_e_debt_actions = 1 } }
+		localization_key = AD_economy_take_debt_subtitle
+	}
+	text = {
+		trigger = { check_variable = { AD_e_debt_actions = 2 } }
+		localization_key = AD_economy_repayment_debt_subtitle
+	}
+}
+defined_text = {
+	name = AD_get_debt_actions_window_desc
+	text = {
+		trigger = { check_variable = { AD_e_debt_actions = 1 } }
+		localization_key = AD_economy_take_debt_desc
+	}
+	text = {
+		trigger = { check_variable = { AD_e_debt_actions = 2 } }
+		localization_key = AD_economy_repayment_debt_desc
+	}
+}
+
+defined_text = {
+	name = AD_get_debt_actions_window_value_color
+	text = {
+		trigger = {
+			check_variable = { AD_e_debt_actions = 1 } # TODO ??
+			set_temp_variable = { pp_cost = debt_action_value }
+			divide_temp_variable = { pp_cost = 2 }
+			has_political_power > pp_cost
+		}
+		localization_key = AD_economy_debt_action_value_green
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_e_debt_actions = 1 }
+		}
+		localization_key = AD_economy_debt_action_value_red
+	}
+	text = {
+		localization_key = AD_economy_debt_action_value_yellow
+	}
+}

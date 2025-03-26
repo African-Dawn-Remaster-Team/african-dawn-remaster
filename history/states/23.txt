@@ -1,0 +1,27 @@
+
+state={
+	id=23
+	name="STATE_23"
+	provinces={
+		199 402 2655 2732 3877 3878 3879 3880 
+	}
+	resources = {
+		diamond = 8
+		gold = 4
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 3880 5 }
+		victory_points = { 3879 3 }
+		victory_points = { 402 3 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+	}
+	manpower=325875
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

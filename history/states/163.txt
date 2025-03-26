@@ -1,0 +1,27 @@
+state={
+	id=163
+	name="STATE_163"
+	provinces={
+		152 176 481 710 949 1220 1774 1865 1895 2094 2143 2484 2814 2872 3060 3165 3179 3314 3316 3326 3328 3333 
+	}
+	resources = {
+		steel = 12
+		gold = 4
+	}
+	history={
+		owner = ALG
+		add_core_of = ALG
+		victory_points = { 3316 10 }
+		victory_points = { 176 5 }
+		victory_points = { 1774 3 }
+		victory_points = { 3326 3 }
+		buildings = {
+			infrastructure = 1
+			3316 = { naval_base = 3 }
+		}
+	}
+	manpower=6949780
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

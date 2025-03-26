@@ -1,0 +1,26 @@
+state={
+	id=140
+	name="STATE_140"
+	provinces={
+		28 219 445 653 945 1075 1081 1251 1507 1706 1793 2004 2205 2390 2565 2733 2772 2841 2982 3383 3388 3389 3396 3400 4988 4989 4990 4991 
+	}
+	resources = {
+		oil = 6
+	}
+	history={
+		owner = MOR
+		add_core_of = MOR
+		victory_points = { 4989 5 }
+		victory_points = { 4988 3 }
+		victory_points = { 2982 3 }
+		victory_points = { 3388 3 }
+		buildings = {
+			infrastructure = 1
+			4989 = { naval_base = 3 }
+		}
+	}
+	manpower=4103838
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

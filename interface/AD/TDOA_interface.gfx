@@ -1,0 +1,84 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_russian_map_attention_square"
+		texturefile = "gfx/interface/russian_map_attention_square.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/russian_map_attention_square.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 3.75
+			animationdelay = 0.5
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/russian_map_attention_square.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 3.75
+			animationdelay = 0.5
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+		
+	spriteType = {
+		name = "GFX_info_square_cover"
+		texturefile = "gfx/interface/info_square_cover.dds"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_event_option_entry_news_tdoa"
+		texturefile = "gfx/interface/event_option_entry_news_tdoa.dds"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_event_button_minimize_news_tdoa"
+		texturefile = "gfx/interface/event_button_minimize_news_tdoa.dds"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_radio_icon_tdoa"
+		texturefile = "gfx/interface/radio_icon_tdoa.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_low_corruption"
+		texturefile = "gfx/interface/low_corruption.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_med_corruption"
+		texturefile = "gfx/interface/med_corruption.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_high_corruption"
+		texturefile = "gfx/interface/high_corruption.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_extr_corruption"
+		texturefile = "gfx/interface/extr_corruption.dds"
+	}
+	
+	textSpriteType = {
+		name = "GFX_tdoa_main_lobby_button"
+		textureFile = "gfx/interface/tdoa_main_lobby_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+}

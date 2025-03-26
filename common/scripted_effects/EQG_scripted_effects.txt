@@ -1,0 +1,108 @@
+EQG_fellow_clansmen_check_effect = {
+	hidden_effect = {
+		clamp_variable = { var = EQG_influence_of_theodorian min = 0 max = 100 }
+		clamp_variable = { var = EQG_influence_of_gabrielle min = 0 max = 100 }
+		
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			if = {
+				limit = {
+					check_variable = { EQG_influence_of_gabrielle > EQG_influence_of_theodorian }
+					NOT = { has_country_flag = AD_EQG_event_0_block_flag }
+				}
+				set_country_flag = AD_EQG_event_0_block_flag
+				country_event = AD_EQG_0
+			}
+			else_if = {
+				limit = {
+					check_variable = { EQG_influence_of_theodorian < 1 }
+					controls_state = 40
+				}
+				set_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag
+				country_event = AD_EQG_1
+			}
+			else_if = {
+				limit = { check_variable = { EQG_influence_of_gabrielle < 1 } }
+				set_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag
+				country_event = AD_EQG_2
+			}
+		}
+	}
+}
+
+EQG_covid_outbreak_raise_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = EQG_patient_zero_idea
+				has_idea = EQG_minor_spread_of_infection_idea
+				has_idea = EQG_average_spread_of_infection_idea
+				has_idea = EQG_high_spread_of_infection_idea
+				has_idea = EQG_total_spread_of_infection_idea
+			}
+		}
+		add_ideas = EQG_patient_zero_idea
+	}
+	else_if = {
+		limit = { has_idea = EQG_patient_zero_idea }
+		swap_ideas = {
+			remove_idea = EQG_patient_zero_idea
+			add_idea = EQG_average_spread_of_infection_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = EQG_minor_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_minor_spread_of_infection_idea
+			add_idea = EQG_average_spread_of_infection_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = EQG_average_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_average_spread_of_infection_idea
+			add_idea = EQG_high_spread_of_infection_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = EQG_high_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_high_spread_of_infection_idea
+			add_idea = EQG_total_spread_of_infection_idea
+		}
+	}
+}
+
+EQG_covid_outbreak_down_effect = {
+	if = {
+		limit = { has_idea = EQG_total_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_total_spread_of_infection_idea
+			add_idea = EQG_high_spread_of_infection_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = EQG_high_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_high_spread_of_infection_idea
+			add_idea = EQG_average_spread_of_infection_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = EQG_average_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_average_spread_of_infection_idea
+			add_idea = EQG_minor_spread_of_infection_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = EQG_minor_spread_of_infection_idea }
+		swap_ideas = {
+			remove_idea = EQG_minor_spread_of_infection_idea
+			add_idea = EQG_patient_zero_idea
+		}
+	}
+	else = {
+		remove_ideas = EQG_patient_zero_idea
+	}
+}

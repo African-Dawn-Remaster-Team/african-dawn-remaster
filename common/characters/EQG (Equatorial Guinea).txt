@@ -1,0 +1,393 @@
+characters = {
+
+	EQG_Teodoro_Obiang_Nguema_Mbasogo = {
+		name = EQG_Teodoro_Obiang_Nguema_Mbasogo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQG/EQG_Teodoro_Obiang_Nguema_Mbasogo.dds"
+			}
+			army = {
+				large = "gfx/leaders/EQG/EQG_Teodoro_Obiang_Nguema_Mbasogo.dds"
+				small = "gfx/leaders/EQG/EQG_Teodoro_Obiang_Nguema_Mbasogo_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_TEODORO_OBIANG_NGUEMA_MBASOGO_DESC"
+			ideology = centrism_subtype_right_wing_populism
+			traits = { EQG_mongomo_clan_leader }
+		}
+		field_marshal = {
+			traits = { inspirational_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	EQG_Severo_Moto = {
+		name = EQG_Severo_Moto
+		portraits = {
+			civilian = {
+				large =  "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+			}
+			army = {
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SEVERO_MOTO_DESC"
+			ideology = conservatism_subtype_christian_democracy
+			traits = {  }
+		}
+	}
+	
+	EQG_Andres_Esono_Ondo = {
+		name = EQG_Andres_Esono_Ondo
+		portraits = {
+			civilian = {
+				large =  "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+			}
+			army = {
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ANDRES_ESONO_ONDO_DESC"
+			ideology = social_democracy_subtype_social_democracy
+			traits = {  }
+		}
+	}
+	
+	EQG_Gabriel_Nse_Obiang = {
+		name = EQG_Gabriel_Nse_Obiang
+		portraits = {
+			civilian = {
+				large =  "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+			}
+			army = {
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GABRIEL_NSE_OBIANG_DESC"
+			ideology = liberalism_subtype_liberal_democracy
+			traits = {  }
+		}
+	}
+	
+	EQG_Teodoro_Biyogo_Nsue_Okomo = {
+		name = EQG_Teodoro_Biyogo_Nsue_Okomo
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"} }
+		advisor = {
+			slot = political_advisor
+			idea_token = EQG_Teodoro_Biyogo_Nsue_Okomo
+			allowed = { original_tag = EQG }
+			traits = { EQG_master_of_ceremonies EQG_supporter_of_theodorian }
+			on_add = {
+				owner = {
+					if = {
+						limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+						add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+						EQG_fellow_clansmen_check_effect = yes
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					if = {
+						limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+						add_to_variable = { EQG_influence_of_theodorian = -5 tooltip = EQG_influence_of_theodorian_tt }
+						EQG_fellow_clansmen_check_effect = yes
+					}
+				}
+			}
+		}
+	}
+	
+	EQG_Victoriano_Bibang_Nsue_Okomo = {
+		instance = {
+			allowed = { has_dlc = "La Resistance" }
+			name = EQG_Victoriano_Bibang_Nsue_Okomo
+			portraits = {
+				civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds" }
+				army = {
+					large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+					small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = EQG_Victoriano_Bibang_Nsue_Okomo
+				allowed = { original_tag = EQG }
+				traits = { EQG_efa_mba_lar EQG_minister_of_defense EQG_supporter_of_theodorian }
+				on_add = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+				on_remove = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_theodorian = -5 tooltip = EQG_influence_of_theodorian_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+			}
+			corps_commander = {
+				traits = { organizer politically_connected }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+		}
+		instance = {
+			allowed = { NOT = { has_dlc = "La Resistance" } }
+			name = EQG_Victoriano_Bibang_Nsue_Okomo
+			portraits = {
+				civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds" }
+				army = {
+					large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+					small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = EQG_Victoriano_Bibang_Nsue_Okomo
+				allowed = { original_tag = EQG }
+				traits = { EQG_efa_mba EQG_minister_of_defense EQG_supporter_of_theodorian }
+				on_add = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+				on_remove = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_theodorian = -5 tooltip = EQG_influence_of_theodorian_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+			}
+			corps_commander = {
+				traits = { organizer politically_connected }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+		}
+	}
+	
+	EQG_Juan_Olo_Mbah_Nseng = {
+		name = EQG_Juan_Olo_Mbah_Nseng
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_4_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = EQG_Juan_Olo_Mbah_Nseng
+			allowed = { original_tag = EQG }
+			traits = { EQG_minister_of_justice EQG_supporter_of_theodorian }
+			on_add = {
+				owner = {
+					if = {
+						limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+						add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+						EQG_fellow_clansmen_check_effect = yes
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					if = {
+						limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+						add_to_variable = { EQG_influence_of_theodorian = -5 tooltip = EQG_influence_of_theodorian_tt }
+						EQG_fellow_clansmen_check_effect = yes
+					}
+				}
+			}
+		}
+	}
+	
+	EQG_Armengol_Ondo_Ngema = {
+		instance = {
+			allowed = { has_dlc = "La Resistance" }
+			name = EQG_Armengol_Ondo_Ngema
+			portraits = {
+				civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_5_small.dds" }
+				army = {
+					large = "gfx/leaders/ALL/ALL_Generic_land_5.dds"
+					small = "gfx/leaders/ALL/ALL_Generic_land_5_small.dds"
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = EQG_Armengol_Ondo_Ngema
+				allowed = { original_tag = EQG }
+				traits = { EQG_head_of_the_presidential_security_service_lar EQG_supporter_of_gabrielle }
+				on_add = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+				on_remove = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_gabrielle = -5 tooltip = EQG_influence_of_gabrielle_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+			}
+			corps_commander = {
+				traits = { ambusher infantry_officer politically_connected }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+		instance = {
+			allowed = { NOT = { has_dlc = "La Resistance" } }
+			name = EQG_Armengol_Ondo_Ngema
+			portraits = {
+				civilian = { small =  "gfx/leaders/ALL/ALL_Generic_land_6_small.dds" }
+				army = {
+					large = "gfx/leaders/ALL/ALL_Generic_land_6.dds"
+					small = "gfx/leaders/ALL/ALL_Generic_land_6_small.dds"
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = EQG_Armengol_Ondo_Ngema
+				allowed = { original_tag = EQG }
+				traits = { EQG_head_of_the_presidential_security_service EQG_supporter_of_gabrielle }
+				on_add = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+				on_remove = {
+					owner = {
+						if = {
+							limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+							add_to_variable = { EQG_influence_of_gabrielle = -5 tooltip = EQG_influence_of_gabrielle_tt }
+							EQG_fellow_clansmen_check_effect = yes
+						}
+					}
+				}
+			}
+			corps_commander = {
+				traits = { ambusher infantry_officer politically_connected }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+	}
+	
+	EQG_Antonio_Oburu_Ondo = {
+		name = EQG_Antonio_Oburu_Ondo
+		portraits = { civilian = { small =  "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"} }
+		advisor = {
+			slot = political_advisor
+			idea_token = EQG_Antonio_Oburu_Ondo
+			allowed = { original_tag = EQG }
+			traits = { EQG_oil_tycoon }
+		}
+	}
+	
+	EQG_Teodoro_Nguema_Obiang_Manga = {
+		name = EQG_Teodoro_Nguema_Obiang_Manga
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_EQG_Teodoro_Nguema_Obiang_Manga"
+				small = "gfx/leaders/EQG/EQG_Teodoro_Nguema_Obiang_Manga_small.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EQG_Teodoro_Nguema_Obiang_Manga
+			allowed = { original_tag = EQG }
+			can_be_fired = no
+			traits = { EQG_vice_president EQG_wasteful }
+		}
+		field_marshal = {
+			visible = { always = no }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	EQG_Gabriel_Mbanga_Obiang_Lima = {
+		name = EQG_Gabriel_Mbanga_Obiang_Lima
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_EQG_Gabriel_Mbanga_Obiang_Lima"
+				small = "gfx/leaders/EQG/EQG_Gabriel_Mbanga_Obiang_Lima_small.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EQG_Gabriel_Mbanga_Obiang_Lima
+			allowed = { original_tag = EQG }
+			traits = { EQG_business_architect }
+			on_add = {
+				owner = {
+					if = {
+						limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+						add_to_variable = { EQG_influence_of_gabrielle = 15 tooltip = EQG_influence_of_gabrielle_tt }
+						EQG_fellow_clansmen_check_effect = yes
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					if = {
+						limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+						add_to_variable = { EQG_influence_of_gabrielle = -15 tooltip = EQG_influence_of_gabrielle_tt }
+						EQG_fellow_clansmen_check_effect = yes
+					}
+				}
+			}
+		}
+		field_marshal = {
+			visible = { always = no }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+state={
+	id=11
+	name="STATE_11"
+	provinces={
+		16 283 360 556 623 1024 1030 1152 1336 1968 2232 2435 2503 2974 3025 3115 3672 3695 3697 4656 4659 4663 4665 4666 4670 4683 4702 4703 4704 
+	}
+	resources = {
+		steel = 8
+	}
+	history={
+		owner = BNN
+		add_core_of = BNN
+		victory_points = { 4659 11 }
+		victory_points = { 2557 5 }
+		victory_points = { 2435 3 }
+		victory_points = { 360 3 }
+		victory_points = { 3697 3 }
+		victory_points = { 1030 10 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 3
+			4659 = { naval_base = 3 }
+		}
+	}
+	manpower=12640000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

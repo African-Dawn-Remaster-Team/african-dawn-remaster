@@ -1,0 +1,19 @@
+state={
+	id=72
+	name="STATE_72"
+	provinces={
+		509 970 972 3119 3861 3863 
+	}
+	history={
+		owner = GAB
+		add_core_of = GAB
+		victory_points = { 3119 5 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=67090
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

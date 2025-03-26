@@ -1,0 +1,96 @@
+AD_economy_view_category = {
+
+}
+
+AD_resource_development_category = {
+
+	AD_development_on_mbanye_island = {
+		allowed = { original_tag = EQG }
+		visible = { has_completed_focus = EQG_preferences_for_lukoil }
+		available = { controls_state = 70 }
+		priority = 1000
+		icon = oil		
+		fire_only_once = yes
+		cost = 100
+		days_remove = 90
+		highlight_states = {
+			highlight_state_targets = {
+				state = 70
+			}
+		}
+		cancel_trigger = { NOT = { controls_state = 70 } }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel decision AD_development_on_mbanye_island"
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision AD_development_on_mbanye_island"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision AD_development_on_mbanye_island"
+			add_resource = { type = oil amount = 4 state = 70 }
+		}
+		ai_will_do = { base = 100 }
+	}
+}
+
+AD_g_five_improvement_category = {
+	
+	AD_NGR_develop_a_group_of_five_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			OR = {
+				NOT = { has_idea = AD_member_of_g_five_sahel }
+				NOT = { country_exists = NGR }
+				has_war_with = NGR
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission AD_NGR_develop_a_group_of_five_mission"
+		}
+		days_mission_timeout = 50
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission AD_NGR_develop_a_group_of_five_mission"
+			effect_tooltip = {
+				every_country = {
+					limit = { has_idea = AD_member_of_g_five_sahel }
+					every_country_division = {
+						random_select_amount = 3
+						add_divisional_commander_xp = 200
+					}
+					random_unit_leader = { add_unit_leader_trait = { master_of_desert_warfare } }
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	AD_NGR_conducting_counter_terrorism_measures_in_the_rear_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			OR = {
+				NOT = { has_idea = AD_member_of_g_five_sahel }
+				NOT = { country_exists = NGR }
+				has_war_with = NGR
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission AD_NGR_conducting_counter_terrorism_measures_in_the_rear_mission"
+		}
+		days_mission_timeout = 50
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission AD_NGR_conducting_counter_terrorism_measures_in_the_rear_mission"
+			effect_tooltip = { add_ideas = NGR_counter_terrorism_measures_in_the_rear_idea }
+		}
+		ai_will_do = { base = 0 }
+	}
+}

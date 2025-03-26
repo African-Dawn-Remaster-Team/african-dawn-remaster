@@ -1,0 +1,29 @@
+state={
+	id=137
+	name="STATE_137"
+	provinces={
+		500 722 1101 1524 1614 3013 4987 
+	}
+	history={
+		owner = WSR
+		add_claim_by  = MOR
+		add_core_of = WSR
+		victory_points = {
+			1614 5
+		}
+		buildings = {
+			infrastructure = 1
+			4987 = { bunker = 2 }
+			1524 = { bunker = 2 }
+			3013 = { bunker = 2 }
+			1614 = { bunker = 2 }
+			500 = { bunker = 2 }
+			1101 = { bunker = 2 }
+			722 = { bunker = 2 }
+		}
+	}
+	manpower=133333
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

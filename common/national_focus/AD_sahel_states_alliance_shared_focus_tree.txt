@@ -1,0 +1,1107 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
+joint_focus = {
+	id = AD_SSA_creation_of_the_sahel_states_alliance
+	icon = GFX_z_goal_AD_SSA_creation_of_the_sahel_states_alliance
+	x = 0
+	y = 0
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	ai_will_do = { factor = 20 }
+	allow_branch = {
+		OR = {
+			tag = MLI
+			tag = BFA
+			tag = NGR
+		}
+	}
+	offset = {
+		x = 23
+		y = 0
+		trigger = {
+			has_focus_tree = ad_mali_focus_tree
+		}
+	}
+	offset = {
+		x = 23
+		y = 0
+		trigger = {
+			has_focus_tree = ad_niger_focus_tree
+		}
+	}
+	offset = {
+		x = 26
+		y = 0
+		trigger = {
+			has_focus_tree = ad_burkina_faso_focus_tree
+		}
+	}
+	available = {
+		if = {
+			limit = { tag = MLI }
+			has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+			is_subject = no
+			is_in_faction = no
+			OR = {
+				BFA = {
+					has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = ROOT }
+				}
+				NGR = {
+					has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			OR = {
+				MLI = {
+					has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = ROOT }
+				}
+				NGR = {
+					has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+		else = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			OR = {
+				MLI = {
+					has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = ROOT }
+				}
+				BFA = {
+					has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+	}
+	bypass = {  }
+	joint_trigger = {
+  		if = {
+			limit = { tag = MLI }
+			has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+		}
+		else_if = {
+			limit = { tag = BFA }
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+		}
+		else = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+		}
+		is_subject = no
+		is_in_faction = no
+	}
+	completion_reward = {
+
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_creation_of_the_sahel_states_alliance"
+		create_faction = AD_SSA_sahel_states_alliance
+		set_country_flag = AD_faction_aes_leader
+		custom_effect_tooltip = empty_line_tooltip
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+		set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+		set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { tag = MLI }
+			if = {
+				limit = {
+					BFA = {
+						has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				add_to_faction = BFA
+				custom_effect_tooltip = empty_line_tooltip
+				BFA = {
+					custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+					set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+					set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+					hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = {
+					NGR = {
+						has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				add_to_faction = NGR
+				custom_effect_tooltip = empty_line_tooltip
+				NGR = {
+					custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+					set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+					set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+					hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+				}
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			if = {
+				limit = {
+					MLI = {
+						has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				add_to_faction = MLI
+				custom_effect_tooltip = empty_line_tooltip
+				MLI = {
+					custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+					set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+					set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+					hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = {
+					NGR = {
+						has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				add_to_faction = NGR
+				custom_effect_tooltip = empty_line_tooltip
+				NGR = {
+					custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+					set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+					set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+					hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					MLI = {
+						has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				add_to_faction = MLI
+				custom_effect_tooltip = empty_line_tooltip
+				MLI = {
+					custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+					set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+					set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+					hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = {
+					BFA = {
+						has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+						is_subject = no
+						is_in_faction = no
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				add_to_faction = BFA
+				custom_effect_tooltip = empty_line_tooltip
+				BFA = {
+					custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
+					set_variable = { AD_SSA_political_power_gain_var = 0.02 }
+					set_variable = { AD_SSA_war_support_factor_var = 0.02 }
+					hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+				}
+			}
+		}
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier }
+			news_event = { id = AD_SSA_news.0 days = 1 }
+		}
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
+	icon = GFX_z_goal_AD_SSA_sgreements_within_the_framework_of_the_military_alliance
+	x = 0
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_ai = no
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_creation_of_the_sahel_states_alliance }
+	relative_position_id = AD_SSA_creation_of_the_sahel_states_alliance
+	mutually_exclusive = { focus = AD_SSA_formation_of_the_confederation focus = AD_SSA_striving_for_confederation }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_sgreements_within_the_framework_of_the_military_alliance"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_war_support_factor_var = 0.05 tooltip = war_support_factor_tooltip }
+		add_to_variable = { AD_SSA_army_core_attack_factor_var = 0.02 tooltip = army_core_attack_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_creation_of_the_united_armed_forces
+	icon = GFX_z_goal_AD_SSA_creation_of_the_united_armed_forces
+	x = 0
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+	relative_position_id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_creation_of_the_united_armed_forces"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_initiative_factor_var = 0.07 tooltip = initiative_factor_tooltip }
+		add_to_variable = { AD_SSA_coordination_bonus_var = 0.04 tooltip = coordination_bonus_tooltip }
+		add_to_variable = { AD_SSA_planning_speed_var = 0.12 tooltip = planning_speed_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_joint_air_operations
+	icon = GFX_z_goal_AD_SSA_joint_air_operations
+	x = -1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_creation_of_the_united_armed_forces }
+	relative_position_id = AD_SSA_creation_of_the_united_armed_forces
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_joint_air_operations"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_air_accidents_factor_var = -0.14 tooltip = air_accidents_factor_tooltip }
+		add_to_variable = { AD_SSA_air_interception_detect_factor_var = 0.2 tooltip = air_interception_detect_factor_tooltip }
+		add_to_variable = { AD_SSA_air_mission_efficiency_var = 0.21 tooltip = air_mission_efficiency_tooltip }
+		add_to_variable = { AD_SSA_air_range_factor_var = 0.1 tooltip = air_range_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_invite_russian_pilots
+	icon = GFX_z_goal_AD_SSA_invite_russian_pilots
+	x = -1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_joint_air_operations }
+	relative_position_id = AD_SSA_joint_air_operations
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_invite_russian_pilots"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_air_home_defence_factor = 0.1 tooltip = air_home_defence_factor_tooltip }
+		add_to_variable = { AD_SSA_air_cas_efficiency = 0.1 tooltip = air_cas_efficiency_tooltip }
+		add_to_variable = { AD_SSA_air_ace_generation_chance_factor = 0.15 tooltip = air_ace_generation_chance_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_expand_intelligence_cooperation
+	icon = GFX_z_goal_AD_SSA_expand_intelligence_cooperation
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_creation_of_the_united_armed_forces }
+	relative_position_id = AD_SSA_creation_of_the_united_armed_forces
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_expand_intelligence_cooperation"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_intel_from_combat_factor_var = 0.4 tooltip = intel_from_combat_factor_tooltip }
+		add_to_variable = { AD_SSA_intel_network_gain_var = 0.3 tooltip = intel_network_gain_factor_tooltip }
+		add_to_variable = { AD_SSA_foreign_subversive_activites_var = 0.3 tooltip = foreign_subversive_activities_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_conducting_joint_exercises
+	icon = GFX_z_goal_AD_SSA_conducting_joint_exercises
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_expand_intelligence_cooperation }
+	relative_position_id = AD_SSA_expand_intelligence_cooperation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_conducting_joint_exercises"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_acclimatization_hot_climate_gain_factor_var = 0.25 tooltip = acclimatization_hot_climate_gain_factor_tooltip }
+		add_to_variable = { AD_SSA_experience_loss_factor_var = -0.15 tooltip = experience_loss_factor_tooltip }
+		add_to_variable = { AD_SSA_org_loss_at_low_org_factor_var = -0.2 tooltip = org_loss_at_low_org_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_unite_the_general_staffs
+	icon = GFX_z_goal_AD_SSA_unite_the_general_staffs
+	x = 2
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_striving_for_confederation }
+	relative_position_id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_unite_the_general_staffs"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_max_planning_factor_var = 0.2 tooltip = max_planning_factor_tooltip }
+		add_to_variable = { AD_SSA_combat_width_factor_var = 0.1 tooltip = combat_width_factor_tooltip }
+		add_to_variable = { AD_SSA_field_officer_promotion_penalty_var = -0.2 tooltip = field_officer_promotion_penalty_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_form_operational_groups
+	icon = GFX_z_goal_AD_SSA_form_operational_groups
+	x = -2
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_formation_of_the_confederation focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+	relative_position_id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_form_operational_groups"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_special_forces_cap_var = 0.1 tooltip = special_forces_cap_tooltip }
+		force_update_dynamic_modifier = yes
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { NOT = { has_template = "Rapid Forces" } }
+			division_template = {
+				name = "Rapid Forces"
+				is_locked = no
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 0 y = 2 }
+				}
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Rapid Forces\" division_template = \"Rapid Forces\" start_equipment_factor = 0.9 start_experience_factor = 0.2"
+				owner = ROOT
+				count = 2
+			}	
+		}
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_regain_control_of_borders
+	icon = GFX_z_goal_AD_SSA_regain_control_of_borders
+	x = 0
+	y = 2
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_creation_of_the_united_armed_forces }
+	relative_position_id = AD_SSA_creation_of_the_united_armed_forces
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_regain_control_of_borders"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_stability_factor_var = 0.1 tooltip = stability_factor_tooltip }
+		add_to_variable = { AD_SSA_war_support_factor_var = 0.06 tooltip = war_support_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_formation_of_the_confederation
+	icon = GFX_z_goal_AD_SSA_formation_of_the_confederation
+	x = -3
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_STABILITY }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_ai = no
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_creation_of_the_sahel_states_alliance }
+	relative_position_id = AD_SSA_creation_of_the_sahel_states_alliance
+	mutually_exclusive = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_striving_for_confederation }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_formation_of_the_confederation"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_defensive_war_stability_factor_var = 0.25 tooltip = defensive_war_stability_factor_tooltip }
+		add_to_variable = { AD_SSA_trade_opinion_factor_var = 0.5 tooltip = trade_opinion_factor_tooltip }
+		add_to_variable = { AD_SSA_political_advisor_cost_factor_var = -0.2 tooltip = political_advisor_cost_factor_tooltip }
+		add_to_variable = { AD_SSA_unit_leader_as_advisor_cp_cost_factor_var = -0.25 tooltip = unit_leader_as_advisor_cp_cost_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_create_a_joint_investment_bank
+	icon = GFX_z_goal_AD_SSA_create_a_joint_investment_bank
+	x = -1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_formation_of_the_confederation }
+	relative_position_id = AD_SSA_formation_of_the_confederation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_create_a_joint_investment_bank"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_money_from_taxes_modifier_var = 0.1 tooltip = money_from_taxes_tooltip }
+		force_update_dynamic_modifier = yes
+		custom_effect_tooltip = empty_line_tooltip
+		AD_unemployment_rate_level_down_effect = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_joint_geological_exploration
+	icon = GFX_z_goal_AD_SSA_joint_geological_exploration
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_create_a_joint_investment_bank }
+	relative_position_id = AD_SSA_create_a_joint_investment_bank
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_joint_geological_exploration"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_local_resources_factor_var = 0.15 tooltip = local_resources_factor_tooltip }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_final_break_with_ecowas
+	icon = GFX_z_goal_AD_SSA_final_break_with_ecowas
+	x = -1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_create_a_joint_investment_bank }
+	relative_position_id = AD_SSA_create_a_joint_investment_bank
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_final_break_with_ecowas"
+		add_to_variable = { AD_fo_position = 0.2 tooltip = AD_russia_superiority_var_tt }
+		add_to_temp_variable = { position_change = 0.2 } # for loc
+		AD_check_political_situation_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		
+		add_political_power = 100
+		add_stability = 0.05
+		custom_effect_tooltip = empty_line_tooltip
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		every_other_country = {
+			limit = { has_idea = AD_ECOWAS }
+			add_opinion_modifier = {
+				modifier = AD_SSA_final_break_with_ecowas_op
+				target = ROOT
+			}
+			reverse_add_opinion_modifier = {
+				modifier = AD_SSA_final_break_with_ecowas_op
+				target = ROOT
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_introduction_of_unified_passports
+	icon = GFX_z_goal_AD_SSA_introduction_of_unified_passports
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_final_break_with_ecowas }
+	relative_position_id = AD_SSA_final_break_with_ecowas
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_introduction_of_unified_passports"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_production_speed_infrastructure_factor_var = 0.1 tooltip = production_speed_infrastructure_factor_tooltip }
+		custom_effect_tooltip = empty_line_tooltip
+		AD_food_supply_level_grow_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_striving_for_confederation
+	icon = GFX_z_goal_AD_SSA_striving_for_confederation
+	x = 3
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_STABILITY }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_ai = no
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_creation_of_the_sahel_states_alliance }
+	relative_position_id = AD_SSA_creation_of_the_sahel_states_alliance
+	mutually_exclusive = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_striving_for_confederation }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_striving_for_confederation"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_stability_factor_var = 0.04 tooltip = stability_factor_tooltip }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_unite_the_parliaments
+	icon = GFX_z_goal_AD_SSA_unite_the_parliaments
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_STABILITY }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_striving_for_confederation }
+	relative_position_id = AD_SSA_striving_for_confederation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_unite_the_parliaments"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_party_popularity_stability_factor_var = 0.3 tooltip = party_popularity_stability_factor_tooltip }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_remove_trade_duties
+	icon = GFX_z_goal_AD_SSA_remove_trade_duties
+	x = -1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_unite_the_parliaments }
+	relative_position_id = AD_SSA_unite_the_parliaments
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_remove_trade_duties"
+		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
+		add_to_variable = { AD_SSA_production_speed_infrastructure_factor_var = 0.15 tooltip = production_speed_infrastructure_factor_tooltip }
+		custom_effect_tooltip = empty_line_tooltip
+		AD_unemployment_rate_level_down_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		AD_food_supply_level_grow_effect = yes
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_overcoming_ethnic_contradictions
+	icon = GFX_z_goal_AD_SSA_overcoming_ethnic_contradictions
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_STABILITY }
+	ai_will_do = { factor = 10 }
+	available = {
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_unite_the_parliaments }
+	relative_position_id = AD_SSA_unite_the_parliaments
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_overcoming_ethnic_contradictions"
+		add_stability = 0.2
+		custom_effect_tooltip = empty_line_tooltip
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_we_are_all_brothers_of_the_sahel
+	icon = GFX_z_goal_AD_SSA_we_are_all_brothers_of_the_sahel
+	x = -1
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_ai = no
+		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_overcoming_ethnic_contradictions }
+	relative_position_id = AD_SSA_overcoming_ethnic_contradictions
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_creation_of_the_sahel_states_alliance"
+		every_other_country = {
+			limit = {
+				OR = { tag = BFA tag = NGR tag = MLI tag = GTI }
+				is_in_faction_with = ROOT
+			}
+			ROOT = {
+				annex_country = { target = PREV transfer_troops = yes }
+				add_core_of = PREV
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_expel_the_colonialists_from_africa
+	icon = GFX_z_goal_AD_SSA_expel_the_colonialists_from_africa
+	x = 0
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_subject = no
+		can_declare_war_on = NGA
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+		can_declare_war_on = NGA
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_regain_control_of_borders }
+	relative_position_id = AD_SSA_regain_control_of_borders
+	will_lead_to_war_with = NGA
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_expel_the_colonialists_from_africa"
+		declare_war_on = { target = NGA type = topple_government }
+		hidden_effect = { news_event = { id = AD_SSA_news.1 days = 1 } }
+		custom_effect_tooltip = empty_line_tooltip
+		random_other_country = {
+			limit = {
+				has_idea = AD_ECOWAS
+				is_in_faction = no
+				is_subject = no
+			}
+			create_faction = AD_SSA_ecomog_alliance
+			set_country_flag = AD_faction_ecomog_leader
+			custom_effect_tooltip = empty_line_tooltip
+			every_other_country = {
+				limit = {
+					has_idea = AD_ECOWAS
+					is_in_faction = no
+					is_subject = no
+					NOT = { has_war_with = PREV }
+				}
+				PREV = { add_to_faction = PREV }
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (member) AD_SSA_expel_the_colonialists_from_africa"
+		declare_war_on = { target = NGA type = topple_government }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_invite_togo_to_join_the_alliance
+	icon = GFX_z_goal_AD_SSA_invite_togo_to_join_the_alliance
+	x = -2
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_faction_leader = yes
+		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {
+		TOG = {
+			OR = {
+				has_war_with = ROOT
+				exists = no
+				is_subject = yes
+				is_in_faction = yes
+			}
+		}
+	}
+	prerequisite = { focus = AD_SSA_regain_control_of_borders }
+	relative_position_id = AD_SSA_regain_control_of_borders
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_invite_togo_to_join_the_alliance"
+		TOG = { country_event = { id = generic.5 hours = 12 } }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_invite_benin_to_join_the_alliance
+	icon = GFX_z_goal_AD_SSA_invite_benin_to_join_the_alliance
+	x = -4
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_faction_leader = yes
+		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {
+		BNN = {
+			OR = {
+				has_war_with = ROOT
+				exists = no
+				is_subject = yes
+				is_in_faction = yes
+			}
+		}
+	}
+	prerequisite = { focus = AD_SSA_regain_control_of_borders }
+	relative_position_id = AD_SSA_regain_control_of_borders
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_invite_benin_to_join_the_alliance"
+		BNN = { country_event = { id = generic.5 hours = 12 } }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_establish_contacts_in_ghana
+	icon = GFX_z_goal_AD_SSA_establish_contacts_in_ghana
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_faction_leader = yes
+		GHA = {
+			exists = yes
+			NOT = { has_war_with = ROOT }
+			is_subject = no
+			is_in_faction = no
+		}
+		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {  }
+	prerequisite = { focus = AD_SSA_invite_benin_to_join_the_alliance focus = AD_SSA_invite_togo_to_join_the_alliance }
+	relative_position_id = AD_SSA_invite_benin_to_join_the_alliance
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_establish_contacts_in_ghana"
+		GHA = { country_event = { id = generic.5 hours = 12 } }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_invite_senegal_to_join_the_alliance
+	icon = GFX_z_goal_AD_SSA_invite_senegal_to_join_the_alliance
+	x = 2
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_faction_leader = yes
+		SEN = {
+			exists = yes
+			NOT = { has_war_with = ROOT }
+			is_subject = no
+			is_in_faction = no
+		}
+		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {
+		
+	}
+	prerequisite = { focus = AD_SSA_regain_control_of_borders }
+	relative_position_id = AD_SSA_regain_control_of_borders
+	mutually_exclusive = { focus = AD_SSA_support_the_liberation_movement_of_the_south }
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_invite_senegal_to_join_the_alliance"
+		SEN = { country_event = { id = generic.5 hours = 12 } }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_support_the_liberation_movement_of_the_south
+	icon = GFX_z_goal_AD_SSA_support_the_liberation_movement_of_the_south
+	x = 4
+	y = 1
+	cost = 5.72
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_faction_leader = yes
+		can_declare_war_on = SEN
+		SEN = { controls_state = 90 }
+		CSM = {
+			OR = {
+				exists = no
+				AND = {
+					exists = yes
+					is_subject = no
+					is_in_faction = no
+					can_declare_war_on = SEN
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+		AD_SSA_available_common_trigger = yes
+	}
+	joint_trigger = {
+		can_declare_war_on = SEN
+  		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {
+		
+	}
+	prerequisite = { focus = AD_SSA_regain_control_of_borders }
+	relative_position_id = AD_SSA_regain_control_of_borders
+	mutually_exclusive = { focus = AD_SSA_invite_senegal_to_join_the_alliance }
+	will_lead_to_war_with = SEN
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_support_the_liberation_movement_of_the_south"
+		declare_war_on = { target = SEN type = topple_government }
+		custom_effect_tooltip = empty_line_tooltip
+		CSM = {
+			transfer_state = 90
+			ROOT = { add_to_faction = PREV }
+			declare_war_on = { target = SEN type = topple_government }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_template = "Rebel Forces" } }
+				division_template = {
+					name = "Rebel Forces"
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Rebel Forces\" division_template = \"Rebel Forces\" start_equipment_factor = 0.8 start_experience_factor = 0.2"
+					owner = ROOT
+					count = 2
+				}	
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (member) AD_SSA_support_the_liberation_movement_of_the_south"
+		declare_war_on = { target = SEN type = topple_government }
+	}
+}
+
+joint_focus = {
+	id = AD_SSA_invite_guinea_bissau_to_join_the_alliance
+	icon = GFX_z_goal_AD_SSA_invite_guinea_bissau_to_join_the_alliance
+	x = 1
+	y = 1
+	cost = 5.72
+	search_filters = {  }
+	ai_will_do = { factor = 10 }
+	available = {
+		is_faction_leader = yes
+		GNB = {
+			exists = yes
+			NOT = { has_war_with = ROOT }
+			is_subject = no
+			is_in_faction = no
+		}
+		AD_SSA_available_common_trigger = yes
+	}
+	bypass = {
+		
+	}
+	prerequisite = { focus = AD_SSA_invite_senegal_to_join_the_alliance focus = AD_SSA_support_the_liberation_movement_of_the_south }
+	relative_position_id = AD_SSA_invite_senegal_to_join_the_alliance
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_invite_guinea_bissau_to_join_the_alliance"
+		GNB = { country_event = { id = generic.5 hours = 12 } }
+	}
+}

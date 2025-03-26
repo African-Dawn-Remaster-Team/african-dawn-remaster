@@ -1,0 +1,36 @@
+division_template = {
+	name = "Infantry Brigade"
+	priority = 1
+	regiments={
+		light_infantry_opol_on_guntruck = { x=0 y=0 }
+		light_infantry_opol_on_guntruck = { x=0 y=1 }
+		light_infantry_opol_on_guntruck = { x=0 y=2 }
+		light_infantry_opol_on_guntruck = { x=1 y=0 }
+		light_infantry_opol_on_guntruck = { x=1 y=1 }
+		light_infantry_opol_on_guntruck = { x=1 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "3rd Infantry Brigade"
+		location = 4637
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "4th Infantry Brigade"
+		location = 4639
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "5th Infantry Brigade"
+		location = 68
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+}

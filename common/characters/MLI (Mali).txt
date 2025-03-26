@@ -1,0 +1,364 @@
+characters = {
+
+	MLI_Ibrahim_Boubacar_Keita = {
+		name = MLI_Ibrahim_Boubacar_Keita
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Ibrahim_Boubacar_Keita.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IBRAHIM_BOUBACAR_KEITA_DESC"
+			ideology = centrism_subtype_right_wing_populism
+			traits = { AD_unwavering_but_beleaguered_leader }
+		}
+	}
+	
+	MLI_Boubou_Cisse = {
+		name = MLI_Boubou_Cisse
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Boubou_Cisse.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BOUBOU_CISSE_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+	
+	MLI_Assimi_Goita = {
+		name = MLI_Assimi_Goita
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Assimi_Goita.dds"
+			}
+			army = {
+				large = "gfx/leaders/MLI/MLI_Assimi_Goita.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trait_cautious career_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	MLI_Sadio_Camara = {
+		name = MLI_Sadio_Camara
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Sadio_Camara.dds"
+			}
+			army = {
+				large = "gfx/leaders/MLI/MLI_Sadio_Camara.dds"
+				small = "gfx/interface/ideas/MLI/MLI_Sadio_Karama.dds"
+			}
+		}
+		field_marshal = {
+			traits = { media_personality master_of_desert_warfare  }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MLI_Sadio_Camara
+			ledger = army
+			cost = 150
+			allowed = { original_tag = MLI }
+			traits = { MLI_army_reformer }
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	
+	MLI_Oumar_Diarra = {
+		name = MLI_Oumar_Diarra
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Oumar_Diarra.dds"
+			}
+			army = {
+				large = "gfx/leaders/MLI/MLI_Oumar_Diarra.dds"
+			}
+		}
+		corps_commander = {
+			traits = { expert_improviser skirmisher }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	MLI_Keba_Sangare = {
+		name = MLI_Keba_Sangare
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Keba_Sangare.dds"
+			}
+			army = {
+				large = "gfx/leaders/MLI/MLI_Keba_Sangare.dds"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	MLI_Abdoulaye_Coulibaly = {
+		name = MLI_Abdoulaye_Coulibaly
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Abdoulaye_Coulibaly.dds"
+			}
+			army = {
+				large = "gfx/leaders/MLI/MLI_Abdoulaye_Coulibaly.dds"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	MLI_Ismael_Wague = {
+		name = MLI_Ismael_Wague
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Ismael_Wague.dds"
+			}
+			army = {
+				large = "gfx/leaders/MLI/MLI_Ismael_Wague.dds"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	MLI_Amadu_Sankare = {
+		name = MLI_Amadu_Sankare
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Amadu_Sankare.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism_subtype_liberal_democracy
+		}
+	}
+	
+	MLI_Tyemoko_Sangare = {
+		name = MLI_Tyemoko_Sangare
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Tyemoko_Sangare.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+	
+	MLI_Mahmud_Dikko = {
+		name = MLI_Mahmud_Dikko
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MLI/MLI_Mahmud_Dikko.dds"
+			}
+		}
+		country_leader = {
+			ideology = fundamentalism_subtype_jihadism
+		}
+	}
+	
+	MLI_Bubu_Sisse = {
+		name = MLI_Bubu_Sisse
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Bubu_Sisse.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Bubu_Sisse
+			allowed = { original_tag = MLI }
+			available = { NOT = { has_completed_focus = MLI_goita_revolution } }
+			traits = { MLI_reformer_technocrat }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MLI_Moktar_Yan = {
+		name = MLI_Moktar_Yan
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Moktar_Yan.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Moktar_Yan
+			allowed = { original_tag = MLI }
+			visible = { THIS = { is_country_leader = no } }
+			available = {
+				has_completed_focus = MLI_formation_of_the_provisional_government
+				NOT = { has_completed_focus = MLI_dissolution_of_the_government_of_moktar_one }
+			}
+			can_be_fired = no
+			traits = { MLI_transitional_manager }
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+	
+	MLI_Shogel_Maiga = {
+		name = MLI_Shogel_Maiga
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Shogel_Maiga.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Shogel_Maiga
+			allowed = { original_tag = MLI }
+			available = { has_completed_focus = MLI_dissolution_of_the_government_of_moktar_one }
+			can_be_fired = no
+			traits = { MLI_extravagant_leader }
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+	
+	MLI_Suleiman_Dukure = {
+		name = MLI_Suleiman_Dukure
+		portraits = { army = { small = "gfx/interface/ideas/MLI/MLI_Suleiman_Dukure.dds" } }
+		advisor = {
+			slot = high_command
+			idea_token = MLI_Suleiman_Dukure
+			ledger = army
+			cost = 150
+			allowed = { original_tag = MLI }
+			traits = { MLI_experienced_strategist }
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	
+	MLI_Tyebile_Drame = {
+		name = MLI_Tyebile_Drame
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Tyebile_Drame.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Tyebile_Drame
+			allowed = { original_tag = MLI }
+			traits = { MLI_peacemaker_diplomat }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MLI_Abdulai_Diop = {
+		name = MLI_Abdulai_Diop
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Abdulai_Diop.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Abdulai_Diop
+			allowed = { original_tag = MLI }
+			traits = { MLI_realist_negotiator }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MLI_Aliu_Badara_Diallo = {
+		name = MLI_Aliu_Badara_Diallo
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Aliu_Badara_Diallo.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Aliu_Badara_Diallo
+			allowed = { original_tag = MLI }
+			traits = { MLI_pragmatic_economist }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MLI_Fatumate_Nafo_Traore = {
+		name = MLI_Fatumate_Nafo_Traore
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Fatumate_Nafo_Traore.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Fatumate_Nafo_Traore
+			allowed = { original_tag = MLI }
+			traits = { MLI_agricultural_reformer }
+			on_add = { owner = { add_ideas = MLI_fatumate_nafo_traore_idea } }
+			on_remove = { owner = { remove_ideas = MLI_fatumate_nafo_traore_idea } }
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	
+	MLI_Mamadu_Kamara = {
+		name = MLI_Mamadu_Kamara
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Mamadu_Kamara.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Mamadu_Kamara
+			allowed = { original_tag = MLI }
+			traits = { MLI_hard_enforcer }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MLI_Imam_Mahmud_Dikko = {
+		name = MLI_Imam_Mahmud_Dikko
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Imam_Mahmud_Dikko.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Imam_Mahmud_Dikko
+			allowed = { original_tag = MLI }
+			traits = { MLI_peacemaker }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MLI_Aminata_Traore = {
+		name = MLI_Aminata_Traore
+		portraits = { civilian = { small = "gfx/interface/ideas/MLI/MLI_Aminata_Traore.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = MLI_Aminata_Traore
+			allowed = { original_tag = MLI }
+			traits = { MLI_voice_of_the_people }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

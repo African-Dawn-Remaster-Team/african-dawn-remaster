@@ -1,0 +1,30 @@
+state={
+	id=95
+	name="STATE_95"
+	provinces={
+		397 831 977 1350 1751 1827 1837 1969 2058 2163 2243 2458 2557 2611 2928 3736 3747 4644 4652 4658 4662 4664 4669 
+	}
+	resources = {
+		chromium = 4
+		aluminium = 8
+		gold = 20
+		diamond = 4
+	}
+	history={
+		owner = GHA
+		add_core_of = GHA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 3
+			1827 = { dam = 1 }
+		}
+		victory_points = { 4662 10 }
+		victory_points = { 2527 5 }
+		victory_points = { 2928 3 }
+	}
+	manpower=12223754
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

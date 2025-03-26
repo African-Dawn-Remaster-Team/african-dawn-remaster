@@ -1,0 +1,29 @@
+
+state={
+	id=14
+	name="STATE_14"
+	provinces={
+		153 247 307 365 412 583 688 1111 1409 1505 1518 1622 1686 1771 1875 1993 2017 2046 2130 2414 2512 2746 3262 3290 3510 3522 3553 3839 4846 4848 4852 4856 4859 4858
+	}
+	resources = {
+		gold = 4
+		steel = 4 #Медь
+	}
+	history={
+		owner = MRT
+		add_core_of = MRT
+		victory_points = { 4848 10 }
+		victory_points = { 2017 5 }
+		victory_points = { 1505 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			4848 = { naval_base = 3 }
+			2017 = { naval_base = 1 }
+		}
+	}
+	manpower=1984607
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,81 @@
+opinion_modifiers = {
+	BFA_sahel_economical_friendship = {
+		value = 10
+	}
+	BFA_ecovas_economical_friendship = {
+		value = 10
+	}
+	BFA_democratization = {
+		value = 35
+	}
+	BFA_embracing_relations_with_sahel = {
+		value = 35
+	}
+	BFA_cote_d_ivour_incident = {
+		value = -15
+	}
+	BFA_cote_d_ivour_incident_2 = {
+		value = -45
+	}
+	BFA_cote_d_ivour_incident_3 = {
+		value = -45
+	}
+	BFA_gave_bases_to_russia = {
+		value = 45
+	}
+	BFA_anti_france_1 = {
+		value = -45
+	}
+	BFA_anti_france_2 = {
+		value = -30
+	}
+	BFA_anti_france_3 = {
+		value = -10
+	}
+	disagreed_to_alliance_invite = {
+		value = -20
+	}
+	BFA_RUS_friendship_1000 = {
+		value = 15
+	}
+	BFA_RUS_friendship_1001 = {
+		value = 30
+	}
+	BFA_RUS_friendship_1002 = {
+		value = 10
+	}
+	
+	###EQG###
+	
+	EQG_construction_of_a_wall_along_the_border_with_cameroon_op_1 = { value = -10 }
+	EQG_construction_of_a_wall_along_the_border_with_cameroon_op_2 = { value = -100 }
+	EQG_accept_the_decision_in_the_hague_op = { value = 40 }
+	
+	###CAR###
+	
+	CAR_embargo_on_the_republic_of_the_congo_op = { value = -20 }
+	CAR_enlist_the_support_of_neighbors_op = { value = 15 }
+	CAR_expand_contacts_with_cameroon_op = { value = 20 }
+	CAR_expel_chadians_from_the_country_op = { value = -50 }
+	CAR_support_the_rapid_reaction_forces_op = { value = -200 }
+	CAR_restoring_contacts_with_chad_op = { value = 50 }
+	CAR_support_the_sudanese_authorities_op = { value = 50 }
+	
+	###BFA###
+	BFA_arrange_a_european_tour_op = { value = 100 }
+	BFA_develop_cooperation_with_russia_op = { value = 50 }
+	BFA_expand_regional_cooperation_op = { value = 100 }
+	BFA_break_ties_with_ecowas_op = { value = -100 }
+	
+	###NGR###
+	NGR_american_foothold_in_the_desert_op = { value = 20 }
+	NGR_french_on_your_way_out_op = { value = -200 }
+	NGR_base_closure_two_hundred_one_op = { value = -200 }
+	NGR_reconciliation_with_the_malian_authorities_op = { value = 20 }
+	NGR_develop_regional_integration_op = { value = 20 }
+	NGR_bid_for_export_via_cotonou_op = { value = 20 }
+	NGR_bid_for_export_via_lome_op = { value = 20 }
+	
+	###SSA###
+	AD_SSA_final_break_with_ecowas_op = { value = -200 }
+}

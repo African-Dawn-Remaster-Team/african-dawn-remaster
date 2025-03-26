@@ -1,0 +1,25 @@
+state={
+	id=108
+	name="STATE_108"
+	provinces={
+		337 823 1037 1080 1216 1432 1463 1853 2048 2238 2288 2750 2817 3047 3069 3196 3256 4766 4771 4777 4786 4790 4796 4802 4809 4811 
+	}
+	history={
+		owner = NGA
+		add_core_of = NGA
+		add_core_of = ARW
+		victory_points = { 4811 11 }
+		victory_points = { 4809 10 }
+		victory_points = { 3256 5 }
+		victory_points = { 2750 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 1
+		}
+	}
+	manpower=42362000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

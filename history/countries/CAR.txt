@@ -1,0 +1,436 @@
+capital = 76
+set_convoys = 0
+
+set_research_slots = 1
+set_stability = -0.5
+set_war_support = 0.05
+
+set_oob = "CAR_OOB"
+set_air_oob = "CAR_air_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_atgm_tech = 1
+	modern_camouflage_tech = 1
+	handmade_manpads_tech = 1
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	basic_train = 1
+	tech_specnaz = 1
+	tech_support = 1
+	tech_ifv_1  = 1
+}
+
+add_equipment_to_stockpile = {
+    type = toyota_jeep
+    amount = 600
+}
+
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 45
+	conservatism = 8
+	social_democracy = 33
+	liberalism = 14
+}
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 0 }
+
+recruit_character = CAR_Faustin_Archange_Touadera
+recruit_character = CAR_Francois_Bozize
+recruit_character = CAR_Anicet_Georges_Dologuele
+recruit_character = CAR_Jan_Serj_Bocassa
+recruit_character = CAR_Felics_Molua
+recruit_character = CAR_Gerbert_Jono_Anaba
+recruit_character = CAR_Firmen_Ngrebada
+recruit_character = CAR_Silven_Ndoutingai
+recruit_character = CAR_Nikola_Tyangai
+recruit_character = CAR_Eli_Dote
+recruit_character = CAR_Kome_Tsumara
+recruit_character = CAR_Zephlin_Mamadou
+recruit_character = CAR_Freddy_Sakama
+recruit_character = CAR_Marie_Noelle_Coyaroy
+recruit_character = CAR_Seregaza_Ralph_Igor
+recruit_character = CAR_Jean_Jacques_Ngombe
+recruit_character = CAR_Abdou_Aziz_Fall
+recruit_character = CAR_General_Liman
+recruit_character = CAR_Gilles_Potolot
+
+activate_mission = CAR_rrr_are_outraged
+activate_mission = CAR_tension_between_runga_and_gulu
+activate_mission = CAR_formation_of_an_anti_government_coalition
+
+76 = { add_dynamic_modifier = { modifier = CAR_fifth_kilometer_state_modifier } }
+#56 = { start_resistance = yes set_resistance = 15 }
+#53 = { start_resistance = yes set_resistance = 15 }
+#55 = { start_resistance = yes set_resistance = 15 }
+#54 = { start_resistance = yes set_resistance = 15 }
+#77 = { start_resistance = yes set_resistance = 15 }
+#89 = { start_resistance = yes set_resistance = 15 }
+#80 = { start_resistance = yes set_resistance = 15 }
+#58 = { start_resistance = yes set_resistance = 15 }
+#57 = { start_resistance = yes set_resistance = 15 }
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_movement_of_patriots_of_central_africa
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Mahamat_Al_Khatim
+	recruit_character = CAR_Ahmat_Bahar
+	promote_character = CAR_Mahamat_Al_Khatim
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 78
+	set_province_controller = 3891
+	set_province_controller = 1892
+	set_province_controller = 2608
+	
+	set_oob = "MPC_oob"
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_anti_balaka
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Maxime_Mokom
+	recruit_character = CAR_Bienvenue_Nguiambi
+	recruit_character = CAR_Dimitri_Ayoloma
+	recruit_character = CAR_Marcel_Ndale
+	promote_character = CAR_Maxime_Mokom
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 46
+	set_province_controller = 1754
+	set_province_controller = 3273
+	set_province_controller = 2578
+	set_province_controller = 2636
+	set_province_controller = 2402
+	set_province_controller = 3904
+	set_province_controller = 2125
+	set_province_controller = 3045
+	set_province_controller = 662
+	set_province_controller = 1795
+	set_province_controller = 2544
+	set_province_controller = 2544
+	set_province_controller = 2675
+	set_province_controller = 2188
+	set_province_controller = 1169
+	set_province_controller = 3912
+	set_province_controller = 2475
+	set_province_controller = 2536
+	set_province_controller = 2080
+	set_province_controller = 2748
+	set_province_controller = 3010
+	set_province_controller = 1579
+	set_province_controller = 2547
+	set_province_controller = 2782
+	set_province_controller = 3040
+	set_province_controller = 837
+	set_province_controller = 2269
+	set_province_controller = 1675
+	set_province_controller = 3288
+	set_province_controller = 2514
+	set_province_controller = 1504
+	set_province_controller = 2364
+	set_province_controller = 3922
+	set_province_controller = 4588
+	set_province_controller = 2947
+	set_province_controller = 3759
+	set_province_controller = 3896
+	CAR = { set_province_controller = 1425 }
+	set_oob = "AB_oob"
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+	country_event = { id = AD_CAR.0 days = 300}
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_central_african_peace_union
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Ali_Darassa
+	recruit_character = CAR_Abakar_Amadou
+	recruit_character = CAR_Ibrahim_Garga
+	promote_character = CAR_Ali_Darassa
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 60
+	transfer_state = 52
+	transfer_state = 195
+	transfer_state = 75
+	set_province_controller = 3770
+	set_province_controller = 847
+	set_province_controller = 2515
+	set_province_controller = 2380
+	set_province_controller = 1786
+	set_province_controller = 1335
+	set_province_controller = 3875
+	set_province_controller = 2525
+	set_province_controller = 1779
+	set_province_controller = 2854
+	set_province_controller = 3215
+	set_province_controller = 2799
+	set_province_controller = 2612
+	set_province_controller = 3016
+	set_province_controller = 3088
+	set_province_controller = 2734
+	set_oob="UPC_oob"
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_return_recovery_rehabilitation
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Bi_Sidi_Souleymane
+	promote_character = CAR_Bi_Sidi_Souleymane
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 80
+	set_province_controller = 812
+	set_province_controller = 825
+	set_province_controller = 2596
+	set_oob = "3R_oob"
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+	
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_patriotic_movement_for_the_renewal_of_central_africa
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Zakaria_Damane
+	promote_character = CAR_Zakaria_Damane
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 55
+	set_province_controller = 3720
+	set_province_controller = 848
+	set_province_controller = 210
+	set_province_controller = 3913
+	set_province_controller = 2591
+	set_province_controller = 196
+	set_oob="RPRC_oob"
+	activate_mission = RPRC_attack_Ndele
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+	
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_liberation_movement_for_justice_of_central_africa
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Abakar_Sabone
+	promote_character = CAR_Abakar_Sabone
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 53
+	set_oob="MLC_oob"
+	activate_mission = RPRC_attack_Ndele
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+	
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_misseriya_arabs
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Mohammed_Adam
+	promote_character = CAR_Mohammed_Adam
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+	}
+	
+	transfer_state = 89
+	set_oob = "MA_oob"
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+	
+}
+
+create_dynamic_country = {
+	original_tag = CAR
+	copy_tag = CAR
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = CAR_people_front_for_the_rebirth_of_central_africa
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	recruit_character = CAR_Noureddine_Adam
+	recruit_character = CAR_Abdoulaye_Hissene
+	promote_character = CAR_Noureddine_Adam
+	add_to_array = { PREV.CAR_field_commanders_array = THIS }
+	set_variable = { CAR_loyality_for_ccr = 6 }
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		CAR_khartoum_agreement_idea
+	}
+	
+	transfer_state = 56
+	transfer_state = 58
+	transfer_state = 57
+	transfer_state = 59
+	set_province_controller = 3726
+	set_province_controller = 3902
+	set_province_controller = 2797
+	set_province_controller = 2523
+	set_province_controller = 3911
+	set_province_controller = 1302
+	set_province_controller = 3133
+	set_province_controller = 1429
+	set_province_controller = 2419
+	set_province_controller = 17
+	set_province_controller = 2087
+	set_province_controller = 871
+	set_province_controller = 787
+	set_province_controller = 3475
+	set_province_controller = 3162
+	set_province_controller = 3417
+	set_province_controller = 3625
+	set_province_controller = 1001
+	set_province_controller = 2395
+	set_province_controller = 441
+	set_province_controller = 3732
+	set_province_controller = 1594
+	set_province_controller = 2542
+	set_province_controller = 3145
+	set_province_controller = 1378
+	set_province_controller = 202
+	set_oob = "FPR_oob"
+	declare_war_on = { target = CAR type = civil_war }
+	add_civil_war_target = CAR
+	CAR = { add_civil_war_target = PREV }
+}
+
+if = {
+	limit = { has_dlc = "Arms Against Tyranny" }
+	add_ideas = CAR_un_arms_embargo
+}
+add_ideas = {
+	AD_surrender_limit_spirit_idea
+	CAR_khartoum_agreement_idea
+	CAR_ethnic_conflicts_idea
+	CAR_return_of_bozize_idea
+	CAR_russian_instructors_idea
+	CAR_embargo_on_the_sale_of_diamonds_from_the_un_idea
+	#LAWS
+	AD_very_low_social_investments
+	closed_economy
+	AD_high_military_costs
+	AD_appalling_poverty 
+}
+set_variable = { CAR_army_org_factor_var = -0.2 }
+set_variable = { CAR_army_org_regain_var = -0.3 }
+set_variable = { CAR_training_time_army_factor_var = 0.2 }
+set_variable = { CAR_dig_in_speed_factor_var = -0.1 }
+set_variable = { CAR_army_leader_cost_factor_var = 0.2 }
+set_variable = { CAR_pocket_penalty_var = 1 }
+add_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier }

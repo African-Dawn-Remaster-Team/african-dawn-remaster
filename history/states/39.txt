@@ -1,0 +1,24 @@
+
+state={
+	id=39
+	name="STATE_39"
+	provinces={
+		140 299 704 2580 3769 3873 3874 3876 
+	}
+	resources = {
+		diamond = 8
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 140 5 }
+		victory_points = { 3769 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=133417
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

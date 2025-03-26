@@ -1,0 +1,7 @@
+music_station = "AD_station"
+
+### Tracks ###
+
+music = {
+	song = "maintheme"
+}

@@ -1,0 +1,12 @@
+﻿focus_tree = {
+	id = NGR_initial_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NGR
+		}
+	}
+	default = no
+	continuous_focus_position = { x = -1000 y = 1000 }
+}

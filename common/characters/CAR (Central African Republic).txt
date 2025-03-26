@@ -1,0 +1,767 @@
+characters = {
+
+	CAR_Faustin_Archange_Touadera = {
+		name = CAR_Faustin_Archange_Touadera
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAR/CAR_Faustin_Archange_Touadera.dds"
+			}
+			army = {
+				large = "gfx/leaders/CAR/CAR_Faustin_Archange_Touadera.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FAUSTIN_ARCHANGE_TOUADERA_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	CAR_Francois_Bozize = {
+		name = CAR_Francois_Bozize
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAR/CAR_Francois_Bozize.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FRANCOIS_BOZIZE_DESC"
+			ideology = social_democracy_subtype_social_democracy
+			traits = { CAR_under_international_sanctions }
+		}
+	}
+	
+	CAR_Anicet_Georges_Dologuele = {
+		name = CAR_Anicet_Georges_Dologuele
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAR/CAR_Anicet_Georges_Dologuele.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ANICET_GEORGES_DOLOGUELE_DESC"
+			ideology = liberalism_subtype_liberal_democracy
+		}
+	}
+	
+	CAR_Jan_Serj_Bocassa = {
+		name = CAR_Jan_Serj_Bocassa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CAR/CAR_Jan_Serj_Bocassa.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JAN_SERJ_BOCASSA_DESC"
+			ideology = conservatism_subtype_christian_democracy
+		}
+	}
+	
+	CAR_Gilles_Potolot = {
+		name = CAR_Gilles_Potolot
+		portraits = { civilian = { small = "gfx/leaders/CAR/CAR_Gilles_Potolot_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Gilles_Potolot
+			allowed = { original_tag = CAR }
+			traits = { smooth_talking_charmer }
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	CAR_Felics_Molua = {
+		name = CAR_Felics_Molua
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Felics_Molua
+			allowed = { original_tag = CAR }
+			traits = { AD_minister_of_economy }
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	
+	CAR_Gerbert_Jono_Anaba = {
+		name = CAR_Gerbert_Jono_Anaba
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Gerbert_Jono_Anaba
+			allowed = { original_tag = CAR }
+			traits = { AD_expert_urban_planner }
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+	
+	CAR_Firmen_Ngrebada = {
+		name = CAR_Firmen_Ngrebada
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Firmen_Ngrebada
+			allowed = { original_tag = CAR }
+			traits = { CAR_minister_of_disarmament CAR_protege_of_france }
+			on_add = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = -0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			on_remove = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = -0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = 0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	CAR_Silven_Ndoutingai = {
+		name = CAR_Silven_Ndoutingai
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_4_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Silven_Ndoutingai
+			allowed = { original_tag = CAR }
+			traits = { CAR_minister_of_mines }
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	CAR_Nikola_Tyangai = {
+		name = CAR_Nikola_Tyangai
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_5_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Nikola_Tyangai
+			allowed = { original_tag = CAR }
+			visible = {
+				NOT = {
+					has_completed_focus = CAR_thwarting_the_bandits_plan
+					has_completed_focus = CAR_return_of_the_bokassa_clan
+					has_completed_focus = CAR_anise_georges_dologele
+				}
+			}
+			available = { has_completed_focus = CAR_return_of_the_old_guard }
+			traits = { CAR_minister_of_disarmament CAR_protege_of_france }
+			on_add = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = -0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			on_remove = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = -0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = 0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1.300
+			}
+		}
+	}
+	
+	CAR_Eli_Dote = {
+		name = CAR_Eli_Dote
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_6_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Eli_Dote
+			allowed = { original_tag = CAR }
+			visible = {
+				NOT = {
+					has_completed_focus = CAR_thwarting_the_bandits_plan
+					has_completed_focus = CAR_return_of_the_bokassa_clan
+					has_completed_focus = CAR_anise_georges_dologele
+				}
+			}
+			available = { has_completed_focus = CAR_return_of_the_old_guard }
+			traits = { AD_minister_of_agriculture CAR_protege_of_france }
+			on_add = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = -0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			on_remove = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = -0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = 0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	CAR_Kome_Tsumara = {
+		name = CAR_Kome_Tsumara
+		portraits = { civilian = { small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds" } }
+		advisor = {
+			slot = political_advisor
+			idea_token = CAR_Kome_Tsumara
+			allowed = { original_tag = CAR }
+			visible = {
+				NOT = {
+					has_completed_focus = CAR_thwarting_the_bandits_plan
+					has_completed_focus = CAR_return_of_the_bokassa_clan
+					has_completed_focus = CAR_anise_georges_dologele
+				}
+			}
+			available = { has_completed_focus = CAR_return_of_the_old_guard }
+			traits = { AD_minister_of_foreign_affairs CAR_protege_of_france }
+			on_add = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = -0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			on_remove = {
+				owner = {
+					subtract_from_variable = { AD_fo_position = -0.1 tooltip = AD_france_superiority_var_tt }
+					add_to_temp_variable = { position_change = 0.1 } # for loc
+					AD_check_political_situation_effect = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1.700
+			}
+		}
+	}
+	
+	#АРМИЯ
+	CAR_Zephlin_Mamadou = {
+		name = CAR_Zephlin_Mamadou
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAR/CAR_Zephlin_Mamadou.dds"
+				small = "gfx/leaders/CAR/CAR_Zephlin_Mamadou_small.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CAR_Zephlin_Mamadou
+			allowed = { original_tag = CAR }
+			cost = 150
+			traits = { army_chief_maneuver_1 }
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	
+	CAR_Freddy_Sakama = {
+		name = CAR_Freddy_Sakama
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAR/CAR_Freddy_Sakama.dds"
+				small = "gfx/leaders/CAR/CAR_Freddy_Sakama_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	CAR_Marie_Noelle_Coyaroy = {
+		name = CAR_Marie_Noelle_Coyaroy
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAR/CAR_Marie_Noelle_Coyaroy.dds"
+				small = "gfx/leaders/CAR/CAR_Marie_Noelle_Coyaroy_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ camouflage_expert jungle_rat}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	
+	CAR_Seregaza_Ralph_Igor = {
+		name = CAR_Seregaza_Ralph_Igor
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAR/CAR_Seregaza_Ralph_Igor.dds"
+				small = "gfx/leaders/CAR/CAR_Seregaza_Ralph_Igor_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ expert_improviser skirmisher harsh_leader politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	CAR_Jean_Jacques_Ngombe = {
+		name = CAR_Jean_Jacques_Ngombe
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAR/CAR_Jean_Jacques_Ngombe.dds"
+				small = "gfx/leaders/CAR/CAR_Jean_Jacques_Ngombe_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher infantry_officer  }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	CAR_Abdou_Aziz_Fall = {
+		name = CAR_Abdou_Aziz_Fall
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless organizer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	
+	CAR_General_Liman = {
+		name = CAR_General_Liman
+		portraits = {
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	#FPRC
+	CAR_Noureddine_Adam = {
+		name = CAR_Noureddine_Adam
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Noureddine_Adam"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Noureddine_Adam"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NOUREDDINE_ADAM_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	CAR_Abdoulaye_Hissene = {
+		name = CAR_Abdoulaye_Hissene
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ jungle_rat }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	#RPRC
+	CAR_Zakaria_Damane = {
+		name = CAR_Zakaria_Damane
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Zakaria_Damane"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Zakaria_Damane"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ZAKARIA_DAMANE_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		corps_commander={
+			traits={ jungle_rat }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	#MLCJ
+	CAR_Abakar_Sabone = {
+		name = CAR_Abakar_Sabone
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Abakar_Sabone"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Abakar_Sabone"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABAKAR_SABONE_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	#3R
+	CAR_Bi_Sidi_Souleymane = {
+		name = CAR_Bi_Sidi_Souleymane
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Bi_Sidi_Souleymane"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Bi_Sidi_Souleymane"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SIDI_SOULEYMANE_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	CAR_Doborodje_Goska = {
+		name = CAR_Doborodje_Goska
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	#UPC
+	CAR_Ali_Darassa = {
+		name = CAR_Ali_Darassa
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Ali_Darassa"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Ali_Darassa"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALI_DARASSA_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		field_marshal={
+			traits={ organizer }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	CAR_Abakar_Amadou = {
+		name = CAR_Abakar_Amadou
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	CAR_Ibrahim_Garga = {
+		name = CAR_Ibrahim_Garga
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ jungle_rat }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	#ABK
+	CAR_Maxime_Mokom = {
+		name = CAR_Maxime_Mokom
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Maxime_Mokom"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Maxime_Mokom"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAXIME_MOKOM_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		field_marshal={
+			traits={ organizer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	CAR_Bienvenue_Nguiambi = {
+		name = CAR_Bienvenue_Nguiambi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ jungle_rat }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+	CAR_Dimitri_Ayoloma = {
+		name = CAR_Dimitri_Ayoloma
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	CAR_Marcel_Ndale = {
+		name = CAR_Marcel_Ndale
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=1
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	#MPC
+	CAR_Mahamat_Al_Khatim = {
+		name = CAR_Mahamat_Al_Khatim
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Mahamat_Al_Khatim"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Mahamat_Al_Khatim"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAHAMAT_AL_KHATIM_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		field_marshal={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	CAR_Ahmat_Bahar = {
+		name = CAR_Ahmat_Bahar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	#MSA
+	CAR_Mohammed_Adam = {
+		name = CAR_Mohammed_Adam
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_CAR_Mohammed_Adam"
+			}
+			army = {
+				large = "GFX_portrait_CAR_Mohammed_Adam"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MOHAMMED_ADAM_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		corps_commander={
+			traits={ organizer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+}

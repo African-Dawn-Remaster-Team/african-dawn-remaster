@@ -1,0 +1,707 @@
+spriteTypes = {
+	
+	progressbartype = {
+		name = "GFX_ngakola_and_tere_circle_bar"
+		textureFile1 = "gfx/interface/gui/CAR/ngakola_and_tere_1.dds"
+		textureFile2 = "gfx/interface/gui/CAR/ngakola_and_tere_0.dds"
+		size = { x = 258 y = 258 }
+		effectFile = "gfx/FX/progress_radial.lua"
+		steps = 100
+	}
+	spriteType = {
+		name = "GFX_ngakola_and_tere_icon"
+		texturefile = "gfx/interface/gui/CAR/ngakola_and_tere_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_23_NONE"
+		texturefile = "gfx/interface/gui/CAR/23_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_38_NONE"
+		texturefile = "gfx/interface/gui/CAR/38_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_39_NONE"
+		texturefile = "gfx/interface/gui/CAR/39_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_43_NONE"
+		texturefile = "gfx/interface/gui/CAR/43_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_44_NONE"
+		texturefile = "gfx/interface/gui/CAR/44_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_45_NONE"
+		texturefile = "gfx/interface/gui/CAR/45_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_46_NONE"
+		texturefile = "gfx/interface/gui/CAR/46_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_47_NONE"
+		texturefile = "gfx/interface/gui/CAR/47_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_48_NONE"
+		texturefile = "gfx/interface/gui/CAR/48_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_49_NONE"
+		texturefile = "gfx/interface/gui/CAR/49_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_50_NONE"
+		texturefile = "gfx/interface/gui/CAR/50_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_51_NONE"
+		texturefile = "gfx/interface/gui/CAR/51_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_53_NONE"
+		texturefile = "gfx/interface/gui/CAR/53_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_54_NONE"
+		texturefile = "gfx/interface/gui/CAR/54_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_56_NONE"
+		texturefile = "gfx/interface/gui/CAR/56_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_60_NONE"
+		texturefile = "gfx/interface/gui/CAR/60_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_76_NONE"
+		texturefile = "gfx/interface/gui/CAR/76_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_78_NONE"
+		texturefile = "gfx/interface/gui/CAR/78_NONE.dds"
+	}
+	spriteType = {
+		name = "GFX_80_NONE"
+		texturefile = "gfx/interface/gui/CAR/80_NONE.dds"
+	}
+	###CAR###
+	spriteType = {
+		name = "GFX_23_CAR"
+		texturefile = "gfx/interface/gui/CAR/23_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_38_CAR"
+		texturefile = "gfx/interface/gui/CAR/38_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_39_CAR"
+		texturefile = "gfx/interface/gui/CAR/39_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_43_CAR"
+		texturefile = "gfx/interface/gui/CAR/43_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_44_CAR"
+		texturefile = "gfx/interface/gui/CAR/44_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_45_CAR"
+		texturefile = "gfx/interface/gui/CAR/45_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_46_CAR"
+		texturefile = "gfx/interface/gui/CAR/46_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_47_CAR"
+		texturefile = "gfx/interface/gui/CAR/47_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_48_CAR"
+		texturefile = "gfx/interface/gui/CAR/48_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_49_CAR"
+		texturefile = "gfx/interface/gui/CAR/49_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_50_CAR"
+		texturefile = "gfx/interface/gui/CAR/50_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_51_CAR"
+		texturefile = "gfx/interface/gui/CAR/51_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_53_CAR"
+		texturefile = "gfx/interface/gui/CAR/53_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_54_CAR"
+		texturefile = "gfx/interface/gui/CAR/54_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_56_CAR"
+		texturefile = "gfx/interface/gui/CAR/56_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_60_CAR"
+		texturefile = "gfx/interface/gui/CAR/60_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_76_CAR"
+		texturefile = "gfx/interface/gui/CAR/76_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_78_CAR"
+		texturefile = "gfx/interface/gui/CAR/78_CAR.dds"
+	}
+	spriteType = {
+		name = "GFX_80_CAR"
+		texturefile = "gfx/interface/gui/CAR/80_CAR.dds"
+	}
+	###ABK###
+	spriteType = {
+		name = "GFX_23_ABK"
+		texturefile = "gfx/interface/gui/CAR/23_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_38_ABK"
+		texturefile = "gfx/interface/gui/CAR/38_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_39_ABK"
+		texturefile = "gfx/interface/gui/CAR/39_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_43_ABK"
+		texturefile = "gfx/interface/gui/CAR/43_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_44_ABK"
+		texturefile = "gfx/interface/gui/CAR/44_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_45_ABK"
+		texturefile = "gfx/interface/gui/CAR/45_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_46_ABK"
+		texturefile = "gfx/interface/gui/CAR/46_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_47_ABK"
+		texturefile = "gfx/interface/gui/CAR/47_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_48_ABK"
+		texturefile = "gfx/interface/gui/CAR/48_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_49_ABK"
+		texturefile = "gfx/interface/gui/CAR/49_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_50_ABK"
+		texturefile = "gfx/interface/gui/CAR/50_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_51_ABK"
+		texturefile = "gfx/interface/gui/CAR/51_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_53_ABK"
+		texturefile = "gfx/interface/gui/CAR/53_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_54_ABK"
+		texturefile = "gfx/interface/gui/CAR/54_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_56_ABK"
+		texturefile = "gfx/interface/gui/CAR/56_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_60_ABK"
+		texturefile = "gfx/interface/gui/CAR/60_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_76_ABK"
+		texturefile = "gfx/interface/gui/CAR/76_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_78_ABK"
+		texturefile = "gfx/interface/gui/CAR/78_ABK.dds"
+	}
+	spriteType = {
+		name = "GFX_80_ABK"
+		texturefile = "gfx/interface/gui/CAR/80_ABK.dds"
+	}
+	###FPR###
+	spriteType = {
+		name = "GFX_23_FPR"
+		texturefile = "gfx/interface/gui/CAR/23_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_38_FPR"
+		texturefile = "gfx/interface/gui/CAR/38_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_39_FPR"
+		texturefile = "gfx/interface/gui/CAR/39_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_43_FPR"
+		texturefile = "gfx/interface/gui/CAR/43_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_44_FPR"
+		texturefile = "gfx/interface/gui/CAR/44_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_45_FPR"
+		texturefile = "gfx/interface/gui/CAR/45_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_46_FPR"
+		texturefile = "gfx/interface/gui/CAR/46_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_47_FPR"
+		texturefile = "gfx/interface/gui/CAR/47_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_48_FPR"
+		texturefile = "gfx/interface/gui/CAR/48_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_49_FPR"
+		texturefile = "gfx/interface/gui/CAR/49_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_50_FPR"
+		texturefile = "gfx/interface/gui/CAR/50_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_51_FPR"
+		texturefile = "gfx/interface/gui/CAR/51_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_53_FPR"
+		texturefile = "gfx/interface/gui/CAR/53_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_54_FPR"
+		texturefile = "gfx/interface/gui/CAR/54_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_56_FPR"
+		texturefile = "gfx/interface/gui/CAR/56_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_60_FPR"
+		texturefile = "gfx/interface/gui/CAR/60_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_76_FPR"
+		texturefile = "gfx/interface/gui/CAR/76_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_78_FPR"
+		texturefile = "gfx/interface/gui/CAR/78_FPR.dds"
+	}
+	spriteType = {
+		name = "GFX_80_FPR"
+		texturefile = "gfx/interface/gui/CAR/80_FPR.dds"
+	}
+	###MLC###
+	spriteType = {
+		name = "GFX_23_MLC"
+		texturefile = "gfx/interface/gui/CAR/23_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_38_MLC"
+		texturefile = "gfx/interface/gui/CAR/38_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_39_MLC"
+		texturefile = "gfx/interface/gui/CAR/39_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_43_MLC"
+		texturefile = "gfx/interface/gui/CAR/43_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_44_MLC"
+		texturefile = "gfx/interface/gui/CAR/44_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_45_MLC"
+		texturefile = "gfx/interface/gui/CAR/45_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_46_MLC"
+		texturefile = "gfx/interface/gui/CAR/46_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_47_MLC"
+		texturefile = "gfx/interface/gui/CAR/47_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_48_MLC"
+		texturefile = "gfx/interface/gui/CAR/48_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_49_MLC"
+		texturefile = "gfx/interface/gui/CAR/49_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_50_MLC"
+		texturefile = "gfx/interface/gui/CAR/50_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_51_MLC"
+		texturefile = "gfx/interface/gui/CAR/51_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_53_MLC"
+		texturefile = "gfx/interface/gui/CAR/53_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_54_MLC"
+		texturefile = "gfx/interface/gui/CAR/54_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_56_MLC"
+		texturefile = "gfx/interface/gui/CAR/56_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_60_MLC"
+		texturefile = "gfx/interface/gui/CAR/60_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_76_MLC"
+		texturefile = "gfx/interface/gui/CAR/76_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_78_MLC"
+		texturefile = "gfx/interface/gui/CAR/78_MLC.dds"
+	}
+	spriteType = {
+		name = "GFX_80_MLC"
+		texturefile = "gfx/interface/gui/CAR/80_MLC.dds"
+	}
+	###CAP###
+	spriteType = {
+		name = "GFX_23_CAP"
+		texturefile = "gfx/interface/gui/CAR/23_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_38_CAP"
+		texturefile = "gfx/interface/gui/CAR/38_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_39_CAP"
+		texturefile = "gfx/interface/gui/CAR/39_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_43_CAP"
+		texturefile = "gfx/interface/gui/CAR/43_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_44_CAP"
+		texturefile = "gfx/interface/gui/CAR/44_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_45_CAP"
+		texturefile = "gfx/interface/gui/CAR/45_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_46_CAP"
+		texturefile = "gfx/interface/gui/CAR/46_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_47_CAP"
+		texturefile = "gfx/interface/gui/CAR/47_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_48_CAP"
+		texturefile = "gfx/interface/gui/CAR/48_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_49_CAP"
+		texturefile = "gfx/interface/gui/CAR/49_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_50_CAP"
+		texturefile = "gfx/interface/gui/CAR/50_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_51_CAP"
+		texturefile = "gfx/interface/gui/CAR/51_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_53_CAP"
+		texturefile = "gfx/interface/gui/CAR/53_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_54_CAP"
+		texturefile = "gfx/interface/gui/CAR/54_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_56_CAP"
+		texturefile = "gfx/interface/gui/CAR/56_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_60_CAP"
+		texturefile = "gfx/interface/gui/CAR/60_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_76_CAP"
+		texturefile = "gfx/interface/gui/CAR/76_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_78_CAP"
+		texturefile = "gfx/interface/gui/CAR/78_CAP.dds"
+	}
+	spriteType = {
+		name = "GFX_80_CAP"
+		texturefile = "gfx/interface/gui/CAR/80_CAP.dds"
+	}
+	###MPC###
+	spriteType = {
+		name = "GFX_23_MPC"
+		texturefile = "gfx/interface/gui/CAR/23_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_38_MPC"
+		texturefile = "gfx/interface/gui/CAR/38_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_39_MPC"
+		texturefile = "gfx/interface/gui/CAR/39_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_43_MPC"
+		texturefile = "gfx/interface/gui/CAR/43_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_44_MPC"
+		texturefile = "gfx/interface/gui/CAR/44_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_45_MPC"
+		texturefile = "gfx/interface/gui/CAR/45_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_46_MPC"
+		texturefile = "gfx/interface/gui/CAR/46_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_47_MPC"
+		texturefile = "gfx/interface/gui/CAR/47_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_48_MPC"
+		texturefile = "gfx/interface/gui/CAR/48_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_49_MPC"
+		texturefile = "gfx/interface/gui/CAR/49_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_50_MPC"
+		texturefile = "gfx/interface/gui/CAR/50_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_51_MPC"
+		texturefile = "gfx/interface/gui/CAR/51_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_53_MPC"
+		texturefile = "gfx/interface/gui/CAR/53_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_54_MPC"
+		texturefile = "gfx/interface/gui/CAR/54_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_56_MPC"
+		texturefile = "gfx/interface/gui/CAR/56_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_60_MPC"
+		texturefile = "gfx/interface/gui/CAR/60_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_76_MPC"
+		texturefile = "gfx/interface/gui/CAR/76_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_78_MPC"
+		texturefile = "gfx/interface/gui/CAR/78_MPC.dds"
+	}
+	spriteType = {
+		name = "GFX_80_MPC"
+		texturefile = "gfx/interface/gui/CAR/80_MPC.dds"
+	}
+	###RPR###
+	spriteType = {
+		name = "GFX_23_RPR"
+		texturefile = "gfx/interface/gui/CAR/23_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_38_RPR"
+		texturefile = "gfx/interface/gui/CAR/38_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_39_RPR"
+		texturefile = "gfx/interface/gui/CAR/39_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_43_RPR"
+		texturefile = "gfx/interface/gui/CAR/43_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_44_RPR"
+		texturefile = "gfx/interface/gui/CAR/44_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_45_RPR"
+		texturefile = "gfx/interface/gui/CAR/45_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_46_RPR"
+		texturefile = "gfx/interface/gui/CAR/46_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_47_RPR"
+		texturefile = "gfx/interface/gui/CAR/47_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_48_RPR"
+		texturefile = "gfx/interface/gui/CAR/48_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_49_RPR"
+		texturefile = "gfx/interface/gui/CAR/49_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_50_RPR"
+		texturefile = "gfx/interface/gui/CAR/50_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_51_RPR"
+		texturefile = "gfx/interface/gui/CAR/51_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_53_RPR"
+		texturefile = "gfx/interface/gui/CAR/53_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_54_RPR"
+		texturefile = "gfx/interface/gui/CAR/54_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_56_RPR"
+		texturefile = "gfx/interface/gui/CAR/56_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_60_RPR"
+		texturefile = "gfx/interface/gui/CAR/60_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_76_RPR"
+		texturefile = "gfx/interface/gui/CAR/76_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_78_RPR"
+		texturefile = "gfx/interface/gui/CAR/78_RPR.dds"
+	}
+	spriteType = {
+		name = "GFX_80_RPR"
+		texturefile = "gfx/interface/gui/CAR/80_RPR.dds"
+	}
+	###RRR###
+	spriteType = {
+		name = "GFX_23_RRR"
+		texturefile = "gfx/interface/gui/CAR/23_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_38_RRR"
+		texturefile = "gfx/interface/gui/CAR/38_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_39_RRR"
+		texturefile = "gfx/interface/gui/CAR/39_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_43_RRR"
+		texturefile = "gfx/interface/gui/CAR/43_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_44_RRR"
+		texturefile = "gfx/interface/gui/CAR/44_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_45_RRR"
+		texturefile = "gfx/interface/gui/CAR/45_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_46_RRR"
+		texturefile = "gfx/interface/gui/CAR/46_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_47_RRR"
+		texturefile = "gfx/interface/gui/CAR/47_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_48_RRR"
+		texturefile = "gfx/interface/gui/CAR/48_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_49_RRR"
+		texturefile = "gfx/interface/gui/CAR/49_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_50_RRR"
+		texturefile = "gfx/interface/gui/CAR/50_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_51_RRR"
+		texturefile = "gfx/interface/gui/CAR/51_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_53_RRR"
+		texturefile = "gfx/interface/gui/CAR/53_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_54_RRR"
+		texturefile = "gfx/interface/gui/CAR/54_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_56_RRR"
+		texturefile = "gfx/interface/gui/CAR/56_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_60_RRR"
+		texturefile = "gfx/interface/gui/CAR/60_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_76_RRR"
+		texturefile = "gfx/interface/gui/CAR/76_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_78_RRR"
+		texturefile = "gfx/interface/gui/CAR/78_RRR.dds"
+	}
+	spriteType = {
+		name = "GFX_80_RRR"
+		texturefile = "gfx/interface/gui/CAR/80_RRR.dds"
+	}
+}

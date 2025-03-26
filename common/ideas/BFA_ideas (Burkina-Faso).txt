@@ -1,0 +1,65 @@
+ideas = {
+	
+	country = {
+	
+		BFA_protracted_war_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+				custom_modifier_tooltip = BFA_121_122_123_resistance_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.8
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.8
+			}
+		}
+		
+		BFA_volunteers_for_the_defense_of_the_motherland_idea = {		#FOR BOOKMARKS#
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				conscription_factor = 0.03
+				modifier_army_sub_unit_light_infantry_opol_defense_factor = 0.05
+			}
+		}
+		
+		BFA_cinema_capital_of_africa_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				stability_factor = 0.07
+				improve_relations_maintain_cost_factor = -0.5
+			}
+		}
+		
+		BFA_balai_citoyen_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				socialism_drift = 0.05
+				political_power_factor = -0.04
+				production_factory_efficiency_gain_factor = 0.07
+			}
+		}
+	}
+}

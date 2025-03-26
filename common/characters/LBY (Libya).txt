@@ -1,0 +1,74 @@
+characters = {
+
+	LBY_Mohamed_al_Menfi = {
+		name = LBY_Mohamed_al_Menfi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LBY/LBY_Mohamed_al_Menfi.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MOHAMED_AL_MENFI_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+	
+	LBY_Khalifa_Haftar = {
+		name = LBY_Khalifa_Haftar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LBY/LBY_Khalifa_Haftar.dds"
+			}
+			army = {
+				large = "gfx/leaders/LBY/LBY_Khalifa_Haftar.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KHALIFA_HAFTAR_DESC"
+			ideology = centrism_subtype_personalist_dictatorship
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer war_hero master_of_desert_warfare }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	
+	LBY_Fayez_al_Sarraj = {
+		name = LBY_Fayez_al_Sarraj
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LBY/LBY_Fayez_al_Sarraj.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FAYEZ_AL_SARRAJ_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+	}
+	
+	LBY_Issa_Abdel_Majid_Mansur = {
+		name = LBY_Issa_Abdel_Majid_Mansur
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LBY/LBY_Issa_Abdel_Majid_Mansur.dds"
+			}
+			army = {
+				large = "gfx/leaders/LBY/LBY_Issa_Abdel_Majid_Mansur.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ISSA_ABDEL_MAJID_MANSUR_DESC"
+			ideology = centrism_subtype_personalist_dictatorship
+		}
+	}
+}

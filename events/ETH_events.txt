@@ -1,0 +1,30 @@
+add_namespace = AD_ETH
+
+#Восстание Тыграя
+country_event = {
+	id = AD_ETH.0
+	title = AD_ETH.0.t
+	desc = AD_ETH.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.0" }
+	option = {
+		name = AD_ETH.0.a
+		TIG_Debretsion_Gebremichael = { set_nationality = TIG }
+		TIG = {
+			transfer_state = 192
+			declare_war_on = { target = ROOT type = civil_war }
+			add_civil_war_target = ROOT
+			add_ideas = {
+				AD_surrender_limit_spirit_idea
+				AD_lack_of_social_programs
+				AMB_our_lands
+			}
+			add_threat = 0.04
+			add_manpower = 14000
+			ROOT = {add_civil_war_target = TIG}
+			load_oob = "TIG_oob"
+			promote_character = TIG_Debretsion_Gebremichael
+		}
+	}
+}

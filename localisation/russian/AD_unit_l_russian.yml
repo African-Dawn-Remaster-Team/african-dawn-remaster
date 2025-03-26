@@ -1,0 +1,29 @@
+﻿l_russian:
+ category_fb: "Авиационная техника"
+ 
+ infantry_on_btr:"Пехота на БТР"
+ infantry_on_bmp:"Пехота на БМП"
+ infantry_on_jeep:"Пехота на джипах"
+ light_infantry_opol:"Лёгкая пехота"
+ light_infantry_opol_on_guntruck:"Лёгкая пехота на джипах"
+
+ Tech_perev_idea:""
+ Tech_perev_idea_desc:""
+
+ speznaz:"Спецназ"
+ light_armor: "БРМ"
+ light_armor_desc: "Не танк и не БТР."
+
+ waterpipe_rifle:0 "Кустарное оружие"
+ waterpipe_rifle_desc:0 "Слабое и недолговечное произведение искусства, сделаное в подвале чьего-то дома. Весьма эффективно при условиях ограниченных ресурсов или даже блокады"
+ ak_0:0 "АК-47"
+ infantry_equipment_desc:0 "Простой и надёжный автомат, а также снаряжение для него"
+ ak_1:0 "АК-74М"
+ ak_2:0 "АК-12"
+ qbz_0:0 "QBZ-95"
+ qbz_1:0 "QBZ-191"
+ M16_0:0 "M16"
+ M16_1:0 "M16A1"
+ M16_2:0 "SIG XM-7"
+ FAMAS_1:0 "FAMAS"
+ FAMAS_2:0 "HK416"

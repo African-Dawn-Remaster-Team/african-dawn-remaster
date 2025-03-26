@@ -1,0 +1,119 @@
+AD_e_calculate_export_income = {
+	# aluminium
+	# rubber
+	# tungsten
+	# steel
+	# uran
+	
+	set_variable = { AD_e_oil_income = resource_exported@oil }
+	multiply_variable = { AD_e_oil_income = global.AD_e_oil_cost }
+	set_temp_variable = { oil_income = AD_e_gold_income }
+	if = {
+		limit = { check_variable = { var = modifier@AD_money_from_oil_modifier value = 0 compare = not_equals } }
+		multiply_temp_variable = { oil_income = modifier@AD_money_from_oil_modifier }
+	}
+	add_to_variable = { AD_e_oil_income = oil_income }
+	clamp_variable = { var = AD_e_oil_income min = 0 } # на всякий
+	
+	set_variable = { AD_e_gold_income = resource_exported@gold }
+	multiply_variable = { AD_e_gold_income = global.AD_e_gold_cost }
+	set_temp_variable = { gold_income = AD_e_gold_income }
+	if = {
+		limit = { check_variable = { var = modifier@AD_money_from_gold_modifier value = 0 compare = not_equals } }
+		multiply_temp_variable = { gold_income = modifier@AD_money_from_gold_modifier }
+	}
+	add_to_variable = { AD_e_gold_income = gold_income }
+	clamp_variable = { var = AD_e_gold_income min = 0 } # на всякий
+	
+	set_variable = { AD_e_diamonds_income = resource_exported@diamond }
+	multiply_variable = { AD_e_diamonds_income = global.AD_e_diamonds_cost }
+	set_temp_variable = { diamonds_income = AD_e_diamonds_income }
+	if = {
+		limit = { check_variable = { var = modifier@AD_money_from_diamonds_modifier value = 0 compare = not_equals } }
+		multiply_temp_variable = { diamonds_income = modifier@AD_money_from_diamonds_modifier }
+	}
+	add_to_variable = { AD_e_diamonds_income = diamonds_income }
+	clamp_variable = { var = AD_e_diamonds_income min = 0 } # на всякий
+
+	set_variable = { AD_e_income_from_resources = AD_e_oil_income }
+	add_to_variable = { AD_e_income_from_resources = AD_e_gold_income }
+	add_to_variable = { AD_e_income_from_resources = AD_e_diamonds_income }
+	set_temp_variable = { income_from_resources = AD_e_income_from_resources }
+	if = {
+		limit = { check_variable = { var = modifier@AD_money_from_resources_modifier value = 0 compare = not_equals } }
+		multiply_temp_variable = { income_from_resources = modifier@AD_money_from_resources_modifier }
+	}
+	add_to_variable = { AD_e_income_from_resources = income_from_resources }
+	clamp_variable = { var = AD_e_income_from_resources min = 0 } # на всякий
+}
+
+AD_e_calculate_peoples_expense = {
+	set_variable = { AD_e_expense_from_peoples = AD_personal_value_recalculated_by_the_population_var }
+	if = {
+		limit = { check_variable = { var = modifier@AD_personal_value_factor_modifier value = 0 compare = not_equals } }
+		multiply_variable = { AD_e_expense_from_peoples = modifier@AD_personal_value_factor_modifier }
+	}
+	else = {
+		log = "WTF modifier@AD_personal_value_factor_modifier is 0!"
+	}
+}
+
+AD_e_calculate_army_expense = {
+	set_temp_variable = { light_infantry_opol_expense = num_battalions_with_type@light_infantry_opol }
+	multiply_temp_variable = { light_infantry_opol_expense = global.AD_e_cost@light_infantry_opol }
+	
+	set_temp_variable = { light_infantry_opol_on_guntruck_expense = num_battalions_with_type@light_infantry_opol_on_guntruck }
+	multiply_temp_variable = { light_infantry_opol_on_guntruck_expense = global.AD_e_cost@light_infantry_opol_on_guntruck }
+	
+	set_temp_variable = { infantry_expense = num_battalions_with_type@infantry }
+	multiply_temp_variable = { infantry_expense = global.AD_e_cost@infantry }
+	
+	set_temp_variable = { infantry_on_btr_expense = num_battalions_with_type@infantry_on_btr }
+	multiply_temp_variable = { infantry_on_btr_expense = global.AD_e_cost@infantry_on_btr }
+	
+	set_temp_variable = { infantry_on_bmp_expense = num_battalions_with_type@infantry_on_bmp }
+	multiply_temp_variable = { infantry_on_bmp_expense = global.AD_e_cost@infantry_on_bmp }
+	
+	set_temp_variable = { infantry_on_truck_expense = num_battalions_with_type@infantry_on_truck }
+	multiply_temp_variable = { infantry_on_truck_expense = global.AD_e_cost@infantry_on_truck }
+	
+	set_temp_variable = { infantry_on_jeep_expense = num_battalions_with_type@infantry_on_jeep }
+	multiply_temp_variable = { infantry_on_jeep_expense = global.AD_e_cost@infantry_on_jeep }
+	
+	set_temp_variable = { light_armor_unit_expense = num_battalions_with_type@light_armor_unit }
+	multiply_temp_variable = { light_armor_unit_expense = global.AD_e_cost@light_armor_unit }
+	
+	#
+	
+	set_variable = { AD_e_expense_from_army = light_infantry_opol_expense }
+	add_to_variable = { AD_e_expense_from_army = light_infantry_opol_on_guntruck_expense }
+	add_to_variable = { AD_e_expense_from_army = infantry_expense }
+	add_to_variable = { AD_e_expense_from_army = infantry_on_btr_expense }
+	add_to_variable = { AD_e_expense_from_army = infantry_on_bmp_expense }
+	add_to_variable = { AD_e_expense_from_army = infantry_on_truck_expense }
+	add_to_variable = { AD_e_expense_from_army = infantry_on_jeep_expense }
+	add_to_variable = { AD_e_expense_from_army = light_armor_unit_expense }
+	if = {
+		limit = { check_variable = { var = modifier@AD_military_expenses_cost_modifier value = 0 compare = not_equals } }
+		multiply_variable = { AD_e_expense_from_army = modifier@AD_military_expenses_cost_modifier }
+	}
+}
+
+AD_e_calculate_arms_factories_expense = {
+	set_variable = { AD_e_expense_from_arms_factory = num_of_military_factories }
+	multiply_variable = { AD_e_expense_from_arms_factory = global.AD_e_cost@arms_factory }
+	if = { # TODO ??
+		limit = { check_variable = { var = modifier@AD_industrial_complex_value_factor_modifier value = 0 compare = not_equals } }
+		multiply_variable = { AD_e_expense_from_arms_factory = modifier@AD_industrial_complex_value_factor_modifier }
+	}
+}
+
+AD_e_calculate_debt_service_expense = {
+	set_variable = { AD_e_expense_from_debt_service = AD_e_debt }
+	multiply_variable = { AD_e_expense_from_debt_service = 0.025 } # TODO в on_actions
+}
+
+AD_e_calculate_debt_pp_cost = {
+	set_variable = { AD_e_debt_pp_cost = debt_action_value }
+	divide_variable = { AD_e_debt_pp_cost = 2 }
+}

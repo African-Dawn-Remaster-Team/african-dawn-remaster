@@ -1,0 +1,32 @@
+characters = {
+	SEN_Maki_Sall = {
+		name = SEN_Maki_Sall
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SEN/SEN_Maki_Sall.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAKI_SALL_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+	SEN_Bassirou_Diomaye_Faye = {
+		name = SEN_Bassirou_Diomaye_Faye
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SEN/SEN_Bassirou_Diomaye_Faye.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BASSIROU_DIOMAYE_FAYE_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

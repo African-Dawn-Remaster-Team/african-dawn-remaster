@@ -1,0 +1,204 @@
+﻿l_english:
+ BIA: "Republic of Biafra"
+ BIA_DEF: "Biafra"
+ BIA_ADJ: "Biafran"
+
+ CHI: "People's Republic of China"
+ CHI_DEF: "China"
+ CHI_ADJ: "Chinese"
+
+ RUS: "Russian Federation"
+ RUS_DEF: "Russia"
+ RUS_ADJ: "Russian"
+
+ USA: "United States of America"
+ USA_DEF: "USA"
+ USA_ADJ: "American"
+
+ FRA: "French Republic"
+ FRA_DEF: "France"
+ FRA_ADJ: "French"
+
+ ALG: "People's Democratic Republic of Algeria"
+ ALG_DEF: "Algeria"
+ ALG_ADJ: "Algerian"
+
+ BFA: "Burkina Faso"
+ BFA_DEF: "Burkina Faso"
+ BFA_ADJ: "Burkinabé"
+
+ LBY: "State of Libya"
+ LBY_DEF: "Libya"
+ LBY_ADJ: "Libyan"
+
+ GAT: "Ghat Tuareg Militia"
+ GAT_DEF: "Ghat"
+ GAT_ADJ: "Ghat"
+
+ BNN: "Republic of Benin"
+ BNN_DEF: "Benin"
+ BNN_ADJ: "Beninese"
+
+ TOG: "Togolese Republic"
+ TOG_DEF: "Togo"
+ TOG_ADJ: "Togolese"
+
+ CAR: "Central African Republic"
+ CAR_DEF: "Central African Republic"
+ CAR_ADJ: "Central African"
+
+ CMR: "Republic of Cameroon"
+ CMR_DEF: "Cameroon"
+ CMR_ADJ: "Cameroonian"
+
+ NGA: "Federal Republic of Nigeria"
+ NGA_DEF: "Nigeria"
+ NGA_ADJ: "Nigerian"
+
+ GHA: "Republic of Ghana"
+ GHA_DEF: "Ghana"
+ GHA_ADJ: "Ghanaian"
+
+ NGR: "Republic of Niger"
+ NGR_DEF: "Niger"
+ NGR_ADJ: "Nigerien"
+
+ MLI: "Republic of Mali"
+ MLI_DEF: "Mali"
+ MLI_ADJ: "Malian"
+
+ MRT: "Islamic Republic of Mauritania"
+ MRT_DEF: "Mauritania"
+ MRT_ADJ: "Mauritanian"
+
+ MOR: "Kingdom of Morocco"
+ MOR_DEF: "Morocco"
+ MOR_ADJ: "Moroccan"
+
+ LIB: "Republic of Liberia"
+ LIB_DEF: "Liberia"
+ LIB_ADJ: "Liberian"
+
+ GMB: "Republic of The Gambia"
+ GMB_DEF: "The Gambia"
+ GMB_ADJ: "Gambian"
+
+ GNA: "Republic of Guinea"
+ GNA_DEF: "Guinea"
+ GNA_ADJ: "Guinean"
+
+ GNB: "Republic of Guinea-Bissau"
+ GNB_DEF: "Guinea-Bissau"
+ GNB_ADJ: "Guinean-Bissauan"
+
+ WSR: "Sahrawi Arab Democratic Republic"
+ WSR_DEF: "Sahrawi Republic"
+ WSR_ADJ: "Sahrawi"
+
+ CHA: "Republic of Chad"
+ CHA_DEF: "Chad"
+ CHA_ADJ: "Chadian"
+
+ IVO: "Republic of Côte d'Ivoire"
+ IVO_DEF: "Côte d'Ivoire"
+ IVO_ADJ: "Ivorian"
+
+ SEN: "Republic of Senegal"
+ SEN_DEF: "Senegal"
+ SEN_ADJ: "Senegalese"
+
+ SIE: "Republic of Sierra Leone"
+ SIE_DEF: "Sierra Leone"
+ SIE_ADJ: "Sierra Leonean"
+
+ TUN: "Republic of Tunisia"
+ TUN_DEF: "Tunisia"
+ TUN_ADJ: "Tunisian"
+
+ EGY: "Arab Republic of Egypt"
+ EGY_DEF: "Egypt"
+ EGY_ADJ: "Egyptian"
+
+ SUD: "Republic of Sudan"
+ SUD_DEF: "Sudan"
+ SUD_ADJ: "Sudanese"
+
+ SSD: "Republic of South Sudan"
+ SSD_DEF: "South Sudan"
+ SSD_ADJ: "South Sudanese"
+
+ SPA: "Kingdom of Spain"
+ SPA_DEF: "Spain"
+ SPA_ADJ: "Spanish"
+
+ ERI: "State of Eritrea"
+ ERI_DEF: "Eritrea"
+ ERI_ADJ: "Eritrean"
+
+ ETH: "Federal Democratic Republic of Ethiopia"
+ ETH_DEF: "Ethiopia"
+ ETH_ADJ: "Ethiopian"
+
+ DJI: "Republic of Djibouti"
+ DJI_DEF: "Djibouti"
+ DJI_ADJ: "Djiboutian"
+
+ SOM: "Federal Republic of Somalia"
+ SOM_DEF: "Somalia"
+ SOM_ADJ: "Somali"
+
+ KEN: "Republic of Kenya"
+ KEN_DEF: "Kenya"
+ KEN_ADJ: "Kenyan"
+
+ UGA: "Republic of Uganda"
+ UGA_DEF: "Uganda"
+ UGA_ADJ: "Ugandan"
+
+ DRC: "Democratic Republic of the Congo"
+ DRC_DEF: "Congo"
+ DRC_ADJ: "Congolese"
+
+ COG: "Republic of the Congo"
+ COG_DEF: "Congo"
+ COG_ADJ: "Congolese"
+
+ GAB: "Gabonese Republic"
+ GAB_DEF: "Gabon"
+ GAB_ADJ: "Gabonese"
+
+ EQG: "Republic of Equatorial Guinea"
+ EQG_DEF: "Equatorial Guinea"
+ EQG_ADJ: "Equatorial Guinean"
+
+ SNT: "Democratic Republic of Sao Tome and Principe"
+ SNT_DEF: "Sao Tome and Principe"
+ SNT_ADJ: "Sao Tomean"
+
+ WTL: "Republic of Western Togoland"
+ WTL_DEF: "Western Togoland"
+ WTL_ADJ: "Western Togolese"
+
+ CSM: "Democratic Republic of Casamance"
+ CSM_DEF: "Casamance"
+ CSM_ADJ: "Casamance"
+
+ ARW: "Islamic Republic of Arewa"
+ ARW_DEF: "Arewa"
+ ARW_ADJ: "Arewa"
+
+ BNI: "Republic of Benin"
+ BNN_DEF: "Benin"
+ BNN_ADJ: "Beninese"
+
+ OYO: "Republic of Oduduwa"
+ OYO_DEF: "Oduduwa"
+ OYO_ADJ: "Oduduwan"
+
+ TUR: "Republic of Turkey"
+ TUR_DEF: "Turkey"
+ TUR_ADJ: "Turkish"
+
+ TIG: "Tigray People's Liberation Front"
+ TIG_DEF: "Tigray"
+ TIG_ADJ: "Tigray."

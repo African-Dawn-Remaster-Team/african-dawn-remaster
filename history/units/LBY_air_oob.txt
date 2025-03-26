@@ -1,0 +1,16 @@
+air_wings = {
+	145 = {
+		fighter_airframe_0_ru =  {
+			owner = "LBY" 
+			creator = "RUS"
+			amount = 3
+			version_name = "MIG-23"
+		}
+		light_cas_airframe_0 =  {
+			owner = "LBY" 
+			creator = "RUS"
+			amount = 5
+			version_name = "L-39"
+		}
+	}
+}

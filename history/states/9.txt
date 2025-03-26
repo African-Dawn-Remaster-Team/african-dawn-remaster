@@ -1,0 +1,25 @@
+state={
+	id=9
+	name="STATE_9"
+	provinces={
+		55 1694 1963 2335 2401 2534 2744 2788 3694 3713 4654 4655 4688 4696 
+	}
+	history={
+		owner = TOG
+		add_core_of = TOG
+		victory_points = { 4654 10 }
+		victory_points = { 2401 5 }
+		victory_points = { 4696 3 }
+		victory_points = { 4688 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			4654 = { naval_base = 3 }
+		}
+	}
+	manpower=8443000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

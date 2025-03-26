@@ -1,0 +1,24 @@
+state={
+	id=160
+	name="STATE_160"
+	provinces={
+		187 409 664 768 1590 2398 3274 5086 5087 5090 5097 5098 5101 
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 409 5 }
+		victory_points = { 1590 3 }
+		victory_points = { 664 3 }
+		victory_points = { 768 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+			409 = { naval_base = 3 }
+		}
+	}
+	manpower=550938
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

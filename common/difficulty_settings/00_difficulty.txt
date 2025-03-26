@@ -1,0 +1,38 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "RUS_STRONG"
+		modifier = diff_strong_ai_generic
+		countries = { RUS }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "USA_STRONG"
+		modifier = diff_strong_ai_generic
+		countries = { USA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "FRA_STRONG"
+		modifier = diff_strong_ai_generic
+		countries = { FRA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "ISS_STRONG"
+		modifier = diff_strong_ai_generic
+		countries = { ISS JNA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "BFA_STRONG"
+		modifier = diff_strong_ai_generic
+		countries = { BFA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "MLI_STRONG"
+		modifier = diff_strong_ai_generic
+		countries = { MLI }
+		multiplier = 2.0
+	}
+}

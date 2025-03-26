@@ -1,0 +1,18 @@
+characters = {
+
+	CSM_Provisional_Government = {
+		name = CSM_Provisional_Government
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CSM/CSM_Provisional_Government.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CSM_PROVISIONAL_GOVERNMENT_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

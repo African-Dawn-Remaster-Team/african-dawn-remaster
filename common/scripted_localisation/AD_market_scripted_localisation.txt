@@ -1,0 +1,1199 @@
+defined_text = {
+	name = AD_get_market_item_cost_color
+	text = {
+		trigger = {
+			check_variable = { costmodal > AD_current_money_var }
+		}
+		localization_key = cost_amount_red_title
+	}
+	text = {
+		localization_key = cost_amount_green_title
+	}
+}
+
+defined_text = {
+	name = AD_get_market_item_name
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:uav_airframe_0 }
+			check_variable = { i = 4 }
+		}
+		localization_key = "FRA_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:light_cas_airframe_0 }
+			check_variable = { i = 6 }
+		}
+		localization_key = "RUS_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:mrap_car_equipment }
+			check_variable = { i = 7 }
+		}
+		localization_key = "CHI_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 8 }
+		}
+		localization_key = "RUS_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 9 }
+		}
+		localization_key = "FRA_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 10 }
+		}
+		localization_key = "USA_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { i = 11 }
+		}
+		localization_key = "RUS_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { i = 12 }
+		}
+		localization_key = "RUS_[?AD_market_item.GetTokenKey]"
+	}
+	text = {
+		localization_key = "[?AD_market_item.GetTokenLocalizedKey]"
+	}
+}
+defined_text = {
+	name = AD_get_market_selected_item_name
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:uav_airframe_0 }
+			check_variable = { AD_m_producer = FRA }
+		}
+		localization_key = "FRA_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:light_cas_airframe_0 }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "RUS_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:mrap_car_equipment }
+			check_variable = { AD_m_producer = CHI }
+		}
+		localization_key = "CHI_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "RUS_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { AD_m_producer = FRA }
+		}
+		localization_key = "FRA_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { AD_m_producer = USA }
+		}
+		localization_key = "USA_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "RUS_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "RUS_[?AD_m_selected_item.GetTokenKey]"
+	}
+	text = {
+		localization_key = "[?AD_m_selected_item.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = AD_get_market_item_icon
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:uav_airframe_0 }
+			check_variable = { i = 4 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_TUR"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:light_cas_airframe_0 }
+			check_variable = { i = 6 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_RUS"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:mrap_car_equipment }
+			check_variable = { i = 7 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_CHI"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 8 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_RUS"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 9 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_FRA"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 10 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_USA"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { i = 11 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_RUS"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { i = 12 }
+		}
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]_RUS"
+	}
+	text = {
+		localization_key = "GFX_[?AD_market_item.GetTokenKey]"
+	}
+}
+defined_text = {
+	name = AD_get_market_item_icon_window
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:uav_airframe_0 }
+			check_variable = { AD_m_producer = TUR }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_TUR"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:light_cas_airframe_0 }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_RUS"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:mrap_car_equipment }
+			check_variable = { AD_m_producer = CHI }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_CHI"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_RUS"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { AD_m_producer = FRA }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_FRA"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { AD_m_producer = USA }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_USA"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_RUS"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_m_selected_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { AD_m_producer = RUS }
+		}
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]_RUS"
+	}
+	text = {
+		localization_key = "GFX_[?AD_m_selected_item.GetTokenKey]"
+	}
+}
+
+defined_text = {
+	name = AD_get_market_item_producer_tag
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_0 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_1 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_0 }
+		}
+		localization_key = "[USA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_1 }
+		}
+		localization_key = "[USA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:uav_airframe_0 }
+			check_variable = { i = 4 }
+		}
+		localization_key = "[TUR.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:attack_helicopter_airframe_0_ru }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:light_cas_airframe_0 }
+			check_variable = { i = 6 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:mrap_car_equipment }
+			check_variable = { i = 7 }
+		}
+		localization_key = "[CHI.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 8 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 9 }
+		}
+		localization_key = "[FRA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 10 }
+		}
+		localization_key = "[USA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { i = 11 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { i = 12 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_rpg7 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_milan }
+		}
+		localization_key = "[FRA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_tow }
+		}
+		localization_key = "[USA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_9k111 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_redeye }
+		}
+		localization_key = "[USA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_fim92 }
+		}
+		localization_key = "[USA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_mistral }
+		}
+		localization_key = "[FRA.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_strela }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_igla }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:howitzer_equipment_d30 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t62 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t72 }
+		}
+		localization_key = "[RUS.GetTag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_leopard1 }
+		}
+		localization_key = "[FRA.GetTag]"
+	}
+}
+defined_text = {
+	name = AD_get_market_item_producer_flag
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_0 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_1 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_0 }
+		}
+		localization_key = "[USA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_1 }
+		}
+		localization_key = "[USA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:uav_airframe_0 }
+			check_variable = { i = 4 }
+		}
+		localization_key = "[TUR.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:attack_helicopter_airframe_0_ru }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:light_cas_airframe_0 }
+			check_variable = { i = 6 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:mrap_car_equipment }
+			check_variable = { i = 7 }
+		}
+		localization_key = "[CHI.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 8 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 9 }
+		}
+		localization_key = "[FRA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 10 }
+		}
+		localization_key = "[USA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { i = 11 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { i = 12 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_rpg7 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_milan }
+		}
+		localization_key = "[FRA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_tow }
+		}
+		localization_key = "[USA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_9k111 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_redeye }
+		}
+		localization_key = "[USA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_fim92 }
+		}
+		localization_key = "[USA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_mistral }
+		}
+		localization_key = "[FRA.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_strela }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_igla }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:howitzer_equipment_d30 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t62 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t72 }
+		}
+		localization_key = "[RUS.GetFlag]"
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_leopard1 }
+		}
+		localization_key = "[FRA.GetFlag]"
+	}
+}
+
+# TODO в будущем как-то улучшить систему?
+defined_text = {
+	name = AD_get_market_item_cost
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_0 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item } # TODO в будущем пересмотреть
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_1 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_0 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@USA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_1 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@USA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:uav_airframe_0 }
+			check_variable = { i = 4 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@TUR }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:attack_helicopter_airframe_0_ru }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:light_cas_airframe_0 }
+			check_variable = { i = 6 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:mrap_car_equipment }
+			check_variable = { i = 7 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@CHI }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 8 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 9 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			multiply_temp_variable = { cost = 1.25 } # = 2.5	TODO в on_action
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@FRA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 10 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			multiply_temp_variable = { cost = 1.25 } # = 2.5
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@USA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { i = 11 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { i = 12 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_rpg7 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_milan }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@FRA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_tow }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@USA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_9k111 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_redeye }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@USA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_fim92 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@USA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_mistral }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@FRA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_strela }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_igla }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:howitzer_equipment_d30 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t62 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t72 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@RUS }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_leopard1 }
+			
+			set_temp_variable = { cost = global.AD_m_item_costper1@var:AD_market_item }
+			set_temp_variable = { discount = cost }
+			multiply_temp_variable = { discount = AD_m_discount@FRA }
+			subtract_from_temp_variable = { cost = discount }
+		}
+		localization_key = AD_market_cost
+	}
+}
+defined_text = {
+	name = AD_get_market_item_discount
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_0 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ak_1 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_0 }
+			check_variable = { var = AD_m_discount@USA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@USA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:M16_1 }
+			check_variable = { var = AD_m_discount@USA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@USA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:uav_airframe_0 }
+			check_variable = { i = 4 }
+			check_variable = { var = AD_m_discount@TUR value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@TUR }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:attack_helicopter_airframe_0_ru }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:light_cas_airframe_0 }
+			check_variable = { i = 6 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:mrap_car_equipment }
+			check_variable = { i = 7 }
+			check_variable = { var = AD_m_discount@CHI value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@CHI }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 8 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 9 }
+			check_variable = { var = AD_m_discount@FRA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@FRA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+			check_variable = { i = 10 }
+			check_variable = { var = AD_m_discount@USA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@USA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_2 }
+			check_variable = { i = 11 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:armored_support_vehicle_equipment_x_3 }
+			check_variable = { i = 12 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_rpg7 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_milan }
+			check_variable = { var = AD_m_discount@FRA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@FRA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_tow }
+			check_variable = { var = AD_m_discount@USA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@USA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:ATGM_equipment_9k111 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_redeye }
+			check_variable = { var = AD_m_discount@USA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@USA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_fim92 }
+			check_variable = { var = AD_m_discount@USA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@USA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_mistral }
+			check_variable = { var = AD_m_discount@FRA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@FRA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_strela }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:manpads_equipment_igla }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:howitzer_equipment_d30 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t62 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_t72 }
+			check_variable = { var = AD_m_discount@RUS value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@RUS }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+	text = {
+		trigger = {
+			check_variable = { AD_market_item = token:modern_tank_equipment_leopard1 }
+			check_variable = { var = AD_m_discount@FRA value = 0 compare = not_equals }
+			
+			set_temp_variable = { discount = AD_m_discount@FRA }
+			multiply_temp_variable = { discount = -1 }
+		}
+		localization_key = AD_market_discount
+	}
+}
+
+defined_text = {
+	name = check_trig_opinion
+	text = {
+		trigger = {
+			meta_trigger = { 
+				text = {
+					[TAGSTRANY] = {
+						has_opinion = {
+							target = ROOT
+							value < -50
+						}
+					}
+				} 
+				TAGSTRANY = "[AD_get_market_item_producer_tag]"
+			} 
+		}
+		localization_key = "bad_opinion_tt"
+	}
+}
+
+defined_text = {
+	name = getmaininfomodal
+	text = {
+		localization_key = "weapons_trade_tt"
+	}
+	# text = {
+		# localization_key = "resource_trade_tt"
+	# }
+}

@@ -1,0 +1,18 @@
+characters = {
+
+	COG_Denis_Sassou_Nguesso = {
+		name = COG_Denis_Sassou_Nguesso
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/COG/COG_Denis_Sassou_Nguesso.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DENIS_SASSOU_NGUESSO_DESC"
+			ideology = social_democracy_subtype_african_socialism
+		}
+	}
+}

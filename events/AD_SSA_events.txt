@@ -1,0 +1,27 @@
+add_namespace = AD_SSA_news
+
+# Создание Альянса Государств Сахеля
+news_event = {
+	id = AD_SSA_news.0
+	title = AD_SSA_news.0.t
+	desc = AD_SSA_news.0.d
+	picture = GFX_news_event_dutch_soldiers_indonesia
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = AD_SSA_news.0.a
+	}
+}
+
+# Начало Сахельской Войны
+news_event = {
+	id = AD_SSA_news.1
+	title = AD_SSA_news.1.t
+	desc = AD_SSA_news.1.d
+	picture = GFX_news_event_dutch_soldiers_indonesia
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = AD_SSA_news.1.a
+	}
+}

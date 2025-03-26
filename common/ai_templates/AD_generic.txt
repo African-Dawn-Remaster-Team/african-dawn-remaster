@@ -1,0 +1,1186 @@
+# TODO
+
+garrison_generic = {
+	role = garrison
+	upgrade_prio = {
+		factor = 0.5
+		modifier = {
+			add = 5
+			ai_has_role_template = garrison
+		}
+	}
+
+	garrison_generic = {
+		reinforce_prio = 0
+		upgrade_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 400
+				}
+				has_equipment = {
+					infantry_equipment < 700
+				}
+			}
+			modifier = {
+				factor = 0
+				has_equipment = {
+					infantry_equipment > 700
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = {
+				light_infantry_opol = 6
+			}
+		}
+
+	}
+}
+
+suppression_generic = {
+	role = suppression
+	upgrade_prio = {
+		base = 0.5
+
+		modifier = {
+			factor = 20
+			has_war = yes
+		}
+	}
+
+	suppression_generic = {
+		reinforce_prio = 0
+		custom_icon = 13
+	
+		upgrade_prio = {
+			base = 2
+		}
+		
+		target_template = {
+			
+			support = { 
+				military_police = 1
+			}
+
+			regiments = {
+				light_infantry_opol = 6
+			}
+		}
+	}
+}
+
+light_infantry = {
+	role = infantry
+	upgrade_prio = {
+		factor = 1
+		modifier = {
+			factor = 5
+			has_civil_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_equipment = {
+				ATGM_equipment < 60
+			}
+		}
+	}
+
+	militia_default = {
+		reinforce_prio = 0
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 700
+				}
+				has_equipment = {
+					ATGM_equipment < 10
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 700
+					}
+					has_equipment = {
+						ATGM_equipment > 9
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol = 9
+			}
+		}
+		
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over		TODO
+		replace_with = light_inf_bat
+		target_min_match = 0.9
+	}
+	light_inf_bat = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 700
+				}
+				has_equipment = {
+					ATGM_equipment > 9
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 700
+					}
+					has_equipment = {
+						ATGM_equipment < 10
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol = 9
+			}
+			support = {
+				atgm_support_unit = 1
+			}
+		}
+	
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over		TODO
+		replace_with = militia_inf_bat_1
+		target_min_match = 0.9
+	}
+	militia_inf_bat_1 = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 700
+				}
+				has_equipment = {
+					ATGM_equipment > 9
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 700
+					}
+					has_equipment = {
+						ATGM_equipment < 10
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment < 10
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol = 9
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+			}
+		}
+		
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over		TODO
+		replace_with = militia_inf_bat_2
+		target_min_match = 0.9
+	}
+	militia_inf_bat_2 = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_equipment = {
+					infantry_equipment > 700
+				}
+				has_equipment = {
+					ATGM_equipment > 9
+				}
+				has_equipment = {
+					manpads_equipment > 9
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 700
+					}
+					has_equipment = {
+						ATGM_equipment < 10
+					}
+					has_equipment = {
+						manpads_equipment < 10
+					}
+					has_equipment = {
+						howitzer_equipment < 10
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol = 9
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+				manpads_support_unit = 1
+			}
+		}
+		
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over		TODO
+		replace_with = militia_inf_bat_heavy
+		target_min_match = 0.9
+	}
+	militia_inf_bat_heavy = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_equipment = {
+					infantry_equipment > 1000
+				}
+				has_equipment = {
+					ATGM_equipment > 9
+				}
+				has_equipment = {
+					manpads_equipment > 9
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 1000
+					}
+					has_equipment = {
+						ATGM_equipment < 10
+					}
+					has_equipment = {
+						manpads_equipment < 10
+					}
+					has_equipment = {
+						howitzer_equipment < 10
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol = 12
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+				manpads_support_unit = 1
+			}
+		}
+	}
+}
+
+light_infantry_motorized = {
+	role = motorized
+	upgrade_prio = {
+		factor = 1
+		modifier = {
+			factor = 5
+			has_civil_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_equipment = {
+				ATGM_equipment < 60
+			}
+			has_equipment = {
+				jeep_equipment > 100
+			}
+		}
+		modifier = {
+			factor = 0
+			has_equipment = {
+				jeep_equipment < 100
+			}
+		}
+	}
+
+	militia_moto_default = {
+		reinforce_prio = 0
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 400
+				}
+				has_equipment = {
+					ATGM_equipment < 10
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+				has_equipment = {
+					jeep_equipment > 100
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 400
+					}
+					has_equipment = {
+						ATGM_equipment > 9
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+					has_equipment = {
+						jeep_equipment < 100
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol_on_guntruck = 6
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = militia_moto_upgraded
+		target_min_match = 0.5
+	}
+	militia_moto_upgraded = {
+		reinforce_prio = 0
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 700
+				}
+				has_equipment = {
+					ATGM_equipment < 10
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+				has_equipment = {
+					jeep_equipment > 180
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 700
+					}
+					has_equipment = {
+						ATGM_equipment > 9
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+					has_equipment = {
+						jeep_equipment < 180
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				light_infantry_opol_on_guntruck = 9
+			}
+		}
+	}
+}
+
+specials_brigades = {
+	role = paratroopers # mountaineers infantry		TODO
+	upgrade_prio = {
+		factor = 1.2
+	}
+
+	sf_gen = {
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						spec_oborud_equipment < 100
+					}
+					has_equipment = {
+						spec_oborud_equipment > 300
+					}
+				}
+			}
+		}
+		reinforce_prio = 2
+
+		target_template = {
+
+			regiments = {
+				speznaz = 3
+			}
+		}
+		
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = special_forces_normal
+		target_min_match = 0.9
+	}
+
+	special_forces_normal = {
+		upgrade_prio = {
+			factor = 4
+			modifier = {
+				factor = 0
+				has_equipment = {
+					spec_oborud_equipment < 360
+				}
+			}
+		}
+		reinforce_prio = 2
+
+		target_template = {
+
+			regiments = {
+				speznaz = 9
+			}
+		}
+	}
+}
+
+infantry = {
+	role = infantry
+	upgrade_prio = {
+		factor = 3
+		modifier = {
+			factor = 5
+			has_civil_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_equipment = {
+				ATGM_equipment > 60
+			}
+		}
+		modifier = {
+			factor = 0
+			has_equipment = {
+				ATGM_equipment < 30
+			}
+		}
+	}
+
+	infantry_default = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 550
+				}
+				has_equipment = {
+					ATGM_equipment < 90
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 550
+					}
+					has_equipment = {
+						ATGM_equipment > 89
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry = 6
+			}
+		}
+		
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_bigger
+		target_min_match = 0.9
+	}
+	infantry_bigger = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 89
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 90
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry = 9
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_bigger_atgm
+		target_min_match = 0.9
+	}
+	infantry_bigger_atgm = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 99
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 100
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry = 9
+			}
+			support = {
+				atgm_support_unit = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_bigger_art
+		target_min_match = 0.9
+	}
+	infantry_bigger_art = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 99
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 100
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment < 5
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry = 9
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_bigger_mega
+		target_min_match = 0.9
+	}
+	infantry_bigger_mega = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 99
+				}
+				has_equipment = {
+					manpads_equipment > 9
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 80
+					}
+					has_equipment = {
+						manpads_equipment < 5
+					}
+					has_equipment = {
+						howitzer_equipment < 5
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry = 9
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+				manpads_support_unit = 1
+			}
+		}
+	}
+}
+
+infantry_on_jeep = {
+	role = infantry_on_jeep
+	upgrade_prio = {
+		factor = 1
+		modifier = {
+			factor = 5
+			has_civil_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_equipment = {
+				ATGM_equipment > 60
+			}
+			has_equipment = {
+				mrap_equipment > 20
+			}
+		}
+		modifier = {
+			factor = 0
+			has_equipment = {
+				ATGM_equipment < 30
+			}
+			has_equipment = {
+				mrap_equipment < 20
+			}
+		}
+	}
+	
+	mot_infantry_default = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 550
+				}
+				has_equipment = {
+					ATGM_equipment < 90
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+				has_equipment = {
+					mrap_equipment > 20
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 550
+					}
+					has_equipment = {
+						ATGM_equipment > 89
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+					has_equipment = {
+						mrap_equipment < 20
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry_on_jeep = 6
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = mot_infantry_bigger
+		target_min_match = 0.9
+	}
+	mot_infantry_bigger = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 89
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+				has_equipment = {
+					mrap_equipment > 20
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 90
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+					has_equipment = {
+						mrap_equipment < 30
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry_on_jeep = 9
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = mot_infantry_bigger_atgm
+		target_min_match = 0.9
+	}
+	mot_infantry_bigger_atgm = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 99
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment < 10
+				}
+				has_equipment = {
+					mrap_equipment > 30
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 100
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment > 9
+					}
+					has_equipment = {
+						mrap_equipment < 30
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry_on_jeep = 9
+			}
+			support = {
+				atgm_support_unit = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = mot_infantry_bigger_art
+		target_min_match = 0.9
+	}
+	mot_infantry_bigger_art = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 99
+				}
+				has_equipment = {
+					manpads_equipment < 10
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+				has_equipment = {
+					mrap_equipment > 30
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 100
+					}
+					has_equipment = {
+						manpads_equipment > 9
+					}
+					has_equipment = {
+						howitzer_equipment < 5
+					}
+					has_equipment = {
+						mrap_equipment < 30
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry_on_jeep = 9
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = mot_infantry_bigger_mega
+		target_min_match = 0.9
+	}
+	mot_infantry_bigger_mega = {
+		reinforce_prio = 1
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+					infantry_equipment > 800
+				}
+				has_equipment = {
+					ATGM_equipment > 99
+				}
+				has_equipment = {
+					manpads_equipment > 9
+				}
+				has_equipment = {
+					howitzer_equipment > 9
+				}
+				has_equipment = {
+					mrap_equipment > 30
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_equipment = {
+						infantry_equipment < 800
+					}
+					has_equipment = {
+						ATGM_equipment < 80
+					}
+					has_equipment = {
+						manpads_equipment < 5
+					}
+					has_equipment = {
+						howitzer_equipment < 5
+					}
+					has_equipment = {
+						mrap_equipment < 30
+					}
+				}
+			}
+		}
+
+		target_template = {
+
+			regiments = { #15 CW
+				infantry_on_jeep = 9
+			}
+			support = {
+				atgm_support_unit = 1
+				howitzer_support_unit = 1
+				manpads_support_unit = 1
+			}
+		}
+	}
+}

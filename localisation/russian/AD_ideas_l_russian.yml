@@ -1,0 +1,143 @@
+﻿l_russian:
+ DAC_no_create: "Африканский корпус не создан"
+ disarmed_nation_mjr: "Малый Контингент"
+ volunteer_only_mjr: "Ограниченное Присутствие"
+ limited_conscription_mjr: "Расширенное Присутствие"
+ extensive_conscription_mjr: "Полномасштабное Присутствие"
+ 
+ civilian_economy_mjr: "Слабая Вовлечённость"
+ low_economic_mobilisation_mjr: "Ограниченная Вовлечённость"
+ partial_economic_mobilisation_mjr: "Сильная Вовлечённость"
+ war_economy_mjr: "Полномасштабная Вовлечённость"
+ 
+ extensive_conscription_fun: "Глобальный Джихад"
+ war_economy_fun: "Теневая Экономика"
+
+ SU: "ОКБ Сухой"
+ Lockheed_concern: "Lockheed Martin"
+ dassault_concern: "Dassault Group"
+ china_concern: "Chengdu Aircraft Industry Group"
+ tank_concern:0 "Производитель танков"
+ aircraft_concern:0 "Производитель авиации"
+ materiel_concern:0 "Производитель пехотного оснащения"
+ military_theory:0 "Военная теория"
+ uralgovnozavod:0 "Уралвагонзавод"
+ general_hynamics:0 "General Dynamics"
+ norinco:0 "Norinco"
+ nexter:0 "Nexter"
+ denel_l:0 "Denel"
+ kalashnikov:0 "Калашников"
+ nexter_inf:0 "Nexter"
+ norinco_inf:0 "Norinco"
+ barret_inf:0 "Barrett"
+ milkor_inf:0 "Milkor"
+ rosatom:0 "Росатом"
+ newmont:0 "Newmont"
+ sonartrach:0 "Sonatrach"
+ orano:0 "Оrano"
+ sinopec:0 "Sinopec"
+ paramount_concern:0 "Paramount Group"
+ 
+ podpol_tank_production: "Подпольное производство бронетехники"
+ podpol_mat_production: "Подпольное производство стрелкового оружия"
+ podpol_industry: "Подпольные строительные мастерские"
+ podpol_oil: "Подпольные ресурсодобывающие компании"
+ 
+ 
+ #MINOR IDEAS#
+ ISW_BH_conflict: "Конфликт Боко-Харам и ИГ"
+    TUN_state_of_emergency:"Чрезвычайное положение"
+    ALJ_gas_deposits:"Газовые месторождения"
+    ALL_the_great_maghreb:"Великий магриб"
+    LIB_american_connections:"Связь с Америкой"
+    SIE_useless_wealth:"Бесполезное богатство"
+    SIE_energy_problem:"Энергетическая проблема"
+    GNA_transitional_government:"Переходное правительство"
+    GNB_interservice_conflict:"Межведомственный конфликт"
+    GMB_agricultural_effort:"Усилия в развитии СХ"
+    LBY_ghost_of_the_past:"Призрак прошлого"
+    LBY_libyan_fire:"Ливийский пожар"
+    MRT_high_alert:"Армия на готове"
+    
+ ###COMMON IDEAS###
+ AD_surrender_limit_spirit_idea: "Нерегулярное вооруженнное формирование"
+ AD_surrender_limit_spirit_idea_1: "Нерегулярное вооруженнное формирование"
+ AD_volunteer_battalions_idea: "[ROOT.GetAdjective] добровольческие батальоны"
+ AMB_our_lands: "Наша земля"
+ AD_ECOWAS: "Член ЭКОВАС"
+ AD_ECOWAS_desc: "Экономическое сообщество западноафриканских государств (ЭКОВАС/ECOWAS - Economic Community of West African States) основано в 1975 году (обновленный Договор об ЭКОВАС вступил в силу в июле 1995 г.).\nДеятельность ЭКОВАС – важное звено общеафриканских интеграционных процессов. В перспективе ставится задача образования на его базе своего рода федерации западноафриканских государств с введением паспорта унифицированного образца (уже начат процесс выдачи таких паспортов гражданам государств – членов) и возможным учреждением в последующем института единого гражданства Сообщества."
+ AD_ECOWAS_sanctions_idea: "Санкции ЭКОВАС"
+ AD_fundamentalism: "Исламский фундаментализм"
+
+ AD_member_of_g_five_sahel: "Член G5 Sahel"
+ AD_member_of_g_five_sahel_desc: "G5 Sahel — это региональный альянс, объединяющий пять стран Сахеля (Мали, Буркина-Фасо, Нигер, Чад и Мавританию) для борьбы с терроризмом, организованной преступностью и нестабильностью в регионе. Членство в этой организации предоставляет доступ к совместным военным операциям, международной поддержке и финансированию, что усиливает возможности страны в борьбе с угрозами безопасности. Участие в G5 Sahel также способствует укреплению регионального сотрудничества и обмена ресурсами, что особенно важно для стран, сталкивающихся с общими вызовами.\n\nОднако членство в альянсе требует значительных усилий. Страна обязана выделять ресурсы на совместные операции, согласовывать свои действия с партнерами и поддерживать дипломатический баланс."
+ 
+ AD_creation_of_the_commission_for_combating_terrorism_idea: "Комиссия по борьбе с терроризмом"
+ AD_sahel_military_initiative_modifier: "Сахельская Военная Инициатива"
+ AD_sahel_military_initiative_modifier_desc: "[NGR_get_smi_desc]"
+ AD_sahel_military_initiative_modifier_desc_1: "§WЗа каждую §Yстрану-участницу§! мы получаем:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!,\n$MODIFIER_MAX_PLANNING_FACTOR$: §G+3.0%§!,\n$MODIFIER_INITIATIVE_FACTOR$: §G+3.0%§!.\n\nТекущее количество §Yстран-участниц§!: [?NGR.NGR_num_of_allies|0G]§!"
+ AD_sahel_military_initiative_modifier_desc_2: "§WЗа каждую §Yстрану-участницу§! мы получаем:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!,\n$MODIFIER_STABILITY_FACTOR$: §G+3.00%§!,\n$MODIFIER_DRIFT_DEFENCE_FACTOR$: §G+10.0%§!,\n$MODIFIER_MAX_PLANNING_FACTOR$: §G+3.0%§!,\n$MODIFIER_INITIATIVE_FACTOR$: §G+3.0%§!.\n\nТекущее количество §Yстран-участниц§!: [?NGR.NGR_num_of_allies|0G]§!"
+ 
+ ###COMMON IDEAS TT###
+ AD_ECOWAS_member_tt: "\n§HВ случае войны с одним из членов альянса будет задействован§! §3ЭКОМОГ§!§!!§!Между членами ЭКОВАС будет заключен военный союз, призванный обеспечить безопасность и отстоять перед внешним врагом."
+ 
+ ###ЭКОНОМИКА###
+ economy_and_military_budget: "Экономика и военный бюджет"
+ 
+ military_expenses_laws: "Военные расходы"
+ AD_low_military_costs: "Низкие военные расходы"
+ AD_average_military_costs: "Средние военные расходы"
+ AD_high_military_costs: "Высокие военные расходы"
+ AD_total_military_costs: "Тотальные военные расходы"
+ 
+ social_security: "Социальные расходы"
+ AD_lack_of_social_programs: "Отсутствие социальных программ"
+ AD_very_low_social_investments: "Очень низкие социальные вложения"
+ AD_low_social_investments: "Низкие социальные вложения"
+ AD_acceptable_social_investments: "Приемлемые социальные вложения"
+ AD_average_social_investments: "Средние социальные вложения"
+ AD_significant_social_investments: "Значительные социальные вложения"
+ AD_high_social_investments: "Высокие социальные вложения"
+ AD_welfare_state: "Государство всеобщего благосостояния"
+ 
+ tax_policy: "Налоговая политика"
+ AD_minimum_taxes: "Минимальные налоги"
+ AD_low_taxes: "Низкие налоги"
+ AD_balanced_taxes: "Сбалансированные налоги"
+ AD_high_taxes: "Высокие налоги"
+ AD_robbery_of_the_population: "Грабёж населения"
+ 
+ ###СОСТОЯНИЕ ГОС-ВА###
+ condition_of_the_country: "Состояние государства"
+ 
+ poverty_level: "Уровень бедности ([?AD_poverty_level_var|1%%])" # TODO !!
+ AD_poverty: "Нищета"
+ AD_poorness: "Бедность"
+ AD_difficulties_with_average_income: "Трудности со средним доходом"
+ AD_appalling_poverty: "Ужасающая нищета"
+ AD_almost_a_european_society: "Почти европейское общество"
+ 
+ unemployment_rate_level: "Уровень безработицы ([?AD_unemployment_rate_level_var|1%%])"
+ AD_widespread_unemployment: "Повальная безработица"
+ AD_high_unemployment: "Высокая безработица"
+ AD_extensive_unemployment: "Обширная безработица"
+ AD_average_unemployment: "Средняя безработица"
+ AD_low_unemployment: "Низкая безработица"
+ 
+ society_development_level: "Развитие общества ([?AD_society_development_level_var|1%%])"
+ AD_chaotic_orders: "Хаотичные порядки"
+ AD_weak_state_apparatus: "Слабый государственный аппарат"
+ AD_moving_towards_progress: "Движение к прогрессу"
+ AD_stable_state_apparatus: "Стабильный государственный аппарат"
+ 
+ food_supply_level: "Уровень обеспечения продуктами питания ([?AD_food_supply_level_var|1%%])"
+ AD_total_hunger: "Тотальный голод"
+ AD_hunger: "Голод"
+ AD_problems_with_nutrition_in_the_majority_of_the_population: "Проблемы с питанием у большинства населения"
+ AD_three_meals_a_day_for_the_majority_of_the_population: "Трёхразовое питание у большинства населения"
+ 
+ corruption_level: "Уровень коррупции"
+ extr_corruption: "Экстремальная коррупция"
+ high_corruption: "Высокая коррупция"
+ med_corruption: "Cредняя коррупция"
+ low_corruption: "Низкая коррупция"

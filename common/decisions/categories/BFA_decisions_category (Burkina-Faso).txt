@@ -1,0 +1,4 @@
+BFA_political_situation_category = {
+	allowed = { tag = BFA }
+	priority = 1000
+}

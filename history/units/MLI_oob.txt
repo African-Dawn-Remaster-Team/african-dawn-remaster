@@ -1,0 +1,288 @@
+focus = {
+	current = "MLI_conduct_of_elections"
+	progress = 1
+}
+
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+	}
+}
+
+division_template = {
+	name = "Bataillon Infanterie"
+	priority = 1
+	regiments={
+		infantry={ x=0 y=0 }
+		infantry={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+		light_infantry_opol_on_guntruck={ x=0 y=3 }
+	}
+}
+
+division_template = {
+	name = "Infanterie Motorisée"
+	priority = 2
+	regiments={
+		infantry_on_truck={ x=0 y=0 }
+		infantry_on_truck={ x=0 y=1 }
+		infantry_on_truck={ x=0 y=2 }
+		infantry_on_jeep={ x=1 y=0 }
+		infantry_on_jeep={ x=1 y=1 }
+		infantry_on_jeep={ x=1 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "62e Régiment d'Infanterie Motorisée"
+		location = 1897
+		division_template = "Infanterie Motorisée"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "134e Escadron de Reconnaissance"
+		location = 1773
+		division_template = "Infanterie Motorisée"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Garde nationale du Mali"
+		location = 4916
+		division_template = "Infanterie Motorisée"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Garde nationale du Mali"
+		location = 4916
+		division_template = "Infanterie Motorisée"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Milice régionale à Douentza"
+		location = 4937
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Kayes"
+		location = 4924
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Labbezanga"
+		location = 4935
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Gossi"
+		location = 3285
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Bougoni"
+		location = 3677
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Kita"
+		location = 2218
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Bougoni"
+		location = 3677
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Niafunke"
+		location = 4958
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Niafunke"
+		location = 4958
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Hombori"
+		location = 2765
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Boni"
+		location = 1656
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Sevare"
+		location = 443
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Ansongo"
+		location = 4934
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Wabari"
+		location = 4948
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Menaka"
+		location = 4953
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Milice régionale à Menaka"
+		location = 4951
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.44
+	}
+	division= {	
+		name = "Milice régionale à Gourma-Rarus"
+		location = 1164
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.51
+	}
+	division= {	
+		name = "Milice régionale à Zarho"
+		location = 4969
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Yuwari"
+		location = 620
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Sikasso"
+		location = 716
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Segou"
+		location = 2693
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Milice régionale à Niono"
+		location = 1562
+		division_template = "Milice rurale"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.66
+	}
+	division= {	
+		name = "Bataillon Infanterie à Gao"
+		location = 3221
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Bataillon Infanterie à Tombouctou"
+		location = 4965
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Bataillon Infanterie à Gao"
+		location = 3221
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Bataillon Infanterie à Tombouctou"
+		location = 4965
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Bataillon Infanterie à Goundam"
+		location = 4964
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Bataillon Infanterie à Nara"
+		location = 1717
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Bataillon Infanterie à Menaka"
+		location = 4955
+		division_template = "Bataillon Infanterie"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.88
+	}
+}

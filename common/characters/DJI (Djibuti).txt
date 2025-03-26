@@ -1,0 +1,18 @@
+characters = {
+
+	DJI_Ismail_Omar_Guelleh = {
+		name = DJI_Ismail_Omar_Guelleh
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DJI/DJI_Ismail_Omar_Guelleh.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ISMAIL_OMAR_GUELLEH_DESC"
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+}

@@ -1,0 +1,26 @@
+capital = 30
+# set_oob = "_GENERIC_OOB"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+}
+
+recruit_character = KEN_Uhuru_Kenyatta
+recruit_character = KEN_William_Ruto
+set_politics = { ruling_party = liberalism elections_allowed = no }
+
+set_popularities = {
+	conservatism = 41
+	liberalism = 59
+}
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 0 }
+
+set_convoys = 3
+starting_train_buffer = 5
+
+set_research_slots = 2
+set_stability = -0.93
+set_war_support = -0.67

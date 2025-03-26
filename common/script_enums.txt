@@ -1,0 +1,386 @@
+script_enum_operative_mission_type = {
+	build_intel_network
+	counter_intelligence
+	quiet_network
+	root_out_resistance
+	control_trade
+}
+
+script_enum_advisor_slot_type = {
+	theorist
+	high_command
+	army_chief
+	navy_chief
+	air_chief
+	political_advisor
+}
+
+script_enum_equipment_stat = {	
+								#Viktors note for modders and future CDs: If you want to use a stat in the MIOs it has to be in the equipment category itself, not on the battalion level. So stuff like defense works because its contained within the equipment, but stuff like recon will not work because its owned by the battalion. Adding stuff like recon will not throw an error, but it will _not_ work. Moving stats to the equipment level from the bat-level might fix this if you are brave enough, but it is very risk and might break other stuff. Ive commented what is currently on the battalion level below and should not be used with MIOs.
+
+	default_morale 					#Cannot be used with MIOS
+	defense
+	breakthrough
+	hardness
+	soft_attack
+	hard_attack
+	recon 							#Cannot be used with MIOS
+	entrenchment					# ONLY works for tanks with dozer blades, NOT infantry
+	initiative 						#Cannot be used with MIOS
+	casualty_trickleback 			#Cannot be used with MIOS
+	supply_consumption_factor 		#Cannot be used with MIOS
+	supply_consumption 				#Cannot be used with MIOS
+	suppression 					#Cannot be used with MIOS
+	suppression_factor 				#Cannot be used with MIOS
+	experience_loss_factor 			#Cannot be used with MIOS
+	equipment_capture_factor 		#Cannot be used with MIOS
+	recovery
+	additional_collateral_damage
+	fuel_capacity
+	surface_detection
+	sub_detection
+	surface_visibility
+	sub_visibility
+	lg_attack
+	lg_armor_piercing
+	hg_attack
+	hg_armor_piercing
+	torpedo_attack
+	sub_attack
+	anti_air_attack
+	amphibious_defense
+	naval_speed
+	naval_range
+	mines_planting
+	mines_sweeping
+	naval_light_gun_hit_chance_factor
+	naval_heavy_gun_hit_chance_factor
+	naval_torpedo_hit_chance_factor
+	naval_torpedo_damage_reduction_factor
+	naval_torpedo_enemy_critical_chance_factor
+	convoy_raiding_coordination
+	patrol_coordination
+	search_and_destroy_coordination
+	air_range
+	air_defence
+	air_attack
+	air_agility
+	air_bombing
+	air_superiority
+	naval_strike_attack
+	naval_strike_targetting
+	air_ground_attack
+	air_visibility_factor
+	railway_gun_attack 			#Cannot be used with MIOS
+	railway_gun_attack_range_index_in_define # This cannot be used with MIOs or equipment_bonus - only in equipment definition
+	railway_gun_annex_ratio
+	railway_gun_hours_between_redistribution
+	max_organisation			#Cannot be used with MIOS
+	max_strength				##Cannot be used with MIOS
+	maximum_speed	
+	armor_value
+	ap_attack
+	reliability
+	reliability_factor
+	weight
+	thrust 						#DLC Only be careful and avoid unless needed
+	fuel_consumption
+	fuel_consumption_factor
+	strategic_attack
+	carrier_size
+	acclimatization_hot_climate_gain_factor			#Cannot be used with MIOS
+	acclimatization_cold_climate_gain_factor		#Cannot be used with MIOS
+	night_penalty				#Cannot be used with MIOS
+	build_cost_ic
+	naval_weather_penalty_factor
+}
+
+script_enum_production_stat = {
+	production_cost_factor
+	production_capacity_factor
+	production_efficiency_cap_factor
+	production_efficiency_gain_factor
+	production_resource_need_factor
+	production_resource_penalty_factor
+	production_conversion_speed_factor
+}
+
+script_enum_equipment_category = {
+	convoy
+	train
+	floating_harbor
+	railway_gun
+	armor
+	motorized
+	mechanized
+	infantry
+	capital_ship
+	submarine
+	screen_ship
+	fighter
+	heavy_fighter
+	interceptor
+	tactical_bomber
+	strategic_bomber
+	cas
+	naval_bomber
+	missile
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile		# TODO а у нас будут вообще самолеты?
+	sam_missile
+	suicide
+	scout_plane
+	maritime_patrol_plane
+	air_transport
+	carrier
+	missile_launcher
+	support
+	amphibious
+	anti_air
+	artillery
+	anti_tank
+	rocket
+	flame
+	land_cruiser
+}
+
+script_enum_equipment_bonus_type = {
+	## This script enum contains all equipment types that can be used in equipment_bonus
+	## or in game/common/military_industrial_organization scripts.
+
+	## This list contains either equipment category (see script_enum_equipment_category above)
+	## or equipment archetypes & types defined in game/common/units/equipments
+
+	## This enum should be updated every time either of those is updated
+	## (there will be a log error at startup as a reminder)
+
+	category_fb	# TODO remove?
+	category_all_armor
+
+	# Equipment categories
+	convoy
+	train
+	floating_harbor
+	railway_gun
+	armor
+	motorized
+	mechanized
+	infantry
+	capital_ship
+	submarine
+	screen_ship
+	fighter
+	heavy_fighter
+	interceptor
+	tactical_bomber
+	strategic_bomber
+	cas
+	naval_bomber
+	missile
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	suicide
+	scout_plane
+	maritime_patrol_plane
+	air_transport
+	carrier
+	missile_launcher
+	support
+	amphibious
+	anti_air
+	artillery
+	anti_tank
+	rocket
+	flame
+	# land_cruiser		TODO ???
+	# super_heavy_artillery_equipment
+	# super_heavy_artillery_equipment_1
+	# self_propelled_super_heavy_artillery_equipment
+	# self_propelled_super_heavy_artillery_equipment_1
+	# armored_support_vehicle
+	# armored_support_vehicle_1
+	# helicopter_equipment
+	# helicopter_equipment_1
+	# mothership_equipment
+	# mothership_equipment_0
+	# strat_bomber_intercontinental_equipment
+	# strat_bomber_intercontinental_equipment_1
+	# motorbike_equipment
+	# motorbike_equipment_1
+
+	# Equipment archetypes & types
+	# land_cruiser_chassis		TODO ???
+	# land_cruiser_chassis_1
+	# land_cruiser_equipment_1 #(No-NSB version)
+	# explosive_ammo_equipment
+	# explosive_ammo_equipment_1
+	# ballistic_missile_equipment
+	# ballistic_missile_equipment_1
+	# ballistic_missile_equipment_2
+	# ballistic_missile_equipment_3
+	# nuclear_missile_equipment
+	# nuclear_missile_equipment_1
+	# nuclear_missile_equipment_2
+	# sam_missile_equipment
+	# sam_missile_equipment_1
+	# small_plane_airframe_5
+	# super_heavy_railway_gun_equipment
+	# super_heavy_railway_gun_equipment_1
+	# ship_hull_mega_carrier
+	# ship_hull_carrier_modern
+	# modern_carrier
+	# mega_carrier
+	# ship_hull_cruiser_modern_aa
+	# ship_hull_heavy_modern
+	# modern_battleship
+	# cruiser_submarine
+	# fleet_submarine
+	# midget_submarine
+	# nuclear_submarine
+	# nuclear_missile_submarine
+	# rocket_submarine
+	# ship_hull_nuclear_submarine
+	# ship_hull_fleet_submarine
+	# small_plane_cas_airframe_5
+	# small_plane_naval_bomber_airframe_5
+	# small_plane_suicide_airframe_5
+	# supersonic_fighter_equipment_1
+	infantry_equipment # TODO remove?
+	infantry_equipment_0
+	infantry_equipment_1
+	infantry_equipment_2
+	infantry_equipment_3
+	waterpipe_rifle
+	ak_0
+	ak_1
+	ak_2
+	ak_3
+	qbz_0
+	qbz_1
+	qbz_2
+	qbz_3
+	M16_0
+	M16_1
+	M16_2
+	M16_3
+	FAMAS_0
+	FAMAS_1
+	FAMAS_2
+	FAMAS_3
+	support_equipment
+	support_equipment_1
+	spec_oborud_equipment
+	spec_oborud_equipment_0
+	howitzer_equipment
+	howitzer_equipment_handmade
+	howitzer_equipment_d30
+	howitzer_equipment_giatsint
+	howitzer_equipment_msta
+	howitzer_equipment_gc45
+	howitzer_equipment_ah4
+	howitzer_equipment_m101
+	howitzer_equipment_m119
+	howitzer_equipment_m777
+	howitzer_equipment_m50
+	howitzer_equipment_trf1
+	ATGM_equipment
+	ATGM_equipment_handmade
+	ATGM_equipment_rpg7
+	ATGM_equipment_9k111
+	ATGM_equipment_9m133
+	ATGM_equipment_hj8
+	ATGM_equipment_hj12
+	ATGM_equipment_m72
+	ATGM_equipment_tow
+	ATGM_equipment_javelin
+	ATGM_equipment_milan
+	ATGM_equipment_mmp
+	manpads_equipment
+	manpads_equipment_handmade
+	manpads_equipment_strela
+	manpads_equipment_igla
+	manpads_equipment_verba
+	manpads_equipment_fn6
+	manpads_equipment_qw3
+	manpads_equipment_redeye
+	manpads_equipment_fim92
+	manpads_equipment_stinger
+	manpads_equipment_mistral
+	manpads_equipment_mistral2
+	jeep_equipment
+	toyota_jeep
+	mrap_equipment
+	mrap_car_equipment
+	light_tank_chassis
+	light_tank_equipment_0
+	medium_tank_chassis
+	medium_tank_equipment_legacy
+	modern_tank_equipment_t62
+	modern_tank_equipment_t72
+	modern_tank_equipment_t90
+	modern_tank_equipment_type69
+	modern_tank_equipment_type85
+	modern_tank_equipment_type99
+	modern_tank_equipment_m60
+	modern_tank_equipment_m1a1
+	modern_tank_equipment_m2a1
+	modern_tank_equipment_leopard1
+	modern_tank_equipment_leopard2a1
+	modern_tank_equipment_leopard2a4
+	heavy_tank_chassis
+	armored_support_vehicle_chassis
+	armored_support_vehicle_equipment_x_2
+	armored_support_vehicle_equipment_x_3
+	armored_support_vehicle_equipment_x_4
+	armored_support_vehicle_equipment_x_5
+	infantry_carrying_armored_vehicle
+	infantry_armored_transport_equipment_x
+	infantry_armored_transport_equipment_x_2
+	infantry_armored_transport_equipment_x_3
+	infantry_armored_transport_equipment_x_4
+	cas_airframe
+	cas_airframe_0_ru
+	cas_airframe_1_ru
+	cas_airframe_0_us
+	cas_airframe_1_us
+	cas_airframe_0_fr
+	cas_airframe_1_fr
+	light_cas_airframe
+	light_cas_airframe_0
+	fighter_airframe
+	fighter_airframe_0_ru
+	fighter_airframe_1_ru
+	fighter_airframe_0_us
+	fighter_airframe_1_us
+	fighter_airframe_0_fr
+	fighter_airframe_1_fr
+	attack_helicopter_airframe
+	attack_helicopter_airframe_0_ru
+	attack_helicopter_airframe_0_us
+	attack_helicopter_airframe_0_fr
+	transport_helicopter_airframe
+	transport_helicopter_airframe_0
+	uav_airframe
+	uav_airframe_0
+	transport_plane_equipment
+	transport_plane_equipment_1
+	strategic_plane_airframe
+	strategic_plane_airframe_0
+	train_equipment
+	train_equipment_1
+	train_equipment_2
+	train_equipment_3
+	OTRK_equipment_arch
+	OTRK_equipment_1
+	convoy_1
+	
+	# transport_plane_equipment  TODO мб оставить и переименовав?
+	# transport_plane_equipment_1
+	# transport_plane_equipment_2
+	# transport_plane_equipment_3
+	# railway_gun_equipment
+	# railway_gun_equipment_1
+}

@@ -1,0 +1,18 @@
+characters = {
+
+	SSD_Salva_Kiir_Mayardit = {
+		name = SSD_Salva_Kiir_Mayardit
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SSD/SSD_Salva_Kiir_Mayardit.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_SALVA_KIIR_MAYARDIT_DESC"
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+}

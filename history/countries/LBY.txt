@@ -1,0 +1,179 @@
+capital = 146
+set_oob = "LBY_oob"
+set_air_oob = "LBY_air_oob"
+set_cosmetic_tag = LBY_libyan_house_of_representatives
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_atgm_tech = 1
+	modern_camouflage_tech = 1
+	handmade_manpads_tech = 1
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	tech_mrap = 1
+	basic_train = 1
+	tech_specnaz = 1
+	tech_support = 1
+	tech_ifv_1  = 1
+	tech_light_tank_legacy  = 1
+}
+
+recruit_character = LBY_Mohamed_al_Menfi
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 100
+}
+
+set_variable = { AD_fog_source_of_power = 2 }
+set_variable = { AD_fog_power_structure = 0 }
+
+set_convoys = 3
+starting_train_buffer = 5
+
+set_research_slots = 1
+set_stability = -1
+set_war_support = 0.2
+
+recruit_character = LBY_Khalifa_Haftar     
+promote_character = LBY_Khalifa_Haftar  
+
+add_ideas = {
+	LBY_Islamic_extremists
+	LBY_Fragmentation_of_fractions
+	LBY_Disloyal_tribes
+	LBY_Support_from_Russia
+}
+
+create_dynamic_country = {
+	original_tag = LBY
+	copy_tag = LBY
+	reserve_dynamic_country = yes
+	set_capital = {
+		state = 150
+  		remember_old_capital = no
+	}
+	
+	set_cosmetic_tag = LBY_toubou_front_for_the_salvation_of_libya
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	every_core_state = { remove_core_of = PREV }
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		LBY_minor_tribes
+	}
+	
+	transfer_state = 148
+	transfer_state = 150
+	148 = { add_core_of = PREV }
+	149 = { add_core_of = PREV }
+	150 = { add_core_of = PREV }
+	151 = { add_core_of = PREV }
+	
+	set_oob = "TSF_oob"
+	recruit_character = LBY_Issa_Abdel_Majid_Mansur     
+	promote_character = LBY_Issa_Abdel_Majid_Mansur 
+	
+	add_civil_war_target = LBY
+	LBY = { add_civil_war_target = PREV }
+}
+
+create_dynamic_country = {
+	original_tag = LBY
+	copy_tag = LBY
+	reserve_dynamic_country = yes
+	set_capital = {
+		state = 21
+  		remember_old_capital = no
+	}
+	
+	set_cosmetic_tag = LBY_government_of_national_accord
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		LBY_Fragmentation_of_fractions
+		LBY_Disloyal_tribes
+		LBY_Control_over_the_national_bank
+	}
+	
+	set_party_name = {
+		ideology = centrism
+		long_name = DLG_centrism_party_long
+		name = DLG_centrism_party
+	}
+	
+	transfer_state = 21
+	set_province_controller = 5057
+	set_province_controller = 5065
+	set_province_controller = 5067
+	set_province_controller = 5058
+	set_province_controller = 5097
+	set_province_controller = 1676
+	set_province_controller = 3184
+	set_province_controller = 5088
+	set_province_controller = 5089
+	set_province_controller = 5087
+	set_province_controller = 893
+	set_province_controller = 187
+	set_province_controller = 5083
+	set_province_controller = 744
+	set_province_controller = 427
+	set_province_controller = 2599
+	set_province_controller = 1398
+	set_province_controller = 3274
+	set_province_controller = 3439
+	set_province_controller = 2176
+	set_province_controller = 1626
+	set_province_controller = 805
+	set_province_controller = 5094
+	set_province_controller = 5095
+	set_province_controller = 5102
+	set_province_controller = 353
+	set_province_controller = 5096
+	set_province_controller = 5101
+	set_province_controller = 5106
+	set_province_controller = 5098
+	set_province_controller = 664
+	set_province_controller = 409
+	set_province_controller = 768
+	LBY = {
+		set_province_controller = 5108
+		set_province_controller = 5109
+		set_province_controller = 992
+		set_province_controller = 5112
+		set_province_controller = 1804
+		set_province_controller = 5107
+	}
+	
+	set_oob = "WLB_oob"
+	set_air_oob = "DLG_air_oob"
+	recruit_character = LBY_Fayez_al_Sarraj     
+	promote_character = LBY_Fayez_al_Sarraj  
+	declare_war_on = { target = LBY type = civil_war }
+
+	add_civil_war_target = LBY
+	LBY = { add_civil_war_target = PREV }
+	set_autonomy = {
+		target = TOU
+		autonomous_state = autonomy_puppet
+	}
+	set_autonomy = {
+		target = GAT
+		autonomous_state = autonomy_puppet
+	}
+	TOU = { declare_war_on = { target = LBY type = civil_war } }
+	GAT = { declare_war_on = { target = LBY type = civil_war } }
+}

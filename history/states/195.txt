@@ -1,0 +1,19 @@
+state={
+	id=195
+	name="STATE_195"
+	provinces={
+		1338 4583 
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 1338 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=22949
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

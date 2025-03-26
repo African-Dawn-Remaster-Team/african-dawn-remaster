@@ -1,0 +1,22 @@
+state={
+	id=120
+	name="STATE_120"
+	provinces={
+		404 669 957 1090 1276 1679 1712 1802 1859 2013 2109 2182 2276 2511 2677 3050 3064 3283 3576 3606 4871 4875 
+	}
+	history={
+		owner = NGR
+		add_core_of = NGR
+		victory_points = { 2677 5 }
+		victory_points = { 3606 3 }
+		victory_points = { 2013 3 }
+		victory_points = { 3050 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=4692990  
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

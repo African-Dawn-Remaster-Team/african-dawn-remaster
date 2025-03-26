@@ -1,0 +1,21 @@
+state={
+	id=135
+	name="STATE_135"
+	provinces={
+		26 1274 1349 1352 1856 2144 2460 2917 3577 4966 4968 4969 4970 5037 5038 
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 26 3 }
+		victory_points = { 4969 3 }
+		victory_points = { 3577 5 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=204045
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,78 @@
+add_namespace = AD_NGA
+
+#Восстание Биафры
+country_event = {
+	id = AD_NGA.0
+	title = AD_NGA.0.t
+	desc = AD_NGA.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.0" }
+	option = {
+		name = AD_NGA.0.a
+		BIA = {
+			transfer_state = 101
+			set_province_controller = 4812
+			declare_war_on = { target = ROOT type = civil_war }
+			add_civil_war_target = ROOT
+			add_ideas = {
+				AD_surrender_limit_spirit_idea
+				AD_lack_of_social_programs
+				AMB_our_lands
+			}
+			add_manpower = 14000
+			ROOT = {add_civil_war_target = BIA}
+			CMR = {add_civil_war_target = BIA}
+			load_oob = "BIA_oob"
+		}
+		add_threat = 0.07
+		set_province_controller = 4814
+		set_province_controller = 713
+		set_province_controller = 741
+		set_province_controller = 1332
+		set_province_controller = 1589
+		set_province_controller = 2284
+		set_province_controller = 2097
+		set_province_controller = 2353
+		set_province_controller = 3181
+		set_province_controller = 3188
+		set_province_controller = 3225
+		set_province_controller = 3754
+		set_province_controller = 3774
+		set_province_controller = 3782
+		set_province_controller = 4707
+		set_province_controller = 4708
+		set_province_controller = 4709
+		set_province_controller = 4710
+		set_province_controller = 4711
+		set_province_controller = 4712
+		set_province_controller = 4713
+		set_province_controller = 4718
+		set_province_controller = 4719
+		set_province_controller = 4721
+		set_province_controller = 4722
+	}
+}
+
+#ИГ-ЗА против БХ
+country_event = {
+	id = AD_NGA.1
+	title = AD_NGA.1.t
+	desc = AD_NGA.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_NGR.1" }
+	option = {
+		name = AD_NGA.1.a
+		remove_ideas = ISW_BH_conflict
+		random_list = {
+			50 = {
+				kill_country_leader = yes
+				promote_character = ISW_Abubakar_Shekau  
+			}
+			50 = {
+				retire_character = ISW_Abubakar_Shekau
+			}
+		}
+	}
+}

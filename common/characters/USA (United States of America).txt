@@ -1,0 +1,32 @@
+characters = {
+
+	USA_Michael_Langley = {
+		name = USA_Michael_Langley
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/USA_Michael_Langley.dds"
+			}
+			army = {
+				large = "gfx/leaders/USA/USA_Michael_Langley.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_USA_MICHAEL_LANGLEY_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+	
+	USA_Stephen_Townsend = {		#FOR BFA#
+		name = USA_Stephen_Townsend
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+air_wings = {
+	109 = {
+		fighter_airframe_0_ru =  {
+			owner = "NGA" 
+			creator = "RUS"
+			amount = 3
+			version_name = "MIG-23"
+		}
+		light_cas_airframe_0 =  {
+			owner = "NGA" 
+			creator = "RUS"
+			amount = 11
+			version_name = "L-39"
+		}
+		attack_helicopter_airframe_0_ru =  {
+			owner = "NGA" 
+			creator = "RUS"
+			amount = 54
+			version_name = "Mi-24VB"
+		}
+		uav_airframe_0 =  {
+			owner = "NGA" 
+			creator = "TUR"
+			amount = 6
+			version_name = "Bayraktar TB2"
+		}
+	}
+}

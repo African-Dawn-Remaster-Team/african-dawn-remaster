@@ -1,0 +1,299 @@
+EQG_split_in_the_mongomo_clan_category = {
+
+	EQG_theodorian_support_from_nguema_mbasogo_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			OR = {
+				NOT = { has_country_leader = { character = EQG_Teodoro_Obiang_Nguema_Mbasogo ruling_only = yes } }
+				hidden_trigger = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag }
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission EQG_theodorian_support_from_nguema_mbasogo_mission"
+		}
+		days_mission_timeout = 150
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission EQG_theodorian_support_from_nguema_mbasogo_mission"
+			add_to_variable = { EQG_influence_of_theodorian = 2 tooltip = EQG_influence_of_theodorian_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			activate_mission = EQG_theodorian_support_from_nguema_mbasogo_mission
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_develop_contracts_with_western_corporations = {
+		priority = 900
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 20
+		days_re_enable = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision EQG_develop_contracts_with_western_corporations"
+			subtract_from_variable = { AD_fo_position = 0.05 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.05 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_to_variable = { EQG_influence_of_gabrielle = 10 tooltip = EQG_influence_of_gabrielle_tt }
+			EQG_fellow_clansmen_check_effect = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_support_gabriel_projects = {
+		priority = 800
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 45
+		days_re_enable = 400
+		days_remove = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision EQG_support_gabriel_projects"
+			add_to_variable = { EQG_influence_of_gabrielle = 40 tooltip = EQG_influence_of_gabrielle_tt }
+			EQG_fellow_clansmen_check_effect = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision EQG_support_gabriel_projects"
+		}
+		modifier = { production_speed_buildings_factor = 0.1 }
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_reduce_theodorian_expenses = {
+		priority = 700
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		custom_cost_trigger = {
+			set_temp_variable = { stability_cost = 0.01 }
+			check_variable = { var = stability value = stability_cost compare = greater_than_or_equals }
+		}
+		custom_cost_text = stability_cost
+		days_re_enable = 200
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision EQG_reduce_theodorian_expenses"
+			add_to_variable = { EQG_influence_of_theodorian = -15 tooltip = EQG_influence_of_theodorian_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			hidden_effect = { add_stability = -0.01 }
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_limit_gabriel_activities = {
+		priority = 600
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		cost = 70
+		days_re_enable = 380
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision EQG_limit_gabriel_activities"
+			add_to_variable = { EQG_influence_of_gabrielle = -10 tooltip = EQG_influence_of_gabrielle_tt }
+			EQG_fellow_clansmen_check_effect = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+
+EQG_war_operations = {
+
+	EQG_attack_on_the_cameroon = {
+		priority = 1500
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			OR = {
+				if = {
+					limit = { tag = EQG }
+					has_war_with = CMR
+				}
+				else = {
+					has_war_with = EQG
+				}
+				24 = { has_border_war = no }
+				85 = { has_border_war = no }
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 24
+				state = 85
+			} 
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission EQG_attack_on_the_cameroon"
+			if = {
+				limit = { 24 = { has_border_war = yes } }
+				cancel_border_war = {
+					defender = 85
+					attacker = 24
+				}
+			}
+		}
+		days_mission_timeout = 90
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission EQG_attack_on_the_cameroon"
+			if = {
+				limit = { 24 = { has_border_war = yes } }
+				cancel_border_war = {
+					defender = 85
+					attacker = 24
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_attack_on_the_gabon = {
+		priority = 1500
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			OR = {
+				if = {
+					limit = { tag = EQG }
+					has_war_with = 70.controller
+				}
+				else = {
+					has_war_with = EQG
+				}
+				73 = { has_border_war = no }
+				70 = { has_border_war = no }
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 73
+				state = 70
+			} 
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission EQG_attack_on_the_gabon"
+			if = {
+				limit = { 73 = { has_border_war = yes } }
+				cancel_border_war = {
+					defender = 70
+					attacker = 73
+				}
+			}
+		}
+		days_mission_timeout = 90
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission EQG_attack_on_the_gabon"
+			if = {
+				limit = { 73 = { has_border_war = yes } }
+				cancel_border_war = {
+					defender = 70
+					attacker = 73
+				}
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+
+EQG_covid_epidemic_category = {
+	
+	EQG_covid_outbreak_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			NOT = {
+				has_idea = EQG_patient_zero_idea
+				has_idea = EQG_minor_spread_of_infection_idea
+				has_idea = EQG_average_spread_of_infection_idea
+				has_idea = EQG_high_spread_of_infection_idea
+				has_idea = EQG_total_spread_of_infection_idea
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission EQG_covid_outbreak_mission"
+		}
+		days_mission_timeout = 280
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission EQG_covid_outbreak_mission"
+			activate_mission = EQG_covid_outbreak_mission
+			custom_effect_tooltip = empty_line_tooltip
+			EQG_covid_outbreak_raise_effect = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_vaccination_of_the_population_mission = {
+		priority = 950
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = { NOT = { has_active_mission = EQG_covid_outbreak_mission } }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission EQG_vaccination_of_the_population_mission"
+		}
+		days_mission_timeout = 120
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission EQG_vaccination_of_the_population_mission"
+			activate_mission = EQG_vaccination_of_the_population_mission
+			custom_effect_tooltip = empty_line_tooltip
+			EQG_covid_outbreak_down_effect = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	EQG_mobilization_of_cuban_doctors = {
+		priority = 900
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			has_completed_focus = EQG_appeal_to_cuban_doctors
+			FROM = { hospital > 0 }
+		}
+		state_target = yes
+		target_array = controlled_states
+		cost = 15
+		on_map_mode = map_and_decisions_view
+		days_re_enable = 365
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision EQG_mobilization_of_cuban_doctors in ([FROM.GetName])"
+			add_days_mission_timeout = { mission = EQG_covid_outbreak_mission days = 80 }
+			custom_effect_tooltip = empty_line_tooltip
+			FROM = {
+				if = {
+					limit = { NOT = { has_state_flag = EQG_distribution_of_masks_unlock_flag } }
+					set_state_flag = EQG_distribution_of_masks_unlock_flag
+					unlock_decision_tooltip = EQG_distribution_of_masks
+				}
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+	
+	EQG_distribution_of_masks = {
+		priority = 800
+		icon = GFX_decision_generic_political_discourse
+		available = { FROM = { has_state_flag = EQG_distribution_of_masks_unlock_flag } }
+		state_target = yes
+		target_array = controlled_states
+		cost = 40
+		on_map_mode = map_and_decisions_view
+		days_re_enable = 365
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision EQG_distribution_of_masks in ([FROM.GetName])"
+			add_days_mission_timeout = { mission = EQG_covid_outbreak_mission days = 25 }
+		}
+		ai_will_do = { base = 50 }
+	}
+}

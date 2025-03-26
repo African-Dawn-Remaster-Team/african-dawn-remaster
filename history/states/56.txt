@@ -1,0 +1,24 @@
+
+state={
+	id=56
+	name="STATE_56"
+	provinces={
+		403 593 1383 1486 1974 2486 2494 2881 2991 3914 3915 3916 3917 
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 3916 5 }
+		victory_points = { 2881 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=57062
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

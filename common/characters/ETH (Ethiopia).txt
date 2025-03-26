@@ -1,0 +1,18 @@
+characters = {
+
+	ETH_Abiy_Ahmed = {
+		name = ETH_Abiy_Ahmed
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ETH/ETH_Abiy_Ahmed.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABIY_AHMED_DESC"
+			ideology = liberalism_subtype_liberal_democracy
+		}
+	}
+}

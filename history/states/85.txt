@@ -1,0 +1,24 @@
+state={
+	id=85
+	name="STATE_85"
+	provinces={
+		678 860 1537 1581 1931 2622 2834 3194 3367 3780 
+	}
+	resources = {
+		steel = 4
+	}
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 3367 3 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			3194 = { dam = 1 }
+		}
+	}
+	manpower=749552
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

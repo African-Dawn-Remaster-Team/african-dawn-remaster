@@ -1,0 +1,20 @@
+MLI_dependence_on_international_donors_check_effect = {
+	add_to_variable = { MLI_dependence_on_international_donors_var = MLI_dependence_on_international_donors_temp_var tooltip = MLI_dependence_on_international_donors_var_tt }
+	clamp_variable = { var = MLI_dependence_on_international_donors_var min = 0 }
+	
+	divide_temp_variable = { MLI_dependence_on_international_donors_temp_var = 100 }
+	
+	set_temp_variable = { MLI_temp_1 = MLI_dependence_on_international_donors_temp_var }
+	set_temp_variable = { MLI_temp_2 = MLI_dependence_on_international_donors_temp_var }
+	set_temp_variable = { MLI_temp_3 = MLI_dependence_on_international_donors_temp_var }
+	
+	multiply_temp_variable = { MLI_temp_1 = 0.25 }
+	multiply_temp_variable = { MLI_temp_2 = -0.25 }
+	multiply_temp_variable = { MLI_temp_3 = -0.50 }
+	
+	add_to_variable = { MLI_production_speed_infrastructure_factor_var = MLI_temp_1 tooltip = production_speed_infrastructure_factor_tooltip }
+	add_to_variable = { MLI_political_power_factor_var = MLI_temp_2 tooltip = political_power_factor_tooltip }
+	add_to_variable = { MLI_money_from_taxes_modifier_var = MLI_temp_3 tooltip = money_from_taxes_tooltip }
+	
+	force_update_dynamic_modifier = yes
+}

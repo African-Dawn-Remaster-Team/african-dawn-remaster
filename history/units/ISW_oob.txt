@@ -1,0 +1,187 @@
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+		light_infantry_opol_on_guntruck={ x=0 y=3 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Régiment d'Infanterie a Maroua"
+		location = 4779
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Maroua"
+		location = 4773
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Maroua"
+		location = 4781
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tchad"
+		location = 2331
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tchad"
+		location = 2331
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tchad"
+		location = 632
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tchad"
+		location = 4805
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tchad"
+		location = 4801
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Diffa"
+		location = 4806
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Diffa"
+		location = 4806
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4800
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4797
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4783
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4775
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4797
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4783
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4775
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Borno"
+		location = 4774
+		division_template = "Milice rurale"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Maroua"
+		location = 4772
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Maidugouri"
+		location = 4785
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Maidugouri"
+		location = 4778
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Maidugouri"
+		location = 4789
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Monguno"
+		location = 4799
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+}

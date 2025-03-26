@@ -1,0 +1,589 @@
+guiTypes = {
+	containerWindowType = {
+		name = "economic_info_topbar"
+		position = { x = -4 y = -1 } 
+		size = { width=100%% height=100%% }
+		
+		iconType ={
+			name ="balance_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = -650 y = 4 }
+			Orientation = upper_right
+		}
+		
+		iconType = {
+			name = "income_icon"
+			position = { x=-650 y=7 }
+			spriteType = "GFX_AD_CFA_franc_icon"
+			Orientation = upper_right
+		}
+		
+		instantTextBoxType = {
+			name ="balance"
+			position = { x= -633 y = 7 }
+			font = "hoi_18mbs"
+			text = AD_economy_balance_value
+			format = right
+			maxWidth = 70
+			maxHeight = 24
+			fixedsize = yes
+			Orientation = upper_right
+		}
+		
+		iconType ={
+			name ="gdp_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = -530 y = 4 }
+			Orientation = upper_right
+		}
+		
+		iconType = {
+			name = "splitter"
+			position = { x=-545 y=0 }
+			spriteType = "GFX_AD_topbar_splitter"
+			Orientation = upper_right
+		}
+		
+		iconType = {
+			name = "gdp_icon"
+			position = { x=-530 y=7 }
+			spriteType = "GFX_AD_CFA_franc_icon"
+			Orientation = upper_right
+		}
+		
+		instantTextBoxType = {
+			name = "gdp"
+			position = { x= -513 y = 7 }
+			font = "hoi_18mbs"
+			text = AD_economy_gdp_value
+			format = right
+			maxWidth = 70
+			maxHeight = 24
+			fixedsize = yes
+			Orientation = upper_right
+		}
+		
+		iconType ={
+			name ="debt_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = -430 y = 4 }
+			Orientation = upper_right
+		}
+		
+		iconType = {
+			name = "debt_icon"
+			position = { x=-430 y=7 }
+			spriteType = "GFX_AD_CFA_franc_debt_icon"
+			Orientation = upper_right
+		}
+		
+		instantTextBoxType = {
+			name ="debt"
+			position = { x= -413 y = 7 }
+			font = "hoi_18mbs"
+			text = AD_economy_debt_value
+			format = right
+			maxWidth = 70
+			maxHeight = 24
+			fixedsize = yes
+			Orientation = upper_right
+		}
+	}
+	
+	containerWindowType = {
+		name = "economic_info"
+		position = { x = 11 y = 43 } 
+		size = { width = 540 height = 300 }
+		
+		background = {
+			name = "Background"
+			# spriteType ="GFX_tiled_plain_bg"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+		
+		iconType = {
+			name = "economic_header"
+			position = { x = 1 y = 0 }
+			quadTextureSprite = "GFX_trade_header"
+		}
+		
+		iconType = {
+			name ="economic_bg"
+			spriteType = "GFX_AD_economy_info_bg"
+			position = {x=0 y=29}
+		}
+		
+		instantTextboxType = {
+			name = "title"
+			position = { x = 170 y = 6 }
+			font = "hoi_30header"
+			text = AD_economy_title
+			maxWidth = 180
+			maxHeight = 15
+			multiline = no
+			format = center
+		}
+		
+		containerWindowType = {
+			name = "income"
+			position = { x = 0 y = 32 } 
+		
+			instantTextboxType = {
+				name = "income_title"
+				position = { x = 10 y = 7 }
+				font = "hoi_16mbs"
+				text = AD_economy_income
+				maxWidth = 180
+				multiline = no
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "income1"
+				position = { x = 13 y = 34 }
+				font = "hoi_16mbs"
+				text = AD_economy_income1
+				maxWidth = 110
+				multiline = no
+				format = left
+			}
+			instantTextboxType = {
+				name = "income1_value"
+				position = { x = 123 y = 34 }
+				font = "hoi_16mbs"
+				text = AD_economy_income1_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "income2"
+				position = { x = 13 y = 54 }
+				font = "hoi_16mbs"
+				text = AD_economy_income2
+				maxWidth = 110
+				multiline = no
+				format = left
+			}
+			instantTextboxType = {
+				name = "income2_value"
+				position = { x = 123 y = 54 }
+				font = "hoi_16mbs"
+				text = AD_economy_income2_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "income3"
+				position = { x = 13 y = 74 }
+				font = "hoi_16mbs"
+				text = AD_economy_income3
+				maxWidth = 110
+				multiline = no
+				format = left
+			}
+			instantTextboxType = {
+				name = "income3_value"
+				position = { x = 123 y = 74 }
+				font = "hoi_16mbs"
+				text = AD_economy_income3_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "income_summary"
+				position = { x = 13 y = 130 }
+				font = "hoi_16mbs"
+				text = AD_economy_income_summary
+				maxWidth = 110
+				multiline = no
+				format = left
+			}
+			instantTextboxType = {
+				name = "income_summary_value"
+				position = { x = 123 y = 130 }
+				font = "hoi_16mbs"
+				text = AD_economy_income_summary_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+		}
+		
+		containerWindowType = {
+			name = "extends"
+			position = { x = 180 y = 32 } 
+		
+			instantTextboxType = {
+				name = "extends_title"
+				position = { x = 10 y = 7 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends
+				maxWidth = 180
+				multiline = no
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "extends1"
+				position = { x = 13 y = 34 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends1
+				maxWidth = 110
+				multiline = no
+				format = left
+			}
+			instantTextboxType = {
+				name = "extends1_value"
+				position = { x = 123 y = 34 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends1_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "extend2"
+				position = { x = 13 y = 54 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends2
+				maxWidth = 110
+				multiline = no
+				format = left
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "extends2_value"
+				position = { x = 123 y = 54 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends2_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+
+			instantTextboxType = {
+				name = "extends3"
+				position = { x = 13 y = 74 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends3
+				maxWidth = 110
+				multiline = no
+				format = left
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "extends3_value"
+				position = { x = 123 y = 74 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends3_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "extends4"
+				position = { x = 13 y = 94 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends4
+				maxWidth = 110
+				multiline = no
+				format = left
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "extends4_value"
+				position = { x = 123 y = 94 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends4_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "extends_summary"
+				position = { x = 13 y = 130 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends_summary
+				maxWidth = 110
+				multiline = no
+				format = left
+			}
+			instantTextboxType = {
+				name = "extends_summary_value"
+				position = { x = 123 y = 130 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends_summary_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+		}
+		
+		containerWindowType = {
+			name = "modifier"
+			position = { x = 370 y = 32 } 
+			
+			# iconType = {
+				# name = "efficiency_growth_icon"
+				# position = { x=0 y=34 }
+				# spriteType = "GFX_efficiency_icon"
+			# }
+			
+			instantTextboxType = {
+				name = "individuals_tax"
+				position = { x = 0 y = 34 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_individuals_tax_modifier|Y0%]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			instantTextboxType = {
+				name = "personal_value"
+				position = { x = 70 y = 34 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_personal_value_modifier|Y]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "corporate_tax"
+				position = { x = 0 y = 54 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_corporate_tax_modifier|Y0%]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			instantTextboxType = {
+				name = "industrial_complex_value"
+				position = { x = 70 y = 54 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_industrial_complex_value_modifier|Y]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "money_from_resources"
+				position = { x = 0 y = 74 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_money_from_resources_modifier|+%]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			instantTextboxType = {	
+				name = "military_expenses_cost"
+				position = { x = 70 y = 74 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_military_expenses_cost_modifier|-%]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+			
+			instantTextboxType = {	
+				name = "debt_threshold"
+				position = { x = 0 y = 94 }
+				font = "hoi_16mbs"
+				text = "[?modifier@AD_debt_threshold_modifier|Y%]"
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+			}
+		}
+		
+		instantTextboxType = {
+			name = "summary_balance_title"
+			position = { x = 80 y = 204 }
+			font = "hoi_16mbs"
+			text = AD_economy_summary_balance
+			maxWidth = 180
+			maxHeight = 15
+			multiline = no
+			format = right
+		}
+		containerWindowType = {
+			name = "summary_balance"
+			position = { x = 270 y = 198 }
+			size = { width = 100 height = 28 }
+		
+			background = {
+				name ="summary_balance"
+				quadTextureSprite = "console_background"
+			}
+			
+			iconType = {
+				name = "income_icon"
+				position = { x=0 y=5 }
+				spriteType = "GFX_AD_CFA_franc_icon"
+			}
+			
+			instantTextboxType = {
+				name = "summary"
+				position = { x = -10 y = 6 }
+				font = "hoi_16mbs"
+				text = AD_economy_summary_value
+				maxWidth = 100
+				maxHeight = 15
+				format = right
+			}
+		}
+		
+		containerWindowType = {
+			name = "actions"
+			position = { x = 0 y = 230 }
+			
+			buttonType = {
+				name = "autorepayment_debt"
+				position = { x = 10 y = 2 }
+				quadTextureSprite ="GFX_generic_checkbox"
+				clicksound = click_checkbox
+				Orientation = "LEFT"
+			}
+			instantTextboxType = {
+				name = "autorepayment_debt_title"
+				position = { x = 55 y = 2 }
+				font = "hoi_16mbs"
+				text = "Автопогаш. долга"
+				maxWidth = 100
+				maxHeight = 20
+				format = left
+				Orientation = "LEFT"
+			}
+			
+			buttonType = {
+				name = "take_debt"
+				position = { x=200 y =0}
+				quadTextureSprite ="GFX_button_123x34"
+				buttonText = "Взять долг"
+				buttonFont = "hoi_18mbs"
+			}
+			buttonType = {
+				name = "repayment_debt"
+				position = { x=350 y =0}
+				quadTextureSprite ="GFX_button_123x34"
+				buttonText = "Погасить долг"
+				buttonFont = "hoi_18mbs"
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "microfinance_slavery_window"
+		position = { x = -225 y = -160 }
+		size = { width = 500 height = 360 }
+		orientation= center
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+		show_sound = pop_up
+		hide_sound = menu_close_window
+		click_to_front = yes
+		
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_bg"
+		}
+		
+		iconType = {
+			name ="diplo_popup_header_bg"
+			spriteType = "GFX_diplo_popup_header_bg"
+			position = { x= 3 y = 8 }
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "title"
+			position = { x = 25 y = 30 }
+			font = "hoi_20b" 
+			text = "[AD_get_debt_actions_window_title]"
+			maxWidth = 450
+			maxHeight = 20
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "subtitle"
+			position = { x = 25 y = 85 }
+			font = "hoi_20bs" 
+			text = "[AD_get_debt_actions_window_subtitle]"
+			maxWidth = 450
+			maxHeight = 20
+			format = center
+		}
+		
+		containerWindowType = {
+			name = "select_amount_container"
+			position = { x = 167 y = 125 }
+			
+			buttonType = {
+				name = "imports_amount_title" 
+				size = { width = 100 height = 40 }
+				position = {x=35 y=0}
+				buttonFont = "hoi_20b"
+				buttonText = AD_economy_debt_action_value
+				clicksound = click_scroll
+				quadTextureSprite = "console_background"
+			}
+			buttonType = {
+				name = "add_more_button"
+				position = { x=145 y =8}
+				quadTextureSprite ="GFX_add_one"
+				pdx_tooltip = ADD_MORE_MODAL_TT
+			}
+			buttonType = {
+				name = "remove_more_button"
+				position = { x=0 y =8}
+				quadTextureSprite ="GFX_subtract_one"
+				pdx_tooltip = REMOVE_MORE_MODAL_TT
+			}
+		}
+		
+		instantTextboxType = {
+			name = "main_info_desc"
+			position = { x = 25 y = 180 }
+			font = "hoi_18mbs"
+			text = "[AD_get_debt_actions_window_desc]"
+			maxWidth = 450
+			maxHeight = 200
+			format = center
+		}
+		
+		iconType = {
+			name ="diplo_popup_bottom"
+			spriteType = "GFX_diplo_popup_bottom"
+			position = { x= 3 y = 299 }
+		}
+
+		buttonType = {
+			name = "enter_button"
+			position = { x=350 y =312}
+			quadTextureSprite ="GFX_button_123x34"
+			buttonText = "SEND"
+			buttonFont = "hoi_18mbs"
+			shortcut = "RETURN"
+		}
+		buttonType = {
+			name = "cancel_button"
+			position = { x=25 y =312}
+			quadTextureSprite ="GFX_button_123x34"
+			buttonText = "CANCEL"
+			buttonFont = "hoi_18mbs"
+			shortcut = "ESCAPE"
+		}
+	}
+}

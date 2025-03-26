@@ -1,0 +1,18 @@
+characters = {
+
+	FRA_Ianni_Pascal = {
+		name = FRA_Ianni_Pascal
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/FRA_Ianni_Pascal.dds"
+			}
+			army = {
+				large = "gfx/leaders/FRA/FRA_Ianni_Pascal.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FRA_IANNI_PASCAL_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

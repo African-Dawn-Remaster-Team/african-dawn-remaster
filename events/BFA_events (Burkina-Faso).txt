@@ -1,0 +1,232 @@
+﻿add_namespace = AD_BFA
+
+# Результаты выборов
+country_event = {
+	id = AD_BFA.0
+	title = AD_BFA.0.t
+	desc = AD_BFA.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_BFA.0" }
+	option = {
+		name = AD_BFA.0.a
+		set_country_flag = BFA_christian_cabor_second_term_unlock_flag
+		effect_tooltip = { unlock_national_focus = BFA_christian_cabor_second_term }
+	}
+}
+
+# Бунт на базе «Ламизана»
+country_event = {
+	id = AD_BFA.1
+	title = AD_BFA.1.t
+	desc = AD_BFA.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_BFA.1" }
+	option = {
+		name = AD_BFA.1.a
+		add_popularity = { ideology = centrism popularity = 0.2 }
+		set_politics = { ruling_party = centrism elections_allowed = no }
+		custom_effect_tooltip = empty_line_tooltip
+		complete_national_focus = BFA_paul_henri_sandaogo_damiba
+		effect_tooltip = { promote_character = BFA_Paul_Henri_Sandaogo_Damiba }
+		custom_effect_tooltip = empty_line_tooltip
+		activate_mission = BFA_threat_of_a_military_coup_mission
+		custom_effect_tooltip = empty_line_tooltip
+		remove_ideas = AD_ECOWAS
+		custom_effect_tooltip = empty_line_tooltip
+		add_ideas = AD_ECOWAS_sanctions_idea
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_character = USA_Stephen_Townsend }
+			retire_character = USA_Stephen_Townsend
+		}
+		add_threat = 0.03
+	}
+}
+
+# Атаки джихадистов
+country_event = {
+	id = AD_BFA.2
+	title = {
+		text = AD_BFA.2.t.a
+		trigger = { has_country_flag = BFA_event_2_flag_1 }
+	}
+	title = {
+		text = AD_BFA.2.t.b
+		trigger = { has_country_flag = BFA_event_2_flag_2 }
+	}
+	title = {
+		text = AD_BFA.2.t.c
+		trigger = { has_country_flag = BFA_event_2_flag_3 }
+	}
+	title = {
+		text = AD_BFA.2.t.d
+		trigger = { has_country_flag = BFA_event_2_flag_4 }
+	}
+	title = {
+		text = AD_BFA.2.t.e
+		trigger = { has_country_flag = BFA_event_2_flag_5 }
+	}
+	title = {
+		text = AD_BFA.2.t.f
+		trigger = { has_country_flag = BFA_event_2_flag_6 }
+	}
+	title = {
+		text = AD_BFA.2.t.g
+		trigger = { has_country_flag = BFA_event_2_flag_7 }
+	}
+	title = {
+		text = AD_BFA.2.t.h
+		trigger = { has_country_flag = BFA_event_2_flag_8 }
+	}
+	desc = {
+		text = AD_BFA.2.d.a
+		trigger = { has_country_flag = BFA_event_2_flag_1 }
+	}
+	desc = {
+		text = AD_BFA.2.d.b
+		trigger = { has_country_flag = BFA_event_2_flag_2 }
+	}
+	desc = {
+		text = AD_BFA.2.d.c
+		trigger = { has_country_flag = BFA_event_2_flag_3 }
+	}
+	desc = {
+		text = AD_BFA.2.d.d
+		trigger = { has_country_flag = BFA_event_2_flag_4 }
+	}
+	desc = {
+		text = AD_BFA.2.d.e
+		trigger = { has_country_flag = BFA_event_2_flag_5 }
+	}
+	desc = {
+		text = AD_BFA.2.d.f
+		trigger = { has_country_flag = BFA_event_2_flag_6 }
+	}
+	desc = {
+		text = AD_BFA.2.d.g
+		trigger = { has_country_flag = BFA_event_2_flag_7 }
+	}
+	desc = {
+		text = AD_BFA.2.d.h
+		trigger = { has_country_flag = BFA_event_2_flag_8 }
+	}
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_BFA.2" hidden_effect = { add_threat = 0.01 } }
+	option = {
+		name = AD_BFA.2.a
+		trigger = { has_country_flag = BFA_event_2_flag_1 }
+		clr_country_flag = BFA_event_2_flag_1
+		add_manpower = -24
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -90 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.b
+		trigger = { has_country_flag = BFA_event_2_flag_2 }
+		clr_country_flag = BFA_event_2_flag_2
+		add_manpower = -13
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -90 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.c
+		trigger = { has_country_flag = BFA_event_2_flag_3 }
+		clr_country_flag = BFA_event_2_flag_3
+		add_manpower = -25
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -90 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.d
+		trigger = { has_country_flag = BFA_event_2_flag_4 }
+		clr_country_flag = BFA_event_2_flag_4
+		add_manpower = -160
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -180 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.e
+		trigger = { has_country_flag = BFA_event_2_flag_5 }
+		clr_country_flag = BFA_event_2_flag_5
+		121 = {
+			if = {
+				limit = {
+					is_controlled_by = ROOT
+					hospital > 0
+				}
+				remove_building = { type = hospital level = 1 }
+			}
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -180 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.f
+		trigger = { has_country_flag = BFA_event_2_flag_6 }
+		clr_country_flag = BFA_event_2_flag_6
+		add_manpower = -30
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -180 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.g
+		trigger = { has_country_flag = BFA_event_2_flag_7 }
+		clr_country_flag = BFA_event_2_flag_7
+		add_manpower = -170
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -120 }
+		}
+	}
+	option = {
+		name = AD_BFA.2.h
+		trigger = { has_country_flag = BFA_event_2_flag_8 }
+		clr_country_flag = BFA_event_2_flag_8
+		add_manpower = -55
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+			add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -120 }
+		}
+	}
+}
+
+# Реинкарнация Санкаре
+country_event = {
+	id = AD_BFA.3
+	title = AD_BFA.3.t
+	desc = AD_BFA.3.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_BFA.3" }
+	option = {
+		name = AD_BFA.3.a
+		complete_national_focus = BFA_homeland_or_death
+		custom_effect_tooltip = empty_line_tooltip
+		promote_character = BFA_Ibrahim_Traore
+		custom_effect_tooltip = empty_line_tooltip
+		custom_effect_tooltip = BFA_homeland_or_death_modifier_add_tt
+	}
+}

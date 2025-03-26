@@ -1,0 +1,26 @@
+state={
+	id=107
+	name="STATE_107"
+	provinces={
+		88 503 567 647 899 1006 1167 1645 1739 1990 1998 2091 2225 2240 2317 2852 3670 3674 4760 4761 4763 4764 4767 4768 4770 4775 4791 4793 4800 
+	}
+	resources = {
+		steel = 4
+	}
+	history={
+		owner = NGA
+		add_core_of = NGA
+		add_core_of = ARW
+		victory_points = { 106 5 }
+		victory_points = { 4763 3 }
+		victory_points = { 3674 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+	}
+	manpower=15918500
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

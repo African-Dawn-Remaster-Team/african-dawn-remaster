@@ -1,0 +1,759 @@
+ideas = {
+	
+	poverty_level = {
+		law = yes
+		use_list_view = yes
+		
+		AD_appalling_poverty = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 0
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_appalling_poverty
+						index = 0
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_appalling_poverty set in index 0"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_modifier = 0.1
+			}
+		}
+		
+		AD_poverty = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 0
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_poverty
+						index = 0
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_poverty set in index 0"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_modifier = 0.2
+			}
+		}
+		
+		AD_poorness = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 0
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_poorness
+						index = 0
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_poorness set in index 0"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_modifier = 0.25
+			}
+		}
+		
+		AD_difficulties_with_average_income = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 0
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_difficulties_with_average_income
+						index = 0
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_difficulties_with_average_income set in index 0"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_modifier = 0.3
+			}
+		}
+		
+		AD_almost_a_european_society = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 0
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_almost_a_european_society
+						index = 0
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_almost_a_european_society set in index 0"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_modifier = 0.5
+			}
+		}	
+	}
+	
+	unemployment_rate_level = {
+		law = yes
+		use_list_view = yes
+		
+		
+		AD_widespread_unemployment = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 1
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_widespread_unemployment
+						index = 1
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_widespread_unemployment set in index 1"
+				}
+			}
+			
+			modifier = {
+				AD_industrial_complex_value_modifier = 10
+			}
+		}
+		
+		AD_high_unemployment = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 1
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_high_unemployment
+						index = 1
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_high_unemployment set in index 1"
+				}
+			}
+			
+			modifier = {
+				AD_industrial_complex_value_modifier = 13
+			}
+		}
+		
+		AD_extensive_unemployment = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 1
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_extensive_unemployment
+						index = 1
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_extensive_unemployment set in index 1"
+				}
+			}
+			
+			modifier = {
+				AD_industrial_complex_value_modifier = 16
+			}
+		}
+		
+		AD_average_unemployment = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 1
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_average_unemployment
+						index = 1
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_average_unemployment set in index 1"
+				}
+			}
+			
+			modifier = {
+				AD_industrial_complex_value_modifier = 20
+			}
+		}
+		
+		AD_low_unemployment = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 1
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_low_unemployment
+						index = 1
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_low_unemployment set in index 1"
+				}
+			}
+			
+			modifier = {
+				AD_industrial_complex_value_modifier = 25
+			}
+		}
+	}
+	
+	society_development_level = {
+		law = yes
+		use_list_view = yes
+		
+		AD_chaotic_orders = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 2
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_chaotic_orders
+						index = 2
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_chaotic_orders set in index 2"
+				}
+			}
+			
+			modifier = {
+				economy_cost_factor = 0.3
+				trade_laws_cost_factor = 0.3
+				AD_debt_threshold_modifier = 0.3
+				AD_industrial_complex_value_factor_modifier = 0.5
+			}
+		}
+		
+		AD_weak_state_apparatus = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 2
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_weak_state_apparatus
+						index = 2
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_weak_state_apparatus set in index 2"
+				}
+			}
+			
+			modifier = {
+				economy_cost_factor = 0.2
+				trade_laws_cost_factor = 0.2
+				AD_debt_threshold_modifier = 0.45
+				AD_industrial_complex_value_factor_modifier = 0.65
+			}
+		}
+		
+		AD_moving_towards_progress = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 2
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_moving_towards_progress
+						index = 2
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_moving_towards_progress set in index 2"
+				}
+			}
+			
+			modifier = {
+				economy_cost_factor = 0.1
+				trade_laws_cost_factor = 0.1
+				AD_debt_threshold_modifier = 0.6
+				AD_industrial_complex_value_factor_modifier = 0.8
+			}
+		}
+		
+		AD_stable_state_apparatus = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 2
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_stable_state_apparatus
+						index = 2
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_stable_state_apparatus set in index 2"
+				}
+			}
+			
+			modifier = {
+				AD_debt_threshold_modifier = 0.7
+				AD_industrial_complex_value_factor_modifier = 1
+			}
+		}
+	}
+	
+	food_supply_level = {
+		law = yes
+		use_list_view = yes
+		
+		AD_total_hunger = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 3
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_total_hunger
+						index = 3
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_total_hunger set in index 3"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_factor_modifier = 0.25
+				monthly_population = -0.7
+			}
+		}
+		
+		AD_hunger = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 3
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_hunger
+						index = 3
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_hunger set in index 3"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_factor_modifier = 0.35
+				monthly_population = -0.5
+			}
+		}
+		
+		AD_problems_with_nutrition_in_the_majority_of_the_population = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 3
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_problems_with_nutrition_in_the_majority_of_the_population
+						index = 3
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_problems_with_nutrition_in_the_majority_of_the_population set in index 3"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_factor_modifier = 0.5
+				monthly_population = -0.3
+			}
+		}
+		
+		AD_three_meals_a_day_for_the_majority_of_the_population = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 3
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:AD_three_meals_a_day_for_the_majority_of_the_population
+						index = 3
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea AD_three_meals_a_day_for_the_majority_of_the_population set in index 3"
+				}
+			}
+			
+			modifier = {
+				AD_personal_value_factor_modifier = 0.7
+				monthly_population = -0.1
+			}
+		}
+	}
+	
+	corruption_level = {
+		law = yes
+		use_list_view = yes
+		
+		extr_corruption = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 4
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:extr_corruption
+						index = 4
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea extr_corruption set in index 4"
+				}
+			}
+			
+			modifier = {
+				political_power_cost = -0.5
+				drift_defence_factor = -0.35
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_advisor_cost_factor = -0.35
+				mobilization_laws_cost_factor = -0.35
+				economy_cost_factor = -0.35
+				supply_factor = -0.1
+				max_fuel_factor = -0.175
+				AD_money_from_resources_modifier = -0.85
+			}
+		}
+		
+		high_corruption = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 4
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:high_corruption
+						index = 4
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea high_corruption set in index 4"
+				}
+			}
+			
+			modifier = {
+				political_power_cost = -0.25
+				drift_defence_factor = -0.15
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_advisor_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.15
+				economy_cost_factor = -0.15
+				supply_factor = -0.05
+				max_fuel_factor = -0.1
+				AD_money_from_resources_modifier = -0.7
+			}
+		}
+		
+		med_corruption = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 4
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:med_corruption
+						index = 4
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea med_corruption set in index 4"
+				}
+			}
+			
+			modifier = {
+				political_power_cost = 0.15
+				drift_defence_factor = 0.1
+				AD_money_from_resources_modifier = -0.55
+			}
+			
+		}
+		
+		low_corruption = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = AD_law_unavailable_tt
+					always = no
+				}
+			}
+			
+			on_add = {
+				ROOT = {
+					remove_from_array = {
+						array = AD_condition_of_the_country_ideas
+						index = 4
+					}
+					add_to_array = { 
+						array = AD_condition_of_the_country_ideas 
+						value = token:low_corruption
+						index = 4
+					}
+					log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): AD_condition_of_the_country: idea low_corruption set in index 4"
+				}
+			}
+			
+			modifier = {
+				political_power_cost = 0.5
+				drift_defence_factor = 0.35
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_advisor_cost_factor = 0.35
+				mobilization_laws_cost_factor = 0.35
+				economy_cost_factor = 0.35
+				supply_factor = 0.1
+				max_fuel_factor = 0.15
+				AD_money_from_resources_modifier = -0.4
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=157
+	name="STATE_157"
+	provinces={
+		427 744 893 958 1196 1398 1404 1511 1676 2480 2583 2599 2848 3084 3107 3184 3374 3382 5084 5085 5088 5089 
+	}
+	resources = {
+		oil = 40
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 3184 5 }
+		victory_points = { 3107 3 }
+		victory_points = { 958 3 }
+		victory_points = { 2599 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			3184 = { naval_base = 3 }
+		}
+	}
+	manpower=141378
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

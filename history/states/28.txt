@@ -1,0 +1,21 @@
+
+state={
+	id=28
+	name="STATE_28"
+	provinces={
+		123 1395 1625 2356 2873 2892 2966 3071 3788 3850 
+	}
+	history={
+		owner = DRC
+		add_core_of = DRC
+		victory_points = { 1625 5 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+	manpower=1425000 
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

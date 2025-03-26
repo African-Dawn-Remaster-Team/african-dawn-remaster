@@ -1,0 +1,150 @@
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon commando parachutiste"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+		speznaz = { x=1 y=0 }
+		speznaz = { x=1 y=1 }
+		speznaz = { x=1 y=2 }
+		speznaz = { x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Bataillon motorisé"
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=0 y=4 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1er Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 1315
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "2e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 1315
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "Battaillon Blinde"
+		location = 4661
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "Battaillon Blinde"
+		location = 4668
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "3e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 4668
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "4e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 421
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "5e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 95
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "6e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 2263
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "7e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 2077
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "8e Bataillon d'infanterie des forces armées terrestres ivoiriennes"
+		location = 1285
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "1er Bataillon des Commandos Parachutistes "
+		location = 1315
+		division_template = "Bataillon commando parachutiste"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+}

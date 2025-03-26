@@ -1,0 +1,78 @@
+guiTypes = {	# TODO перенести в папку AD
+	
+	containerWindowType = {
+		name = "EQG_split_in_the_mongomo_clan_scripted_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 333 }
+		
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+			position = { x = -10 y = 0 }
+		}
+		gridboxtype = {
+			name = "EQG_split_in_the_mongomo_clan_grid"
+			position = { x = 0 y = 0 }
+			Orientation = upper_left
+			format = "UPPER_LEFT"
+			slotsize = { width = 0 height = 160 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+	}
+	
+	containerWindowType = {
+		name = "scripted_gui_EQG_split_in_the_mongomo_clan_ui_entry"
+		position = { x = 0 y = 45 }
+		size = { width = 100%% height = 100%% }
+		
+		iconType = {
+			name = "background1"
+			spriteType = "GFX_profile_background_1_1"
+			position = { x = 0 y = 0 }
+			scale = 0.9
+		}
+		iconType = {
+			name = "background2"
+			spriteType = "GFX_group_div_count_bg"
+			position = { x = 210 y = 45 }
+		}
+		iconType = {
+			name = "EQG_flag"
+			spriteType = "GFX_player_flag"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name = "EQG_fellow_clansmen"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_leader_unknown"
+			scale = 0.5
+		}
+		instantTextboxType = {
+			name = "EQG_split_in_the_mongomo_clan_name_vars"
+			position = { x = 0 y = -25 }
+			font = "hoi_36header"
+			text = "EQG_split_in_the_mongomo_clan_name_vars"
+			maxWidth = 510
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}
+		instantTextboxType = {
+			name = "EQG_split_in_the_mongomo_clan_vars"
+			position = { x = 0 y = 50 }
+			font = "hoi_36header"
+			text = "EQG_split_in_the_mongomo_clan_vars"
+			maxWidth = 510
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}
+		iconType = {
+			name = "leader_frame"
+			spriteType = "GFX_marshal_group_frame_unselected"
+			position = { x = 395 y = -1 }
+			scale = 1.1
+		}
+	}
+}

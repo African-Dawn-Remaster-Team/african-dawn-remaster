@@ -1,0 +1,25 @@
+﻿l_russian:
+ AD_coc_idea_tooltip: "Текущий §Y[AD_get_condition_category_name_tooltip]§! составляет:\n [!name_click]"
+ AD_coc_list_idea_tooltip: "[!name_click]" # TODO ?
+ AD_coc_idea_status_down_tt: "§Y[AD_get_condition_category_name_tooltip]§! §Rухудшается§! на [AD_get_coc_idea_status_value] в месяц."
+ AD_coc_idea_status_up_tt: "§Y[AD_get_condition_category_name_tooltip]§! §Gулучшается§! на [AD_get_coc_idea_status_value] в месяц."
+ AD_coc_idea_status_food_supply: "[?AD_food_supply_level_growth|+=1%%]"
+ AD_coc_idea_status_society_development: "[?AD_society_development_level_growth|+=1%%]"
+ AD_coc_idea_status_unemployment_rate: "[?AD_unemployment_rate_level_growth|+=1%%]"
+ AD_coc_idea_status_poverty: "[?AD_poverty_level_growth|+=1%%]"
+ 
+ AD_faction_status_tooltip: "Не состоит в каком-либо альянсе."
+ AD_foreign_orientation_percent_RUS: "[?AD_fo_position_percent|0%] в пользу §Y[RUS.GetNameWithFlag]§!" # TODO
+ AD_foreign_orientation_percent_FRA: "[?AD_fo_position_percent|0%] в пользу §Y[FRA.GetNameWithFlag]§!" # TODO
+ flag_alignment_tip: "Политическая ориентация (§Y[THIS.GetNameWithFlag]§!): [AD_get_foreign_orientation_percent]."
+ AD_foreign_orientation_tt: "§HПолитическая ориентация§!\nНа текущий момент [AD_get_foreign_orientation_percent], что даёт:\nСтоимость [RUS.GetFlag]§Hроссийск.§! техники: [AD_get_foreign_orientation_discount_RUS];\nСтоимость [FRA.GetFlag]§Hфранцузск.§! техники: [AD_get_foreign_orientation_discount_FRA]."
+ AD_foreign_orientation_discount: "[?discount|-=%1]"
+ AD_foreign_orientation_tt_delayed: "§LПолитическая ориентация - это показатель, демонстрирующий внешнеполитический курс правительства. Страны, лояльные Франции, получают весомую помощь со строны западных стран, выражаемая в финансах, оружии и политической поддержкой режима, но взамен расплачиваясь внутренним и внешним суверенитетом, проводя политику в французских интересах. Государства, ориентирующиеся на Россию, имеют гораздо больше возможностей для свободных политических действий, Россия оказывает таким странам всеобъемлющую поддержку, включая вооружение, инструкторов и кредиты.§!"
+ 
+ AD_forms_of_government_title: "§gПолитический режим:§!" # TODO перенести
+ AD_forms_of_government_desc: "§H[THIS.GetRulingParty] ([THIS.GetRulingIdeology])§!" # TODO описание субки
+ AD_forms_of_government_desc_delayed: "§LПолитический режим представляет собой описательную характеристику сложившейся в государстве политической системы и управляющей этим государством власти.§!"
+ AD_forms_of_government_sop: "§H[AD_fog_source_of_power_name][AD_fog_source_of_power_status]§!"
+ AD_forms_of_government_sop_desc: "§LИсточник власти§!"
+ AD_forms_of_government_ps: "§H[AD_fog_power_structure_name][AD_fog_power_structure_status]§!"
+ AD_forms_of_government_ps_desc: "§LФорма административно-территориального деления§!"

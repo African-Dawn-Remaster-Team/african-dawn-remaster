@@ -1,0 +1,19 @@
+add_namespace = AD_GAB
+
+country_event = {
+	id = AD_GAB.0
+	title = AD_GAB.0.t
+	desc = AD_GAB.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_GAB.0" }
+	option = {
+		name = AD_GAB.0.a
+		set_politics = { ruling_party = centrism elections_allowed = no }
+		add_popularity = {
+			ideology = centrism
+			popularity = 0.14
+		}
+		news_event = news_africa.17
+	}
+}

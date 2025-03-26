@@ -1,0 +1,18 @@
+characters = {
+
+	TOG_Faure_Essozimna_Gnassingbe = {
+		name = TOG_Faure_Essozimna_Gnassingbe
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TOG/TOG_Faure_Essozimna_Gnassingbe.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FAURE_ESSOZIMNA_GNASSINGBE_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+}

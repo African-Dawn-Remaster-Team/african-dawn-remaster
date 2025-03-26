@@ -1,0 +1,146 @@
+ideas = {
+	country = {
+		
+		AD_surrender_limit_spirit_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = { 
+				surrender_limit = 1
+			}
+		}
+		
+		AD_surrender_limit_spirit_idea_1 = {
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = { 
+				surrender_limit = 0.65
+			}
+		}
+		
+		AD_fundamentalism = {
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = { 
+				weekly_manpower = 80
+				research_speed_factor = -1
+				production_speed_buildings_factor = -0.75
+				required_garrison_factor = -0.93
+				resistance_target = -0.76
+				army_defence_factor = 0.66
+				attrition = -0.35
+				no_supply_grace = 3600
+				supply_consumption_factor = -0.75
+				out_of_supply_factor = -0.5
+				base_fuel_gain = 10
+				acclimatization_hot_climate_gain_factor = 0.5
+				army_morale_factor = 0.45
+				army_org_regain = 0.45
+			}
+		}
+		
+		AD_volunteer_battalions_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = { 
+				send_volunteer_size = 2
+				send_volunteer_divisions_required = -0.5
+				send_volunteers_tension = -1
+			}
+			rule = { can_send_volunteers = yes }
+		}
+		
+		AD_volunteer_battalions_gp_idea = {
+			name = AD_volunteer_battalions_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = { 
+				send_volunteer_size = 5
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -1
+				lend_lease_tension = -1
+			}
+			rule = { can_send_volunteers = yes }
+		}
+		
+		AD_ECOWAS = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = AD_ecowas_idea
+			modifier = { 
+				political_power_gain = 0.02
+				civil_war_involvement_tension = -0.5
+				opinion_gain_monthly = 5
+				custom_modifier_tooltip = AD_ECOWAS_member_tt
+			}
+		}
+		
+		AD_ECOWAS_sanctions_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = AD_ecowas_sanctions_idea
+			modifier = { 
+				consumer_goods_factor = 0.3
+				trade_opinion_factor = -0.8
+				production_speed_buildings_factor = -0.02
+				centrism_drift = -0.02
+				AD_money_from_resources_modifier = -0.3
+			}
+		}
+		
+		AD_member_of_g_five_sahel = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = AD_member_of_g_five_sahel_idea
+			modifier = {
+				send_volunteers_tension = -0.75
+				opinion_gain_monthly = 0.2
+				civilian_intel_to_others = 0.05
+				max_planning_factor = 0.1
+				coordination_bonus = 0.1
+				
+			}
+		}
+		
+		AD_member_of_g_five_sahel_bfa_1 = {
+			name = AD_member_of_g_five_sahel
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = AD_member_of_g_five_sahel_idea
+			modifier = {
+				send_volunteers_tension = -0.75
+				opinion_gain_monthly = 0.2
+				civilian_intel_to_others = 0.05
+				max_planning_factor = 0.1
+				coordination_bonus = 0.1
+				experience_gain_army = 0.1
+				experience_loss_factor = -0.12
+			}
+		}
+		
+		AD_creation_of_the_commission_for_combating_terrorism_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			cancel = { NOT = { has_idea = AD_ECOWAS } }
+			modifier = {
+				resistance_target = -0.2
+				compliance_growth = 0.3
+			}
+		}
+	}
+}

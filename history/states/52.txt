@@ -1,0 +1,17 @@
+state={
+	id=52
+	name="STATE_52"
+	provinces={
+		655 1295 2551 2925 5212 
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		buildings = {
+		}
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,114 @@
+# EXAMPLE = {
+    # color = rgb { 201 56 93 }
+    # color_ui = rgb { 255 73 121 }
+# }
+
+CAR_anti_balaka = {
+	color = rgb { 255 247 0 }
+	color_ui = rgb { 255 247 0 }
+}
+
+CAR_central_african_peace_union = {
+	color = rgb { 124 255 53 }
+	color_ui = rgb { 124 255 53 }
+}
+
+CAR_liberation_movement_for_justice_of_central_africa = {
+	color = rgb { 123 220 202 }
+	color_ui = rgb { 123 220 202 }
+}
+
+UGA_lord_resistance_army = {
+	color = rgb { 155 135 12 }
+	color_ui = rgb { 155 135 12 }
+}
+
+CAR_movement_of_patriots_of_central_africa = {
+	color = rgb { 160 160 160 }
+	color_ui = rgb { 160 160 160 }
+}
+
+CAR_patriotic_movement_for_the_renewal_of_central_africa = {
+	color = rgb { 160 80 255 }
+	color_ui = rgb { 160 80 255 }
+}
+
+CAR_party_of_the_rally_of_the_central_african_nation = {
+	color = rgb { 160 80 255 }
+	color_ui = rgb { 160 80 255 }
+}
+
+CAR_people_front_for_the_rebirth_of_central_africa = {
+	color = rgb { 80 220 70 }
+	color_ui = rgb { 80 220 70 }
+}
+
+CAR_return_recovery_rehabilitation = {
+	color = rgb { 80 100 255 }
+	color_ui = rgb { 80 100 255 }
+}
+
+CAR_misseriya_arabs = {
+	color = rgb { 255 127 240 }
+	color_ui = rgb { 255 127 240 }
+}
+
+CAR_azande_militia = {
+	color = rgb { 211 95 95 }
+	color_ui = rgb { 211 95 95 }
+}
+
+FPR_republic_of_logon = {
+	color = rgb { 80 220 70 }
+	color_ui = rgb { 80 220 70 }
+}
+
+AMB = {
+	color = rgb { 175 238 238 }
+	color_ui = rgb { 175 238 238 }
+}
+
+NGA_islamic_state_west_africa_province = {
+	color = rgb { 53 9 14 }
+	color_ui = rgb { 53 9 14 }
+}
+
+CHA_front_for_change_and_concord_in_chad = {
+	color = rgb { 140 131 34  }
+	color_ui = rgb { 140 131 34 }
+}
+
+MLI_jamaat_nasr_alIslam_wal_muslimin = {
+	color = rgb { 200 200 200 }
+	color_ui = rgb { 200 200 200 }
+}
+
+MLI_islamic_state_sahel_province = {
+	color = rgb { 36 36 36 }
+	color_ui = rgb { 36 36 36 }
+}
+
+MLI_imghad_tuareg_selfdefense_group_and_allies = {
+	color = rgb { 55 113 200 }
+	color_ui = rgb { 55 113 200 }
+}
+
+MLI_national_movement_for_the_liberation_of_azawad = {
+	color = rgb { 255 233 0 }
+	color_ui = rgb { 255 233 0 }
+}
+
+MLI_front_liberation_azawad = {
+	color = rgb { 255 233 0 }
+	color_ui = rgb { 255 233 0 }
+}
+
+LBY_toubou_front_for_the_salvation_of_libya = {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}
+
+LBY_government_of_national_accord = {
+	color = rgb { 102 226 67 }
+	color_ui = rgb { 102 226 67 }
+}

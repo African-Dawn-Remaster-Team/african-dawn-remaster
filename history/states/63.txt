@@ -1,0 +1,19 @@
+state={
+	id=63
+	name="STATE_63"
+	provinces={
+		275 1787 2135 2487 3809 3825 3826 
+	}
+	history={
+		owner = DRC
+		add_core_of = DRC
+		victory_points = { 3809 5 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=1789000 
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

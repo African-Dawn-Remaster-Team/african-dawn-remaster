@@ -1,0 +1,18 @@
+characters = {
+
+	GMB_Adama_Barrow = {
+		name = GMB_Adama_Barrow
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GMB/GMB_Adama_Barrow.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ADAMA_BARROW_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

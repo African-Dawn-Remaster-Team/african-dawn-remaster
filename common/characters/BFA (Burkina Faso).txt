@@ -1,0 +1,181 @@
+characters = {
+
+	BFA_Roch_Christian_Kabore = {
+		name = BFA_Roch_Christian_Kabore
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BFA/BFA_Roch_Christian_Kabore.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ROCH_CHRISTIAN_KABORE_DESC"
+			ideology = social_democracy_subtype_social_democracy
+			traits = { AD_unwavering_but_beleaguered_leader }
+		}
+	}
+	
+	BFA_Eddie_Komboigo = {
+		name = BFA_Eddie_Komboigo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism_subtype_christian_democracy
+			traits = {  }
+		}
+	}
+	
+	BFA_Zephirin_Diabre = {
+		name = BFA_Zephirin_Diabre
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism_subtype_liberal_democracy
+			traits = {  }
+		}
+	}
+	
+	BFA_Serj_Bambara = {
+		name = BFA_Serj_Bambara
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		country_leader = {
+			ideology = socialism_subtype_african_socialism
+			traits = {  }
+		}
+	}
+	
+	BFA_Paul_Henri_Sandaogo_Damiba = {
+		name = BFA_Paul_Henri_Sandaogo_Damiba
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BFA/BFA_Paul_Henri_Sandaogo_Damiba.dds"
+			}
+		}
+		country_leader = {
+			ideology = centrism_subtype_right_wing_populism
+			
+		}
+	}
+	
+	BFA_Ibrahim_Traore = {
+		name = BFA_Ibrahim_Traore
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BFA/BFA_Ibrahim_Traore.dds"
+			}
+		}
+		country_leader = {
+			ideology = centrism_subtype_anocracy
+			
+		}
+	}
+	
+	BFA_Thomas_Sawadogo = {
+		name = BFA_Thomas_Sawadogo
+		portraits = {
+			army = {
+				large = "gfx/leaders/BFA/BFA_Thomas_Sawadogo.dds"
+				small = "gfx/interface/ideas/BFA/BFA_Thomas_Sawadogo.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	BFA_David_Kabre = {
+		name = BFA_David_Kabre
+		portraits = {
+			army = {
+				large = "gfx/leaders/BFA/BFA_David_Kabre.dds"
+				small = "gfx/interface/ideas/BFA/BFA_David_Kabre.dds"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	BFA_Kiswendsida_Farouk_Azaria_Tobouan = {
+		name = BFA_Kiswendsida_Farouk_Azaria_Tobouan
+		portraits = {
+			army = {
+				large = "gfx/leaders/BFA/BFA_Kiswendsida_Farouk_Azaria_Tobouan.dds"
+				small = "gfx/interface/ideas/BFA/BFA_Kiswendsida_Farouk_Azaria_Tobouan.dds"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	BFA_Moussa_Diallo = {
+		name = BFA_Moussa_Diallo
+		portraits = {
+			army = {
+				large = "gfx/leaders/BFA/BFA_Moussa_Diallo.dds"
+				small = "gfx/interface/ideas/BFA/BFA_Moussa_Diallo.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	BFA_Celestin_Simpore = {
+		name = BFA_Celestin_Simpore
+		portraits = {
+			army = {
+				large = "gfx/leaders/BFA/BFA_Celestin_Simpore.dds"
+				small = "gfx/interface/ideas/BFA/BFA_Celestin_Simpore.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

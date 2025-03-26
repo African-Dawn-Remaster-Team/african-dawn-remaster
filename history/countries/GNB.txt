@@ -1,0 +1,45 @@
+capital = 3
+set_oob = "GNB_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_atgm_tech = 1
+	modern_camouflage_tech = 1
+	handmade_manpads_tech = 1
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	basic_train = 1
+	tech_specnaz = 1
+	tech_support = 1
+	tech_ifv_1  = 1
+	tech_mrap  = 1
+}
+
+
+recruit_character = GNB_Jose_Mario_Vaz
+recruit_character = GNB_Umaro_Sissoco_Embalo
+set_politics = { ruling_party = socialism elections_allowed = no }
+
+set_popularities = {
+	social_democracy = 19
+	socialism = 51
+	centrism = 12
+	liberalism = 18
+}
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 0 }
+
+add_ideas = {
+	AD_ECOWAS
+}
+
+set_convoys = 3
+starting_train_buffer = 5
+
+set_research_slots = 1
+set_stability = 0.44
+set_war_support = 0.81

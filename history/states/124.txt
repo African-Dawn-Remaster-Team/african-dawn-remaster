@@ -1,0 +1,27 @@
+state={
+	id=124
+	name="STATE_124"
+	provinces={
+		476 656 767 905 1257 1289 1477 1532 1633 1833 1845 2218 2343 2478 2763 2965 3254 3621 3637 3644 3645 3655 4922 4923 4924 4930 
+	}
+	resources = {
+		aluminium = 4
+		gold = 8
+		uranium = 4
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 4924 5 }
+		victory_points = { 2218 3 }
+		victory_points = { 2343 3 }
+		buildings = {
+			infrastructure = 2
+			1845 = { dam = 1 }
+		}
+	}
+	manpower=1996812
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,151 @@
+# befriend
+# alliance
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# contain
+# area_priority
+# declare_war
+
+CAR_dont_be_friendly_common = {
+	allowed = {
+		original_tag = CAR
+		is_dynamic_country = yes
+		NOT = {
+			tag = MLC
+			tag = RPR
+		}
+	}
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = alliance 			   id = ABK value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = RRR value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = CAP value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = FPR value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = MPC value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = RPR value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = MLC value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = LRA value = -500 					   			 }
+	
+	ai_strategy = { type = support 			   	   id = ABK value = -500 					   			 }
+	ai_strategy = { type = support 			       id = RRR value = -500 					   			 }
+	ai_strategy = { type = support 			   	   id = CAP value = -500 					   			 }
+	ai_strategy = { type = support 			   	   id = FPR value = -500 					   			 }
+	ai_strategy = { type = support 			  	   id = MPC value = -500 					   			 }
+	ai_strategy = { type = support 			   	   id = RPR value = -500 					   			 }
+	ai_strategy = { type = support 			  	   id = MLC value = -500 					   			 }
+	ai_strategy = { type = support 			  	   id = LRA value = -500 					   			 }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = RPR value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = MLC value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = military_access 		 }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = RPR value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = MLC value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = offer_military_access }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = RPR value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = MLC value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = non_aggression_pact   }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = RPR value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = MLC value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = join_allies 			 }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = RPR value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = MLC value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = call_allies 			 }
+}
+
+CAR_dont_be_friendly = {
+	allowed = {
+		OR = {
+			tag = MLC
+			tag = RPR
+		}
+	}
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = alliance 			   id = ABK value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = RRR value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = CAP value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = FPR value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = MPC value = -500 					   			 }
+	ai_strategy = { type = alliance 			   id = LRA value = -500 					   			 }
+	
+	ai_strategy = { type = support 			   	   id = ABK value = -500 					   			 }
+	ai_strategy = { type = support 			       id = RRR value = -500 					   			 }
+	ai_strategy = { type = support 			   	   id = CAP value = -500 					   			 }
+	ai_strategy = { type = support 			   	   id = FPR value = -500 					   			 }
+	ai_strategy = { type = support 			  	   id = LRA value = -500 					   			 }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = military_access 		 }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = military_access 		 }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = offer_military_access }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = offer_military_access }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = non_aggression_pact   }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = non_aggression_pact   }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = join_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = join_allies 			 }
+	
+	ai_strategy = { type = diplo_action_acceptance id = ABK value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = RRR value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = CAP value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = FPR value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = MPC value = -1000 target = call_allies 			 }
+	ai_strategy = { type = diplo_action_acceptance id = LRA value = -1000 target = call_allies 			 }
+}

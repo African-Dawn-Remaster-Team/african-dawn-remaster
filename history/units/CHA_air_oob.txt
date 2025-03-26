@@ -1,0 +1,22 @@
+air_wings = {
+	22 = {
+		fighter_airframe_0_ru =  {
+			owner = "CHA" 
+			creator = "RUS"
+			amount = 9
+			version_name = "MIG-23"
+		}
+		attack_helicopter_airframe_0_ru =  {
+			owner = "CHA" 
+			creator = "RUS"
+			amount = 9
+			version_name = "Mi-24VB"
+		}
+		uav_airframe_0 =  {
+			owner = "CHA" 
+			creator = "TUR"
+			amount = 4
+			version_name = "Bayraktar TB2"
+		}
+	}
+}

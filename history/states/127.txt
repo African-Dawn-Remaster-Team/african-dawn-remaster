@@ -1,0 +1,24 @@
+state={
+	id=127
+	name="STATE_127"
+	provinces={
+		443 606 620 1028 1224 1773 1897 2452 2702 3623 4921 4925 4927 4928 4929 4931 4932 4933 4937 4939 4941 
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 1897 5 }
+		victory_points = { 2452 3 }
+		victory_points = { 1773 3 }
+		victory_points = { 620 3 }
+		victory_points = { 443 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+		}
+	}
+	manpower=4037330
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

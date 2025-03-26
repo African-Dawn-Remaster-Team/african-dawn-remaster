@@ -1,0 +1,51 @@
+characters = {
+
+	GNB_Jose_Mario_Vaz = {
+		name = GNB_Jose_Mario_Vaz
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GNB/GNB_Jose_Mario_Vaz.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSE_MARIO_VAZ_DESC"
+			ideology = socialism_subtype_african_socialism
+		}
+	}
+
+	GNB_Umaro_Sissoco_Embalo = {
+		name = GNB_Umaro_Sissoco_Embalo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GNB/GNB_Umaro_Sissoco_Embalo.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_UMARO_SISSOCO_EMBALO_DESC"
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+	GNB_Victor_Tchongo = {
+		name = GNB_Victor_Tchongo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GNB/GNB_Victor_Tchongo.dds"
+			}
+			army = {
+				large = "gfx/leaders/GNB/GNB_Victor_Tchongo.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_UMARO_SISSOCO_EMBALO_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		corps_commander={
+			traits={ ambusher infantry_officer  }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+}

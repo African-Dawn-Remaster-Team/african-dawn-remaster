@@ -1,0 +1,272 @@
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry_on_btr={ x=0 y=0 }
+		infantry_on_btr={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon motorisé"
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=1 y=0 }
+		infantry_on_jeep={ x=1 y=1 }
+		infantry_on_jeep={ x=1 y=2 }
+		infantry_on_jeep={ x=1 y=3 }
+	}
+}
+
+units = {
+	division= {	
+		name = "11e bataillon d'infanterie motorisée à Ebolowa"
+		location = 3367
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "12e bataillon d'infanterie motorisée à Djoum"
+		location = 3780
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "13e bataillon d'infanterie motorisée à Ambam"
+		location = 1537
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "1er BI à Yaoundé"
+		location = 3767
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "2e BI à Yaoundé"
+		location = 714
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "3e BI à Yaoundé"
+		location = 3789
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "14e bataillon d'infanterie motorisée à Bertoua"
+		location = 2154
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "15e bataillon d'infanterie motorisée à Yokadouma"
+		location = 3105
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "16e bataillon d'infanterie motorisée à Garoua-Boulaï"
+		location = 1270
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "I Régiment distinct du 21e bataillon motorisé de Buea"
+		location = 2944
+		division_template = "Bataillon motorisé"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "II Régiment distinct du 21e bataillon motorisé de Buea"
+		location = 3291
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "III Régiment distinct du 21e bataillon motorisé de Buea"
+		location = 3527
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "I Régiment distinct du IV RMIA de Maroua"
+		location = 3578
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "II Régiment distinct du IV RMIA de Maroua"
+		location = 2175
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "III Régiment distinct du IV RMIA de Maroua"
+		location = 447
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "IV Régiment distinct du IV RMIA de Maroua"
+		location = 1520
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "V Régiment distinct du IV RMIA de Maroua"
+		location = 3217
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "VI Régiment distinct du IV RMIA de Maroua"
+		location = 4798
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "VII Régiment distinct du IV RMIA de Maroua"
+		location = 3217
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "VIII Régiment distinct du IV RMIA de Maroua"
+		location = 4798
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "IX Régiment distinct du IV RMIA de Maroua"
+		location = 447
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "X Régiment distinct du IV RMIA de Maroua"
+		location = 1520
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.03
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "I Régiment distinct du 22e bataillon d'infanterie motorisée à Mamfé"
+		location = 3784
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "II Régiment distinct du 22e bataillon d'infanterie motorisée à Mamfé"
+		location = 138
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.11
+		start_equipment_factor = 0.87
+	}
+	division= {	
+		name = "III Régiment distinct du 22e bataillon d'infanterie motorisée à Mamfé"
+		location = 2980
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.42
+	}
+	division= {	
+		name = "I Régiment distinct du 24e bataillon d'infanterie motorisée à Akwaya"
+		location = 3295
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.12
+		start_equipment_factor = 0.65
+	}
+	division= {	
+		name = "II Régiment distinct du 24e bataillon d'infanterie motorisée à Akwaya"
+		location = 3295
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.17
+		start_equipment_factor = 0.71
+	}
+	division= {	
+		name = "III Régiment distinct du 24e bataillon d'infanterie motorisée à Akwaya"
+		location = 358
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.45
+	}
+	division= {	
+		name = "I Régiment distinct du 23e bataillon d'infanterie motorisée à Loum"
+		location = 3295
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.14
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "II Régiment distinct du 23e bataillon d'infanterie motorisée à Loum"
+		location = 3755
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.08
+		start_equipment_factor = 0.42
+	}
+	division= {	
+		name = "III Régiment distinct du 23e bataillon d'infanterie motorisée à Loum"
+		location = 3777
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.51
+	}
+	division= {	
+		name = "IV Régiment distinct du 23e bataillon d'infanterie motorisée à Loum"
+		location = 2620
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.09
+		start_equipment_factor = 0.45
+	}
+}

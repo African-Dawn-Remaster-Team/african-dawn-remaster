@@ -1,0 +1,19 @@
+EQG_split_in_the_mongomo_clan_category = {
+	allowed = { tag = EQG }
+	visible = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+	available = { has_completed_focus = EQG_family_matters }
+	priority = 1000
+	visible_when_empty = yes
+	scripted_gui = EQG_split_in_the_mongomo_clan_scripted_gui
+}
+
+EQG_war_operations = {
+	allowed = { always = no }
+	priority = 1500
+}
+
+EQG_covid_epidemic_category = {
+	allowed = { tag = EQG }
+	visible = { has_active_mission = EQG_covid_outbreak_mission }
+	priority = 900
+}

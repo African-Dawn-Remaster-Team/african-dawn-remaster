@@ -1,0 +1,18 @@
+characters = {
+
+	MRT_Mohamed_Ould_Ghazouani = {
+		name = MRT_Mohamed_Ould_Ghazouani
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MRT/MRT_Mohamed_Ould_Ghazouani.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MOHAMED_OULD_GHAZOUANI_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

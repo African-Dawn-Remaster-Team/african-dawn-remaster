@@ -1,0 +1,96 @@
+﻿l_russian:
+ CAR_anti_balaka: "Антибалака"
+ CAR_anti_balaka_DEF: "Антибалака"
+ CAR_anti_balaka_ADJ: "Антибалакс."
+ 
+ CAR_return_recovery_rehabilitation: "Возвращение, Восстановление, Реабилитация"
+ CAR_return_recovery_rehabilitation_DEF: "ВВР"
+ CAR_return_recovery_rehabilitation_ADJ: "ВВР"
+ 
+ CAR_central_african_peace_union: "Союз Мира Центральной Африки"
+ CAR_central_african_peace_union_DEF: "СМЦА"
+ CAR_central_african_peace_union_ADJ: "СМЦА"
+ 
+ CAR_people_front_for_the_rebirth_of_central_africa: "Народный Фронт Перерождения Центральной Африки"
+ CAR_people_front_for_the_rebirth_of_central_africa_DEF: "НФПЦА"
+ CAR_people_front_for_the_rebirth_of_central_africa_ADJ: "НФПЦА"
+ 
+ CAR_movement_of_patriots_of_central_africa: "Движение Патриотов Центральной Африки"
+ CAR_movement_of_patriots_of_central_africa_DEF: "ДПЦА"
+ CAR_movement_of_patriots_of_central_africa_ADJ: "ДПЦА"
+ 
+ CAR_patriotic_movement_for_the_renewal_of_central_africa: "Патриотическое Движение за Обновление Центральной Африки"
+ CAR_patriotic_movement_for_the_renewal_of_central_africa_DEF: "ПДОЦА"
+ CAR_patriotic_movement_for_the_renewal_of_central_africa_ADJ: "ПДОЦА"
+
+ CAR_party_of_the_rally_of_the_central_african_nation: "Партия Объединения Центральноафриканской Нации"
+ CAR_party_of_the_rally_of_the_central_african_nation_DEF: "ПОЦН"
+ CAR_party_of_the_rally_of_the_central_african_nation_ADJ: "ПОЦН"
+ 
+ CAR_liberation_movement_for_justice_of_central_africa: "Движение Освободителей за Справедливость Центральной Африки"
+ CAR_liberation_movement_for_justice_of_central_africa_DEF: "ДОСЦА"
+ CAR_liberation_movement_for_justice_of_central_africa_ADJ: "ДОСЦА"
+ 
+ UGA_lord_resistance_army: "Господня Армия Сопротивления"
+ UGA_lord_resistance_army_DEF: "Господня Армия Сопротивления"
+ UGA_lord_resistance_army_ADJ: "Господнийск."
+ 
+ CAR_misseriya_arabs: "Арабы Миссерия"
+ CAR_misseriya_arabs_DEF: "Арабы Миссерия"
+ CAR_misseriya_arabs_ADJ: "Миссерийск."
+
+ CAR_azande_militia: "Ополчение Азанде"
+ CAR_azande_militia_DEF: "Ополчение Азанде"
+ CAR_azande_militia_ADJ: "Азандск."
+ 
+ AMB: "Федеративная Республика Амбазония"
+ AMB_DEF: "Федеративная Республика Амбазония"
+ AMB_ADJ: "Амбазонийск."
+
+ NGA_islamic_state_west_africa_province: "Исламское Государство - Западная Африканская Провинция"
+ NGA_islamic_state_west_africa_province_DEF: "ИГ"
+ NGA_islamic_state_west_africa_province_ADJ: "ИГ"
+
+ CHA_front_for_change_and_concord_in_chad: "Фронт Перемен и Согласия Чада"
+ CHA_front_for_change_and_concord_in_chad_DEF: "Чад"
+ CHA_front_for_change_and_concord_in_chad_ADJ: "Чадск"
+
+ MLI_jamaat_nasr_alIslam_wal_muslimin: "Джамаат Нусрат аль-Ислам валь-Муслимин"
+ MLI_jamaat_nasr_alIslam_wal_muslimin_DEF: "ДНИМ"
+ MLI_jamaat_nasr_alIslam_wal_muslimin_ADJ: "ДНИМ"
+
+ MLI_islamic_state_sahel_province: "Исламское Государство - Сахельская Провинция"
+ MLI_islamic_state_sahel_province_DEF: "ИГ"
+ MLI_islamic_state_sahel_province_ADJ: "ИГ"
+ 
+ MLI_imghad_tuareg_selfdefense_group_and_allies: "Группа Cамообороны Туарегов Имгад и ее союзники"
+ MLI_imghad_tuareg_selfdefense_group_and_allies_DEF: "ГАТИА"
+ MLI_imghad_tuareg_selfdefense_group_and_allies_ADJ: "ГАТИА"
+ 
+ MLI_national_movement_for_the_liberation_of_azawad: "Национальное движение за освобождение Азавада"
+ MLI_national_movement_for_the_liberation_of_azawad_DEF: "НДОА"
+ MLI_national_movement_for_the_liberation_of_azawad_ADJ: "НДОА"
+
+ MLI_front_liberation_azawad: "Фронт Освобождения Азавада"
+ MLI_front_liberation_azawad_DEF: "ФОА"
+ MLI_front_liberation_azawad_ADJ: "ФОА"
+
+ LBY_toubou_front_for_the_salvation_of_libya: "Фронт Тубу Спасения Ливии"
+ LBY_toubou_front_for_the_salvation_of_libya_DEF: "ФТСЛ"
+ LBY_toubou_front_for_the_salvation_of_libya_ADJ: "ФТСЛ"
+
+ LBY_libyan_house_of_representatives: "Палата представителей Ливии"
+ LBY_libyan_house_of_representatives_DEF: "ППЛ"
+ LBY_libyan_house_of_representatives_ADJ: "ППЛ"
+
+ LBY_government_of_national_accord: "Правительство Национального Согласия"
+ LBY_government_of_national_accord_DEF: "ПНС"
+ LBY_government_of_national_accord_ADJ: "ПНС"
+ 
+ SUD_rapid_support_forces: "Силы Быстрого Реагирования"
+ SUD_rapid_support_forces_DEF: "СБР"
+ SUD_rapid_support_forces_ADJ: "Суданск."
+ 
+ FPR_republic_of_logon: "Республика Логон"
+ FPR_republic_of_logon_DEF: "Республика Логон"
+ FPR_republic_of_logon_ADJ: "Логонск."

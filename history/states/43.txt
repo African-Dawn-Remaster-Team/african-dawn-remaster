@@ -1,0 +1,27 @@
+
+state={
+	id=43
+	name="STATE_43"
+	provinces={
+		699 747 1539 1967 2261 2578 2636 2675 2819 2973 3154 3526 
+	}
+	resources = {
+		gold = 12
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 699 3 }
+		victory_points = { 2261 3 }
+		victory_points = { 2578 3 }
+		victory_points = { 3526 3 }
+		buildings = {
+			infrastructure = 1
+			1967 = { dam = 1 }
+		}
+	}
+	manpower=205178
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

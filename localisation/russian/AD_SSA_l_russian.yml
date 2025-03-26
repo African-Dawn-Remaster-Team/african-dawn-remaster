@@ -1,0 +1,87 @@
+﻿l_russian:
+
+ ##############
+ ### Фокусы ###
+ ##############
+ 
+ AD_SSA_creation_of_the_sahel_states_alliance: "Создание Альянса Государств Сахеля"
+ AD_SSA_creation_of_the_sahel_states_alliance_desc: ""
+ AD_SSA_sgreements_within_the_framework_of_the_military_alliance: "Соглашения в рамках военного союза"
+ AD_SSA_sgreements_within_the_framework_of_the_military_alliance_desc: ""
+ AD_SSA_creation_of_the_united_armed_forces: "Создание объединенных вооруженных сил"
+ AD_SSA_creation_of_the_united_armed_forces_desc: ""
+ AD_SSA_joint_air_operations: "Совместные воздушные операции"
+ AD_SSA_joint_air_operations_desc: ""
+ AD_SSA_invite_russian_pilots: "Пригласить российских летчиков"
+ AD_SSA_invite_russian_pilots_desc: ""
+ AD_SSA_expand_intelligence_cooperation: "Расширить кооперацию разведки"
+ AD_SSA_expand_intelligence_cooperation_desc: ""
+ AD_SSA_conducting_joint_exercises: "Проведение совместных учений"
+ AD_SSA_conducting_joint_exercises_desc: ""
+ AD_SSA_unite_the_general_staffs: "Объединить генштабы"
+ AD_SSA_unite_the_general_staffs_desc: ""
+ AD_SSA_form_operational_groups: "Сформировать оперативные группы"
+ AD_SSA_form_operational_groups_desc: ""
+ AD_SSA_regain_control_of_borders: "Восстановить контроль над границами"
+ AD_SSA_regain_control_of_borders_desc: ""
+ AD_SSA_formation_of_the_confederation: "Образование конфедерации"
+ AD_SSA_formation_of_the_confederation_desc: ""
+ AD_SSA_create_a_joint_investment_bank: "Создать совместный инвестиционный банк"
+ AD_SSA_create_a_joint_investment_bank_desc: ""
+ AD_SSA_joint_geological_exploration: "Совместная геологоразведка"
+ AD_SSA_joint_geological_exploration_desc: ""
+ AD_SSA_final_break_with_ecowas: "Окончательный разрыв с ЭКОВАС"
+ AD_SSA_final_break_with_ecowas_desc: ""
+ AD_SSA_introduction_of_unified_passports: "Введение единых паспортов"
+ AD_SSA_introduction_of_unified_passports_desc: ""
+ AD_SSA_striving_for_confederation: "Стремление к федерации"
+ AD_SSA_striving_for_confederation_desc: ""
+ AD_SSA_unite_the_parliaments: "Объединить парламенты"
+ AD_SSA_unite_the_parliaments_desc: ""
+ AD_SSA_remove_trade_duties: "Убрать торговые пошлины"
+ AD_SSA_remove_trade_duties_desc: ""
+ AD_SSA_overcoming_ethnic_contradictions: "Преодоление этнических противоречий"
+ AD_SSA_overcoming_ethnic_contradictions_desc: ""
+ AD_SSA_we_are_all_brothers_of_the_sahel: "«Все мы братья Сахеля»"
+ AD_SSA_we_are_all_brothers_of_the_sahel_desc: ""
+ AD_SSA_expel_the_colonialists_from_africa: "Изгнать колонизаторов из Африки"
+ AD_SSA_expel_the_colonialists_from_africa_desc: ""
+ AD_SSA_invite_togo_to_join_the_alliance: "Пригласить Того в альянс"
+ AD_SSA_invite_togo_to_join_the_alliance_desc: ""
+ AD_SSA_invite_benin_to_join_the_alliance: "Пригласить Бенин в альянс"
+ AD_SSA_invite_benin_to_join_the_alliance_desc: ""
+ AD_SSA_establish_contacts_in_ghana: "Навести контакты в Гане"
+ AD_SSA_establish_contacts_in_ghana_desc: ""
+ AD_SSA_invite_senegal_to_join_the_alliance: "Пригласить Сенегал в альянс"
+ AD_SSA_invite_senegal_to_join_the_alliance_desc: ""
+ AD_SSA_support_the_liberation_movement_of_the_south: "Поддержать освободительное движение юга"
+ AD_SSA_support_the_liberation_movement_of_the_south_desc: ""
+ AD_SSA_invite_guinea_bissau_to_join_the_alliance: "Пригласить Гвинею-Бисау в альянс"
+ AD_SSA_invite_guinea_bissau_to_join_the_alliance_desc: ""
+ 
+ ##############
+ ### Ивенты ###
+ ##############
+ 
+ AD_SSA_news.0.t: "$AD_SSA_creation_of_the_sahel_states_alliance$"
+ AD_SSA_news.0.d: ""
+ AD_SSA_news.0.a: ""
+ 
+ AD_SSA_news.1.t: "Начало Сахельской Войны"
+ AD_SSA_news.1.d: ""
+ AD_SSA_news.1.a: ""
+ 
+ ##############
+ #### Идеи ####
+ ##############
+ 
+ AD_SSA_sahel_states_alliance_modifier: "$AD_SSA_sahel_states_alliance$"
+ 
+ ######################
+ ### Флаги и тултипы###
+ ######################
+ 
+ AD_SSA_sahel_states_alliance: "Альянс Государств Сахеля"
+ AD_SSA_ecomog_alliance: "ЭКОМОГ"
+ AD_SSA_sahel_states_alliance_modifier_add_tt: "Будет добавлена идея §Y$AD_SSA_sahel_states_alliance_modifier$§!, что даст ($MODIFIER_POLITICAL_POWER_GAIN$: §G+0.02§!, $MODIFIER_WAR_SUPPORT_FACTOR$: §G+2.00%§!)."
+ AD_SSA_sahel_states_alliance_modifier_change_tt: "Будет изменена идея §Y$AD_SSA_sahel_states_alliance_modifier$§! на"

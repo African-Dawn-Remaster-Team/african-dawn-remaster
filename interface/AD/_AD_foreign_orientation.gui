@@ -1,0 +1,117 @@
+guiTypes = {
+	containerWindowType = {
+		name = "AD_foreign_orientation_open_gui"	
+		position = { x = 430 y = 382 } 
+		size = { width = 115 height = 100 }
+		# clipping = no
+		
+		background = {
+			name = "Background"
+			#quadTextureSprite ="GFX_tiled_window_2b_border"
+			quadTextureSprite ="GFX_tiled_window_1b_border"
+			#quadTextureSprite ="GFX_tiled_window_1b_border"
+		}
+		
+		buttonType = {
+			name = "flag"
+			position = { x = 15 y = 6 }
+			spriteType = "GFX_major_country_flag_overlay"
+			pdx_tooltip = "AD_foreign_orientation_tt"
+			pdx_tooltip_delayed = "AD_foreign_orientation_tt_delayed"
+		}
+	}
+	containerWindowType = {
+		name = "AD_foreign_orientation_gui"	
+		position = { x = 545 y = 500 } 
+		size = { width = 320 height = 100%% }
+		clipping = yes
+		
+		containerWindowType = { # This double container thing is just to ensure that the animation plays correctly and that the windows show up where they should be
+			name = "AD_foreign_orientation_gui_content"
+			size = { width=320 height=100%% }
+			position = { x = -1000 y = 0 }
+			hide_position = { x = -1000 y = 0 }
+			show_position = { x = 0 y = 0 }
+			hide_animation_type = accelerated
+			show_animation_type = decelerated
+			animation_time = 450
+			show_sound = open_sub_window
+			# margin = { top = 10 }
+			# verticalScrollbar = "right_vertical_slider"
+			
+			background = {
+				name = "Background"		
+				spriteType ="GFX_tiled_window_1b_border"
+			}
+			
+			iconType = {
+				name = "bd"
+				position = { x = 10 y = 15 }
+				spriteType = "GFX_AD_orientation2_bg"
+			}
+			
+			instantTextboxType = {
+				name = "name"
+				position = { x = -10 y = 20 }
+				font = "hoi_30header"
+				text = "Политическая ориентация" # TODO
+				# fixedsize = yes
+				maxWidth = 300
+				maxHeight = 30
+				format = right
+			}
+			
+			instantTextboxType = {
+				name = "value"
+				position = { x = -300 y = 60 }
+				font = "hoi_36header"
+				text = "[AD_get_foreign_orientation_percent]"
+				maxWidth = 250
+				maxHeight = 10
+				format = right
+				Orientation = "UPPER_RIGHT"
+			}
+			
+			buttonType = {
+				name = "close"
+				position = { x = -25 y = 5 }
+				quadTextureSprite ="GFX_closebutton_small"
+				buttonFont = "hoi_16mbs"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+				scale = 0.65
+			}
+			
+			gridboxtype = { # alignment_array
+				name = "HOI3_tags_grid"
+				position = { x = 0 y = 65 }
+				size = { width = 4 height = 4 }
+				slotsize = { width = 1 height = 1 }
+				orientation = center
+			}
+		}
+	}
+	
+	# this entry will be used to populate the country_grid above
+	containerWindowType = {
+		name = "hoi3_tag_entry"
+		position = { x = 0 y = 0}	
+		
+		buttonType = {
+			name = "flag3"
+			quadTextureSprite = "GFX_flag_smallest"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "flag_alignment_tip"
+			# pdx_tooltip_delayed = "main_factions_tip" TODO desc
+		}		
+		# iconType = {	# TODO
+			# name = "highlight"
+			# position = { x = -15 y = -15 }
+			# spriteType = "GFX_leader_selection_button_glow"
+			# alwaystransparent = yes
+			# # scale = 0.5
+		# }
+	}
+}

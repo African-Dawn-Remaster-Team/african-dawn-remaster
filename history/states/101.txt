@@ -1,0 +1,36 @@
+state={
+	id=101
+	name="STATE_101"
+	provinces={
+		183 711 713 741 1332 1589 2097 2284 2353 3181 3188 3225 3754 3774 3782 4707 4708 4709 4710 4711 4712 4713 4714 4715 4716 4717 4718 4719 4720 4721 4722 4813 4814 
+	}
+	resources = {
+		oil = 24
+	}
+	history={
+		owner = NGA
+		add_core_of = BIA
+		victory_points = { 4718 3 }
+		victory_points = { 4814 5 }
+		victory_points = { 4715 5 }
+		victory_points = { 3774 10 }
+		victory_points = { 4711 5 }
+		victory_points = { 4709 5 }
+		victory_points = { 4708 5 }
+		victory_points = { 3181 3 }
+		victory_points = { 4722 3 }
+		victory_points = { 4710 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 3
+			arms_factory = 1
+			4708 = { naval_base = 1 }
+			4709 = { naval_base = 1 }
+		}
+	}
+	manpower=44700724
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

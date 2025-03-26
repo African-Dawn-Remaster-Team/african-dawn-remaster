@@ -1,0 +1,108 @@
+capital = 10
+set_oob = "BFA_oob"
+set_air_oob = "BFA_air_oob"
+starting_train_buffer = 5
+
+set_research_slots = 1
+set_stability = 0.6
+set_war_support = 0.4
+
+recruit_character = BFA_Roch_Christian_Kabore
+recruit_character = BFA_Eddie_Komboigo
+recruit_character = BFA_Zephirin_Diabre
+recruit_character = BFA_Serj_Bambara
+recruit_character = BFA_Paul_Henri_Sandaogo_Damiba
+recruit_character = BFA_Ibrahim_Traore
+recruit_character = BFA_Thomas_Sawadogo
+recruit_character = BFA_David_Kabre
+recruit_character = BFA_Kiswendsida_Farouk_Azaria_Tobouan
+recruit_character = BFA_Moussa_Diallo
+recruit_character = BFA_Celestin_Simpore
+
+set_technology = {
+	M8_Greyhound_TECH = 1
+	gwtank_chassis = 1
+	tech_light_tank_legacy = 1
+	tech_medium_tank_legacy = 1
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	
+	handmade_atgm_tech = 1
+	atgm_rpg7_tech = 1
+	modern_camouflage_tech = 1
+		
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	basic_train = 1
+	tech_specnaz = 1
+	
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	
+	tech_mrap = 1
+	tech_ural = 1
+	tech_ifv_1  = 1
+}
+add_equipment_to_stockpile = {
+    type = toyota_jeep
+    amount = 600
+}
+
+set_popularities = {
+	centrism = 11
+	conservatism = 15
+	social_democracy = 56
+	liberalism = 13
+	fundamentalism = 5
+}
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 0 }
+
+set_politics = { ruling_party = social_democracy elections_allowed = no }
+
+121 = {
+	force_enable_resistance = ROOT
+	start_resistance = yes
+	set_resistance = 10
+}
+
+122 = {
+	force_enable_resistance = ROOT
+	start_resistance = yes
+	set_resistance = 10
+}
+
+123 = {
+	force_enable_resistance = ROOT
+	start_resistance = yes
+	set_resistance = 10
+}
+
+add_ideas = {
+	AD_ECOWAS
+	BFA_protracted_war_idea
+	BFA_cinema_capital_of_africa_idea
+	BFA_balai_citoyen_idea
+	AD_member_of_g_five_sahel
+}
+
+set_variable = { BFA_army_org_factor_var = -0.2 }
+set_variable = { BFA_army_org_regain_var = -0.3 }
+set_variable = { BFA_training_time_army_factor_var = 0.2 }
+set_variable = { BFA_dig_in_speed_factor_var = -0.1 }
+set_variable = { BFA_army_leader_cost_factor_var = 0.2 }
+set_variable = { BFA_pocket_penalty_var = 1 }
+add_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier }
+
+set_variable = { BFA_conscription_factor_var = 0.03 }
+set_variable = { BFA_modifier_army_sub_unit_light_infantry_opol_defense_factor_var = 0.05 }
+add_dynamic_modifier = { modifier = BFA_volunteers_for_the_defense_of_the_motherland_modifier }
+
+activate_mission = BFA_conduct_of_elections_mission
+activate_mission = BFA_pre_election_fuss_mission
+activate_mission = BFA_threat_of_a_military_coup_mission
+activate_mission = BFA_jihadist_terrorist_attacks_mission

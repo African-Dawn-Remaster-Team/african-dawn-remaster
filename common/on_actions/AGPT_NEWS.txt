@@ -1,0 +1,80 @@
+on_actions = {
+	on_startup = {
+        effect = {
+			SPA = {
+				#2020
+				news_event = { id = news_africa.37 days = 3 }
+				news_event = { id = news_africa.47 days = 65 }
+				news_event = { id = news_africa.46 days = 70 }
+				news_event = { id = news_africa.36 days = 216 }
+				news_event = { id = news_africa.38 days = 270 }
+				news_event = { id = news_africa.48 days = 297 }
+				news_event = { id = news_africa.40 days = 307 }
+#				news_event = { id = news_africa.39 days = 307 }
+				#2021
+				news_event = { id = news_africa.43 days = 447 }
+				news_event = { id = news_africa.49 days = 455 }
+				news_event = { id = news_africa.42 days = 592 }
+				news_event = { id = news_africa.44 days = 594 }
+				#2022
+				news_event = { id = news_africa.1 days = 1019 }
+				news_event = { id = news_africa.2 days = 1025 }
+				news_event = { id = news_africa.3 days = 1035 }
+				news_event = { id = news_africa.4 days = 1035 }
+				news_event = { id = news_africa.6 days = 1049 }
+				## 2023 -debug -crash_data_log
+				news_event = { id = news_africa.8 days = 1103 }
+				news_event = { id = news_africa.10 days = 1164 }
+				news_event = { id = news_africa.11 days = 1189 }
+				news_event = { id = news_africa.12 days = 1200 }
+				news_event = { id = news_africa.13 days = 1220 }
+				news_event = { id = news_africa.15 days = 1304 }
+				news_event = { id = news_africa.16 days = 1329 }
+				news_event = { id = news_africa.18 days = 1347 }
+				news_event = { id = news_africa.20 days = 1375 }
+				news_event = { id = news_africa.23 days = 1450 }
+				news_event = { id = news_africa.24 days = 1459 }
+				## 2024
+				news_event = { id = news_africa.25 days = 1461 }
+				news_event = { id = news_africa.26 days = 1471 }
+				news_event = { id = news_africa.27 days = 1508 }
+				news_event = { id = news_africa.29 days = 1586 }
+				news_event = { id = news_africa.32 days = 1593 }
+				news_event = { id = news_africa.33 days = 1596 }
+				news_event = { id = news_africa.34 days = 1600 }
+#				news_event = { id = news_africa.35 days = 1600 }
+				## 2025
+				news_event = { id = news_africa.45 days = 1897 }
+			}
+			NGA = {
+				country_event = { id = AD_elections.0 days = 1151 }
+			}
+			ISW = {
+				country_event = { id = AD_NGA.1 days = 500 }
+			}
+			SOM = {
+				country_event = { id = AD_elections.1 days = 865 }
+			}
+			SNT = {
+				country_event = { id = AD_elections.2 days = 613 }
+				country_event = { id = AD_elections.7 days = 1056 }
+			}
+			LIB = {
+				country_event = { id = AD_elections.3 days = 1413 }
+			}
+			KEN = {
+				country_event = { id = AD_elections.4 days = 951 }
+			}
+			GHA = {
+				country_event = { id = AD_elections.5 days = 1802 }
+			}
+			GNB = {
+				country_event = { id = AD_elections.6 days = 57 }
+				country_event = { id = AD_elections.8 days = 1430 }
+			}
+			GAB = {
+				country_event = { id = AD_GAB.0 days = 1337 }
+			}
+		}
+	}
+}

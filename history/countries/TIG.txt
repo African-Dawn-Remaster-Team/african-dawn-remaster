@@ -1,0 +1,23 @@
+capital = 192
+#set_oob = "TIG_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_manpads_tech = 1
+	handmade_artillery_tech = 1
+	handmade_manpads_tech = 1
+}
+
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 100
+}
+
+set_convoys = 15
+starting_train_buffer = 5
+
+set_research_slots = 1
+set_stability = 0.33
+set_war_support = 0.7

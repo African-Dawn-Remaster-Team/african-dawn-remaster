@@ -1,0 +1,28 @@
+state={
+	id=130
+	name="STATE_130"
+	provinces={
+		99 424 516 592 721 821 870 913 1243 1526 1587 1643 1816 2025 3124 3139 3204 3236 3514 3533 3535 3544 3554 5039 5040 5041 5042 5043 5044 5045  
+	}
+	resources = {
+		gold = 4
+		uranium = 4
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 5039 5 }
+		victory_points = { 5041 3 }
+		victory_points = { 5043 3 }
+		victory_points = { 3139 3 }
+		victory_points = { 99 3 }
+		victory_points = { 3554 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=56365
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

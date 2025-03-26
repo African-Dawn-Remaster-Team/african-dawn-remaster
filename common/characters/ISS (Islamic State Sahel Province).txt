@@ -1,0 +1,121 @@
+characters = {
+    ISS_Adnan_Abu_Walid_al_Sahrawi = {
+		name = ISS_Adnan_Abu_Walid_al_Sahrawi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISS/ISS_Adnan_Abu_Walid_al_Sahrawi.dds"
+			}
+			army = {
+				large = "gfx/leaders/ISS/ISS_Adnan_Abu_Walid_al_Sahrawi.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ADNAN_ABU_WALID_AL_SAHRAWI_DESC"
+			ideology = fundamentalism_subtype_jihadism
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer war_hero desert_fox }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	
+    ISS_Abou_al_Bara_al_Sahraoui = {
+		name = ISS_Abou_al_Bara_al_Sahraoui
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABOU_AL_BARA_AL_SAHRAOUI_DESC"
+			ideology = fundamentalism_subtype_jihadism
+		}
+		field_marshal = {
+			traits = { infantry_officer desert_fox }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+	ISS_Abdulaziz_Mahwaz_Al_Jamal = {
+		name = ISS_Abdulaziz_Mahwaz_Al_Jamal
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABDULAZIZ_MAHWAZ_AL_JAMAL_DESC"
+			ideology = fundamentalism_subtype_jihadism
+		}
+		field_marshal = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	ISS_Ibrahim_Doundou_Chefou  = {
+		name = ISS_Ibrahim_Doundou_Chefou
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_2.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher infantry_officer  }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	
+	ISS_Abu_Huzeifa  = {
+		name = ISS_Abu_Huzeifa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_3.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher infantry_officer  }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+}

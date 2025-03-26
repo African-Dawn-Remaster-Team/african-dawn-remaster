@@ -1,0 +1,97 @@
+division_template = {
+	name = "Biafra Infantry Brigade"
+	priority = 1
+	regiments={
+		Infantry = { x=0 y=0 }
+		Infantry = { x=0 y=1 }
+		Infantry = { x=0 y=2 }
+		Infantry = { x=1 y=0 }
+		Infantry = { x=1 y=1 }
+		Infantry = { x=1 y=2 }
+		Infantry = { x=2 y=0 }
+		Infantry = { x=2 y=1 }
+		Infantry = { x=2 y=2 }
+	}
+}
+
+division_template = {
+	name = "Biafra Light Infantry Brigade"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck = { x=0 y=0 }
+		light_infantry_opol_on_guntruck = { x=0 y=1 }
+		light_infantry_opol_on_guntruck = { x=0 y=2 }
+		light_infantry_opol_on_guntruck = { x=1 y=0 }
+		light_infantry_opol_on_guntruck = { x=1 y=1 }
+		light_infantry_opol_on_guntruck = { x=1 y=2 }
+		light_infantry_opol_on_guntruck = { x=2 y=0 }
+		light_infantry_opol_on_guntruck = { x=2 y=1 }
+		light_infantry_opol_on_guntruck = { x=2 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Eastern Security Network Forces"
+		location = 183
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Eastern Security Network Forces"
+		location = 4715
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Eastern Security Network Forces"
+		location = 4716
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Eastern Security Network Forces"
+		location = 4716
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Eastern Security Network Forces"
+		location = 711
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Biafra National Guard Forces"
+		location = 4714
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Biafra National Guard Forces"
+		location = 711
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Biafra National Guard Forces"
+		location = 4813
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+	division= {	
+		name = "Biafra National League Forces"
+		location = 4812
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.88
+	}
+}

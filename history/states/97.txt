@@ -1,0 +1,28 @@
+state={
+	id=97
+	name="STATE_97"
+	provinces={
+		29 109 194 212 288 845 884 941 1340 1411 1457 1471 1780 2434 2524 3057 3667 3675 3688 3691 4693 4698 4705 
+	}
+	resources = {
+		gold = 12
+		aluminium = 4
+	}
+	history={
+		owner = GNA
+		add_core_of = GNA
+		victory_points = { 288 5 }
+		victory_points = { 3667 3 }
+		victory_points = { 4693 3 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			air_base = 1
+			3675 = { dam = 1 }
+		}
+	}
+	manpower=2915090
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

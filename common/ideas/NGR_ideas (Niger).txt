@@ -1,0 +1,198 @@
+ideas = {
+	
+	country = {
+	
+		NGR_protracted_war_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.8
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.8
+			}
+		}
+		
+		NGR_movement_for_the_democratic_revolution_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				attrition = 0.05
+				custom_modifier_tooltip = NGR_116_resistance_tt
+			}
+		}
+		
+		NGR_movement_for_the_democratic_revolution_idea_1 = {
+			name = NGR_movement_for_the_democratic_revolution_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				conscription_factor = 0.07
+				resistance_target = -0.2
+				attrition = 0.05
+				custom_modifier_tooltip = NGR_116_resistance_tt
+			}
+		}
+		
+		NGR_disparity_between_the_center_and_the_outskirts_idea = {			#FOR BOOKMARKS#
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				production_speed_industrial_complex_factor = -0.32
+				production_factory_max_efficiency_factor = -0.16
+				industrial_capacity_factory = -0.32
+				fundamentalism_drift = 0.08
+			}
+		}
+		
+		NGR_counter_terrorism_measures_in_the_rear_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				resistance_target = -0.45
+				compliance_growth = 0.15
+				resistance_garrison_penetration_chance = -0.3
+			}
+		}
+		
+		NGR_standardization_of_military_procedures_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_org_factor = 0.05
+				dig_in_speed_factor = 0.1
+			}
+		}
+		
+		NGR_standardization_of_military_procedures_idea_1 = {
+			name = NGR_standardization_of_military_procedures_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_org_factor = 0.05
+				dig_in_speed_factor = 0.1
+				compliance_growth = 0.12
+				out_of_supply_factor = -0.07
+				experience_gain_army_factor = 0.1
+			}
+		}
+		
+		NGR_dependence_on_international_donors_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				political_power_factor = -0.05
+			}
+		}
+		
+		NGR_support_migration_to_gold_mines_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_money_from_gold_modifier = 0.2
+			}
+		}
+		
+		NGR_tuareg_protests_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				stability_factor = -0.15
+				AD_money_from_taxes_modifier = -0.05
+				production_speed_buildings_factor = -0.08
+				political_power_factor = -0.04
+				recon_factor = -0.2
+			}
+		}
+		
+		NGR_patriotic_liberation_front_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				attrition = 0.15
+				custom_modifier_tooltip = NGR_movement_for_the_democratic_revolution_idea_tt
+			}
+			targeted_modifier = {
+				tag = JNA
+				defense_bonus_against = -0.1
+			}
+		}
+		
+		NGR_confusion_in_the_army_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				planning_speed = -0.25
+				army_attack_factor = -0.05
+			}
+		}
+		
+		NGR_sovereign_industrial_development_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		NGR_interaction_with_niger_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		NGR_expand_conscription_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_military_expenses_cost_modifier = 0.15
+				conscription = 0.02
+			}
+		}
+	}
+}

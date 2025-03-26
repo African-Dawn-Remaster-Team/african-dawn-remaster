@@ -1,0 +1,19 @@
+state={
+	id=128
+	name="STATE_128"
+	provinces={
+		2 240 436 438 537 724 763 794 869 894 998 1093 1113 1162 1344 1534 1624 1689 1803 1917 2024 2552 2582 2652 2774 2781 2868 2899 2906 3019 3095 3150 3476 3477 3508 3511 3524 3539 3548 3556 3571 4979 
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 240 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=12106
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,347 @@
+division_template = {
+	name = "Infantry Brigade"
+	priority = 1
+	regiments={
+		Infantry = { x=0 y=0 }
+		Infantry = { x=0 y=1 }
+		Infantry = { x=0 y=2 }
+		Infantry = { x=1 y=0 }
+		Infantry = { x=1 y=1 }
+		Infantry = { x=1 y=2 }
+		Infantry = { x=2 y=0 }
+		Infantry = { x=2 y=1 }
+		Infantry = { x=2 y=2 }
+	}
+}
+
+division_template = {
+	name = "Light Infantry Brigade"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck = { x=0 y=0 }
+		light_infantry_opol_on_guntruck = { x=0 y=1 }
+		light_infantry_opol_on_guntruck = { x=0 y=2 }
+		light_infantry_opol_on_guntruck = { x=1 y=0 }
+		light_infantry_opol_on_guntruck = { x=1 y=1 }
+		light_infantry_opol_on_guntruck = { x=1 y=2 }
+		light_infantry_opol_on_guntruck = { x=2 y=0 }
+		light_infantry_opol_on_guntruck = { x=2 y=1 }
+		light_infantry_opol_on_guntruck = { x=2 y=2 }
+	}
+}
+
+division_template = {
+	name = "Airborne forces"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+		speznaz = { x=1 y=0 }
+		speznaz = { x=1 y=1 }
+		speznaz = { x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Armoured Recce Regiment"
+	priority = 1
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_jeep={ x=0 y=4 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Mechanised Brigade"
+	priority = 1
+	regiments={
+		medium_armor_unit ={ x=0 y=0 }
+		medium_armor_unit ={ x=0 y=1 }
+		medium_armor_unit ={ x=0 y=2 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+		infantry_on_btr={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+division_template = {
+	name = "Motorised Brigade"
+	priority = 1
+	regiments={
+		infantry_on_truck ={ x=0 y=0 }
+		infantry_on_truck ={ x=0 y=1 }
+		infantry_on_truck ={ x=0 y=2 }
+		infantry_on_truck ={ x=0 y=3 }
+		infantry_on_truck ={ x=0 y=4 }
+		infantry_on_truck={ x=1 y=0 }
+		infantry_on_truck={ x=1 y=1 }
+		infantry_on_truck={ x=1 y=2 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1st Mechanised Brigade"
+		location = 4809
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "3rd Motorised Brigade"
+		location = 3256
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "214th Recce Battalion"
+		location = 2750
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "4th Mechanised Brigade"
+		location = 4736
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "9th Motorised Brigade"
+		location = 4743
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "12th Brigade"
+		location = 4739
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "32nd Field Artillery Brigade"
+		location = 197
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "244th Recce Battalion"
+		location = 197
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "21st Armoured Brigade"
+		location = 1451
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "23rd Armoured Brigade"
+		location = 1451
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "243rd Recce Battalion"
+		location = 1147
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "2nd Brigade"
+		location = 4708
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "16th Brigade"
+		location = 2353
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "63rd Brigade"
+		location = 4711
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "42nd Engineering Brigade"
+		location = 4814
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "21st Brigade"
+		location = 3669
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "22nd Brigade"
+		location = 3674
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "23rd Brigade"
+		location = 3063
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "241st Recce Battalion"
+		location = 1866
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "1st Brigade"
+		location = 1724
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "17th Brigade"
+		location = 4792
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "19th Mechanised Battalion"
+		location = 4725
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "19th Mechanised Battalion"
+		location = 4725
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "165th Mechanised Battalion"
+		location = 4725
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "242nd Recce Battalion"
+		location = 4725
+		division_template = "Armoured Recce Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "2nd Amphibious Brigade"
+		location = 4720
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "7th Amphibious Battalion"
+		location = 4715
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "93rd Amphibious Battalion"
+		location = 4814
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "103rd Amphibious Battalion"
+		location = 4814
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "13rd Motorised Brigade"
+		location = 4711
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "146th Amphibious Battalion"
+		location = 2353
+		division_template = "Motorised Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "3rd Battalion"
+		location = 4755
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "7th Battalion"
+		location = 4755
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "26th Battalion"
+		location = 4755
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

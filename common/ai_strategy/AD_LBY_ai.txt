@@ -1,0 +1,199 @@
+
+
+great_power_volunteer_TUR = {
+	enable = {
+		always = yes
+	}
+	allowed = {
+		original_tag = TUR
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = DLG
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = DLG
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = support
+		id = DLG
+		value = 100
+	}
+	
+}
+
+libya_civil_war_east = {
+	enable = {
+		always = yes
+	}
+	allowed = {
+		tag = LBY
+	}
+	cancel = {
+		LBY = { has_idea = LBY_Zheneva_Agreements_EAST }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_control
+		area = west_libya
+		priority = 1
+		ratio = 0.2
+		ordertype = rush
+		execute_order = yes
+	}
+}
+
+libya_civil_war_east = {
+	enable = {
+		always = yes
+	}
+	allowed = {
+		tag = DLG
+	}
+	cancel = {
+		LBY = { has_idea = LBY_Zheneva_Agreements_EAST }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_control
+		area = east_libya
+		priority = 1
+		ratio = 0.2
+		ordertype = rush
+		execute_order = yes
+	}
+	
+}
+
+great_power_LBY_volunteer_EGY = {
+	enable = {
+		LBY = {	has_completed_focus = LBY_Strengthening_ties_with_Egypt	}
+	}
+	allowed = {
+		original_tag = EGY
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = LBY
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = LBY
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = support
+		id = LBY
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SUD
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SUD
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = support
+		id = SUD
+		value = 100
+	}
+	
+}
+
+great_power_volunteer_SUD = {
+	enable = {
+		LBY = {	has_completed_focus = LBY_Enlist_the_assistance_of_the_Rapid_Support_Force	}
+	}
+	allowed = {
+		original_tag = SUD
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = LBY
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = LBY
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = support
+		id = LBY
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SUD
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SUD
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = support
+		id = SUD
+		value = 100
+	}
+	
+}
+
+great_power_volunteer_LBY_RUS = {
+	enable = {
+		LBY = {	has_completed_focus = LBY_Delegation_to_Moscow	}
+	}
+	allowed = {
+		original_tag = RUS
+	}
+	abort_when_not_enabled = yes
+	
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = LBY
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = LBY
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = LBY
+		value = 100
+	}
+	
+}

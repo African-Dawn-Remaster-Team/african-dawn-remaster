@@ -1,0 +1,336 @@
+MLI_elections_category = {
+
+	MLI_threat_of_a_military_coup_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {
+			OR = {
+				has_completed_focus = MLI_remove_heavy_equipment_from_bamako
+				has_completed_focus = MLI_calm_the_protests
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission MLI_threat_of_a_military_coup_mission"
+		}
+		days_mission_timeout = 150
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission MLI_threat_of_a_military_coup_mission"
+			country_event = AD_MLI.0
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+
+MLI_recent_revolution_category = {
+	
+	MLI_demands_of_the_provisional_government_mission = {
+		priority = 1000
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = { has_completed_focus = MLI_formation_of_the_provisional_government }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission MLI_demands_of_the_provisional_government_mission"
+		}
+		days_mission_timeout = 60
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission MLI_demands_of_the_provisional_government_mission"
+			add_stability = -0.05
+			custom_effect_tooltip = empty_line_tooltip
+			activate_mission = MLI_demands_of_the_provisional_government_mission
+		}
+		ai_will_do = { base = 0 }
+	}
+	
+	MLI_requirements_for_the_end_of_the_transitional_government_mission = {
+		priority = 999
+		icon = border_war
+		activation = { always = no }
+		available = { hidden_trigger = { always = no } }
+		cancel_trigger = {  }
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel mission MLI_requirements_for_the_end_of_the_transitional_government_mission"
+		}
+		days_mission_timeout = 300
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): timeout mission MLI_requirements_for_the_end_of_the_transitional_government_mission"
+			add_stability = -0.1
+			custom_effect_tooltip = empty_line_tooltip
+			activate_mission = MLI_requirements_for_the_end_of_the_transitional_government_mission
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+
+MLI_dependence_on_international_donors_category = {
+	
+	MLI_request_financial_support_from_france = {
+		priority = 1000
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 120
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_request_financial_support_from_france"
+			add_to_variable = { AD_current_money_var = 20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			subtract_from_variable = { AD_fo_position = 0.02 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.02 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			set_temp_variable = { MLI_dependence_on_international_donors_temp_var = 5 }
+			MLI_dependence_on_international_donors_check_effect = yes
+		}
+		ai_will_do = { base = 10 }
+	}
+	
+	MLI_request_financial_support_from_eu = {
+		priority = 999
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 120
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_request_financial_support_from_eu"
+			add_to_variable = { AD_current_money_var = 15 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			subtract_from_variable = { AD_fo_position = 0.01 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.01 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip		
+			set_temp_variable = { MLI_dependence_on_international_donors_temp_var = 8 }
+			MLI_dependence_on_international_donors_check_effect = yes
+		}
+		ai_will_do = { base = 10 }
+	}
+	
+	MLI_request_financial_support_from_un = {
+		priority = 998
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		days_re_enable = 120
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_request_financial_support_from_un"
+			add_to_variable = { AD_current_money_var = 5 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			set_temp_variable = { MLI_dependence_on_international_donors_temp_var = 4 }
+			MLI_dependence_on_international_donors_check_effect = yes
+		}
+		ai_will_do = { base = 10 }
+	}
+	
+	MLI_pay_off_some_of_the_debts = {
+		priority = 997
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				set_temp_variable = { MLI_dependence_on_international_donors_temp_var = 0 }
+				check_variable = { var = MLI_dependence_on_international_donors_var value = MLI_dependence_on_international_donors_temp_var compare = greater_than }
+				tooltip = MLI_dependence_on_international_donors_greater_than_tt
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { money_temp_cost = 10 }
+			check_variable = { var = AD_current_money_var value = money_temp_cost compare = greater_than_or_equals }
+		}
+		custom_cost_text = money_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_pay_off_some_of_the_debts"
+			hidden_effect = { add_to_variable = { AD_current_money_var = -10 } }
+			set_temp_variable = { MLI_dependence_on_international_donors_temp_var = -5 }
+			MLI_dependence_on_international_donors_check_effect = yes
+		}
+		ai_will_do = { base = 10 }
+	}
+}
+
+MLI_restoration_of_control_over_the_national_territory_category = {
+	
+	MLI_expand_cooperation_with_gatal = {
+		priority = 1000
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		visible = {
+			country_exists = GTI
+			NOT = { has_country_flag = MLI_demand_gatal_submission_completed }
+		}
+		available = {
+			NOT = { has_country_flag = MLI_demand_gatal_submission_completed }
+			GTI = {
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				OR = {
+					has_war_with = ISS
+					has_war_with = JNA
+					has_war_with = AZW
+				}
+			}
+			OR = {
+				has_war_with = ISS
+				has_war_with = JNA
+				has_war_with = AZW
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 20 }
+			set_temp_variable = { custom_cost_pp = 100 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_expand_cooperation_with_gatal"
+			hidden_effect = {
+				add_political_power = -100
+				add_command_power = -20
+			}
+			set_country_flag = MLI_expand_cooperation_with_gatal_completed
+			add_ideas = MLI_gatal_mli_support_idea
+			custom_effect_tooltip = empty_line_tooltip
+			GTI = { add_ideas = MLI_gatal_mli_support_idea }
+		}
+		ai_will_do = { base = 10 }
+	}
+	
+	MLI_demand_gatal_submission = {
+		priority = 999
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		visible = {
+			country_exists = GTI
+			NOT = { has_country_flag = MLI_expand_cooperation_with_gatal_completed }
+		}
+		available = {
+			NOT = { has_country_flag = MLI_expand_cooperation_with_gatal_completed }
+			GTI = {
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 45 }
+			set_temp_variable = { custom_cost_pp = 200 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_demand_gatal_submission"
+			hidden_effect = {
+				add_political_power = -200
+				add_command_power = -45
+			}
+			set_country_flag = MLI_demand_gatal_submission_completed
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			132 = { remove_dynamic_modifier = { modifier = MLI_dominance_of_local_militias_modifier } }
+			custom_effect_tooltip = empty_line_tooltip
+			GTI = {
+				if = {
+					limit = { country_exists = AZW }
+					GTI_Fahad_Ag_Almahmoud = { set_nationality = AZW }
+				}
+				ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = MLI_decline_of_the_malian_armed_forces_modifier } }
+				custom_effect_tooltip = MLI_decline_of_the_malian_armed_forces_modifier_tt_change
+				add_to_variable = { MAL_training_time_army_factor_var = 0.02 tooltip = training_time_army_factor_tooltip }
+				add_to_variable = { MAL_army_org_factor_var = -0.02 tooltip = army_org_factor_tooltip }
+				add_to_variable = { MAL_army_leader_cost_factor_var = 0.02 tooltip = army_leader_cost_factor_tooltip }
+				add_to_variable = { MAL_army_org_regain_var = -0.03 tooltip = army_org_regain_tooltip }		
+				add_to_variable = { MAL_dig_in_speed_factor_var = -0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+				add_to_variable = { MAL_pocket_penalty_var = 0.1 tooltip = pocket_penalty_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		ai_will_do = { base = 10 }
+	}
+	
+	MLI_dismiss_the_dan_on_the_ambassador = {
+		priority = 998
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = MLI_cooperation_with_the_dan_on_the_ambassador_completed }
+		}
+		available = {
+			NOT = { has_country_flag = MLI_cooperation_with_the_dan_on_the_ambassador_completed }
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 50 }
+			set_temp_variable = { custom_cost_pp = 150 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_dismiss_the_dan_on_the_ambassador"
+			hidden_effect = {
+				add_political_power = -150
+				add_command_power = -50
+			}
+			set_country_flag = MLI_dismiss_the_dan_on_the_ambassador_completed
+			127 = { remove_dynamic_modifier = { modifier = MLI_dominance_of_local_militias_modifier } }
+		}
+		ai_will_do = { base = 10 }
+	}
+	
+	MLI_cooperation_with_the_dan_on_the_ambassador = {
+		priority = 997
+		icon = GFX_decision_generic_political_discourse		
+		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = MLI_dismiss_the_dan_on_the_ambassador_completed }
+			has_idea = MLI_protracted_war_idea
+		}
+		available = {
+			NOT = { has_country_flag = MLI_dismiss_the_dan_on_the_ambassador_completed }
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 20 }
+			set_temp_variable = { custom_cost_pp = 100 }
+			check_variable = { var = command_power value = command_power_temp_cost compare = greater_than_or_equals }
+			check_variable = { var = political_power value = custom_cost_pp compare = greater_than_or_equals }
+		}
+		custom_cost_text = pol_and_comnand_power_cost
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision MLI_cooperation_with_the_dan_on_the_ambassador"
+			hidden_effect = {
+				add_political_power = -100
+				add_command_power = -20
+			}
+			set_country_flag = MLI_cooperation_with_the_dan_on_the_ambassador_completed
+			if = {
+				limit = { has_idea = MLI_protracted_war_idea }
+				swap_ideas = {
+					remove_idea = MLI_protracted_war_idea
+					add_idea = MLI_protracted_war_idea_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MLI_protracted_war_idea_3
+					add_idea = MLI_protracted_war_idea_3_1
+				}
+			}
+		}
+		ai_will_do = { base = 10 }
+	}
+}

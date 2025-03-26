@@ -1,0 +1,40 @@
+is_democratic_ideology = { # democratic
+	has_government = conservatism
+	has_government = liberalism
+	has_government = social_democracy
+}
+
+is_left_ideology = { # communism
+	has_government = socialism
+}
+
+is_neutral_ideology = { # neutrality
+	has_government = centrism
+}
+
+is_radical_islamic_ideology = { # fascism
+	has_government = fundamentalism
+}
+
+AD_SSA_available_common_trigger = {
+	if = {
+		limit = { tag = MLI }
+		OR = {
+			is_in_faction_with = NGR
+			is_in_faction_with = BFA
+		}
+	}
+	else_if = {
+		limit = { tag = BFA }
+		OR = {
+			is_in_faction_with = NGR
+			is_in_faction_with = MLI
+		}
+	}
+	else = {
+		OR = {
+			is_in_faction_with = BFA
+			is_in_faction_with = MLI
+		}
+	}
+}

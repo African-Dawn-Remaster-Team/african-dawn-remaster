@@ -1,0 +1,65 @@
+capital = 40
+set_convoys = 45
+
+set_research_slots = 1
+set_stability = -0.31
+set_war_support = -0.67
+set_oob = "EQG_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	
+	handmade_atgm_tech = 1
+	
+	modern_camouflage_tech = 1
+	handmade_manpads_tech = 1
+
+	basic_train = 1
+	
+	tech_support = 1
+}
+
+set_popularities = {
+	centrism = 52
+	conservatism = 21
+	social_democracy = 23
+	liberalism = 4
+}
+
+set_variable = { AD_fog_source_of_power = 1 }
+set_variable = { AD_fog_power_structure = 0 }
+
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+recruit_character = EQG_Teodoro_Obiang_Nguema_Mbasogo
+recruit_character = EQG_Severo_Moto
+recruit_character = EQG_Andres_Esono_Ondo
+recruit_character = EQG_Gabriel_Nse_Obiang
+recruit_character = EQG_Teodoro_Biyogo_Nsue_Okomo
+recruit_character = EQG_Victoriano_Bibang_Nsue_Okomo
+recruit_character = EQG_Juan_Olo_Mbah_Nseng
+recruit_character = EQG_Armengol_Ondo_Ngema
+recruit_character = EQG_Antonio_Oburu_Ondo
+recruit_character = EQG_Teodoro_Nguema_Obiang_Manga
+recruit_character = EQG_Gabriel_Mbanga_Obiang_Lima
+
+add_ideas = {
+	free_trade
+	EQG_Teodoro_Nguema_Obiang_Manga
+	EQG_dependence_on_oil_revenues_idea
+	EQG_mongomo_clan_idea
+	EQG_foreign_traders_idea
+	EQG_threat_of_a_coup_from_the_opposition_idea
+}
+
+set_variable = { EQG_influence_of_theodorian = 75 }
+set_variable = { EQG_influence_of_gabrielle = 35 }
+
+EQG_Teodoro_Nguema_Obiang_Manga = {
+	set_variable = { EQG_fellow_clansmen = token:EQG_Teodoro_Nguema_Obiang_Manga }
+	add_to_array = { ROOT.EQG_split_in_the_mongomo_clan_ui_array = THIS }
+}
+EQG_Gabriel_Mbanga_Obiang_Lima = {
+	set_variable = { EQG_fellow_clansmen = token:EQG_Gabriel_Mbanga_Obiang_Lima }
+	add_to_array = { ROOT.EQG_split_in_the_mongomo_clan_ui_array = THIS }
+}

@@ -1,0 +1,56 @@
+scripted_gui = {
+	AD_forms_government = {
+		window_name = "AD_forms_government_gui"
+		parent_window_token = politics_tab
+		context_type = player_context
+		
+		visible = {
+			always = yes
+		}
+		
+		triggers = {
+			sop_leading_froms_bg_visible = {
+				check_variable = { AD_fog_source_of_power = AD_sop_scope }
+			}
+			ps_leading_froms_bg_visible = {
+				check_variable = { AD_fog_power_structure = AD_ps_scope }
+			}
+			
+			faction_none_for_tooltip_visible = {
+				is_in_faction = no
+			}
+			faction_visible = {
+				is_in_faction = yes
+			}
+		}
+		
+		properties = {
+			sop_color_block = {
+				image = "[AD_sop_get_color_block]"
+			}
+			ps_color_block = {
+				image = "[AD_ps_get_color_block]"
+			}
+			faction = {
+				image = "[AD_get_faction_logo]"
+			}
+		}
+		
+		dynamic_lists = {
+			AD_source_of_power = {
+				array = global.AD_source_of_power_array
+				value = AD_sop_scope
+				entry_container = AD_fog_source_of_power_info_entry
+				
+				change_scope = no
+			}
+			AD_power_structure = {
+				array = global.AD_power_structure_array
+				value = AD_ps_scope
+				entry_container = AD_fog_power_structure_info_entry
+				
+				change_scope = no
+			}
+		}
+	}
+}

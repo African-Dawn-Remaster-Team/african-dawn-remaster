@@ -1,0 +1,112 @@
+division_template = {
+	name = "Bataillon d'infanterie"
+	priority = 1
+	regiments={
+		light_infantry_opol_on_guntruck = { x=0 y=0 }
+		light_infantry_opol_on_guntruck = { x=0 y=1 }
+		light_infantry_opol_on_guntruck = { x=0 y=2 }
+		light_infantry_opol_on_guntruck = { x=1 y=0 }
+		light_infantry_opol_on_guntruck = { x=1 y=1 }
+		light_infantry_opol_on_guntruck = { x=1 y=2 }
+	}
+}
+
+division_template = {
+	name = "Bataillon commando parachutiste"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Bataillon d’intervention motorisé"
+	priority = 2
+	regiments={
+		infantry_on_jeep={ x=0 y=0 }
+		infantry_on_jeep={ x=0 y=1 }
+		infantry_on_jeep={ x=0 y=2 }
+		infantry_on_jeep={ x=0 y=3 }
+		infantry_on_btr={ x=1 y=0 }
+		infantry_on_btr={ x=1 y=1 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1er Bataillon d’Intervention Rapide"
+		location = 4688
+		division_template = "Bataillon d’intervention motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "2e Bataillon d’Intervention Rapide"
+		location = 2401
+		division_template = "Bataillon d’intervention motorisé"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "23e Bataillon d'Infanterie Motorisée"
+		location = 4655
+		division_template = "Bataillon d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "23e Bataillon d'Infanterie Motorisée"
+		location = 3694
+		division_template = "Bataillon d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+	division= {	
+		name = "1er Régiment d'Infanterie "
+		location = 3694
+		division_template = "Bataillon d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "2e Régiment d'Infanterie "
+		location = 2335
+		division_template = "Bataillon d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "3e Régiment d'Infanterie "
+		location = 3713
+		division_template = "Bataillon d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "4e Régiment d'Infanterie "
+		location = 2788
+		division_template = "Bataillon d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment Para Commando"
+		location = 4654
+		division_template = "Bataillon commando parachutiste"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+	}
+}

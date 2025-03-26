@@ -1,0 +1,18 @@
+characters = {
+
+	IVO_Alassane_Dramane_Ouattara = {
+		name = IVO_Alassane_Dramane_Ouattara
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IVO/IVO_Alassane_Dramane_Ouattara.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALASSANE_DRAMANE_OUATTARA_BIO_VAZ_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

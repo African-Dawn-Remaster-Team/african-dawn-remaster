@@ -1,0 +1,51 @@
+characters = {
+    ISW_Abu_Musab_Umar_Al_Barnawi = {
+		name = ISW_Abu_Musab_Umar_Al_Barnawi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISW/ISW_Abu_Musab_Umar_Al_Barnawi.dds"
+			}
+			army = {
+				large = "gfx/leaders/ISW/ISW_Abu_Musab_Umar_Al_Barnawi.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABU_MUSAB_UMAR_AL_BARNAWI_DESC"
+			ideology = fundamentalism_subtype_jihadism
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer war_hero }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ISW_Abubakar_Shekau = {
+		name = ISW_Abubakar_Shekau
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ISW/ISW_Abubakar_Shekau.dds"
+			}
+			army = {
+				large = "gfx/leaders/ISW/ISW_Abubakar_Shekau.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABUBAKAR_SHEKAU_DESC"
+			ideology = fundamentalism_subtype_jihadism
+			traits = {
+				ISW_Madman
+			}
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+}

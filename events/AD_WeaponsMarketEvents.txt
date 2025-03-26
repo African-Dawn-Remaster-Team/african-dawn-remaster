@@ -1,0 +1,148 @@
+add_namespace = market
+
+country_event = {
+	id = market.1
+	title = market.1.t
+	desc = market.1.desc
+	is_triggered_only = yes
+	immediate = { log = "[ROOT.GetName] _MARKET_ [?AD_m_record_producer] - [?AD_m_record_item] - [?AD_m_record_amount]" }
+	
+	option = {
+		name = market.1.a
+		meta_effect = {
+			text = {
+				add_equipment_to_stockpile = {
+					type = [eqtype]
+					amount = AD_m_record_amount
+					producer = AD_m_record_producer
+				}
+			}
+			eqtype = "[?AD_m_record_item.GetTokenKey]"
+		}
+		clr_country_flag = buyed_weapons_not_delivered
+		add_to_variable = { AD_market_gui_update = 1 } # TODO а насколько это вообще надо?
+	}
+}
+
+country_event = {
+	id = market.2
+	title = market.2.t
+	desc = market.2.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = market.2.a
+		if = {
+			limit = {
+				check_variable = {
+					black_market_selected_type = 0
+				}
+			}
+			random_list = {
+				25 = {
+					add_equipment_to_stockpile = {
+						type = waterpipe_rifle
+						amount = 500
+						#producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = ak_0
+						amount = 500
+						producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = ak_1
+						amount = 500
+						producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = M16_0
+						amount = 500
+						producer = USA
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = qbz_0
+						amount = 500
+						producer = CHI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					black_market_selected_type = 1
+				}
+			}
+			random_list = {
+				35 = {
+					add_equipment_to_stockpile = {
+						type = ATGM_equipment_rpg7
+						amount = 50
+						producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = ATGM_equipment_9k111
+						amount = 50
+						producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = ATGM_equipment_hj8
+						amount = 50
+						producer = CHI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					black_market_selected_type = 2
+				}
+			}
+			random_list = {
+				35 = {
+					add_equipment_to_stockpile = {
+						type = manpads_equipment_strela
+						amount = 50
+						producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = manpads_equipment_igla
+						amount = 50
+						producer = RUS
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = manpads_equipment_fim92
+						amount = 50
+						producer = USA
+					}
+				}
+				10 = {
+					add_equipment_to_stockpile = {
+						type = manpads_equipment_fn6
+						amount = 50
+						producer = CHI
+					}
+				}
+			}
+		}
+		clr_country_flag = black_market_already_bought
+	}
+}

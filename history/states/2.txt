@@ -1,0 +1,28 @@
+state={
+	id=2
+	name="STATE_2"
+	provinces={
+		250 426 1062 1455 1722 3052 3614 4625 4626 4627 
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = SEN
+		add_core_of = SEN
+		victory_points = { 1062 10 }
+		victory_points = { 3614 5 }
+		victory_points = { 4627 3 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 3
+			1062 = { naval_base = 3 }
+		}
+	}
+	manpower=10800290
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000 
+}

@@ -1,0 +1,18 @@
+state={
+	id=73
+	name="STATE_73"
+	provinces={
+		3858 
+	}
+	history={
+		owner = EQG
+		add_core_of = EQG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=150
+	state_category=tiny_island
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,21 @@
+state={
+	id=118
+	name="STATE_118"
+	provinces={
+		36 103 105 147 203 227 232 264 588 1057 1446 1732 1762 2008 2054 2770 2838 3029 3113 3264 3593 3627 3641 4872 4877 4879 4880 4881 
+	}
+	history={
+		owner = NGR
+		add_core_of = NGR
+		victory_points = { 3627 5 }
+		victory_points = { 2770 3 }
+		victory_points = { 232 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=4991070 
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

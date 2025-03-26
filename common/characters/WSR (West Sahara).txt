@@ -1,0 +1,18 @@
+characters = {
+
+	WSR_Brahim_Ghali = {
+		name = WSR_Brahim_Ghali
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WSR/WSR_Brahim_Ghali.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BRAHIM_GHALI_DESC"
+			ideology = centrism_subtype_personalist_dictatorship
+		}
+	}
+}

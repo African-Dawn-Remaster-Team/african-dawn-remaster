@@ -1,0 +1,62 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_faction_aes"
+		texturefile = "gfx/interface/ideologies/faction_aes.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_sdg"
+		texturefile = "gfx/interface/ideologies/faction_sdg.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_ecomog"
+		texturefile = "gfx/interface/ideologies/faction_ecomog.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_nato"
+		texturefile = "gfx/interface/ideologies/faction_nato.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_csto"
+		texturefile = "gfx/interface/ideologies/faction_csto.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_none"
+		texturefile = "gfx/interface/ideologies/faction_none.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_fundamentalism_group"
+		texturefile = "gfx/interface/ideologies/fundamentalism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_conservatism_group"
+		texturefile = "gfx/interface/ideologies/conservatism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_centrism_group"
+		texturefile = "gfx/interface/ideologies/centrism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_liberalism_group"
+		texturefile = "gfx/interface/ideologies/liberalism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democracy_group"
+		texturefile = "gfx/interface/ideologies/social_democracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_socialism_group"
+		texturefile = "gfx/interface/ideologies/socialism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_GEN_african_pride_idea"
+		texturefile = "gfx/interface/ideas/GEN_african_pride_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEN_political_isolation_idea"
+		texturefile = "gfx/interface/ideas/GEN_political_isolation_idea.dds"
+	}
+	
+}

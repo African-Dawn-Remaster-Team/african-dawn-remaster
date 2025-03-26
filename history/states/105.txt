@@ -1,0 +1,24 @@
+state={
+	id=105
+	name="STATE_105"
+	provinces={
+		161 469 632 702 911 1305 1465 1615 1866 3063 3642 3669 4772 4774 4778 4780 4781 4783 4785 4787 4789 4794 4797 4799 4803 4810 
+	}
+	history={
+		owner = NGA
+		add_core_of = NGA
+		add_core_of = ARW
+		victory_points = { 3669 5 }
+		victory_points = { 3063 3 }
+		victory_points = { 1866 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 3
+		}
+	}
+	manpower=6111500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

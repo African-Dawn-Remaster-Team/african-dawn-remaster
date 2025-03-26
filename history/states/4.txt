@@ -1,0 +1,28 @@
+state={
+	id=4
+	name="STATE_4"
+	provinces={
+		53 79 532 1329 1422 2268 3166 4689 4692 4699 4700 4701 
+	}
+	resources = {
+		aluminium = 28
+	}
+	history={
+		owner = GNA
+		add_core_of = GNA
+		victory_points = { 4692 10 }
+		victory_points = { 79 3 }
+		victory_points = { 4700 3 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+			air_base = 1
+			4692 = { naval_base = 3 }
+		}
+	}
+	manpower=5206487
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
+ 

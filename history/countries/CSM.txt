@@ -1,0 +1,21 @@
+capital = 90
+# set_oob = "_GENERIC_OOB"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+}
+
+recruit_character = CSM_Provisional_Government
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 100
+}
+
+set_convoys = 3
+starting_train_buffer = 5
+
+set_research_slots = 2
+set_stability = -0.93
+set_war_support = -0.67

@@ -1,0 +1,11 @@
+defined_text = {
+	name = NGR_get_smi_desc
+	text = {
+		trigger = { NGR = { NOT = { has_completed_focus = NGR_new_gendarme_of_the_sahel } } }
+		localization_key = "AD_sahel_military_initiative_modifier_desc_1"
+	}
+	text = {
+		trigger = { NGR = { has_completed_focus = NGR_new_gendarme_of_the_sahel } }
+		localization_key = "AD_sahel_military_initiative_modifier_desc_2"
+	}
+}

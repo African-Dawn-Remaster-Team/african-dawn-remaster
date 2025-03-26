@@ -1,0 +1,30 @@
+state={
+	id=145
+	name="STATE_145"
+	provinces={
+		489 846 862 863 924 1187 1528 1606 1664 1994 2423 2712 2790 3098 5093 5100 5104 5105 
+	}
+	resources = {
+		oil = 4
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 5105 10 }
+		victory_points = { 1187 3 }
+		victory_points = { 1528 5 }
+		victory_points = { 1994 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+			5105 = { naval_base = 3 }
+			1994 = { naval_base = 3 }
+		}
+	}
+	manpower=2055379
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

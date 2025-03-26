@@ -1,0 +1,96 @@
+division_template = {
+	name = "Unité de reconnaissance blindée légère"
+
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Compagnie d'infanterie"
+	priority = 1
+	regiments={
+		infantry={ x=0 y=0 }
+		infantry={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=2 y=0 }
+		infantry={ x=2 y=1 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Régiment aéroporté"
+	priority = 2
+	regiments={
+		speznaz={ x=0 y=0 }
+		speznaz={ x=0 y=1 }
+		speznaz={ x=0 y=2 }
+		speznaz={ x=1 y=0 }
+		speznaz={ x=1 y=1 }
+		speznaz={ x=2 y=0 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon régional d'infanterie motorisée"
+	priority = 1
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+		light_infantry_opol_on_guntruck={ x=1 y=0 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Unité de reconnaissance blindée légère"
+		location = 3859
+		division_template = "Unité de reconnaissance blindée légère"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Bataillon d'infanterie de Librevil"
+		location = 3871
+		division_template = "Compagnie d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Bataillon régional d'infanterie motorisée de Makakou"
+		location = 3119
+		division_template = "Compagnie d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Bataillon régional d'infanterie motorisée de Oem"
+		location = 3860
+		division_template = "Compagnie d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Régiment aéroporté"
+		location = 3871
+		division_template = "Régiment aéroporté"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

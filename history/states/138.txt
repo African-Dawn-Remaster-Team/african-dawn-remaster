@@ -1,0 +1,35 @@
+state={
+	id=138
+	name="STATE_138"
+	provinces={
+		233 423 485 783 841 903 1086 1252 1704 2053 2426 3125 3271 3451 3461 3480 4985 
+	}
+	history={
+		owner = MOR
+		add_claim_by = MOR
+		add_core_of = WSR
+		victory_points = {
+			4985 5
+		}
+		victory_points = {
+			485 3
+		}
+		buildings = {
+			infrastructure = 2
+			4985 = { naval_base = 3 }
+			3125 = { bunker = 2 }
+			233 = { bunker = 2 }
+			841 = { bunker = 2 }
+			2053 = { bunker = 2 }
+			485 = { bunker = 2 }
+			3480 = { bunker = 2 }
+			2426 = { bunker = 2 }
+			423 = { bunker = 2 }
+			3451 = { bunker = 2 }
+		}
+	}
+	manpower=81566
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

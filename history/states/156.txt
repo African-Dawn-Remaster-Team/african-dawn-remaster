@@ -1,0 +1,24 @@
+state={
+	id=156
+	name="STATE_156"
+	provinces={
+		110 248 273 342 959 1060 1176 1212 1333 1351 1561 1790 1943 1997 2481 2697 2860 2887 3002 3087 3129 3226 3381 3395 3413 5063 5077 5080 5081 5083 
+	}
+	resources = {
+		oil = 40
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 1790 5 }
+		victory_points = { 1333 3 }
+		victory_points = { 110 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=52342
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

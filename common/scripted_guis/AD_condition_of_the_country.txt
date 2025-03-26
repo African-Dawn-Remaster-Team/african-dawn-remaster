@@ -1,0 +1,178 @@
+scripted_gui = {
+
+	AD_condition_of_the_country = {
+		window_name = "AD_condition_of_the_country_gui"
+		parent_window_token = politics_tab
+		context_type = player_context
+		
+		visible = {
+			always = yes
+		}
+		
+		dynamic_lists = {
+			ideas_grid = {
+				array = AD_condition_of_the_country_ideas
+				value = AD_cc_idea
+				index = AD_cc_idea_idx
+				entry_container = condition_of_the_country_idea_entry
+				
+				change_scope = no
+			}
+		}
+		
+		triggers = {
+			idea_status_down_visible = {
+				if = {
+					limit = { check_variable = { AD_cc_idea_idx = 0 } }
+					check_variable = { AD_poverty_level_growth < 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 1 } }
+					check_variable = { AD_unemployment_rate_level_growth < 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 2 } }
+					check_variable = { AD_society_development_level_growth < 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 3 } }
+					check_variable = { AD_food_supply_level_growth < 0 }
+				}
+				else = { # TODO corruption?
+					always = no
+				}
+			}
+			idea_status_stability_visible = {
+				if = {
+					limit = { check_variable = { AD_cc_idea_idx = 0 } }
+					check_variable = { AD_poverty_level_growth = 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 1 } }
+					check_variable = { AD_unemployment_rate_level_growth = 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 2 } }
+					check_variable = { AD_society_development_level_growth = 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 3 } }
+					check_variable = { AD_food_supply_level_growth = 0 }
+				}
+				else = {
+					always = no
+				}
+			}
+			idea_status_up_visible = {
+				if = {
+					limit = { check_variable = { AD_cc_idea_idx = 0 } }
+					check_variable = { AD_poverty_level_growth > 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 1 } }
+					check_variable = { AD_unemployment_rate_level_growth > 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 2 } }
+					check_variable = { AD_society_development_level_growth > 0 }
+				}
+				else_if = {
+					limit = { check_variable = { AD_cc_idea_idx = 3 } }
+					check_variable = { AD_food_supply_level_growth > 0 }
+				}
+				else = {
+					always = no
+				}
+			}
+		}
+		
+		effects = {
+			idea_button_click = {
+				if = {
+					limit = { 
+						NOT = { check_variable = { AD_cc_record_idea = 0 } }
+						check_variable = { AD_cc_record_idea = AD_cc_idea } 
+					}
+					set_variable = { AD_cc_record_idea = 0 }
+					set_variable = { AD_cc_record_idea_idx = 0 }
+				}
+				else = {
+					set_variable = { AD_foreign_orientation_open = 0 }
+					set_variable = { AD_cc_record_idea = AD_cc_idea }
+					set_variable = { AD_cc_record_idea_idx = AD_cc_idea_idx }
+					AD_cc_list_open = yes
+				}
+			}
+			
+			###
+			
+			name_click = {
+				meta_effect = {
+					text = {
+						show_ideas_tooltip = [IDEA]
+					}
+					IDEA = "[?AD_cc_idea.GetTokenKey]"
+				}
+			}
+		}
+		
+		properties = {
+			idea_button = {
+				image = "GFX_idea_[?AD_cc_idea.GetTokenKey]"
+			}
+		}
+	}
+	
+	AD_condition_of_the_country_list = {
+		window_name = "AD_condition_of_the_country_list_gui"
+		parent_window_token = politics_tab
+		context_type = player_context
+		# dirty = AD_ TODO !!
+		
+		visible = {
+			NOT = { check_variable = { AD_cc_record_idea = 0 } }
+		}
+		
+		dynamic_lists = {
+			box_list = {
+				array = AD_coc_current_list
+				entry_container = AD_condition_of_the_country_item
+				
+				change_scope = no
+			}
+		}
+		
+		triggers = {
+			idea_entry_bg_visible = {
+				NOT = { check_variable = { AD_cc_record_idea = v } }
+			}
+			idea_entry_highlight_bg_visible = {
+				check_variable = { AD_cc_record_idea = v }
+			}
+		}
+		
+		effects = {
+			close_click = {
+				set_variable = { AD_cc_record_idea = 0 }
+				set_variable = { AD_cc_record_idea_idx = 0 }
+			}
+			
+			###
+			
+			name_click = {
+				meta_effect = {
+					text = {
+						show_ideas_tooltip = [IDEA]
+					}
+					IDEA = "[?v.GetTokenKey]"
+				}
+			}
+		}
+		
+		properties = {
+			icon = {
+				image = "GFX_idea_[?v.GetTokenKey]"
+			}
+		}
+	}
+}

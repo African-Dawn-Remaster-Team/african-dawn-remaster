@@ -1,0 +1,21 @@
+state={
+	id=90
+	name="STATE_90"
+	provinces={
+		542 1242 1667 3185 4613 4614 4616 4617 
+	}
+	history={
+		owner = SEN
+		add_core_of = CSM
+		victory_points = { 4613 5 }
+		victory_points = { 1667 3 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=2119640
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}
+ 

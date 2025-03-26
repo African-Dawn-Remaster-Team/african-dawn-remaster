@@ -1,0 +1,37 @@
+state={
+	id=152
+	name="STATE_152"
+	provinces={
+		849 1376 1646 1898 1945 2129 2187 2987 3416 3447 5055 5057 5065 
+	}
+	resources = {
+		oil = 4
+	}
+	history={
+		owner = GAT
+		LBY = {
+			set_province_controller = 849 
+			set_province_controller = 1376 
+			set_province_controller = 1646 
+			set_province_controller = 1898 
+			set_province_controller = 1945 
+			set_province_controller = 2129 
+			set_province_controller = 2187 
+			set_province_controller = 2987 
+			set_province_controller = 3416 
+			set_province_controller = 5055 
+			set_province_controller = 5057 
+			set_province_controller = 5065 
+		}
+		add_core_of = GAT
+		victory_points = { 3447 5 }
+		victory_points = { 2987 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=23518
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

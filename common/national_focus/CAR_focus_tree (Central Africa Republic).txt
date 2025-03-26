@@ -1,0 +1,2334 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
+focus_tree = {
+	
+	id = ad_central_africa_republic_focus_tree
+	country = {
+		factor = 0	
+		modifier = {
+			add = 10
+			tag = CAR
+		}
+	}
+	default = no	
+	continuous_focus_position = { x = 0 y = 1000 }
+	
+	
+	focus = {
+		id = CAR_year_of_the_khartoum_accords
+		icon = GFX_z_goal_CAR_year_of_the_khartoum_accords
+		x = 0
+		y = 0
+		cost = 11.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		cancelable = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_year_of_the_khartoum_accords"
+			country_event = AD_CAR.11
+		}
+	}
+	
+	focus = {
+		id = CAR_resolve_the_issue_with_bozize
+		icon = GFX_z_goal_CAR_resolve_the_issue_with_bozize
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = CAR_event_9_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = CAR_event_9_flag
+				}
+			}
+			NOT = { has_completed_focus = CAR_elections_have_been_held }
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_year_of_the_khartoum_accords }
+		relative_position_id = CAR_year_of_the_khartoum_accords
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_resolve_the_issue_with_bozize"
+			country_event = AD_CAR.12
+		}
+	}
+	
+	focus = {
+		id = CAR_deal_with_the_french_henchmen
+		icon = GFX_z_goal_CAR_deal_with_the_french_henchmen
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { NOT = { has_completed_focus = CAR_elections_have_been_held } }
+		bypass = {  }
+		prerequisite = { focus = CAR_resolve_the_issue_with_bozize }
+		relative_position_id = CAR_resolve_the_issue_with_bozize
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_deal_with_the_french_henchmen"
+			custom_effect_tooltip = CAR_deal_with_the_french_henchmen_tt
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = -0.02
+			add_popularity = { ideology = liberalism popularity = -0.4 }
+			add_popularity = { ideology = conservatism popularity = 0.12 }
+		}
+	}
+	
+	focus = {
+		id = CAR_arrests_of_field_commanders
+		icon = GFX_z_goal_CAR_arrests_of_field_commanders
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			NOT = {
+				has_completed_focus = CAR_thwarting_the_bandits_plan
+				has_completed_focus = CAR_no_mercy_for_the_militants
+				has_completed_focus = CAR_bozize_seizes_power
+				has_completed_focus = CAR_consolidation_around_bozize
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_resolve_the_issue_with_bozize }
+		relative_position_id = CAR_resolve_the_issue_with_bozize
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_arrests_of_field_commanders"
+			add_popularity = { ideology = var:current_party_ideology_group popularity = 0.07 }
+			custom_effect_tooltip = empty_line_tooltip
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_variable = CAR_loyality_for_ccr }
+				add_to_variable = { CAR_loyality_for_ccr = -2 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_enlist_the_support_of_neighbors
+		icon = GFX_z_goal_CAR_enlist_the_support_of_neighbors
+		x = 2
+		y = 1
+		cost = 6
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = CAR_event_8_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = CAR_event_8_flag
+				}
+			}
+			COG = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_year_of_the_khartoum_accords }
+		relative_position_id = CAR_year_of_the_khartoum_accords
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_enlist_the_support_of_neighbors"
+			add_stability = 0.03
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = var:current_party_ideology_group popularity = 0.1 }
+			custom_effect_tooltip = empty_line_tooltip
+			COG = {
+				add_opinion_modifier = {
+					modifier = CAR_enlist_the_support_of_neighbors_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CAR_enlist_the_support_of_neighbors_op
+					target = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_support_the_activities_of_russian_instructors
+		icon = GFX_z_goal_CAR_support_the_activities_of_russian_instructors
+		x = -2
+		y = 1
+		cost = 7
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			NOT = {
+				has_completed_focus = CAR_thwarting_the_bandits_plan
+				has_completed_focus = CAR_no_mercy_for_the_militants
+				has_completed_focus = CAR_bozize_seizes_power
+				has_completed_focus = CAR_consolidation_around_bozize
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_year_of_the_khartoum_accords }
+		relative_position_id = CAR_year_of_the_khartoum_accords
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_support_the_activities_of_russian_instructors"
+			add_popularity = { ideology = var:current_party_ideology_group popularity = 0.01 }
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = CAR_russian_instructors_idea
+				add_idea = CAR_russian_instructors_idea_1
+			}
+			random_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_variable = CAR_loyality_for_ccr }
+				add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_radio_lengo_songo
+		icon = GFX_z_goal_CAR_radio_lengo_songo
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {
+			NOT = {
+				has_completed_focus = CAR_thwarting_the_bandits_plan
+				has_completed_focus = CAR_no_mercy_for_the_militants
+				has_completed_focus = CAR_bozize_seizes_power
+				has_completed_focus = CAR_consolidation_around_bozize
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_support_the_activities_of_russian_instructors }
+		relative_position_id = CAR_support_the_activities_of_russian_instructors
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_radio_lengo_songo"
+			add_stability = 0.02
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = centrism popularity = 0.06 }
+			add_popularity = { ideology = social_democracy popularity = -0.03 }
+			custom_effect_tooltip = empty_line_tooltip
+			random_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_variable = CAR_loyality_for_ccr }
+				add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_postponement_of_elections
+		icon = GFX_z_goal_CAR_postponement_of_elections
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { has_country_flag = CAR_event_14_flag }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_3_tt
+					always = no
+				}
+			}
+			NOT = {
+				has_completed_focus = CAR_thwarting_the_bandits_plan
+				has_completed_focus = CAR_no_mercy_for_the_militants
+				has_completed_focus = CAR_bozize_seizes_power
+				has_completed_focus = CAR_consolidation_around_bozize
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_support_the_activities_of_russian_instructors }
+		relative_position_id = CAR_support_the_activities_of_russian_instructors
+		select_effect = { country_event = { id = AD_CAR.14 days = 3 } }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_postponement_of_elections"
+			if = {
+				limit = { has_idea = CAR_return_of_bozize_idea }
+				remove_ideas = CAR_return_of_bozize_idea
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_variable = CAR_loyality_for_ccr }
+				add_to_variable = { CAR_loyality_for_ccr = -2 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_sever_ties_with_islamists
+		icon = GFX_z_goal_CAR_sever_ties_with_islamists
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_postponement_of_elections }
+		relative_position_id = CAR_postponement_of_elections
+		mutually_exclusive = { focus = CAR_promoting_peace_talks }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_sever_ties_with_islamists"
+			add_ideas = CAR_fight_against_seleka_idea
+			custom_effect_tooltip = empty_line_tooltip
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_idea = CAR_khartoum_agreement_idea }
+				remove_ideas = CAR_khartoum_agreement_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_promoting_peace_talks
+		icon = GFX_z_goal_CAR_promoting_peace_talks
+		x = 0
+		y = 2
+		cost = 8
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			any_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				has_idea = CAR_khartoum_agreement_idea
+			}
+			NOT = {
+				has_completed_focus = CAR_thwarting_the_bandits_plan
+				has_completed_focus = CAR_no_mercy_for_the_militants
+				has_completed_focus = CAR_bozize_seizes_power
+				has_completed_focus = CAR_consolidation_around_bozize
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_support_the_activities_of_russian_instructors }
+		relative_position_id = CAR_support_the_activities_of_russian_instructors
+		mutually_exclusive = { focus = CAR_sever_ties_with_islamists }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_promoting_peace_talks"
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = {
+					has_variable = CAR_loyality_for_ccr
+					has_idea = CAR_khartoum_agreement_idea
+				}
+				add_to_variable = { CAR_loyality_for_ccr = 1 tooltip = CAR_loyality_for_ccr_tt }
+				CAR_loyality_for_ccr_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_elections_have_been_held
+		icon = GFX_z_goal_CAR_elections_have_been_held
+		x = 12
+		y = 0
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = CAR_year_of_the_khartoum_accords
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_elections_have_been_held"
+			
+		}
+	}
+	
+	focus = {
+		id = CAR_thwarting_the_bandits_plan
+		icon = GFX_z_goal_CAR_thwarting_the_bandits_plan
+		x = 0
+		y = 1
+		cost = 0
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_elections_have_been_held }
+		relative_position_id = CAR_elections_have_been_held
+		mutually_exclusive = { focus = CAR_return_of_the_bokassa_clan focus = CAR_anise_georges_dologele focus = CAR_consolidation_around_bozize }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_thwarting_the_bandits_plan"
+			add_stability = 0.1
+			add_war_support = 0.2
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = {
+				localization_key = AD_decisions_category_block_tt
+				DECISIONS_CATEGORY = "CAR_field_commanders_category"
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_cleaning_up_bangui
+		icon = GFX_z_goal_CAR_cleaning_up_bangui
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 76 }
+		bypass = {  }
+		prerequisite = { focus = CAR_thwarting_the_bandits_plan }
+		relative_position_id = CAR_thwarting_the_bandits_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_cleaning_up_bangui"
+			add_stability = 0.03
+			custom_effect_tooltip = empty_line_tooltip
+			76 = { remove_dynamic_modifier = { modifier = CAR_fifth_kilometer_state_modifier } }
+		}
+	}
+	
+	focus = {
+		id = CAR_regain_control_of_the_border_with_cameroon
+		icon = GFX_z_goal_CAR_regain_control_of_the_border_with_cameroon
+		x = 0
+		y = 2
+		cost = 3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {
+			OR = {
+				is_subject = yes
+				has_civil_war = no
+			}
+		}
+		prerequisite = { focus = CAR_thwarting_the_bandits_plan }
+		relative_position_id = CAR_thwarting_the_bandits_plan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_regain_control_of_the_border_with_cameroon"
+			unlock_decision_category_tooltip = CAR_civil_war_category
+			unlock_decision_tooltip = CAR_operations_on_the_border_with_cameroon
+			set_variable = { CAR_disarmed_militants_var_min = 300 }
+			set_variable = { CAR_disarmed_militants_var_max = 800 }
+		}
+	}
+	
+	focus = {
+		id = CAR_continue_the_liberation_of_territories
+		icon = GFX_z_goal_CAR_continue_the_liberation_of_territories
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {
+			OR = {
+				is_subject = yes
+				has_civil_war = no
+				AND = {
+					NOT = { country_exists = RPR }
+					NOT = { country_exists = FPR }
+					NOT = { country_exists = MPC }
+					NOT = { country_exists = CAP }
+					NOT = { country_exists = LRA }
+					MLC = {
+						OR = {
+							exists = no
+							is_ai = no
+						}
+					}
+				}
+			}
+		}
+		prerequisite = { focus = CAR_regain_control_of_the_border_with_cameroon }
+		relative_position_id = CAR_regain_control_of_the_border_with_cameroon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_continue_the_liberation_of_territories"
+			if = {
+				limit = { country_exists = LRA }
+				unlock_decision_tooltip = CAR_squeeze_out_the_lord_resistance_army
+				hidden_effect = { activate_targeted_decision = { target = LRA decision = CAR_squeeze_out_the_lord_resistance_army } }
+			}
+			if = {
+				limit = {
+					MLC = {
+						exists = yes
+						is_ai = yes
+					}
+				}
+				unlock_decision_tooltip = CAR_support_the_rebel_factions_in_mclj
+				hidden_effect = { activate_targeted_decision = { target = MLC decision = CAR_support_the_rebel_factions_in_mclj } }
+			}
+			if = {
+				limit = { country_exists = RPR }
+				unlock_decision_tooltip = CAR_support_the_rebel_factions_in_rprc
+				hidden_effect = { activate_targeted_decision = { target = RPR decision = CAR_support_the_rebel_factions_in_rprc } }
+			}
+			if = {
+				limit = { country_exists = FPR }
+				unlock_decision_tooltip = CAR_defeat_the_sultanate
+				hidden_effect = { activate_targeted_decision = { target = FPR decision = CAR_defeat_the_sultanate } }
+			}
+			if = {
+				limit = { country_exists = MPC }
+				unlock_decision_tooltip = CAR_disarm_the_chadian_mercenaries
+				hidden_effect = { activate_targeted_decision = { target = MPC decision = CAR_disarm_the_chadian_mercenaries } }
+			}
+			if = {
+				limit = { country_exists = CAP }
+				unlock_decision_tooltip = CAR_defeat_of_the_diamond_bandits
+				hidden_effect = { activate_targeted_decision = { target = CAP decision = CAR_defeat_of_the_diamond_bandits } }
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_expand_contacts_with_cameroon
+		icon = GFX_z_goal_CAR_expand_contacts_with_cameroon
+		x = -2
+		y = 2
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {
+			CMR = {
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}	
+		}
+		prerequisite = { focus = CAR_regain_control_of_the_border_with_cameroon }
+		relative_position_id = CAR_regain_control_of_the_border_with_cameroon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_expand_contacts_with_cameroon"
+			CMR = {
+				add_opinion_modifier = {
+					modifier = CAR_expand_contacts_with_cameroon_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CAR_expand_contacts_with_cameroon_op
+					target = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_infrastructure_issues
+		icon = GFX_z_goal_CAR_infrastructure_issues
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 76 }
+		bypass = {  }
+		prerequisite = { focus = CAR_regain_control_of_the_border_with_cameroon }
+		relative_position_id = CAR_regain_control_of_the_border_with_cameroon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_infrastructure_issues"
+			country_event = AD_CAR.15
+		}
+	}
+	
+	focus = {
+		id = CAR_construction_of_new_roads
+		icon = GFX_z_goal_CAR_construction_of_new_roads
+		x = -1
+		y = 1
+		cost = 12.9
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_expand_contacts_with_cameroon }
+		prerequisite = { focus = CAR_infrastructure_issues }
+		relative_position_id = CAR_expand_contacts_with_cameroon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_construction_of_new_roads"
+			swap_ideas = {
+				remove_idea = CAR_embargo_on_the_sale_of_diamonds_from_the_un_idea
+				add_idea = CAR_shadow_schemes_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_revival_of_the_disarmament_program
+		icon = GFX_z_goal_CAR_revival_of_the_disarmament_program
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { surrender_progress < 0.5 }
+		bypass = {
+			OR = {
+				is_subject = yes
+				has_civil_war = no
+				AND = {
+					NOT = { country_exists = ABK }
+					NOT = { country_exists = CAP }
+				}
+			}
+		}
+		prerequisite = { focus = CAR_continue_the_liberation_of_territories }
+		relative_position_id = CAR_continue_the_liberation_of_territories
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_revival_of_the_disarmament_program"
+			if = {
+				limit = { country_exists = ABK }
+				unlock_decision_tooltip = CAR_disarming_anti_balaka_units
+				hidden_effect = { activate_targeted_decision = { target = ABK decision = CAR_disarming_anti_balaka_units } }
+			}
+			if = {
+				limit = { country_exists = CAP }
+				unlock_decision_tooltip = CAR_disarmament_of_detachments_of_southeastern_groups
+				hidden_effect = { activate_targeted_decision = { target = CAP decision = CAR_disarmament_of_detachments_of_southeastern_groups } }
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_involve_former_militants_in_the_work
+		icon = GFX_z_goal_CAR_involve_former_militants_in_the_work
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			surrender_progress < 0.7
+			has_completed_focus = CAR_revival_of_the_disarmament_program
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_infrastructure_issues }
+		relative_position_id = CAR_infrastructure_issues
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_involve_former_militants_in_the_work"
+			unlock_decision_tooltip = CAR_use_militants_to_lay_roads
+			hidden_effect = { activate_targeted_decision = { target = ROOT decision = CAR_use_militants_to_lay_roads } }
+			unlock_decision_tooltip = CAR_use_militants_to_build_factories
+			hidden_effect = { activate_targeted_decision = { target = ROOT decision = CAR_use_militants_to_build_factories } }
+		}
+	}
+	
+	focus = {
+		id = CAR_expansion_of_the_army
+		icon = GFX_z_goal_CAR_expansion_of_the_army
+		x = 1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { surrender_progress < 0.7 }
+		bypass = {  }
+		prerequisite = { focus = CAR_revival_of_the_disarmament_program }
+		relative_position_id = CAR_revival_of_the_disarmament_program
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_expansion_of_the_army"
+			unlock_decision_tooltip = CAR_reintegration_of_militants_into_the_army
+			hidden_effect = { activate_targeted_decision = { target = ROOT decision = CAR_reintegration_of_militants_into_the_army } }
+		}
+	}
+	
+	focus = {
+		id = CAR_cooperation_with_azande
+		icon = GFX_z_goal_CAR_cooperation_with_azande
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { surrender_progress < 0.8 }
+		bypass = {  }
+		prerequisite = { focus = CAR_revival_of_the_disarmament_program }
+		relative_position_id = CAR_revival_of_the_disarmament_program
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_cooperation_with_azande"
+			add_ideas = CAR_azande_ani_kny_gbe_idea
+			custom_effect_tooltip = empty_line_tooltip
+			add_corps_commander_role = {
+				Character = CAR_General_Liman
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				custom_effect_tooltip = empty_line_tooltip
+				CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_denationalized_army
+		icon = GFX_z_goal_CAR_denationalized_army
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_civil_war = no }
+		bypass = {  }
+		prerequisite = { focus = CAR_cooperation_with_azande }
+		prerequisite = { focus = CAR_expansion_of_the_army }
+		relative_position_id = CAR_expansion_of_the_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_denationalized_army"
+			remove_ideas = CAR_ethnic_conflicts_idea
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				custom_effect_tooltip = empty_line_tooltip
+				CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_creation_of_a_russian_military_base
+		icon = GFX_z_goal_CAR_creation_of_a_russian_military_base
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_civil_war = no }
+		bypass = {  }
+		prerequisite = { focus = CAR_expansion_of_the_army }
+		relative_position_id = CAR_expansion_of_the_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_creation_of_a_russian_military_base"
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[RUS.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				custom_effect_tooltip = empty_line_tooltip
+				CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_attracting_russian_companies
+		icon = GFX_z_goal_CAR_attracting_russian_companies
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_civil_war = no }
+		bypass = {  }
+		prerequisite = { focus = CAR_infrastructure_issues }
+		relative_position_id = CAR_infrastructure_issues
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_attracting_russian_companies"
+			add_to_variable = { AD_fo_position = 0.15 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.15 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { AD_current_money_var = 20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				prioritize = { 76 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_appeal_to_international_donors
+		icon = GFX_z_goal_CAR_appeal_to_international_donors
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_civil_war = no }
+		bypass = {  }
+		prerequisite = { focus = CAR_attracting_russian_companies }
+		relative_position_id = CAR_attracting_russian_companies
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_appeal_to_international_donors"
+			add_to_variable = { AD_current_money_var = 40 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			AD_social_security_grow_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			AD_food_supply_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = CAR_implementation_of_basic_social_reforms
+		icon = GFX_z_goal_CAR_implementation_of_basic_social_reforms
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_civil_war = no }
+		bypass = {  }
+		prerequisite = { focus = CAR_involve_former_militants_in_the_work }
+		relative_position_id = CAR_involve_former_militants_in_the_work
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_implementation_of_basic_social_reforms"
+			custom_effect_tooltip = empty_line_tooltip
+			AD_social_security_grow_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			AD_poverty_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = CAR_guarantor_of_the_security_of_central_africa
+		icon = GFX_z_goal_CAR_guarantor_of_the_security_of_central_africa
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_expand_contacts_with_cameroon }
+		prerequisite = { focus = CAR_involve_former_militants_in_the_work }
+		relative_position_id = CAR_expand_contacts_with_cameroon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_guarantor_of_the_security_of_central_africa"
+			add_ideas = AD_volunteer_battalions_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_return_of_the_bokassa_clan
+		icon = GFX_z_goal_CAR_return_of_the_bokassa_clan
+		x = -6
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = { has_government = conservatism }
+		bypass = {  }
+		prerequisite = { focus = CAR_elections_have_been_held }
+		relative_position_id = CAR_elections_have_been_held
+		mutually_exclusive = { focus = CAR_thwarting_the_bandits_plan focus = CAR_anise_georges_dologele focus = CAR_consolidation_around_bozize }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_return_of_the_bokassa_clan"
+			add_stability = 0.05
+			add_war_support = 0.085
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_popularity = { ideology = conservatism popularity = 0.15 }
+		}
+	}
+	
+	focus = {
+		id = CAR_by_the_will_of_ngakola
+		icon = GFX_z_goal_CAR_by_the_will_of_ngakola
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_return_of_the_bokassa_clan }
+		relative_position_id = CAR_return_of_the_bokassa_clan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_by_the_will_of_ngakola"
+			add_political_power = 100
+			custom_effect_tooltip = empty_line_tooltip
+			unlock_decision_category_tooltip = CAR_ngakola_and_tere_category
+			hidden_effect = { add_dynamic_modifier = { modifier = CAR_ngakola_and_tere_modifier } }
+		}
+	}
+	
+	focus = {
+		id = CAR_with_a_steel_hand
+		icon = GFX_z_goal_CAR_with_a_steel_hand
+		x = 1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 76 }
+		bypass = {  }
+		prerequisite = { focus = CAR_return_of_the_bokassa_clan }
+		relative_position_id = CAR_return_of_the_bokassa_clan
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_with_a_steel_hand"
+			add_timed_idea = { idea = CAR_steel_hand_idea days = 200 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			76 = { remove_dynamic_modifier = { modifier = CAR_fifth_kilometer_state_modifier } }
+		}
+	}
+	
+	focus = {
+		id = CAR_no_mercy_for_the_militants
+		icon = GFX_z_goal_CAR_no_mercy_for_the_militants
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_by_the_will_of_ngakola }
+		prerequisite = { focus = CAR_with_a_steel_hand }
+		relative_position_id = CAR_by_the_will_of_ngakola
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_no_mercy_for_the_militants"
+			custom_effect_tooltip = {
+				localization_key = AD_decisions_category_block_tt
+				DECISIONS_CATEGORY = "CAR_field_commanders_category"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = {
+					NOT = { tag = ROOT }
+					has_idea = AD_surrender_limit_spirit_idea
+				}
+				swap_ideas = {
+					remove_idea = AD_surrender_limit_spirit_idea
+					add_idea = AD_surrender_limit_spirit_idea_1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_rely_on_russian_instructors
+		icon = GFX_z_goal_CAR_rely_on_russian_instructors
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_with_a_steel_hand }
+		relative_position_id = CAR_with_a_steel_hand
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_rely_on_russian_instructors"
+			add_to_variable = { AD_fo_position = 0.20 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[RUS.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			
+			swap_ideas = {
+				remove_idea = CAR_russian_instructors_idea
+				add_idea = CAR_russian_instructors_idea_2
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_doctrine_cost_reduction = {
+				name = CAR_rely_on_russian_instructors
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_tech_bonus = {
+				name = CAR_rely_on_russian_instructors
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons 
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_ensure_the_safety_of_the_ancestral_nest
+		icon = GFX_z_goal_CAR_ensure_the_safety_of_the_ancestral_nest
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_no_mercy_for_the_militants focus = CAR_rely_on_russian_instructors }
+		relative_position_id = CAR_no_mercy_for_the_militants
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_ensure_the_safety_of_the_ancestral_nest"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				CAR_weakness_of_the_armed_forces_modifier_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 10
+					instant_build = yes
+					province = 2136
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_doctrine_cost_reduction = {
+				name = CAR_ensure_the_safety_of_the_ancestral_nest
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_tech_bonus = {
+				name = CAR_ensure_the_safety_of_the_ancestral_nest
+				bonus = 0.5
+				uses = 1
+				category = cat_fortification 
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_develop_ties_with_the_sahel_alliance_of_states
+		icon = GFX_z_goal_CAR_develop_ties_with_the_sahel_alliance_of_states
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_ensure_the_safety_of_the_ancestral_nest }
+		relative_position_id = CAR_ensure_the_safety_of_the_ancestral_nest
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_develop_ties_with_the_sahel_alliance_of_states"
+			add_ideas = CAR_develop_ties_with_the_sahel_alliance_of_states_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_kanga_be
+		icon = GFX_z_goal_CAR_kanga_be
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_by_the_will_of_ngakola }
+		relative_position_id = CAR_by_the_will_of_ngakola
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_kanga_be"
+			unlock_decision_tooltip = CAR_close_your_heart_against_evil
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 95 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 5 }
+				CAR_ngakola_and_tere_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { NOT = { has_idea = AD_low_unemployment } }
+				AD_unemployment_rate_level_down_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_end_bangui_la_roquette
+		icon = GFX_z_goal_CAR_end_bangui_la_roquette
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_kanga_be }
+		relative_position_id = CAR_kanga_be
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_end_bangui_la_roquette"
+			unlock_decision_tooltip = CAR_bangui_la_coquette
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { check_variable = { var = CAR_ngakola_and_tere_var value = 95 compare = less_than_or_equals } }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = 5 }
+				CAR_ngakola_and_tere_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			else_if = {
+				limit = { check_variable = { CAR_ngakola_and_tere_var < 100 } }
+				set_temp_variable = { temp_1 = CAR_ngakola_and_tere_var }
+				set_temp_variable = { temp_2 = 100 }
+				subtract_from_temp_variable = { temp_2 = temp_1 }
+				set_temp_variable = { CAR_ngakola_and_tere_temp_var = temp_2 }
+				CAR_ngakola_and_tere_check_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { NOT = { has_idea = AD_almost_a_european_society } }
+				AD_poverty_level_grow_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_new_great_construction_site
+		icon = GFX_z_goal_CAR_new_great_construction_site
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_end_bangui_la_roquette }
+		relative_position_id = CAR_end_bangui_la_roquette
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_new_great_construction_site"
+			unlock_decision_tooltip = CAR_bokassa_new_five_year_plan
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = conservatism popularity = 0.1 }
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_idea = AD_low_unemployment } }
+				AD_unemployment_rate_level_down_effect = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_dispel_the_power_of_tere
+		icon = GFX_z_goal_CAR_dispel_the_power_of_tere
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = {
+			set_temp_variable = { CAR_ngakola_and_tere_temp_var = 50 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_ngakola_and_tere_var value = CAR_ngakola_and_tere_temp_var compare = greater_than_or_equals }
+				tooltip = CAR_ngakola_and_tere_greater_than_or_equals_tt
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_kanga_be }
+		relative_position_id = CAR_kanga_be
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_dispel_the_power_of_tere"
+			unlock_decision_tooltip = CAR_crush_the_tere
+			custom_effect_tooltip = empty_line_tooltip
+			add_war_support = 0.07
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = CAR_ethnic_conflicts_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_use_the_authority_of_the_father
+		icon = GFX_z_goal_CAR_use_the_authority_of_the_father
+		x = 0
+		y = 2
+		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_by_the_will_of_ngakola }
+		relative_position_id = CAR_by_the_will_of_ngakola
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_use_the_authority_of_the_father"
+			unlock_decision_tooltip = CAR_draw_a_line_of_inheritance_from_bokassa
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.02
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = conservatism popularity = 0.05 }
+		}
+	}
+	
+	focus = {
+		id = CAR_destroy_the_opposition
+		icon = GFX_z_goal_CAR_destroy_the_opposition
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = {
+			set_temp_variable = { CAR_ngakola_and_tere_temp_var = 50 }
+			custom_trigger_tooltip = {
+				check_variable = { var = CAR_ngakola_and_tere_var value = CAR_ngakola_and_tere_temp_var compare = greater_than_or_equals }
+				tooltip = CAR_ngakola_and_tere_greater_than_or_equals_tt
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_dispel_the_power_of_tere }
+		prerequisite = { focus = CAR_use_the_authority_of_the_father }
+		relative_position_id = CAR_use_the_authority_of_the_father
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_destroy_the_opposition"
+			set_temp_variable = { var = ban_socialism_var value = party_popularity@socialism }
+			multiply_temp_variable = { var = ban_socialism_var value = -1 }
+			add_popularity = { ideology = socialism popularity = ban_socialism_var }
+			
+			set_temp_variable = { var = ban_fundamentalism_var value = party_popularity@fundamentalism }
+			multiply_temp_variable = { var = ban_fundamentalism_var value = -1 }
+			add_popularity = { ideology = fundamentalism popularity = ban_fundamentalism_var }
+			
+			set_temp_variable = { var = ban_centrism_var value = party_popularity@centrism }
+			multiply_temp_variable = { var = ban_centrism_var value = -1 }
+			add_popularity = { ideology = centrism popularity = ban_centrism_var }
+			
+			set_temp_variable = { var = ban_liberalism_var value = party_popularity@liberalism }
+			multiply_temp_variable = { var = ban_liberalism_var value = -1 }
+			add_popularity = { ideology = liberalism popularity = ban_liberalism_var }
+			
+			set_temp_variable = { var = ban_social_democracy_var value = party_popularity@social_democracy }
+			multiply_temp_variable = { var = ban_social_democracy_var value = -1 }
+			add_popularity = { ideology = social_democracy popularity = ban_social_democracy_var }
+			
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_template = "Bataillon à l'APC" } }
+				division_template = {
+					name = "Bataillon à l'APC"
+					is_locked = no
+					regiments = {
+						infantry_on_btr = { x = 0 y = 0 }
+						infantry_on_btr = { x = 0 y = 1 }
+						infantry_on_btr = { x = 1 y = 0 }
+						infantry_on_btr = { x = 1 y = 1 }
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Bataillon à l'APC de Bangui\" division_template = \"Bataillon à l'APC\" start_equipment_factor = 1.0 start_experience_factor = 0.3"
+					owner = ROOT
+					count = 1
+				}	
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_imperial_army
+		icon = GFX_z_goal_CAR_imperial_army
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader_with_trait = CAR_black_bonaparte }
+		bypass = {  }
+		prerequisite = { focus = CAR_destroy_the_opposition }
+		relative_position_id = CAR_destroy_the_opposition
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_imperial_army"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { CAR_army_org_factor_var < -0.06 } }
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { CAR_training_time_army_factor_var = -0.06 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { CAR_army_org_factor_var = 0.06 tooltip = army_org_factor_tooltip }
+					add_to_variable = { CAR_army_leader_cost_factor_var = -0.06 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { CAR_army_org_regain_var = 0.09 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { CAR_dig_in_speed_factor_var = 0.03 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { CAR_pocket_penalty_var = -0.3 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			custom_effect_tooltip = CAR_imperial_army_tt
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_template = "L'armée impériale recrute" } }
+				division_template = {
+					name = "L'armée impériale recrute"
+					is_locked = no
+					regiments = {
+						light_infantry_opol = { x = 0 y = 0 }
+						light_infantry_opol = { x = 0 y = 1 }
+						light_infantry_opol = { x = 0 y = 2 }
+						light_infantry_opol = { x = 1 y = 0 }
+						light_infantry_opol = { x = 1 y = 1 }
+					}
+				}
+			}
+			every_controlled_state = {
+				limit = { check_variable = { state_population_k > 150 } }					
+				create_unit = {
+					division = "name = \"L'armée impériale recrute\" division_template = \"L'armée impériale recrute\" start_equipment_factor = 1.0 start_experience_factor = 0.3"
+					owner = ROOT
+					count = 1
+				}	
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_punish_the_french_puppets
+		icon = GFX_z_goal_CAR_punish_the_french_puppets
+		x = 1
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = { is_subject = no }
+		bypass = {  }
+		prerequisite = { focus = CAR_destroy_the_opposition }
+		relative_position_id = CAR_destroy_the_opposition
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_punish_the_french_puppets"
+			custom_effect_tooltip = CAR_punish_the_french_puppets_tt
+			custom_effect_tooltip = empty_line_tooltip
+			every_neighbor_country = {
+				limit = {
+					check_variable = { AD_fo_position < -0.05 }
+					ROOT = { can_declare_war_on = PREV }
+				}
+				PREV {
+					create_wargoal = { type = topple_government target = PREV expire = 0 }
+					add_ai_strategy = { type = antagonize id = PREV value = 200 }
+					add_ai_strategy = { type = declare_war id = PREV value = 200 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_crush_the_northeastern_tribes
+		icon = GFX_z_goal_CAR_crush_the_northeastern_tribes
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = {
+			is_subject = no
+			OR = {
+				AND = {
+					country_exists = LRA
+					can_declare_war_on = LRA
+				}
+				AND = {
+					country_exists = MLC
+					MLC = { is_ai = yes }
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_dispel_the_power_of_tere }
+		relative_position_id = CAR_dispel_the_power_of_tere
+		will_lead_to_war_with = LRA
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_crush_the_northeastern_tribes"
+			if = {
+				limit = {
+					country_exists = LRA
+					can_declare_war_on = LRA
+				}
+				create_wargoal = { type = annex_everything target = LRA expire = 0 }
+				add_ai_strategy = { type = antagonize id = LRA value = 200 }
+				add_ai_strategy = { type = declare_war id = LRA value = 200 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			MLC = {
+				if = {
+					limit = { exists = yes is_ai = yes }
+					ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_pilot_training
+		icon = GFX_z_goal_CAR_pilot_training
+		x = -3
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			OR = {
+				controls_state = 76
+				controls_state = 49
+				controls_state = 56
+				controls_state = 53
+				controls_state = 45
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_thwarting_the_bandits_plan focus = CAR_return_of_the_bokassa_clan }
+		relative_position_id = CAR_thwarting_the_bandits_plan	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_pilot_training"
+			air_experience = 20
+			custom_effect_tooltip = empty_line_tooltip
+			add_doctrine_cost_reduction = {
+				name = CAR_rely_on_russian_instructors
+				cost_reduction = 0.35
+				uses = 1
+				category = air_doctrine
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			every_controlled_state = {
+				limit = {
+					air_base < 10
+					OR = { state = 76 state = 49 state = 56 state = 53 state = 45 }
+				}
+				display_individual_scopes = yes
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_issue_of_lifting_the_embargo
+		icon = GFX_z_goal_CAR_issue_of_lifting_the_embargo
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			set_temp_variable = { AD_russia_superiority_temp_var = 0.35 }
+			set_temp_variable = { AD_france_superiority_temp_var = -0.35 }
+			OR = {
+				custom_trigger_tooltip = {
+					check_variable = { var = AD_fo_position value = AD_russia_superiority_temp_var compare = greater_than_or_equals }
+					tooltip = AD_russia_superiority_greater_than_or_equals_tt
+				}
+				custom_trigger_tooltip = {
+					check_variable = { var = AD_fo_position value = AD_france_superiority_temp_var compare = less_than_or_equals }
+					tooltip = AD_france_superiority_greater_than_or_equals_tt
+				}
+			}
+		}
+		bypass = {  }
+		allow_branch = { has_dlc = "Arms Against Tyranny" }
+		prerequisite = { focus = CAR_pilot_training }
+		relative_position_id = CAR_pilot_training
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_issue_of_lifting_the_embargo"
+			custom_effect_tooltip = CAR_issue_of_lifting_the_embargo_tt
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = CAR_un_arms_embargo
+		}
+	}
+	
+	focus = {
+		id = CAR_bozize_seizes_power
+		icon = GFX_z_goal_CAR_bozize_seizes_power
+		x = 4
+		y = 0
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = CAR_elections_have_been_held
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_bozize_seizes_power"
+			custom_effect_tooltip = {
+				localization_key = AD_decisions_category_block_tt
+				DECISIONS_CATEGORY = "CAR_field_commanders_category"
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_anise_georges_dologele
+		icon = GFX_z_goal_CAR_anise_georges_dologele
+		x = 0
+		y = 1
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = CAR_bozize_seizes_power
+		prerequisite = { focus = CAR_bozize_seizes_power }
+		mutually_exclusive = { focus = CAR_thwarting_the_bandits_plan focus = CAR_return_of_the_bokassa_clan focus = CAR_consolidation_around_bozize }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_anise_georges_dologele"
+			
+		}
+	}
+	
+	focus = {
+		id = CAR_raise_the_issue_of_dividing_the_country
+		icon = GFX_z_goal_CAR_raise_the_issue_of_dividing_the_country
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_anise_georges_dologele }
+		relative_position_id = CAR_anise_georges_dologele
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_raise_the_issue_of_dividing_the_country"
+			country_event = AD_CAR.16
+		}
+	}
+	
+	focus = {
+		id = CAR_demand_the_withdrawal_of_the_un_mission
+		icon = GFX_z_goal_CAR_demand_the_withdrawal_of_the_un_mission
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_raise_the_issue_of_dividing_the_country }
+		relative_position_id = CAR_raise_the_issue_of_dividing_the_country
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_demand_the_withdrawal_of_the_un_mission"
+			#TODO: ??? удаляет дивки оон с территории ЦАР, у ООН оканчивается война с бандосами
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { CAR_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { CAR_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { CAR_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { CAR_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { CAR_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { CAR_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { CAR_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_crack_down_on_russian_companies
+		icon = GFX_z_goal_CAR_crack_down_on_russian_companies
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_demand_the_withdrawal_of_the_un_mission }
+		relative_position_id = CAR_demand_the_withdrawal_of_the_un_mission
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_crack_down_on_russian_companies"
+			subtract_from_variable = { AD_fo_position = 0.4 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.4 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { AD_current_money_var = 15 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				prioritize = { 76 }
+				limit = {
+					is_core_of = ROOT
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_deal_with_gbaye
+		icon = GFX_z_goal_CAR_deal_with_gbaye
+		x = 0
+		y = 2
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = { has_war = no }
+		prerequisite = { focus = CAR_raise_the_issue_of_dividing_the_country }
+		relative_position_id = CAR_raise_the_issue_of_dividing_the_country
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_deal_with_gbaye"
+			add_timed_idea = { idea = CAR_deal_with_gbaye_idea days = 210 }
+		}
+	}
+	
+	focus = {
+		id = CAR_expel_chadians_from_the_country
+		icon = GFX_z_goal_CAR_expel_chadians_from_the_country
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = { NOT = { country_exists = CHA } }
+		prerequisite = { focus = CAR_deal_with_gbaye }
+		relative_position_id = CAR_deal_with_gbaye
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_expel_chadians_from_the_country"
+			CHA = {
+				add_opinion_modifier = {
+					modifier = CAR_expel_chadians_from_the_country_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CAR_expel_chadians_from_the_country_op
+					target = ROOT
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { AD_current_money_var = 15 tooltip = AD_current_money_var_tt }
+		}
+	}
+	
+	focus = {
+		id = CAR_deploy_the_french_contingent
+		icon = GFX_z_goal_CAR_deploy_the_french_contingent
+		x = 1
+		y = 1
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_expel_chadians_from_the_country }
+		relative_position_id = CAR_expel_chadians_from_the_country
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_deploy_the_french_contingent"
+			remove_ideas = CAR_un_arms_embargo
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = CAR_russian_instructors_idea
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_template = "Légion d'infanterie légère" } }
+				division_template = {
+					name = "Légion d'infanterie légère"
+					is_locked = no
+					regiments = {
+						light_infantry_opol = { x = 0 y = 0 }
+						light_infantry_opol = { x = 0 y = 1 }
+						light_infantry_opol = { x = 0 y = 2 }
+						light_infantry_opol = { x = 0 y = 3 }
+						light_infantry_opol = { x = 1 y = 0 }
+						light_infantry_opol = { x = 1 y = 1 }
+						light_infantry_opol = { x = 1 y = 2 }
+						light_infantry_opol = { x = 1 y = 3 }
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Légion d'infanterie légère\" division_template = \"Légion d'infanterie légère\" start_equipment_factor = 1.0 start_experience_factor = 0.3"
+					owner = ROOT
+					count = 4
+				}	
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_support_the_rapid_reaction_forces
+		icon = GFX_z_goal_CAR_support_the_rapid_reaction_forces
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { SUD = { has_war = yes } }
+		bypass = {  }
+		prerequisite = { focus = CAR_expel_chadians_from_the_country }
+		relative_position_id = CAR_expel_chadians_from_the_country
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_support_the_rapid_reaction_forces"
+			add_ideas = AD_volunteer_battalions_idea
+			custom_effect_tooltip = empty_line_tooltip
+			SUD = {
+				add_opinion_modifier = {
+					modifier = CAR_support_the_rapid_reaction_forces_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CAR_support_the_rapid_reaction_forces_op
+					target = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_training_of_mobile_units
+		icon = GFX_z_goal_CAR_training_of_mobile_units
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 76 }
+		bypass = {  }
+		prerequisite = { focus = CAR_deploy_the_french_contingent }
+		relative_position_id = CAR_deploy_the_french_contingent
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_training_of_mobile_units"
+			add_doctrine_cost_reduction = {
+				name = CAR_training_of_mobile_units
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_tech_bonus = {
+				name = CAR_training_of_mobile_units
+				bonus = 0.25
+				uses = 1
+				category = motorized_equipment 
+			}
+			add_tech_bonus = {
+				name = CAR_training_of_mobile_units
+				bonus = 0.5
+				uses = 1
+				category = support_tech 
+			}
+			add_tech_bonus = {
+				name = CAR_training_of_mobile_units
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons 
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			76 = { remove_dynamic_modifier = { modifier = CAR_fifth_kilometer_state_modifier } }
+		}
+	}
+	
+	focus = {
+		id = CAR_consolidation_around_bozize
+		icon = GFX_z_goal_CAR_consolidation_around_bozize
+		x = 2
+		y = 1
+		cost = 0
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = CAR_bozize_seizes_power
+		prerequisite = { focus = CAR_bozize_seizes_power }
+		mutually_exclusive = { focus = CAR_thwarting_the_bandits_plan focus = CAR_return_of_the_bokassa_clan focus = CAR_anise_georges_dologele }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_consolidation_around_bozize"
+			set_politics = { ruling_party = social_democracy elections_allowed = no }
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = social_democracy  popularity = 0.05 }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.01
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = {
+				localization_key = AD_decisions_category_block_tt
+				DECISIONS_CATEGORY = "CAR_field_commanders_category"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = remove_political_advisor
+			show_ideas_tooltip = CAR_Firmen_Ngrebada
+			hidden_effect = { retire_character = CAR_Firmen_Ngrebada }
+		}
+	}
+	
+	focus = {
+		id = CAR_abandon_the_coalition_with_the_ex_seleka
+		icon = GFX_z_goal_CAR_abandon_the_coalition_with_the_ex_seleka
+		x = 1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_consolidation_around_bozize }
+		relative_position_id = CAR_consolidation_around_bozize
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_abandon_the_coalition_with_the_ex_seleka"
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = {
+					NOT = { tag = ABK tag = ROOT }
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_go_to_a_confrontation_with_the_upc
+		icon = GFX_z_goal_CAR_go_to_a_confrontation_with_the_upc
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_abandon_the_coalition_with_the_ex_seleka }
+		relative_position_id = CAR_abandon_the_coalition_with_the_ex_seleka
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_go_to_a_confrontation_with_the_upc"
+			CAP = { remove_ideas = AD_surrender_limit_spirit_idea  }
+			add_manpower = 3000
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 320 producer = ROOT }
+		}
+	}
+	
+	focus = {
+		id = CAR_return_of_the_old_guard
+		icon = GFX_z_goal_CAR_return_of_the_old_guard
+		x = 3
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_consolidation_around_bozize }
+		relative_position_id = CAR_consolidation_around_bozize
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_return_of_the_old_guard"
+			add_political_power = 25
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = social_democracy popularity = 0.02 }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CAR_Nikola_Tyangai
+			custom_effect_tooltip = empty_line_tooltip
+			show_ideas_tooltip = CAR_Eli_Dote
+			custom_effect_tooltip = empty_line_tooltip
+			show_ideas_tooltip = CAR_Kome_Tsumara
+		}
+	}
+	
+	focus = {
+		id = CAR_integration_of_anti_balaka
+		icon = GFX_z_goal_CAR_integration_of_anti_balaka
+		x = 5
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = { ABK = { exists = no } }
+		prerequisite = { focus = CAR_consolidation_around_bozize }
+		relative_position_id = CAR_consolidation_around_bozize
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_integration_of_anti_balaka"
+			unlock_decision_category_tooltip = CAR_integration_of_anti_balaka_category
+		}
+	}
+	
+	focus = {
+		id = CAR_reforming_the_presidential_guard
+		icon = GFX_z_goal_CAR_reforming_the_presidential_guard
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 76 }
+		bypass = {  }
+		prerequisite = { focus = CAR_abandon_the_coalition_with_the_ex_seleka }
+		prerequisite = { focus = CAR_return_of_the_old_guard }
+		relative_position_id = CAR_return_of_the_old_guard
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_reforming_the_presidential_guard"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { CAR_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { CAR_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { CAR_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { CAR_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { CAR_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { CAR_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { CAR_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			76 = { remove_dynamic_modifier = { modifier = CAR_fifth_kilometer_state_modifier } }
+		}
+	}
+	
+	focus = {
+		id = CAR_demand_the_exit_of_russian_instructors
+		icon = GFX_z_goal_CAR_demand_the_exit_of_russian_instructors
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_return_of_the_old_guard }
+		relative_position_id = CAR_return_of_the_old_guard
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_demand_the_exit_of_russian_instructors"
+			subtract_from_variable = { AD_fo_position = 0.15 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.15 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			remove_ideas = CAR_russian_instructors_idea
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = CAR_un_arms_embargo
+		}
+	}
+	
+	focus = {
+		id = CAR_segregation_of_the_army
+		icon = GFX_z_goal_CAR_segregation_of_the_army
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_flag = CAR_integration_of_anti_balaka_category_completed }
+		bypass = {  }
+		prerequisite = { focus = CAR_reforming_the_presidential_guard }
+		relative_position_id = CAR_reforming_the_presidential_guard
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_segregation_of_the_army"
+			swap_ideas = {
+				remove_idea = CAR_ethnic_conflicts_idea
+				add_idea = CAR_ethnic_conflicts_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_restoring_contacts_with_chad
+		icon = GFX_z_goal_CAR_restoring_contacts_with_chad
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { NOT = { has_war_with = CHA } }
+		bypass = { NOT = { country_exists = CHA } }
+		prerequisite = { focus = CAR_return_of_the_old_guard }
+		relative_position_id = CAR_return_of_the_old_guard
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_restoring_contacts_with_chad"
+			CHA = {
+				add_opinion_modifier = {
+					modifier = CAR_restoring_contacts_with_chad_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CAR_restoring_contacts_with_chad_op
+					target = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_military_cooperation_with_chad
+		icon = GFX_z_goal_CAR_military_cooperation_with_chad
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { NOT = { has_war_with = CHA } }
+		bypass = { NOT = { country_exists = CHA } }
+		prerequisite = { focus = CAR_restoring_contacts_with_chad }
+		relative_position_id = CAR_restoring_contacts_with_chad
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_military_cooperation_with_chad"
+			army_experience = 15
+			add_command_power = 35
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_military_access_to = CHA } }
+				give_military_access = CHA
+			}
+			if = {
+				limit = { NOT = { has_guaranteed = CHA } }
+				give_guarantee = CHA
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			CHA = {
+				if = {
+					limit = { NOT = { has_guaranteed = ROOT } }
+					give_guarantee = ROOT
+				}
+				if = {
+					limit = { NOT = { has_military_access_to = ROOT } }
+					give_military_access = ROOT
+					custom_effect_tooltip = empty_line_tooltip
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_betting_on_trade_unions
+		icon = GFX_z_goal_CAR_betting_on_trade_unions
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_consolidation_around_bozize }
+		relative_position_id = CAR_consolidation_around_bozize
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_betting_on_trade_unions"
+			add_ideas = CAR_betting_on_trade_unions_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_orange_is_the_new_red
+		icon = GFX_z_goal_CAR_orange_is_the_new_red
+		x = 0
+		y = 2
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_betting_on_trade_unions }
+		relative_position_id = CAR_betting_on_trade_unions
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_orange_is_the_new_red"
+			add_ideas = CAR_orange_is_the_new_red_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_creating_a_loyal_army
+		icon = GFX_z_goal_CAR_creating_a_loyal_army
+		x = -1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_orange_is_the_new_red }
+		prerequisite = { focus = CAR_military_cooperation_with_chad }
+		relative_position_id = CAR_military_cooperation_with_chad
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_creating_a_loyal_army"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { CAR_army_org_factor_var < -0.04 } }
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { CAR_training_time_army_factor_var = -0.04 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { CAR_army_org_factor_var = 0.04 tooltip = army_org_factor_tooltip }
+					add_to_variable = { CAR_army_leader_cost_factor_var = -0.04 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { CAR_army_org_regain_var = 0.06 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { CAR_dig_in_speed_factor_var = 0.02 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { CAR_pocket_penalty_var = -0.2 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = CAR_weakness_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = CAR_weakness_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_general_mobilization
+		icon = GFX_z_goal_CAR_general_mobilization
+		x = 0
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_creating_a_loyal_army }
+		relative_position_id = CAR_creating_a_loyal_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_general_mobilization"
+			add_ideas = CAR_general_mobilization_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_support_the_sudanese_authorities
+		icon = GFX_z_goal_CAR_support_the_sudanese_authorities
+		x = 1
+		y = 1
+		cost = 14.3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { NOT = { has_war_with = SUD } }
+		bypass = { NOT = { country_exists = SUD } }
+		prerequisite = { focus = CAR_restoring_contacts_with_chad }
+		relative_position_id = CAR_restoring_contacts_with_chad
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_support_the_sudanese_authorities"
+			SUD = {
+				add_opinion_modifier = {
+					modifier = CAR_support_the_sudanese_authorities_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CAR_restoring_contacts_with_chad_op
+					target = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAR_joint_struggle_with_the_lord_resistance_army
+		icon = GFX_z_goal_CAR_joint_struggle_with_the_lord_resistance_army
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { can_declare_war_on = LRA }
+		bypass = {
+			LRA = {
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+		}
+		prerequisite = { focus = CAR_support_the_sudanese_authorities }
+		relative_position_id = CAR_support_the_sudanese_authorities
+		will_lead_to_war_with = LRA
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_joint_struggle_with_the_lord_resistance_army"
+			declare_war_on = { target = LRA type = annex_everything }
+		}
+	}
+	
+	focus = {
+		id = CAR_speak_out_against_islamists
+		icon = GFX_z_goal_CAR_speak_out_against_islamists
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_support_the_sudanese_authorities }
+		relative_position_id = CAR_support_the_sudanese_authorities
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_speak_out_against_islamists"
+			add_ideas = AD_volunteer_battalions_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_offer_deposits_to_the_french
+		icon = GFX_z_goal_CAR_offer_deposits_to_the_french
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = CAR_anise_georges_dologele focus = CAR_consolidation_around_bozize }
+		relative_position_id = CAR_anise_georges_dologele
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_offer_deposits_to_the_french"
+			subtract_from_variable = { AD_fo_position = 0.2 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			remove_ideas = CAR_embargo_on_the_sale_of_diamonds_from_the_un_idea
+		}
+	}
+	
+	focus = {
+		id = CAR_uranium_ore_mining
+		icon = GFX_z_goal_CAR_uranium_ore_mining
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { controls_state = 51 }
+		bypass = {  }
+		prerequisite = { focus = CAR_offer_deposits_to_the_french }
+		relative_position_id = CAR_offer_deposits_to_the_french
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_uranium_ore_mining"
+			add_resource = { type = uranium amount = 14 state = 51 }
+		}
+	}
+	
+	focus = {
+		id = CAR_agree_on_joint_production
+		icon = GFX_z_goal_CAR_agree_on_joint_production
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			set_temp_variable = { AD_france_superiority_temp_var = -0.2 }
+			custom_trigger_tooltip = {
+				check_variable = { var = AD_fo_position value = AD_france_superiority_temp_var compare = less_than_or_equals }
+				tooltip = AD_france_superiority_greater_than_or_equals_tt
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = CAR_raise_the_issue_of_dividing_the_country }
+		prerequisite = { focus = CAR_offer_deposits_to_the_french }
+		relative_position_id = CAR_offer_deposits_to_the_french
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus CAR_agree_on_joint_production"
+			#TODO: один из стейтов с алмазами больше не под франками
+		}
+	}
+}

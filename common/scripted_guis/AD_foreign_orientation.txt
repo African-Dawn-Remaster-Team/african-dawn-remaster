@@ -1,0 +1,84 @@
+scripted_gui = {
+	AD_foreign_orientation_open = {
+		window_name = "AD_foreign_orientation_open_gui"
+		parent_window_token = politics_tab
+		context_type = player_context
+		
+		visible = {
+			always = yes
+		}
+		
+		triggers = {
+			highlight_visible = {
+				tag = ROOT
+			}
+		}
+		
+		effects = {
+			flag_click = {
+				if = { # TODO
+					limit = { check_variable = { AD_foreign_orientation_open = 1 } }
+					set_variable = { AD_foreign_orientation_open = 0 }
+				}
+				else = {
+					set_variable = { AD_cc_record_idea = 0 }
+					clear_array = alignment_array
+					every_country = {
+						limit = {  NOT = { tag = ROOT } }
+						AD_fo_update_coordinates = yes
+					}
+					ROOT = {
+						AD_fo_update_coordinates = yes
+					}
+				}
+				set_variable = { AD_foreign_orientation_open = 1}
+			}
+		}
+		
+		properties = {
+			flag = {
+				image = "[AD_get_foreign_orientation_icon]"
+			}
+		}
+	}
+	AD_foreign_orientation = {
+		window_name = "AD_foreign_orientation_gui"
+		parent_window_token = politics_tab
+		context_type = player_context
+		
+		visible = {
+			check_variable = { AD_foreign_orientation_open = 1 }
+		}
+		
+		dynamic_lists = {
+			HOI3_tags_grid = {
+				array = alignment_array
+				change_scope = yes
+
+				entry_container = hoi3_tag_entry
+			}
+		}
+		
+		effects = {
+			close_click = {
+				set_variable = { AD_foreign_orientation_open = 0 }
+			}
+			flag3_click = {
+				capital_scope = {
+					ROOT = {
+						goto_state = PREV
+					}
+				}
+			}
+		}
+		
+		properties = {
+			flag3 = {
+				image = "[This.GetFlag]"
+				x = alignment_array_X?-1000
+				y = alignment_array_Y?-1000
+			}
+		}
+	}
+
+}

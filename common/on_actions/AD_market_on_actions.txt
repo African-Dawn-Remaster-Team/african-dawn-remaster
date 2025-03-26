@@ -1,0 +1,398 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			set_variable = { global.AD_m_item_buying_amount@token:ak_0 = 100 }
+			set_variable = { global.AD_m_item_buying_amount@token:ak_1 = 100 }
+			set_variable = { global.AD_m_item_buying_amount@token:M16_0 = 100 }
+			set_variable = { global.AD_m_item_buying_amount@token:M16_1 = 100 }
+			set_variable = { global.AD_m_item_buying_amount@token:uav_airframe_0 = 1 } # TUR
+			set_variable = { global.AD_m_item_buying_amount@token:attack_helicopter_airframe_0_ru = 1 }
+			set_variable = { global.AD_m_item_buying_amount@token:light_cas_airframe_0 = 1 } # RUS
+			set_variable = { global.AD_m_item_buying_amount@token:mrap_car_equipment = 10 } # CHI
+			set_variable = { global.AD_m_item_buying_amount@token:infantry_armored_transport_equipment_x = 1 } # RUS FRA USA
+			set_variable = { global.AD_m_item_buying_amount@token:armored_support_vehicle_equipment_x_2 = 1 } # RUS
+			set_variable = { global.AD_m_item_buying_amount@token:armored_support_vehicle_equipment_x_3 = 1 } # RUS
+			set_variable = { global.AD_m_item_buying_amount@token:ATGM_equipment_rpg7 = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:ATGM_equipment_milan = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:ATGM_equipment_tow = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:ATGM_equipment_9k111 = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:manpads_equipment_redeye = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:manpads_equipment_fim92 = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:manpads_equipment_mistral = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:manpads_equipment_strela = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:manpads_equipment_igla = 10 }
+			set_variable = { global.AD_m_item_buying_amount@token:howitzer_equipment_d30 = 1 }
+			set_variable = { global.AD_m_item_buying_amount@token:modern_tank_equipment_t62 = 1 }
+			set_variable = { global.AD_m_item_buying_amount@token:modern_tank_equipment_t72 = 1 }
+			set_variable = { global.AD_m_item_buying_amount@token:modern_tank_equipment_leopard1 = 1 }
+			
+			add_to_array = { global.market_offers = token:ak_0 }
+			add_to_array = { global.market_offers = token:ak_1 }
+			add_to_array = { global.market_offers = token:M16_0 }
+			add_to_array = { global.market_offers = token:M16_1 }
+			add_to_array = { global.market_offers = token:uav_airframe_0 } # TUR (4)
+			add_to_array = { global.market_offers = token:attack_helicopter_airframe_0_ru }
+			add_to_array = { global.market_offers = token:light_cas_airframe_0 } # RUS (6)
+			add_to_array = { global.market_offers = token:mrap_car_equipment } # CHI (7)
+			add_to_array = { global.market_offers = token:infantry_armored_transport_equipment_x } # RUS (8)
+			add_to_array = { global.market_offers = token:infantry_armored_transport_equipment_x } # FRA (9)
+			add_to_array = { global.market_offers = token:infantry_armored_transport_equipment_x } # USA (10)
+			add_to_array = { global.market_offers = token:armored_support_vehicle_equipment_x_2 } # RUS (11)
+			add_to_array = { global.market_offers = token:armored_support_vehicle_equipment_x_3 } # RUS (12)
+			add_to_array = { global.market_offers = token:ATGM_equipment_rpg7 }
+			add_to_array = { global.market_offers = token:ATGM_equipment_milan }
+			add_to_array = { global.market_offers = token:ATGM_equipment_tow }
+			add_to_array = { global.market_offers = token:ATGM_equipment_9k111 }
+			add_to_array = { global.market_offers = token:manpads_equipment_redeye }
+			add_to_array = { global.market_offers = token:manpads_equipment_fim92 }
+			add_to_array = { global.market_offers = token:manpads_equipment_mistral }
+			add_to_array = { global.market_offers = token:manpads_equipment_strela }
+			add_to_array = { global.market_offers = token:manpads_equipment_igla }
+			add_to_array = { global.market_offers = token:howitzer_equipment_d30 }
+			add_to_array = { global.market_offers = token:modern_tank_equipment_t62 }
+			add_to_array = { global.market_offers = token:modern_tank_equipment_t72 }
+			add_to_array = { global.market_offers = token:modern_tank_equipment_leopard1 }
+			
+			every_country = {
+				add_dynamic_modifier = { modifier = hidden_market_affirs_trigger }
+			}
+			
+			# add_to_array = {
+				# global.market_offers = 1
+			# }
+			# add_to_array = {
+				# global.market_offers = 2
+			# }
+			# add_to_array = {
+				# global.market_offers = 3
+			# }
+			# add_to_array = {
+				# global.market_offers = 4
+			# }
+			# add_to_array = {
+				# global.market_offers = 5
+			# }
+			# add_to_array = {
+				# global.market_offers = 6
+			# }
+			# add_to_array = {
+				# global.market_offers = 7 
+			# }
+			# add_to_array = {
+				# global.market_offers = 8
+			# }
+			# add_to_array = {
+				# global.market_offers = 9
+			# }
+			# add_to_array = {
+				# global.market_offers = 10
+			# }
+			# add_to_array = {
+				# global.market_offers = 11
+			# }
+			# add_to_array = {
+				# global.market_offers = 12
+			# }
+			# add_to_array = {
+				# global.market_offers = 13
+			# }
+			# add_to_array = {
+				# global.market_offers = 14
+			# }
+			# add_to_array = {
+				# global.market_offers = 15
+			# }
+			# add_to_array = {
+				# global.market_offers = 16
+			# }
+			# set_variable = { global.default_buying_amount_1 = 1 }
+			# set_variable = { global.default_buying_amount_2 = 1 }
+			# set_variable = { global.default_buying_amount_3 = 1 }
+			# set_variable = { global.default_buying_amount_4 = 1 }
+			# set_variable = { global.default_buying_amount_5 = 1 }
+			# set_variable = { global.default_buying_amount_6 = 1 }
+			# set_variable = { global.default_buying_amount_7 = 100 }
+			# set_variable = { global.default_buying_amount_8 = 100 }
+			# set_variable = { global.default_buying_amount_9 = 10 }
+
+			# set_variable = { global.default_buying_amount_10 = 4 }
+			# set_variable = { global.default_buying_amount_11 = 4 }
+			# set_variable = { global.default_buying_amount_12 = 4 }
+			# set_variable = { global.default_buying_amount_13 = 9 }
+			# set_variable = { global.default_buying_amount_14 = 10 }
+			# set_variable = { global.default_buying_amount_15 = 1 }
+			# set_variable = { global.default_buying_amount_16 = 1 }
+			
+			# TODO разная стоимость для разной аммуниции
+			set_variable = { global.AD_m_item_costper1@token:ak_0 = 1 }
+			set_variable = { global.AD_m_item_costper1@token:ak_1 = 2.57 }
+			set_variable = { global.AD_m_item_costper1@token:M16_0 = 1.5 }
+			set_variable = { global.AD_m_item_costper1@token:M16_1 = 5.5 }
+			set_variable = { global.AD_m_item_costper1@token:uav_airframe_0 = 70 } # TUR
+			set_variable = { global.AD_m_item_costper1@token:attack_helicopter_airframe_0_ru = 45 }
+			set_variable = { global.AD_m_item_costper1@token:light_cas_airframe_0 = 25 } # RUS
+			set_variable = { global.AD_m_item_costper1@token:mrap_car_equipment = 5.66 } # CHI
+			# TODO Cobra
+			set_variable = { global.AD_m_item_costper1@token:infantry_armored_transport_equipment_x = 2 } # RUS FRA USA
+			set_variable = { global.AD_m_item_costper1@token:armored_support_vehicle_equipment_x_2 = 10 } # RUS
+			set_variable = { global.AD_m_item_costper1@token:armored_support_vehicle_equipment_x_3 = 10 } # RUS
+			set_variable = { global.AD_m_item_costper1@token:ATGM_equipment_rpg7 = 1.7 }
+			set_variable = { global.AD_m_item_costper1@token:ATGM_equipment_milan = 2.7 } # TODO APILAS
+			set_variable = { global.AD_m_item_costper1@token:ATGM_equipment_tow = 3.33 }
+			set_variable = { global.AD_m_item_costper1@token:ATGM_equipment_9k111 = 2.7 }
+			set_variable = { global.AD_m_item_costper1@token:manpads_equipment_redeye = 2.14 }
+			set_variable = { global.AD_m_item_costper1@token:manpads_equipment_fim92 = 3.57 }
+			set_variable = { global.AD_m_item_costper1@token:manpads_equipment_mistral = 3.14 }
+			set_variable = { global.AD_m_item_costper1@token:manpads_equipment_strela = 2.14 }
+			set_variable = { global.AD_m_item_costper1@token:manpads_equipment_igla = 3.57 }
+			set_variable = { global.AD_m_item_costper1@token:howitzer_equipment_d30 = 6.25 }
+			set_variable = { global.AD_m_item_costper1@token:modern_tank_equipment_t62 = 5.5 }
+			set_variable = { global.AD_m_item_costper1@token:modern_tank_equipment_t72 = 10 }
+			set_variable = { global.AD_m_item_costper1@token:modern_tank_equipment_leopard1 = 8.75 }
+			
+			# set_variable = { global.country_0_costper1_1 = 1.5 }
+			# set_variable = { global.country_0_costper1_2 = 1.6 }
+			# set_variable = { global.country_0_costper1_3 = 2 }
+			# set_variable = { global.country_0_costper1_4 = 1.6 }
+			# set_variable = { global.country_0_costper1_5 = 1.8 }
+			# set_variable = { global.country_0_costper1_6 = 2 }
+			# set_variable = { global.country_0_costper1_7 = 0.30 }
+			# set_variable = { global.country_0_costper1_8 = 0.45 }
+			# set_variable = { global.country_0_costper1_9 = 1.1 }
+
+			# set_variable = { global.country_0_costper1_10 = 5.3 }
+			# set_variable = { global.country_0_costper1_11 = 7.4 }
+			# set_variable = { global.country_0_costper1_12 = 4.5 }
+			# set_variable = { global.country_0_costper1_13 = 5 }
+			# set_variable = { global.country_0_costper1_14 = 2.7 }
+			# set_variable = { global.country_0_costper1_15 = 125 }
+			# set_variable = { global.country_0_costper1_16 = 200 }
+			
+			# set_variable = { global.country_1_costper1_1 = 1.4 }
+			# set_variable = { global.country_1_costper1_2 = 1.8 }
+			# set_variable = { global.country_1_costper1_3 = 1.8 }
+			# set_variable = { global.country_1_costper1_4 = 2 }
+			# set_variable = { global.country_1_costper1_5 = 1.4 }
+			# set_variable = { global.country_1_costper1_6 = 1.8 }
+			# set_variable = { global.country_1_costper1_7 = 0.45 }
+			# set_variable = { global.country_1_costper1_8 = 0.55 }
+			# set_variable = { global.country_1_costper1_9 = 1.35 }
+			
+
+			# set_variable = { global.country_1_costper1_10 = 5.1 }
+			# set_variable = { global.country_1_costper1_11 = 8 }
+			# set_variable = { global.country_1_costper1_12 = 5 }
+			# set_variable = { global.country_1_costper1_13 = 5.5 }
+			# set_variable = { global.country_1_costper1_14 = 3 }
+			# set_variable = { global.country_1_costper1_15 = 100 }
+			# set_variable = { global.country_1_costper1_16 = 200 }
+			
+			# set_variable = { global.country_2_costper1_1 = 1.8 }
+			# set_variable = { global.country_2_costper1_2 = 1.9 }
+			# set_variable = { global.country_2_costper1_3 = 1.7 }
+			# set_variable = { global.country_2_costper1_4 = 1.6 }
+			# set_variable = { global.country_2_costper1_5 = 1.7 }
+			# set_variable = { global.country_2_costper1_6 = 1.4 }
+			# set_variable = { global.country_2_costper1_7 = 0.55 }
+			# set_variable = { global.country_2_costper1_8 = 0.65 }
+			# set_variable = { global.country_2_costper1_9 = 1.55 }
+
+			# set_variable = { global.country_2_costper1_10 = 5.1 }
+			# set_variable = { global.country_2_costper1_11 = 7.6 }
+			# set_variable = { global.country_2_costper1_12 = 4.7 }
+			# set_variable = { global.country_2_costper1_13 = 5.8 }
+			# set_variable = { global.country_2_costper1_14 = 2.0 }
+			# set_variable = { global.country_2_costper1_15 = 75 }
+			# set_variable = { global.country_2_costper1_16 = 259 }
+			
+			set_variable = { global.bm_cost_1 = 150 }
+			set_variable = { global.bm_cost_2 = 100 }
+			set_variable = { global.bm_cost_3 = 100 }
+		}
+	}
+	
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tungsten > 0
+						oil > 0
+						steel > 0
+						rubber > 0
+						chromium > 0
+						aluminium > 0
+						any_state = {
+							AND = {
+								is_controlled_by = PREV
+								check_variable = { THIS.amount_of_gold > 0 }
+							}
+						}
+						any_state = {
+							AND = {
+								is_controlled_by = PREV
+								check_variable = { THIS.amount_of_diamonds > 0 }
+							}
+						}
+						any_state = {
+							AND = {
+								is_controlled_by = PREV
+								check_variable = { THIS.amount_of_uran > 0 }
+							}
+						}
+					}
+				}
+				calculate_amount_of_getting_pp = yes
+			}
+		}
+	}
+	
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tungsten > 0
+						oil > 0
+						steel > 0
+						rubber > 0
+						chromium > 0
+						aluminium > 0
+						any_state = {
+							AND = {
+								is_controlled_by = PREV
+								check_variable = { THIS.amount_of_gold > 0 }
+							}
+						}
+						any_state = {
+							AND = {
+								is_controlled_by = PREV
+								check_variable = { THIS.amount_of_diamonds > 0 }
+							}
+						}
+						any_state = {
+							AND = {
+								is_controlled_by = PREV
+								check_variable = { THIS.amount_of_uran > 0 }
+							}
+						}
+					}
+				}
+				calculate_amount_of_getting_pp = yes
+				add_political_power = amountofmonthlygettingppmarket # TODO
+			}
+		}
+	}
+	
+	on_monthly = { 
+		effect = { # TODO не нужно?
+			set_variable = { thismonthtakemoney = amountofmonthlyspendingppmarket }
+			multiply_variable = { thismonthtakemoney = -1 }
+			add_political_power = var:thismonthtakemoney
+		}
+	}
+	
+	on_monthly = { #### black market
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_country_flag = black_market_already_bought }
+						OR = {
+							has_government = fundamentalism
+							has_country_flag = international_blockade
+						}
+						OR = {
+							has_equipment = {
+								infantry_equipment < 2000
+							}
+							AND = {
+								has_equipment = {
+									ATGM_equipment < 500
+								}
+								OR = { has_template_containing_unit = infantry has_template_containing_unit = infantry_on_btr has_template_containing_unit = infantry_on_jeep has_template_containing_unit = infantry_on_bmp has_template_containing_unit = atgm_support_unit } 
+							}
+							AND = {
+								OR = { has_template_containing_unit = manpads_support_unit has_template_containing_unit = speznaz } 
+								has_equipment = {
+									manpads_equipment < 500
+								}
+							}
+						}
+						has_political_power > var:global.bm_cost_2
+						is_ai = yes
+					}
+				}
+				fake_ai_black_market = yes
+			}
+		}
+	}
+	
+	on_weekly = { 
+		effect = {
+			if = {
+				limit = {
+					date < 2025.02.24
+					has_war = yes
+					is_ai = yes
+					NOT = { has_country_flag = buyed_weapons_not_delivered }
+					NOT = {
+						OR = {
+							tag = RUS
+							tag = FRA
+							tag = USA
+							tag = CHI
+							has_government = fundamentalism
+							has_country_flag = international_blockade
+						}
+					}
+					has_political_power > 80
+				}
+				fake_ai_market_pre_2025 = yes
+			}
+			if = {
+				limit = {
+					date > 2025.02.24
+					is_in_faction = yes
+					is_ai = yes
+					NOT = { has_country_flag = buyed_weapons_not_delivered }
+					has_war = no
+					NOT = {
+						OR = {
+							tag = RUS
+							tag = FRA
+							tag = USA
+							tag = CHI
+							has_government = fundamentalism
+							has_country_flag = international_blockade
+						}
+					}
+					has_political_power > 50
+				}
+				fake_ai_market_preparing_for_war = yes
+			}
+			if = {
+				limit = {
+					date > 2025.02.24
+					NOT = { has_country_flag = buyed_weapons_not_delivered }
+					has_war = yes
+					NOT = {
+						OR = {
+							tag = RUS
+							tag = FRA
+							tag = USA
+							tag = CHI
+							has_government = fundamentalism
+							has_country_flag = international_blockade
+						}
+					}
+					is_ai = yes
+					has_political_power > 50
+				}
+				fake_ai_market_war = yes
+			}
+
+		}
+	}
+}

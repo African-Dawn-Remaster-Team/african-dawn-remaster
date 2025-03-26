@@ -1,0 +1,556 @@
+﻿add_namespace = AD_EQG
+
+# Репрессии в отношении Констанции
+country_event = {
+	id = AD_EQG.0
+	title = AD_EQG.0.t
+	desc = AD_EQG.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.0" }
+	option = {
+		name = AD_EQG.0.a
+		add_political_power = -250
+		custom_effect_tooltip = empty_line_tooltip
+		subtract_from_variable = { AD_fo_position = 0.4 tooltip = AD_france_superiority_var_tt }
+		add_to_temp_variable = { position_change = -0.4 } # for loc
+		AD_check_political_situation_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		
+		retire_character = EQG_Teodoro_Biyogo_Nsue_Okomo
+		retire_character = EQG_Victoriano_Bibang_Nsue_Okomo
+		retire_character = EQG_Juan_Olo_Mbah_Nseng
+		retire_character = EQG_Armengol_Ondo_Ngema
+	}
+}
+
+# Теодориан поднимает восстание
+country_event = {
+	id = AD_EQG.1
+	title = AD_EQG.1.t
+	desc = AD_EQG.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.1"
+		hidden_effect = {
+			set_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag
+			create_dynamic_country = {
+				original_tag = ROOT
+				copy_tag = ROOT
+				add_popularity = { ideology = centrism popularity = 1 }
+				set_politics = { ruling_party = centrism elections_allowed = no }
+				transfer_state = 40
+				ROOT = {
+					EQG_Teodoro_Nguema_Obiang_Manga = { set_nationality = PREV.PREV }
+					transfer_units_fraction = {
+						target = PREV
+						size = 0.5
+						stockpile_ratio = 0.5
+						army_ratio = 0.5
+						air_ratio = 0.5
+						navy_ratio = 0.5
+						keep_unit_leaders_trigger = { always = yes }
+					}
+					declare_war_on = { target = PREV type = civil_war }
+					add_civil_war_target = PREV
+					PREV = { add_civil_war_target = PREV }
+				}
+				add_country_leader_role = {
+					character = EQG_Teodoro_Nguema_Obiang_Manga
+					promote_leader = yes
+					country_leader = {
+						desc = "POLITICS_TEODORO_NGUEMA_OBIANG_MANGA_DESC"
+						ideology = centrism_subtype_right_wing_populism
+						traits = {  }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = AD_EQG.1.a
+		random_other_country = {
+			limit = { original_tag = ROOT }
+			change_tag_from = ROOT
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		custom_effect_tooltip = {
+			localization_key = AD_decisions_category_block_tt
+			DECISIONS_CATEGORY = "EQG_split_in_the_mongomo_clan_category"
+		}
+	}
+}
+
+# Теодориан консолидирует власть в клане
+country_event = {
+	id = AD_EQG.2
+	title = AD_EQG.2.t
+	desc = AD_EQG.2.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.2" }
+	option = {
+		name = AD_EQG.2.a
+		custom_effect_tooltip = {
+			localization_key = AD_decisions_category_block_tt
+			DECISIONS_CATEGORY = "EQG_split_in_the_mongomo_clan_category"
+		}
+		set_country_flag = EQG_theodorian_consolidates_power_in_the_clan_flag
+	}
+}
+
+# Похищение россиянина в Малабо
+country_event = {
+	id = AD_EQG.3
+	title = AD_EQG.3.t
+	desc = AD_EQG.3.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.3" }
+	option = {
+		name = AD_EQG.3.a
+		add_political_power = -15
+		hidden_effect = { country_event = { id = AD_EQG.4 days = 150 } }
+	}
+}
+
+# Освобождение российских пленников
+country_event = {
+	id = AD_EQG.4
+	title = AD_EQG.4.t
+	desc = AD_EQG.4.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.4" }
+	option = {
+		name = AD_EQG.4.a
+		effect_tooltip = { unlock_national_focus = EQG_ensuring_security_from_pirates }
+		set_country_flag = EQG_ensuring_security_from_pirates_unlock_flag
+	}
+}
+
+# Взрывы в Бате
+country_event = {
+	id = AD_EQG.5
+	title = AD_EQG.5.t
+	desc = AD_EQG.5.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	trigger = { controls_state = 24 }
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.5" }
+	option = {
+		name = AD_EQG.5.a
+		effect_tooltip = { unlock_national_focus = EQG_the_grey_cardinal_efa_mbah }
+		set_country_flag = EQG_the_grey_cardinal_efa_mbah_unlock_flag
+		custom_effect_tooltip = empty_line_tooltip
+		add_manpower = -108
+		custom_effect_tooltip = empty_line_tooltip
+		24 = {
+			if = {
+				limit = { infrastructure > 0 }
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+		}				
+	}
+}
+
+# Первый случай заражения COVID-19
+country_event = {
+	id = AD_EQG.6
+	title = AD_EQG.6.t
+	desc = AD_EQG.6.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.6" }
+	option = {
+		name = AD_EQG.6.a
+		complete_national_focus = EQG_covid_epidemic
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = {
+			unlock_decision_category_tooltip = EQG_covid_epidemic_category
+			activate_mission = EQG_covid_outbreak_mission
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		add_ideas = EQG_patient_zero_idea
+	}
+}
+
+# Переизбрание Нгема Мбасого
+country_event = {
+	id = AD_EQG.7
+	title = AD_EQG.7.t
+	desc = AD_EQG.7.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.7" }
+	option = {
+		name = AD_EQG.7.a
+		effect_tooltip = { unlock_national_focus = EQG_visit_to_russia }
+		set_country_flag = EQG_visit_to_russia_unlock_flag
+	}
+}
+
+# Задержание Габриэля Нсе Обианга
+country_event = {
+	id = AD_EQG.8
+	title = AD_EQG.8.t
+	desc = AD_EQG.8.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.8" }
+	option = {
+		name = AD_EQG.8.a
+		add_popularity = { ideology = conservatism popularity = -0.1 }
+		add_popularity = { ideology = liberalism popularity = -0.1 }
+		custom_effect_tooltip = empty_line_tooltip
+		swap_ideas = {
+			remove_idea = EQG_threat_of_a_coup_from_the_opposition_idea_1
+			add_idea = EQG_threat_of_a_coup_from_the_opposition_idea_2
+		}
+		hidden_effect = { country_event = { id = AD_EQG.9 days = 270 } }
+	}
+}
+
+# Мятеж на острове Аннобон
+country_event = {
+	id = AD_EQG.9
+	title = AD_EQG.9.t
+	desc = AD_EQG.9.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.9" }
+	option = {
+		name = AD_EQG.9.a
+		effect_tooltip = { unlock_national_focus = EQG_crackdown_on_the_rebels_on_the_island_of_annobon }
+		set_country_flag = EQG_crackdown_on_the_rebels_on_the_island_of_annobon_unlock_flag
+		custom_effect_tooltip = empty_line_tooltip
+		add_ideas = EQG_mutiny_on_the_island_of_annobon_idea
+	}
+}
+
+# Камерун протестует против строительства стены
+country_event = {
+	id = AD_EQG.10
+	title = AD_EQG.10.t
+	desc = AD_EQG.10.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.10" }
+	option = {
+		name = AD_EQG.10.a
+		add_stability = 0.01
+		custom_effect_tooltip = empty_line_tooltip
+		unlock_national_focus = EQG_construction_of_a_wall_along_the_border_with_cameroon
+		custom_effect_tooltip = empty_line_tooltip
+		every_controlled_state = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border_country = CMR
+				}
+			}
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		swap_ideas = {
+			remove_idea = EQG_foreign_traders_idea
+			add_idea = EQG_foreign_traders_idea_1
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		CMR = {
+			add_opinion_modifier = {
+				modifier = EQG_construction_of_a_wall_along_the_border_with_cameroon_op_1
+				target = ROOT
+			}
+			reverse_add_opinion_modifier = {
+				modifier = EQG_construction_of_a_wall_along_the_border_with_cameroon_op_1
+				target = ROOT
+			}
+		}
+	}
+	option = {
+		name = AD_EQG.10.b
+		CMR = {
+			if = {
+				limit = { NOT = { is_embargoing = ROOT } }
+				send_embargo = ROOT
+			}
+			add_opinion_modifier = {
+				modifier = EQG_construction_of_a_wall_along_the_border_with_cameroon_op_2
+				target = ROOT
+			}
+			reverse_add_opinion_modifier = {
+				modifier = EQG_construction_of_a_wall_along_the_border_with_cameroon_op_2
+				target = ROOT
+			}
+		}
+		hidden_effect = { country_event = { id = AD_EQG.11 days = 120 } }
+	}
+}
+
+# Массовая попытка пересечения границы
+country_event = {
+	id = AD_EQG.11
+	title = AD_EQG.11.t
+	desc = AD_EQG.11.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.11" }
+	option = {
+		name = AD_EQG.11.a
+		trigger = {
+			is_subject = no
+			controls_state = 24
+			CMR = {
+				controls_state = 13
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		hidden_effect = { country_event = { id = AD_EQG.12 days = 3 } }
+	}
+	option = {
+		name = AD_EQG.11.b
+		add_timed_idea = { idea = EQG_migration_crisis_idea days = 365 }
+	}
+}
+
+# Столкновение с камерунскими пограничниками
+country_event = {
+	id = AD_EQG.12
+	title = AD_EQG.12.t
+	desc = AD_EQG.12.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.12" }
+	option = {
+		name = AD_EQG.12.a
+		activate_mission = EQG_attack_on_the_cameroon
+		CMR = { activate_mission = EQG_attack_on_the_cameroon }
+		custom_effect_tooltip = empty_line_tooltip
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 24
+				num_provinces = 3
+				on_win = AD_EQG.13
+				on_lose = AD_EQG.14
+			}	
+			defender = {
+				state = 85
+				num_provinces = 3
+			}
+		}
+	}
+}
+
+# 
+country_event = {
+	id = AD_EQG.13
+	title = AD_EQG.13.t
+	desc = AD_EQG.13.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.13" }
+	option = {
+		name = AD_EQG.13.a
+		add_war_support = 0.03
+		add_political_power = 50
+		custom_effect_tooltip = empty_line_tooltip
+		add_popularity = { ideology = centrism popularity = 0.02 }
+	}
+}
+
+# 
+country_event = {
+	id = AD_EQG.14
+	title = AD_EQG.14.t
+	desc = AD_EQG.14.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.14" }
+	option = {
+		name = AD_EQG.14.a
+		add_political_power = -50
+		add_popularity = { ideology = centrism popularity = -0.02 }
+	}
+}
+
+# Вопрос островов Мбанье рассматривается в Гааге
+country_event = {
+	id = AD_EQG.15
+	title = AD_EQG.15.t
+	desc = AD_EQG.15.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.15" }
+	option = {
+		name = AD_EQG.15.a
+		hidden_effect = { country_event = { id = AD_EQG.16 days = 150 } }
+	}
+}
+
+# Результат Гаагской комиссии
+country_event = {
+	id = AD_EQG.16
+	title = AD_EQG.16.t
+	desc = AD_EQG.16.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.16" }
+	option = {
+		name = AD_EQG.16.a
+		effect_tooltip = { unlock_national_focus = EQG_accept_the_decision_in_the_hague }
+		set_country_flag = EQG_accept_the_decision_in_the_hague_unlock_flag
+	}
+	option = {
+		name = AD_EQG.16.b
+		effect_tooltip = { unlock_national_focus = EQG_return_what_is_rightfully_yours }
+		set_country_flag = EQG_return_what_is_rightfully_yours_unlock_flag
+	}
+}
+
+# Падение нефтяных доходов
+country_event = {
+	id = AD_EQG.17
+	title = AD_EQG.17.t
+	desc = AD_EQG.17.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.17" }
+	option = {
+		name = AD_EQG.17.a
+		#TODO: -135F
+		custom_effect_tooltip = empty_line_tooltip
+		complete_national_focus = EQG_falling_oil_revenues
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = EQG_dependence_on_oil_revenues_idea
+				add_idea = EQG_dependence_on_oil_revenues_idea_1
+			}
+		}
+	}
+}
+
+# Семейный совет во дворце
+country_event = {
+	id = AD_EQG.18
+	title = AD_EQG.18.t
+	desc = AD_EQG.18.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.18" }
+	option = {
+		name = AD_EQG.18.a
+	}
+}
+
+# Шопоголик с Ламборгини
+country_event = {
+	id = AD_EQG.19
+	title = AD_EQG.19.t
+	desc = AD_EQG.19.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.19" }
+	option = {
+		name = AD_EQG.19.a
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+		}
+	}
+}
+
+# Первая жена президента
+country_event = {
+	id = AD_EQG.20
+	title = AD_EQG.20.t
+	desc = AD_EQG.20.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.20" }
+	option = {
+		name = AD_EQG.20.a
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+			add_to_variable = { EQG_influence_of_gabrielle = -5 tooltip = EQG_influence_of_gabrielle_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+		}
+	}
+	option = {
+		name = AD_EQG.20.b
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			add_to_variable = { EQG_influence_of_theodorian = -5 tooltip = EQG_influence_of_theodorian_tt }
+			add_to_variable = { EQG_influence_of_gabrielle = 5 tooltip = EQG_influence_of_gabrielle_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+		}
+	}
+}
+
+# Серый кардинал «Эфа Мба»
+country_event = {
+	id = AD_EQG.21
+	title = AD_EQG.21.t
+	desc = AD_EQG.21.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.21" }
+	option = {
+		name = AD_EQG.21.a
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			add_to_variable = { EQG_influence_of_theodorian = 5 tooltip = EQG_influence_of_theodorian_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+		}
+		army_experience = 10
+		custom_effect_tooltip = empty_line_tooltip
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.25
+			uses = 1
+			category = land_doctrine
+		}
+	}
+	option = {
+		name = AD_EQG.21.b
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			add_to_variable = { EQG_influence_of_gabrielle = 10 tooltip = EQG_influence_of_gabrielle_tt }
+			add_to_variable = { EQG_influence_of_theodorian = -5 tooltip = EQG_influence_of_theodorian_tt }
+			EQG_fellow_clansmen_check_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+		}
+		retire_character = EQG_Victoriano_Bibang_Nsue_Okomo
+	}
+}
+
+# Второй сын Габриэль
+country_event = {
+	id = AD_EQG.22
+	title = AD_EQG.22.t
+	desc = AD_EQG.22.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_EQG.22" }
+	option = {
+		name = AD_EQG.22.a
+		if = {
+			limit = { NOT = { has_country_flag = EQG_split_in_the_mongomo_clan_category_block_flag } }
+			add_to_variable = { EQG_influence_of_gabrielle = 10 tooltip = EQG_influence_of_gabrielle_tt }
+			EQG_fellow_clansmen_check_effect = yes
+		}
+	}
+}

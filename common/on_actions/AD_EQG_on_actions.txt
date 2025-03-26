@@ -1,0 +1,15 @@
+on_actions = {	
+	on_startup = {
+		effect = {
+			if = {
+				limit = { has_start_date < 2020.01.02 }
+				EQG = {
+					country_event = { id = AD_EQG.6 days = 73 }
+					country_event = { id = AD_EQG.3 days = 130 }
+					country_event = { id = AD_EQG.5 days = 432 }
+					country_event = { id = AD_EQG.7 days = 1055 }
+				}
+			}
+		}
+	}
+}

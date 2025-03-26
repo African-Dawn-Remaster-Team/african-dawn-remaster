@@ -1,0 +1,16 @@
+air_wings = {
+	13 = {
+		light_cas_airframe_0 =  {
+			owner = "CMR" 
+			creator = "RUS"
+			amount = 2
+			version_name = "L-39"
+		}
+		attack_helicopter_airframe_0_ru =  {
+			owner = "CMR" 
+			creator = "RUS"
+			amount = 11
+			version_name = "Mi-24VB"
+		}
+	}
+}

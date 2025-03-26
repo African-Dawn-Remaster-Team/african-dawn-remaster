@@ -1,0 +1,2209 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
+focus_tree = {
+	
+	id = ad_burkina_faso_focus_tree
+	country = {
+		factor = 0	
+		modifier = {
+			add = 10
+			tag = BFA
+		}
+	}
+	default = no	
+	continuous_focus_position = { x = 0 y = 1500 }
+	
+	shared_focus = AD_SSA_creation_of_the_sahel_states_alliance
+	
+	focus = {
+		id = BFA_organization_koglveogo
+		icon = GFX_z_goal_BFA_organization_koglveogo
+		x = 0
+		y = 0
+		cost = 6.5
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_organization_koglveogo"
+			if = {
+				limit = { has_active_mission = BFA_jihadist_terrorist_attacks_mission }
+				add_days_mission_timeout = { mission = BFA_jihadist_terrorist_attacks_mission days = 20 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			custom_effect_tooltip = BFA_volunteers_for_the_defense_of_the_motherland_modifier_tt
+			add_to_variable = { BFA_conscription_factor_var = 0.02 tooltip = conscription_factor_tooltip }
+			add_to_variable = { BFA_pocket_penalty_var_1 = -0.03 tooltip = pocket_penalty_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_preparations_for_the_elections
+		icon = GFX_z_goal_BFA_preparations_for_the_elections
+		x = 0
+		y = 1
+		cost = 6.5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = { has_country_flag = BFA_christian_cabor_second_term_unlock_flag }
+		prerequisite = { focus = BFA_organization_koglveogo }
+		relative_position_id = BFA_organization_koglveogo
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_preparations_for_the_elections"
+			if = {
+				limit = { has_active_mission = BFA_jihadist_terrorist_attacks_mission }
+				add_days_mission_timeout = { mission = BFA_jihadist_terrorist_attacks_mission days = 40 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_stability = 0.01
+			add_popularity = { ideology = social_democracy popularity = 0.04 }
+			custom_effect_tooltip = empty_line_tooltip
+			capital_scope = {
+				if = {
+					limit = { hospital < 5 }
+					add_building_construction = {
+						type = hospital
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_christian_cabor_second_term
+		icon = GFX_z_goal_BFA_christian_cabor_second_term
+		x = 0
+		y = 2
+		cost = 2
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = BFA_christian_cabor_second_term_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = BFA_christian_cabor_second_term_unlock_flag
+				}
+			}
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_preparations_for_the_elections }
+		relative_position_id = BFA_preparations_for_the_elections
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_christian_cabor_second_term"
+			add_political_power = 50
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = social_democracy popularity = 0.1 }
+		}
+	}
+
+	focus = {
+		id = BFA_circumventing_the_mistakes_of_the_campaore
+		icon = GFX_z_goal_BFA_circumventing_the_mistakes_of_the_campaore
+		x = -1
+		y = 1
+		cost = 6.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_preparations_for_the_elections }
+		relative_position_id = BFA_preparations_for_the_elections
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_circumventing_the_mistakes_of_the_campaore"
+			if = {
+				limit = { has_active_mission = BFA_jihadist_terrorist_attacks_mission }
+				add_days_mission_timeout = { mission = BFA_jihadist_terrorist_attacks_mission days = 40 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 100 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			custom_effect_tooltip = BFA_volunteers_for_the_defense_of_the_motherland_modifier_tt
+			add_to_variable = { BFA_training_time_army_factor_var_1 = -0.05 tooltip = training_time_army_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_accelerated_vdp_training
+		icon = GFX_z_goal_BFA_accelerated_vdp_training
+		x = -1
+		y = 1
+		cost = 6.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_circumventing_the_mistakes_of_the_campaore }
+		relative_position_id = BFA_circumventing_the_mistakes_of_the_campaore
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_accelerated_vdp_training"
+			if = {
+				limit = { has_active_mission = BFA_jihadist_terrorist_attacks_mission }
+				add_days_mission_timeout = { mission = BFA_jihadist_terrorist_attacks_mission days = -10 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 50 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			custom_effect_tooltip = BFA_volunteers_for_the_defense_of_the_motherland_modifier_tt
+			add_to_variable = { BFA_training_time_army_factor_var_1 = -0.04 tooltip = training_time_army_factor_tooltip }
+			add_to_variable = { BFA_minimum_training_level_var = -0.02 tooltip = minimum_training_level_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_continuation_of_pndes
+		icon = GFX_z_goal_BFA_continuation_of_pndes
+		x = 1
+		y = 1
+		cost = 12.9
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			OR = {
+				controls_state = 121
+				controls_state = 122
+				controls_state = 123
+			}
+		}
+		bypass = {
+			121 = { hospital > 4 infrastructure > 4 }
+			122 = { hospital > 4 }
+			123 = { hospital > 4 }
+		}
+		prerequisite = { focus = BFA_preparations_for_the_elections }
+		relative_position_id = BFA_preparations_for_the_elections
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_continuation_of_pndes"
+			121 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					if = {
+						limit = { hospital < 5 }
+						add_building_construction = {
+							type = hospital
+							level = 1
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = { infrastructure < 5 }
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			122 = {
+				if = {
+					limit = { is_controlled_by = ROOT hospital < 5 }
+					add_building_construction = {
+						type = hospital
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			123 = {
+				if = {
+					limit = { is_controlled_by = ROOT hospital < 5 }
+					add_building_construction = {
+						type = hospital
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_develop_french_investments
+		icon = GFX_z_goal_BFA_develop_french_investments
+		x = 1
+		y = 1
+		cost = 12.9
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_continuation_of_pndes }
+		relative_position_id = BFA_continuation_of_pndes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_develop_french_investments"
+			add_to_variable = { AD_current_money_var = 25 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			subtract_from_variable = { AD_fo_position = 0.2 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			random_owned_controlled_state = {
+				prioritize = { 10 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_implementation_of_the_national_road_program
+		icon = GFX_z_goal_BFA_implementation_of_the_national_road_program
+		x = 3
+		y = 1
+		cost = 10.755
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			controls_state = 121
+			controls_state = 122
+			controls_state = 123
+			controls_state = 10
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_continuation_of_pndes }
+		relative_position_id = BFA_continuation_of_pndes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_implementation_of_the_national_road_program"
+			123 = {
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					custom_effect_tooltip = empty_line_tooltip
+				}
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 2267 1284 347 5165 180 4907 3659 }
+				start_province = 2267
+				target_province = 3659
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 2605 5161 1321 1420 4896 4908 3659 }
+				start_province = 2605
+				target_province = 3659
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 4888 1851 1637 1405 725 4898 4907 3659 }
+				start_province = 4888
+				target_province = 3659
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = BFA_volunteers_for_the_defense_of_the_motherland_modifier_tt
+			add_to_variable = { BFA_army_speed_factor_var = 0.02 tooltip = army_speed_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_ecowas_investments
+		icon = GFX_z_goal_BFA_ecowas_investments
+		x = 1
+		y = 1
+		cost = 12.9
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_develop_french_investments focus = BFA_implementation_of_the_national_road_program }
+		relative_position_id = BFA_develop_french_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_ecowas_investments"
+			random_owned_controlled_state = {
+				prioritize = { 10 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = military_base
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = military_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_implement_french_social_programs
+		icon = GFX_z_goal_BFA_implement_french_social_programs
+		x = 1
+		y = 1
+		cost = 10.75
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = { has_idea = AD_stable_state_apparatus }
+		prerequisite = { focus = BFA_ecowas_investments }
+		relative_position_id = BFA_ecowas_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_implement_french_social_programs"
+			subtract_from_variable = { AD_fo_position = 0.2 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			AD_society_development_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_grant_rights_to_resources_to_the_french
+		icon = GFX_z_goal_BFA_grant_rights_to_resources_to_the_french
+		x = 1
+		y = 1
+		cost = 10.75
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			controls_state = 10
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_implement_french_social_programs }
+		relative_position_id = BFA_implement_french_social_programs
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_grant_rights_to_resources_to_the_french"
+			add_to_variable = { AD_current_money_var = 50 tooltip = AD_current_money_var_tt }
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -100 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			give_resource_rights = { receiver = FRA state = 10 }
+		}
+	}
+	
+	focus = {
+		id = BFA_negotiate_food_supplies
+		icon = GFX_z_goal_BFA_negotiate_food_supplies
+		x = 0
+		y = 2
+		cost = 6.5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = { has_idea = AD_three_meals_a_day_for_the_majority_of_the_population }
+		prerequisite = { focus = BFA_ecowas_investments }
+		relative_position_id = BFA_ecowas_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_negotiate_food_supplies"
+			subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			AD_food_supply_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_expand_the_agricultural_sector
+		icon = GFX_z_goal_BFA_expand_the_agricultural_sector
+		x = 1
+		y = 1
+		cost = 10.75
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_negotiate_food_supplies }
+		relative_position_id = BFA_negotiate_food_supplies
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expand_the_agricultural_sector"
+			every_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = fuel_silo
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_arrange_a_european_tour
+		icon = GFX_z_goal_BFA_arrange_a_european_tour
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_develop_french_investments }
+		prerequisite = { focus = BFA_christian_cabor_second_term }
+		relative_position_id = BFA_develop_french_investments
+		select_effect = { add_country_leader_trait = AD_missing_in_place }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_arrange_a_european_tour"
+			custom_effect_tooltip = AD_effects_at_the_beginning_of_the_focus
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = { add_country_leader_trait = AD_missing_in_place }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = AD_effects_at_the_end_of_the_focus
+			custom_effect_tooltip = empty_line_tooltip
+			remove_country_leader_trait = AD_missing_in_place
+			custom_effect_tooltip = empty_line_tooltip
+			add_to_variable = { AD_current_money_var = 20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.04
+			subtract_from_variable = { AD_fo_position = 0.2 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			FRA = {
+				add_opinion_modifier = {
+					modifier = BFA_arrange_a_european_tour_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = BFA_arrange_a_european_tour_op
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			USA = {
+				add_opinion_modifier = {
+					modifier = BFA_arrange_a_european_tour_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = BFA_arrange_a_european_tour_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_opening_of_new_hospitals
+		icon = GFX_z_goal_BFA_arrange_a_european_tour
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			any_controlled_state = { hospital < 5 }
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_arrange_a_european_tour }
+		relative_position_id = BFA_arrange_a_european_tour
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_opening_of_new_hospitals"
+			every_controlled_state = {
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_strengthen_border_security
+		icon = GFX_z_goal_BFA_strengthen_border_security
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_circumventing_the_mistakes_of_the_campaore }
+		prerequisite = { focus = BFA_christian_cabor_second_term }
+		relative_position_id = BFA_christian_cabor_second_term
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_strengthen_border_security"
+			add_stability = 0.02
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 150 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_expand_military_cooperation_with_benin
+		icon = GFX_z_goal_BFA_expand_military_cooperation_with_benin
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			controls_state = 122
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_strengthen_border_security }
+		relative_position_id = BFA_strengthen_border_security
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expand_military_cooperation_with_benin"
+			add_war_support = 0.04
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 150 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			122 = { add_dynamic_modifier = { modifier = CAR_cleansing_from_militants days = 120 } }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_cooperation_within_the_g_five_framework
+		icon = GFX_z_goal_BFA_cooperation_within_the_g_five_framework
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			has_idea = AD_member_of_g_five_sahel
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_expand_military_cooperation_with_benin }
+		relative_position_id = BFA_expand_military_cooperation_with_benin
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_cooperation_within_the_g_five_framework"
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 50 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_expand_the_integration_of_general_staffs
+		icon = GFX_z_goal_BBFA_expand_the_integration_of_general_staffs
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			has_idea = AD_member_of_g_five_sahel
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_cooperation_within_the_g_five_framework }
+		relative_position_id = BFA_cooperation_within_the_g_five_framework
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expand_the_integration_of_general_staffs"
+			swap_ideas = {
+				remove_idea = AD_member_of_g_five_sahel
+				add_idea = AD_member_of_g_five_sahel_bfa_1
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_conducting_cross_border_operations
+		icon = GFX_z_goal_BFA_conducting_cross_border_operations
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			controls_state = 121
+			controls_state = 123
+			controls_state = 127
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_expand_military_cooperation_with_benin }
+		relative_position_id = BFA_expand_military_cooperation_with_benin
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_conducting_cross_border_operations"
+			every_controlled_state = {
+				limit = { OR = { state = 121 state = 123 state = 127 } }
+				add_dynamic_modifier = { modifier = CAR_cleansing_from_militants days = 120 }
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_invite_american_instructors
+		icon = GFX_z_goal_BFA_invite_american_instructors
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			USA = { has_character = USA_Stephen_Townsend }
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_expand_military_cooperation_with_benin }
+		relative_position_id = BFA_expand_military_cooperation_with_benin
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_invite_american_instructors"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[USA.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			USA = {
+				USA_Stephen_Townsend = {
+					set_nationality = ROOT
+					add_corps_commander_role = {
+						skill = 4
+						attack_skill = 2
+						defense_skill = 3
+						planning_skill = 3
+						logistics_skill = 5
+						traits = { infantry_officer }
+					}
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							cost = 150
+							idea_token = USA_Stephen_Townsend
+							traits = { BFA_american_eagle }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_restore_the_rehabilitation_program
+		icon = GFX_z_goal_BFA_restore_the_rehabilitation_program
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_strengthen_border_security }
+		relative_position_id = BFA_strengthen_border_security
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_restore_the_rehabilitation_program"
+			add_manpower = 400
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 900 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -200 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			JNA = {
+				if = {
+					limit = {
+						exists = yes
+						has_war_with = ROOT
+						check_variable = { var = num_armies value = 2 compare = greater_than_or_equals }
+					}
+				}
+				every_country_division = {
+					random_select_amount = 2
+					destroy_unit = yes
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}	
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+				add_to_variable = { BFA_training_time_army_factor_var = 0.02 tooltip = training_time_army_factor_tooltip }
+				add_to_variable = { BFA_army_org_factor_var = -0.02 tooltip = army_org_factor_tooltip }
+				add_to_variable = { BFA_army_leader_cost_factor_var = 0.02 tooltip = army_leader_cost_factor_tooltip }
+				add_to_variable = { BFA_army_org_regain_var = -0.03 tooltip = army_org_regain_tooltip }		
+				add_to_variable = { BFA_dig_in_speed_factor_var = -0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+				add_to_variable = { BFA_pocket_penalty_var = 0.1 tooltip = pocket_penalty_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_fight_corruption_in_the_army
+		icon = GFX_z_goal_BFA_fight_corruption_in_the_army
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_restore_the_rehabilitation_program }
+		relative_position_id = BFA_restore_the_rehabilitation_program
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_fight_corruption_in_the_army"
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = -80 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			corruption_low = yes
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.06 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.06 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.06 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.06 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.09 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.03 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.3 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_rely_on_the_french_armed_forces
+		icon = GFX_z_goal_BFA_rely_on_the_french_armed_forces
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_restore_the_rehabilitation_program }
+		relative_position_id = BFA_restore_the_rehabilitation_program
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_rely_on_the_french_armed_forces"
+
+		}
+	}
+	
+	focus = {
+		id = BFA_protect_our_resources
+		icon = GFX_z_goal_BFA_protect_our_resources
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			controls_state = 121
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_rely_on_the_french_armed_forces }
+		relative_position_id = BFA_rely_on_the_french_armed_forces
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_protect_our_resources"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[FRA.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_resource = { type = gold amount = 10 state = 121 }
+		}
+	}
+	
+	focus = {
+		id = BFA_develop_gold_mining
+		icon = GFX_z_goal_BFA_develop_gold_mining
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Roch_Christian_Kabore ruling_only = yes }
+			controls_state = 121
+			controls_state = 10
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_protect_our_resources }
+		relative_position_id = BFA_protect_our_resources
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_develop_gold_mining"
+			add_resource = { type = gold amount = 12 state = 121 }
+			add_resource = { type = gold amount = 8 state = 10 }
+		}
+	}
+	
+	focus = {
+		id = BFA_paul_henri_sandaogo_damiba
+		icon = GFX_z_goal_BFA_paul_henri_sandaogo_damiba
+		x = 7
+		y = 0
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = BFA_organization_koglveogo
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_paul_henri_sandaogo_damiba"
+			effect_tooltip = {
+				add_popularity = { ideology = centrism popularity = 0.2 }
+				set_politics = { ruling_party = centrism elections_allowed = no }
+				custom_effect_tooltip = empty_line_tooltip
+				promote_character = BFA_Paul_Henri_Sandaogo_Damiba
+				custom_effect_tooltip = empty_line_tooltip
+				activate_mission = BFA_threat_of_a_military_coup_mission
+				custom_effect_tooltip = empty_line_tooltip
+				remove_ideas = AD_ECOWAS
+				custom_effect_tooltip = empty_line_tooltip
+				add_ideas = AD_ECOWAS_sanctions_idea
+				custom_effect_tooltip = empty_line_tooltip
+				if = {
+					limit = { has_character = USA_Stephen_Townsend }
+					retire_character = USA_Stephen_Townsend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_patriotic_movement_for_preservation_and_restoration
+		icon = GFX_z_goal_BFA_patriotic_movement_for_preservation_and_restoration
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_paul_henri_sandaogo_damiba }
+		relative_position_id = BFA_paul_henri_sandaogo_damiba
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_patriotic_movement_for_preservation_and_restoration"
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			set_party_name = { ideology = centrism long_name = BFA_centrism_party_1_long name = BFA_centrism_party_1 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = BFA_jihadist_terrorist_attacks_mission }
+				add_days_mission_timeout = { mission = BFA_jihadist_terrorist_attacks_mission days = 60 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 20 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_set_up_posts_on_the_border_with_togo
+		icon = GFX_z_goal_BFA_set_up_posts_on_the_border_with_togo
+		x = -2
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes }
+			controls_state = 122
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_paul_henri_sandaogo_damiba }
+		relative_position_id = BFA_paul_henri_sandaogo_damiba
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_set_up_posts_on_the_border_with_togo"
+			add_war_support = 0.07
+			custom_effect_tooltip = empty_line_tooltip
+			122 = { add_dynamic_modifier = { modifier = CAR_cleansing_from_militants days = 210 } }
+		}
+	}
+	
+	focus = {
+		id = BFA_close_social_networks
+		icon = GFX_z_goal_BFA_close_social_networks
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_patriotic_movement_for_preservation_and_restoration }
+		relative_position_id = BFA_patriotic_movement_for_preservation_and_restoration
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_close_social_networks"
+			add_stability = 0.08
+			add_war_support = -0.05
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = centrism popularity = 0.1 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 20 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_expand_funding_for_the_army
+		icon = GFX_z_goal_BFA_expand_funding_for_the_army
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_patriotic_movement_for_preservation_and_restoration }
+		relative_position_id = BFA_patriotic_movement_for_preservation_and_restoration
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expand_funding_for_the_army"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.04 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.04 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.04 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.04 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.06 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.02 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.2 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			AD_poverty_level_down_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_reduce_social_infrastructure_costs
+		icon = GFX_z_goal_BFA_reduce_social_infrastructure_costs
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_close_social_networks }
+		prerequisite = { focus = BFA_expand_funding_for_the_army }
+		relative_position_id = BFA_close_social_networks
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_reduce_social_infrastructure_costs"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.04 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.04 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.04 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.04 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.06 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.02 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.2 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			AD_food_supply_level_down_effect = yes
+			AD_society_development_level_down_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_reduce_the_influence_of_cobra
+		icon = GFX_z_goal_BFA_reduce_the_influence_of_cobra
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_patriotic_movement_for_preservation_and_restoration }
+		relative_position_id = BFA_patriotic_movement_for_preservation_and_restoration
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_reduce_the_influence_of_cobra"
+			add_war_support = 0.04
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_active_mission = BFA_threat_of_a_military_coup_mission }
+				add_days_mission_timeout = { mission = BFA_threat_of_a_military_coup_mission days = 100 }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			custom_effect_tooltip = BFA_volunteers_for_the_defense_of_the_motherland_modifier_tt
+			add_to_variable = { BFA_special_forces_cap_var = -0.25 tooltip = special_forces_cap_tooltip }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = empty_line_tooltip
+			random_unit_leader = { add_logistics = -1 }
+		}
+	}
+	
+	focus = {
+		id = BFA_bid_on_quantity
+		icon = GFX_z_goal_BFA_bid_on_quantity
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_reduce_the_influence_of_cobra }
+		relative_position_id = BFA_reduce_the_influence_of_cobra
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_bid_on_quantity"
+			custom_effect_tooltip = BFA_volunteers_for_the_defense_of_the_motherland_modifier_tt
+			add_to_variable = { BFA_conscription_factor_var = 0.09 tooltip = conscription_factor_tooltip }
+			add_to_variable = { BFA_army_defence_factor_var = -0.04 tooltip = army_defence_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_consolidate_the_authority_of_the_army
+		icon = GFX_z_goal_BFA_consolidate_the_authority_of_the_army
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_patriotic_movement_for_preservation_and_restoration }
+		relative_position_id = BFA_patriotic_movement_for_preservation_and_restoration
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_consolidate_the_authority_of_the_army"
+			add_war_support = 0.15
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_idea = disarmed_nation }
+				swap_ideas = {
+					remove_idea = disarmed_nation
+					add_idea = volunteer_only
+				}
+			}
+			else_if = {
+				limit = { has_idea = volunteer_only }
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = limited_conscription
+				}
+			}
+			else_if = {
+				limit = { has_idea = limited_conscription }
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = extensive_conscription
+				}
+			}
+			else_if = {
+				limit = { has_idea = extensive_conscription }
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = service_by_requirement
+				}
+			}
+			else_if = {
+				limit = { has_idea = service_by_requirement }
+				swap_ideas = {
+					remove_idea = service_by_requirement
+					add_idea = all_adults_serve
+				}
+			}
+			else_if = {
+				limit = { has_idea = all_adults_serve }
+				swap_ideas = {
+					remove_idea = all_adults_serve
+					add_idea = scraping_the_barrel
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_homeland_or_death
+		icon = GFX_z_goal_BFA_homeland_or_death
+		x = 7
+		y = 0
+		cost = 0
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = BFA_paul_henri_sandaogo_damiba
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_homeland_or_death"
+			effect_tooltip = { promote_character = BFA_Ibrahim_Traore }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_add_tt
+			set_variable = { BFA_surrender_limit_var = 0.4 }
+			set_variable = { BFA_war_stability_factor_var = 0.2 }
+			hidden_effect = { add_dynamic_modifier = { modifier = BFA_homeland_or_death_modifier } }
+		}
+	}
+	
+	focus = {
+		id = BFA_expel_the_french
+		icon = GFX_z_goal_BFA_expel_the_french
+		x = 0
+		y = 1
+		cost = 8.6
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_homeland_or_death }
+		relative_position_id = BFA_homeland_or_death
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expel_the_french"
+			subtract_from_variable = { AD_fo_position = -0.9 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.9 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			177 = {
+				if = {
+					limit = { is_controlled_by = FRA }
+					transfer_state_to = ROOT
+					if = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_volunteers_amount_from = { tag = USA count > 0 } }
+				USA = { recall_volunteers_from = ROOT }
+			}
+			if = {
+				limit = { has_volunteers_amount_from = { tag = FRA count > 0 } }
+				FRA = { recall_volunteers_from = ROOT }
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_close_propaganda_media
+		icon = GFX_z_goal_BFA_close_propaganda_media
+		x = 1
+		y = 1
+		cost = 8.6
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_expel_the_french }
+		relative_position_id = BFA_expel_the_french
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_close_propaganda_media"
+			add_stability = 0.1
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = fundamentalism popularity = -0.2 }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_civilian_intel_to_others_var = -50 tooltip = civilian_intel_to_others_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_develop_cooperation_with_russia
+		icon = GFX_z_goal_BFA_develop_cooperation_with_russia
+		x = -2
+		y = 1
+		cost = 8.6
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_homeland_or_death }
+		relative_position_id = BFA_homeland_or_death
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_develop_cooperation_with_russia"
+			add_to_variable = { AD_fo_position = 0.20 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			RUS = {	
+				add_opinion_modifier = {
+					modifier = BFA_develop_cooperation_with_russia_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = BFA_develop_cooperation_with_russia_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_diversification_of_foreign_policy
+		icon = GFX_z_goal_BFA_diversification_of_foreign_policy
+		x = 1
+		y = 1
+		cost = 8.6
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_develop_cooperation_with_russia }
+		relative_position_id = BFA_develop_cooperation_with_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_diversification_of_foreign_policy"
+			FRA = {
+				if = {
+					limit = { has_resources_rights = { state = 10 } }
+					remove_resource_rights = 10
+					custom_effect_tooltip = empty_line_tooltip
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_using_turkish_drones
+		icon = GFX_z_goal_BFA_using_turkish_drones
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_diversification_of_foreign_policy }
+		relative_position_id = BFA_diversification_of_foreign_policy
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_using_turkish_drones"
+			add_equipment_to_stockpile = { type = uav_airframe_0 amount = 50 producer = TUR }
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_army_bonus_air_superiority_factor_var = 0.2 tooltip = army_bonus_air_superiority_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_invite_sadat
+		icon = GFX_z_goal_BFA_invite_sadat
+		x = -2
+		y = 1
+		cost = 8.6
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			OR = {
+				has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+				has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_consolidate_the_authority_of_the_army focus = BFA_using_turkish_drones }
+		relative_position_id = BFA_using_turkish_drones
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_invite_sadat"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[TUR.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_expand_regional_cooperation
+		icon = GFX_z_goal_BFA_expand_regional_cooperation
+		x = 1
+		y = 1
+		cost = 8.6
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_diversification_of_foreign_policy }
+		relative_position_id = BFA_diversification_of_foreign_policy
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expand_regional_cooperation"
+			MLI = {
+				if = {
+					limit = { exists = yes }
+					add_stability = 0.05
+				}
+				if = {
+					limit = {
+						is_faction_leader = yes
+						has_completed_focus = MLI_g_five_cooperation
+						ROOT = {
+							is_subject = no
+							is_in_faction = no
+						}
+					}
+					add_to_faction = ROOT
+				}
+			}
+			NGR = {
+				if = {
+					limit = { exists = yes }
+					add_stability = 0.05
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			every_neighbor_country = {
+				limit = { NOT = { has_war_with = ROOT tag = FRA tag = TUR tag = USA tag = RUS } }
+				add_opinion_modifier = {
+					modifier = BFA_expand_regional_cooperation_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = BFA_expand_regional_cooperation_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_break_ties_with_ecowas
+		icon = GFX_z_goal_BFA_break_ties_with_ecowas
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			is_in_faction = yes
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_expand_regional_cooperation }
+		relative_position_id = BFA_expand_regional_cooperation
+		mutually_exclusive = { focus = BFA_insist_on_the_decolonization_of_the_regional_bloc }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_break_ties_with_ecowas"
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_army_fuel_consumption_factor_var = -0.15 tooltip = army_fuel_consumption_factor_tooltip }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = empty_line_tooltip
+			every_other_country = {
+				limit = { has_idea = AD_ECOWAS }
+				add_opinion_modifier = {
+					modifier = BFA_break_ties_with_ecowas_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = BFA_break_ties_with_ecowas_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_sovereign_economic_development
+		icon = GFX_z_goal_BFA_sovereign_economic_development
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_break_ties_with_ecowas }
+		relative_position_id = BFA_break_ties_with_ecowas
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_sovereign_economic_development"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = AD_ECOWAS_sanctions_idea
+		}
+	}
+	
+	focus = {
+		id = BFA_request_grain_from_russia
+		icon = GFX_z_goal_BFA_request_grain_from_russia
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_sovereign_economic_development }
+		relative_position_id = BFA_sovereign_economic_development
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_request_grain_from_russia"
+			add_stability = 0.04
+			add_war_support = 0.06
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_monthly_population_var = 0.09 tooltip = monthly_population_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_expand_your_own_agricultural_sector
+		icon = GFX_z_goal_BFA_expand_your_own_agricultural_sector
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_request_grain_from_russia }
+		relative_position_id = BFA_request_grain_from_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_expand_your_own_agricultural_sector"
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_monthly_population_var = 0.15 tooltip = monthly_population_tooltip }
+			add_to_variable = { BFA_consumer_goods_factor_var = -0.15 tooltip = consumer_goods_factor_tooltip }
+			add_to_variable = { BFA_production_speed_buildings_factor_var = 0.1 tooltip = production_speed_buildings_tooltip }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = empty_line_tooltip
+			AD_food_supply_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_beginning_of_nuclear_projects
+		icon = GFX_z_goal_BFA_beginning_of_nuclear_projects
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_sovereign_economic_development }
+		relative_position_id = BFA_sovereign_economic_development
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_beginning_of_nuclear_projects"
+			add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			every_controlled_state = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_stop_exporting_electricity
+		icon = GFX_z_goal_BFA_stop_exporting_electricity
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_beginning_of_nuclear_projects }
+		relative_position_id = BFA_beginning_of_nuclear_projects
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_stop_exporting_electricity"
+			if = {
+				limit = { NOT = { has_idea = closed_economy } }
+				add_ideas = closed_economy
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_industrial_capacity_factory_var = 0.1 tooltip = industrial_capacity_factory_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_raise_our_industry
+		icon = GFX_z_goal_BFA_raise_our_industry
+		x = -3
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_sovereign_economic_development }
+		relative_position_id = BFA_sovereign_economic_development
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_raise_our_industry"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_idea = civilian_economy }
+				swap_ideas = {
+					remove_idea = civilian_economy
+					add_idea = low_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = { has_idea = low_economic_mobilisation }
+				swap_ideas = {
+					remove_idea = low_economic_mobilisation
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = { has_idea = partial_economic_mobilisation }
+				swap_ideas = {
+					remove_idea = partial_economic_mobilisation
+					add_idea = war_economy
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_gold_refineries
+		icon = GFX_z_goal_BFA_gold_refineries
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			controls_state = 10
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_raise_our_industry }
+		relative_position_id = BFA_raise_our_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_gold_refineries"
+			add_resource = { type = gold amount = 20 state = 10 }
+		}
+	}
+	
+	focus = {
+		id = BFA_textile_factories
+		icon = GFX_z_goal_BFA_textile_factories
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_raise_our_industry }
+		relative_position_id = BFA_raise_our_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_textile_factories"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			AD_unemployment_rate_level_down_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_using_chinese_technology
+		icon = GFX_z_goal_BFA_using_chinese_technology
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_break_ties_with_ecowas focus = BFA_insist_on_the_decolonization_of_the_regional_bloc }
+		relative_position_id = BFA_break_ties_with_ecowas
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_using_chinese_technology"
+			add_equipment_to_stockpile = { type = mrap_car_equipment amount = 500 producer = CHI }
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_recon_factor_while_entrenched_var = 0.15 tooltip = recon_factor_while_entrenched_tooltip }
+			add_to_variable = { BFA_terrain_penalty_reduction_var = 0.09 tooltip = modifier_terrain_penalty_reduction_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_develop_social_institutions
+		icon = GFX_z_goal_BFA_develop_social_institutions
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			NOT = { has_idea = AD_stable_state_apparatus }
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_using_chinese_technology }
+		relative_position_id = BFA_using_chinese_technology
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_develop_social_institutions"
+			AD_society_development_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = BFA_insist_on_the_decolonization_of_the_regional_bloc
+		icon = GFX_z_goal_BFA_insist_on_the_decolonization_of_the_regional_bloc
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			OR = {
+				AND = {
+					is_in_faction = no
+					NOT = { MLI = { has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes } } }
+					NOT = { NGR = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } } }
+				}
+				AND = {
+					SEN = { has_country_leader = { character = SEN_Bassirou_Diomaye_Faye ruling_only = yes } }
+					GNB = { has_country_leader = { character = GNB_Umaro_Sissoco_Embalo ruling_only = yes } }
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_expand_regional_cooperation }
+		relative_position_id = BFA_expand_regional_cooperation
+		mutually_exclusive = { focus = BFA_break_ties_with_ecowas }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_insist_on_the_decolonization_of_the_regional_bloc"
+			remove_ideas = AD_ECOWAS_sanctions_idea
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = AD_ECOWAS
+		}
+	}
+	
+	focus = {
+		id = BFA_creation_of_the_commission_for_combating_terrorism
+		icon = GFX_z_goal_BFA_creation_of_the_commission_for_combating_terrorism
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_insist_on_the_decolonization_of_the_regional_bloc }
+		relative_position_id = BFA_insist_on_the_decolonization_of_the_regional_bloc
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_creation_of_the_commission_for_combating_terrorism"
+			add_ideas = AD_creation_of_the_commission_for_combating_terrorism_idea
+			custom_effect_tooltip = empty_line_tooltip
+			every_other_country = {
+				limit = { has_idea = AD_ECOWAS }
+				add_ideas = AD_creation_of_the_commission_for_combating_terrorism_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_maneuvers_with_senegal
+		icon = GFX_z_goal_BFA_maneuvers_with_senegal
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			SEN = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_creation_of_the_commission_for_combating_terrorism }
+		relative_position_id = BFA_creation_of_the_commission_for_combating_terrorism
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_maneuvers_with_senegal"
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = BFA_maneuvers_with_senegal
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			SEN = {
+				army_experience = 50
+				add_doctrine_cost_reduction = {
+					name = BFA_maneuvers_with_senegal
+					cost_reduction = 0.75
+					uses = 2
+					category = land_doctrine
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_declare_mobilization
+		icon = GFX_z_goal_BFA_declare_mobilization
+		x = 2
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_homeland_or_death }
+		relative_position_id = BFA_homeland_or_death
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_declare_mobilization"
+			custom_effect_tooltip = BFA_homeland_or_death_modifier_tt_change
+			add_to_variable = { BFA_land_doctrine_cost_factor_var = -0.2 tooltip = modifier_land_doctrine_cost_factor_tooltip }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { NOT = { has_idea = AD_total_military_costs } }
+				add_ideas = AD_total_military_costs
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_training_of_new_officers
+		icon = GFX_z_goal_BFA_training_of_new_officers
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = { NOT = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } } }
+		prerequisite = { focus = BFA_declare_mobilization }
+		relative_position_id = BFA_declare_mobilization
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_training_of_new_officers"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.04 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.04 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.04 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.04 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.06 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.02 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.2 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_creation_of_rapid_reaction_units
+		icon = GFX_z_goal_BFA_creation_of_rapid_reaction_units
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			OR = {
+				has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier }
+				AND = {
+					has_idea = BFA_protracted_war_idea
+					controls_state = 121
+					controls_state = 122
+					controls_state = 123
+				}
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_declare_mobilization }
+		relative_position_id = BFA_declare_mobilization
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_creation_of_rapid_reaction_units"
+			if = {
+				limit = { has_idea = BFA_protracted_war_idea }
+				remove_ideas = BFA_protracted_war_idea
+				custom_effect_tooltip = empty_line_tooltip
+				121 = {
+					force_disable_resistance = ROOT
+					cancel_resistance = yes
+				}
+				122 = {
+					force_disable_resistance = ROOT
+					cancel_resistance = yes
+				}
+				123 = {
+					force_disable_resistance = ROOT
+					cancel_resistance = yes
+				}
+			}
+			else = {
+				if = {
+					limit = { check_variable = { BFA_army_org_factor_var < -0.02 } }
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+					add_to_variable = { BFA_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+					add_to_variable = { BFA_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+					add_to_variable = { BFA_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+					add_to_variable = { BFA_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+					add_to_variable = { BFA_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+					add_to_variable = { BFA_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+					hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BFA_new_blood_in_the_army
+		icon = GFX_z_goal_BFA_new_blood_in_the_army
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+			has_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier }
+		}
+		bypass = {  }
+		prerequisite = { focus = BFA_training_of_new_officers }
+		relative_position_id = BFA_training_of_new_officers
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_new_blood_in_the_army"
+			if = {
+				limit = { check_variable = { BFA_army_org_factor_var < -0.02 } }
+				custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_change
+				add_to_variable = { BFA_training_time_army_factor_var = -0.02 tooltip = training_time_army_factor_tooltip }
+				add_to_variable = { BFA_army_org_factor_var = 0.02 tooltip = army_org_factor_tooltip }
+				add_to_variable = { BFA_army_leader_cost_factor_var = -0.02 tooltip = army_leader_cost_factor_tooltip }
+				add_to_variable = { BFA_army_org_regain_var = 0.03 tooltip = army_org_regain_tooltip }		
+				add_to_variable = { BFA_dig_in_speed_factor_var = 0.01 tooltip = modifier_dig_in_speed_factor_tooltip }		
+				add_to_variable = { BFA_pocket_penalty_var = -0.1 tooltip = pocket_penalty_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+			else = {
+				custom_effect_tooltip = BFA_collapse_of_the_armed_forces_modifier_tt_remove
+				hidden_effect = { remove_dynamic_modifier = { modifier = BFA_collapse_of_the_armed_forces_modifier } }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+		}
+	}
+	
+	focus = {
+		id = BFA_invitation_of_the_african_corps
+		icon = GFX_z_goal_BFA_invitation_of_the_african_corps
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_training_of_new_officers }
+		relative_position_id = BFA_training_of_new_officers
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_invitation_of_the_african_corps"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[RUS.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = EQG_african_corps_idea
+		}
+	}
+	
+	focus = {
+		id = BFA_reincarnation_of_sankara
+		icon = GFX_z_goal_BFA_reincarnation_of_sankara
+		x = 4
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = BFA_homeland_or_death }
+		relative_position_id = BFA_homeland_or_death
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus BFA_reincarnation_of_sankara"
+			add_country_leader_trait = BFA_reincarnation_of_sankara_trait
+		}
+	}
+}

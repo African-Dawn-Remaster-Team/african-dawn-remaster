@@ -1,0 +1,2287 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
+focus_tree = {
+	
+	id = ad_niger_focus_tree
+	country = {
+		factor = 0	
+		modifier = {
+			add = 10
+			tag = NGR
+		}
+	}
+	default = no	
+	continuous_focus_position = { x = 0 y = 1500 }
+	
+	shared_focus = AD_SSA_creation_of_the_sahel_states_alliance
+	
+	focus = {
+		id = NGR_mahamadou_issoufou_last_term
+		icon = GFX_z_goal_NGR_mahamadou_issoufou_last_term
+		x = 0
+		y = 0
+		cost = 2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		cancelable = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_mahamadou_issoufou_last_term"
+			add_to_variable = { AD_current_money_var = 10 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.04
+		}
+	}
+	
+	focus = {
+		id = NGR_american_foothold_in_the_desert
+		icon = GFX_z_goal_NGR_american_foothold_in_the_desert
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_mahamadou_issoufou_last_term }
+		relative_position_id = NGR_mahamadou_issoufou_last_term
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_american_foothold_in_the_desert"
+			random_owned_controlled_state = {
+				prioritize = { 116 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_intel = { target = ISS civilian_intel = 3 army_intel = 20 }
+			custom_effect_tooltip = empty_line_tooltip			
+			USA = {
+				add_opinion_modifier = {
+					modifier = NGR_american_foothold_in_the_desert_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = NGR_american_foothold_in_the_desert_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_wiretapping_of_telephone_conversations
+		icon = GFX_z_goal_NGR_wiretapping_of_telephone_conversations
+		x = -3
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_mahamadou_issoufou_last_term }
+		relative_position_id = NGR_mahamadou_issoufou_last_term
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_wiretapping_of_telephone_conversations"
+			add_stability = -0.02
+			add_war_support = -0.07
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = fundamentalism popularity = -0.06 }
+			custom_effect_tooltip = empty_line_tooltip
+			add_intel = { target = JNA civilian_intel = 15 army_intel = 25 }
+		}
+	}
+	
+	focus = {
+		id = NGR_intelligence_coordination
+		icon = GFX_z_goal_NGR_intelligence_coordination
+		x = 1
+		y = 1
+		cost = 10.75
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes }
+			has_intelligence_agency = no
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_wiretapping_of_telephone_conversations }
+		prerequisite = { focus = NGR_american_foothold_in_the_desert }
+		relative_position_id = NGR_wiretapping_of_telephone_conversations
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_intelligence_coordination"
+			create_intelligence_agency = { name = "NIA" }
+		}
+	}
+	
+	focus = {
+		id = NGR_turning_a_blind_eye_to_agadez_problems
+		icon = GFX_z_goal_NGR_turning_a_blind_eye_to_agadez_problems
+		x = 1
+		y = 1
+		cost = 10.75
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_mahamadou_issoufou_last_term }
+		relative_position_id = NGR_mahamadou_issoufou_last_term
+		mutually_exclusive = { focus = NGR_combating_migrant_flows }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_turning_a_blind_eye_to_agadez_problems"
+			add_to_variable = { AD_current_money_var = 45 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_migration_flows_modifier } }
+				custom_effect_tooltip = NGR_migration_flows_modifier_change_tt
+				add_to_variable = { NGR_money_from_taxes_modifier_var = 0.07 tooltip = money_from_taxes_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_grow_tt
+				add_to_variable = { NGR_production_factory_max_efficiency_factor_var = -0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+				add_to_variable = { NGR_industrial_capacity_factory_var = -0.04 tooltip = industrial_capacity_factory_tooltip }
+				add_to_variable = { NGR_fundamentalism_drift_var = 0.01 tooltip = fundamentalism_drift_tooltip }
+				add_to_variable = { NGR_production_speed_industrial_complex_factor_var = -0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_investments_in_niamey
+		icon = GFX_z_goal_NGR_investments_in_niamey
+		x = 1
+		y = 1
+		cost = 10.75
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_turning_a_blind_eye_to_agadez_problems }
+		relative_position_id = NGR_turning_a_blind_eye_to_agadez_problems
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_investments_in_niamey"
+			random_owned_controlled_state = {
+				prioritize = { 20 }
+				limit = { hospital < 4 }
+				add_building_construction = {
+					type = hospital
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				prioritize = { 20 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_grow_tt
+				add_to_variable = { NGR_production_factory_max_efficiency_factor_var = -0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+				add_to_variable = { NGR_industrial_capacity_factory_var = -0.04 tooltip = industrial_capacity_factory_tooltip }
+				add_to_variable = { NGR_fundamentalism_drift_var = 0.01 tooltip = fundamentalism_drift_tooltip }
+				add_to_variable = { NGR_production_speed_industrial_complex_factor_var = -0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_combating_migrant_flows
+		icon = GFX_z_goal_NGR_combating_migrant_flows
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_mahamadou_issoufou_last_term }
+		relative_position_id = NGR_mahamadou_issoufou_last_term
+		mutually_exclusive = { focus = NGR_turning_a_blind_eye_to_agadez_problems }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_combating_migrant_flows"
+			add_to_variable = { AD_current_money_var = -20 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_migration_flows_modifier } }
+				custom_effect_tooltip = NGR_migration_flows_modifier_change_tt
+				add_to_variable = { NGR_monthly_population_var = 0.08 tooltip = monthly_population_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_establish_industrial_enterprises_in_agadez
+		icon = GFX_z_goal_NGR_establish_industrial_enterprises_in_agadez
+		x = 0
+		y = 2
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mahamadou_Issoufou ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_combating_migrant_flows }
+		relative_position_id = NGR_combating_migrant_flows
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_establish_industrial_enterprises_in_agadez"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.04 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.04 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.01 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_transfer_of_power_to_mohammed_bazoum
+		icon = GFX_z_goal_NGR_transfer_of_power_to_mohammed_bazoum
+		x = 0
+		y = 3
+		cost = 0
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_mahamadou_issoufou_last_term }
+		relative_position_id = NGR_mahamadou_issoufou_last_term
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_transfer_of_power_to_mohammed_bazoum"
+			add_stability = 0.02
+			custom_effect_tooltip = empty_line_tooltip
+			retire_country_leader = yes
+			custom_effect_tooltip = empty_line_tooltip
+			promote_character = NGR_Mohamed_Bazoum
+		}
+	}
+	
+	focus = {
+		id = NGR_soft_authoritarianism
+		icon = GFX_z_goal_NGR_soft_authoritarianism
+		x = 0
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_transfer_of_power_to_mohammed_bazoum }
+		relative_position_id = NGR_transfer_of_power_to_mohammed_bazoum
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_soft_authoritarianism"
+			add_country_leader_trait = NGR_gendarme_of_the_sahel
+		}
+	}
+	
+	focus = {
+		id = NGR_crush_the_calamus_rebels
+		icon = GFX_z_goal_NGR_crush_the_calamus_rebels
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			divisions_in_state = { size > 9 state = 116 }
+			controls_state = 116
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_soft_authoritarianism }
+		relative_position_id = NGR_soft_authoritarianism
+		mutually_exclusive = { focus = NGR_influence_anti_government_groups }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_crush_the_calamus_rebels"
+			add_manpower = -180
+			custom_effect_tooltip = empty_line_tooltip
+			116 = {
+				damage_building = { type = infrastructure damage = 0.44 }
+				damage_building = { type = air_base damage = 0.44 }
+				force_disable_resistance = ROOT
+				cancel_resistance = yes
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = NGR_movement_for_the_democratic_revolution_idea
+		}
+	}
+	
+	focus = {
+		id = NGR_influence_anti_government_groups
+		icon = GFX_z_goal_NGR_influence_anti_government_groups
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_soft_authoritarianism }
+		relative_position_id = NGR_soft_authoritarianism
+		mutually_exclusive = { focus = NGR_crush_the_calamus_rebels }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_influence_anti_government_groups"
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = NGR_movement_for_the_democratic_revolution_idea
+				add_idea = NGR_movement_for_the_democratic_revolution_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_abdurakhman_ciani_removal
+		icon = GFX_z_goal_NGR_abdurakhman_ciani_removal
+		x = 0
+		y = 2
+		cost = 3
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				date > 2023.07.01
+			}
+		}
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_soft_authoritarianism }
+		relative_position_id = NGR_soft_authoritarianism
+		mutually_exclusive = { focus = NGR_crush_the_calamus_rebels }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_abdurakhman_ciani_removal"
+			NGR_Abdourahamane_Tchiani = { remove_unit_leader_role = yes }
+			custom_effect_tooltip = NGR_abdurakhman_ciani_removal_tt
+			custom_effect_tooltip = empty_line_tooltip
+			add_stability = 0.04
+			add_war_support = 0.07
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = centrism popularity = 0.11 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.04 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.04 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.01 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+			hidden_effect = { country_event = { id = AD_NGR.5 days = 15 } }
+		}
+	}
+	
+	focus = {
+		id = NGR_confirm_the_american_presence
+		icon = GFX_z_goal_NGR_confirm_the_american_presence
+		x = -4
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_transfer_of_power_to_mohammed_bazoum }
+		relative_position_id = NGR_transfer_of_power_to_mohammed_bazoum
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_confirm_the_american_presence"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[USA.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			every_country_division = {
+				random_select_amount = 6
+				add_divisional_commander_xp = 150
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+				if = {
+					limit = { check_variable = { NGR_stability_factor_var < -0.05 } }
+					custom_effect_tooltip = NGR_french_military_dominance_modifier_change_tt
+					add_to_variable = { NGR_stability_factor_var = 0.05 tooltip = stability_factor_tooltip }
+					add_to_variable = { NGR_army_attack_factor_var = 0.05 tooltip = army_attack_factor_tooltip }
+					add_to_variable = { NGR_army_defence_factor_var = 0.05 tooltip = army_defence_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_french_military_dominance_modifier_remove_tt
+					hidden_effect = { remove_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_develop_relations_with_france
+		icon = GFX_z_goal_NGR_develop_relations_with_france
+		x = -2
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_transfer_of_power_to_mohammed_bazoum }
+		relative_position_id = NGR_transfer_of_power_to_mohammed_bazoum
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_develop_relations_with_france"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[FRA.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			
+			subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			every_unit_leader = {
+				random_select_amount = 2
+				gain_xp = 210
+			}
+			random_unit_leader = { add_random_trait = { brilliant_strategist inflexible_strategist } }
+		}
+	}
+	
+	focus = {
+		id = NGR_dead_hand_g_five
+		icon = GFX_z_goal_NGR_dead_hand_g_five
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_develop_relations_with_france }
+		relative_position_id = NGR_develop_relations_with_france
+		mutually_exclusive = { focus = NGR_develop_a_group_of_five }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_dead_hand_g_five"
+			remove_ideas = AD_member_of_g_five_sahel
+			custom_effect_tooltip = empty_line_tooltip
+			custom_effect_tooltip = NGR_dead_hand_g_five_tt
+			custom_effect_tooltip = empty_line_tooltip
+			every_other_country = {
+				limit = { has_idea = AD_member_of_g_five_sahel }
+				country_event = { id = AD_NGR.6 hours = 12 }
+			}
+			add_to_variable = { NGR_num_of_allies = 1 }
+			NGR_sahel_military_initiative_check_effect = yes
+			hidden_effect = { add_dynamic_modifier = { modifier = AD_sahel_military_initiative_modifier } }
+		}
+	}
+	
+	focus = {
+		id = NGR_new_gendarme_of_the_sahel
+		icon = GFX_z_goal_NGR_new_gendarme_of_the_sahel
+		x = 0
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_dead_hand_g_five }
+		relative_position_id = NGR_dead_hand_g_five
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_new_gendarme_of_the_sahel"
+			custom_effect_tooltip = NGR_new_gendarme_of_the_sahel_tt
+			NGR_sahel_military_initiative_check_effect = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_toughen_up_the_position_on_the_malian_issue
+		icon = GFX_z_goal_NGR_toughen_up_the_position_on_the_malian_issue
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			MLI = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+				has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_new_gendarme_of_the_sahel }
+		relative_position_id = NGR_new_gendarme_of_the_sahel
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_toughen_up_the_position_on_the_malian_issue"
+			MLI = { country_event = { id = AD_NGR.7 hours = 12 } }
+		}
+	}
+	
+	focus = {
+		id = NGR_demand_loyalty
+		icon = GFX_z_goal_NGR_demand_loyalty
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = NGR_demand_loyalty_unlock_flag } }
+				custom_trigger_tooltip = {
+					tooltip = AD_focus_unavailable_tt
+					has_country_flag = NGR_demand_loyalty_unlock_flag
+				}
+			}
+			can_declare_war_on = MLI
+			is_subject = no
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_toughen_up_the_position_on_the_malian_issue }
+		relative_position_id = NGR_toughen_up_the_position_on_the_malian_issue
+		will_lead_to_war_with = MLI
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_demand_loyalty"
+			create_wargoal = { type = topple_government target = MLI expire = 0 }
+			add_ai_strategy = { type = antagonize id = MLI value = 200 }
+			add_ai_strategy = { type = declare_war id = MLI value = 200 }
+		}
+	}
+	
+	focus = {
+		id = NGR_develop_a_group_of_five
+		icon = GFX_z_goal_NGR_develop_a_group_of_five
+		x = -3
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_develop_relations_with_france }
+		relative_position_id = NGR_develop_relations_with_france
+		mutually_exclusive = { focus = NGR_dead_hand_g_five }
+		select_effect = {
+			every_other_country = {
+				limit = { has_idea = AD_member_of_g_five_sahel }
+				activate_mission = AD_NGR_develop_a_group_of_five_mission
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_develop_a_group_of_five"
+			effect_tooltip = {
+				every_country = {
+					limit = { has_idea = AD_member_of_g_five_sahel }
+					every_country_division = {
+						random_select_amount = 3
+						add_divisional_commander_xp = 200
+					}
+					random_unit_leader = { add_unit_leader_trait = { master_of_desert_warfare } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_conducting_counter_terrorism_measures_in_the_rear
+		icon = GFX_z_goal_NGR_conducting_counter_terrorism_measures_in_the_rear
+		x = 0
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_develop_a_group_of_five }
+		relative_position_id = NGR_develop_a_group_of_five
+		select_effect = {
+			every_other_country = {
+				limit = { has_idea = AD_member_of_g_five_sahel }
+				activate_mission = AD_NGR_conducting_counter_terrorism_measures_in_the_rear_mission
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_conducting_counter_terrorism_measures_in_the_rear"
+			effect_tooltip = {
+				every_country = {
+					limit = { has_idea = AD_member_of_g_five_sahel }
+					add_ideas = NGR_counter_terrorism_measures_in_the_rear_idea
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_cooperation_with_benin
+		icon = GFX_z_goal_NGR_cooperation_with_benin
+		x = 0
+		y = 2
+		cost = 3
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			BNN = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_conducting_counter_terrorism_measures_in_the_rear }
+		relative_position_id = NGR_conducting_counter_terrorism_measures_in_the_rear
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_cooperation_with_benin"
+			army_experience = 75
+			add_command_power = 50
+			custom_effect_tooltip = empty_line_tooltip
+			add_doctrine_cost_reduction = {
+				name = NGR_cooperation_with_benin
+				cost_reduction = 0.3
+				uses = 3
+				category = land_doctrine
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			BNN = {
+				army_experience = 75
+				add_command_power = 50
+				custom_effect_tooltip = empty_line_tooltip
+				add_doctrine_cost_reduction = {
+					name = NGR_cooperation_with_benin
+					cost_reduction = 0.3
+					uses = 3
+					category = land_doctrine
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_training_of_elite_units
+		icon = GFX_z_goal_NGR_training_of_elite_units
+		x = 1
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_develop_a_group_of_five focus = NGR_dead_hand_g_five }
+		relative_position_id = NGR_develop_a_group_of_five
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_training_of_elite_units"
+			add_tech_bonus = {
+				name = NGR_training_of_elite_units
+				bonus = 1
+				uses = 1
+				category = night_vision
+			}
+			add_tech_bonus = {
+				name = NGR_training_of_elite_units
+				bonus = 0.6
+				uses = 2
+				category = cat_special_forces_generic
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_increased_control_in_the_lake_chad_area
+		icon = GFX_z_goal_NGR_increased_control_in_the_lake_chad_area
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			controls_state = 117
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_training_of_elite_units }
+		relative_position_id = NGR_training_of_elite_units
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_increased_control_in_the_lake_chad_area"
+			117 = { add_dynamic_modifier = { modifier = NGR_increased_control_in_the_lake_chad_area_modifier } }
+		}
+	}
+	
+	focus = {
+		id = NGR_solving_army_problems
+		icon = GFX_z_goal_NGR_solving_army_problems
+		x = -5
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_develop_relations_with_france }
+		relative_position_id = NGR_develop_relations_with_france
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_solving_army_problems"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+				if = {
+					limit = { check_variable = { NGR_stability_factor_var < -0.05 } }
+					custom_effect_tooltip = NGR_french_military_dominance_modifier_change_tt
+					add_to_variable = { NGR_stability_factor_var = 0.05 tooltip = stability_factor_tooltip }
+					add_to_variable = { NGR_army_attack_factor_var = 0.05 tooltip = army_attack_factor_tooltip }
+					add_to_variable = { NGR_army_defence_factor_var = 0.05 tooltip = army_defence_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_french_military_dominance_modifier_remove_tt
+					hidden_effect = { remove_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_increase_the_frequency_of_army_purchases
+		icon = GFX_z_goal_NGR_increase_the_frequency_of_army_purchases
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_solving_army_problems }
+		relative_position_id = NGR_solving_army_problems
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_increase_the_frequency_of_army_purchases"
+			corruption_low = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_modernization_of_army_equipment
+		icon = GFX_z_goal_NGR_modernization_of_army_equipment
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_increase_the_frequency_of_army_purchases }
+		relative_position_id = NGR_increase_the_frequency_of_army_purchases
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_modernization_of_army_equipment"
+			add_tech_bonus = {
+				name = NGR_modernization_of_army_equipment
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_standardization_of_military_procedures
+		icon = GFX_z_goal_NGR_standardization_of_military_procedures
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_solving_army_problems }
+		relative_position_id = NGR_solving_army_problems
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_standardization_of_military_procedures"
+			add_ideas = NGR_standardization_of_military_procedures_idea
+		}
+	}
+	
+	focus = {
+		id = NGR_develop_the_fight_against_cross_border_bandits
+		icon = GFX_z_goal_NGR_develop_the_fight_against_cross_border_bandits
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_standardization_of_military_procedures }
+		relative_position_id = NGR_standardization_of_military_procedures
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_develop_the_fight_against_cross_border_bandits"
+			swap_ideas = {
+				remove_idea = NGR_standardization_of_military_procedures_idea
+				add_idea = NGR_standardization_of_military_procedures_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_attracting_eu_investments
+		icon = GFX_z_goal_NGR_attracting_eu_investments
+		x = 2
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_transfer_of_power_to_mohammed_bazoum }
+		relative_position_id = NGR_transfer_of_power_to_mohammed_bazoum
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_attracting_eu_investments"
+			add_to_variable = { AD_current_money_var = 40 tooltip = AD_current_money_var_tt }
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = NGR_dependence_on_international_donors_idea
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.04 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.04 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.01 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_struggle_against_colonial_remnants_in_agadez
+		icon = GFX_z_goal_NGR_struggle_against_colonial_remnants_in_agadez
+		x = 4
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_transfer_of_power_to_mohammed_bazoum }
+		prerequisite = { focus = NGR_establish_industrial_enterprises_in_agadez }
+		relative_position_id = NGR_transfer_of_power_to_mohammed_bazoum
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_struggle_against_colonial_remnants_in_agadez"
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.08 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.04 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.08 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.02 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.08 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_support_state_building_in_the_north
+		icon = GFX_z_goal_NGR_support_state_building_in_the_north
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_attracting_eu_investments focus = NGR_struggle_against_colonial_remnants_in_agadez }
+		relative_position_id = NGR_struggle_against_colonial_remnants_in_agadez
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_support_state_building_in_the_north"
+			random_owned_controlled_state = {
+				prioritize = { 116 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.04 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.04 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.01 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_implementation_of_social_reforms
+		icon = GFX_z_goal_NGR_implementation_of_social_reforms
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_attracting_eu_investments }
+		relative_position_id = NGR_attracting_eu_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_implementation_of_social_reforms"
+			random_owned_controlled_state = {
+				prioritize = { 117 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 118 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 119 }
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			AD_poverty_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_uranium_mining_in_the_north_of_the_country
+		icon = GFX_z_goal_NGR_uranium_mining_in_the_north_of_the_country
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			controls_state = 116
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_attracting_eu_investments }
+		relative_position_id = NGR_attracting_eu_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_uranium_mining_in_the_north_of_the_country"
+			add_resource = { type = uranium amount = 12 state = 116 }
+		}
+	}
+	
+	focus = {
+		id = NGR_support_migration_to_gold_mines
+		icon = GFX_z_goal_NGR_support_migration_to_gold_mines
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			controls_state = 116
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_uranium_mining_in_the_north_of_the_country }
+		relative_position_id = NGR_uranium_mining_in_the_north_of_the_country
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_support_migration_to_gold_mines"
+			add_resource = { type = gold amount = 8 state = 116 }
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = NGR_support_migration_to_gold_mines_idea
+		}
+	}
+	
+	focus = {
+		id = NGR_discovery_of_oil_fields_in_the_east
+		icon = GFX_z_goal_NGR_discovery_of_oil_fields_in_the_east
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			controls_state = 117
+			controls_state = 118
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_uranium_mining_in_the_north_of_the_country }
+		relative_position_id = NGR_uranium_mining_in_the_north_of_the_country
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_discovery_of_oil_fields_in_the_east"
+			add_resource = { type = oil amount = 8 state = 117 }
+			add_resource = { type = oil amount = 3 state = 118 }
+		}
+	}
+	
+	focus = {
+		id = NGR_opening_of_new_french_language_schools
+		icon = GFX_z_goal_NGR_opening_of_new_french_language_schools
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_implementation_of_social_reforms }
+		relative_position_id = NGR_implementation_of_social_reforms
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_opening_of_new_french_language_schools"
+			add_research_slot = 1
+			custom_effect_tooltip = empty_line_tooltip
+			AD_social_security_grow_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+				custom_effect_tooltip = NGR_french_military_dominance_modifier_change_tt
+				add_to_variable = { NGR_stability_factor_var = -0.05 tooltip = stability_factor_tooltip }
+				add_to_variable = { NGR_army_attack_factor_var = -0.05 tooltip = army_attack_factor_tooltip }
+				add_to_variable = { NGR_army_defence_factor_var = -0.05 tooltip = army_defence_factor_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_women_inclusivity
+		icon = GFX_z_goal_NGR_women_inclusivity
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_opening_of_new_french_language_schools }
+		relative_position_id = NGR_opening_of_new_french_language_schools
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_women_inclusivity"
+			subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_stability = -0.05
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_grow_tt
+				add_to_variable = { NGR_production_factory_max_efficiency_factor_var = -0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+				add_to_variable = { NGR_industrial_capacity_factory_var = -0.04 tooltip = industrial_capacity_factory_tooltip }
+				add_to_variable = { NGR_fundamentalism_drift_var = 0.01 tooltip = fundamentalism_drift_tooltip }
+				add_to_variable = { NGR_production_speed_industrial_complex_factor_var = -0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_involvement_of_french_ngos
+		icon = GFX_z_goal_NGR_involvement_of_french_ngos
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_women_inclusivity }
+		relative_position_id = NGR_women_inclusivity
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_involvement_of_french_ngos"
+			subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = -0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			random_owned_controlled_state = {
+				prioritize = { 119 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 120 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 118 }
+				limit = { hospital < 5 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_reduce_the_role_of_traditional_communities
+		icon = GFX_z_goal_NGR_reduce_the_role_of_traditional_communities
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_support_state_building_in_the_north }
+		relative_position_id = NGR_support_state_building_in_the_north
+		mutually_exclusive = { focus = NGR_use_traditional_leaders_for_their_own_purposes }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_reduce_the_role_of_traditional_communities"
+			add_stability = -0.1
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.08 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.04 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.08 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.02 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.08 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_split_the_tuareg_communities
+		icon = GFX_z_goal_NGR_split_the_tuareg_communities
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_reduce_the_role_of_traditional_communities }
+		relative_position_id = NGR_reduce_the_role_of_traditional_communities
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_split_the_tuareg_communities"
+			add_timed_idea = { idea = NGR_tuareg_protests_idea days = 720 }
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.08 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.04 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.08 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.02 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.08 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_use_traditional_leaders_for_their_own_purposes
+		icon = GFX_z_goal_NGR_use_traditional_leaders_for_their_own_purposes
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_support_state_building_in_the_north }
+		relative_position_id = NGR_support_state_building_in_the_north
+		mutually_exclusive = { focus = NGR_reduce_the_role_of_traditional_communities }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_use_traditional_leaders_for_their_own_purposes"
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.04 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.02 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.04 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.01 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.04 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_establishment_of_local_autonomies
+		icon = GFX_z_goal_NGR_establishment_of_local_autonomies
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_use_traditional_leaders_for_their_own_purposes }
+		relative_position_id = NGR_use_traditional_leaders_for_their_own_purposes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_establishment_of_local_autonomies"
+			add_war_support = 0.15
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_disparity_between_the_center_and_the_outskirts_modifier } }
+				if = {
+					limit = { check_variable = { NGR_production_factory_max_efficiency_factor_var < -0.08 } }
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_fall_tt
+					add_to_variable = { NGR_production_factory_max_efficiency_factor_var = 0.04 tooltip = production_factory_max_efficiency_factor_tooltip }
+					add_to_variable = { NGR_industrial_capacity_factory_var = 0.08 tooltip = industrial_capacity_factory_tooltip }
+					add_to_variable = { NGR_fundamentalism_drift_var = -0.02 tooltip = fundamentalism_drift_tooltip }
+					add_to_variable = { NGR_production_speed_industrial_complex_factor_var = 0.08 tooltip = modifier_production_speed_industrial_complex_factor_tooltip }
+					force_update_dynamic_modifier = yes
+				}
+				else = {
+					custom_effect_tooltip = NGR_disparity_between_the_center_and_the_outskirts_modifier_remove_tt
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_establishment_of_chiani_power
+		icon = GFX_z_goal_NGR_establishment_of_chiani_power
+		x = 6
+		y = 0
+		cost = 0
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AD_focus_unavailable_2_tt
+				always = no
+			}
+		}
+		bypass = {  }
+		relative_position_id = NGR_mahamadou_issoufou_last_term
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_establishment_of_chiani_power"
+			subtract_from_variable = { AD_fo_position = -0.2 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			add_stability = 0.03
+			add_war_support = 0.07
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = centrism popularity = 0.2}
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = { promote_character = NGR_Abdourahamane_Tchiani }
+			custom_effect_tooltip = empty_line_tooltip
+			remove_ideas = AD_ECOWAS
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = AD_ECOWAS_sanctions_idea
+			hidden_effect = {
+				news_event = { id = AD_NGR_news.0 days = 2 }
+				country_event = { id = AD_NGR.10 days = 110 }
+			}
+		}
+	}
+
+	focus = {
+		id = NGR_french_on_your_way_out
+		icon = GFX_z_goal_NGR_french_on_your_way_out
+		x = 0
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_establishment_of_chiani_power }
+		relative_position_id = NGR_establishment_of_chiani_power
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_french_on_your_way_out"
+			subtract_from_variable = { AD_fo_position = -0.2 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.2 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			set_victory_points = { province = 5150 value = 0 }
+			set_victory_points = { province = 5142 value = 0 }
+			172 = {
+				if = {
+					limit = { is_controlled_by = FRA }
+					transfer_state_to = ROOT
+				}
+			}
+			175 = {
+				if = {
+					limit = { is_controlled_by = FRA }
+					transfer_state_to = ROOT
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { has_idea = NGR_dependence_on_international_donors_idea }
+				remove_ideas = NGR_dependence_on_international_donors_idea
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+				custom_effect_tooltip = NGR_french_military_dominance_modifier_remove_tt
+				hidden_effect = { remove_dynamic_modifier = { modifier = NGR_french_military_dominance_modifier } }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			FRA = {
+				add_opinion_modifier = {
+					modifier = NGR_french_on_your_way_out_op
+					target = ROOT
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_timed_idea = { idea = NGR_confusion_in_the_army_idea days = 45 }
+		}
+	}
+	
+	focus = {
+		id = NGR_base_closure_two_hundred_one
+		icon = GFX_z_goal_NGR_base_closure_two_hundred_one
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_french_on_your_way_out }
+		relative_position_id = NGR_french_on_your_way_out
+		mutually_exclusive = { focus = NGR_continue_cooperation_with_the_americans }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_base_closure_two_hundred_one"
+			add_war_support = 0.02
+			custom_effect_tooltip = empty_line_tooltip
+			add_popularity = { ideology = centrism popularity = 0.02 }
+			custom_effect_tooltip = empty_line_tooltip
+			set_victory_points = { province = 5147 value = 0 }
+			176 = {
+				if = {
+					limit = { is_controlled_by = USA }
+					transfer_state_to = ROOT
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			USA = {
+				add_opinion_modifier = {
+					modifier = NGR_base_closure_two_hundred_one_op
+					target = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_continue_cooperation_with_the_americans
+		icon = GFX_z_goal_NGR_continue_cooperation_with_the_americans
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_french_on_your_way_out }
+		relative_position_id = NGR_french_on_your_way_out
+		mutually_exclusive = { focus = NGR_base_closure_two_hundred_one }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_continue_cooperation_with_the_americans"
+			add_stability = -0.15
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				prioritize = { 116 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_placement_of_the_african_corps
+		icon = GFX_z_goal_NGR_placement_of_the_african_corps
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			controls_state = 172
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_french_on_your_way_out }
+		relative_position_id = NGR_french_on_your_way_out
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_placement_of_the_african_corps"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[RUS.GetNameWithFlag]"
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			172 = { transfer_state_to = RUS }
+			custom_effect_tooltip = empty_line_tooltip
+			add_ideas = EQG_african_corps_idea
+		}
+	}
+	
+	focus = {
+		id = NGR_training_of_uav_operators
+		icon = GFX_z_goal_NGR_training_of_uav_operators
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_placement_of_the_african_corps }
+		relative_position_id = NGR_placement_of_the_african_corps
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_training_of_uav_operators"
+			army_experience = 50
+			custom_effect_tooltip = empty_line_tooltip
+			swap_ideas = {
+				remove_idea = EQG_african_corps_idea
+				add_idea = EQG_african_corps_idea_1
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_reconciliation_with_the_malian_authorities
+		icon = GFX_z_goal_NGR_reconciliation_with_the_malian_authorities
+		x = 2
+		y = 1
+		cost = 2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {
+			MLI = {
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+		}
+		prerequisite = { focus = NGR_establishment_of_chiani_power }
+		relative_position_id = NGR_establishment_of_chiani_power
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_reconciliation_with_the_malian_authorities"
+			add_stability = 0.05
+			custom_effect_tooltip = empty_line_tooltip
+			MLI = {
+				add_opinion_modifier = {
+					modifier = NGR_reconciliation_with_the_malian_authorities_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = NGR_reconciliation_with_the_malian_authorities_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_partner_diversification
+		icon = GFX_z_goal_NGR_partner_diversification
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_reconciliation_with_the_malian_authorities }
+		relative_position_id = NGR_reconciliation_with_the_malian_authorities
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_partner_diversification"
+			subtract_from_variable = { AD_fo_position = -0.1 tooltip = AD_france_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			random_owned_controlled_state = {
+				prioritize = { 20 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_develop_regional_integration
+		icon = GFX_z_goal_NGR_develop_regional_integration
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_reconciliation_with_the_malian_authorities }
+		relative_position_id = NGR_reconciliation_with_the_malian_authorities
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_develop_regional_integration"
+			every_neighbor_country = {
+				limit = { NOT = { has_war_with = ROOT } }
+				subtract_from_variable = { AD_fo_position = -0.1 tooltip = AD_france_superiority_var_tt }
+				add_to_temp_variable = { position_change = 0.1 } # for loc
+				AD_check_political_situation_effect = yes
+				custom_effect_tooltip = empty_line_tooltip
+				
+				add_opinion_modifier = {
+					modifier = NGR_develop_regional_integration_op
+					target = ROOT
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = NGR_develop_regional_integration_op
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_interaction_with_the_authorities_of_ndjamena
+		icon = GFX_z_goal_NGR_interaction_with_the_authorities_of_ndjamena
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			CHA = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_develop_regional_integration }
+		relative_position_id = NGR_develop_regional_integration
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_interaction_with_the_authorities_of_ndjamena"
+			custom_effect_tooltip = {
+				localization_key = AD_send_volunteers_desire_tt
+				COUNTRY = "[CHA.GetNameWithFlag]"
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_closure_of_french_companies
+		icon = GFX_z_goal_NGR_closure_of_french_companies
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_partner_diversification }
+		relative_position_id = NGR_partner_diversification
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_closure_of_french_companies"
+			add_stability = -0.05
+			custom_effect_tooltip = empty_line_tooltip
+			AD_unemployment_rate_level_grow_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			FRA = {
+				if = {
+					limit = { has_resources_rights = { state = 116 } }
+					remove_resource_rights = 116
+				}
+				if = {
+					limit = { has_resources_rights = { state = 117 } }
+					remove_resource_rights = 117
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_invite_rosatom
+		icon = GFX_z_goal_NGR_invite_rosatom
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_closure_of_french_companies }
+		relative_position_id = NGR_closure_of_french_companies
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_invite_rosatom"
+			add_research_slot = 1
+			custom_effect_tooltip = empty_line_tooltip
+			add_tech_bonus = {
+				name = NGR_invite_rosatom
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			give_resource_rights = { receiver = RUS state = 116 }
+		}
+	}
+	
+	focus = {
+		id = NGR_expand_grain_purchases_from_russia
+		icon = GFX_z_goal_NGR_expand_grain_purchases_from_russia
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = { has_idea = AD_three_meals_a_day_for_the_majority_of_the_population }
+		prerequisite = { focus = NGR_closure_of_french_companies }
+		relative_position_id = NGR_closure_of_french_companies
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_expand_grain_purchases_from_russia"
+			add_to_variable = { AD_fo_position = 0.1 tooltip = AD_russia_superiority_var_tt }
+			add_to_temp_variable = { position_change = 0.1 } # for loc
+			AD_check_political_situation_effect = yes
+			custom_effect_tooltip = empty_line_tooltip
+			
+			AD_food_supply_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_fight_against_food_corruption
+		icon = GFX_z_goal_NGR_fight_against_food_corruption
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_expand_grain_purchases_from_russia }
+		relative_position_id = NGR_expand_grain_purchases_from_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_fight_against_food_corruption"
+			add_stability = 0.1
+			custom_effect_tooltip = empty_line_tooltip
+			corruption_low = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_solving_economic_issues
+		icon = GFX_z_goal_NGR_solving_economic_issues
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_expand_grain_purchases_from_russia }
+		relative_position_id = NGR_expand_grain_purchases_from_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_solving_economic_issues"
+			every_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = fuel_silo
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			AD_food_supply_level_grow_effect = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_establishment_of_the_agricultural_academy
+		icon = GFX_z_goal_NGR_establishment_of_the_agricultural_academy
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_solving_economic_issues }
+		relative_position_id = NGR_solving_economic_issues
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_establishment_of_the_agricultural_academy"
+			every_controlled_state = {
+				limit = {
+					OR = { state = 20 state = 118 }
+					free_building_slots = {
+						building = fuel_silo
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			add_tech_bonus = {
+				name = NGR_establishment_of_the_agricultural_academy
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_sovereign_industrial_development
+		icon = GFX_z_goal_NGR_sovereign_industrial_development
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_expand_grain_purchases_from_russia }
+		relative_position_id = NGR_expand_grain_purchases_from_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_sovereign_industrial_development"
+			add_ideas = NGR_sovereign_industrial_development_idea
+			custom_effect_tooltip = empty_line_tooltip
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = NGR_oil_of_agadez
+		icon = GFX_z_goal_NGR_oil_of_agadez
+		x = -1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			controls_state = 116
+			controls_state = 118
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_sovereign_industrial_development }
+		relative_position_id = NGR_sovereign_industrial_development
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_oil_of_agadez"
+			add_resource = { type = oil amount = 15 state = 116 }
+			add_resource = { type = oil amount = 15 state = 118 }
+		}
+	}
+	
+	focus = {
+		id = NGR_bid_for_export_via_cotonou
+		icon = GFX_z_goal_NGR_bid_for_export_via_cotonou
+		x = -1
+		y = 1
+		cost = 3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			BNN = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_oil_of_agadez }
+		relative_position_id = NGR_oil_of_agadez
+		mutually_exclusive = { focus = NGR_bid_for_export_via_lome }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_bid_for_export_via_cotonou"
+			BNN = {
+				add_opinion_modifier = {
+					modifier = NGR_bid_for_export_via_cotonou_op
+					target = ROOT
+				}
+				add_ideas = NGR_interaction_with_niger_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_call_on_benin_to_stop_sponsoring_terrorists
+		icon = GFX_z_goal_NGR_call_on_benin_to_stop_sponsoring_terrorists
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			country_exists = JNA
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_bid_for_export_via_cotonou }
+		relative_position_id = NGR_bid_for_export_via_cotonou
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_call_on_benin_to_stop_sponsoring_terrorists"
+			JNA = { add_equipment_to_stockpile = { type = infantry_equipment amount = -2000 } }
+		}
+	}
+	
+	focus = {
+		id = NGR_bid_for_export_via_lome
+		icon = GFX_z_goal_NGR_bid_for_export_via_lome
+		x = 1
+		y = 1
+		cost = 3
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			TOG = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_oil_of_agadez }
+		relative_position_id = NGR_oil_of_agadez
+		mutually_exclusive = { focus = NGR_bid_for_export_via_cotonou }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_bid_for_export_via_lome"
+			TOG = {
+				add_opinion_modifier = {
+					modifier = NGR_bid_for_export_via_lome_op
+					target = ROOT
+				}
+				add_ideas = NGR_interaction_with_niger_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_strengthen_ties_with_togo
+		icon = GFX_z_goal_NGR_strengthen_ties_with_togo
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			TOG = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+				has_idea = AD_ECOWAS
+			}
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_bid_for_export_via_lome }
+		relative_position_id = NGR_bid_for_export_via_lome
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_strengthen_ties_with_togo"
+			TOG = { remove_ideas = AD_ECOWAS }
+		}
+	}
+	
+	focus = {
+		id = NGR_development_of_social_spheres
+		icon = GFX_z_goal_NGR_development_of_social_spheres
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_sovereign_industrial_development }
+		relative_position_id = NGR_sovereign_industrial_development
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_development_of_social_spheres"
+			random_owned_controlled_state = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			AD_unemployment_rate_level_down_effect = yes
+		}
+	}
+	
+	focus = {
+		id = NGR_establish_a_common_healthcare_system
+		icon = GFX_z_goal_NGR_establish_a_common_healthcare_system
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			any_controlled_state = { hospital < 3 }
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_development_of_social_spheres }
+		relative_position_id = NGR_development_of_social_spheres
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_establish_a_common_healthcare_system"
+			every_controlled_state = {
+				limit = { hospital < 3 }
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_foundation_of_the_npp_network
+		icon = GFX_z_goal_NGR_foundation_of_the_npp_network
+		x = 0
+		y = 2
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_development_of_social_spheres }
+		relative_position_id = NGR_development_of_social_spheres
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_foundation_of_the_npp_network"
+			random_owned_controlled_state = {
+				prioritize = { 116 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_support_the_joint_fight_against_terrorists
+		icon = GFX_z_goal_NGR_support_the_joint_fight_against_terrorists
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			is_in_faction = yes
+			country_exists = JNA
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_reconciliation_with_the_malian_authorities }
+		relative_position_id = NGR_reconciliation_with_the_malian_authorities
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_support_the_joint_fight_against_terrorists"
+			add_intel = { target = JNA civilian_intel = 15 army_intel = 35 }
+			custom_effect_tooltip = empty_line_tooltip
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				add_intel = { target = JNA civilian_intel = 15 army_intel = 35 }
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_expand_conscription
+		icon = GFX_z_goal_NGR_expand_conscription
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_partner_diversification }
+		relative_position_id = NGR_partner_diversification
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_expand_conscription"
+			add_ideas = NGR_expand_conscription_idea
+		}
+	}
+	
+	focus = {
+		id = NGR_officer_training_in_foreign_academies
+		icon = GFX_z_goal_NGR_officer_training_in_foreign_academies
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = { has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes } }
+		bypass = {  }
+		prerequisite = { focus = NGR_expand_conscription }
+		relative_position_id = NGR_expand_conscription
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_officer_training_in_foreign_academies"
+			every_unit_leader = {
+				random_select_amount = 2
+				gain_xp = 210
+			}
+			random_unit_leader = { add_random_trait = { brilliant_strategist inflexible_strategist } }
+		}
+	}
+	
+	focus = {
+		id = NGR_fighting_pro_western_rebels
+		icon = GFX_z_goal_NGR_fighting_pro_western_rebels
+		x = 3
+		y = 1
+		cost = 7.2
+		search_filters = {  }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			has_idea = NGR_patriotic_liberation_front_idea
+			divisions_in_state = { size > 9 state = 116 }
+			controls_state = 116
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_expand_conscription }
+		relative_position_id = NGR_expand_conscription
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_fighting_pro_western_rebels"
+			remove_ideas = NGR_patriotic_liberation_front_idea
+			custom_effect_tooltip = empty_line_tooltip
+			116 = {
+				damage_building = { type = infrastructure damage = 0.44 }
+				damage_building = { type = air_base damage = 0.44 }
+				force_disable_resistance = ROOT
+				cancel_resistance = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = NGR_defeat_the_tuareg_militants
+		icon = GFX_z_goal_NGR_defeat_the_tuareg_militants
+		x = 1
+		y = 1
+		cost = 7.2
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+			is_subject = no
+			can_declare_war_on = AZW
+		}
+		bypass = {  }
+		prerequisite = { focus = NGR_fighting_pro_western_rebels }
+		relative_position_id = NGR_fighting_pro_western_rebels
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus NGR_defeat_the_tuareg_militants"
+			declare_war_on = { target = AZW type = topple_government }
+			custom_effect_tooltip = empty_line_tooltip
+			add_intel = { target = AZW civilian_intel = 25 army_intel = 45 }
+		}
+	}
+}

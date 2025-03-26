@@ -1,0 +1,416 @@
+ideas = {
+	
+	hidden_ideas = {
+		
+		MLI_fatumate_nafo_traore_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				AD_food_supply_modifier = 0.25
+			}
+			research_bonus = { industry = 0.05 }
+		}
+	}
+	
+	country = {
+	
+		MLI_protracted_war_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_protracted_war_idea
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.8
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.8
+			}
+		}
+		
+		MLI_protracted_war_idea_1 = {
+			name = MLI_protracted_war_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_protracted_war_idea
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.8
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.8
+			}
+		}
+		
+		MLI_protracted_war_idea_2 = {
+			name = MLI_protracted_war_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_protracted_war_idea
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.8
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.3
+			}
+		}
+		
+		MLI_protracted_war_idea_3 = {
+			name = MLI_protracted_war_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_protracted_war_idea
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.8
+			}
+		}
+		
+		MLI_protracted_war_idea_3_1 = {
+			name = MLI_protracted_war_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_protracted_war_idea
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.3
+			}
+		}
+		
+		MLI_protracted_war_idea_2_1 = {
+			name = MLI_protracted_war_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_protracted_war_idea
+			cancel = {
+				NOT = { has_war_with = AZW }
+				NOT = { has_war_with = ISS }
+				NOT = { has_war_with = JNA }
+			}
+			modifier = {
+				stability_factor = -0.2
+				hidden_modifier = { AD_conditions_of_the_country_modifier = -0.1 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_slightly_fall_tt
+			}
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = -0.2
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = -0.3
+			}
+		}
+		
+		MLI_algerian_peace_agreement_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_algerian_peace_agreement_idea
+			modifier = {
+				compliance_growth = 0.2
+				political_power_factor = -0.03
+				stability_factor = 0.01
+			}
+			cancel = {
+				OR = {
+					NOT = { country_exists = MLI }
+					NOT = { country_exists = AZW }
+				}
+			}
+			targeted_modifier = {
+				tag = AZW
+				attack_bonus_against = -1
+			}
+		}
+		
+		MLI_legacy_of_colonialism_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_legacy_of_colonialism_idea
+			modifier = {
+				production_speed_industrial_complex_factor = -0.25
+				supply_consumption_factor = -0.15
+			}
+		}
+		
+		MLI_illegal_gold_mining_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_illegal_gold_mining_idea
+			modifier = {
+				stability_factor = -0.07
+				production_factory_max_efficiency_factor = -0.15
+				AD_money_from_gold_modifier = 0.15
+				hidden_modifier = { AD_poverty_level_modifier = -0.1 }
+				custom_modifier_tooltip = AD_poverty_level_modifier_slightly_fall_tt
+			}
+		}
+		
+		MLI_illegal_gold_mining_idea_1 = {
+			name = MLI_illegal_gold_mining_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_illegal_gold_mining_idea
+			modifier = {
+				stability_factor = -0.14
+				production_factory_max_efficiency_factor = -0.3
+				AD_money_from_gold_modifier = 0.3
+			}
+		}
+		
+		MLI_ethnic_fragmentation_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_ethnic_fragmentation_idea
+			modifier = {
+				conscription_factor = -0.07
+				army_core_attack_factor = -0.11
+				army_core_defence_factor = -0.11
+				AD_money_from_taxes_modifier = -0.15
+			}
+		}
+		
+		MLI_ethnic_fragmentation_idea_1 = {
+			name = MLI_ethnic_fragmentation_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_ethnic_fragmentation_idea
+			modifier = {
+				conscription_factor = -0.14
+				army_core_attack_factor = -0.22
+				army_core_defence_factor = -0.22
+				AD_money_from_taxes_modifier = -0.3
+			}
+		}
+		
+		MLI_mass_protests_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_mass_protests_idea
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.8
+				consumer_goods_factor = 0.5
+				stability_weekly = -0.02
+			}
+		}
+		
+		MLI_gatal_mli_support_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_gatal_mli_support_idea
+			cancel = {
+				OR = {
+					NOT = { country_exists = MLI }
+					NOT = { country_exists = GTI }
+				}
+			}				
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = 0.12
+			}
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = 0.12
+			}
+			targeted_modifier = {
+				tag = AZW
+				attack_bonus_against = 0.12
+			}
+		}
+		
+		MLI_overall_strategy_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_overall_strategy_idea
+			modifier = {
+				AD_france_superiority_modifier_weekly = 0.01
+				max_planning_factor = 0.25
+				planning_speed = 0.1
+				army_attack_factor = 0.4
+			}
+		}
+		
+		MLI_war_on_the_lakes_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_war_on_the_lakes_idea
+			targeted_modifier = {
+				tag = ISS
+				attack_bonus_against = 0.1
+			}
+		}
+		
+		MLI_french_military_support_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_french_military_support_idea
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_regain = 0.05
+			}
+		}
+		
+		MLI_french_military_support_idea_1 = {
+			name = MLI_french_military_support_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_french_military_support_idea
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_regain = 0.05
+				land_doctrine_cost_factor = -0.05
+			}
+		}
+		
+		MLI_fighting_russian_influence_from_the_outside_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_fighting_russian_influence_from_the_outside_idea
+			modifier = {
+				drift_defence_factor = 0.5
+				socialism_drift = -0.05
+				liberalism_drift = -0.05
+			}
+		}
+		
+		MLI_three_borders_project_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				monthly_population = 0.11
+				AD_money_from_taxes_modifier = 0.04
+			}
+		}
+		
+		MLI_control_of_central_mali_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_control_of_central_mali_idea
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = 0.45
+			}
+		}
+		
+		MLI_control_of_northern_mali_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_control_of_northern_mali_idea
+			targeted_modifier = {
+				tag = JNA
+				attack_bonus_against = 0.45
+			}
+		}
+		
+		MLI_sahel_perspective_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_sahel_perspective_idea
+			modifier = {
+				stability_factor = 0.04
+				monthly_population = 0.04
+				centrism_drift = 0.05
+				hidden_modifier = { AD_unemployment_rate_modifier = 0.15 }
+				custom_modifier_tooltip = AD_unemployment_rate_modifier_slightly_grow_tt
+			}
+		}
+		
+		MLI_transition_to_civilian_rule_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = MLI_transition_to_civilian_rule_idea
+			modifier = {
+				production_speed_buildings_factor = 0.125
+				political_power_factor = 0.1
+				stability_weekly = 0.003
+			}
+		}
+	}
+}

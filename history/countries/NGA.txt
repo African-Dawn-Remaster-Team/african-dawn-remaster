@@ -1,0 +1,111 @@
+capital = 109
+set_oob = "NGA_oob"
+set_air_oob = "NGA_air_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	handmade_atgm_tech = 1
+	modern_camouflage_tech = 1
+	handmade_manpads_tech = 1
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	tech_mrap = 1
+	basic_train = 1
+	tech_specnaz = 1
+	tech_support = 1
+	tech_ifv_1  = 1
+	tech_medium_tank_legacy  = 1
+}
+
+recruit_character = NGA_Muhammadu_Buhari
+recruit_character = NGA_Bola_Tinubu
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 57
+	social_democracy = 43
+}
+
+set_variable = { AD_fog_source_of_power = 0 }
+set_variable = { AD_fog_power_structure = 1 }
+
+add_ideas = {
+	AD_ECOWAS
+}
+
+set_convoys = 100
+starting_train_buffer = 5
+
+set_research_slots = 2
+set_stability = -0.41
+set_war_support = 0.2
+
+create_dynamic_country = {
+	reserve_dynamic_country = yes
+	original_tag = NGA
+	copy_tag = NGA
+	
+	set_cosmetic_tag = NGA_islamic_state_west_africa_province
+	set_popularities = { fundamentalism = 100 }
+	set_politics = { ruling_party = fundamentalism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	every_core_state = { remove_core_of = PREV }
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		AD_fundamentalism 
+		ISW_BH_conflict 
+	}
+	
+	transfer_state = 105
+	105 = { add_core_of = PREV }
+	set_province_controller = 4773
+	set_province_controller = 4775
+	set_province_controller = 4779
+	set_province_controller = 4800
+	set_province_controller = 4801
+	set_province_controller = 4804
+	set_province_controller = 4805
+	set_province_controller = 4806
+	set_province_controller = 2331
+	
+	set_oob = "ISW_oob"
+	recruit_character = ISW_Abu_Musab_Umar_Al_Barnawi     
+	recruit_character = ISW_Abubakar_Shekau     
+	promote_character = ISW_Abu_Musab_Umar_Al_Barnawi  
+	declare_war_on = { target = NGA type = civil_war }
+	declare_war_on = { target = CMR type = civil_war }
+	declare_war_on = { target = CHA type = civil_war }
+	declare_war_on = { target = NGR type = civil_war }
+
+	add_civil_war_target = NGA
+	add_civil_war_target = CMR
+	add_civil_war_target = CHA
+	add_civil_war_target = NGR
+	NGA = {
+		add_civil_war_target = PREV
+		set_province_controller = 3063
+		set_province_controller = 3642
+		set_province_controller = 469
+		set_province_controller = 911
+		set_province_controller = 702
+		set_province_controller = 161
+		set_province_controller = 4810
+		set_province_controller = 1305
+		set_province_controller = 4787
+		set_province_controller = 3669
+		set_province_controller = 1465
+		set_province_controller = 1615
+		set_province_controller = 4794
+		set_province_controller = 1866
+	}
+	CMR = { add_civil_war_target = PREV }
+	CHA = { add_civil_war_target = PREV }
+	NGR = { add_civil_war_target = PREV }
+}

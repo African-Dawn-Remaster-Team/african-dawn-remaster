@@ -1,0 +1,49 @@
+on_actions = {	
+	on_startup = {
+		effect = {
+			if = {
+				limit = { has_start_date < 2020.01.02 }
+				CAR = {
+					country_event = { id = AD_CAR.8 days = 188 }
+					country_event = { id = AD_CAR.9 days = 207 }
+					country_event = { id = AD_CAR.10 days = 362 }
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = CAR
+						has_completed_focus = CAR_regain_control_of_the_border_with_cameroon
+					}
+					ROOT = {
+						original_tag = CAR
+						is_dynamic_country = yes
+					}
+				}
+				FROM = {
+					set_temp_variable_to_random = { var = CAR_disarmed_militants_var_temp min = CAR_disarmed_militants_var_min max = CAR_disarmed_militants_var_max integer = yes }
+					add_to_variable = { CAR_disarmed_militants_var = CAR_disarmed_militants_var_temp }
+				}
+			}
+		}
+	}
+	on_monthly_CAR = {
+		effect = {
+			if = {
+				limit = { check_variable = { var = modifier@CAR_ngakola_and_tere_monthly_modifier value = 0 compare = not_equals } }
+				if = {
+					limit = {
+						check_variable = { var = CAR_ngakola_and_tere_var value = 100 compare = not_equals }
+						check_variable = { var = CAR_ngakola_and_tere_var value = 0 compare = not_equals }
+					}
+					set_temp_variable = { CAR_ngakola_and_tere_temp_var = modifier@CAR_ngakola_and_tere_monthly_modifier }
+					CAR_ngakola_and_tere_check_effect = yes
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+state={
+	id=75
+	name="STATE_75"
+	provinces={
+		1073 2945 3245 4600 4601 4607 
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 2945 3 }
+		buildings = {}
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

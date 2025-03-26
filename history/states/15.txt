@@ -1,0 +1,28 @@
+
+state={
+	id=15
+	name="STATE_15"
+	provinces={
+		484 685 886 907 917 946 1139 1717 1919 1996 2134 2646 2703 2713 3650 4911 4915 4916 4917 5032 5033 
+	}
+	resources = {
+		gold = 4
+	}
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = { 4916 15 }
+		victory_points = { 2703 3 }
+		victory_points = { 484 3 }
+		victory_points = { 1717 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 2
+		}
+	}
+	manpower=6645874
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

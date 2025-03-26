@@ -1,0 +1,35 @@
+# befriend
+# alliance
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# contain
+# area_priority
+# declare_war
+
+TUR_lend_lease_for_bfa = {
+	allowed = { tag = TUR }
+	enable = {
+		BFA = {
+			has_completed_focus = BFA_invite_sadat
+			NOT = { has_war_with = ROOT }
+			OR = {
+				has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+				has_country_leader = { character = BFA_Paul_Henri_Sandaogo_Damiba ruling_only = yes }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = BFA value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = BFA value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = BFA value = 500 }
+}

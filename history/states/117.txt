@@ -1,0 +1,21 @@
+state={
+	id=117
+	name="STATE_117"
+	provinces={
+		111 124 243 290 631 637 663 740 760 1017 1442 1683 1733 2189 2196 2457 2857 2896 2961 3144 3566 3572 3620 3636 4873 4876 4878 4882 4806
+	}
+	history={
+		owner = NGR
+		add_core_of = NGR
+		victory_points = { 760 5 }
+		victory_points = { 740 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+	}
+	manpower=837290 
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

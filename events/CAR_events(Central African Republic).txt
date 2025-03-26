@@ -1,0 +1,572 @@
+add_namespace = AD_CAR
+
+#Властитель «Заргиналенда»
+country_event = {
+	id = AD_CAR.0
+	title = AD_CAR.0.t
+	desc = AD_CAR.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.0" }
+	option = {
+		name = AD_CAR.0.a
+		if = {
+			limit = { has_idea = CAR_khartoum_agreement_idea }
+			remove_ideas = CAR_khartoum_agreement_idea
+		}
+	}
+}
+
+#Формирование антиправительственной коалиции
+country_event = {
+	id = AD_CAR.1
+	title = AD_CAR.1.t
+	desc = AD_CAR.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.1" }
+	option = {
+		name = AD_CAR.1.a
+		set_country_flag = CAR_rebel_1
+		every_country_with_original_tag = {
+			original_tag_to_check = ROOT
+			limit = { has_idea = CAR_khartoum_agreement_idea }
+			remove_ideas = CAR_khartoum_agreement_idea
+		}
+	}
+}
+
+#Формирование антиправительственной коалиции
+country_event = {
+	id = AD_CAR.4
+	title = AD_CAR.4.t
+	desc = AD_CAR.4.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.4" }
+	option = {
+		name = AD_CAR.4.a
+		every_country_with_original_tag = {
+			original_tag_to_check = ROOT
+			limit = { has_idea = CAR_khartoum_agreement_idea }
+			remove_ideas = CAR_khartoum_agreement_idea
+		}
+	}
+}
+
+#Провал марша на Банги
+country_event = {
+	id = AD_CAR.2
+	title = AD_CAR.2.t
+	desc = AD_CAR.2.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.2" }
+	option = {
+		name = AD_CAR.2.a
+		add_timed_idea = { idea = CAR_disorganization_of_the_rebels_idea days = 200 }
+	}
+}
+
+#Разграбление Банги
+country_event = {
+	id = AD_CAR.3
+	title = AD_CAR.3.t
+	desc = AD_CAR.3.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.3" }
+	option = {
+		name = AD_CAR.3.a
+		if = {
+			limit = { is_faction_leader = yes }
+			for_each_loop = {
+				array = faction_members
+				value = v			
+				add_to_temp_array = { old_allies = v }
+			}
+			dismantle_faction = yes
+			for_each_scope_loop = {
+				array = old_allies
+				for_each_scope_loop = {
+					array = old_allies
+					if = {
+						limit = { NOT = { tag = PREV is_subject_of = PREV has_subject = PREV has_war_with = PREV } }
+						declare_war_on = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+		else = {
+			effect_tooltip = { leave_faction = yes }
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		custom_effect_tooltip = CAR_event_3_tt
+		custom_effect_tooltip = empty_line_tooltip
+		add_timed_idea = { idea = CAR_disorganization_of_the_rebels_idea days = 200 }
+	}
+}
+
+#Восстановление власти Бозизе
+country_event = {
+	id = AD_CAR.5
+	title = AD_CAR.5.t
+	desc = AD_CAR.5.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.5" }
+	option = {
+		name = AD_CAR.5.a
+		if = {
+			limit = { is_faction_leader = yes }
+			CAR = { country_event = { id = AD_CAR.6 hours = 12 } }
+		}
+		else = {
+			effect_tooltip = { CAR = { country_event = { id = AD_CAR.6 hours = 12 } } }
+		}
+	}
+}
+
+#Бозизе берет власть в Банги
+country_event = {
+	id = AD_CAR.6
+	title = AD_CAR.6.t
+	desc = AD_CAR.6.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.6" }
+	option = {
+		name = AD_CAR.6.a
+		every_enemy_country = {
+			limit = { original_tag = ROOT }
+			white_peace = ROOT
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		complete_national_focus = CAR_bozize_seizes_power
+		complete_national_focus = CAR_consolidation_around_bozize
+		custom_effect_tooltip = empty_line_tooltip
+		43 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		23 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		39 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		38 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		76 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+	}
+	option = {
+		name = AD_CAR.6.b
+		country_event = { id = AD_CAR.7 days = 3 }
+	}
+}
+
+#Итоги выборов
+country_event = {
+	id = AD_CAR.7
+	title = AD_CAR.7.t
+	desc = AD_CAR.7.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.7" }
+	option = {
+		name = AD_CAR.7.a
+		every_enemy_country = {
+			limit = { original_tag = ROOT }
+			white_peace = ROOT
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { NOT = { has_government = liberalism } }
+			set_politics = { ruling_party = liberalism elections_allowed = yes }
+			custom_effect_tooltip = empty_line_tooltip
+		}
+		effect_tooltip = { promote_character = CAR_Anicet_Georges_Dologuele }
+		custom_effect_tooltip = empty_line_tooltip
+		complete_national_focus = CAR_bozize_seizes_power
+		complete_national_focus = CAR_anise_georges_dologele
+		custom_effect_tooltip = empty_line_tooltip
+		43 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		23 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		39 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		38 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+		76 = {
+			if = {
+				limit = { controller = { original_tag = ROOT } }
+				transfer_state_to = ROOT
+			}
+		}
+	}
+}
+
+#Бозизе в Конго
+country_event = {
+	id = AD_CAR.8
+	title = AD_CAR.8.t
+	desc = AD_CAR.8.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.8" }
+	option = {
+		name = AD_CAR.8.a
+		add_popularity = { ideology = social_democracy popularity = 0.03 }
+		set_country_flag = CAR_event_8_flag
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = { unlock_national_focus = CAR_enlist_the_support_of_neighbors }
+	}
+	option = {
+		name = AD_CAR.8.b
+		COG = {
+			if = {
+				limit = { NOT = { is_embargoed_by = ROOT } }
+				ROOT = { send_embargo = PREV }
+				custom_effect_tooltip = empty_line_tooltip
+			}
+			add_opinion_modifier = {
+				modifier = CAR_embargo_on_the_republic_of_the_congo_op
+				target = ROOT
+			}
+			reverse_add_opinion_modifier = {
+				modifier = CAR_embargo_on_the_republic_of_the_congo_op
+				target = ROOT
+			}
+		}
+	}
+}
+
+#Конгресс оранжевых жилетов
+country_event = {
+	id = AD_CAR.9
+	title = AD_CAR.9.t
+	desc = AD_CAR.9.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.9" }
+	option = {
+		name = AD_CAR.9.a
+		add_stability = -0.03
+		set_country_flag = CAR_event_9_flag
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = { unlock_national_focus = CAR_resolve_the_issue_with_bozize }
+	}
+}
+
+#Выборы президента
+country_event = {
+	id = AD_CAR.10
+	title = AD_CAR.10.t
+	desc = AD_CAR.10.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	trigger = { NOT = { has_completed_focus = CAR_bozize_seizes_power } }
+	immediate = {
+		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.10"
+		hidden_effect = {
+			if = {
+				limit = { has_idea = CAR_return_of_bozize_idea }
+				remove_ideas = CAR_return_of_bozize_idea
+			}
+		}
+	}
+	option = {
+		name = AD_CAR.10.a
+		trigger = { controls_state = 76 }
+		effect_tooltip = {
+			if = {
+				limit = { has_idea = CAR_return_of_bozize_idea }
+				remove_ideas = CAR_return_of_bozize_idea
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+		complete_national_focus = CAR_elections_have_been_held
+		custom_effect_tooltip = empty_line_tooltip
+		activate_mission = CAR_hold_of_the_bangui
+	}
+	option = {
+		name = AD_CAR.10.b
+		trigger = {
+			OR = {
+				has_completed_focus = CAR_deal_with_the_french_henchmen
+				has_country_flag = CAR_rebel_1
+			}
+		}
+		effect_tooltip = {
+			if = {
+				limit = { has_idea = CAR_return_of_bozize_idea }
+				remove_ideas = CAR_return_of_bozize_idea
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+		complete_national_focus = CAR_elections_have_been_held
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { NOT = { has_government = conservatism } }
+			set_politics = { ruling_party = conservatism elections_allowed = no }
+			custom_effect_tooltip = empty_line_tooltip
+		}
+		effect_tooltip = { promote_character = CAR_Jan_Serj_Bocassa }
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = { unlock_national_focus = CAR_return_of_the_bokassa_clan }
+	}
+	option = {
+		name = AD_CAR.10.c
+		trigger = { NOT = { has_completed_focus = CAR_deal_with_the_french_henchmen } }
+		effect_tooltip = {
+			if = {
+				limit = { has_idea = CAR_return_of_bozize_idea }
+				remove_ideas = CAR_return_of_bozize_idea
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+		complete_national_focus = CAR_elections_have_been_held
+		complete_national_focus = CAR_anise_georges_dologele
+		custom_effect_tooltip = empty_line_tooltip
+		if = {
+			limit = { NOT = { has_government = liberalism } }
+			set_politics = { ruling_party = liberalism elections_allowed = yes }
+			custom_effect_tooltip = empty_line_tooltip
+		}
+		effect_tooltip = { promote_character = CAR_Anicet_Georges_Dologuele }
+		custom_effect_tooltip = empty_line_tooltip
+	}
+}
+
+#Год Хартумских соглашений
+country_event = {
+	id = AD_CAR.11
+	title = AD_CAR.11.t
+	desc = AD_CAR.11.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.11" }
+	option = {
+		name = AD_CAR.11.a
+		add_political_power = 100
+		custom_effect_tooltip = empty_line_tooltip
+		add_popularity = { ideology = var:current_party_ideology_group popularity = 0.03 }
+	}
+}
+
+#Отстранение Бозизе
+country_event = {
+	id = AD_CAR.12
+	title = AD_CAR.12.t
+	desc = AD_CAR.12.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.12" }
+	option = {
+		name = AD_CAR.12.a
+		add_stability = 0.04
+		add_political_power = 50
+		custom_effect_tooltip = empty_line_tooltip
+		add_popularity = { ideology = social_democracy popularity = -0.12 }
+		hidden_effect = { country_event = { id = AD_CAR.13 days = 20 } }
+	}
+}
+
+#Отстранение Бозизе
+country_event = {
+	id = AD_CAR.13
+	title = AD_CAR.13.t
+	desc = AD_CAR.13.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.13" }
+	option = {
+		name = AD_CAR.13.a
+		add_popularity = { ideology = liberalism popularity = -0.12 }
+	}
+}
+
+#Конституционный суд выступает против переноса выборов
+country_event = {
+	id = AD_CAR.14
+	title = AD_CAR.14.t
+	desc = AD_CAR.14.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.14" }
+	option = {
+		name = AD_CAR.14.a
+		set_country_flag = CAR_event_14_flag
+		hidden_effect = { unlock_national_focus = CAR_postponement_of_elections }
+		uncomplete_national_focus = { focus = CAR_postponement_of_elections }
+		custom_effect_tooltip = empty_line_tooltip
+		every_country_with_original_tag = {
+			original_tag_to_check = ROOT
+			limit = { has_variable = CAR_loyality_for_ccr }
+			add_to_variable = { CAR_loyality_for_ccr = -1 tooltip = CAR_loyality_for_ccr_tt }
+			CAR_loyality_for_ccr_check_effect = yes
+		}
+	}
+}
+
+#Вопросы дальнейшего развития
+country_event = {
+	id = AD_CAR.15
+	title = AD_CAR.15.t
+	desc = AD_CAR.15.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.15" }
+	option = {
+		name = AD_CAR.15.a
+		add_to_variable = { AD_fo_position = 0.10 tooltip = AD_russia_superiority_var_tt }
+		add_to_temp_variable = { position_change = 0.1 } # for loc
+		AD_check_political_situation_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		
+		76 = {
+			if = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+				custom_effect_tooltip = empty_line_tooltip
+			}
+		}
+		add_ideas = CAR_industrial_development_idea
+	}
+	option = {
+		name = AD_CAR.15.b
+		subtract_from_variable = { AD_fo_position = 0.1 tooltip = AD_france_superiority_var_tt }
+		add_to_temp_variable = { position_change = -0.1 } # for loc
+		AD_check_political_situation_effect = yes
+		custom_effect_tooltip = empty_line_tooltip
+		
+		add_ideas = CAR_mining_idea
+	}
+}
+
+#Раздел страны
+country_event = {
+	id = AD_CAR.16
+	title = AD_CAR.16.t
+	desc = AD_CAR.16.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CAR.16" }
+	option = {
+		name = AD_CAR.16.a
+		every_enemy_country = {
+			limit = {
+				original_tag = ROOT
+				NOT = { tag = ABK }
+			}
+			white_peace = ROOT
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		every_country_with_original_tag = {
+			original_tag_to_check = ROOT
+			limit = {
+				NOT = { tag = ROOT }
+				is_subject = no
+				can_declare_war_on = ABK
+			}
+			declare_war_on = { target = ABK type = annex_everything }
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		remove_ideas = CAR_ethnic_conflicts_idea
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = {
+			if = {
+				limit = { has_idea = CAR_khartoum_agreement_idea }
+				remove_ideas = CAR_khartoum_agreement_idea
+			}
+		}
+		hidden_effect = {
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_idea = CAR_khartoum_agreement_idea }
+				remove_ideas = CAR_khartoum_agreement_idea
+			}
+		}
+	}
+	option = {
+		name = AD_CAR.16.b
+		trigger = { has_war_with = FPR }
+		FPR = {
+			white_peace = ROOT
+			set_cosmetic_tag = FPR_republic_of_logon
+			custom_effect_tooltip = empty_line_tooltip
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = {
+					is_ai = yes
+					OR = {
+						tag = MPC
+						tag = MLC
+						tag = MSA
+						tag = RPR
+					}
+				}
+				PREV = { annex_country = { target = PREV transfer_troops = yes } }
+			}
+			custom_effect_tooltip = empty_line_tooltip
+			if = {
+				limit = { can_declare_war_on = ABK }
+				declare_war_on = { target = ABK type = annex_everything }
+			}
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		remove_ideas = CAR_ethnic_conflicts_idea
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = {
+			if = {
+				limit = { has_idea = CAR_khartoum_agreement_idea }
+				remove_ideas = CAR_khartoum_agreement_idea
+			}
+		}
+		hidden_effect = {
+			every_country_with_original_tag = {
+				original_tag_to_check = ROOT
+				limit = { has_idea = CAR_khartoum_agreement_idea }
+				remove_ideas = CAR_khartoum_agreement_idea
+			}
+		}
+	}
+}

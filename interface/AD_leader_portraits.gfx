@@ -1,0 +1,50 @@
+spriteTypes = {		# TODO перенести в папку AD
+
+	### EQG
+	spriteType = {
+		name = "GFX_portrait_EQG_Gabriel_Mbanga_Obiang_Lima"
+		texturefile = "gfx/leaders/EQG/EQG_Gabriel_Mbanga_Obiang_Lima.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_EQG_Teodoro_Nguema_Obiang_Manga"
+		texturefile = "gfx/leaders/EQG/EQG_Teodoro_Nguema_Obiang_Manga.dds"
+	}
+	
+	### CAR
+	spriteType = {
+		name = "GFX_portrait_CAR_Mahamat_Al_Khatim"
+		texturefile = "gfx/leaders/CAR/CAR_Mahamat_Al_Khatim.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Maxime_Mokom"
+		texturefile = "gfx/leaders/CAR/CAR_Maxime_Mokom.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Ali_Darassa"
+		texturefile = "gfx/leaders/CAR/CAR_Ali_Darassa.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Bi_Sidi_Souleymane"
+		texturefile = "gfx/leaders/CAR/CAR_Bi_Sidi_Souleymane.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Zakaria_Damane"
+		texturefile = "gfx/leaders/CAR/CAR_Zakaria_Damane.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Abakar_Sabone"
+		texturefile = "gfx/leaders/CAR/CAR_Abakar_Sabone.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Mohammed_Adam"
+		texturefile = "gfx/leaders/CAR/CAR_Mohammed_Adam.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Noureddine_Adam"
+		texturefile = "gfx/leaders/CAR/CAR_Noureddine_Adam.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAR_Joseph_Kony"
+		texturefile = "gfx/leaders/CAR/Portrait_Joseph_Kony.dds"
+	}
+}

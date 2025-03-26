@@ -1,0 +1,29 @@
+state={
+	id=7
+	name="STATE_7"
+	provinces={
+		3 802 1235 1315 1318 1375 2059 2718 2721 2741 3228 3742 3750 4641 4642 4647 4649 4650 4651 4653 4660 4661 
+	}
+	resources = {
+		gold = 4
+		oil = 10
+	}
+	history={
+		owner = IVO
+		add_core_of = IVO
+		victory_points = { 4661 15 }
+		victory_points = { 1315 10 }
+		victory_points = { 4660 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			air_base = 2
+			1315 = { naval_base = 3 }
+		}
+	}
+	manpower=11775579
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
+ 

@@ -1,0 +1,21 @@
+
+state={
+	id=25
+	name="STATE_25"
+	provinces={
+		3923 
+	}
+	history={
+		owner = SNT
+		add_core_of = SNT
+		victory_points = { 3923 5 }
+		buildings = {
+			infrastructure = 1
+			3923 = { naval_base = 3 }
+		}
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

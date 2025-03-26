@@ -1,0 +1,30 @@
+
+state={
+	id=22
+	name="STATE_22"
+	provinces={
+		21 58 116 119 126 158 280 327 333 418 607 627 735 781 811 858 920 1104 1175 1244 1258 1260 1345 1377 1452 1479 1536 1641 1662 1670 1682 1863 1900 1938 1992 2015 2034 2041 2066 2090 2118 2373 2446 2447 2463 2500 2564 2588 2614 2688 2723 2778 2795 2831 2922 2923 2933 3023 3100 3102 3116 3251 3294 3666 3668 3684 4818 4819 4820 4821 4822 4823 4824 4825 4826 4827 4828 4829 4830 4831 4833 
+	}
+	resources = {
+		oil = 4
+	}
+	history={
+		owner = CHA
+		add_core_of = CHA
+		victory_points = { 4831 15 }
+		victory_points = { 2066 5 }
+		victory_points = { 119 3 }
+		victory_points = { 1536 3 }
+		victory_points = { 1104 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 4
+		}
+	}
+	manpower=9435024
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

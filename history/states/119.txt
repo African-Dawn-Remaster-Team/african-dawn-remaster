@@ -1,0 +1,20 @@
+state={
+	id=119
+	name="STATE_119"
+	provinces={
+		97 106 979 1499 1843 2757 3031 4874 
+	}
+	history={
+		owner = NGR
+		add_core_of = NGR
+		victory_points = { 1499 5 }
+		victory_points = { 3031 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=4796950  
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

@@ -1,0 +1,69 @@
+characters = {
+    AZW_Bilal_Ag_Acherif = {
+		name = AZW_Bilal_Ag_Acherif
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZW/AZW_Bilal_Ag_Acherif.dds"
+			}
+			army = {
+				large = "gfx/leaders/AZW/AZW_Bilal_Ag_Acherif.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_BILAL_AG_ACHERIF_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		field_marshal = {
+			traits = { media_personality infantry_officer war_hero master_of_desert_warfare }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	AZW_Mohamed_Ag_Najem = {
+		name = AZW_Mohamed_Ag_Najem
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZW/AZW_Mohamed_Ag_Najem.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/AZW/AZW_Mohamed_Ag_Najem.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	AZW_Inkinane_Ag_Attaher = {
+		name = AZW_Inkinane_Ag_Attaher
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZW/AZW_Inkinane_Ag_Attaher.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/AZW/AZW_Inkinane_Ag_Attaher.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ camouflage_expert }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+}

@@ -1,0 +1,42 @@
+add_namespace = AD_SUD
+
+country_event = {
+	id = AD_SUD.0
+	title = AD_SUD.0.t
+	desc = AD_SUD.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_SUD.0" }
+	option = {
+		name = AD_SUD.0.a
+		
+		create_dynamic_country = {
+			original_tag = ROOT
+			copy_tag = ROOT
+			reserve_dynamic_country = yes
+			set_cosmetic_tag = SUD_rapid_support_forces
+			SUD = { SUD_Hemetti = { set_nationality = RSF } }
+			promote_character = SUD_Hemetti
+			set_popularities = { centrism = 100 }
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			set_country_flag = militia_bandits
+			
+			add_ideas = {
+				AD_surrender_limit_spirit_idea
+				AD_lack_of_social_programs
+			}
+			
+			transfer_state = 191
+			add_threat = 0.07
+			load_oob = "RSF_oob"
+			
+			  
+			declare_war_on = { target = ROOT type = civil_war }
+
+			add_civil_war_target = ROOT
+			ROOT = { 
+				add_civil_war_target = PREV 
+			}
+		}	
+	}
+}

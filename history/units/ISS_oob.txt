@@ -1,0 +1,184 @@
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+	}
+}
+
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Régiment d'Infanterie a Anderambukan"
+		location = 4940
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Abala"
+		location = 5
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Labbezanga"
+		location = 544
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Tilliya"
+		location = 4940
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Anderambukan"
+		location = 2740
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Menaka"
+		location = 300
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Menaka"
+		location = 4946
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Anderambukan"
+		location = 4940
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Abala"
+		location = 5
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Bankilare"
+		location = 4870
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+	division= {	
+		name = "Régiment d'Infanterie a Gorom-Gorom"
+		location = 2615
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.77
+	}
+}

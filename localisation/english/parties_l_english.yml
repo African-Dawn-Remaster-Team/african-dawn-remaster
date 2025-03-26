@@ -1,0 +1,69 @@
+﻿l_english:
+ 
+ ###
+ fundamentalism: "Fundamentalism"
+ fundamentalism_noun: "Fundamentalism"
+ fundamentalism_desc: "Fundamentalism"
+ 
+ takfirism: "Takfirism"
+ jihadism: "Jihadism"
+ salafism: "Salafism" 
+ ###
+ 
+ ###
+ conservatism: "Conservatism"
+ conservatism_noun: "Conservatism"
+ conservatism_desc: "Conservatism"
+ 
+ islamic_democracy: "Islamic Democracy"
+ christian_democracy: "Christian Democracy"
+ ###
+ 
+ ###
+ centrism: "Centrism"
+ centrism_noun: "Centrism"
+ centrism_desc: ""
+ 
+ centrism_sub: "Centrism"
+ ###
+ 
+ ###
+ liberalism: "Liberalism"
+ liberalism_noun: "Liberalism"
+ liberalism_desc: ""
+ 
+ liberalism_sub: "Liberalism"
+ ###
+ 
+ ###
+ social_democracy: "Social Democracy"
+ social_democracy_noun: "Social Democracy"
+ social_democracy_desc: ""
+ 
+ social_democracy_sub: "Social Democracy"
+ ###
+ 
+ ###
+ socialism: "Socialism"
+ socialism_noun: "Socialism"
+ socialism_desc: ""
+ 
+ third_world_theory: "Third World Theory"
+ african_socialism: "African Socialism"
+ left_wing_nationalism: "Left-Wing Nationalism"
+ 
+ ###EQG### 
+ EQG_centrism_party: "DPEG"
+ EQG_centrism_party_long: "Democratic Party of Equatorial Guinea"
+ EQG_conservatism_party: "Party of Progress"
+ EQG_social_democracy_party: "Convergence for Social Democracy"
+ EQG_liberalism_party: "Citizens for Innovation"
+ 
+ ###CAR### 
+ CAR_centrism_party: "United Hearts"
+ CAR_centrism_party_long: "United Hearts Movement" 
+ CAR_social_democracy_party: "Kwa Na Kwa"
+ CAR_social_democracy_party_long: "National Convergence Kwa Na Kwa"
+ CAR_liberalism_party: "UCAR"
+ CAR_liberalism_party_long: "Union for Central African Renewal"
+ CAR_conservatism_party: "Kodro Ti Mo Ko Zo Si"

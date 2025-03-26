@@ -1,0 +1,31 @@
+state={
+	id=19
+	name="STATE_19"
+	provinces={
+		294 309 369 382 900 1056 1126 1269 1358 1809 2128 2247 2315 2459 2618 2764 2884 3091 3174 3325 3331 3815 5023 5024 5025 5026 5027 5028 5029 5030 5031 
+	}
+	resources = {
+		oil = 4
+	}
+	history={
+		owner = TUN
+		add_core_of = TUN
+		victory_points = { 5030 11 }
+		victory_points = { 5024 10 }
+		victory_points = { 3174 5 }
+		victory_points = { 2128 3 }
+		victory_points = { 2884 3 }
+		victory_points = { 2247 3 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 2
+			5030 = { naval_base = 3 }
+			5024 = { naval_base = 3 }
+		}
+	}
+	manpower=9887631
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

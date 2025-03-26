@@ -1,0 +1,131 @@
+
+# tag aliases are country tags that maps to different countries depending on a set of triggers
+
+# operative operation target
+# only set for majors who has agency
+# set on on_weekly
+
+MOT = {
+	variable = generic_operation_target
+}
+
+#### AD
+
+###CAR###
+
+ABK = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_anti_balaka
+}
+
+RRR = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_return_recovery_rehabilitation
+}
+
+CAP = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_central_african_peace_union
+}
+
+FPR = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_people_front_for_the_rebirth_of_central_africa
+}
+
+MPC = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_movement_of_patriots_of_central_africa
+}
+
+RPR = {
+	original_tag = CAR
+	OR = {
+		has_cosmetic_tag = CAR_patriotic_movement_for_the_renewal_of_central_africa
+		has_cosmetic_tag = CAR_party_of_the_rally_of_the_central_african_nation
+	}
+}
+
+MLC = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_liberation_movement_for_justice_of_central_africa
+}
+
+MSA = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_misseriya_arabs
+}
+
+AZN = {
+	original_tag = CAR
+	has_cosmetic_tag = CAR_azande_militia
+}
+
+ISW = {
+	original_tag = NGA
+	has_cosmetic_tag = NGA_islamic_state_west_africa_province
+}
+
+FCT = {
+	original_tag = CHA
+	has_cosmetic_tag = CHA_front_for_change_and_concord_in_chad 
+}
+
+#MLI
+JNA = {
+	original_tag = MLI
+	has_cosmetic_tag = MLI_jamaat_nasr_alIslam_wal_muslimin
+}
+
+ISS = {
+	original_tag = MLI
+	has_cosmetic_tag = MLI_islamic_state_sahel_province
+}
+
+ISP = {
+	original_tag = NRG
+	has_cosmetic_tag = NRG_islamic_state_west_africa_province
+}
+
+GTI = {
+	original_tag = MLI
+	has_cosmetic_tag = MLI_imghad_tuareg_selfdefense_group_and_allies 
+}
+
+AZW = {
+	original_tag = MLI
+	OR = {
+		has_cosmetic_tag = MLI_national_movement_for_the_liberation_of_azawad
+		has_cosmetic_tag = MLI_front_liberation_azawad
+	}
+}
+#LBY
+
+DLG = {
+	original_tag = LBY
+	has_cosmetic_tag = LBY_government_of_national_accord
+}
+
+TOU = {
+	original_tag = LBY
+	has_cosmetic_tag = LBY_toubou_front_for_the_salvation_of_libya 
+}
+
+#CMR
+AMB = {
+	original_tag = CMR
+	has_cosmetic_tag = AMB
+}
+
+#SUD
+RSF = {
+	original_tag = SUD
+	has_cosmetic_tag = SUD_rapid_support_forces
+}
+
+#UGA
+
+LRA = {
+	original_tag = UGA
+	has_cosmetic_tag = UGA_lord_resistance_army
+}

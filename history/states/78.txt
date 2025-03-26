@@ -1,0 +1,21 @@
+state={
+	id=78
+	name="STATE_78"
+	provinces={
+		730 2164 3734 3898 3899 3900 3901 
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 2164 5 }
+		victory_points = { 3734 3 }
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+	manpower=92409
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

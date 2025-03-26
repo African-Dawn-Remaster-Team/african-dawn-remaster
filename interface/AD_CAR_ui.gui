@@ -1,0 +1,1412 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "CAR_ngakola_and_tere_scripted_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 400 }
+		
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+			position = { x = -10 y = 0 }
+		}	
+		iconType = {
+			name = "CAR_ngakola_and_tere_circle_bar"
+			quadTextureSprite = "GFX_ngakola_and_tere_circle_bar"
+			position = { x = 380 y = -198 }
+			rotation = -3.14
+		}
+		iconType = {
+			name = "CAR_ngakola_and_tere_icon"
+			spriteType = "GFX_ngakola_and_tere_icon"
+			position = { x = 100 y = 40 }
+			pdx_tooltip = "CAR_ngakola_and_tere_tt"
+		}
+	}
+	
+	containerWindowType = {
+		name = "CAR_integration_of_anti_balaka_scripted_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 400 }
+		
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+			position = { x = -10 y = 0 }
+		}	
+		iconType = {
+			name = "CAR_integration_of_anti_balaka_circle_bar"
+			quadTextureSprite = "GFX_ngakola_and_tere_circle_bar"
+			position = { x = 380 y = -198 }
+			rotation = -3.14
+		}
+		iconType = {
+			name = "CAR_ngakola_and_tere_icon"
+			spriteType = "GFX_ngakola_and_tere_icon"
+			position = { x = 100 y = 40 }
+			pdx_tooltip = "CAR_integration_of_anti_balaka_tt"
+		}
+	}
+	
+	containerWindowType = {
+		name = "CAR_field_commanders_scripted_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 1100 }
+		
+		containerWindowType = {
+			name = "CAR_field_commanders_desc_window"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 490 }
+			
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_paper_w_frame_bg"
+				position = { x = -8 y = 0 }
+			}
+			
+			instantTextboxType = {
+				name = "CAR_field_commanders_map_desc"
+				position = { x = -3 y = 20 }
+				font = "hoi_36header"
+				text = "CAR_field_commanders_map_desc"
+				maxWidth = 500
+				maxHeight = 20
+				format = center
+				vertical_alignment = center				
+			}
+			
+			instantTextboxType = {
+				name = "CAR_field_commanders_desc"
+				position = { x = -3 y = 400 }
+				font = "hoi_36header"
+				text = "CAR_field_commanders_desc"
+				maxWidth = 500
+				maxHeight = 20
+				format = center
+				vertical_alignment = center				
+			}
+			
+			iconType = {
+				name = "GFX_23_NONE"
+				spriteType = "GFX_23_NONE"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_NONE"
+				spriteType = "GFX_38_NONE"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_NONE"
+				spriteType = "GFX_39_NONE"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_NONE"
+				spriteType = "GFX_43_NONE"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_NONE"
+				spriteType = "GFX_44_NONE"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_NONE"
+				spriteType = "GFX_45_NONE"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_NONE"
+				spriteType = "GFX_46_NONE"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_NONE"
+				spriteType = "GFX_47_NONE"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_NONE"
+				spriteType = "GFX_48_NONE"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_NONE"
+				spriteType = "GFX_49_NONE"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_NONE"
+				spriteType = "GFX_50_NONE"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_NONE"
+				spriteType = "GFX_51_NONE"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_NONE"
+				spriteType = "GFX_53_NONE"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_NONE"
+				spriteType = "GFX_54_NONE"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_NONE"
+				spriteType = "GFX_56_NONE"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_NONE"
+				spriteType = "GFX_60_NONE"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_NONE"
+				spriteType = "GFX_76_NONE"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_NONE"
+				spriteType = "GFX_78_NONE"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_NONE"
+				spriteType = "GFX_80_NONE"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###CAR###
+			iconType = {
+				name = "GFX_23_CAR"
+				spriteType = "GFX_23_CAR"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_CAR"
+				spriteType = "GFX_38_CAR"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_CAR"
+				spriteType = "GFX_39_CAR"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_CAR"
+				spriteType = "GFX_43_CAR"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_CAR"
+				spriteType = "GFX_44_CAR"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_CAR"
+				spriteType = "GFX_45_CAR"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_CAR"
+				spriteType = "GFX_46_CAR"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_CAR"
+				spriteType = "GFX_47_CAR"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_CAR"
+				spriteType = "GFX_48_CAR"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_CAR"
+				spriteType = "GFX_49_CAR"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_CAR"
+				spriteType = "GFX_50_CAR"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_CAR"
+				spriteType = "GFX_51_CAR"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_CAR"
+				spriteType = "GFX_53_CAR"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_CAR"
+				spriteType = "GFX_54_CAR"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_CAR"
+				spriteType = "GFX_56_CAR"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_CAR"
+				spriteType = "GFX_60_CAR"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_CAR"
+				spriteType = "GFX_76_CAR"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_CAR"
+				spriteType = "GFX_78_CAR"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_CAR"
+				spriteType = "GFX_80_CAR"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###ABK###
+			iconType = {
+				name = "GFX_23_ABK"
+				spriteType = "GFX_23_ABK"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_ABK"
+				spriteType = "GFX_38_ABK"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_ABK"
+				spriteType = "GFX_39_ABK"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_ABK"
+				spriteType = "GFX_43_ABK"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_ABK"
+				spriteType = "GFX_44_ABK"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_ABK"
+				spriteType = "GFX_45_ABK"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_ABK"
+				spriteType = "GFX_46_ABK"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_ABK"
+				spriteType = "GFX_47_ABK"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_ABK"
+				spriteType = "GFX_48_ABK"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_ABK"
+				spriteType = "GFX_49_ABK"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_ABK"
+				spriteType = "GFX_50_ABK"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_ABK"
+				spriteType = "GFX_51_ABK"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_ABK"
+				spriteType = "GFX_53_ABK"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_ABK"
+				spriteType = "GFX_54_ABK"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_ABK"
+				spriteType = "GFX_56_ABK"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_ABK"
+				spriteType = "GFX_60_ABK"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_ABK"
+				spriteType = "GFX_76_ABK"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_ABK"
+				spriteType = "GFX_78_ABK"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_ABK"
+				spriteType = "GFX_80_ABK"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###FPR###
+			iconType = {
+				name = "GFX_23_FPR"
+				spriteType = "GFX_23_FPR"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_FPR"
+				spriteType = "GFX_38_FPR"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_FPR"
+				spriteType = "GFX_39_FPR"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_FPR"
+				spriteType = "GFX_43_FPR"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_FPR"
+				spriteType = "GFX_44_FPR"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_FPR"
+				spriteType = "GFX_45_FPR"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_FPR"
+				spriteType = "GFX_46_FPR"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_FPR"
+				spriteType = "GFX_47_FPR"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_FPR"
+				spriteType = "GFX_48_FPR"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_FPR"
+				spriteType = "GFX_49_FPR"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_FPR"
+				spriteType = "GFX_50_FPR"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_FPR"
+				spriteType = "GFX_51_FPR"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_FPR"
+				spriteType = "GFX_53_FPR"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_FPR"
+				spriteType = "GFX_54_FPR"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_FPR"
+				spriteType = "GFX_56_FPR"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_FPR"
+				spriteType = "GFX_60_FPR"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_FPR"
+				spriteType = "GFX_76_FPR"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_FPR"
+				spriteType = "GFX_78_FPR"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_FPR"
+				spriteType = "GFX_80_FPR"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###MLC###
+			iconType = {
+				name = "GFX_23_MLC"
+				spriteType = "GFX_23_MLC"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_MLC"
+				spriteType = "GFX_38_MLC"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_MLC"
+				spriteType = "GFX_39_MLC"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_MLC"
+				spriteType = "GFX_43_MLC"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_MLC"
+				spriteType = "GFX_44_MLC"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_MLC"
+				spriteType = "GFX_45_MLC"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_MLC"
+				spriteType = "GFX_46_MLC"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_MLC"
+				spriteType = "GFX_47_MLC"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_MLC"
+				spriteType = "GFX_48_MLC"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_MLC"
+				spriteType = "GFX_49_MLC"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_MLC"
+				spriteType = "GFX_50_MLC"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_MLC"
+				spriteType = "GFX_51_MLC"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_MLC"
+				spriteType = "GFX_53_MLC"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_MLC"
+				spriteType = "GFX_54_MLC"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_MLC"
+				spriteType = "GFX_56_MLC"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_MLC"
+				spriteType = "GFX_60_MLC"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_MLC"
+				spriteType = "GFX_76_MLC"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_MLC"
+				spriteType = "GFX_78_MLC"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_MLC"
+				spriteType = "GFX_80_MLC"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###CAP###
+			iconType = {
+				name = "GFX_23_CAP"
+				spriteType = "GFX_23_CAP"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_CAP"
+				spriteType = "GFX_38_CAP"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_CAP"
+				spriteType = "GFX_39_CAP"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_CAP"
+				spriteType = "GFX_43_CAP"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_CAP"
+				spriteType = "GFX_44_CAP"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_CAP"
+				spriteType = "GFX_45_CAP"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_CAP"
+				spriteType = "GFX_46_CAP"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_CAP"
+				spriteType = "GFX_47_CAP"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_CAP"
+				spriteType = "GFX_48_CAP"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_CAP"
+				spriteType = "GFX_49_CAP"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_CAP"
+				spriteType = "GFX_50_CAP"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_CAP"
+				spriteType = "GFX_51_CAP"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_CAP"
+				spriteType = "GFX_53_CAP"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_CAP"
+				spriteType = "GFX_54_CAP"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_CAP"
+				spriteType = "GFX_56_CAP"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_CAP"
+				spriteType = "GFX_60_CAP"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_CAP"
+				spriteType = "GFX_76_CAP"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_CAP"
+				spriteType = "GFX_78_CAP"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_CAP"
+				spriteType = "GFX_80_CAP"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###MPC###
+			iconType = {
+				name = "GFX_23_MPC"
+				spriteType = "GFX_23_MPC"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_MPC"
+				spriteType = "GFX_38_MPC"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_MPC"
+				spriteType = "GFX_39_MPC"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_MPC"
+				spriteType = "GFX_43_MPC"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_MPC"
+				spriteType = "GFX_44_MPC"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_MPC"
+				spriteType = "GFX_45_MPC"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_MPC"
+				spriteType = "GFX_46_MPC"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_MPC"
+				spriteType = "GFX_47_MPC"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_MPC"
+				spriteType = "GFX_48_MPC"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_MPC"
+				spriteType = "GFX_49_MPC"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_MPC"
+				spriteType = "GFX_50_MPC"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_MPC"
+				spriteType = "GFX_51_MPC"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_MPC"
+				spriteType = "GFX_53_MPC"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_MPC"
+				spriteType = "GFX_54_MPC"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_MPC"
+				spriteType = "GFX_56_MPC"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_MPC"
+				spriteType = "GFX_60_MPC"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_MPC"
+				spriteType = "GFX_76_MPC"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_MPC"
+				spriteType = "GFX_78_MPC"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_MPC"
+				spriteType = "GFX_80_MPC"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###RPR###
+			iconType = {
+				name = "GFX_23_RPR"
+				spriteType = "GFX_23_RPR"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_RPR"
+				spriteType = "GFX_38_RPR"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_RPR"
+				spriteType = "GFX_39_RPR"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_RPR"
+				spriteType = "GFX_43_RPR"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_RPR"
+				spriteType = "GFX_44_RPR"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_RPR"
+				spriteType = "GFX_45_RPR"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_RPR"
+				spriteType = "GFX_46_RPR"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_RPR"
+				spriteType = "GFX_47_RPR"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_RPR"
+				spriteType = "GFX_48_RPR"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_RPR"
+				spriteType = "GFX_49_RPR"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_RPR"
+				spriteType = "GFX_50_RPR"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_RPR"
+				spriteType = "GFX_51_RPR"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_RPR"
+				spriteType = "GFX_53_RPR"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_RPR"
+				spriteType = "GFX_54_RPR"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_RPR"
+				spriteType = "GFX_56_RPR"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_RPR"
+				spriteType = "GFX_60_RPR"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_RPR"
+				spriteType = "GFX_76_RPR"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_RPR"
+				spriteType = "GFX_78_RPR"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_RPR"
+				spriteType = "GFX_80_RPR"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+			###RRR###
+			iconType = {
+				name = "GFX_23_RRR"
+				spriteType = "GFX_23_RRR"
+				position = { x = 122 y = 213 }
+				scale = 0.8
+				pdx_tooltip = "CAR_23_controller"
+			}
+			iconType = {
+				name = "GFX_38_RRR"
+				spriteType = "GFX_38_RRR"
+				position = { x = 45 y = 212 }
+				scale = 0.8
+				pdx_tooltip = "CAR_38_controller"
+			}
+			iconType = {
+				name = "GFX_39_RRR"
+				spriteType = "GFX_39_RRR"
+				position = { x = 60 y = 250 }
+				scale = 0.8
+				pdx_tooltip = "CAR_39_controller"
+			}
+			iconType = {
+				name = "GFX_43_RRR"
+				spriteType = "GFX_43_RRR"
+				position = { x = 123 y = 190 }
+				scale = 0.8
+				pdx_tooltip = "CAR_43_controller"
+			}
+			iconType = {
+				name = "GFX_44_RRR"
+				spriteType = "GFX_44_RRR"
+				position = { x = 52 y = 173 }
+				scale = 0.8
+				pdx_tooltip = "CAR_44_controller"
+			}
+			iconType = {
+				name = "GFX_45_RRR"
+				spriteType = "GFX_45_RRR"
+				position = { x = 56 y = 140 }
+				scale = 0.8
+				pdx_tooltip = "CAR_45_controller"
+			}
+			iconType = {
+				name = "GFX_46_RRR"
+				spriteType = "GFX_46_RRR"
+				position = { x = 103 y = 128 }
+				scale = 0.8
+				pdx_tooltip = "CAR_46_controller"
+			}
+			iconType = {
+				name = "GFX_47_RRR"
+				spriteType = "GFX_47_RRR"
+				position = { x = 178 y = 108 }
+				scale = 0.8
+				pdx_tooltip = "CAR_47_controller"
+			}
+			iconType = {
+				name = "GFX_48_RRR"
+				spriteType = "GFX_48_RRR"
+				position = { x = 188 y = 185 }
+				scale = 0.6
+				pdx_tooltip = "CAR_48_controller"
+			}
+			iconType = {
+				name = "GFX_49_RRR"
+				spriteType = "GFX_49_RRR"
+				position = { x = 214 y = 165 }
+				scale = 0.8
+				pdx_tooltip = "CAR_49_controller"
+			}
+			iconType = {
+				name = "GFX_50_RRR"
+				spriteType = "GFX_50_RRR"
+				position = { x = 250 y = 215 }
+				scale = 0.4
+				pdx_tooltip = "CAR_50_controller"
+			}
+			iconType = {
+				name = "GFX_51_RRR"
+				spriteType = "GFX_51_RRR"
+				position = { x = 280 y = 175 }
+				scale = 0.8
+				pdx_tooltip = "CAR_51_controller"
+			}
+			iconType = {
+				name = "GFX_53_RRR"
+				spriteType = "GFX_53_RRR"
+				position = { x = 270 y = 55 }
+				scale = 0.8
+				pdx_tooltip = "CAR_53_controller"
+			}
+			iconType = {
+				name = "GFX_54_RRR"
+				spriteType = "GFX_54_RRR"
+				position = { x = 260 y = 112 }
+				scale = 1.0
+				pdx_tooltip = "CAR_54_controller"
+			}
+			iconType = {
+				name = "GFX_56_RRR"
+				spriteType = "GFX_56_RRR"
+				position = { x = 215 y = 82 }
+				scale = 0.9
+				pdx_tooltip = "CAR_56_controller"
+			}
+			iconType = {
+				name = "GFX_60_RRR"
+				spriteType = "GFX_60_RRR"
+				position = { x = 345 y = 165 }
+				scale = 0.6
+				pdx_tooltip = "CAR_60_controller"
+			}
+			iconType = {
+				name = "GFX_76_RRR"
+				spriteType = "GFX_76_RRR"
+				position = { x = 188 y = 245 }
+				scale = 0.3
+				pdx_tooltip = "CAR_76_controller"
+			}
+			iconType = {
+				name = "GFX_78_RRR"
+				spriteType = "GFX_78_RRR"
+				position = { x = 127 y = 108 }
+				scale = 1.0
+				pdx_tooltip = "CAR_78_controller"
+			}
+			iconType = {
+				name = "GFX_80_RRR"
+				spriteType = "GFX_80_RRR"
+				position = { x = 57 y = 120 }
+				scale = 0.7
+				pdx_tooltip = "CAR_80_controller"
+			}
+		}
+		
+		containerWindowType = {
+			name = "aye"
+			position = { x = 0 y = 485 }
+			size = { width = 100% height = 630 }
+			verticalScrollbar = "right_vertical_slider_intel"
+			scroll_wheel_factor = 80
+			smooth_scrolling = yes
+			
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_plain_bg"
+				position = { x = -10 y = 0 }
+			}
+			gridboxtype = {
+				name = "CAR_field_commanders_grid"
+				position = { x = 0 y = 0 }
+				Orientation = upper_left
+				format = "UPPER_LEFT"
+				slotsize = { width = 0 height = 210 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+	}
+		
+	containerWindowType = {
+		name = "CAR_field_commanders_ui_entry"
+		position = { x = 0 y = 70 }
+		size = { width = 100%% height = 150 }
+		
+		iconType = {
+			name = "background1"
+			spriteType = "GFX_profile_background_1_1"
+			position = { x = 0 y = 0 }
+			scale = 0.9
+		}
+		iconType = {
+			name = "background2"
+			spriteType = "GFX_group_div_count_bg"
+			position = { x = 210 y = 45 }
+		}
+		iconType = {
+			name = "CAR_flag"
+			spriteType = "GFX_player_flag"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name = "CAR_leader_of_mpc"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Mahamat_Al_Khatim"
+			scale = 0.5
+		}
+		iconType = {
+			name = "CAR_leader_of_antibalaka"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Maxime_Mokom"
+			scale = 0.5
+		}
+		iconType = {
+			name = "CAR_leader_of_central_african_peace_union"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Ali_Darassa"
+			scale = 0.5
+		}
+		iconType = {
+			name = "CAR_leader_of_return_recovery_rehabilitation"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Bi_Sidi_Souleymane"
+			scale = 0.5
+		}
+		iconType = {
+			name = "CAR_leader_of_patriotic_movement_for_the_renewal_of_central_africa"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Zakaria_Damane"
+			scale = 0.5
+		}
+		iconType = {
+			name = "CAR_leader_of_liberation_movement_for_justice_of_central_africa"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Abakar_Sabone"
+			scale = 0.5
+		}
+		iconType = {
+			name = "CAR_leader_of_people_front_for_the_rebirth_of_central_africa"
+			position = { x = 405 y = 7 }
+			spriteType = "GFX_portrait_CAR_Noureddine_Adam"
+			scale = 0.5
+		}
+		instantTextboxType = {
+			name = "CAR_field_commanders_names"
+			position = { x = 0 y = -50 }
+			font = "hoi_36header"
+			text = "CAR_field_commanders_names"
+			maxWidth = 480
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}
+		instantTextboxType = {
+			name = "CAR_field_commanders_vars"
+			position = { x = 0 y = 50 }
+			font = "hoi_36header"
+			text = "[?THIS.CAR_loyality_for_ccr]"
+			maxWidth = 510
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}
+		iconType = {
+			name = "leader_frame"
+			spriteType = "GFX_marshal_group_frame_unselected"
+			position = { x = 395 y = -1 }
+			pdx_tooltip = "CAR_leader_names"
+			scale = 1.1
+		}
+	}
+}

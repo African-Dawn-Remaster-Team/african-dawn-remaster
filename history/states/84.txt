@@ -1,0 +1,24 @@
+
+state={
+	id=84
+	name="STATE_84"
+
+	history={
+		owner = CMR
+		add_core_of = CMR
+		victory_points = { 1558 5 }
+		victory_points = { 1966 3 }
+		buildings = {
+			infrastructure = 1
+			3705 = { dam = 1 }
+		}
+	}
+
+	provinces={
+		174 474 1263 1421 1474 1558 1638 1966 2011 2443 3705 3731 
+	}
+	manpower=2442578
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

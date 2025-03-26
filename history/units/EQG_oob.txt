@@ -1,0 +1,36 @@
+division_template = {
+	name = "Batallón de Infantería Ligera"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+	}
+	support={
+		military_police={ x=0 y=0 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Batallón de Infantería Ligera de Malabo"
+		location = 2964
+		division_template = "Batallón de Infantería Ligera"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Batallón de Infantería Ligera de Bata"
+		location = 3854
+		division_template = "Batallón de Infantería Ligera"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "Batallón de Infantería Ligera de Mongomo"
+		location = 759
+		division_template = "Batallón de Infantería Ligera"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

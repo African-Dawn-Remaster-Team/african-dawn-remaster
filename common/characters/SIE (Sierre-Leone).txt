@@ -1,0 +1,18 @@
+characters = {
+
+	SIE_Julius_Maada_Bio = {
+		name = SIE_Julius_Maada_Bio
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SIE/SIE_Julius_Maada_Bio.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JULIUS_MAADA_BIO_VAZ_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

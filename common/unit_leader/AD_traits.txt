@@ -1,0 +1,41 @@
+leader_traits = {
+	gendarmerie_officer = {
+		type = corps_commander
+		trait_type = personality_trait
+		allowed = {
+			FROM = {
+				tag = BFA
+			}
+		}
+		gain_xp = {
+			always = no			# not gainable
+		}
+		unit_type = {
+			type = light_infantry_opol_on_guntruck
+		}
+		modifier = {
+			modifier_army_sub_unit_light_infantry_opol_on_guntruck_defence_factor = 0.05
+			modifier_army_sub_unit_light_infantry_opol_on_guntruck_speed_factor = 0.05
+			modifier_army_sub_unit_light_infantry_opol_on_guntruck_max_org_factor = 0.05
+		}
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	master_of_desert_warfare = {
+		type = corps_commander
+		trait_type = personality_trait
+		modifier = {
+			desert = {
+				movement = 0.1
+				attack = 0.2
+				defence = 0.15
+			}
+			acclimatization_hot_climate_gain_factor = 0.25
+		}
+		new_commander_weight = {
+			base = 0
+		}
+	}
+
+}

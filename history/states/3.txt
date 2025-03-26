@@ -1,0 +1,24 @@
+state={
+	id=3
+	name="STATE_3"
+	provinces={
+		1067 1296 1899 3054 3656 3671 3908 4609 4610 4611 
+	}
+	resources = {
+		aluminium = 4
+	}
+	history={
+		owner = GNB
+		add_core_of = GNB 
+		victory_points = { 4611 10 }
+		victory_points = { 4610 3 }
+		buildings = {
+			infrastructure = 1
+			4611 = { naval_base = 3 }
+		}
+	}
+	manpower=2016000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

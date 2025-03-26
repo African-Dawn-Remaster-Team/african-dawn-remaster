@@ -1,0 +1,33 @@
+CHA_lend_lease_for_car = {
+	allowed = { tag = CHA }
+	enable = {
+		CAR = {
+			has_completed_focus = CAR_restoring_contacts_with_chad
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = CAR value = 500 					   			 }
+	ai_strategy = { type = send_lend_lease_desire  id = CAR value = 500 					   			 }
+	ai_strategy = { type = send_volunteers_desire  id = CAR value = 500 					   			 }
+	ai_strategy = { type = diplo_action_acceptance id = CAR value = 500   target = non_aggression_pact   }
+	ai_strategy = { type = send_volunteers_desire  id = CAR value = 500   target = non_aggression_pact   }
+	ai_strategy = { type = alliance 			   id = CAR value = 500 					   			 }
+}
+
+CHA_lend_lease_for_ngr = {
+	allowed = { tag = CHA }
+	enable = {
+		NGR = {
+			has_completed_focus = NGR_interaction_with_the_authorities_of_ndjamena
+			NOT = { has_war_with = ROOT }
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = NGR value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = NGR value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = NGR value = 500 }
+}

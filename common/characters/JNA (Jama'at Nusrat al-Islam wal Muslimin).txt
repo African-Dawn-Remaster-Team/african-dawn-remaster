@@ -1,0 +1,113 @@
+characters = {
+    JNA_Iyad_Ag_Ghaly = {
+		name = JNA_Iyad_Ag_Ghaly
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JNA/JNA_Iyad_Ag_Ghaly.dds"
+			}
+			army = {
+				large = "gfx/leaders/JNA/JNA_Iyad_Ag_Ghaly.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IYAD_AG_GHALY_DESC"
+			ideology = fundamentalism_subtype_salafism 
+		}
+		field_marshal = {
+			traits = { media_personality war_hero trait_cautious harsh_leader master_of_desert_warfare }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+	
+	JNA_Amadou_Koufa  = {
+		name = JNA_Amadou_Koufa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JNA/JNA_Amadou_Koufa.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/JNA/JNA_Amadou_Koufa.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher brilliant_strategist desert_fox }
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	
+	JNA_Djaffar_Dicko  = {
+		name = JNA_Djaffar_Dicko
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JNA/JNA_Djaffar_Dicko.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/JNA/JNA_Djaffar_Dicko.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_2_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher trait_reckless }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	
+	JNA_Sidane_Ag_Hita = {
+		name = JNA_Sidane_Ag_Hita
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JNA/JNA_Sidane_Ag_Hita.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/JNA/JNA_Sidane_Ag_Hita.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_3_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher inflexible_strategist master_of_desert_warfare }
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	
+	JNA_Abderrahmane_Talha = {
+		name = JNA_Abderrahmane_Talha
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JNA/JNA_Abderrahmane_Talha.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_4_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/JNA/JNA_Abderrahmane_Talha.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_4_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ ambusher inflexible_strategist master_of_desert_warfare }
+			skill=4
+			attack_skill=2
+			defense_skill=5
+			planning_skill=1
+			logistics_skill=4
+		}
+	}
+}

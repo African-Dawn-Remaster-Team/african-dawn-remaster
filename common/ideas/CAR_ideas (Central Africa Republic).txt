@@ -1,0 +1,373 @@
+ideas = {
+	country = {
+		
+		CAR_khartoum_agreement_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				custom_modifier_tooltip = CAR_khartoum_agreement_idea_tt
+			}
+			targeted_modifier = {
+				tag = CAR
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = ABK
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = RRR
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = CAP
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = FRP
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = MPC
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = PRP
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = MLC
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = LRA
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+			targeted_modifier = {
+				tag = MSA
+				attack_bonus_against = -2
+				defense_bonus_against = 1
+			}
+		}
+		
+		CAR_ethnic_conflicts_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				stability_factor = -0.2
+				drift_defence_factor = 1
+				AD_personal_value_modifier = 0.04
+			}
+		}
+		
+		CAR_ethnic_conflicts_idea_1 = {
+			name = CAR_ethnic_conflicts_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				stability_factor = -0.1
+				drift_defence_factor = 0.5
+				required_garrison_factor = -0.4
+				resistance_target = -0.25
+				AD_personal_value_modifier = 0.02
+			}
+		}
+		
+		CAR_return_of_bozize_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				social_democracy_drift = 0.05
+			}
+		}
+		
+		CAR_weakness_of_the_armed_forces_idea = {	#for BK
+			name = CAR_weakness_of_the_armed_forces_modifier
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_org_factor = -0.2
+				army_org_regain = -0.3
+				training_time_army_factor = 0.2
+				dig_in_speed_factor = -0.1
+				army_leader_cost_factor = 0.2
+				pocket_penalty = 1
+			}
+		}
+		
+		CAR_russian_instructors_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				experience_gain_army_factor = 0.25
+				minimum_training_level = -0.05
+				land_doctrine_cost_factor = -0.05
+			}
+		}
+		
+		CAR_russian_instructors_idea_1 = {
+			name = CAR_russian_instructors_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				experience_gain_army_factor = 0.25
+				minimum_training_level = -0.05
+				land_doctrine_cost_factor = -0.05
+				recon_factor = 0.07
+				supply_consumption_factor = -0.04
+				motorized_attack_factor = 0.1
+			}
+		}
+		
+		CAR_russian_instructors_idea_2 = {
+			name = CAR_russian_instructors_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				experience_gain_army_factor = 0.5
+				minimum_training_level = -0.1
+				land_doctrine_cost_factor = -0.1
+			}
+		}
+		
+		CAR_embargo_on_the_sale_of_diamonds_from_the_un_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_money_from_diamonds_modifier = -1
+			}
+		}
+		
+		CAR_un_arms_embargo = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			rule = { can_access_market = no }
+		}
+		
+		CAR_shadow_schemes_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_money_from_diamonds_modifier = -0.6
+			}
+		}
+		
+		UGA_lord_resistance_army_idea = {
+			name = UGA_lord_resistance_army
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_defence_factor = 0.35
+				army_morale_factor = 0.22
+				army_org_regain = 0.2
+				experience_loss_factor = -0.1
+				terrain_penalty_reduction = 0.3
+				equipment_capture = 0.2
+				equipment_capture_factor = 0.5
+				weekly_manpower = 1
+				resistance_target = -0.5
+				required_garrison_factor = -0.99
+			}
+		}
+		
+		CAR_disorganization_of_the_rebels_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { is_dynamic_country = yes }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_attack_factor = -0.25
+				army_org_factor = -0.3
+			}
+		}
+		
+		CAR_fight_against_seleka_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_attack_factor = 0.45
+			}
+		}
+		
+		CAR_disloyalty_of_the_militants_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_attack_factor = -0.75
+				army_defence_factor = -0.75
+				army_org_regain = -0.75
+				army_fuel_consumption_factor = 0.3
+			}
+		}
+		
+		CAR_mining_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		
+		CAR_industrial_development_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_arms_factory_factor = 0.25
+				production_speed_hospital_factor = 0.25
+				production_speed_university_factor = 0.25
+			}
+		}
+		
+		CAR_azande_ani_kny_gbe_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				drift_defence_factor = 0.4
+			}
+		}
+		
+		CAR_anger_of_ngakola_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_org_factor = -0.1
+				army_defence_factor = -0.05
+				army_org_regain = -0.08
+			}
+		}
+		
+		CAR_bokassa_new_five_year_plan_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_money_from_industry_modifier = 0.2
+				AD_money_from_resources_modifier = -0.1
+				production_speed_buildings_factor = 0.1
+				hidden_modifier = {AD_conditions_of_the_country_modifier = 0.5 }
+				custom_modifier_tooltip = AD_conditions_of_the_country_modifier_grow_tt
+			}
+		}
+		
+		CAR_steel_hand_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_org_factor = 0.25
+				stability_factor = -0.04
+				army_org_regain = -0.12
+				resistance_growth = -0.2
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.1
+				}
+			}
+		}
+		
+		CAR_develop_ties_with_the_sahel_alliance_of_states_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		CAR_deal_with_gbaye_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				army_attack_factor = 0.075
+				resistance_target = 0.2
+			}
+		}
+		
+		CAR_general_mobilization_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_military_expenses_cost_modifier = -0.4
+			}
+		}
+		
+		CAR_betting_on_trade_unions_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				AD_unemployment_rate_modifier = 0.25
+				AD_poverty_level_modifier = 0.25
+			}
+		}
+		
+		CAR_orange_is_the_new_red_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			picture = SPR_death_before_surrender
+			modifier = {
+				social_democracy_drift = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.12
+			}
+		}
+	}
+}

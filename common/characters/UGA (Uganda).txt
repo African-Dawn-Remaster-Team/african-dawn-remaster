@@ -1,0 +1,61 @@
+characters = {
+	UGA_Yoweri_Museveni = {
+		name = UGA_Yoweri_Museveni
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UGA/UGA_Yoweri_Museveni.dds"
+			}
+			army = {
+				large = "gfx/leaders/UGA/UGA_Yoweri_Museveni.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_YOWERI_MUSEVENI_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+	UGA_Joseph_Kony = {
+		name = UGA_Joseph_Kony
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UGA/UGA_Joseph_Kony.dds"
+			}
+			army = {
+				large = "gfx/leaders/UGA/UGA_Joseph_Kony.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSEPH_KONY_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=4
+		}
+	}
+	UGA_Doctor_Achaye = {
+		name = UGA_Doctor_Achaye
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/ALL/ALL_Generic_land_1.dds"
+				small = "gfx/leaders/ALL/ALL_Generic_land_1_small.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+}

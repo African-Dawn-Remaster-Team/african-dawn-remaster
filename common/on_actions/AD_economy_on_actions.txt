@@ -1,0 +1,137 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			set_variable = { global.AD_e_gold_cost = 2.1 }
+			set_variable = { global.AD_e_diamonds_cost = 3.3 }
+			set_variable = { global.AD_e_oil_cost = 1.8 }
+			# TODO ??
+			
+			set_variable = { global.AD_e_cost@light_infantry_opol = 0.05 }
+			set_variable = { global.AD_e_cost@light_infantry_opol_on_guntruck = 0.075 }
+			set_variable = { global.AD_e_cost@infantry = 0.125 }
+			set_variable = { global.AD_e_cost@infantry_on_btr = 0.25 }
+			set_variable = { global.AD_e_cost@infantry_on_bmp = 0.25 }
+			set_variable = { global.AD_e_cost@infantry_on_truck = 0.15 }
+			set_variable = { global.AD_e_cost@infantry_on_jeep = 0.15 }
+			set_variable = { global.AD_e_cost@light_armor_unit = 0.35 }
+			# TODO мотоциклыыы
+			
+			set_variable = { global.AD_e_cost@arms_factory = 3 }
+			
+			every_country = {
+				set_variable = { AD_current_money_var = 100 }
+			}
+		}		
+	}
+	
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { check_variable = { var = modifier@AD_france_superiority_modifier_weekly value = 0 compare = not_equals } }
+				subtract_from_variable = { AD_fo_position = modifier@AD_france_superiority_modifier_weekly }
+				AD_check_political_situation_effect = yes
+			}
+		}
+	}
+	
+	on_monthly = {
+		effect = {
+			###Месячный прирост###
+			#Доход с физ. лиц#
+			set_temp_variable = { AD_max_manpower_k_temp = max_manpower_k }
+			divide_temp_variable = { AD_max_manpower_k_temp = 100 }
+			multiply_temp_variable = { AD_max_manpower_k_temp = modifier@AD_personal_value_modifier }							#Личная ценность (на 100 тыс. населения)
+			set_variable = { AD_personal_value_recalculated_by_the_population_var = AD_max_manpower_k_temp }
+			multiply_temp_variable = { AD_max_manpower_k_temp = modifier@AD_personal_value_factor_modifier }					#Фактор личной ценности																	
+			multiply_temp_variable = { AD_max_manpower_k_temp = modifier@AD_individuals_tax_modifier }							#Индивидуальный налог
+			if = {
+				limit = { check_variable = { var = modifier@AD_money_from_taxes_modifier value = 0 compare = not_equals } }
+				set_temp_variable = { AD_money_from_taxes_temp = 1 }															#Доход от физ. налогов
+				add_to_variable = { AD_money_from_taxes_temp = modifier@AD_money_from_taxes_modifier }
+				multiply_temp_variable = { AD_max_manpower_k_temp = AD_money_from_taxes_temp }
+			}
+			set_variable = { AD_income_from_the_population_var = AD_max_manpower_k_temp }
+			
+			#Доход от промышленности#
+			set_temp_variable = { AD_num_of_factories_temp = num_of_civilian_factories }
+			multiply_temp_variable = { AD_num_of_factories_temp = modifier@AD_industrial_complex_value_modifier }				#Ценность фабрики
+			multiply_temp_variable = { AD_num_of_factories_temp = modifier@AD_industrial_complex_value_factor_modifier }		#Фактор ценности фабрики																	
+			multiply_temp_variable = { AD_num_of_factories_temp = modifier@AD_corporate_tax_modifier }							#Корпоративный налог
+			if = {
+				limit = { check_variable = { var = modifier@AD_money_from_industry_modifier value = 0 compare = not_equals } }
+				set_temp_variable = { AD_money_from_industry_temp = 1 }															#Доход от пром. налогов
+				add_to_variable = { AD_money_from_industry_temp = modifier@AD_money_from_industry_modifier }
+				multiply_temp_variable = { AD_num_of_factories_temp = AD_money_from_industry_temp }
+			}
+			set_variable = { AD_income_from_the_industry_var = AD_num_of_factories_temp }
+			
+			#Доход от экспорта#
+			AD_e_calculate_export_income = yes
+			
+			#Общий доход#
+			set_variable = { AD_e_income = AD_income_from_the_population_var }
+			add_to_variable = { AD_e_income = AD_income_from_the_industry_var }
+			add_to_variable = { AD_e_income = AD_e_income_from_resources }
+			#
+			add_to_variable = { AD_e_record_income_year = AD_e_income } # TODO !!
+			
+			##Месячный расход##
+			
+			#Законы#
+			AD_e_calculate_peoples_expense = yes
+			
+			#Содержание армии#
+			AD_e_calculate_army_expense = yes
+			
+			#Содержание военных заводов#
+			AD_e_calculate_arms_factories_expense = yes
+			
+			#Обслуживание долга#
+			AD_e_calculate_debt_service_expense = yes
+			
+			# Импорт
+			
+			#Общий расход#
+			set_variable = { AD_e_expense = AD_e_expense_from_peoples }
+			add_to_variable = { AD_e_expense = AD_e_expense_from_army }
+			add_to_variable = { AD_e_expense = AD_e_expense_from_arms_factory }
+			add_to_variable = { AD_e_expense = AD_e_expense_from_debt_service }
+			#
+			add_to_variable = { AD_e_record_expense_year = AD_e_expense } # TODO !!
+			
+			add_to_variable = { AD_current_money_var = AD_e_income }
+			subtract_from_variable = { AD_current_money_var = AD_e_expense }
+			if = { # Если казна отрицательна, прибавляется долг
+				limit = { check_variable = { AD_current_money_var < 0 } }
+				subtract_from_variable = { AD_e_debt = AD_current_money_var } # A - (-B) = A+B
+				set_variable = { AD_current_money_var = 0 }
+			}
+			else_if = { # Если казна положительна и вкл. автопогаш. долга, долг уменьшается
+				limit = { 
+					check_variable = { AD_current_money_var > 0 } 
+					check_variable = { AD_e_autopayment_debt = 2 }
+				}
+				set_temp_variable = { pay = AD_current_money_var }
+				clamp_temp_variable = { var = pay max = AD_e_debt }
+				subtract_from_variable = { AD_e_debt = pay }
+				subtract_from_variable = { AD_current_money_var = pay }
+			}
+			set_variable = { AD_e_current_balance = AD_e_income } # for loc
+			subtract_from_variable = { AD_e_current_balance = AD_e_expense }
+			
+			add_to_variable = { AD_e_fiscal_months = 1 }
+			
+			##Подсчет ВВП##
+			if = {
+				limit = { check_variable = { AD_e_fiscal_months = 12 } }
+				set_variable = { AD_e_GDP = AD_e_record_income_year }
+				add_to_variable = { AD_e_GDP = AD_e_record_expense_year }
+				multiply_variable = { AD_e_GDP = 12 }
+				set_variable = { AD_e_fiscal_months = 0 }
+			}
+			
+			add_to_variable = { AD_economy_gui_update = 1 } # for gui update
+		}
+	}
+}

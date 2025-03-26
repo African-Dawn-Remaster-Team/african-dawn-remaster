@@ -1,0 +1,61 @@
+add_namespace = AD_CHA
+
+#Восстание FACT
+country_event = {
+	id = AD_CHA.0
+	title = AD_CHA.0.t
+	desc = AD_CHA.0.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CHA.0" }
+	option = {
+		name = AD_CHA.0.a
+		create_dynamic_country = {
+			reserve_dynamic_country = yes
+			original_tag = CHA
+			copy_tag = CHA
+			add_threat = 0.01
+			set_cosmetic_tag = CHA_front_for_change_and_concord_in_chad 
+			set_popularities = { centrism = 100 }
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			set_country_flag = militia_bandits
+			
+			add_ideas = {
+				AD_surrender_limit_spirit_idea
+				AD_lack_of_social_programs 
+			}
+			
+			transfer_state = 110
+			set_province_controller = 3499
+			set_province_controller = 901
+			set_province_controller = 3315
+			set_province_controller = 930
+			set_province_controller = 2273
+			
+			load_oob = "FACT_oob"
+			recruit_character = CHA_Mahamat_Mahdi_Ali       
+			promote_character = CHA_Mahamat_Mahdi_Ali  
+			declare_war_on = { target = CHA type = civil_war }
+			declare_war_on = { target = NGR type = civil_war }
+
+			add_civil_war_target = CHA
+		}
+	}
+}
+
+#Смерть Идриса Деби
+country_event = {
+	id = AD_CHA.1
+	title = AD_CHA.1.t
+	desc = AD_CHA.1.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_CHA.1" }
+	option = {
+		name = AD_CHA.1.a
+		add_threat = 0.01
+		kill_country_leader = yes
+		promote_character = CHA_Mahamat_Deby
+		news_event = news_africa.41
+	}
+}

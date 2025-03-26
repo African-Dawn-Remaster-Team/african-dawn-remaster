@@ -1,0 +1,17 @@
+characters = {
+	TIG_Debretsion_Gebremichael = {
+		name = TIG_Debretsion_Gebremichael
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TIG/TIG_Debretsion_Gebremichael.dds"
+			}
+			army = {
+				large = "gfx/leaders/TIG/TIG_Debretsion_Gebremichael.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_DEBRETSION_GEBREMICHAEL_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

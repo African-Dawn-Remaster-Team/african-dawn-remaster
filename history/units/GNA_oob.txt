@@ -1,0 +1,124 @@
+division_template = {
+	name = "Régiment d'infanterie légère"
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+		light_infantry_opol={ x=0 y=3 }
+		light_infantry_opol={ x=1 y=0 }
+		light_infantry_opol={ x=1 y=1 }
+		light_infantry_opol={ x=1 y=2 }
+		light_infantry_opol={ x=1 y=3 }
+	}
+}
+
+division_template = {
+	name = "Régiment d'infanterie"
+	regiments={
+		infantry={ x=0 y=0 }
+		infantry={ x=0 y=1 }
+		infantry={ x=0 y=2 }
+		infantry={ x=0 y=3 }
+		infantry={ x=1 y=0 }
+		infantry={ x=1 y=1 }
+		infantry={ x=1 y=2 }
+		infantry={ x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+	}
+}
+
+division_template = {
+	name = "Bataillon commando"
+	priority = 2
+	regiments={
+		speznaz = { x=0 y=0 }
+		speznaz = { x=0 y=1 }
+		speznaz = { x=0 y=2 }
+		speznaz = { x=0 y=3 }
+		speznaz = { x=1 y=0 }
+		speznaz = { x=1 y=1 }
+		speznaz = { x=1 y=2 }
+		speznaz = { x=1 y=3 }
+	}
+	support={
+		recon={ x=0 y=0 }
+		engineer={ x=0 y=1 }
+		howitzer_support_unit ={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1er Bataillon d'infanterie"
+		location = 4695
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.95
+	}
+	division= {	
+		name = "2e Bataillon d'infanterie"
+		location = 4692
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "15e Bataillon d'infanterie"
+		location = 2454
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "3e Bataillon d'infanterie"
+		location = 4677
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "4e Bataillon d'infanterie"
+		location = 762
+		division_template = "Régiment d'infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "8e Regiment d'infanterie"
+		location = 4700
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "9e Regiment d'infanterie"
+		location = 288
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "11e Regiment d'infanterie"
+		location = 29
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "10e Regiment d'infanterie"
+		location = 79
+		division_template = "Régiment d'infanterie légère"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "Bataillon commando"
+		location = 4692
+		division_template = "Bataillon commando"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+}

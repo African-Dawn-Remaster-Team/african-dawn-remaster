@@ -1,0 +1,21 @@
+state={
+	id=176
+	name="STATE_176"
+	provinces={
+		5147 
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+		victory_points = { 5147 3 }
+		buildings = {
+			infrastructure = 1
+			military_base = 1
+			air_base = 3
+		}
+	}
+	manpower=1000
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

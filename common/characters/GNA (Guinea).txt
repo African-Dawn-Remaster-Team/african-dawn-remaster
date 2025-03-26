@@ -1,0 +1,32 @@
+characters = {
+	GNA_Alpha_Conde = {
+		name = GNA_Alpha_Conde
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GNA/GNA_Alpha_Conde.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALPHA_CONDE_BIO_VAZ_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+	GNA_Mamady_Doumbouya = {
+		name = GNA_Mamady_Doumbouya
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GNA/GNA_Mamady_Doumbouya.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAMADY_DOUMBOUYA_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

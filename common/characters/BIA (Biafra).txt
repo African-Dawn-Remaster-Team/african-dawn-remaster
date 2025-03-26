@@ -1,0 +1,25 @@
+characters = {
+    BIA_Nnamdi_Kanu = {
+		name = BIA_Nnamdi_Kanu
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BIA/BIA_Nnamdi_Kanu.png"
+			}
+			army = {
+				large = "gfx/leaders/BIA/BIA_Nnamdi_Kanu.png"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NNAMDI_KANU_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		field_marshal = {
+			traits = { media_personality }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}

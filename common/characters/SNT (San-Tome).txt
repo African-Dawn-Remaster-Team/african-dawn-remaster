@@ -1,0 +1,53 @@
+characters = {
+
+	SNT_Evaristo_Carvalho = {
+		name = SNT_Evaristo_Carvalho
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SNT/SNT_Evaristo_Carvalho.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EVARISTO_CARVALHO_DESC"
+			ideology = liberalism_subtype_liberal_democracy
+		}
+	}
+	SNT_Carlos_Vila_Nova = {
+		name = SNT_Carlos_Vila_Nova
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SNT/SNT_Carlos_Vila_Nova.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CARLOS_VILA_NOVA_DESC"
+			ideology = liberalism_subtype_liberal_democracy
+		}
+	}
+	SNT_Arlecio_Costa = {
+		name = SNT_Arlecio_Costa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SNT/SNT_Arlecio_Costa.dds"
+			}
+			army = {
+				large = "gfx/leaders/SNT/SNT_Arlecio_Costa.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CARLOS_VILA_NOVA_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+		corps_commander={
+			traits={ expert_improviser skirmisher harsh_leader politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+}

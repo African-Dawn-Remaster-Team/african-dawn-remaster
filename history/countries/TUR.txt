@@ -1,0 +1,130 @@
+capital = 167
+set_oob = "TUR_oob"
+
+set_technology = {
+	Rifle_pizods = 1
+	AK_tech = 1
+	AK_tech_2 = 1
+	AK_tech_3 = 1
+	
+	handmade_artillery_tech = 1
+	howitzer_d30_tech = 1
+	howitzer_giatsint_tech = 1
+	howitzer_msta_tech = 1
+	
+	handmade_atgm_tech = 1
+	atgm_rpg7_tech = 1
+	atgm_kornet_tech = 1
+	atgm_metis_tech = 1
+	
+	handmade_manpads_tech = 1
+	manpads_strela_tech = 1
+	manpads_igla_tech = 1
+	basic_train = 1
+	tech_specnaz = 1
+	
+	tech_light_tank_legacy = 1
+	tech_medium_tank_legacy = 1
+	tech_mbt_ru_1 = 1
+	tech_mbt_ru_2 = 1
+	tech_mbt_ru_3 = 1
+	tech_mbt_ch_1 = 1
+	
+	heli_tech_attack_ru = 1
+	plane_tech_mcs_1_ru= 1
+	plane_tech_mcs_2_ru= 1
+	plane_tech_cas_0_ru= 1
+	plane_tech_cas_1_ru= 1
+	uav_tech_general = 1
+	heli_tech_attack_us = 1
+	
+	plane_tech_transport = 1
+	plane_tech_strateg = 1
+	uav_tech_general = 1
+	
+	heli_tech_transport = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_signal_company = 1
+	tech_maintenance_company = 1
+	
+	tech_ifv_1 = 1
+	tech_ifv_2 = 1
+	tech_ifv_3 = 1
+	tech_ifv_4 = 1
+	
+	tech_lav_1 = 1
+	tech_lav_2 = 1
+	tech_lav_3 = 1
+	tech_lav_4 = 1
+	
+	tech_mrap = 1
+	tech_ural = 1
+	
+	tech_mbt_ru_1 = 1
+	tech_mbt_ru_2 = 1
+	tech_mbt_ru_3 = 1
+	
+	plane_tech_light = 1
+	
+	modern_camouflage_tech = 1
+	modern_armor_vest_tech = 1
+	modern_optics_tech = 1 
+	mm_grenade_launchers_tech = 1
+	upgraded_modern_vests = 1
+	wartime_train = 1
+	
+	artillery_upgrade_1 = 1
+	artillery_upgrade_2 = 1
+	artillery_upgrade_3 = 1
+	
+	atgm_upgrade_1 = 1
+	atgm_upgrade_2 = 1
+	atgm_upgrade_3 = 1
+	
+	manpads_upgrade_1 = 1
+	manpads_upgrade_2 = 1
+	manpads_upgrade_3 = 1
+	
+	millitary_electronics = 1
+	millitary_electronics_2 = 1
+	millitary_electronics_3 = 1
+	
+	construction_tech_0 = 1
+	production_tech_1 = 1
+	production_tech_2 = 1
+	
+	OTRK_tech_1 = 1
+}
+
+set_convoys = 100
+
+set_research_slots = 1
+set_stability = 1
+set_war_support = 1
+
+recruit_character = TUR_Hulusi_Akar
+set_politics = { ruling_party = centrism elections_allowed = no }
+
+set_popularities = {
+	centrism = 100
+}
+add_manpower = 20000
+add_ideas = AD_volunteer_battalions_gp_idea
+
+create_equipment_variant = {
+	name = "Bayraktar TB2" 
+	type = uav_airframe_0
+	modules = {
+		fixed_main_weapon_slot = bomb_locks
+		engine_type_slot = engine_1_1x
+		special_type_slot_1 = empty
+	}
+	obsolete = yes
+}
+
+set_air_oob = "TUR_air_oob"

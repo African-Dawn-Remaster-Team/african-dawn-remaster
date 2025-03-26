@@ -1,0 +1,18 @@
+characters = {
+
+	EGY_Abdel_Fattah_el_Sisi = {
+		name = EGY_Abdel_Fattah_el_Sisi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/EGY_Abdel_Fattah_el_Sisi.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ABDEL_FATTAH_EL_SISI_DESC"
+			ideology = centrism_subtype_anocracy
+		}
+	}
+}

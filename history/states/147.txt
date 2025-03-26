@@ -1,0 +1,25 @@
+state={
+	id=147
+	name="STATE_147"
+	provinces={
+		6 143 150 213 394 561 572 585 764 864 910 928 1074 1133 1229 1294 1495 1522 1575 1652 1950 2010 2051 2199 2213 2236 2316 2334 2389 2428 2623 2828 3079 3126 3272 3298 3371 3372 3378 3385 3405 3410 3418 5075 5076 
+	}
+	resources = {
+		oil = 80
+	}
+	history={
+		owner = LBY
+		add_core_of = LBY
+		victory_points = { 864 5 }
+		victory_points = { 2828 3 }
+		victory_points = { 143 3 }
+		victory_points = { 3272 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=164718
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

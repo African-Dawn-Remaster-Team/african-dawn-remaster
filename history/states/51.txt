@@ -1,0 +1,27 @@
+
+state={
+	id=51
+	name="STATE_51"
+	provinces={
+		837 871 1504 1675 2269 2364 2542 2734 2947 2970 3288 3759 3770 3918 3920 3922 4588 
+	}
+	resources = {
+		diamond = 4
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 3920 3 }
+		victory_points = { 3918 5 }
+		victory_points = { 1675 3 }
+		victory_points = { 4588 3 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+	}
+	manpower=216491
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

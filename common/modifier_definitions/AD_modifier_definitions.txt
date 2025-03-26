@@ -1,0 +1,199 @@
+# Extra modifiers can be defined here. Although the game itself won't use those, 
+# you can access those modifiers using modifier@modifier_token in state & country scope 
+# or leader_modifier@modifier_token/unit_modifier@modifier_token in unit leader scope
+# modifier_token will be used for tooltip localization
+
+#modifier_token = {
+#
+#	# the tooltips will be colored accordingly depending if value is positive or not
+#	# one of "good neutral bad". default is bad
+#	color_type = bad 
+#	
+#	# type of values in tooltip. 
+#	# one of "number percentage percentage_in_hundred yes_no". default is number.
+#	value_type = number
+#	
+#	# number of precision for tooltips
+#	precision = 2
+#	
+#	# post fix for values in tooltip
+#	# one of "none days hours daily". default is none
+#	postfix = none
+#	
+#	# cateogies can be defined if wanted. some tooltips only display certain categories
+#	# multiple cateogies can be defined for a single modifier@modifier_token
+#	# categories:
+#	# none all naval air unit_leader country state army peace politics ai defensive aggressive 
+#	# war_production military_advancements military_equipment autonomy government_in_exile intelligence_agency
+#	# default is all, which includes every category
+#	category = army
+#	category = air
+#	category = country
+#}
+
+###ПОЛИТИКА###
+
+AD_france_superiority_modifier_weekly = {
+	color_type = good
+	value_type = number
+	category = country
+	precision = 2
+}
+
+###ЭКОНОМИКА###
+
+AD_municipal_management_cost_modifier = {
+	color_type = bad
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_military_expenses_cost_modifier = {
+	color_type = bad
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_social_security_expenses_cost_modifier = {
+	color_type = bad
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_total_income_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_money_from_taxes_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_money_from_industry_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_money_from_resources_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_money_from_oil_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_money_from_diamonds_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_money_from_gold_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_debt_threshold_modifier = {
+	color_type = neutral
+	value_type = percentage
+	category = country
+	precision = 1
+}
+
+AD_industrial_complex_value_factor_modifier = {
+	color_type = neutral
+	value_type = number # TODO percentage??
+	category = country
+	precision = 2
+}
+
+AD_industrial_complex_value_modifier = {
+	color_type = neutral
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_personal_value_factor_modifier = {
+	color_type = neutral
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_personal_value_modifier = {
+	color_type = neutral
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_conditions_of_the_country_modifier = {
+	color_type = good
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_unemployment_rate_modifier = {
+	color_type = good
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_food_supply_modifier = {
+	color_type = good
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_poverty_level_modifier = {
+	color_type = good
+	value_type = number
+	category = country
+	precision = 2
+}
+
+AD_corporate_tax_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 2
+}
+
+AD_individuals_tax_modifier = {
+	color_type = good
+	value_type = percentage
+	category = country
+	precision = 2
+}
+
+### CAR ###
+
+CAR_ngakola_and_tere_monthly_modifier = {
+	color_type = good
+	value_type = percentage_in_hundred
+	category = country
+	precision = 0
+}

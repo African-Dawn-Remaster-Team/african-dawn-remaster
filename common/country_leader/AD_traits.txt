@@ -1,0 +1,381 @@
+leader_traits = {
+	
+	#COMMON#
+	AD_missing_in_place = {
+		political_power_factor = -0.5
+		
+		random = no
+	}
+	
+	AD_expert_urban_planner = {
+		hidden_modifier = { AD_unemployment_rate_modifier = 0.5 }
+		custom_modifier_tooltip = AD_unemployment_rate_modifier_rapid_grow_tt
+		
+		sprite = 13
+		random = no
+	}
+	
+	AD_minister_of_agriculture = {
+		hidden_modifier = { AD_food_supply_modifier = 0.5 }
+		custom_modifier_tooltip = AD_food_supply_modifier_rapid_grow_tt
+		monthly_population = 0.05
+		
+		sprite = 13
+		random = no
+	}
+	
+	AD_minister_of_foreign_affairs = {
+		improve_relations_maintain_cost_factor = -0.15
+		opinion_gain_monthly_factor = 0.25
+		
+		sprite = 13
+		random = no
+	}
+	
+	AD_minister_of_economy = {
+		consumer_goods_factor = -0.15
+		
+		sprite = 13
+		random = no
+	}
+	
+	AD_unwavering_but_beleaguered_leader = {
+		political_power_factor = 0.1
+		stability_factor = 0.05
+		war_support_factor = 0.05
+	
+		random = no
+	}
+	
+	#EQG#
+	EQG_mongomo_clan_leader = {
+		AD_municipal_management_cost_modifier = -0.05
+		economy_cost_factor = 0.2
+		trade_laws_cost_factor = 0.2
+		political_power_factor = 0.03
+		political_advisor_cost_factor = -0.2
+		party_popularity_stability_factor = 0.12
+		
+		random = no
+	}
+	
+	EQG_master_of_ceremonies = {
+		stability_factor = 0.05
+		AD_municipal_management_cost_modifier = 0.03
+		
+		random = no
+	}
+	
+	EQG_supporter_of_theodorian = {
+	
+		random = no
+	}
+	
+	EQG_supporter_of_gabrielle = {
+	
+		random = no
+	}
+	
+	EQG_minister_of_defense = {
+		war_support_factor = 0.1
+		army_org_regain = 0.03
+		AD_military_expenses_cost_modifier = -0.05
+		
+		random = no
+	}
+	
+	EQG_efa_mba_lar = {
+		army_org_factor = 0.05
+		experience_gain_army_factor = 0.03
+		training_time_army_factor = -0.08
+		decryption = 1
+		
+		random = no
+	}
+	
+	EQG_efa_mba = {
+		army_org_factor = 0.05
+		experience_gain_army_factor = 0.03
+		training_time_army_factor = -0.08
+		
+		random = no
+	}
+	
+	EQG_minister_of_justice = {
+		AD_municipal_management_cost_modifier = -0.05
+		AD_money_from_taxes_modifier = 0.02
+		
+		random = no
+	}
+	
+	EQG_head_of_the_presidential_security_service_lar = {
+		encryption = 1
+		intelligence_agency_defense = 0.5
+		intel_network_gain_factor = 0.5
+		
+		random = no
+	}
+	
+	EQG_head_of_the_presidential_security_service = {
+		intelligence_agency_defense = 0.5
+		intel_network_gain_factor = 0.1
+		
+		random = no
+	}
+	
+	EQG_oil_tycoon = {
+		AD_money_from_oil_modifier = 0.1
+		production_speed_buildings_factor = -0.05
+		
+		random = no
+	}
+	
+	EQG_vice_president = {
+		
+		random = no
+	}
+	
+	EQG_wasteful = {
+		AD_total_income_modifier = -0.15
+		
+		random = no
+	}
+	
+	EQG_business_architect = {
+		production_speed_buildings_factor = 0.15
+		consumer_goods_factor = -0.05
+		
+		random = no
+	}
+	
+	#CAR#
+	CAR_under_international_sanctions = {
+		custom_modifier_tooltip = AD_diplomacy_improverelation_prohibition_tt
+		
+		random = no
+	}
+	
+	CAR_minister_of_disarmament = {
+		compliance_growth = 0.15
+		resistance_target = -0.25
+		
+		random = no
+	}
+	
+	CAR_protege_of_france = {
+		
+		random = no
+	}
+	
+	CAR_minister_of_mines = {
+		production_speed_buildings_factor = 0.15
+		consumer_goods_factor = -0.05
+		
+		random = no
+	}
+	
+	CAR_black_bonaparte = {
+		army_core_attack_factor = 0.15
+		army_speed_factor = 0.05
+		
+		random = no
+	}
+	
+	#ISW#
+	ISW_Madman = {
+		army_attack_factor = 0.07
+		army_speed_factor = 0.05
+		army_defence_factor = -0.055
+		resistance_target_on_our_occupied_states = -0.5
+	}
+		
+	#MLI
+	MLI_reformer_technocrat = {
+		production_speed_buildings_factor = 0.1
+		production_factory_max_efficiency_factor = 0.05
+		political_power_factor = -0.05
+		
+		random = no
+	}
+	
+	MLI_military_reformer = {
+		mobilization_speed = 0.1
+		war_support_factor = 0.15
+		
+		random = no
+	}
+	
+	MLI_patriotic_leader = {
+		war_support_factor = 0.07
+		initiative_factor = 0.02
+		opinion_gain_monthly_factor = -0.45
+		improve_relations_maintain_cost_factor = 0.1
+		compliance_growth = 0.2
+		resistance_target = -0.05
+		production_speed_arms_factory_factor = 0.15
+		max_command_power = 20
+		political_advisor_cost_factor = -0.1
+		targeted_modifier = {
+			tag = ISS
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = AZW
+			attack_bonus_against = 0.05
+		}
+		targeted_modifier = {
+			tag = JNA
+			attack_bonus_against = 0.1
+		}
+		
+		random = no
+	}
+	
+	MLI_transitional_manager = {
+		stability_factor = 0.05
+		army_org_factor = -0.05
+		political_power_factor = 0.1
+		
+		random = no
+	}
+	
+	MLI_extravagant_leader = {
+		AD_money_from_taxes_modifier = 0.05
+		army_core_defence_factor = 0.07
+		initiative_factor = 0.03
+		production_speed_buildings_factor = 0.02
+		stability_factor = -0.04
+		
+		random = no
+	}
+	
+	MLI_experienced_strategist = {
+		planning_speed = 0.15
+		army_core_defence_factor = 0.05
+		experience_gain_army = 0.05
+		
+		random = no
+	}
+	
+	MLI_army_reformer = {
+		war_support_factor = 0.1
+		political_power_factor = -0.05
+		experience_gain_army = 0.05
+		
+		random = no
+	}
+	
+	MLI_peacemaker_diplomat = {
+		improve_relations_maintain_cost_factor = -0.1
+		stability_factor = 0.05
+		
+		random = no
+	}
+	
+	MLI_realist_negotiator = {
+		political_power_factor = 0.03
+		civilian_intel_factor = 0.15
+		
+		random = no
+	}
+	
+	MLI_pragmatic_economist = {
+		production_speed_buildings_factor = 0.15
+		production_factory_max_efficiency_factor = -0.05
+		
+		random = no
+	}
+	
+	MLI_agricultural_reformer = {
+		monthly_population = 0.1
+		army_org_regain = 0.05
+		custom_modifier_tooltip = AD_food_supply_modifier_slightly_grow_tt
+		custom_modifier_tooltip = MLI_agricultural_reformer_tt
+		
+		random = no
+	}
+	
+	MLI_hard_enforcer = {
+		stability_factor = 0.09
+		resistance_growth = -0.1
+		resistance_activity = -0.05
+		
+		random = no
+	}
+	
+	MLI_peacemaker = {
+		political_power_factor = -0.05
+		stability_factor = 0.15
+		
+		random = no
+	}
+	
+	MLI_voice_of_the_people = {
+		monthly_population = 0.05
+		stability_factor = 0.05
+		
+		random = no
+	}
+	
+	MLI_weak_leader = {
+		stability_factor = -0.1
+		political_power_factor = -0.04
+		
+		random = no
+	}
+	
+	#BFA#
+	BFA_american_eagle = {
+		experience_gain_army_factor = 0.15
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		breakthrough_factor = 0.07
+		
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				maximum_speed = 0.10
+			}
+			infantry_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = 0.05
+			}
+		}
+		
+		random = no
+	}
+	
+	BFA_reincarnation_of_sankara_trait = {
+		breakthrough_factor = 0.08
+		max_dig_in_factor = 0.05
+		land_reinforce_rate = 0.06
+		river_crossing_factor = -0.07
+		
+		random = no
+	}
+	
+	NGR_gendarme_of_the_sahel = {
+		stability_factor = -0.05
+		guarantee_cost = -0.55
+		opinion_gain_monthly_factor = 0.3
+		custom_modifier_tooltip = AD_rule_can_send_volunteers_tt
+		
+		random = no
+	}
+	
+	NGR_trade_union_leader = {
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.07
+		production_factory_efficiency_gain_factor = 0.05
+		
+		random = no
+	}
+	
+	NGR_general_of_the_revolution = {
+		army_org_regain = 0.05
+		army_speed_factor = 0.02
+		
+		random = no
+	}
+}

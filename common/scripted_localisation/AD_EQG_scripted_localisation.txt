@@ -1,0 +1,23 @@
+defined_text = {
+	name = EQG_split_in_the_mongomo_clan_get_name_vars
+	text = {
+		trigger = { check_variable = { THIS.EQG_fellow_clansmen = token:EQG_Teodoro_Nguema_Obiang_Manga } }
+		localization_key = "EQG_split_in_the_mongomo_clan_get_name_vars_0"
+	}
+	text = {
+		trigger = { check_variable = { THIS.EQG_fellow_clansmen = token:EQG_Gabriel_Mbanga_Obiang_Lima } }
+		localization_key = "EQG_split_in_the_mongomo_clan_get_name_vars_1"
+	}
+}
+
+defined_text = {
+	name = EQG_split_in_the_mongomo_clan_get_vars
+	text = {
+		trigger = { check_variable = { THIS.EQG_fellow_clansmen = token:EQG_Teodoro_Nguema_Obiang_Manga } }
+		localization_key = "EQG_split_in_the_mongomo_clan_get_vars_0"
+	}
+	text = {
+		trigger = { check_variable = { THIS.EQG_fellow_clansmen = token:EQG_Gabriel_Mbanga_Obiang_Lima } }
+		localization_key = "EQG_split_in_the_mongomo_clan_get_vars_1"
+	}
+}

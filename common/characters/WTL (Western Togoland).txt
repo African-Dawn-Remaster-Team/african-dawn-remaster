@@ -1,0 +1,18 @@
+characters = {
+
+	WTL_Provisional_Government = {
+		name = WTL_Provisional_Government
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/WTL/WTL_Provisional_Government.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_WTL_PROVISIONAL_GOVERNMENT_DESC"
+			ideology = centrism_subtype_right_wing_populism
+		}
+	}
+}

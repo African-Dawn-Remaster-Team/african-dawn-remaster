@@ -1,0 +1,15 @@
+on_actions = {	
+	on_startup = {
+		effect = {
+			if = {
+				limit = { has_start_date < 2020.01.02 }
+				NGR = {
+					country_event = { id = AD_NGR.0 days = 362 }
+					country_event = { id = AD_NGR.1 days = 418 }
+					country_event = { id = AD_NGR.4 days = 107 }
+					country_event = { id = AD_NGR.2 days = 456 }
+				}
+			}
+		}
+	}
+}

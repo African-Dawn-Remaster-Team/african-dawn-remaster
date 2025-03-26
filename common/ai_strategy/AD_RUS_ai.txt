@@ -1,0 +1,97 @@
+# befriend
+# alliance
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# contain
+# area_priority
+# declare_war
+
+RUS_lend_lease_for_ngr = {
+	allowed = { tag = RUS }
+	enable = {
+		NGR = {
+			has_completed_focus = NGR_placement_of_the_african_corps
+			NOT = { has_war_with = ROOT }
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = NGR value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = NGR value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = NGR value = 500 }
+}
+
+RUS_lend_lease_for_mli = {
+	allowed = { tag = RUS }
+	enable = {
+		MLI = {
+			has_completed_focus = MLI_invite_the_african_corps
+			NOT = { has_war_with = ROOT }
+			has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = MLI value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = MLI value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = MLI value = 500 }
+}
+
+RUS_lend_lease_for_bfa = {
+	allowed = { tag = RUS }
+	enable = {
+		BFA = {
+			has_completed_focus = BFA_invitation_of_the_african_corps
+			NOT = { has_war_with = ROOT }
+			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = BFA value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = BFA value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = BFA value = 500 }
+}
+
+RUS_lend_lease_for_eqg = {
+	allowed = { tag = RUS }
+	enable = {
+		EQG = {
+			has_completed_focus = NGR_placement_of_the_african_corps
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = EQG value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = EQG value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = EQG value = 500 }
+}
+
+RUS_lend_lease_for_car = {
+	allowed = { tag = CAR }
+	enable = {
+		CAR = {
+			OR = {
+				has_completed_focus = CAR_rely_on_russian_instructors
+				has_completed_focus = CAR_creation_of_a_russian_military_base
+			}
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = support 			   	   id = CAR value = 500 }
+	ai_strategy = { type = send_lend_lease_desire  id = CAR value = 500 }
+	ai_strategy = { type = send_volunteers_desire  id = CAR value = 500 }
+}

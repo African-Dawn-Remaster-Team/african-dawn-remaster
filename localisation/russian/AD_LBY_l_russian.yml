@@ -1,0 +1,71 @@
+﻿l_russian:
+
+ ##############
+ ### Фокусы ###
+ ##############
+ #Восток
+ LBY_Continued_march_on_Tripoli: "Продолжение марша на Триполи"
+ LBY_Continued_march_on_Tripoli_desc: ""
+ LBY_Destroying_the_remnants_of_the_disgraced: "Уничтожение остатков позорников"
+ LBY_Destroying_the_remnants_of_the_disgraced_desc: ""
+ LBY_Strengthening_ties_with_Egypt: "[EGY.GetFlag] Укрепление связей с Египтом"
+ LBY_Strengthening_ties_with_Egypt_desc: ""
+ LBY_Enlist_the_assistance_of_the_Rapid_Support_Force: "[SUD.GetFlag] Заручиться поддержкой Сил Оперативной Поддержки"
+ LBY_Enlist_the_assistance_of_the_Rapid_Support_Force_desc: ""
+ LBY_Support_FACT: "[CHA.GetFlag] Поддержка FACT"
+ LBY_Support_FACT_desc: ""
+ LBY_Delegation_to_Moscow: "Делегация в Москву"
+ LBY_Delegation_to_Moscow_desc: "Делегация в Москву"
+ LBY_Revenge_on_the_Turks: "Месть туркам"
+ LBY_Revenge_on_the_Turks_desc: ""
+ LBY_The_holding_of_Sirte: "Удержание Сирта"
+ LBY_The_holding_of_Sirte_desc: ""
+ LBY_Haftars_consolidation_of_power: "Консолидация власти Хафтара"
+ LBY_Haftars_consolidation_of_power_desc: ""
+ LBY_The_marshals_final_push: "Последний рывок маршала"
+ LBY_The_marshals_final_push_desc: ""
+ LBY_Response_to_Tuyur_Ababil: "Ответ на «Туюр Абиль»"
+ LBY_Response_to_Tuyur_Ababilh_desc: ""
+ LBY_Zheneva_Agreements_EAST: "Женевские соглашения"
+ LBY_Zheneva_Agreements_EAST_desc: "Женевские соглашения"
+ LBY_Withdrawal_of_troops_from_the_West: "Вывод войск с Запада"
+ LBY_Withdrawal_of_troops_from_the_West_desc: ""
+ LBY_Reinforce_the_southern_flank: "Укрепить южный фланг"
+ LBY_Reinforce_the_southern_flank_desc: ""
+ LBY_Disarming_disloyal_tribes: "Разоружение нелояльных племен"
+ LBY_Disarming_disloyal_tribes_desc: ""
+ LBY_Hold_on_to_retained_positions: "Закрепиться на удержанных позициях"
+ LBY_Hold_on_to_retained_positions_desc: ""
+ LBY_Designation_of_military_administrations: "Назначение военных администраций"
+ LBY_Designation_of_military_administrations_desc: ""
+ LBY_Return_of_control_over_the_National_Bank: "Возвращение контроля над Нацбанком"
+ LBY_Return_of_control_over_the_National_Bank_desc: ""
+ LBY_Equitable_distribution_of_oil_revenues: "Справедливое распределение нефтяных доходов"
+ LBY_Equitable_distribution_of_oil_revenues_desc: ""
+ #Запад
+ 
+ ##############
+ ## Нац Духи ##
+ ##############
+ LBY_Islamic_extremists: "Исламский экстремизм"
+ LBY_Islamic_extremists_desc: ""
+ LBY_Fragmentation_of_fractions: "Фракционная борьба"
+ LBY_Fragmentation_of_fractions_desc: ""
+ LBY_Disloyal_tribes: "Нелояльные племена"
+ LBY_Disloyal_tribes_desc: ""
+ LBY_Support_from_Russia: "Поддержка из России"
+ LBY_Support_from_Russia_desc: ""
+ LBY_Support_from_UAE: "Поддержка из ОАЭ"
+ LBY_Support_from_UAE_desc: ""
+ LBY_Control_over_the_national_bank: "Контроль за нацбанком"
+ LBY_Control_over_the_national_bank_desc: ""
+ LBY_minor_tribes: "Племенная конфедерация"
+ LBY_minor_tribes_desc: ""
+ LBY_Zheneva_Agreements: "Женевские соглашения"
+ LBY_Zheneva_Agreements_desc: "Женевские соглашения"
+ #############
+ ## TOOLTIP ##
+ #############
+ LBY_Strengthening_ties_with_Egypt_tt: "[EGY.GetFlag] §HПоддержка Египта в текущем конфликте может переломить чашу весов на нашу сторону§!"
+ LBY_Enlist_the_assistance_of_the_Rapid_Support_Force_tt: "[SUD.GetFlag] §HСилы Оперативной Поддержки из Судана окажут нам поддержку§!"
+ LBY_Delegation_to_Moscow_tt: "§H[RUS.GetNameWithFlag] окажет нам всестороннюю поддержку...§!"

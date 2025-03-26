@@ -1,0 +1,115 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_AD_prorussian_icon"
+		texturefile = "gfx/interface/gui/foreign_orientation/pro_russian.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/gui/foreign_orientation/pro_russian.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2.0				# in seconds
+			animationdelay = 10				# in seconds
+			animationblendmode = "add"		#add, multiply, overlay
+			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/gui/foreign_orientation/pro_russian.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2.0				# in seconds
+			animationdelay = 10				# in seconds
+			animationblendmode = "add"		#add, multiply, overlay
+			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_AD_profrench_icon"
+		texturefile = "gfx/interface/gui/foreign_orientation/pro_french.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/gui/foreign_orientation/pro_french.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2.0				# in seconds
+			animationdelay = 10				# in seconds
+			animationblendmode = "add"		#add, multiply, overlay
+			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/gui/foreign_orientation/pro_french.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2.0				# in seconds
+			animationdelay = 10				# in seconds
+			animationblendmode = "add"		#add, multiply, overlay
+			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	corneredTileSpriteType = {
+		name = "GFX_divider_horizontal_red_tile"
+		size = { x = 33 y = 4 }
+		textureFile = "gfx/interface/gui/foreign_orientation/line.dds"
+		borderSize = { x = 1 y = 4 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_AD_orientation2_bg"
+		texturefile = "gfx/interface/gui/foreign_orientation/orientation_bg.dds"
+	}
+	
+	spriteType = { # TODO
+		name = "GFX_idea_entry_bg_4"
+		texturefile = "gfx/interface/gui/foreign_orientation/idea_entry_bg_4.dds"
+		noOfFrames = 2
+	}
+	spriteType = { # TODO
+		name = "GFX_AD_faction_bg"
+		texturefile = "gfx/interface/gui/foreign_orientation/faction_bg.dds"
+	}
+	
+	###
+	
+	spriteType = {
+		name = "GFX_AD_blue_block"
+		texturefile = "gfx/interface/gui/foreign_orientation/blue.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_brown_block"
+		texturefile = "gfx/interface/gui/foreign_orientation/brown.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_dark_block"
+		texturefile = "gfx/interface/gui/foreign_orientation/dark.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_green_block"
+		texturefile = "gfx/interface/gui/foreign_orientation/green.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_dark_blue_block"
+		texturefile = "gfx/interface/gui/foreign_orientation/dark_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_AD_light_blue_block"
+		texturefile = "gfx/interface/gui/foreign_orientation/light_blue.dds"
+	}
+}

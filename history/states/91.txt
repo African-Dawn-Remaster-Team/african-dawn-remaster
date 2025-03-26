@@ -1,0 +1,29 @@
+state={
+	id=91
+	name="STATE_91"
+	provinces={
+		135 912 1050 1359 1548 2382 2417 2979 3631 3649 4612 4615 4618 4624 4628 
+	}
+	resources = {
+		steel = 4
+		gold = 4
+		diamond = 4
+	}
+	history={
+		owner = SEN
+		add_core_of = SEN
+		victory_points = { 4612 5 }
+		victory_points = { 2382 3 }
+		victory_points = { 1455 3 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+		}
+	}
+	manpower=2054768
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
+ 

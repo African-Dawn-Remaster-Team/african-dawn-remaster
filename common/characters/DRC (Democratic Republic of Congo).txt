@@ -1,0 +1,18 @@
+characters = {
+
+	DRC_Felix_Tshisekedi = {
+		name = DRC_Felix_Tshisekedi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DRC/DRC_Felix_Tshisekedi.dds"
+			}
+			army = {
+				large = "gfx/leaders/To_Be_Added_Portrait.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FELIX_TSHISEKEDI_DESC"
+			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+}
