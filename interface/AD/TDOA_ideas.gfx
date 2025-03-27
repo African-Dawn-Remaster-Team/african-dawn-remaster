@@ -16,6 +16,10 @@ spriteTypes = {
 		name = "GFX_idea_AD_african_corps_idea"
 		texturefile = "gfx/interface/ideas/common/AD_african_corps_idea.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_AD_unplanned_offensive_state_modifier"
+		texturefile = "gfx/interface/ideas/common/AD_unplanned_offensive_state_modifier.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_MLI_protracted_war_idea"
@@ -28,6 +32,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_MLI_legacy_of_colonialism_idea"
 		texturefile = "gfx/interface/ideas/MLI/MLI_legacy_of_colonialism_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_dominance_of_local_militias_modifier"
+		texturefile = "gfx/interface/ideas/MLI/MLI_dominance_of_local_militias_modifier.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_MLI_decline_of_the_malian_armed_forces_modifier"
@@ -84,5 +92,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_MLI_french_military_support_idea"
 		texturefile = "gfx/interface/ideas/MLI/MLI_french_military_support_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_three_borders_project_idea"
+		texturefile = "gfx/interface/ideas/MLI/MLI_three_borders_project_idea.dds"
 	}
 }

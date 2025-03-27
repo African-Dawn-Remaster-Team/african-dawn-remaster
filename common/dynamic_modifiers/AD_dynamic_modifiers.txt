@@ -1,5 +1,5 @@
 AD_unplanned_offensive_state_modifier = {
-	icon = GFX_idea_unknown
+	icon = GFX_idea_AD_unplanned_offensive_state_modifier
 	enable = { always = yes }
 	remove_trigger = {  }
 	
@@ -117,7 +117,7 @@ CAR_bokassa_palace_modifier = {
 }
 
 MLI_dominance_of_local_militias_modifier = {
-	icon = GFX_idea_unknown
+	icon = GFX_idea_MLI_dominance_of_local_militias_modifier
 	enable = { always = yes }
 	remove_trigger = {  }
 	

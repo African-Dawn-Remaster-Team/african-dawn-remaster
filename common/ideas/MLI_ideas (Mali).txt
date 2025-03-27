@@ -358,7 +358,7 @@ ideas = {
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 			removal_cost = -1
-			picture = SPR_death_before_surrender
+			picture = MLI_three_borders_project_idea
 			modifier = {
 				monthly_population = 0.11
 				AD_money_from_taxes_modifier = 0.04
