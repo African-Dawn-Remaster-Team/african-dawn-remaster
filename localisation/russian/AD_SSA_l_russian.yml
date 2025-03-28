@@ -84,4 +84,5 @@
  AD_SSA_sahel_states_alliance: "Альянс Государств Сахеля"
  AD_SSA_ecomog_alliance: "ЭКОМОГ"
  AD_SSA_sahel_states_alliance_modifier_add_tt: "Будет добавлена идея §Y$AD_SSA_sahel_states_alliance_modifier$§!, что даст ($MODIFIER_POLITICAL_POWER_GAIN$: §G+0.02§!, $MODIFIER_WAR_SUPPORT_FACTOR$: §G+2.00%§!)."
+ AD_SSA_sahel_states_alliance_modifier_add_tt_2: "Будет добавлена идея §Y$AD_SSA_sahel_states_alliance_modifier$§!."
  AD_SSA_sahel_states_alliance_modifier_change_tt: "Будет изменена идея §Y$AD_SSA_sahel_states_alliance_modifier$§! на"

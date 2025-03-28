@@ -5,6 +5,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/common/AD_member_of_g_five_sahel_idea.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_AD_SSA_sahel_states_alliance_modifier"
+		texturefile = "gfx/interface/ideas/common/AD_SSA_sahel_states_alliance_modifier.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_AD_ecowas_idea"
 		texturefile = "gfx/interface/ideas/common/AD_ecowas_idea.dds"
 	}

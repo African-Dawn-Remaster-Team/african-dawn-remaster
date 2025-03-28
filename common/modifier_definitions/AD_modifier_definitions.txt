@@ -189,6 +189,13 @@ AD_individuals_tax_modifier = {
 	precision = 2
 }
 
+AD_weekly_expenses_modifier = {
+	color_type = bad
+	value_type = number
+	category = country
+	precision = 2
+}
+
 ### CAR ###
 
 CAR_ngakola_and_tere_monthly_modifier = {

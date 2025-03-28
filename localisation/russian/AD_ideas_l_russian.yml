@@ -78,9 +78,6 @@
  AD_sahel_military_initiative_modifier_desc_1: "§WЗа каждую §Yстрану-участницу§! мы получаем:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!,\n$MODIFIER_MAX_PLANNING_FACTOR$: §G+3.0%§!,\n$MODIFIER_INITIATIVE_FACTOR$: §G+3.0%§!.\n\nТекущее количество §Yстран-участниц§!: [?NGR.NGR_num_of_allies|0G]§!"
  AD_sahel_military_initiative_modifier_desc_2: "§WЗа каждую §Yстрану-участницу§! мы получаем:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+3.0%§!,\n$MODIFIER_STABILITY_FACTOR$: §G+3.00%§!,\n$MODIFIER_DRIFT_DEFENCE_FACTOR$: §G+10.0%§!,\n$MODIFIER_MAX_PLANNING_FACTOR$: §G+3.0%§!,\n$MODIFIER_INITIATIVE_FACTOR$: §G+3.0%§!.\n\nТекущее количество §Yстран-участниц§!: [?NGR.NGR_num_of_allies|0G]§!"
  
- ###COMMON IDEAS TT###
- AD_ECOWAS_member_tt: "\n§HВ случае войны с одним из членов альянса будет задействован§! §3ЭКОМОГ§!§!!§!Между членами ЭКОВАС будет заключен военный союз, призванный обеспечить безопасность и отстоять перед внешним врагом."
- 
  ###ЭКОНОМИКА###
  economy_and_military_budget: "Экономика и военный бюджет"
  

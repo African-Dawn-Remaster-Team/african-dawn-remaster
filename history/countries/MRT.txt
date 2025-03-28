@@ -28,6 +28,10 @@ set_popularities = {
 set_variable = { AD_fog_source_of_power = 0 }
 set_variable = { AD_fog_power_structure = 0 }
 
+add_ideas = {
+	AD_member_of_g_five_sahel
+}
+
 set_convoys = 15
 starting_train_buffer = 5
 

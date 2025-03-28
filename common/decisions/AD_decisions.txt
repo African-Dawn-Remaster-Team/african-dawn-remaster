@@ -2,6 +2,46 @@ AD_economy_view_category = {
 
 }
 
+AD_SSA_creation_of_the_sahel_states_alliance_category = {
+
+	AD_SSA_invite_country_to_join_ssa = {
+		icon = GFX_decision_generic_political_discourse
+		targets = { BFA MLI NGR }
+		target_trigger = { FROM = { NOT = { tag = ROOT } } }
+		target_root_trigger = {
+			is_faction_leader = yes
+			has_country_flag = AD_faction_aes_leader
+		}
+		visible = { FROM = { NOT = { is_in_faction_with = ROOT } } }
+		available = {
+			FROM = {
+				if = {
+					limit = { tag = MLI }
+					has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
+				}
+				else_if = {
+					limit = { tag = BFA }
+					has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
+				}
+				else = {
+					has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
+				}
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		fire_only_once = no
+		days_re_enable = 120
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision AD_SSA_invite_country_to_join_ssa (COUNTRY - [FROM.GetName])"
+			FROM = { country_event = { id = generic.5 hours = 12 } }
+		}
+		ai_will_do = { base = 50 }
+	}
+}
+
 AD_resource_development_category = {
 
 	AD_development_on_mbanye_island = {

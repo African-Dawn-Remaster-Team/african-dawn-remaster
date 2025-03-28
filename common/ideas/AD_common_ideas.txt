@@ -81,7 +81,6 @@ ideas = {
 				political_power_gain = 0.02
 				civil_war_involvement_tension = -0.5
 				opinion_gain_monthly = 5
-				custom_modifier_tooltip = AD_ECOWAS_member_tt
 			}
 		}
 		

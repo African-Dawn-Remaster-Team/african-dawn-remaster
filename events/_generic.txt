@@ -88,10 +88,16 @@ country_event = {
 		name = generic.5.a
 		trigger = {
 			has_rule = can_join_factions
-			is_democratic_ideology = yes
+			OR = {
+				is_democratic_ideology = yes
+				is_neutral_ideology = yes
+			}
 			FROM = {
 				has_rule = can_join_factions
-				is_democratic_ideology = yes
+				OR = {
+					is_democratic_ideology = yes
+					is_neutral_ideology = yes
+				}
 			}
 			is_in_faction = no
 		}
@@ -119,6 +125,48 @@ country_event = {
 				}
 				ROOT = { remove_ideas = AD_ECOWAS }
 			}
+		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				FROM = {
+					OR = { tag = MLI tag = BFA tag = NGR }
+					is_faction_leader = yes
+					has_country_flag = AD_faction_aes_leader
+				}
+			}
+			custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt_2
+			set_variable = { AD_SSA_political_power_gain_var = FROM.AD_SSA_political_power_gain_var }
+			set_variable = { AD_SSA_war_support_factor_var = FROM.AD_SSA_war_support_factor_var }
+			set_variable = { AD_SSA_stability_factor_var = FROM.AD_SSA_stability_factor_var }
+			set_variable = { AD_SSA_army_core_attack_factor_var = FROM.AD_SSA_army_core_attack_factor_var }
+			set_variable = { AD_SSA_initiative_factor_var = FROM.AD_SSA_initiative_factor_var }
+			set_variable = { AD_SSA_coordination_bonus_var = FROM.AD_SSA_coordination_bonus_var }
+			set_variable = { AD_SSA_planning_speed_var = FROM.AD_SSA_planning_speed_var }
+			set_variable = { AD_SSA_air_accidents_factor_var = FROM.AD_SSA_air_accidents_factor_var }
+			set_variable = { AD_SSA_air_interception_detect_factor_var = FROM.AD_SSA_air_interception_detect_factor_var }
+			set_variable = { AD_SSA_air_mission_efficiency_var = FROM.AD_SSA_air_mission_efficiency_var }
+			set_variable = { AD_SSA_air_range_factor_var = FROM.AD_SSA_air_range_factor_var }
+			set_variable = { AD_SSA_air_home_defence_factor = FROM.AD_SSA_air_home_defence_factor }
+			set_variable = { AD_SSA_air_cas_efficiency = FROM.AD_SSA_air_cas_efficiency }
+			set_variable = { AD_SSA_air_ace_generation_chance_factor = FROM.AD_SSA_air_ace_generation_chance_factor }
+			set_variable = { AD_SSA_intel_network_gain_var = FROM.AD_SSA_intel_network_gain_var }
+			set_variable = { AD_SSA_foreign_subversive_activites_var = FROM.AD_SSA_foreign_subversive_activites_var }
+			set_variable = { AD_SSA_acclimatization_hot_climate_gain_factor_var = FROM.AD_SSA_acclimatization_hot_climate_gain_factor_var }
+			set_variable = { AD_SSA_experience_loss_factor_var = FROM.AD_SSA_experience_loss_factor_var }
+			set_variable = { AD_SSA_org_loss_at_low_org_factor_var = FROM.AD_SSA_org_loss_at_low_org_factor_var }
+			set_variable = { AD_SSA_max_planning_factor_var = FROM.AD_SSA_max_planning_factor_var }
+			set_variable = { AD_SSA_combat_width_factor_var = FROM.AD_SSA_combat_width_factor_var }
+			set_variable = { AD_SSA_special_forces_cap_var = FROM.AD_SSA_special_forces_cap_var }
+			set_variable = { AD_SSA_defensive_war_stability_factor_var = FROM.AD_SSA_defensive_war_stability_factor_var }
+			set_variable = { AD_SSA_trade_opinion_factor_var = FROM.AD_SSA_trade_opinion_factor_var }
+			set_variable = { AD_SSA_political_advisor_cost_factor_var = FROM.AD_SSA_political_advisor_cost_factor_var }
+			set_variable = { AD_SSA_unit_leader_as_advisor_cp_cost_factor_var = FROM.AD_SSA_unit_leader_as_advisor_cp_cost_factor_var }
+			set_variable = { AD_SSA_money_from_taxes_modifier_var = FROM.AD_SSA_money_from_taxes_modifier_var }
+			set_variable = { AD_SSA_local_resources_factor_var = FROM.AD_SSA_local_resources_factor_var }
+			set_variable = { AD_SSA_production_speed_infrastructure_factor_var = FROM.AD_SSA_production_speed_infrastructure_factor_var }
+			set_variable = { AD_SSA_party_popularity_stability_factor_var = FROM.AD_SSA_party_popularity_stability_factor_var }
+			hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
 		}
 		add_ai_strategy = {
 			type = alliance
@@ -167,6 +215,48 @@ country_event = {
 				ROOT = { remove_ideas = AD_ECOWAS }
 			}
 		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				FROM = {
+					OR = { tag = MLI tag = BFA tag = NGR }
+					is_faction_leader = yes
+					has_country_flag = AD_faction_aes_leader
+				}
+			}
+			custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt_2
+			set_variable = { AD_SSA_political_power_gain_var = FROM.AD_SSA_political_power_gain_var }
+			set_variable = { AD_SSA_war_support_factor_var = FROM.AD_SSA_war_support_factor_var }
+			set_variable = { AD_SSA_stability_factor_var = FROM.AD_SSA_stability_factor_var }
+			set_variable = { AD_SSA_army_core_attack_factor_var = FROM.AD_SSA_army_core_attack_factor_var }
+			set_variable = { AD_SSA_initiative_factor_var = FROM.AD_SSA_initiative_factor_var }
+			set_variable = { AD_SSA_coordination_bonus_var = FROM.AD_SSA_coordination_bonus_var }
+			set_variable = { AD_SSA_planning_speed_var = FROM.AD_SSA_planning_speed_var }
+			set_variable = { AD_SSA_air_accidents_factor_var = FROM.AD_SSA_air_accidents_factor_var }
+			set_variable = { AD_SSA_air_interception_detect_factor_var = FROM.AD_SSA_air_interception_detect_factor_var }
+			set_variable = { AD_SSA_air_mission_efficiency_var = FROM.AD_SSA_air_mission_efficiency_var }
+			set_variable = { AD_SSA_air_range_factor_var = FROM.AD_SSA_air_range_factor_var }
+			set_variable = { AD_SSA_air_home_defence_factor = FROM.AD_SSA_air_home_defence_factor }
+			set_variable = { AD_SSA_air_cas_efficiency = FROM.AD_SSA_air_cas_efficiency }
+			set_variable = { AD_SSA_air_ace_generation_chance_factor = FROM.AD_SSA_air_ace_generation_chance_factor }
+			set_variable = { AD_SSA_intel_network_gain_var = FROM.AD_SSA_intel_network_gain_var }
+			set_variable = { AD_SSA_foreign_subversive_activites_var = FROM.AD_SSA_foreign_subversive_activites_var }
+			set_variable = { AD_SSA_acclimatization_hot_climate_gain_factor_var = FROM.AD_SSA_acclimatization_hot_climate_gain_factor_var }
+			set_variable = { AD_SSA_experience_loss_factor_var = FROM.AD_SSA_experience_loss_factor_var }
+			set_variable = { AD_SSA_org_loss_at_low_org_factor_var = FROM.AD_SSA_org_loss_at_low_org_factor_var }
+			set_variable = { AD_SSA_max_planning_factor_var = FROM.AD_SSA_max_planning_factor_var }
+			set_variable = { AD_SSA_combat_width_factor_var = FROM.AD_SSA_combat_width_factor_var }
+			set_variable = { AD_SSA_special_forces_cap_var = FROM.AD_SSA_special_forces_cap_var }
+			set_variable = { AD_SSA_defensive_war_stability_factor_var = FROM.AD_SSA_defensive_war_stability_factor_var }
+			set_variable = { AD_SSA_trade_opinion_factor_var = FROM.AD_SSA_trade_opinion_factor_var }
+			set_variable = { AD_SSA_political_advisor_cost_factor_var = FROM.AD_SSA_political_advisor_cost_factor_var }
+			set_variable = { AD_SSA_unit_leader_as_advisor_cp_cost_factor_var = FROM.AD_SSA_unit_leader_as_advisor_cp_cost_factor_var }
+			set_variable = { AD_SSA_money_from_taxes_modifier_var = FROM.AD_SSA_money_from_taxes_modifier_var }
+			set_variable = { AD_SSA_local_resources_factor_var = FROM.AD_SSA_local_resources_factor_var }
+			set_variable = { AD_SSA_production_speed_infrastructure_factor_var = FROM.AD_SSA_production_speed_infrastructure_factor_var }
+			set_variable = { AD_SSA_party_popularity_stability_factor_var = FROM.AD_SSA_party_popularity_stability_factor_var }
+			hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+		}
 		add_ai_strategy = {
 			type = alliance
 			id = FROM
@@ -214,6 +304,48 @@ country_event = {
 				ROOT = { remove_ideas = AD_ECOWAS }
 			}
 		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				FROM = {
+					OR = { tag = MLI tag = BFA tag = NGR }
+					is_faction_leader = yes
+					has_country_flag = AD_faction_aes_leader
+				}
+			}
+			custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt_2
+			set_variable = { AD_SSA_political_power_gain_var = FROM.AD_SSA_political_power_gain_var }
+			set_variable = { AD_SSA_war_support_factor_var = FROM.AD_SSA_war_support_factor_var }
+			set_variable = { AD_SSA_stability_factor_var = FROM.AD_SSA_stability_factor_var }
+			set_variable = { AD_SSA_army_core_attack_factor_var = FROM.AD_SSA_army_core_attack_factor_var }
+			set_variable = { AD_SSA_initiative_factor_var = FROM.AD_SSA_initiative_factor_var }
+			set_variable = { AD_SSA_coordination_bonus_var = FROM.AD_SSA_coordination_bonus_var }
+			set_variable = { AD_SSA_planning_speed_var = FROM.AD_SSA_planning_speed_var }
+			set_variable = { AD_SSA_air_accidents_factor_var = FROM.AD_SSA_air_accidents_factor_var }
+			set_variable = { AD_SSA_air_interception_detect_factor_var = FROM.AD_SSA_air_interception_detect_factor_var }
+			set_variable = { AD_SSA_air_mission_efficiency_var = FROM.AD_SSA_air_mission_efficiency_var }
+			set_variable = { AD_SSA_air_range_factor_var = FROM.AD_SSA_air_range_factor_var }
+			set_variable = { AD_SSA_air_home_defence_factor = FROM.AD_SSA_air_home_defence_factor }
+			set_variable = { AD_SSA_air_cas_efficiency = FROM.AD_SSA_air_cas_efficiency }
+			set_variable = { AD_SSA_air_ace_generation_chance_factor = FROM.AD_SSA_air_ace_generation_chance_factor }
+			set_variable = { AD_SSA_intel_network_gain_var = FROM.AD_SSA_intel_network_gain_var }
+			set_variable = { AD_SSA_foreign_subversive_activites_var = FROM.AD_SSA_foreign_subversive_activites_var }
+			set_variable = { AD_SSA_acclimatization_hot_climate_gain_factor_var = FROM.AD_SSA_acclimatization_hot_climate_gain_factor_var }
+			set_variable = { AD_SSA_experience_loss_factor_var = FROM.AD_SSA_experience_loss_factor_var }
+			set_variable = { AD_SSA_org_loss_at_low_org_factor_var = FROM.AD_SSA_org_loss_at_low_org_factor_var }
+			set_variable = { AD_SSA_max_planning_factor_var = FROM.AD_SSA_max_planning_factor_var }
+			set_variable = { AD_SSA_combat_width_factor_var = FROM.AD_SSA_combat_width_factor_var }
+			set_variable = { AD_SSA_special_forces_cap_var = FROM.AD_SSA_special_forces_cap_var }
+			set_variable = { AD_SSA_defensive_war_stability_factor_var = FROM.AD_SSA_defensive_war_stability_factor_var }
+			set_variable = { AD_SSA_trade_opinion_factor_var = FROM.AD_SSA_trade_opinion_factor_var }
+			set_variable = { AD_SSA_political_advisor_cost_factor_var = FROM.AD_SSA_political_advisor_cost_factor_var }
+			set_variable = { AD_SSA_unit_leader_as_advisor_cp_cost_factor_var = FROM.AD_SSA_unit_leader_as_advisor_cp_cost_factor_var }
+			set_variable = { AD_SSA_money_from_taxes_modifier_var = FROM.AD_SSA_money_from_taxes_modifier_var }
+			set_variable = { AD_SSA_local_resources_factor_var = FROM.AD_SSA_local_resources_factor_var }
+			set_variable = { AD_SSA_production_speed_infrastructure_factor_var = FROM.AD_SSA_production_speed_infrastructure_factor_var }
+			set_variable = { AD_SSA_party_popularity_stability_factor_var = FROM.AD_SSA_party_popularity_stability_factor_var }
+			hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
+		}
 		add_ai_strategy = {
 			type = alliance
 			id = FROM
@@ -232,10 +364,6 @@ country_event = {
 			FROM = { has_rule = can_join_factions }
 			is_in_faction = no
 			OR = {
-				AND = {
-					FROM = { is_neutral_ideology = yes }
-					is_neutral_ideology = yes
-				}
 				AND = {
 					FROM = { is_neutral_ideology = yes }
 					is_neutral_ideology = no
@@ -300,6 +428,48 @@ country_event = {
 				}
 				ROOT = { remove_ideas = AD_ECOWAS }
 			}
+		}
+		if = {
+			limit = {
+				OR = { tag = MLI tag = BFA tag = NGR }
+				FROM = {
+					OR = { tag = MLI tag = BFA tag = NGR }
+					is_faction_leader = yes
+					has_country_flag = AD_faction_aes_leader
+				}
+			}
+			custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt_2
+			set_variable = { AD_SSA_political_power_gain_var = FROM.AD_SSA_political_power_gain_var }
+			set_variable = { AD_SSA_war_support_factor_var = FROM.AD_SSA_war_support_factor_var }
+			set_variable = { AD_SSA_stability_factor_var = FROM.AD_SSA_stability_factor_var }
+			set_variable = { AD_SSA_army_core_attack_factor_var = FROM.AD_SSA_army_core_attack_factor_var }
+			set_variable = { AD_SSA_initiative_factor_var = FROM.AD_SSA_initiative_factor_var }
+			set_variable = { AD_SSA_coordination_bonus_var = FROM.AD_SSA_coordination_bonus_var }
+			set_variable = { AD_SSA_planning_speed_var = FROM.AD_SSA_planning_speed_var }
+			set_variable = { AD_SSA_air_accidents_factor_var = FROM.AD_SSA_air_accidents_factor_var }
+			set_variable = { AD_SSA_air_interception_detect_factor_var = FROM.AD_SSA_air_interception_detect_factor_var }
+			set_variable = { AD_SSA_air_mission_efficiency_var = FROM.AD_SSA_air_mission_efficiency_var }
+			set_variable = { AD_SSA_air_range_factor_var = FROM.AD_SSA_air_range_factor_var }
+			set_variable = { AD_SSA_air_home_defence_factor = FROM.AD_SSA_air_home_defence_factor }
+			set_variable = { AD_SSA_air_cas_efficiency = FROM.AD_SSA_air_cas_efficiency }
+			set_variable = { AD_SSA_air_ace_generation_chance_factor = FROM.AD_SSA_air_ace_generation_chance_factor }
+			set_variable = { AD_SSA_intel_network_gain_var = FROM.AD_SSA_intel_network_gain_var }
+			set_variable = { AD_SSA_foreign_subversive_activites_var = FROM.AD_SSA_foreign_subversive_activites_var }
+			set_variable = { AD_SSA_acclimatization_hot_climate_gain_factor_var = FROM.AD_SSA_acclimatization_hot_climate_gain_factor_var }
+			set_variable = { AD_SSA_experience_loss_factor_var = FROM.AD_SSA_experience_loss_factor_var }
+			set_variable = { AD_SSA_org_loss_at_low_org_factor_var = FROM.AD_SSA_org_loss_at_low_org_factor_var }
+			set_variable = { AD_SSA_max_planning_factor_var = FROM.AD_SSA_max_planning_factor_var }
+			set_variable = { AD_SSA_combat_width_factor_var = FROM.AD_SSA_combat_width_factor_var }
+			set_variable = { AD_SSA_special_forces_cap_var = FROM.AD_SSA_special_forces_cap_var }
+			set_variable = { AD_SSA_defensive_war_stability_factor_var = FROM.AD_SSA_defensive_war_stability_factor_var }
+			set_variable = { AD_SSA_trade_opinion_factor_var = FROM.AD_SSA_trade_opinion_factor_var }
+			set_variable = { AD_SSA_political_advisor_cost_factor_var = FROM.AD_SSA_political_advisor_cost_factor_var }
+			set_variable = { AD_SSA_unit_leader_as_advisor_cp_cost_factor_var = FROM.AD_SSA_unit_leader_as_advisor_cp_cost_factor_var }
+			set_variable = { AD_SSA_money_from_taxes_modifier_var = FROM.AD_SSA_money_from_taxes_modifier_var }
+			set_variable = { AD_SSA_local_resources_factor_var = FROM.AD_SSA_local_resources_factor_var }
+			set_variable = { AD_SSA_production_speed_infrastructure_factor_var = FROM.AD_SSA_production_speed_infrastructure_factor_var }
+			set_variable = { AD_SSA_party_popularity_stability_factor_var = FROM.AD_SSA_party_popularity_stability_factor_var }
+			hidden_effect = { add_dynamic_modifier = { modifier = AD_SSA_sahel_states_alliance_modifier } }
 		}
 		add_ai_strategy = {
 			type = alliance

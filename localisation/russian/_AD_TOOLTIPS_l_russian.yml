@@ -182,7 +182,7 @@
     AD_market_discount_RUS_tt: "[?rus_discount|-=%1]"
     AD_market_discount_FRA_tt: "[?fra_discount|-=%1]"
     AD_russia_superiority_greater_than_or_equals_tt: "Влияние §YРоссии§! больше или равно [?AD_russia_superiority_temp_var|0Y%]"
-    AD_france_superiority_greater_than_or_equals_tt: "Влияние §YФранции§! больше или равно [?AD_france_superiority_temp_var|0Y%]"
+    AD_france_superiority_greater_than_or_equals_tt: "Влияние §YФранции§! больше или равно [?AD_france_superiority_temp_var_tt|0Y%]"
     
     AD_num_armies_greater_than_or_equals_tt: "§YКоличество дивизий§! больше или равно [?AD_num_armies_temp_var|Y0]"
     

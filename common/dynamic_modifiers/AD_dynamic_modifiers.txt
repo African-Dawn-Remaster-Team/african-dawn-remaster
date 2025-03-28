@@ -253,7 +253,7 @@ NGR_increased_control_in_the_lake_chad_area_modifier = {
 
 AD_SSA_sahel_states_alliance_modifier = {
 	
-	icon = GFX_idea_unknown
+	icon = GFX_idea_AD_SSA_sahel_states_alliance_modifier
 	enable = { always = yes }
 	remove_trigger = {  }
 	

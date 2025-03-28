@@ -10,3 +10,8 @@
  AD_g_five_improvement_category_desc: ""
  AD_NGR_conducting_counter_terrorism_measures_in_the_rear_mission: "Государство §Y[NGR.GetNameWithFlag]§! выполняет фокус «§Y$NGR_conducting_counter_terrorism_measures_in_the_rear$§!»"
  AD_NGR_develop_a_group_of_five_mission: "Государство §Y[NGR.GetNameWithFlag]§! выполняет фокус «§Y$NGR_develop_a_group_of_five$§!»"
+ 
+ AD_SSA_creation_of_the_sahel_states_alliance_category: "$AD_SSA_sahel_states_alliance$"
+ AD_SSA_creation_of_the_sahel_states_alliance_category_desc: ""
+ AD_SSA_invite_country_to_join_ssa: "Пригласить государство [FROM.GetName] в [ROOT.GetFactionName]"
+ AD_SSA_invite_country_to_join_ssa_desc: "$text_for_counter_120_days$"

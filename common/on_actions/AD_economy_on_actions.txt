@@ -32,6 +32,10 @@ on_actions = {
 				subtract_from_variable = { AD_fo_position = modifier@AD_france_superiority_modifier_weekly }
 				AD_check_political_situation_effect = yes
 			}
+			if = {
+				limit = { check_variable = { var = modifier@AD_weekly_expenses_modifier value = 0 compare = not_equals } }
+				add_to_variable = { AD_current_money_var = modifier@AD_weekly_expenses_modifier }
+			}
 		}
 	}
 	

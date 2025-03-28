@@ -1498,6 +1498,8 @@ focus_tree = {
 		available = {
 			set_temp_variable = { AD_russia_superiority_temp_var = 0.35 }
 			set_temp_variable = { AD_france_superiority_temp_var = -0.35 }
+			set_temp_variable = { AD_france_superiority_temp_var_tt = -1 }
+			multiply_temp_variable = { AD_france_superiority_temp_var_tt = AD_france_superiority_temp_var }
 			OR = {
 				custom_trigger_tooltip = {
 					check_variable = { var = AD_fo_position value = AD_russia_superiority_temp_var compare = greater_than_or_equals }
@@ -2317,6 +2319,8 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		available = {
 			set_temp_variable = { AD_france_superiority_temp_var = -0.2 }
+			set_temp_variable = { AD_france_superiority_temp_var_tt = -1 }
+			multiply_temp_variable = { AD_france_superiority_temp_var_tt = AD_france_superiority_temp_var }
 			custom_trigger_tooltip = {
 				check_variable = { var = AD_fo_position value = AD_france_superiority_temp_var compare = less_than_or_equals }
 				tooltip = AD_france_superiority_greater_than_or_equals_tt

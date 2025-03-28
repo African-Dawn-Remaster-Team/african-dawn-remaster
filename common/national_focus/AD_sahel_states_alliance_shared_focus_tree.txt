@@ -61,7 +61,7 @@ joint_focus = {
 					NOT = { has_war_with = ROOT }
 				}
 				NGR = {
-					has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+					has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
 					is_subject = no
 					is_in_faction = no
 					NOT = { has_war_with = ROOT }
@@ -79,7 +79,7 @@ joint_focus = {
 					NOT = { has_war_with = ROOT }
 				}
 				NGR = {
-					has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+					has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
 					is_subject = no
 					is_in_faction = no
 					NOT = { has_war_with = ROOT }
@@ -87,7 +87,7 @@ joint_focus = {
 			}
 		}
 		else = {
-			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
 			OR = {
 				MLI = {
 					has_country_leader = { character = MLI_Assimi_Goita ruling_only = yes }
@@ -115,7 +115,7 @@ joint_focus = {
 			has_country_leader = { character = BFA_Ibrahim_Traore ruling_only = yes }
 		}
 		else = {
-			has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+			has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
 		}
 		is_subject = no
 		is_in_faction = no
@@ -127,6 +127,8 @@ joint_focus = {
 		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_creation_of_the_sahel_states_alliance"
 		create_faction = AD_SSA_sahel_states_alliance
 		set_country_flag = AD_faction_aes_leader
+		custom_effect_tooltip = empty_line_tooltip
+		unlock_decision_category_tooltip = AD_SSA_creation_of_the_sahel_states_alliance_category
 		custom_effect_tooltip = empty_line_tooltip
 		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_add_tt
 		set_variable = { AD_SSA_political_power_gain_var = 0.02 }
@@ -156,7 +158,7 @@ joint_focus = {
 			if = {
 				limit = {
 					NGR = {
-						has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+						has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
 						is_subject = no
 						is_in_faction = no
 						NOT = { has_war_with = ROOT }
@@ -196,7 +198,7 @@ joint_focus = {
 			if = {
 				limit = {
 					NGR = {
-						has_country_leader = { character = NGR_Mohamed_Bazoum ruling_only = yes }
+						has_country_leader = { character = NGR_Abdourahamane_Tchiani ruling_only = yes }
 						is_subject = no
 						is_in_faction = no
 						NOT = { has_war_with = ROOT }
@@ -859,23 +861,46 @@ joint_focus = {
 		declare_war_on = { target = NGA type = topple_government }
 		hidden_effect = { news_event = { id = AD_SSA_news.1 days = 1 } }
 		custom_effect_tooltip = empty_line_tooltip
-		random_other_country = {
-			limit = {
-				has_idea = AD_ECOWAS
-				is_in_faction = no
-				is_subject = no
+		if = {
+			NGA = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+				}
 			}
-			create_faction = AD_SSA_ecomog_alliance
-			set_country_flag = AD_faction_ecomog_leader
-			custom_effect_tooltip = empty_line_tooltip
-			every_other_country = {
+			NGA = {
+				create_faction = AD_SSA_ecomog_alliance
+				set_country_flag = AD_faction_ecomog_leader
+				every_other_country = {
+					limit = {
+						has_idea = AD_ECOWAS
+						is_in_faction = no
+						is_subject = no
+						NOT = { has_war_with = PREV }
+					}
+					PREV = { add_to_faction = PREV }
+				}
+			}
+		}
+		else = {
+			random_other_country = {
 				limit = {
 					has_idea = AD_ECOWAS
 					is_in_faction = no
 					is_subject = no
-					NOT = { has_war_with = PREV }
 				}
-				PREV = { add_to_faction = PREV }
+				create_faction = AD_SSA_ecomog_alliance
+				set_country_flag = AD_faction_ecomog_leader
+				custom_effect_tooltip = empty_line_tooltip
+				every_other_country = {
+					limit = {
+						has_idea = AD_ECOWAS
+						is_in_faction = no
+						is_subject = no
+						NOT = { has_war_with = PREV }
+					}
+					PREV = { add_to_faction = PREV }
+				}
 			}
 		}
 	}

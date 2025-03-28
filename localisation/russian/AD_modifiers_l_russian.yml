@@ -58,6 +58,8 @@
  AD_corporate_tax_modifier: "Корпоративный налог"
  AD_individuals_tax_modifier: "Индивидуальный налог"
  
+ AD_weekly_expenses_modifier: "Еженедельные расходы (B)"
+ 
  AD_conditions_of_the_country_modifier: "Ежемесячное изменение §Yсостояния государства§!"
  AD_conditions_of_the_country_modifier_rapid_fall_tt: "§Y$condition_of_the_country$§! стремительно §Rухудшается§!"
  AD_conditions_of_the_country_modifier_quickly_fall_tt: "§Y$condition_of_the_country$§! быстро §Rухудшается§!"

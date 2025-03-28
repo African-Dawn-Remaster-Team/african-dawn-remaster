@@ -22,3 +22,8 @@ AD_g_five_improvement_category = {
 	allowed = { always = no }
 	priority = 2000
 }
+
+AD_SSA_creation_of_the_sahel_states_alliance_category = {
+	allowed = { OR = { tag = MLI tag = BFA tag = NGR } }
+	priority = 500
+}
