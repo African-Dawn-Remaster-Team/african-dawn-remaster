@@ -98,6 +98,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_flag_small"
 			position = { x = -40 y = 45 }
 			orientation = "UPPER_RIGHT"
+			pdx_tooltip = AD_m_creator_flag
 		}
 		
 		instantTextboxType = {
@@ -122,6 +123,14 @@ guiTypes = {
 			maxHeight = 33
 			format = left
 			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "icon_offer"
+			position = {x=-54 y=5}
+			quadTextureSprite ="GFX_relation_lend_lease_initiator"
+			orientation = "UPPER_RIGHT"
+			pdx_tooltip = AD_m_icon_offer_tooltip
 		}
 		
 		# iconType = {
@@ -313,7 +322,7 @@ guiTypes = {
 			name = "main_info_desc"
 			position = { x = 25 y = 240 }
 			font = "hoi_18mbs"
-			text = "[getmaininfomodal]"
+			text = weapons_trade_tt
 			maxWidth = 450
 			maxHeight = 200
 			format = center

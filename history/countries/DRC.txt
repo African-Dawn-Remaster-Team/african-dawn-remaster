@@ -21,3 +21,62 @@ starting_train_buffer = 5
 set_research_slots = 2
 set_stability = -0.93
 set_war_support = -0.67
+
+create_dynamic_country = {
+	original_tag = DRC
+	copy_tag = DRC
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = DRC_cooperative_for_the_development_of_the_congo
+	set_popularities = { centrism = 100 }
+	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+	}
+	
+	transfer_state = 198
+	DRC = { 
+		set_province_controller = 3807
+	}
+	#set_oob = "CODECO_oob"
+	recruit_character = DRC_Tseni_Adrionzi_Raymond    
+	promote_character = DRC_Tseni_Adrionzi_Raymond    
+	declare_war_on = { target = DRC type = civil_war }
+
+	add_civil_war_target = DRC
+	DRC = { add_civil_war_target = PREV }
+}
+
+create_dynamic_country = {
+	original_tag = DRC
+	copy_tag = DRC
+	reserve_dynamic_country = yes
+	
+	set_cosmetic_tag = DRC_allied_democratic_forces
+	set_popularities = { fundamentalism = 100 }
+	set_politics = { ruling_party = fundamentalism elections_allowed = no }
+	set_variable = { AD_fog_source_of_power = 2 }
+	set_variable = { AD_fog_power_structure = 0 }
+	set_country_flag = militia_bandits
+	
+	add_ideas = {
+		AD_surrender_limit_spirit_idea
+		AD_lack_of_social_programs
+		AD_fundamentalism
+	}
+	
+	transfer_state = 197
+	
+	#set_oob = "ADF_oob"
+	recruit_character = DRC_Musa_Baluku    
+	promote_character = DRC_Musa_Baluku    
+	declare_war_on = { target = DRC type = civil_war }
+
+	add_civil_war_target = DRC
+	DRC = { add_civil_war_target = PREV }
+}

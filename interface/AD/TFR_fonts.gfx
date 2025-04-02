@@ -1,0 +1,96 @@
+bitmapfonts = {
+
+	bitmapfont = {
+		name = "VCR02_18"
+		path = "gfx/fonts/VCR02_18"   
+		color = 0xffffffff
+		textcolors = {
+			1 = { 192 38 38 }
+			2 = { 32 32 32 }
+			3 = { 195 70 70 }
+			4 = { 247 216 45 }
+			5 = { 37 95 192 }
+			6 = { 190 173 92 }
+			7 = { 119 119 119 }
+			8 = { 126 97 74 }
+		}
+	}
+
+	bitmapfont = {
+		name = "VCR02_20"
+		path = "gfx/fonts/VCR02_20"   
+		color = 0xffffffff
+	}
+
+	bitmapfont = {
+		name = "VCR02_20"
+		path = "gfx/fonts/VCR02_20"
+		fontfiles = {
+			"gfx/fonts/VCR02_20"
+			"gfx/fonts/VCR02_20_rus"
+		}			
+		color = 0xffffffff
+	}
+
+	bitmapfont = {
+		name = "VCR02_24"
+		path = "gfx/fonts/VCR02_24"   
+		color = 0xffffffff
+	}
+
+	#VCR02
+	
+	bitmapfont = {
+		name = "VCR02_10"
+		path = "gfx/fonts/VCR02_10"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_12"
+		path = "gfx/fonts/VCR02_12"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_14"
+		path = "gfx/fonts/VCR02_14"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_16"
+		path = "gfx/fonts/VCR02_16"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_18"
+		path = "gfx/fonts/VCR02_18"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_20"
+		path = "gfx/fonts/VCR02_20"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_24"
+		path = "gfx/fonts/VCR02_24"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_26"
+		path = "gfx/fonts/VCR02_26"   
+		color = 0xffffffff
+	}
+	
+	bitmapfont = {
+		name = "VCR02_36"
+		path = "gfx/fonts/VCR02_36"   
+		color = 0xffffffff
+	}
+}

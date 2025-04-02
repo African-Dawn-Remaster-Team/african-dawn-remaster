@@ -4,37 +4,32 @@ guiTypes = {
 		position = { x = -4 y = -1 } 
 		size = { width=100%% height=100%% }
 		
-		iconType ={
+		iconType = {
 			name ="balance_value_bg"
 			spriteType = "GFX_generic_box_96"
 			position = { x = -650 y = 4 }
 			Orientation = upper_right
+			pdx_tooltip = AD_e_balance_tooltip
+			pdx_tooltip_delayed = AD_e_balance_tooltip_delayed
 		}
-		
 		iconType = {
 			name = "income_icon"
 			position = { x=-650 y=7 }
-			spriteType = "GFX_AD_CFA_franc_icon"
+			spriteType = "GFX_AD_CFA_franc_income_icon"
 			Orientation = upper_right
+			alwaystransparent = yes
 		}
-		
 		instantTextBoxType = {
 			name ="balance"
-			position = { x= -633 y = 7 }
-			font = "hoi_18mbs"
+			position = { x= -633 y = 8 }
+			font = "VCR02_14"
 			text = AD_economy_balance_value
 			format = right
 			maxWidth = 70
 			maxHeight = 24
 			fixedsize = yes
 			Orientation = upper_right
-		}
-		
-		iconType ={
-			name ="gdp_value_bg"
-			spriteType = "GFX_generic_box_96"
-			position = { x = -530 y = 4 }
-			Orientation = upper_right
+			alwaystransparent = yes
 		}
 		
 		iconType = {
@@ -42,51 +37,63 @@ guiTypes = {
 			position = { x=-545 y=0 }
 			spriteType = "GFX_AD_topbar_splitter"
 			Orientation = upper_right
+			alwaystransparent = yes
 		}
 		
+		iconType = {
+			name ="gdp_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = -530 y = 4 }
+			Orientation = upper_right
+			pdx_tooltip = AD_e_gdp_tooltip
+			pdx_tooltip_delayed = AD_e_gdp_tooltip_delayed
+		}
 		iconType = {
 			name = "gdp_icon"
 			position = { x=-530 y=7 }
 			spriteType = "GFX_AD_CFA_franc_icon"
 			Orientation = upper_right
+			alwaystransparent = yes
 		}
-		
 		instantTextBoxType = {
 			name = "gdp"
-			position = { x= -513 y = 7 }
-			font = "hoi_18mbs"
+			position = { x= -513 y = 8 }
+			font = "VCR02_14"
 			text = AD_economy_gdp_value
 			format = right
 			maxWidth = 70
 			maxHeight = 24
 			fixedsize = yes
 			Orientation = upper_right
+			alwaystransparent = yes
 		}
 		
-		iconType ={
+		iconType = {
 			name ="debt_value_bg"
 			spriteType = "GFX_generic_box_96"
 			position = { x = -430 y = 4 }
 			Orientation = upper_right
+			pdx_tooltip = AD_e_debt_tooltip
+			pdx_tooltip_delayed = AD_e_debt_tooltip_delayed
 		}
-		
 		iconType = {
 			name = "debt_icon"
 			position = { x=-430 y=7 }
 			spriteType = "GFX_AD_CFA_franc_debt_icon"
 			Orientation = upper_right
+			alwaystransparent = yes
 		}
-		
 		instantTextBoxType = {
 			name ="debt"
-			position = { x= -413 y = 7 }
-			font = "hoi_18mbs"
+			position = { x= -413 y = 8 }
+			font = "VCR02_14"
 			text = AD_economy_debt_value
 			format = right
 			maxWidth = 70
 			maxHeight = 24
 			fixedsize = yes
 			Orientation = upper_right
+			alwaystransparent = yes
 		}
 	}
 	
@@ -135,6 +142,7 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income
 				maxWidth = 180
+				maxHeight = 20
 				multiline = no
 				format = center
 			}
@@ -145,8 +153,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income1
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
+				pdx_tooltip = AD_e_income_from_the_population_tt
 			}
 			instantTextboxType = {
 				name = "income1_value"
@@ -154,8 +164,9 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income1_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_income_from_the_population_tt
 			}
 			
 			instantTextboxType = {
@@ -164,8 +175,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income2
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
+				pdx_tooltip = AD_e_income_from_the_industry_tt
 			}
 			instantTextboxType = {
 				name = "income2_value"
@@ -173,8 +186,9 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income2_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_income_from_the_industry_tt
 			}
 			
 			instantTextboxType = {
@@ -183,8 +197,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income3
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
+				pdx_tooltip = AD_e_income_from_resources_tt
 			}
 			instantTextboxType = {
 				name = "income3_value"
@@ -192,27 +208,53 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_income3_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_income_from_resources_tt
+			}
+			
+			instantTextboxType = {
+				name = "income4"
+				position = { x = 13 y = 94 }
+				font = "hoi_16mbs"
+				text = AD_economy_income4
+				maxWidth = 110
+				maxHeight = 20
+				multiline = no
+				format = left
+				pdx_tooltip = AD_e_income_from_others_tt
+			}
+			instantTextboxType = {
+				name = "income4_value"
+				position = { x = 123 y = 94 }
+				font = "hoi_16mbs"
+				text = AD_economy_income4_value
+				maxWidth = 70
+				maxHeight = 20
+				format = center
+				pdx_tooltip = AD_e_income_from_others_tt
 			}
 			
 			instantTextboxType = {
 				name = "income_summary"
-				position = { x = 13 y = 130 }
+				position = { x = 13 y = 145 }
 				font = "hoi_16mbs"
 				text = AD_economy_income_summary
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
+				pdx_tooltip = AD_e_income_summary_tt
 			}
 			instantTextboxType = {
 				name = "income_summary_value"
-				position = { x = 123 y = 130 }
+				position = { x = 123 y = 145 }
 				font = "hoi_16mbs"
 				text = AD_economy_income_summary_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_income_summary_tt
 			}
 		}
 		
@@ -226,6 +268,7 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends
 				maxWidth = 180
+				maxHeight = 20
 				multiline = no
 				format = center
 			}
@@ -236,8 +279,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends1
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
+				pdx_tooltip = AD_e_expense_from_peoples_tt
 			}
 			instantTextboxType = {
 				name = "extends1_value"
@@ -245,8 +290,9 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends1_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_expense_from_peoples_tt
 			}
 			
 			instantTextboxType = {
@@ -255,9 +301,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends2
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
-				alwaystransparent = yes
+				pdx_tooltip = AD_e_expense_from_army_tt
 			}
 			instantTextboxType = {
 				name = "extends2_value"
@@ -265,8 +312,9 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends2_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_expense_from_army_tt
 			}
 
 			instantTextboxType = {
@@ -275,9 +323,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends3
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
-				alwaystransparent = yes
+				pdx_tooltip = AD_e_expense_from_arms_factory_tt
 			}
 			instantTextboxType = {
 				name = "extends3_value"
@@ -285,8 +334,9 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends3_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_expense_from_arms_factory_tt
 			}
 			
 			instantTextboxType = {
@@ -295,9 +345,10 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends4
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
-				alwaystransparent = yes
+				pdx_tooltip = AD_e_expense_from_debt_service_tt
 			}
 			instantTextboxType = {
 				name = "extends4_value"
@@ -305,33 +356,157 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = AD_economy_extends4_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_expense_from_debt_service_tt
+			}
+			
+			instantTextboxType = {
+				name = "extends5"
+				position = { x = 13 y = 114 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends5
+				maxWidth = 110
+				maxHeight = 20
+				multiline = no
+				format = left
+				pdx_tooltip = AD_e_expense_from_others_tt
+			}
+			instantTextboxType = {
+				name = "extends5_value"
+				position = { x = 123 y = 114 }
+				font = "hoi_16mbs"
+				text = AD_economy_extends5_value
+				maxWidth = 70
+				maxHeight = 20
+				format = center
+				pdx_tooltip = AD_e_expense_from_others_tt
 			}
 			
 			instantTextboxType = {
 				name = "extends_summary"
-				position = { x = 13 y = 130 }
+				position = { x = 13 y = 145 }
 				font = "hoi_16mbs"
 				text = AD_economy_extends_summary
 				maxWidth = 110
+				maxHeight = 20
 				multiline = no
 				format = left
+				pdx_tooltip = AD_e_extends_summary_tt
 			}
 			instantTextboxType = {
 				name = "extends_summary_value"
-				position = { x = 123 y = 130 }
+				position = { x = 123 y = 145 }
 				font = "hoi_16mbs"
 				text = AD_economy_extends_summary_value
 				maxWidth = 70
-				maxHeight = 15
+				maxHeight = 20
 				format = center
+				pdx_tooltip = AD_e_extends_summary_tt
 			}
 		}
 		
 		containerWindowType = {
+			name = "main_economic_parameters"
+			position = { x = 370 y = 32 } 
+			
+			instantTextboxType = {
+				name = "gdp"
+				position = { x = 0 y = 34 }
+				font = "hoi_16mbs"
+				text = AD_economy_gdp
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_gdp_tooltip # TODO ?
+				pdx_tooltip_delayed = AD_e_gdp_tooltip_delayed
+			}
+			instantTextboxType = {
+				name = "gdp_value"
+				position = { x = 70 y = 34 }
+				font = "hoi_16mbs"
+				text = AD_economy_gdp_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_gdp_tooltip # TODO ?
+				pdx_tooltip_delayed = AD_e_gdp_tooltip_delayed
+			}
+			
+			instantTextboxType = {
+				name = "gdp_per_capita"
+				position = { x = 0 y = 54 }
+				font = "hoi_16mbs"
+				text = AD_economy_gdp_per_capita
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_gdp_tooltip # TODO ?
+				pdx_tooltip_delayed = AD_e_gdp_tooltip_delayed
+			}
+			instantTextboxType = {
+				name = "gdp_per_capita_value"
+				position = { x = 70 y = 54 }
+				font = "hoi_16mbs"
+				text = AD_economy_gdp_per_capita_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_gdp_tooltip # TODO ?
+				pdx_tooltip_delayed = AD_e_gdp_tooltip_delayed
+			}
+			
+			instantTextboxType = {
+				name = "debt"
+				position = { x = 0 y = 74 }
+				font = "hoi_16mbs"
+				text = AD_economy_debt
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_debt_tooltip
+				pdx_tooltip_delayed = AD_e_debt_tooltip_delayed
+			}
+			instantTextboxType = {	
+				name = "debt_value"
+				position = { x = 70 y = 74 }
+				font = "hoi_16mbs"
+				text = AD_economy_debt_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_debt_tooltip
+				pdx_tooltip_delayed = AD_e_debt_tooltip_delayed
+			}
+			
+			instantTextboxType = {
+				name = "balance"
+				position = { x = 0 y = 145 }
+				font = "hoi_16mbs"
+				text = AD_economy_balance
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_balance_tooltip
+				pdx_tooltip_delayed = AD_e_balance_tooltip_delayed
+			}
+			instantTextboxType = {	
+				name = "balance_value"
+				position = { x = 70 y = 145 }
+				font = "hoi_16mbs"
+				text = AD_economy_balance_value
+				maxWidth = 70
+				maxHeight = 15
+				format = center
+				pdx_tooltip = AD_e_balance_tooltip
+				pdx_tooltip_delayed = AD_e_balance_tooltip_delayed
+			}
+		}
+		
+		containerWindowType = { ## СКРЫТО
 			name = "modifier"
 			position = { x = 370 y = 32 } 
+			hide = yes
 			
 			# iconType = {
 				# name = "efficiency_growth_icon"
@@ -416,6 +591,7 @@ guiTypes = {
 			maxHeight = 15
 			multiline = no
 			format = right
+			pdx_tooltip = AD_e_summary_balance_tt
 		}
 		containerWindowType = {
 			name = "summary_balance"
@@ -431,6 +607,7 @@ guiTypes = {
 				name = "income_icon"
 				position = { x=0 y=5 }
 				spriteType = "GFX_AD_CFA_franc_icon"
+				alwaystransparent = yes
 			}
 			
 			instantTextboxType = {
@@ -441,6 +618,7 @@ guiTypes = {
 				maxWidth = 100
 				maxHeight = 15
 				format = right
+				pdx_tooltip = AD_e_summary_balance_tt
 			}
 		}
 		
@@ -454,6 +632,7 @@ guiTypes = {
 				quadTextureSprite ="GFX_generic_checkbox"
 				clicksound = click_checkbox
 				Orientation = "LEFT"
+				pdx_tooltip = AD_economy_autorepayment_debt_tooltip
 			}
 			instantTextboxType = {
 				name = "autorepayment_debt_title"
@@ -464,21 +643,24 @@ guiTypes = {
 				maxHeight = 20
 				format = left
 				Orientation = "LEFT"
+				pdx_tooltip = AD_economy_autorepayment_debt_tooltip
 			}
 			
 			buttonType = {
 				name = "take_debt"
 				position = { x=200 y =0}
 				quadTextureSprite ="GFX_button_123x34"
-				buttonText = "Взять долг"
+				buttonText = AD_economy_take_debt_title
 				buttonFont = "hoi_18mbs"
+				pdx_tooltip = AD_economy_take_debt_tooltip
 			}
 			buttonType = {
 				name = "repayment_debt"
 				position = { x=350 y =0}
 				quadTextureSprite ="GFX_button_123x34"
-				buttonText = "Погасить долг"
+				buttonText = AD_economy_repayment_debt_title
 				buttonFont = "hoi_18mbs"
+				pdx_tooltip = AD_economy_repayment_debt_tooltip
 			}
 		}
 	}

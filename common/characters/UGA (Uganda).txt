@@ -26,7 +26,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_JOSEPH_KONY_DESC"
-			ideology = centrism_subtype_right_wing_populism
+			ideology = fundamentalism_subtype_christian_fundamentalism
 		}
 		field_marshal={
 			traits={ old_guard }

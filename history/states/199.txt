@@ -1,0 +1,25 @@
+state={
+	id=199
+	name="STATE_199"
+	provinces={
+		154 495 681 866 875 1046 1654 2363 2508 2752 2824 3224 3792 3793 5233 5236 
+	}
+	resources = {
+		chromium = 4
+		gold = 4
+	}
+	history={
+		owner = UGA
+		add_core_of = UGA
+		victory_points = { 875 3 }
+		victory_points = { 2508 5 }
+		victory_points = { 3792 3 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=7188139 
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

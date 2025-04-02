@@ -157,7 +157,7 @@
     timer_tootip: "Через §H$RIGHT|0$§! дней:\n"
     effects_tooltip: "§HЭффекты:§!\n\n"
     
-    AD_current_money_var_tt: "Текущий баланс изменится на £pol_power $RIGHT|=+2$§GB§!"     #TODO: texticon
+    AD_current_money_var_tt: "Текущий баланс изменится на £money_texticon $RIGHT|=+2$§GB§!"
     
     AD_ban_on_the_shift_of_trade_laws_tt: "£trigger_yes  §RЗапрет§! на смену §Yзаконов, регулируюших торговлю§!"
     
@@ -186,11 +186,13 @@
     
     AD_num_armies_greater_than_or_equals_tt: "§YКоличество дивизий§! больше или равно [?AD_num_armies_temp_var|Y0]"
     
+    AD_form_of_government_change_tt: "Форма государственного устройства будет изменена на «$FORM|Y$»."
+    
  # for Decision
      
-     money_cost: "£pol_power §H[?money_temp_cost]B§!"    #TODO: texticon
-     money_cost_blocked: "£pol_power §R[?money_temp_cost]B§!"
-     money_cost_tooltip: "Стоимость принятия решения: £pol_power §H[?money_temp_cost]B§!"
+     money_cost: "£money_texticon §H[?money_temp_cost]B§!"
+     money_cost_blocked: "£money_texticon §R[?money_temp_cost]B§!"
+     money_cost_tooltip: "Стоимость принятия решения: £money_texticon §H[?money_temp_cost]B§!"
      
      pol_power_cost: "£pol_power §H[?custom_cost_pp]§!"     #costя, не трогай, это на новый год#    костя больше не тронет🕯🥀
      pol_power_cost_blocked: "£pol_power §R[?custom_cost_pp]§!"

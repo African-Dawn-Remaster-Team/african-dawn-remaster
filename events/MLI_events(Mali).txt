@@ -5,7 +5,7 @@ country_event = {
 	id = AD_MLI.0
 	title = AD_MLI.0.t
 	desc = AD_MLI.0.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_0
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.0" }
 	option = {
@@ -45,7 +45,7 @@ country_event = {
 	id = AD_MLI.1
 	title = AD_MLI.1.t
 	desc = AD_MLI.1.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_1
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.1" }
 	option = {
@@ -74,16 +74,24 @@ country_event = {
 	id = AD_MLI.2
 	title = AD_MLI.2.t
 	desc = AD_MLI.2.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_2
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.2" }
 	option = {
 		name = AD_MLI.2.a
 		FROM = { set_autonomy = { target = ROOT autonomous_state = autonomy_integrated_puppet } }
+		custom_effect_tooltip = empty_line_tooltip
+		set_cosmetic_tag = AZW_autonomy_integrated_puppet
 	}
 	option = {
 		name = AD_MLI.2.b
-		FROM = { country_event = { id = AD_MLI.3 hours = 12 } }
+		FROM = {
+			country_event = { id = AD_MLI.3 hours = 12 }
+			custom_effect_tooltip = empty_line_tooltip
+			effect_tooltip = { remove_ideas = MLI_algerian_peace_agreement_idea }
+		}
+		custom_effect_tooltip = empty_line_tooltip
+		effect_tooltip = { remove_ideas = MLI_algerian_peace_agreement_idea }
 	}
 }
 
@@ -92,12 +100,14 @@ country_event = {
 	id = AD_MLI.3
 	title = AD_MLI.3.t
 	desc = AD_MLI.3.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_3
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
 	option = {
 		name = AD_MLI.3.a
 		remove_ideas = MLI_algerian_peace_agreement_idea
+		custom_effect_tooltip = empty_line_tooltip
+		FROM = { remove_ideas = MLI_algerian_peace_agreement_idea }
 	}
 }
 
@@ -106,7 +116,7 @@ country_event = {
 	id = AD_MLI.4
 	title = AD_MLI.4.t
 	desc = AD_MLI.4.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_4
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.4" }
 	option = {
@@ -146,7 +156,7 @@ country_event = {
 	id = AD_MLI.5
 	title = AD_MLI.5.t
 	desc = AD_MLI.5.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_5
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
 	option = {
@@ -169,7 +179,7 @@ country_event = {
 	id = AD_MLI.6
 	title = AD_MLI.6.t
 	desc = AD_MLI.6.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_6
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
 	option = {
@@ -201,7 +211,7 @@ country_event = {
 	id = AD_MLI.7
 	title = AD_MLI.7.t
 	desc = AD_MLI.7.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_7
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
 	option = {
@@ -239,7 +249,7 @@ country_event = {
 	id = AD_MLI.8
 	title = AD_MLI.8.t
 	desc = AD_MLI.8.d
-	picture = GFX_report_event_hol_cabinet_de_geer
+	picture = GFX_report_event_mli_8
 	is_triggered_only = yes
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event AD_MLI.3" }
 	option = {

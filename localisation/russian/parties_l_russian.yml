@@ -1,13 +1,25 @@
 ﻿l_russian:
  
  ###
+ AD_unitary_state_structure: "Унитарное государство"
+ AD_federation_structure: "Федерация"
+ AD_confederation_structure: "Конфедерация"
+ ###
+ AD_democracy_source_of_power: "Демократия"
+ AD_oligarchy_source_of_power: "Олигархия"
+ AD_autocracy_source_of_power: "Автократия"
+ AD_anarchy_source_of_power: "Анархия"
+ ###
+ 
+ ###
  fundamentalism: "Фундаментализм"
  fundamentalism_noun: "Фундаментализм"
  fundamentalism_desc: "Фундаментализм"
  
  fundamentalism_subtype_takfirism: "Такфиризм"
  fundamentalism_subtype_jihadism: "Джихадизм"
- fundamentalism_subtype_salafism: "Салафизм" 
+ fundamentalism_subtype_salafism: "Салафизм"
+ fundamentalism_subtype_christian_fundamentalism: "Христианский фундаментализм"
  ###
  
  ###
@@ -16,9 +28,9 @@
  conservatism_desc: "Консерватизм"
  
  conservatism_subtype_conservatism: "Консерватизм"
- conservatism_subtype_conservative_democracy: "Консервативная Демократия"
+ conservatism_subtype_conservative_democracy: "Консервативная демократия"
  conservatism_subtype_paternalism: "Патернализм"
- conservatism_subtype_oligarchic_conservatism: "Олигархический Консерватизм"
+ conservatism_subtype_oligarchic_conservatism: "Олигархический консерватизм"
  conservatism_subtype_despotism: "Деспотизм"
  conservatism_subtype_anarchy: "Анархия"
  conservatism_subtype_islamic_democracy: "Исламская демократия"
@@ -31,9 +43,9 @@
  centrism_desc: ""
  
  centrism_subtype_centrism: "Центризм"
- centrism_subtype_right_wing_populism: "Правый Популизм"
+ centrism_subtype_right_wing_populism: "Правый популизм"
  centrism_subtype_anocracy: "Анократия"
- centrism_subtype_personalist_dictatorship: "Персоналистская Диктатура"
+ centrism_subtype_personalist_dictatorship: "Персоналистская диктатура"
  centrism_subtype_irregular_organization: "Иррегулярное формирование"
  centrism_subtype_tribalism: "Вождество"
  ###
@@ -44,12 +56,12 @@
  liberalism_desc: ""
  
  liberalism_subtype_liberalism: "Либерализм"
- liberalism_subtype_liberal_democracy: "Либеральная Демократия"
- liberalism_subtype_market_liberalism: "Рыночный Либерализм"
- liberalism_subtype_national_liberalism: "Национал Либерализм"
- liberalism_subtype_conservative_liberalism: "Консервативный Либерализм"
- liberalism_subtype_authoritarian_democracy: "Авторитарная Демократия"
- liberalism_subtype_anarcho_capitalism: "Анархо-Капитализм"
+ liberalism_subtype_liberal_democracy: "Либеральная демократия"
+ liberalism_subtype_market_liberalism: "Рыночный либерализм"
+ liberalism_subtype_national_liberalism: "Национал-либерализм"
+ liberalism_subtype_conservative_liberalism: "Консервативный либерализм"
+ liberalism_subtype_authoritarian_democracy: "Авторитарная демократия"
+ liberalism_subtype_anarcho_capitalism: "Анархо-капитализм"
  ###
  
  ###
@@ -57,9 +69,9 @@
  social_democracy_noun: "Социал-Демократия"
  social_democracy_desc: ""
  
- social_democracy_subtype_social_democracy: "Социал-Демократия"
- social_democracy_subtype_left_wing_populism: "Левый Популизм"
- social_democracy_subtype_african_socialism: "Африканский Социализм"
+ social_democracy_subtype_social_democracy: "Социал-демократия"
+ social_democracy_subtype_left_wing_populism: "Левый популизм"
+ social_democracy_subtype_african_socialism: "Африканский социализм"
  social_democracy_subtype_anarchy: "Анархия"
  ###
  
@@ -70,9 +82,9 @@
  
  socialism_subtype_socialism: "Социализм"
  socialism_subtype_african_socialism: "Африканский социализм"
- socialism_subtype_left_wing_nationalism: "Левый Национализм"
- socialism_subtype_totalitarian_socialism: "Тоталитарный Социализм"
- socialism_subtype_anarcho_communism: "Анархо-Коммунизм"
+ socialism_subtype_left_wing_nationalism: "Левый национализм"
+ socialism_subtype_totalitarian_socialism: "Тоталитарный социализм"
+ socialism_subtype_anarcho_communism: "Анархо-коммунизм"
  socialism_subtype_third_world_theory: "Третья Всемирная Теория"
  
  ###EQG###
@@ -278,6 +290,8 @@
  UGA_centrism_party_long: "Движение национального сопротивления"
  UGA_social_democracy_party: "ПНЕ"
  UGA_social_democracy_party_long: "Платформа национального единства"
+ UGA_fundamentalism_party: "ГАС"
+ UGA_fundamentalism_party_long: "Господня Армия Сопротивления"
 
  ###BFA###
  BFA_centrism_party: "Военные"

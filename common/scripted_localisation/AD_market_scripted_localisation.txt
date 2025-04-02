@@ -1167,33 +1167,3 @@ defined_text = {
 		localization_key = AD_market_discount
 	}
 }
-
-defined_text = {
-	name = check_trig_opinion
-	text = {
-		trigger = {
-			meta_trigger = { 
-				text = {
-					[TAGSTRANY] = {
-						has_opinion = {
-							target = ROOT
-							value < -50
-						}
-					}
-				} 
-				TAGSTRANY = "[AD_get_market_item_producer_tag]"
-			} 
-		}
-		localization_key = "bad_opinion_tt"
-	}
-}
-
-defined_text = {
-	name = getmaininfomodal
-	text = {
-		localization_key = "weapons_trade_tt"
-	}
-	# text = {
-		# localization_key = "resource_trade_tt"
-	# }
-}

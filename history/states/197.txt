@@ -1,0 +1,19 @@
+state={
+	id=197
+	name="STATE_197"
+	provinces={
+		2537 5213 
+	}
+	history={
+		owner = DRC
+		add_core_of = DRC
+		victory_points = { 5213 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=58999
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

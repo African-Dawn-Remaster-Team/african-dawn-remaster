@@ -256,7 +256,6 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = 0.25
 				production_speed_hospital_factor = 0.25
-				production_speed_university_factor = 0.25
 			}
 		}
 		

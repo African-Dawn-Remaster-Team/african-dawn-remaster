@@ -120,6 +120,28 @@ joint_focus = {
 		is_subject = no
 		is_in_faction = no
 	}
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+				BFA = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+				NGR = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+				BFA = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+			}
+		}
+	}
 	completion_reward = {
 
 	}
@@ -275,7 +297,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+				BFA = { has_completed_focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+				NGR = { has_completed_focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+				BFA = { has_completed_focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_creation_of_the_sahel_states_alliance }
 	relative_position_id = AD_SSA_creation_of_the_sahel_states_alliance
 	mutually_exclusive = { focus = AD_SSA_formation_of_the_confederation focus = AD_SSA_striving_for_confederation }
@@ -302,7 +345,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_creation_of_the_united_armed_forces }
+				BFA = { has_completed_focus = AD_SSA_creation_of_the_united_armed_forces }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_creation_of_the_united_armed_forces }
+				NGR = { has_completed_focus = AD_SSA_creation_of_the_united_armed_forces }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_creation_of_the_united_armed_forces }
+				BFA = { has_completed_focus = AD_SSA_creation_of_the_united_armed_forces }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
 	relative_position_id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
 	completion_reward = {
@@ -329,7 +393,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_joint_air_operations }
+				BFA = { has_completed_focus = AD_SSA_joint_air_operations }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_joint_air_operations }
+				NGR = { has_completed_focus = AD_SSA_joint_air_operations }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_joint_air_operations }
+				BFA = { has_completed_focus = AD_SSA_joint_air_operations }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_creation_of_the_united_armed_forces }
 	relative_position_id = AD_SSA_creation_of_the_united_armed_forces
 	completion_reward = {
@@ -357,7 +442,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_invite_russian_pilots }
+				BFA = { has_completed_focus = AD_SSA_invite_russian_pilots }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_invite_russian_pilots }
+				NGR = { has_completed_focus = AD_SSA_invite_russian_pilots }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_invite_russian_pilots }
+				BFA = { has_completed_focus = AD_SSA_invite_russian_pilots }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_joint_air_operations }
 	relative_position_id = AD_SSA_joint_air_operations
 	completion_reward = {
@@ -384,7 +490,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_expand_intelligence_cooperation }
+				BFA = { has_completed_focus = AD_SSA_expand_intelligence_cooperation }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_expand_intelligence_cooperation }
+				NGR = { has_completed_focus = AD_SSA_expand_intelligence_cooperation }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_expand_intelligence_cooperation }
+				BFA = { has_completed_focus = AD_SSA_expand_intelligence_cooperation }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_creation_of_the_united_armed_forces }
 	relative_position_id = AD_SSA_creation_of_the_united_armed_forces
 	completion_reward = {
@@ -411,7 +538,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_conducting_joint_exercises }
+				BFA = { has_completed_focus = AD_SSA_conducting_joint_exercises }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_conducting_joint_exercises }
+				NGR = { has_completed_focus = AD_SSA_conducting_joint_exercises }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_conducting_joint_exercises }
+				BFA = { has_completed_focus = AD_SSA_conducting_joint_exercises }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_expand_intelligence_cooperation }
 	relative_position_id = AD_SSA_expand_intelligence_cooperation
 	completion_reward = {
@@ -438,7 +586,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_unite_the_general_staffs }
+				BFA = { has_completed_focus = AD_SSA_unite_the_general_staffs }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_unite_the_general_staffs }
+				NGR = { has_completed_focus = AD_SSA_unite_the_general_staffs }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_unite_the_general_staffs }
+				BFA = { has_completed_focus = AD_SSA_unite_the_general_staffs }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_striving_for_confederation }
 	relative_position_id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
 	completion_reward = {
@@ -465,7 +634,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_form_operational_groups }
+				BFA = { has_completed_focus = AD_SSA_form_operational_groups }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_form_operational_groups }
+				NGR = { has_completed_focus = AD_SSA_form_operational_groups }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_form_operational_groups }
+				BFA = { has_completed_focus = AD_SSA_form_operational_groups }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_formation_of_the_confederation focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance }
 	relative_position_id = AD_SSA_sgreements_within_the_framework_of_the_military_alliance
 	completion_reward = {
@@ -510,7 +700,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_regain_control_of_borders }
+				BFA = { has_completed_focus = AD_SSA_regain_control_of_borders }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_regain_control_of_borders }
+				NGR = { has_completed_focus = AD_SSA_regain_control_of_borders }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_regain_control_of_borders }
+				BFA = { has_completed_focus = AD_SSA_regain_control_of_borders }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_creation_of_the_united_armed_forces }
 	relative_position_id = AD_SSA_creation_of_the_united_armed_forces
 	completion_reward = {
@@ -537,7 +748,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_formation_of_the_confederation }
+				BFA = { has_completed_focus = AD_SSA_formation_of_the_confederation }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_formation_of_the_confederation }
+				NGR = { has_completed_focus = AD_SSA_formation_of_the_confederation }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_formation_of_the_confederation }
+				BFA = { has_completed_focus = AD_SSA_formation_of_the_confederation }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_creation_of_the_sahel_states_alliance }
 	relative_position_id = AD_SSA_creation_of_the_sahel_states_alliance
 	mutually_exclusive = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_striving_for_confederation }
@@ -566,7 +798,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_create_a_joint_investment_bank }
+				BFA = { has_completed_focus = AD_SSA_create_a_joint_investment_bank }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_create_a_joint_investment_bank }
+				NGR = { has_completed_focus = AD_SSA_create_a_joint_investment_bank }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_create_a_joint_investment_bank }
+				BFA = { has_completed_focus = AD_SSA_create_a_joint_investment_bank }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_formation_of_the_confederation }
 	relative_position_id = AD_SSA_formation_of_the_confederation
 	completion_reward = {
@@ -593,7 +846,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_joint_geological_exploration }
+				BFA = { has_completed_focus = AD_SSA_joint_geological_exploration }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_joint_geological_exploration }
+				NGR = { has_completed_focus = AD_SSA_joint_geological_exploration }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_joint_geological_exploration }
+				BFA = { has_completed_focus = AD_SSA_joint_geological_exploration }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_create_a_joint_investment_bank }
 	relative_position_id = AD_SSA_create_a_joint_investment_bank
 	completion_reward = {
@@ -618,7 +892,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_final_break_with_ecowas }
+				BFA = { has_completed_focus = AD_SSA_final_break_with_ecowas }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_final_break_with_ecowas }
+				NGR = { has_completed_focus = AD_SSA_final_break_with_ecowas }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_final_break_with_ecowas }
+				BFA = { has_completed_focus = AD_SSA_final_break_with_ecowas }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_create_a_joint_investment_bank }
 	relative_position_id = AD_SSA_create_a_joint_investment_bank
 	completion_reward = {
@@ -675,7 +970,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_introduction_of_unified_passports }
+				BFA = { has_completed_focus = AD_SSA_introduction_of_unified_passports }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_introduction_of_unified_passports }
+				NGR = { has_completed_focus = AD_SSA_introduction_of_unified_passports }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_introduction_of_unified_passports }
+				BFA = { has_completed_focus = AD_SSA_introduction_of_unified_passports }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_final_break_with_ecowas }
 	relative_position_id = AD_SSA_final_break_with_ecowas
 	completion_reward = {
@@ -718,10 +1034,31 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_striving_for_confederation }
+				BFA = { has_completed_focus = AD_SSA_striving_for_confederation }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_striving_for_confederation }
+				NGR = { has_completed_focus = AD_SSA_striving_for_confederation }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_striving_for_confederation }
+				BFA = { has_completed_focus = AD_SSA_striving_for_confederation }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_creation_of_the_sahel_states_alliance }
 	relative_position_id = AD_SSA_creation_of_the_sahel_states_alliance
-	mutually_exclusive = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_striving_for_confederation }
+	mutually_exclusive = { focus = AD_SSA_sgreements_within_the_framework_of_the_military_alliance focus = AD_SSA_formation_of_the_confederation }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus AD_SSA_striving_for_confederation"
 		custom_effect_tooltip = AD_SSA_sahel_states_alliance_modifier_change_tt
@@ -743,7 +1080,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_unite_the_parliaments }
+				BFA = { has_completed_focus = AD_SSA_unite_the_parliaments }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_unite_the_parliaments }
+				NGR = { has_completed_focus = AD_SSA_unite_the_parliaments }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_unite_the_parliaments }
+				BFA = { has_completed_focus = AD_SSA_unite_the_parliaments }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_striving_for_confederation }
 	relative_position_id = AD_SSA_striving_for_confederation
 	completion_reward = {
@@ -767,7 +1125,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_remove_trade_duties }
+				BFA = { has_completed_focus = AD_SSA_remove_trade_duties }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_remove_trade_duties }
+				NGR = { has_completed_focus = AD_SSA_remove_trade_duties }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_remove_trade_duties }
+				BFA = { has_completed_focus = AD_SSA_remove_trade_duties }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_unite_the_parliaments }
 	relative_position_id = AD_SSA_unite_the_parliaments
 	completion_reward = {
@@ -795,7 +1174,28 @@ joint_focus = {
 	joint_trigger = {
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_overcoming_ethnic_contradictions }
+				BFA = { has_completed_focus = AD_SSA_overcoming_ethnic_contradictions }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_overcoming_ethnic_contradictions }
+				NGR = { has_completed_focus = AD_SSA_overcoming_ethnic_contradictions }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_overcoming_ethnic_contradictions }
+				BFA = { has_completed_focus = AD_SSA_overcoming_ethnic_contradictions }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_unite_the_parliaments }
 	relative_position_id = AD_SSA_unite_the_parliaments
 	completion_reward = {
@@ -817,15 +1217,43 @@ joint_focus = {
 		is_ai = no
 		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+				BFA = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+				NGR = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+				BFA = { has_completed_focus = AD_SSA_creation_of_the_sahel_states_alliance }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_overcoming_ethnic_contradictions }
 	relative_position_id = AD_SSA_overcoming_ethnic_contradictions
 	completion_reward_joint_originator = {
 		log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): joint focus (originator) AD_SSA_creation_of_the_sahel_states_alliance"
+		custom_effect_tooltip = {
+			localization_key = AD_form_of_government_change_tt
+			FORM = "AD_federation_structure"
+		}
+		set_variable = { AD_fog_power_structure = 1 }
+		custom_effect_tooltip = empty_line_tooltip
 		every_other_country = {
 			limit = {
 				OR = { tag = BFA tag = NGR tag = MLI tag = GTI }
 				is_in_faction_with = ROOT
+				is_ai = no
 			}
 			ROOT = {
 				annex_country = { target = PREV transfer_troops = yes }
@@ -852,7 +1280,28 @@ joint_focus = {
 		can_declare_war_on = NGA
   		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_expel_the_colonialists_from_africa }
+				BFA = { has_completed_focus = AD_SSA_expel_the_colonialists_from_africa }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_expel_the_colonialists_from_africa }
+				NGR = { has_completed_focus = AD_SSA_expel_the_colonialists_from_africa }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_expel_the_colonialists_from_africa }
+				BFA = { has_completed_focus = AD_SSA_expel_the_colonialists_from_africa }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_regain_control_of_borders }
 	relative_position_id = AD_SSA_regain_control_of_borders
 	will_lead_to_war_with = NGA
@@ -862,8 +1311,8 @@ joint_focus = {
 		hidden_effect = { news_event = { id = AD_SSA_news.1 days = 1 } }
 		custom_effect_tooltip = empty_line_tooltip
 		if = {
-			NGA = {
-				limit = {
+			limit = {
+				NGA = {
 					is_in_faction = no
 					is_subject = no
 				}
@@ -923,12 +1372,34 @@ joint_focus = {
 		AD_SSA_available_common_trigger = yes
 	}
 	bypass = {
-		TOG = {
-			OR = {
-				has_war_with = ROOT
-				exists = no
-				is_subject = yes
-				is_in_faction = yes
+		OR = {
+			TOG = {
+				OR = {
+					has_war_with = ROOT
+					exists = no
+					is_subject = yes
+					is_in_faction = yes
+				}
+			}
+			if = {
+				limit = { tag = MLI }
+				OR = {
+					NGR = { has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance }
+					BFA = { has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance }
+				}
+			}
+			else_if = {
+				limit = { tag = BFA }
+				OR = {
+					MLI = { has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance }
+					NGR = { has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance }
+				}
+			}
+			else = {
+				OR = {
+					MLI = { has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance }
+					BFA = { has_completed_focus = AD_SSA_invite_togo_to_join_the_alliance }
+				}
 			}
 		}
 	}
@@ -953,12 +1424,34 @@ joint_focus = {
 		AD_SSA_available_common_trigger = yes
 	}
 	bypass = {
-		BNN = {
-			OR = {
-				has_war_with = ROOT
-				exists = no
-				is_subject = yes
-				is_in_faction = yes
+		OR = {
+			BNN = {
+				OR = {
+					has_war_with = ROOT
+					exists = no
+					is_subject = yes
+					is_in_faction = yes
+				}
+			}
+			if = {
+				limit = { tag = MLI }
+				OR = {
+					NGR = { has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance }
+					BFA = { has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance }
+				}
+			}
+			else_if = {
+				limit = { tag = BFA }
+				OR = {
+					MLI = { has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance }
+					NGR = { has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance }
+				}
+			}
+			else = {
+				OR = {
+					MLI = { has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance }
+					BFA = { has_completed_focus = AD_SSA_invite_benin_to_join_the_alliance }
+				}
 			}
 		}
 	}
@@ -988,7 +1481,28 @@ joint_focus = {
 		}
 		AD_SSA_available_common_trigger = yes
 	}
-	bypass = {  }
+	bypass = {
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_establish_contacts_in_ghana }
+				BFA = { has_completed_focus = AD_SSA_establish_contacts_in_ghana }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_establish_contacts_in_ghana }
+				NGR = { has_completed_focus = AD_SSA_establish_contacts_in_ghana }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_establish_contacts_in_ghana }
+				BFA = { has_completed_focus = AD_SSA_establish_contacts_in_ghana }
+			}
+		}
+	}
 	prerequisite = { focus = AD_SSA_invite_benin_to_join_the_alliance focus = AD_SSA_invite_togo_to_join_the_alliance }
 	relative_position_id = AD_SSA_invite_benin_to_join_the_alliance
 	completion_reward_joint_originator = {
@@ -1016,7 +1530,26 @@ joint_focus = {
 		AD_SSA_available_common_trigger = yes
 	}
 	bypass = {
-		
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance }
+				BFA = { has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance }
+				NGR = { has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance }
+				BFA = { has_completed_focus = AD_SSA_invite_senegal_to_join_the_alliance }
+			}
+		}
 	}
 	prerequisite = { focus = AD_SSA_regain_control_of_borders }
 	relative_position_id = AD_SSA_regain_control_of_borders
@@ -1058,7 +1591,26 @@ joint_focus = {
   		AD_SSA_available_common_trigger = yes
 	}
 	bypass = {
-		
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_support_the_liberation_movement_of_the_south }
+				BFA = { has_completed_focus = AD_SSA_support_the_liberation_movement_of_the_south }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_support_the_liberation_movement_of_the_south }
+				NGR = { has_completed_focus = AD_SSA_support_the_liberation_movement_of_the_south }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_support_the_liberation_movement_of_the_south }
+				BFA = { has_completed_focus = AD_SSA_support_the_liberation_movement_of_the_south }
+			}
+		}
 	}
 	prerequisite = { focus = AD_SSA_regain_control_of_borders }
 	relative_position_id = AD_SSA_regain_control_of_borders
@@ -1121,7 +1673,26 @@ joint_focus = {
 		AD_SSA_available_common_trigger = yes
 	}
 	bypass = {
-		
+		if = {
+			limit = { tag = MLI }
+			OR = {
+				NGR = { has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance }
+				BFA = { has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance }
+			}
+		}
+		else_if = {
+			limit = { tag = BFA }
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance }
+				NGR = { has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance }
+			}
+		}
+		else = {
+			OR = {
+				MLI = { has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance }
+				BFA = { has_completed_focus = AD_SSA_invite_guinea_bissau_to_join_the_alliance }
+			}
+		}
 	}
 	prerequisite = { focus = AD_SSA_invite_senegal_to_join_the_alliance focus = AD_SSA_support_the_liberation_movement_of_the_south }
 	relative_position_id = AD_SSA_invite_senegal_to_join_the_alliance

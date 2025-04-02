@@ -1,4 +1,5 @@
 ﻿l_english:
+
  CAR_anti_balaka: "Anti-Balaka"
  CAR_anti_balaka_DEF: "Anti-Balaka"
  CAR_anti_balaka_ADJ: "Anti-Balaka"
@@ -41,7 +42,7 @@
 
  CAR_azande_militia: "Azande Militia"
  CAR_azande_militia_DEF: "Azande Militia"
- CAR_azande_militia_ADJ: "Azande."
+ CAR_azande_militia_ADJ: "Azande"
 
  AMB: "Federal Republic of Ambazonia"
  AMB_DEF: "Federal Republic of Ambazonia"
@@ -69,7 +70,10 @@
 
  MLI_national_movement_for_the_liberation_of_azawad: "National Movement for the Liberation of Azawad"
  MLI_national_movement_for_the_liberation_of_azawad_DEF: "MNLA"
- MLI_national_movement_for_the_liberation_of_azawad_ADJ: "MNLA"
+ MLI_national_movement_for_the_liberation_of_azawad_ADJ: "Azawad."
+ AZW_autonomy_integrated_puppet: "Autonomous Region of Azawad"
+ AZW_autonomy_integrated_puppet_DEF: "Autonomous Region of Azawad"
+ AZW_autonomy_integrated_puppet_DEF_ADJ: "Azawad"
 
  MLI_front_liberation_azawad: "Front for the Liberation of Azawad"
  MLI_front_liberation_azawad_DEF: "FLA"
@@ -89,4 +93,20 @@
 
  SUD_rapid_support_forces: "Rapid Support Forces"
  SUD_rapid_support_forces_DEF: "RSF"
- SUD_rapid_support_forces_ADJ: "Sudanese."
+ SUD_rapid_support_forces_ADJ: "Sudanese"
+
+ FPR_republic_of_logon: "Republic of Logon"
+ FPR_republic_of_logon_DEF: "Republic of Logon"
+ FPR_republic_of_logon_ADJ: "Logon"
+
+ DRC_cooperative_for_the_development_of_the_congo: "Cooperative for the Development of the Congo"
+ DRC_cooperative_for_the_development_of_the_congo_DEF: "CODECO"
+ DRC_cooperative_for_the_development_of_the_congo_ADJ: "Congolese"
+ 
+ DRC_allied_democratic_forces: "Allied Democratic Forces"
+ DRC_allied_democratic_forces_DEF: "ADF"
+ DRC_allied_democratic_forces_ADJ: "Congolese"
+ 
+ DRC_islamic_state_central_africa_province: "Islamic State – Central Africa Province"
+ DRC_islamic_state_central_africa_province_DEF: "ISCAP"
+ DRC_islamic_state_central_africa_province_ADJ: "Congolese"

@@ -99,9 +99,9 @@ create_dynamic_country = {
 	}
 	
 	transfer_state = 78
-	set_province_controller = 3891
 	set_province_controller = 1892
 	set_province_controller = 2608
+	set_province_controller = 3891
 	
 	set_oob = "MPC_oob"
 	declare_war_on = { target = CAR type = civil_war }
@@ -134,45 +134,44 @@ create_dynamic_country = {
 	}
 	
 	transfer_state = 46
+	set_province_controller = 662
+	set_province_controller = 837
+	set_province_controller = 1169
+	set_province_controller = 1504
+	set_province_controller = 1579
+	set_province_controller = 1675
 	set_province_controller = 1754
-	set_province_controller = 3273
+	set_province_controller = 1795
+	set_province_controller = 2080
+	set_province_controller = 2125
+	set_province_controller = 2188
+	set_province_controller = 2269
+	set_province_controller = 2364
+	set_province_controller = 2402
+	set_province_controller = 2475
+	set_province_controller = 2514
+	set_province_controller = 2536
+	set_province_controller = 2544
+	set_province_controller = 2547
 	set_province_controller = 2578
 	set_province_controller = 2636
-	set_province_controller = 2402
-	set_province_controller = 3904
-	set_province_controller = 2125
-	set_province_controller = 3045
-	set_province_controller = 662
-	set_province_controller = 1795
-	set_province_controller = 2544
-	set_province_controller = 2544
 	set_province_controller = 2675
-	set_province_controller = 2188
-	set_province_controller = 1169
-	set_province_controller = 3912
-	set_province_controller = 2475
-	set_province_controller = 2536
-	set_province_controller = 2080
 	set_province_controller = 2748
-	set_province_controller = 3010
-	set_province_controller = 1579
-	set_province_controller = 2547
 	set_province_controller = 2782
-	set_province_controller = 3040
-	set_province_controller = 837
-	set_province_controller = 2269
-	set_province_controller = 1675
-	set_province_controller = 3288
-	set_province_controller = 2514
-	set_province_controller = 1504
-	set_province_controller = 2364
-	set_province_controller = 3922
-	set_province_controller = 4588
 	set_province_controller = 2947
+	set_province_controller = 3010
+	set_province_controller = 3040
+	set_province_controller = 3045
+	set_province_controller = 3273
+	set_province_controller = 3288
 	set_province_controller = 3759
 	set_province_controller = 3896
+	set_province_controller = 3904
+	set_province_controller = 3912
+	set_province_controller = 3922
+	set_province_controller = 4588
 	CAR = { set_province_controller = 1425 }
-	set_oob = "AB_oob"
+	set_oob = "ABK_oob"
 	declare_war_on = { target = CAR type = civil_war }
 	add_civil_war_target = CAR
 	CAR = { add_civil_war_target = PREV }
@@ -201,27 +200,26 @@ create_dynamic_country = {
 		AD_lack_of_social_programs
 		CAR_khartoum_agreement_idea
 	}
-	
-	transfer_state = 60
 	transfer_state = 52
-	transfer_state = 195
+	transfer_state = 60
 	transfer_state = 75
-	set_province_controller = 3770
+	transfer_state = 195
 	set_province_controller = 847
-	set_province_controller = 2515
-	set_province_controller = 2380
-	set_province_controller = 1786
 	set_province_controller = 1335
-	set_province_controller = 3875
-	set_province_controller = 2525
 	set_province_controller = 1779
-	set_province_controller = 2854
-	set_province_controller = 3215
-	set_province_controller = 2799
+	set_province_controller = 1786
+	set_province_controller = 2380
+	set_province_controller = 2515
+	set_province_controller = 2525
 	set_province_controller = 2612
+	set_province_controller = 2734
+	set_province_controller = 2799
+	set_province_controller = 2854
 	set_province_controller = 3016
 	set_province_controller = 3088
-	set_province_controller = 2734
+	set_province_controller = 3215
+	set_province_controller = 3770
+	set_province_controller = 3875
 	set_oob="UPC_oob"
 	declare_war_on = { target = CAR type = civil_war }
 	add_civil_war_target = CAR
@@ -253,7 +251,7 @@ create_dynamic_country = {
 	set_province_controller = 812
 	set_province_controller = 825
 	set_province_controller = 2596
-	set_oob = "3R_oob"
+	set_oob = "RRR_oob"
 	declare_war_on = { target = CAR type = civil_war }
 	add_civil_war_target = CAR
 	CAR = { add_civil_war_target = PREV }
@@ -282,12 +280,12 @@ create_dynamic_country = {
 	}
 	
 	transfer_state = 55
-	set_province_controller = 3720
-	set_province_controller = 848
-	set_province_controller = 210
-	set_province_controller = 3913
-	set_province_controller = 2591
-	set_province_controller = 196
+	set_province_controller = 196  
+	set_province_controller = 210  
+	set_province_controller = 848  
+	set_province_controller = 2591  
+	set_province_controller = 3720  
+	set_province_controller = 3913  
 	set_oob="RPRC_oob"
 	activate_mission = RPRC_attack_Ndele
 	declare_war_on = { target = CAR type = civil_war }
@@ -375,35 +373,37 @@ create_dynamic_country = {
 	}
 	
 	transfer_state = 56
-	transfer_state = 58
 	transfer_state = 57
+	transfer_state = 58
 	transfer_state = 59
-	set_province_controller = 3726
-	set_province_controller = 3902
-	set_province_controller = 2797
-	set_province_controller = 2523
-	set_province_controller = 3911
-	set_province_controller = 1302
-	set_province_controller = 3133
-	set_province_controller = 1429
-	set_province_controller = 2419
+	transfer_state = 202
 	set_province_controller = 17
-	set_province_controller = 2087
-	set_province_controller = 871
+	set_province_controller = 202
+	set_province_controller = 441
 	set_province_controller = 787
-	set_province_controller = 3475
+	set_province_controller = 871
+	set_province_controller = 1001
+	set_province_controller = 1302
+	set_province_controller = 1378
+	set_province_controller = 1429
+	set_province_controller = 1594
+	set_province_controller = 2087
+	set_province_controller = 2395
+	set_province_controller = 2419
+	set_province_controller = 2523
+	set_province_controller = 2542
+	set_province_controller = 2797
+	set_province_controller = 3133
+	set_province_controller = 3145
 	set_province_controller = 3162
 	set_province_controller = 3417
+	set_province_controller = 3475
 	set_province_controller = 3625
-	set_province_controller = 1001
-	set_province_controller = 2395
-	set_province_controller = 441
+	set_province_controller = 3726
 	set_province_controller = 3732
-	set_province_controller = 1594
-	set_province_controller = 2542
-	set_province_controller = 3145
-	set_province_controller = 1378
-	set_province_controller = 202
+	set_province_controller = 3902
+	set_province_controller = 3911
+	set_province_controller = 5237
 	set_oob = "FPR_oob"
 	declare_war_on = { target = CAR type = civil_war }
 	add_civil_war_target = CAR

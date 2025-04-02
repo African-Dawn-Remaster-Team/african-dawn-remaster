@@ -1,1 +1,39 @@
-spriteTypes = {}
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_mli_0"
+		texturefile = "gfx/event_pictures/MLI/event_mli_0.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_1"
+		texturefile = "gfx/event_pictures/MLI/event_mli_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_2"
+		texturefile = "gfx/event_pictures/MLI/event_mli_2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_3"
+		texturefile = "gfx/event_pictures/MLI/event_mli_3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_4"
+		texturefile = "gfx/event_pictures/MLI/event_mli_4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_5"
+		texturefile = "gfx/event_pictures/MLI/event_mli_5.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_6"
+		texturefile = "gfx/event_pictures/MLI/event_mli_6.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_7"
+		texturefile = "gfx/event_pictures/MLI/event_mli_7.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_mli_8"
+		texturefile = "gfx/event_pictures/MLI/event_mli_8.dds"
+	}
+}

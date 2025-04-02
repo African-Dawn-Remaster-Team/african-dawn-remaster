@@ -74,7 +74,7 @@ FCT = {
 #MLI
 JNA = {
 	original_tag = MLI
-	has_cosmetic_tag = MLI_jamaat_nasr_alIslam_wal_muslimin
+	has_cosmetic_tag = JNA_jamaat_nasr_alislam_wal_muslimin
 }
 
 ISS = {
@@ -95,8 +95,8 @@ GTI = {
 AZW = {
 	original_tag = MLI
 	OR = {
-		has_cosmetic_tag = MLI_national_movement_for_the_liberation_of_azawad
-		has_cosmetic_tag = MLI_front_liberation_azawad
+		has_cosmetic_tag = AZW_national_movement_for_the_liberation_of_azawad
+		has_cosmetic_tag = AZW_front_liberation_azawad
 	}
 }
 #LBY
@@ -128,4 +128,19 @@ RSF = {
 LRA = {
 	original_tag = UGA
 	has_cosmetic_tag = UGA_lord_resistance_army
+}
+
+#DRC
+
+CDC = {
+	original_tag = DRC
+	has_cosmetic_tag = DRC_cooperative_for_the_development_of_the_congo 
+}
+
+ADF = {
+	original_tag = DRC
+	OR = {
+		has_cosmetic_tag = DRC_allied_democratic_forces
+		has_cosmetic_tag = DRC_islamic_state_central_africa_province
+	}
 }

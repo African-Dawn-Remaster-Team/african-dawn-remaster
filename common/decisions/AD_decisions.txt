@@ -5,7 +5,7 @@ AD_economy_view_category = {
 AD_SSA_creation_of_the_sahel_states_alliance_category = {
 
 	AD_SSA_invite_country_to_join_ssa = {
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_AD_SSA_invite_country_to_join_ssa
 		targets = { BFA MLI NGR }
 		target_trigger = { FROM = { NOT = { tag = ROOT } } }
 		target_root_trigger = {
@@ -102,7 +102,10 @@ AD_g_five_improvement_category = {
 						random_select_amount = 3
 						add_divisional_commander_xp = 200
 					}
-					random_unit_leader = { add_unit_leader_trait = { master_of_desert_warfare } }
+					random_unit_leader = {
+						limit = { NOT = { has_trait = desert_fox } }
+						add_unit_leader_trait = { desert_fox }
+					}
 				}
 			}
 		}
@@ -132,5 +135,81 @@ AD_g_five_improvement_category = {
 			effect_tooltip = { add_ideas = NGR_counter_terrorism_measures_in_the_rear_idea }
 		}
 		ai_will_do = { base = 0 }
+	}
+}
+
+AD_phone_tapping_category = {
+	
+	AD_phone_tapping_decision_not_lar = {
+		allowed = { NOT = { has_dlc = "La Resistance" } }
+		icon = GFX_decision_generic_political_discourse
+		target_array = global.enemies
+		targets_dynamic = yes
+		target_trigger = { FROM = { has_war_with = ROOT } }
+		available = {
+			has_war_with = FROM
+			network_strength = { target = FROM value > 35 }
+		}
+		fire_only_once = no
+		days_remove = -1
+		cost = 0
+		modifier = {
+			cas_damage_reduction = 0.05
+			coordination_bonus = 0.01
+			initiative_factor = 0.01
+			army_intel_factor = 0.10
+			civilian_intel_factor = 0.25
+			AD_weekly_expenses_modifier = 1
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = { has_war_with = FROM }
+				network_strength = { target = FROM value < 35 }
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel decision AD_phone_tapping_decision_not_lar in [FROM.GetName]"
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): activated decision AD_phone_tapping_decision_not_lar in [FROM.GetName]"
+		}
+		ai_will_do = { base = 15 }
+	}
+	
+	AD_phone_tapping_decision_lar = {
+		allowed = { has_dlc = "La Resistance" }
+		icon = GFX_decision_generic_political_discourse
+		target_array = global.enemies
+		targets_dynamic = yes
+		target_trigger = { FROM = { has_war_with = ROOT } }
+		available = {
+			has_war_with = FROM
+			network_strength = { target = FROM value > 35 }
+		}
+		fire_only_once = no
+		days_remove = -1
+		cost = 0
+		modifier = {
+			cas_damage_reduction = 0.05
+			coordination_bonus = 0.01
+			initiative_factor = 0.01
+			army_intel_factor = 0.10
+			civilian_intel_factor = 0.25
+			decryption_factor = 0.15
+			AD_weekly_expenses_modifier = 1
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = { has_war_with = FROM }
+				network_strength = { target = FROM value < 35 }
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): cancel decision AD_phone_tapping_decision_lar in [FROM.GetName]"
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): activated decision AD_phone_tapping_decision_lar in [FROM.GetName]"
+		}
+		ai_will_do = { base = 15 }
 	}
 }

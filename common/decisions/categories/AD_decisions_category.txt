@@ -23,7 +23,16 @@ AD_g_five_improvement_category = {
 	priority = 2000
 }
 
+AD_phone_tapping_category = {
+	priority = 0
+	visible = {
+		has_done_agency_upgrade = upgrade_phone_tapping
+		has_war = yes
+	}
+}
+
 AD_SSA_creation_of_the_sahel_states_alliance_category = {
+	icon = GFX_decision_category_AD_SSA_creation_of_the_sahel_states_alliance_category
 	allowed = { OR = { tag = MLI tag = BFA tag = NGR } }
 	priority = 500
 }

@@ -11,6 +11,9 @@
  VICTORY_POINTS_1476: "Лисала"
  VICTORY_POINTS_3809: "Джолю"
  VICTORY_POINTS_586: "Мобондо"
+ VICTORY_POINTS_5219: "Гарамба"
+ VICTORY_POINTS_3834: "Мамбаза"
+ VICTORY_POINTS_5213: "Каманго"
  #ЭКГ
  VICTORY_POINTS_3854: "Бата"
  VICTORY_POINTS_3851: "Сьюдад-де-ла-Пас"
@@ -60,7 +63,7 @@
  VICTORY_POINTS_812: "Ньем"
  VICTORY_POINTS_269: "Бирао"
  VICTORY_POINTS_162: "Уанда Джалле"
- VICTORY_POINTS_1509: "Джебель Уада"
+ VICTORY_POINTS_1509: "Умбелаша"
  VICTORY_POINTS_3687: "Ам Дафок"
  VICTORY_POINTS_3902: "Кага-Бандоро"
  VICTORY_POINTS_3273: "Мбрес"
@@ -96,6 +99,7 @@
  VICTORY_POINTS_1642: "Тисси"
  VICTORY_POINTS_5210: "Кумболи"
  VICTORY_POINTS_5211: "Либуа"
+ VICTORY_POINTS_5238: "Йемен"
  #Камерун
  VICTORY_POINTS_3578: "Маруа"
  VICTORY_POINTS_447: "Каеле"
@@ -480,7 +484,18 @@
  #Южный Судан
  VICTORY_POINTS_612: "Джуба"
  #Уганда
- VICTORY_POINTS_82: "Кампала"
+ VICTORY_POINTS_5226: "Кампала"
+ VICTORY_POINTS_5225: "Митьяна"
+ VICTORY_POINTS_5227: "Нджеру"
+ VICTORY_POINTS_5228: "Иганга"
+ VICTORY_POINTS_1869: "Мбале"
+ VICTORY_POINTS_2022: "Буква"
+ VICTORY_POINTS_2539: "Масинди"
+ VICTORY_POINTS_2400: "Хоима"
+ VICTORY_POINTS_3038: "Форт-Портал"
+ VICTORY_POINTS_875: "Йюмбе"
+ VICTORY_POINTS_2508: "Гулу"
+ VICTORY_POINTS_3792: "Лира"
  #Кения
  VICTORY_POINTS_1805: "Элдорет"
  #Сомали

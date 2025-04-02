@@ -1,2 +1,63 @@
 spriteTypes = {
+
+	spriteType = {
+		name = "GFX_decision_AD_SSA_invite_country_to_join_ssa"
+		texturefile = "gfx/interface/decisions/common/AD_SSA_invite_country_to_join_ssa.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_AD_SSA_creation_of_the_sahel_states_alliance_category"
+		texturefile = "gfx/interface/decisions/common/AD_SSA_creation_of_the_sahel_states_alliance_category.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_threat_of_a_military_coup_mission"
+		texturefile = "gfx/interface/decisions/MLI/MLI_threat_of_a_military_coup_mission.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_MLI_elections_category"
+		texturefile = "gfx/interface/decisions/MLI/MLI_elections_category.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_request_financial_support_from_france"
+		texturefile = "gfx/interface/decisions/MLI/MLI_request_financial_support_from_france.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_request_financial_support_from_eu"
+		texturefile = "gfx/interface/decisions/MLI/MLI_request_financial_support_from_eu.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_request_financial_support_from_un"
+		texturefile = "gfx/interface/decisions/MLI/MLI_request_financial_support_from_un.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_pay_off_some_of_the_debts"
+		texturefile = "gfx/interface/decisions/MLI/MLI_pay_off_some_of_the_debts.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_MLI_dependence_on_international_donors_category"
+		texturefile = "gfx/interface/decisions/MLI/MLI_dependence_on_international_donors_category.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_MLI_restoration_of_control_over_the_national_territory_category"
+		texturefile = "gfx/interface/decisions/MLI/MLI_restoration_of_control_over_the_national_territory_category.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_demand_gatal_submission"
+		texturefile = "gfx/interface/decisions/MLI/MLI_demand_gatal_submission.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_expand_cooperation_with_gatal"
+		texturefile = "gfx/interface/decisions/MLI/MLI_expand_cooperation_with_gatal.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_requirements_for_the_end_of_the_transitional_government_mission"
+		texturefile = "gfx/interface/decisions/MLI/MLI_requirements_for_the_end_of_the_transitional_government_mission.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_MLI_demands_of_the_provisional_government_mission"
+		texturefile = "gfx/interface/decisions/MLI/MLI_demands_of_the_provisional_government_mission.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_MLI_recent_revolution_category"
+		texturefile = "gfx/interface/decisions/MLI/MLI_recent_revolution_category.dds"
+	}
 }

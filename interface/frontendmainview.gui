@@ -340,7 +340,7 @@ guiTypes = { # TODO
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
-			text = "African Dawn: Remastered v.0.1"	
+			text = "African Dawn: Remastered v.0.1.1"	
 			format = center
 			maxWidth = 250
 			maxHeight = 20	

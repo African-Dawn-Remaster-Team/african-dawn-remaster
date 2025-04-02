@@ -2,17 +2,17 @@ state={
 	id=67
 	name="STATE_67"
 	provinces={
-		42 182 209 975 990 1078 1286 1343 2110 2537 3163 3800 3807 3833 3834 3835 3836 3837 
+		42 182 209 975 990 1078 1286 1343 2110 3163 3833 3834 3835 3836 3837 5215 5217
 	}
 	history={
 		owner = DRC
 		add_core_of = DRC
-		victory_points = { 3807 5 }
+		victory_points = { 3834 3 }
 		buildings = {
 			infrastructure = 1
 		}
 	}
-	manpower=4008000
+	manpower=3107334
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000

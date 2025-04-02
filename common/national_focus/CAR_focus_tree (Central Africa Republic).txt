@@ -1373,7 +1373,18 @@ focus_tree = {
 		cost = 14.3
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		ai_will_do = { factor = 10 }
-		available = { is_subject = no }
+		available = {
+			is_subject = no
+			any_neighbor_country = {
+				set_temp_variable = { AD_france_superiority_temp_var = -0.05 }
+				set_temp_variable = { AD_france_superiority_temp_var_tt = -1 }
+				multiply_temp_variable = { AD_france_superiority_temp_var_tt = AD_france_superiority_temp_var }
+				custom_trigger_tooltip = {
+					check_variable = { var = AD_fo_position value = AD_france_superiority_temp_var compare = less_than_or_equals }
+					tooltip = AD_france_superiority_greater_than_or_equals_tt
+				}
+			}
+		}
 		bypass = {  }
 		prerequisite = { focus = CAR_destroy_the_opposition }
 		relative_position_id = CAR_destroy_the_opposition
@@ -1383,10 +1394,10 @@ focus_tree = {
 			custom_effect_tooltip = empty_line_tooltip
 			every_neighbor_country = {
 				limit = {
-					check_variable = { AD_fo_position < -0.05 }
+					check_variable = { var = AD_fo_position value = -0.05 compare = less_than_or_equals }
 					ROOT = { can_declare_war_on = PREV }
 				}
-				PREV {
+				ROOT {
 					create_wargoal = { type = topple_government target = PREV expire = 0 }
 					add_ai_strategy = { type = antagonize id = PREV value = 200 }
 					add_ai_strategy = { type = declare_war id = PREV value = 200 }

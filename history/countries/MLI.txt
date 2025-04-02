@@ -88,7 +88,7 @@ create_dynamic_country = {
 	copy_tag = MLI
 	reserve_dynamic_country = yes
 	
-	set_cosmetic_tag = MLI_national_movement_for_the_liberation_of_azawad
+	set_cosmetic_tag = AZW_national_movement_for_the_liberation_of_azawad
 	set_popularities = { centrism = 100 }
 	set_politics = { ruling_party = centrism elections_allowed = no }
 	set_variable = { AD_fog_source_of_power = 2 }
@@ -112,21 +112,21 @@ create_dynamic_country = {
 	transfer_state = 129
 	transfer_state = 130
 	transfer_state = 135
+	128 = { add_core_of = PREV }
 	129 = { add_core_of = PREV }
 	130 = { add_core_of = PREV }
-	135 = { add_core_of = PREV }
-	128 = { add_core_of = PREV }
-	133 = { add_core_of = PREV }
-	136 = { add_core_of = PREV }
-	134 = { add_core_of = PREV }
-	132 = { add_core_of = PREV }
 	131 = { add_core_of = PREV }
-	set_province_controller = 4941
-	set_province_controller = 3600
-	set_province_controller = 249
-	set_province_controller = 2239
-	set_province_controller = 265
-	set_province_controller = 3573
+	132 = { add_core_of = PREV }
+	133 = { add_core_of = PREV }
+	134 = { add_core_of = PREV }
+	135 = { add_core_of = PREV }
+	136 = { add_core_of = PREV }
+	set_province_controller = 249  
+	set_province_controller = 265  
+	set_province_controller = 2239  
+	set_province_controller = 3573  
+	set_province_controller = 3600  
+	set_province_controller = 4941  
 	
 	set_oob = "AZW_oob"
 	
@@ -142,15 +142,11 @@ create_dynamic_country = {
 	recruit_character = AZW_Mohamed_Ag_Najem  
 	recruit_character = AZW_Inkinane_Ag_Attaher   
 	promote_character = AZW_Bilal_Ag_Acherif 
-	declare_war_on = { target = MLI type = civil_war }
-	add_civil_war_target = MLI
+
 	MLI = {
-		add_civil_war_target = PREV 
 		set_province_controller = 4968
 		set_province_controller = 4969
 	}
-	GTI = { add_civil_war_target = PREV }
-	ISS = { add_civil_war_target = PREV }
 	set_capital = { state = 130 }
 }
 
@@ -159,7 +155,7 @@ create_dynamic_country = {
 	copy_tag = MLI
 	reserve_dynamic_country = yes
 	
-	set_cosmetic_tag = MLI_jamaat_nasr_alIslam_wal_muslimin
+	set_cosmetic_tag = JNA_jamaat_nasr_alislam_wal_muslimin
 	set_popularities = { fundamentalism = 100 }
 	set_politics = { ruling_party = fundamentalism elections_allowed = no }
 	set_variable = { AD_fog_source_of_power = 2 }
@@ -177,54 +173,56 @@ create_dynamic_country = {
 	transfer_state = 131
 	128 = { add_core_of = PREV }
 	131 = { add_core_of = PREV }
-	set_province_controller = 609
-	set_province_controller = 2403
-	set_province_controller = 4893
-	set_province_controller = 4897
-	set_province_controller = 4902
-	set_province_controller = 4903
-	set_province_controller = 4866
-	set_province_controller = 4864
-	set_province_controller = 4704
-	set_province_controller = 4703
-	set_province_controller = 3672
-	set_province_controller = 4702
-	set_province_controller = 94
-	set_province_controller = 4905
-	set_province_controller = 4906
-	set_province_controller = 4933
-	set_province_controller = 4928
-	set_province_controller = 4925
-	set_province_controller = 2452
-	set_province_controller = 4921
-	set_province_controller = 2759
-	set_province_controller = 3134
-	set_province_controller = 188
-	set_province_controller = 2716
-	set_province_controller = 3106
-	set_province_controller = 4938
-	set_province_controller = 3570
-	set_province_controller = 76
-	set_province_controller = 4884
-	set_province_controller = 4954
-
-	set_province_controller = 5166
-	set_province_controller = 5164
-	set_province_controller = 4920
-	set_province_controller = 5162
-	set_province_controller = 4895
-	set_province_controller = 419
-	set_province_controller = 5156
-	set_province_controller = 5155
-	set_province_controller = 5160
-	set_province_controller = 5153
-	set_province_controller = 3683
-	set_province_controller = 5154
-	set_province_controller = 5158
-	set_province_controller = 5167
-	set_province_controller = 4900
-	set_province_controller = 1221
-	set_province_controller = 1028
+	set_province_controller = 76  
+	set_province_controller = 94  
+	set_province_controller = 188  
+	set_province_controller = 419  
+	set_province_controller = 609  
+	set_province_controller = 1028  
+	set_province_controller = 1221  
+	set_province_controller = 2221  
+	set_province_controller = 2403  
+	set_province_controller = 2452  
+	set_province_controller = 2716  
+	set_province_controller = 2759  
+	set_province_controller = 3106  
+	set_province_controller = 3134  
+	set_province_controller = 3240  
+	set_province_controller = 3570  
+	set_province_controller = 3672  
+	set_province_controller = 3683  
+	set_province_controller = 4702  
+	set_province_controller = 4703  
+	set_province_controller = 4704  
+	set_province_controller = 4864  
+	set_province_controller = 4866  
+	set_province_controller = 4884  
+	set_province_controller = 4893  
+	set_province_controller = 4895  
+	set_province_controller = 4897  
+	set_province_controller = 4900  
+	set_province_controller = 4902  
+	set_province_controller = 4903  
+	set_province_controller = 4905  
+	set_province_controller = 4906  
+	set_province_controller = 4920  
+	set_province_controller = 4921  
+	set_province_controller = 4925  
+	set_province_controller = 4928  
+	set_province_controller = 4933  
+	set_province_controller = 4938  
+	set_province_controller = 4943  
+	set_province_controller = 4954  
+	set_province_controller = 5153  
+	set_province_controller = 5154  
+	set_province_controller = 5155  
+	set_province_controller = 5156  
+	set_province_controller = 5158  
+	set_province_controller = 5160  
+	set_province_controller = 5162  
+	set_province_controller = 5164  
+	set_province_controller = 5166  
+	set_province_controller = 5167  
 	
 	set_oob = "JNA_oob"
 	add_manpower = 26000
@@ -234,34 +232,14 @@ create_dynamic_country = {
 	recruit_character = JNA_Abderrahmane_Talha     
 	recruit_character = JNA_Sidane_Ag_Hita     
 	promote_character = JNA_Iyad_Ag_Ghaly  
-	declare_war_on = { target = MLI type = civil_war }
-	declare_war_on = { target = BNN type = civil_war }
-	declare_war_on = { target = BFA type = civil_war }
-	declare_war_on = { target = NGR type = civil_war }
 	
-	MRT = {
-		give_military_access = PREV
-	}
-	
-	ALG = {
-		give_military_access = PREV
-	}
-	
-	IVO = {
-		give_military_access = PREV
-	}
-	
-	AZW = {
-		give_military_access = PREV
-	}
-
-	add_civil_war_target = MLI
+	MRT = { give_military_access = PREV }
+	ALG = { give_military_access = PREV }
+	IVO = { give_military_access = PREV }
+	AZW = { give_military_access = PREV }
 	give_military_access = AZW
-	MLI = { add_civil_war_target = PREV }
-	BNN = { add_civil_war_target = PREV }
-	BFA = { add_civil_war_target = PREV }
-	NGR = { add_civil_war_target = PREV }
-	set_capital = { state = 127 }
+	
+	set_capital = { state = 128 }
 }
 
 create_dynamic_country = {
@@ -289,14 +267,8 @@ create_dynamic_country = {
 	recruit_character = GTI_El_Hadj_Ag_Gamou    
 	recruit_character = GTI_Fahad_Ag_Almahmoud     
 	promote_character = GTI_El_Hadj_Ag_Gamou  
-	declare_war_on = { target = ISS type = civil_war }
-	declare_war_on = { target = AZW type = civil_war }
 
-	add_civil_war_target = ISS
-	add_civil_war_target = JNA
-	add_civil_war_target = AZW
-	ISS = { add_civil_war_target = PREV }
-	AZW = { add_civil_war_target = PREV }
+	PREV = { set_autonomy = { target = PREV autonomous_state = autonomy_puppet } }
 }
 
 create_dynamic_country = {
@@ -319,17 +291,17 @@ create_dynamic_country = {
 	}
 	
 	transfer_state = 132
-	set_province_controller = 544
-	set_province_controller = 4870
-	set_province_controller = 3615
-	set_province_controller = 3197
-	set_province_controller = 1958
-	set_province_controller = 13
-	set_province_controller = 5
-	set_province_controller = 2276
-	set_province_controller = 3050
-	set_province_controller = 4936
-	set_province_controller = 2615
+	set_province_controller = 5  
+	set_province_controller = 13  
+	set_province_controller = 544  
+	set_province_controller = 1958  
+	set_province_controller = 2276  
+	set_province_controller = 2615  
+	set_province_controller = 3050  
+	set_province_controller = 3197  
+	set_province_controller = 3615  
+	set_province_controller = 4870  
+	set_province_controller = 4936  
 	
 	set_oob = "ISS_oob"
 	add_manpower = 9000
@@ -338,53 +310,70 @@ create_dynamic_country = {
 	recruit_character = ISS_Abu_Huzeifa 
 	recruit_character = ISS_Abou_al_Bara_al_Sahraoui 
 	promote_character = ISS_Adnan_Abu_Walid_al_Sahrawi  
-	declare_war_on = { target = MLI type = civil_war }
-	declare_war_on = { target = JNA type = civil_war }
-	declare_war_on = { target = AZW type = civil_war }
-	declare_war_on = { target = GTI type = civil_war }
-	declare_war_on = { target = NGR type = civil_war }
-	declare_war_on = { target = BFA type = civil_war }
 
-	add_civil_war_target = MLI
-	add_civil_war_target = JNA
-	add_civil_war_target = AZW
-	add_civil_war_target = GTI
-	add_civil_war_target = NGR
-	add_civil_war_target = BFA
-	MLI = { 
-		add_civil_war_target = PREV 
+	MLI = {
 		set_province_controller = 4953
 		set_province_controller = 4955
 	}
-	JNA = { 
-		add_civil_war_target = PREV 
-		set_province_controller = 686
-		set_province_controller = 4956
-		set_province_controller = 2342
-		set_province_controller = 317
-		set_province_controller = 131
-		set_province_controller = 335
-		set_province_controller = 684
-		set_province_controller = 3563
-		set_province_controller = 4972
-		set_province_controller = 1911
-		set_province_controller = 4971
-		set_province_controller = 3565
-		set_province_controller = 3240
-		set_province_controller = 2221
-		set_province_controller = 4943
-		set_province_controller = 2759
-		set_province_controller = 2376
-		set_province_controller = 3104
+	JNA = {
+		set_province_controller = 131  
+		set_province_controller = 317  
+		set_province_controller = 335  
+		set_province_controller = 684  
+		set_province_controller = 686  
+		set_province_controller = 1911  
+		set_province_controller = 2342  
+		set_province_controller = 2376  
+		set_province_controller = 2759  
+		set_province_controller = 3104  
+		set_province_controller = 3563  
+		set_province_controller = 3565  
+		set_province_controller = 4956  
+		set_province_controller = 4971  
+		set_province_controller = 4972  
 	}
-	AZW = { add_civil_war_target = PREV }
-	GTI = { add_civil_war_target = PREV }
+}
+
+every_other_country = {
+	limit = {
+		original_tag = ROOT
+		NOT = { tag = GTI }
+	}
+	add_civil_war_target = PREV
+	PREV = { add_civil_war_target = PREV }
+	declare_war_on = { target = PREV type = civil_war }
+	
+	every_other_country = {
+		limit = {
+			original_tag = ROOT
+			NOT = {
+				tag = AZW
+				has_war_with = PREV
+			}
+		}
+		add_civil_war_target = PREV
+		PREV = { add_civil_war_target = PREV }
+		declare_war_on = { target = PREV type = civil_war }
+	}
+}
+
+ISS = {
+	add_civil_war_target = BFA
+	add_civil_war_target = NGR
 	NGR = { add_civil_war_target = PREV }
 	BFA = { add_civil_war_target = PREV }
+	declare_war_on = { target = BFA type = civil_war }
+	declare_war_on = { target = NGR type = civil_war }
 }
-MLI = {
-	set_autonomy = {
-		target = GTI
-		autonomous_state = autonomy_puppet
-	}
+
+JNA = {
+	add_civil_war_target = BFA
+	add_civil_war_target = NGR
+	add_civil_war_target = BNN
+	NGR = { add_civil_war_target = PREV }
+	BFA = { add_civil_war_target = PREV }
+	BNN = { add_civil_war_target = PREV }
+	declare_war_on = { target = BFA type = civil_war }
+	declare_war_on = { target = NGR type = civil_war }
+	declare_war_on = { target = BNN type = civil_war }
 }

@@ -2,7 +2,7 @@ state={
 	id=66
 	name="STATE_66"
 	provinces={
-		392 1942 3812 
+		392 1942 3812 5214  
 	}
 	history={
 		owner = DRC

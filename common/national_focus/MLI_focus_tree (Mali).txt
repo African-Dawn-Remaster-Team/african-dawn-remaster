@@ -560,6 +560,8 @@ focus_tree = {
 		will_lead_to_war_with = MRT
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): focus MLI_resolve_issues_with_mauritania"
+			add_state_claim = 113
+			custom_effect_tooltip = empty_line_tooltip
 			if = {
 				limit = { 113 = { controller = { is_in_faction = yes } } }
 				113 = { controller = { country_event = { id = AD_MLI.5 hours = 12 } } }
@@ -906,16 +908,23 @@ focus_tree = {
 				COUNTRY = "[AZW.GetNameWithFlag]"
 			}
 			custom_effect_tooltip = empty_line_tooltip
-			set_autonomy = { target = AZW autonomous_state = autonomy_integrated_puppet }
+			effect_tooltip = {
+				AZW = {
+					set_cosmetic_tag = AZW_autonomy_integrated_puppet
+					ROOT = { set_autonomy = { target = PREV autonomous_state = autonomy_integrated_puppet } }
+				}
+			}
 			custom_effect_tooltip = empty_line_tooltip
 			custom_effect_tooltip = {
 				localization_key = AD_country_unconsent_tt
 				COUNTRY = "[AZW.GetNameWithFlag]"
 			}
 			custom_effect_tooltip = empty_line_tooltip
-			remove_ideas = MLI_algerian_peace_agreement_idea
-			custom_effect_tooltip = empty_line_tooltip
-			AZW = { remove_ideas = AZW_algerian_peace_agreement_idea }
+			effect_tooltip = { 
+				remove_ideas = MLI_algerian_peace_agreement_idea
+				custom_effect_tooltip = empty_line_tooltip
+				AZW = { remove_ideas = AZW_algerian_peace_agreement_idea }
+			}
 		}
 	}
 	
@@ -1843,16 +1852,23 @@ focus_tree = {
 				COUNTRY = "[AZW.GetNameWithFlag]"
 			}
 			custom_effect_tooltip = empty_line_tooltip
-			set_autonomy = { target = AZW autonomous_state = autonomy_integrated_puppet }
+			effect_tooltip = {
+				AZW = {
+					set_cosmetic_tag = AZW_autonomy_integrated_puppet
+					ROOT = { set_autonomy = { target = PREV autonomous_state = autonomy_integrated_puppet } }
+				}
+			}
 			custom_effect_tooltip = empty_line_tooltip
 			custom_effect_tooltip = {
 				localization_key = AD_country_unconsent_tt
 				COUNTRY = "[AZW.GetNameWithFlag]"
 			}
 			custom_effect_tooltip = empty_line_tooltip
-			remove_ideas = MLI_algerian_peace_agreement_idea
-			custom_effect_tooltip = empty_line_tooltip
-			AZW = { remove_ideas = AZW_algerian_peace_agreement_idea }
+			effect_tooltip = { 
+				remove_ideas = MLI_algerian_peace_agreement_idea
+				custom_effect_tooltip = empty_line_tooltip
+				AZW = { remove_ideas = AZW_algerian_peace_agreement_idea }
+			}
 		}
 	}
 	

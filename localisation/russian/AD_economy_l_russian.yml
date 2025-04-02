@@ -1,31 +1,43 @@
 ﻿l_russian:
+ AD_e_debt_effects: "Долг"
+ 
  AD_economy_title: "Экономика"
  AD_economy_income: "Прибыль"
  AD_economy_income1: "Население"
  AD_economy_income2: "Промышленность"
  AD_economy_income3: "Экспорт"
+ AD_economy_income4: "Прочее"
  AD_economy_income_summary: "Общее"
  AD_economy_extends: "Расходы"
  AD_economy_extends1: "Население"
  AD_economy_extends2: "Армия"
  AD_economy_extends3: "Заводы"
  AD_economy_extends4: "Долг"
+ AD_economy_extends5: "Прочее"
  AD_economy_extends_summary: "Общее"
  AD_economy_summary_balance: "Месячный доход:"
  
- AD_economy_balance_value: "[?AD_current_money_var|+]§!B"
- AD_economy_gdp_value: "[?AD_e_GDP|+]§!B"
- AD_economy_debt_value: "[?AD_e_debt|-]§!B"
+ AD_economy_balance_value: "§5[?AD_current_money_var|2]B§!"
+ AD_economy_gdp_value: "§G[?AD_e_GDP|1]B§!"
+ AD_economy_debt_value: "§R[?AD_e_debt|2]B§!"
  AD_economy_income1_value: "[?AD_income_from_the_population_var|+]§!B"
  AD_economy_income2_value: "[?AD_income_from_the_industry_var|+]§!B"
  AD_economy_income3_value: "[?AD_e_income_from_resources|+]§!B"
+ AD_economy_income4_value: "[?AD_e_income_from_others|+]§!B"
  AD_economy_income_summary_value: "[?AD_e_income|+]§!B"
  AD_economy_extends1_value: "[?AD_e_expense_from_peoples|-]§!B"
  AD_economy_extends2_value: "[?AD_e_expense_from_army|-]§!B"
  AD_economy_extends3_value: "[?AD_e_expense_from_arms_factory|-]§!B"
  AD_economy_extends4_value: "[?AD_e_expense_from_debt_service|-]§!B"
+ AD_economy_extends5_value: "[?AD_e_expense_from_others|-]§!B"
  AD_economy_extends_summary_value: "[?AD_e_expense|-]§!B"
  AD_economy_summary_value: "[?AD_e_current_balance|+=]§!B"
+ 
+ AD_economy_gdp: "§GВВП§!"
+ AD_economy_gdp_per_capita: "§7ВВП / ДН§!"
+ AD_economy_gdp_per_capita_value: "§7[?AD_e_GDP_per_capita|2]§!"
+ AD_economy_debt: "§RГосдолг§!"
+ AD_economy_balance: "§5Ликвид.§!"
  
  AD_economy_take_debt_title: "Взять долг"
  AD_economy_take_debt_subtitle: "Укажите сумму, которую хотите получить:"
@@ -37,6 +49,32 @@
  AD_economy_debt_action_value_green: "[?debt_action_value|G1]§!B"
  AD_economy_debt_action_value_red: "[?debt_action_value|R1]§!B"
  AD_economy_debt_action_value_yellow: "[?debt_action_value|Y1]§!B"
+ 
+ AD_e_balance_tooltip: "§HЛиквидность§!\nТекущее значение: §Y[?AD_current_money_var|2]B§!.\nИзменение ликвидности: [?AD_e_current_balance|+=]§!B§! за последний месяц.\n\n§HФормируется из:§!\n§GПрибыль§!: §G[?AD_e_income|=]B§! за последний месяц.\n§RРасходы§!: §R[?AD_e_expense|=]B§! за последний месяц."
+ AD_e_balance_tooltip_delayed: "Ликвидность"
+ AD_e_gdp_tooltip: "§HВаловой Внутренний Продукт§!\nЗначение номинального ВВП: §G[?AD_e_GDP|1]B§! §g(15 место)§!\nЗначение ВВП на душу населения: §7[?AD_e_GDP_per_capita|2]§! §g(18 место)§!"
+ AD_e_gdp_tooltip_delayed: "Владимир Владимирович Путин"
+ AD_e_debt_tooltip: "§HГосударственный Долг§!\nТекущее значение долга: §R[?AD_e_debt|=2]B§!\n\nОтношение долга к ВВП: [?AD_e_debt_per_gdp|Y%] (макс. [?modifier@AD_debt_threshold_modifier|Y%])\nПроцентная ставка: [?AD_e_debt_interest_rate|Y%]\n\n§HВлияние от нашего текущего долга:§!\n[!debt_click]"
+ AD_e_debt_tooltip_delayed: "Долг"
+ 
+ AD_e_income_from_the_population_tt: "§HНаселение§!\nПрибыль от налогов с населения: §G[?AD_income_from_the_population_var|=]B§!.\n\nИндивидуальный налог: [?modifier@AD_individuals_tax_modifier|Y0%]\nДоход от налогов с населения: [?modifier@AD_money_from_taxes_modifier|+=0%]\nЛичная ценность (на 100 тыс. населения): [?modifier@AD_personal_value_modifier|Y]\nФактор личной ценности: [?modifier@AD_personal_value_factor_modifier|Y]"
+ AD_e_income_from_the_industry_tt: "§HПромышленность§!\nПрибыль от налогов с фабрик: §G[?AD_income_from_the_industry_var|=]B§!.\n\nКорпоративный налог: [?modifier@AD_corporate_tax_modifier|Y0%]\nДоход от промышленности: [?modifier@AD_money_from_industry_modifier|+=%]\nЦенность фабрики: [?modifier@AD_industrial_complex_value_modifier|Y]\nФактор ценности фабрики: [?modifier@AD_industrial_complex_value_factor_modifier|Y]"
+ AD_e_income_from_resources_tt: "§HЭкспорт§!\nПрибыль от экспорта ресурсов: §G[?AD_e_income_from_resources|=]B§!, из которых:\n - Доход от ресурса Нефть: §G[?AD_e_oil_income|=]B§!\n - Доход от ресурса Золото: §G[?AD_e_gold_income|=]B§!\n - Доход от ресурса Алмазы: §G[?AD_e_diamonds_income|=]B§!\n\nДоход от ресурсов: [?modifier@AD_money_from_resources_modifier|+%]" # TODO resource modifiers!
+ AD_e_income_from_others_tt: "§HПрочее§!\nПрибыль от прочих источников: §G[?AD_e_income_from_others|=]B§!" # TODO из которых: ...
+ AD_e_income_summary_tt: "§HОбщая прибыль§!\nЗа текущий месяц: §G[?AD_e_income|=]B§!."
+ #
+ AD_e_expense_from_peoples_tt: "§HНаселение§!\nРасходы от социальной политики: §R[?AD_e_expense_from_peoples|=]B§!\n\nЛичная ценность (на 100 тыс. населения): [?modifier@AD_personal_value_modifier|Y]\nФактор личной ценности: [?modifier@AD_personal_value_factor_modifier|Y]\nЗатраты на социальное обеспечение: [?modifier@AD_social_security_expenses_cost_modifier|=-%]"
+ AD_e_expense_from_army_tt: "§HАрмия§!\nРасходы на содержание армии: §R[?AD_e_expense_from_army|=]B§!\n\nЗатраты на военные расходы: [?modifier@AD_military_expenses_cost_modifier|-=%]" # TODO расходы по батальонам
+ AD_e_expense_from_arms_factory_tt: "§HВоенные заводы§!\nРасходы на содержание заводов: §R[?AD_e_expense_from_arms_factory|=]B§!\n\nЦенность фабрики: [?modifier@AD_industrial_complex_value_modifier|Y]\nФактор ценности фабрики: [?modifier@AD_industrial_complex_value_factor_modifier|Y]"
+ AD_e_expense_from_debt_service_tt: "§HОбслуживание Долга§!\nРасходы на обслуживание долга: §R[?AD_e_expense_from_debt_service|=]B§!\n\nПроцентная ставка: [?AD_e_debt_interest_rate|Y%]"
+ AD_e_expense_from_others_tt: "§HПрочее§!\nРасходы на прочие источники: §R[?AD_e_expense_from_others|=]B§!, из которых:\n - Еженедельные расходы (B): [?modifier@AD_weekly_expenses_modifier|-=2]"
+ AD_e_extends_summary_tt: "§HОбщие расходы§!\nЗа текущий месяц: §R[?AD_e_expense|=]B§!."
+ 
+ AD_e_summary_balance_tt: "§HЧистый доход§!\nЗа текущий месяц: [?AD_e_current_balance|+=]B" # TODO 
+ 
+ AD_economy_autorepayment_debt_tooltip: "§HАвтопогашение долга§!\nПереключение автоматической выплаты §Rдолга§! из §4ликвидных резервов§!."
+ AD_economy_take_debt_tooltip: "§HВзять долг§!\nОткрыть окно скатывания в долговую кабалу."
+ AD_economy_repayment_debt_tooltip: "§HПогасить долг§!\nОткрыть окно выплаты §Rдолга§! из §4ликвидных резервов§!."
  
  AD_market_cost: "§Y[?cost|.2]B§!"
  AD_market_discount: "§g([?discount|-=%1])§!"

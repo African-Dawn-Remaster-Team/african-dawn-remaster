@@ -130,6 +130,10 @@ defined_text = {
 		localization_key = fundamentalism_subtype_salafism
 	}
 	text = {
+		trigger = { has_country_leader_ideology = fundamentalism_subtype_christian_fundamentalism }
+		localization_key = fundamentalism_subtype_christian_fundamentalism
+	}
+	text = {
 		trigger = { has_country_leader_ideology = conservatism_subtype_islamic_democracy }
 		localization_key = conservatism_subtype_islamic_democracy
 	}
@@ -160,19 +164,19 @@ defined_text = {
 	name = AD_fog_source_of_power_name
 	text = {
 		trigger = { check_variable = { AD_sop_scope = 0 } }
-		localization_key = "Демократия"
+		localization_key = "AD_democracy_source_of_power"
 	}
 	text = {
 		trigger = { check_variable = { AD_sop_scope = 1 } }
-		localization_key = "Олигархия"
+		localization_key = "AD_oligarchy_source_of_power"
 	}
 	text = {
 		trigger = { check_variable = { AD_sop_scope = 2 } }
-		localization_key = "Автократия"
+		localization_key = "AD_autocracy_source_of_power"
 	}
 	text = {
 		trigger = { check_variable = { AD_sop_scope = 3 } }
-		localization_key = "Анархия"
+		localization_key = "AD_anarchy_source_of_power"
 	}
 }
 
@@ -180,15 +184,15 @@ defined_text = {
 	name = AD_fog_power_structure_name
 	text = {
 		trigger = { check_variable = { AD_ps_scope = 0 } }
-		localization_key = "Унитарное государство"
+		localization_key = "AD_unitary_state_structure"
 	}
 	text = {
 		trigger = { check_variable = { AD_ps_scope = 1 } }
-		localization_key = "Федерация"
+		localization_key = "AD_federation_structure"
 	}
 	text = {
 		trigger = { check_variable = { AD_ps_scope = 2 } }
-		localization_key = "Конфедерация"
+		localization_key = "AD_confederation_structure"
 	}
 }
 

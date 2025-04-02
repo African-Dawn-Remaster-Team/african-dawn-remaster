@@ -2,20 +2,25 @@ state={
 	id=29
 	name="STATE_29"
 	provinces={
-		82 154 305 495 589 681 835 866 875 1032 1046 1514 1654 1869 2018 2022 2113 2363 2400 2508 2539 2695 2752 2824 3038 3156 3224 3792 3793 3813 
+		82 305 1514 2113 3156 5225 5226 5227 5231 5232 
+	}
+	resources = {
+		gold = 4
 	}
 	history={
 		owner = UGA
 		add_core_of = UGA
-		victory_points = { 82 15 }
+		victory_points = { 5226 15 }
+		victory_points = { 5225 3 }
+		victory_points = { 5227 3 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 3
+			arms_factory = 2
 		}
 	}
-	manpower=44400000
+	manpower=9529227 
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=town
 	local_supplies=0.000
 }

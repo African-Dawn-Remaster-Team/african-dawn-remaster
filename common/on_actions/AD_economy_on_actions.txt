@@ -20,6 +20,9 @@ on_actions = {
 			set_variable = { global.AD_e_cost@arms_factory = 3 }
 			
 			every_country = {
+				set_variable = { AD_e_debt_interest_rate = 0.025 } # 2.5%
+				add_dynamic_modifier = { modifier = AD_e_debt_effects }
+				
 				set_variable = { AD_current_money_var = 100 }
 			}
 		}		
@@ -34,7 +37,7 @@ on_actions = {
 			}
 			if = {
 				limit = { check_variable = { var = modifier@AD_weekly_expenses_modifier value = 0 compare = not_equals } }
-				add_to_variable = { AD_current_money_var = modifier@AD_weekly_expenses_modifier }
+				subtract_from_variable = { AD_current_money_var = modifier@AD_weekly_expenses_modifier }
 			}
 		}
 	}
@@ -96,6 +99,12 @@ on_actions = {
 			
 			# Импорт
 			
+			#Прочее#
+			set_variable = { AD_e_expense_from_others = 0 }
+			set_temp_variable = { weekly_expense = modifier@AD_weekly_expenses_modifier }
+			multiply_temp_variable = { weekly_expense = 4 }
+			add_to_variable = { AD_e_expense_from_others = weekly_expense }
+			
 			#Общий расход#
 			set_variable = { AD_e_expense = AD_e_expense_from_peoples }
 			add_to_variable = { AD_e_expense = AD_e_expense_from_army }
@@ -109,6 +118,7 @@ on_actions = {
 			if = { # Если казна отрицательна, прибавляется долг
 				limit = { check_variable = { AD_current_money_var < 0 } }
 				subtract_from_variable = { AD_e_debt = AD_current_money_var } # A - (-B) = A+B
+				AD_e_calculate_debt_rate = yes
 				set_variable = { AD_current_money_var = 0 }
 			}
 			else_if = { # Если казна положительна и вкл. автопогаш. долга, долг уменьшается
@@ -119,6 +129,7 @@ on_actions = {
 				set_temp_variable = { pay = AD_current_money_var }
 				clamp_temp_variable = { var = pay max = AD_e_debt }
 				subtract_from_variable = { AD_e_debt = pay }
+				AD_e_calculate_debt_rate = yes
 				subtract_from_variable = { AD_current_money_var = pay }
 			}
 			set_variable = { AD_e_current_balance = AD_e_income } # for loc
@@ -126,12 +137,19 @@ on_actions = {
 			
 			add_to_variable = { AD_e_fiscal_months = 1 }
 			
-			##Подсчет ВВП##
+			##Подсчет ВВП и ВВП на душу населения##
 			if = {
 				limit = { check_variable = { AD_e_fiscal_months = 12 } }
 				set_variable = { AD_e_GDP = AD_e_record_income_year }
 				add_to_variable = { AD_e_GDP = AD_e_record_expense_year }
 				multiply_variable = { AD_e_GDP = 12 }
+				##
+				set_variable = { AD_e_GDP_per_capita = AD_e_GDP }
+				multiply_variable = { AD_e_GDP_per_capita = 1000 } # переводим в миллионы
+				set_temp_variable = { capita = max_manpower_k }
+				divide_temp_variable = { capita = 1000 } # переводим в миллионы
+				divide_variable = { AD_e_GDP_per_capita = capita }
+				
 				set_variable = { AD_e_fiscal_months = 0 }
 			}
 			

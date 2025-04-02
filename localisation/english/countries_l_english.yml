@@ -25,7 +25,7 @@
 
  BFA: "Burkina Faso"
  BFA_DEF: "Burkina Faso"
- BFA_ADJ: "Burkinabé"
+ BFA_ADJ: "Burkina Faso's"
 
  LBY: "State of Libya"
  LBY_DEF: "Libya"
@@ -33,7 +33,7 @@
 
  GAT: "Ghat Tuareg Militia"
  GAT_DEF: "Ghat"
- GAT_ADJ: "Ghat"
+ GAT_ADJ: "Tuareg's"
 
  BNN: "Republic of Benin"
  BNN_DEF: "Benin"
@@ -89,7 +89,7 @@
 
  GNB: "Republic of Guinea-Bissau"
  GNB_DEF: "Guinea-Bissau"
- GNB_ADJ: "Guinean-Bissauan"
+ GNB_ADJ: "Guinean"
 
  WSR: "Sahrawi Arab Democratic Republic"
  WSR_DEF: "Sahrawi Republic"
@@ -99,13 +99,13 @@
  CHA_DEF: "Chad"
  CHA_ADJ: "Chadian"
 
- IVO: "Republic of Côte d'Ivoire"
- IVO_DEF: "Côte d'Ivoire"
- IVO_ADJ: "Ivorian"
+ IVO: "Republic of Cote d'Ivoire"
+ IVO_DEF: "Cote d'Ivoire"
+ IVO_ADJ: "Cote d'Ivoire's"
 
  SEN: "Republic of Senegal"
  SEN_DEF: "Senegal"
- SEN_ADJ: "Senegalese"
+ SEN_ADJ: "Senegal's"
 
  SIE: "Republic of Sierra Leone"
  SIE_DEF: "Sierra Leone"
@@ -125,7 +125,7 @@
 
  SSD: "Republic of South Sudan"
  SSD_DEF: "South Sudan"
- SSD_ADJ: "South Sudanese"
+ SSD_ADJ: "Sudanese"
 
  SPA: "Kingdom of Spain"
  SPA_DEF: "Spain"
@@ -145,7 +145,7 @@
 
  SOM: "Federal Republic of Somalia"
  SOM_DEF: "Somalia"
- SOM_ADJ: "Somali"
+ SOM_ADJ: "Somalian"
 
  KEN: "Republic of Kenya"
  KEN_DEF: "Kenya"
@@ -169,11 +169,11 @@
 
  EQG: "Republic of Equatorial Guinea"
  EQG_DEF: "Equatorial Guinea"
- EQG_ADJ: "Equatorial Guinean"
+ EQG_ADJ: "Guinean"
 
  SNT: "Democratic Republic of Sao Tome and Principe"
  SNT_DEF: "Sao Tome and Principe"
- SNT_ADJ: "Sao Tomean"
+ SNT_ADJ: "Sao Tome and Principe's"
 
  WTL: "Republic of Western Togoland"
  WTL_DEF: "Western Togoland"
@@ -181,15 +181,15 @@
 
  CSM: "Democratic Republic of Casamance"
  CSM_DEF: "Casamance"
- CSM_ADJ: "Casamance"
+ CSM_ADJ: "Casamance's"
 
  ARW: "Islamic Republic of Arewa"
  ARW_DEF: "Arewa"
  ARW_ADJ: "Arewa"
 
  BNI: "Republic of Benin"
- BNN_DEF: "Benin"
- BNN_ADJ: "Beninese"
+ BNI_DEF: "Benin"
+ BNI_ADJ: "Beninese"
 
  OYO: "Republic of Oduduwa"
  OYO_DEF: "Oduduwa"
@@ -201,4 +201,4 @@
 
  TIG: "Tigray People's Liberation Front"
  TIG_DEF: "Tigray"
- TIG_ADJ: "Tigray."
+ TIG_ADJ: "Tigray"

@@ -238,4 +238,9 @@ spriteTypes = {
 		textureFile = "gfx/interface/unitcontrol/trait_logistics.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_money_texticon"
+		texturefile = "gfx/texticons/money_texticon.dds"
+		legacy_lazy_load = no
+	}
 }

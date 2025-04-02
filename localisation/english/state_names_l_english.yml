@@ -10,6 +10,9 @@
  STATE_67: "Ituri"
  STATE_68: "Upper Uele"
  STATE_69: "Lower Uele"
+ STATE_196: "Garamba National Park"
+ STATE_197: "Kamango"
+ STATE_198: "Bunia"
  #Equatorial Guinea
  STATE_24: "Rio Muni"
  STATE_40: "Bioko"
@@ -50,7 +53,7 @@
  STATE_60: "Upper Mbomou"
  STATE_75: "Chinko Reserve"
  STATE_76: "Bangui"
- STATE_77: "Djebel Ouadda"
+ STATE_77: "Umbelasha"
  STATE_78: "Kabo"
  STATE_79: "Obo"
  STATE_80: "Koui"
@@ -58,6 +61,7 @@
  STATE_193: "Koumboli"
  STATE_194: "Liboua"
  STATE_195: "Bambouti"
+ STATE_202: "Yemen"
  #Cameroon
  STATE_81: "Far North Region"
  STATE_84: "North Region"
@@ -223,7 +227,10 @@
  #South Sudan
  STATE_36: "South Sudan"
  #Uganda
- STATE_29: "Uganda"
+ STATE_29: "Kampala"
+ STATE_199: "Gulu"
+ STATE_200: "Mbale"
+ STATE_201: "Hoima"
  #Kenya
  STATE_30: "Kenya"
  #Somalia
@@ -235,3 +242,4 @@
  #Ethiopia
  STATE_34: "Ethiopia"
  STATE_192: "Tigray"
+ #STATE_: ""

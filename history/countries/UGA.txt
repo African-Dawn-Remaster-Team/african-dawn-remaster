@@ -23,10 +23,10 @@ create_dynamic_country = {
 	reserve_dynamic_country = yes
 	
 	set_cosmetic_tag = UGA_lord_resistance_army
-	set_popularities = { centrism = 100 }
+	set_popularities = { fundamentalism = 100 }
 	set_variable = { AD_fog_source_of_power = 2 }
 	set_variable = { AD_fog_power_structure = 0 }
-	set_politics = { ruling_party = centrism elections_allowed = no }
+	set_politics = { ruling_party = fundamentalism elections_allowed = no }
 	set_country_flag = militia_bandits
 	recruit_character = UGA_Joseph_Kony
 	recruit_character = UGA_Doctor_Achaye
@@ -40,9 +40,11 @@ create_dynamic_country = {
 	transfer_state = 77
 	transfer_state = 193
 	transfer_state = 194
+	transfer_state = 196
 	77 = { add_core_of = PREV }
 	193 = { add_core_of = PREV }
 	194 = { add_core_of = PREV }
+	196 = { add_core_of = PREV }
 	
 	set_oob = "LRA_oob"
 

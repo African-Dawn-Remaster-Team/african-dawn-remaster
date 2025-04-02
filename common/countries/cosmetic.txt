@@ -74,11 +74,11 @@ NGA_islamic_state_west_africa_province = {
 }
 
 CHA_front_for_change_and_concord_in_chad = {
-	color = rgb { 140 131 34  }
+	color = rgb { 140 131 34 }
 	color_ui = rgb { 140 131 34 }
 }
 
-MLI_jamaat_nasr_alIslam_wal_muslimin = {
+JNA_jamaat_nasr_alislam_wal_muslimin = {
 	color = rgb { 200 200 200 }
 	color_ui = rgb { 200 200 200 }
 }
@@ -93,12 +93,12 @@ MLI_imghad_tuareg_selfdefense_group_and_allies = {
 	color_ui = rgb { 55 113 200 }
 }
 
-MLI_national_movement_for_the_liberation_of_azawad = {
+AZW_national_movement_for_the_liberation_of_azawad = {
 	color = rgb { 255 233 0 }
 	color_ui = rgb { 255 233 0 }
 }
 
-MLI_front_liberation_azawad = {
+AZW_front_liberation_azawad = {
 	color = rgb { 255 233 0 }
 	color_ui = rgb { 255 233 0 }
 }
@@ -111,4 +111,24 @@ LBY_toubou_front_for_the_salvation_of_libya = {
 LBY_government_of_national_accord = {
 	color = rgb { 102 226 67 }
 	color_ui = rgb { 102 226 67 }
+}
+
+DRC_cooperative_for_the_development_of_the_congo = {
+	color = rgb { 102 226 67 }
+	color_ui = rgb { 102 226 67 }
+}
+
+DRC_allied_democratic_forces = {
+	color = rgb { 84 255 233 }
+	color_ui = rgb { 84 255 233 }
+}
+
+DRC_islamic_state_central_africa_province = {
+	color = rgb { 36 36 36 }
+	color_ui = rgb { 36 36 36 }
+}
+
+SUD_rapid_support_forces = {
+	color = rgb { 117 149 175 }
+	color_ui = rgb { 117 149 175 }
 }

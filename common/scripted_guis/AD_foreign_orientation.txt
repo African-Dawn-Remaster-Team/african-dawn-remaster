@@ -30,8 +30,8 @@ scripted_gui = {
 					ROOT = {
 						AD_fo_update_coordinates = yes
 					}
+					set_variable = { AD_foreign_orientation_open = 1 }
 				}
-				set_variable = { AD_foreign_orientation_open = 1}
 			}
 		}
 		

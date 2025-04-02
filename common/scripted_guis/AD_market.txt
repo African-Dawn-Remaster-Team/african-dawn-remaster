@@ -40,7 +40,7 @@ scripted_gui = {
 		window_name = "market_tab_rew"
 		parent_window_token = trade_tab
 		context_type = player_context
-		dirty = AD_market_gui_update
+		# dirty = AD_market_gui_update
 		
 		visible = {
 			check_variable = { AD_m_open = 1 }
@@ -65,6 +65,63 @@ scripted_gui = {
 			}
 		}
 		
+		triggers = {
+			start_imports_market_click_enabled = {
+				NOT = { has_country_flag = AD_m_buyed_weapons_not_delivered_flag }
+				if = {
+					limit = { 
+						check_variable = { AD_market_item = token:M16_0 } # USA
+					} 
+					set_temp_variable = { position = 0.05 }
+					custom_trigger_tooltip = {
+						tooltip = AD_m_rus_influence_trigger
+						check_variable = { ROOT.AD_fo_position < position }
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = { AD_market_item = token:M16_1 } # USA
+					}
+					set_temp_variable = { position = 0.05 }
+					custom_trigger_tooltip = {
+						tooltip = AD_m_rus_influence_trigger
+						check_variable = { ROOT.AD_fo_position < position }
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+						check_variable = { i = 9 } # FRA
+					}
+					set_temp_variable = { position = 0.05 }
+					custom_trigger_tooltip = {
+						tooltip = AD_m_rus_influence_trigger
+						check_variable = { ROOT.AD_fo_position < position }
+					}
+				}
+				else_if = {
+					limit = { 
+						check_variable = { AD_market_item = token:infantry_armored_transport_equipment_x }
+						check_variable = { i = 10 } # USA
+					}
+					set_temp_variable = { position = 0.1 }
+					custom_trigger_tooltip = {
+						tooltip = AD_m_rus_influence_trigger
+						check_variable = { ROOT.AD_fo_position < position }
+					}
+				}
+			}
+			icon_offer_visible = {
+				if = {
+					limit = { has_variable = AD_m_record_producer_idx }
+					check_variable = { AD_m_record_producer_idx = i }
+				}
+				else = {
+					always = no
+				}
+			}
+		}
+		
 		effects = { 
 			start_imports_market_click = {
 				set_variable = { AD_m_selected_item = AD_market_item }
@@ -76,6 +133,7 @@ scripted_gui = {
 					}
 					TAG = "[AD_get_market_item_producer_tag]"
 				}
+				set_variable = { AD_m_producer_idx = i } # for gfx
 				
 				set_variable = { amountbuyingformodal = global.AD_m_item_buying_amount@var:AD_market_item }
 				set_variable = { amountbuyingformodal10x = global.AD_m_item_buying_amount@var:AD_market_item }
@@ -95,23 +153,6 @@ scripted_gui = {
 			}
 			creator_flag = { 
 				image = "[AD_get_market_item_producer_flag]" 
-			}
-		}
-		triggers = {
-			start_imports_market_click_enabled = { # TODO вывести в подсказку
-				NOT = { has_country_flag = buyed_weapons_not_delivered }
-				# has_political_power > -50
-				# meta_trigger = { 
-					# text = {
-						# [TAGSTRANY] = {
-							# has_opinion = {
-								# target = ROOT
-								# value > -50
-							# }
-						# }
-					# } 
-					# TAGSTRANY = "[AD_get_market_item_producer_tag]"
-				# } 
 			}
 		}
 	}
@@ -169,8 +210,9 @@ scripted_gui = {
 			}
 			buybuttonclick_click = {
 				subtract_from_variable = { AD_current_money_var = costmodal }
-				set_country_flag = buyed_weapons_not_delivered
+				set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 				
+				set_variable = { AD_m_record_producer_idx = AD_m_producer_idx } # for gfx
 				set_variable = { AD_m_record_producer = AD_m_producer }
 				set_variable = { AD_m_record_item = AD_m_selected_item }
 				set_variable = { AD_m_record_amount = amount_selected_in_modal }

@@ -22,13 +22,15 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "AD_foreign_orientation_gui"	
-		position = { x = 545 y = 500 } 
-		size = { width = 320 height = 100%% }
+		position = { x = 545 y = 0 } 
+		size = { width = 320 height = 500 }
+		Orientation = LOWER_LEFT
+		Origo = lower_left
 		clipping = yes
 		
 		containerWindowType = { # This double container thing is just to ensure that the animation plays correctly and that the windows show up where they should be
 			name = "AD_foreign_orientation_gui_content"
-			size = { width=320 height=100%% }
+			size = { width=320 height=500 }
 			position = { x = -1000 y = 0 }
 			hide_position = { x = -1000 y = 0 }
 			show_position = { x = 0 y = 0 }

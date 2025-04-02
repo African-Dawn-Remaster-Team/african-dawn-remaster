@@ -6,6 +6,7 @@ ideologies = {
 			fundamentalism_subtype_takfirism = {  }
 			fundamentalism_subtype_jihadism = {  }
 			fundamentalism_subtype_salafism = {  }
+			fundamentalism_subtype_christian_fundamentalism = { can_be_randomly_selected = no }
 		}
 
 		dynamic_faction_names = {

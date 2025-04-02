@@ -19,8 +19,9 @@ country_event = {
 			}
 			eqtype = "[?AD_m_record_item.GetTokenKey]"
 		}
-		clr_country_flag = buyed_weapons_not_delivered
+		clr_country_flag = AD_m_buyed_weapons_not_delivered_flag
 		add_to_variable = { AD_market_gui_update = 1 } # TODO а насколько это вообще надо?
+		clear_variable = AD_m_record_producer_idx
 	}
 }
 

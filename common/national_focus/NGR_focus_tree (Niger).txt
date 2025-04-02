@@ -653,7 +653,10 @@ focus_tree = {
 						random_select_amount = 3
 						add_divisional_commander_xp = 200
 					}
-					random_unit_leader = { add_unit_leader_trait = { master_of_desert_warfare } }
+					random_unit_leader = {
+						limit = { NOT = { has_trait = desert_fox } }
+						add_unit_leader_trait = { desert_fox }
+					}
 				}
 			}
 		}

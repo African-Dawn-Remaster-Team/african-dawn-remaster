@@ -50,12 +50,27 @@ AD_e_calculate_export_income = {
 AD_e_calculate_peoples_expense = {
 	set_variable = { AD_e_expense_from_peoples = AD_personal_value_recalculated_by_the_population_var }
 	if = {
+		limit = { check_variable = { var = modifier@AD_personal_value_modifier value = 0 compare = not_equals } }
+		multiply_variable = { AD_e_expense_from_peoples = modifier@AD_personal_value_modifier }
+	}
+	else = {
+		log = "WTF modifier@AD_personal_value_modifier is 0!"
+	}
+	if = { # TODO ну нахуя нам два одинаковых модифа???
 		limit = { check_variable = { var = modifier@AD_personal_value_factor_modifier value = 0 compare = not_equals } }
 		multiply_variable = { AD_e_expense_from_peoples = modifier@AD_personal_value_factor_modifier }
 	}
 	else = {
 		log = "WTF modifier@AD_personal_value_factor_modifier is 0!"
 	}
+	
+	## Затраты на социальное обеспечение
+	set_temp_variable = { add = AD_e_expense_from_peoples }
+	if = {
+		limit = { check_variable = { var = AD_social_security_expenses_cost_modifier value = 0 compare = not_equals } }
+		multiply_temp_variable = { add = AD_social_security_expenses_cost_modifier }
+	}
+	add_to_variable = { AD_e_expense_from_peoples = add }
 }
 
 AD_e_calculate_army_expense = {
@@ -102,18 +117,59 @@ AD_e_calculate_army_expense = {
 AD_e_calculate_arms_factories_expense = {
 	set_variable = { AD_e_expense_from_arms_factory = num_of_military_factories }
 	multiply_variable = { AD_e_expense_from_arms_factory = global.AD_e_cost@arms_factory }
-	if = { # TODO ??
+	if = {
+		limit = { check_variable = { var = modifier@AD_industrial_complex_value_modifier value = 0 compare = not_equals } }
+		multiply_variable = { AD_e_expense_from_arms_factory = modifier@AD_industrial_complex_value_modifier }
+	}
+	else = {
+		log = "WTF modifier@AD_industrial_complex_value_modifier is 0!"
+	}
+	if = { # TODO ну нахуя нам два одинаковых модифа???
 		limit = { check_variable = { var = modifier@AD_industrial_complex_value_factor_modifier value = 0 compare = not_equals } }
 		multiply_variable = { AD_e_expense_from_arms_factory = modifier@AD_industrial_complex_value_factor_modifier }
+	}
+	else = {
+		log = "WTF modifier@AD_industrial_complex_value_factor_modifier is 0!"
 	}
 }
 
 AD_e_calculate_debt_service_expense = {
 	set_variable = { AD_e_expense_from_debt_service = AD_e_debt }
-	multiply_variable = { AD_e_expense_from_debt_service = 0.025 } # TODO в on_actions
+	multiply_variable = { AD_e_expense_from_debt_service = AD_e_debt_interest_rate } # TODO в модиф?
 }
 
 AD_e_calculate_debt_pp_cost = {
 	set_variable = { AD_e_debt_pp_cost = debt_action_value }
 	divide_variable = { AD_e_debt_pp_cost = 2 }
+}
+
+# Пересчёт эффектов от долга. Должен запускаться всякий раз при изменении AD_e_debt!
+AD_e_calculate_debt_rate = {
+	set_variable = { AD_e_debt_per_gdp = AD_e_debt } ## Отношение долга к ВВП
+	divide_variable = { AD_e_debt_per_gdp = AD_e_GDP }
+	
+	AD_e_calc_debt_effects = yes
+}
+AD_e_calc_debt_effects = {
+	if = {
+		limit = { check_variable = { AD_e_debt_per_gdp > modifier@AD_debt_threshold_modifier } } 
+		set_temp_variable = { percent = AD_e_debt_per_gdp }
+		subtract_from_variable = { percent = modifier@AD_debt_threshold_modifier }
+		
+		set_variable = { AD_e_debt_stability_factor = 0 }
+		set_variable = { AD_e_debt_consumer_goods_factor = 0.015 }
+		multiply_variable = { AD_e_debt_consumer_goods_factor = percent }
+		set_variable = { AD_e_debt_production_speed_buildings_factor = -0.01 }
+		multiply_variable = { AD_e_debt_production_speed_buildings_factor = percent }
+	}
+	else = {
+		set_temp_variable = { sub = AD_e_debt_per_gdp }
+		divide_temp_variable = { sub = modifier@AD_debt_threshold_modifier }
+		multiply_temp_variable = { sub = 0.25 }
+		
+		set_variable = { AD_e_debt_stability_factor = 0.25 }
+		subtract_from_variable = { AD_e_debt_stability_factor = sub }
+		set_variable = { AD_e_debt_consumer_goods_factor = 0 }
+		set_variable = { AD_e_debt_production_speed_buildings_factor = 0 }
+	}
 }

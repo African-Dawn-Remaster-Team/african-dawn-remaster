@@ -2,7 +2,7 @@ MLI_elections_category = {
 
 	MLI_threat_of_a_military_coup_mission = {
 		priority = 1000
-		icon = border_war
+		icon = GFX_decision_MLI_threat_of_a_military_coup_mission
 		activation = { always = no }
 		available = { hidden_trigger = { always = no } }
 		cancel_trigger = {
@@ -29,7 +29,7 @@ MLI_recent_revolution_category = {
 	
 	MLI_demands_of_the_provisional_government_mission = {
 		priority = 1000
-		icon = border_war
+		icon = GFX_decision_MLI_demands_of_the_provisional_government_mission
 		activation = { always = no }
 		available = { hidden_trigger = { always = no } }
 		cancel_trigger = { has_completed_focus = MLI_formation_of_the_provisional_government }
@@ -50,7 +50,7 @@ MLI_recent_revolution_category = {
 	
 	MLI_requirements_for_the_end_of_the_transitional_government_mission = {
 		priority = 999
-		icon = border_war
+		icon = GFX_decision_MLI_requirements_for_the_end_of_the_transitional_government_mission
 		activation = { always = no }
 		available = { hidden_trigger = { always = no } }
 		cancel_trigger = {  }
@@ -74,7 +74,7 @@ MLI_dependence_on_international_donors_category = {
 	
 	MLI_request_financial_support_from_france = {
 		priority = 1000
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_request_financial_support_from_france
 		fire_only_once = no
 		days_re_enable = 120
 		cost = 15
@@ -95,7 +95,7 @@ MLI_dependence_on_international_donors_category = {
 	
 	MLI_request_financial_support_from_eu = {
 		priority = 999
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_request_financial_support_from_eu
 		fire_only_once = no
 		days_re_enable = 120
 		cost = 15
@@ -115,7 +115,7 @@ MLI_dependence_on_international_donors_category = {
 	
 	MLI_request_financial_support_from_un = {
 		priority = 998
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_request_financial_support_from_un
 		fire_only_once = no
 		days_re_enable = 120
 		cost = 15
@@ -131,7 +131,7 @@ MLI_dependence_on_international_donors_category = {
 	
 	MLI_pay_off_some_of_the_debts = {
 		priority = 997
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_pay_off_some_of_the_debts
 		fire_only_once = no
 		available = {
 			custom_trigger_tooltip = {
@@ -159,7 +159,7 @@ MLI_restoration_of_control_over_the_national_territory_category = {
 	
 	MLI_expand_cooperation_with_gatal = {
 		priority = 1000
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_expand_cooperation_with_gatal
 		fire_only_once = yes
 		visible = {
 			country_exists = GTI
@@ -207,7 +207,7 @@ MLI_restoration_of_control_over_the_national_territory_category = {
 	
 	MLI_demand_gatal_submission = {
 		priority = 999
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_demand_gatal_submission
 		fire_only_once = yes
 		visible = {
 			country_exists = GTI
@@ -265,7 +265,7 @@ MLI_restoration_of_control_over_the_national_territory_category = {
 	
 	MLI_dismiss_the_dan_on_the_ambassador = {
 		priority = 998
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_demand_gatal_submission
 		fire_only_once = yes
 		visible = {
 			NOT = { has_country_flag = MLI_cooperation_with_the_dan_on_the_ambassador_completed }
@@ -294,7 +294,7 @@ MLI_restoration_of_control_over_the_national_territory_category = {
 	
 	MLI_cooperation_with_the_dan_on_the_ambassador = {
 		priority = 997
-		icon = GFX_decision_generic_political_discourse		
+		icon = GFX_decision_MLI_expand_cooperation_with_gatal
 		fire_only_once = yes
 		visible = {
 			NOT = { has_country_flag = MLI_dismiss_the_dan_on_the_ambassador_completed }

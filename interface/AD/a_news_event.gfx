@@ -188,5 +188,13 @@ spriteTypes = {
 		name = "GFX_election_7"
 		texturefile = "gfx/event_pictures/news/election_7.dds"
 	}
-
+	
+	spriteType = {
+		name = "GFX_news_event_AD_SSA_0"
+		texturefile = "gfx/event_pictures/news/news_event_AD_SSA_0.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_AD_SSA_1"
+		texturefile = "gfx/event_pictures/news/news_event_AD_SSA_1.dds"
+	}
 }

@@ -13,6 +13,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/gui/economy/CFA_franc_debt_icon.dds"
 	}
 	spriteType = {
+		name = "GFX_AD_CFA_franc_income_icon"
+		texturefile = "gfx/interface/gui/economy/CFA_franc_income_icon.dds"
+	}
+	spriteType = {
 		name = "GFX_AD_topbar_splitter"
 		texturefile = "gfx/interface/gui/economy/topbar_splitter.dds"
 	}

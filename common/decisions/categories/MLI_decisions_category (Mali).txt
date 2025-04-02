@@ -1,20 +1,24 @@
 MLI_elections_category = {
+	icon = GFX_decision_category_MLI_elections_category
 	allowed = { tag = MLI }
 	priority = 1000
 }
 
 MLI_recent_revolution_category = {
+	icon = GFX_decision_category_MLI_recent_revolution_category
 	allowed = { tag = MLI }
 	priority = 999
 }
 
 MLI_dependence_on_international_donors_category = {
+	icon = GFX_decision_category_MLI_dependence_on_international_donors_category
 	allowed = { tag = MLI }
 	priority = 998
 	visible = { has_dynamic_modifier = { modifier = MLI_dependence_on_international_donors_modifier } }
 }
 
 MLI_restoration_of_control_over_the_national_territory_category = {
+	icon = GFX_decision_category_MLI_restoration_of_control_over_the_national_territory_category
 	allowed = { tag = MLI }
 	priority = 997
 	visible = { has_completed_focus = MLI_restoration_of_control_over_the_national_territory }

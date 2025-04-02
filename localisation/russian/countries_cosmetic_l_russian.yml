@@ -1,35 +1,35 @@
 ﻿l_russian:
  CAR_anti_balaka: "Антибалака"
  CAR_anti_balaka_DEF: "Антибалака"
- CAR_anti_balaka_ADJ: "Антибалакс."
+ CAR_anti_balaka_ADJ: "Центральноафриканск."
  
  CAR_return_recovery_rehabilitation: "Возвращение, Восстановление, Реабилитация"
  CAR_return_recovery_rehabilitation_DEF: "ВВР"
- CAR_return_recovery_rehabilitation_ADJ: "ВВР"
+ CAR_return_recovery_rehabilitation_ADJ: "Центральноафриканск."
  
  CAR_central_african_peace_union: "Союз Мира Центральной Африки"
  CAR_central_african_peace_union_DEF: "СМЦА"
- CAR_central_african_peace_union_ADJ: "СМЦА"
+ CAR_central_african_peace_union_ADJ: "Центральноафриканск."
  
  CAR_people_front_for_the_rebirth_of_central_africa: "Народный Фронт Перерождения Центральной Африки"
  CAR_people_front_for_the_rebirth_of_central_africa_DEF: "НФПЦА"
- CAR_people_front_for_the_rebirth_of_central_africa_ADJ: "НФПЦА"
+ CAR_people_front_for_the_rebirth_of_central_africa_ADJ: "Центральноафриканск."
  
  CAR_movement_of_patriots_of_central_africa: "Движение Патриотов Центральной Африки"
  CAR_movement_of_patriots_of_central_africa_DEF: "ДПЦА"
- CAR_movement_of_patriots_of_central_africa_ADJ: "ДПЦА"
+ CAR_movement_of_patriots_of_central_africa_ADJ: "Центральноафриканск."
  
  CAR_patriotic_movement_for_the_renewal_of_central_africa: "Патриотическое Движение за Обновление Центральной Африки"
  CAR_patriotic_movement_for_the_renewal_of_central_africa_DEF: "ПДОЦА"
- CAR_patriotic_movement_for_the_renewal_of_central_africa_ADJ: "ПДОЦА"
+ CAR_patriotic_movement_for_the_renewal_of_central_africa_ADJ: "Центральноафриканск."
 
  CAR_party_of_the_rally_of_the_central_african_nation: "Партия Объединения Центральноафриканской Нации"
  CAR_party_of_the_rally_of_the_central_african_nation_DEF: "ПОЦН"
- CAR_party_of_the_rally_of_the_central_african_nation_ADJ: "ПОЦН"
+ CAR_party_of_the_rally_of_the_central_african_nation_ADJ: "Центральноафриканск."
  
  CAR_liberation_movement_for_justice_of_central_africa: "Движение Освободителей за Справедливость Центральной Африки"
  CAR_liberation_movement_for_justice_of_central_africa_DEF: "ДОСЦА"
- CAR_liberation_movement_for_justice_of_central_africa_ADJ: "ДОСЦА"
+ CAR_liberation_movement_for_justice_of_central_africa_ADJ: "Центральноафриканск."
  
  UGA_lord_resistance_army: "Господня Армия Сопротивления"
  UGA_lord_resistance_army_DEF: "Господня Армия Сопротивления"
@@ -49,43 +49,46 @@
 
  NGA_islamic_state_west_africa_province: "Исламское Государство - Западная Африканская Провинция"
  NGA_islamic_state_west_africa_province_DEF: "ИГ"
- NGA_islamic_state_west_africa_province_ADJ: "ИГ"
+ NGA_islamic_state_west_africa_province_ADJ: "Исламск."
 
  CHA_front_for_change_and_concord_in_chad: "Фронт Перемен и Согласия Чада"
  CHA_front_for_change_and_concord_in_chad_DEF: "Чад"
- CHA_front_for_change_and_concord_in_chad_ADJ: "Чадск"
+ CHA_front_for_change_and_concord_in_chad_ADJ: "Чадск."
 
- MLI_jamaat_nasr_alIslam_wal_muslimin: "Джамаат Нусрат аль-Ислам валь-Муслимин"
- MLI_jamaat_nasr_alIslam_wal_muslimin_DEF: "ДНИМ"
- MLI_jamaat_nasr_alIslam_wal_muslimin_ADJ: "ДНИМ"
+ JNA_jamaat_nasr_alislam_wal_muslimin: "Джамаат Нусрат аль-Ислам валь-Муслимин"
+ JNA_jamaat_nasr_alislam_wal_muslimin_DEF: "ДНИМ"
+ JNA_jamaat_nasr_alislam_wal_muslimin_ADJ: "Джамаатск."
 
  MLI_islamic_state_sahel_province: "Исламское Государство - Сахельская Провинция"
  MLI_islamic_state_sahel_province_DEF: "ИГ"
- MLI_islamic_state_sahel_province_ADJ: "ИГ"
+ MLI_islamic_state_sahel_province_ADJ: "Исламск."
  
  MLI_imghad_tuareg_selfdefense_group_and_allies: "Группа Cамообороны Туарегов Имгад и ее союзники"
  MLI_imghad_tuareg_selfdefense_group_and_allies_DEF: "ГАТИА"
- MLI_imghad_tuareg_selfdefense_group_and_allies_ADJ: "ГАТИА"
+ MLI_imghad_tuareg_selfdefense_group_and_allies_ADJ: "Туарегск."
  
- MLI_national_movement_for_the_liberation_of_azawad: "Национальное движение за освобождение Азавада"
- MLI_national_movement_for_the_liberation_of_azawad_DEF: "НДОА"
- MLI_national_movement_for_the_liberation_of_azawad_ADJ: "НДОА"
-
- MLI_front_liberation_azawad: "Фронт Освобождения Азавада"
- MLI_front_liberation_azawad_DEF: "ФОА"
- MLI_front_liberation_azawad_ADJ: "ФОА"
+ AZW_national_movement_for_the_liberation_of_azawad: "Национальное движение за освобождение Азавада"
+ AZW_national_movement_for_the_liberation_of_azawad_DEF: "НДОА"
+ AZW_national_movement_for_the_liberation_of_azawad_ADJ: "Азавадск."
+ AZW_autonomy_integrated_puppet: "Автономный регион Азавад"
+ AZW_autonomy_integrated_puppet_DEF: "Автономный регион Азавад"
+ AZW_autonomy_integrated_puppet_DEF_ADJ: "Азавадск."
+ 
+ AZW_front_liberation_azawad: "Фронт Освобождения Азавада"
+ AZW_front_liberation_azawad_DEF: "ФОА"
+ AZW_front_liberation_azawad_ADJ: "Азавадск."
 
  LBY_toubou_front_for_the_salvation_of_libya: "Фронт Тубу Спасения Ливии"
  LBY_toubou_front_for_the_salvation_of_libya_DEF: "ФТСЛ"
- LBY_toubou_front_for_the_salvation_of_libya_ADJ: "ФТСЛ"
+ LBY_toubou_front_for_the_salvation_of_libya_ADJ: "Тубск."
 
  LBY_libyan_house_of_representatives: "Палата представителей Ливии"
  LBY_libyan_house_of_representatives_DEF: "ППЛ"
- LBY_libyan_house_of_representatives_ADJ: "ППЛ"
+ LBY_libyan_house_of_representatives_ADJ: "Ливийск."
 
  LBY_government_of_national_accord: "Правительство Национального Согласия"
  LBY_government_of_national_accord_DEF: "ПНС"
- LBY_government_of_national_accord_ADJ: "ПНС"
+ LBY_government_of_national_accord_ADJ: "Ливийск."
  
  SUD_rapid_support_forces: "Силы Быстрого Реагирования"
  SUD_rapid_support_forces_DEF: "СБР"
@@ -94,3 +97,15 @@
  FPR_republic_of_logon: "Республика Логон"
  FPR_republic_of_logon_DEF: "Республика Логон"
  FPR_republic_of_logon_ADJ: "Логонск."
+
+ DRC_cooperative_for_the_development_of_the_congo: "Кооператив Развития Конго"
+ DRC_cooperative_for_the_development_of_the_congo_DEF: "КРК"
+ DRC_cooperative_for_the_development_of_the_congo_ADJ: "Конголезск."
+
+ DRC_allied_democratic_forces: "Объединённые демократические силы"
+ DRC_allied_democratic_forces_DEF: "АДФ"
+ DRC_allied_democratic_forces_ADJ: "Конголезск."
+
+ DRC_islamic_state_central_africa_province: "Исламское государство – Центральноафриканская провинция"
+ DRC_islamic_state_central_africa_province_DEF: "ИГЦАП"
+ DRC_islamic_state_central_africa_province_ADJ: "Конголезск."

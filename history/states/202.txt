@@ -1,0 +1,19 @@
+state={
+	id=202
+	name="STATE_202"
+	provinces={
+		5238 
+	}
+	history={
+		owner = CAR
+		add_core_of = CAR
+		victory_points = { 5238 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

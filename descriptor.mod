@@ -4,7 +4,7 @@ tags={
 	"Utilities"
 }
 picture="thumbnail.png"
-version="0.1"
+version="0.1.1"
 replace_path="common/abilities"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"

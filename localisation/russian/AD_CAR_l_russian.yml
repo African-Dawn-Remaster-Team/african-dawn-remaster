@@ -445,7 +445,7 @@
  CAR_crush_the_tere_tt: "Всем §Rвраждебнным государствам§! будет добавлена на §Y90 дн.§! следующая идея:"
  CAR_ngakola_and_tere_monthly_modifier: "Ежемесячное изменение авторитета Нгаколы"
  CAR_imperial_army_tt: "В §Yкаждом регионе§! с населением более чем §G150К§! будет создана дивизия из 5 §Yлёгких пехотных батальонов§!."
- CAR_punish_the_french_puppets_tt: "Будет получена цель войны «§Y$topple_government$§!» против всех §Yсоседних государств§!, имеющих какое-либо §Yвлияние Франции§!."
+ CAR_punish_the_french_puppets_tt: "Будет получена цель войны «§Y$topple_government$§!» против всех §Yсоседних государств§!, имеющих §Yвлияние Франции§! большее или равное §G5%§!."
  CAR_issue_of_lifting_the_embargo_tt: "Если влияние §YРоссии§! или §YФранции§! больше или равно §G35§!, то они дадут нам возможность для отмены эмбарго на покупку оружия."
  CAR_integration_of_anti_balaka_progress_tt: "Прогресс §Oинтеграции§! государства\n§Y[ABK.GetNameWithFlag]§! изменится на $RIGHT|0%%+=$"
  CAR_integration_of_anti_balaka_tt: "Текущий прогресс §Oинтеграции§! государства\n§Y[ABK.GetNameWithFlag]§!: [?CAR_integration_of_anti_balaka_progress|+0%%]"

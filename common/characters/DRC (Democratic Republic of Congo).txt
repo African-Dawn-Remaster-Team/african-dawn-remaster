@@ -6,13 +6,58 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/DRC/DRC_Felix_Tshisekedi.dds"
 			}
-			army = {
-				large = "gfx/leaders/To_Be_Added_Portrait.dds"
-			}
 		}
 		country_leader = {
 			desc = "POLITICS_FELIX_TSHISEKEDI_DESC"
 			ideology = social_democracy_subtype_social_democracy
+		}
+	}
+	
+	DRC_Tseni_Adrionzi_Raymond = {
+		name = DRC_Tseni_Adrionzi_Raymond
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DRC/DRC_Tseni_Adrionzi_Raymond.dds"
+			}
+			army = {
+				large = "gfx/leaders/DRC/DRC_Tseni_Adrionzi_Raymond.dds"
+				small = "gfx/interface/ideas/DRC/DRC_Tseni_Adrionzi_Raymond.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_TSENI_ADRIONZI_RAYMOND_DESC"
+			ideology = centrism_subtype_irregular_organization
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	DRC_Musa_Baluku = {
+		name = DRC_Musa_Baluku
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DRC/DRC_Musa_Baluku.dds"
+			}
+			army = {
+				large = "gfx/leaders/DRC/DRC_Musa_Baluku.dds"
+				small = "gfx/interface/ideas/DRC/DRC_Musa_Baluku.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MUSA_BALUKU_DESC"
+			ideology = fundamentalism_subtype_jihadism
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 }

@@ -1,5 +1,95 @@
 spriteTypes = {
 	
+	###
+	spriteType = {
+		name = "GFX_idea_AD_average_unemployment"
+		texturefile = "gfx/interface/ideas/common/AD_average_unemployment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_almost_a_european_society"
+		texturefile = "gfx/interface/ideas/common/AD_almost_a_european_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_appalling_poverty"
+		texturefile = "gfx/interface/ideas/common/AD_appalling_poverty.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_chaotic_orders"
+		texturefile = "gfx/interface/ideas/common/AD_chaotic_orders.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_difficulties_with_average_income"
+		texturefile = "gfx/interface/ideas/common/AD_difficulties_with_average_income.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_extensive_unemployment"
+		texturefile = "gfx/interface/ideas/common/AD_extensive_unemployment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_high_unemployment"
+		texturefile = "gfx/interface/ideas/common/AD_high_unemployment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_hunger"
+		texturefile = "gfx/interface/ideas/common/AD_hunger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_low_unemployment"
+		texturefile = "gfx/interface/ideas/common/AD_low_unemployment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_moving_towards_progress"
+		texturefile = "gfx/interface/ideas/common/AD_moving_towards_progress.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_poorness"
+		texturefile = "gfx/interface/ideas/common/AD_poorness.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_poverty"
+		texturefile = "gfx/interface/ideas/common/AD_poverty.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_problems_with_nutrition_in_the_majority_of_the_population"
+		texturefile = "gfx/interface/ideas/common/AD_problems_with_nutrition_in_the_majority_of_the_population.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_stable_state_apparatus"
+		texturefile = "gfx/interface/ideas/common/AD_stable_state_apparatus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_three_meals_a_day_for_the_majority_of_the_population"
+		texturefile = "gfx/interface/ideas/common/AD_three_meals_a_day_for_the_majority_of_the_population.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_total_hunger"
+		texturefile = "gfx/interface/ideas/common/AD_total_hunger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_weak_state_apparatus"
+		texturefile = "gfx/interface/ideas/common/AD_weak_state_apparatus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AD_widespread_unemployment"
+		texturefile = "gfx/interface/ideas/common/AD_widespread_unemployment.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_extr_corruption"
+		texturefile = "gfx/interface/ideas/common/extr_corruption.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_high_corruption"
+		texturefile = "gfx/interface/ideas/common/high_corruption.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_low_corruption"
+		texturefile = "gfx/interface/ideas/common/low_corruption.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_med_corruption"
+		texturefile = "gfx/interface/ideas/common/med_corruption.dds"
+	}
+	###
 	spriteType = {
 		name = "GFX_idea_AD_member_of_g_five_sahel_idea"
 		texturefile = "gfx/interface/ideas/common/AD_member_of_g_five_sahel_idea.dds"

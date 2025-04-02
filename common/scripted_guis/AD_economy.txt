@@ -3,14 +3,29 @@ scripted_gui = {
 		window_name = "economic_info_topbar"
 		parent_window_token = topbar
 		context_type = player_context
-		# dirty = AD_economy_gui_update
+		# dirty = AD_economy_gui_updates
+		
+		effects = {
+			debt_click = {
+				effect_tooltip = {
+					if = {
+						limit = { check_variable = { AD_e_debt_per_gdp > modifier@AD_debt_threshold_modifier } } 
+						set_variable = { consumer_goods_factor = AD_e_debt_consumer_goods_factor tooltip = consumer_goods_factor_tooltip }
+						set_variable = { production_speed_buildings_factor = AD_e_debt_production_speed_buildings_factor tooltip = production_speed_buildings_tooltip }
+					}
+					else = {
+						set_variable = { stability_factor = AD_e_debt_stability_factor tooltip = stability_factor_tooltip }
+					}
+				}
+			}
+		}
 	}
 	
 	AD_economy_gui = {
 		window_name = "economic_info"
 		parent_window_token = trade_tab
 		context_type = player_context
-		dirty = AD_economy_gui_update
+		# dirty = AD_economy_gui_update
 		
 		visible = {
 			check_variable = { AD_m_open = 1 }
@@ -134,6 +149,7 @@ scripted_gui = {
 					subtract_from_variable = { AD_current_money_var = debt_action_value }
 					subtract_from_variable = { AD_e_debt = debt_action_value }
 				}
+				AD_e_calculate_debt_rate = yes
 				set_variable = { AD_e_debt_actions = 0 }
 				set_variable = { debt_action_value = 0 }
 				set_variable = { AD_e_debt_pp_cost = 0 }

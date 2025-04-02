@@ -29,4 +29,11 @@ units = {
 		start_experience_factor = 0.95
 		start_equipment_factor = 0.9
 	}
+	division= {	
+		name = "Vétérans de l'Armée de Résistance du Seigneur"
+		location = 5219
+		division_template = "Milice rurale"
+		start_experience_factor = 0.95
+		start_equipment_factor = 0.9
+	}
 }

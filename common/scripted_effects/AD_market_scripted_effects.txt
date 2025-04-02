@@ -25,7 +25,7 @@ fake_ai_market_pre_2025 = {
 				infantry_equipment < 1000
 			}
 		}
-		set_country_flag = buyed_weapons_not_delivered
+		set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 		set_variable = { AD_m_record_producer = RUS }
 		set_variable = { AD_m_record_item = token:ak_0 }
 		set_variable = { AD_m_record_amount = 400 }
@@ -40,7 +40,7 @@ fake_ai_market_pre_2025 = {
 					ATGM_equipment < 100
 				}
 			}
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			set_variable = { AD_m_record_producer = RUS }
 			set_variable = { AD_m_record_item = token:ATGM_equipment_9k111 }
 			set_variable = { AD_m_record_amount = 100 }
@@ -55,7 +55,7 @@ fake_ai_market_pre_2025 = {
 				}
 				has_template_containing_unit = infantry_on_jeep
 			}
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			
 			set_variable = { AD_m_record_producer = CHI }
 			set_variable = { AD_m_record_item = token:mrap_car_equipment }
@@ -71,7 +71,7 @@ fake_ai_market_pre_2025 = {
 				}
 				has_template_containing_unit = light_armor_unit
 			}
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			
 			random_list = {
 				50 = {
@@ -95,7 +95,7 @@ fake_ai_market_pre_2025 = {
 				}
 				has_template_containing_unit = medium_armor_unit
 			}
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			set_variable = { AD_m_record_producer = RUS }
 			set_variable = { AD_m_record_item = token:modern_tank_equipment_t72 }
 			set_variable = { AD_m_record_amount = 8 }
@@ -110,7 +110,7 @@ fake_ai_market_pre_2025 = {
 				}
 				has_template_containing_unit = infantry_on_btr
 			}
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			set_variable = { AD_m_record_producer = RUS }
 			set_variable = { AD_m_record_item = token:infantry_armored_transport_equipment_x }
 			set_variable = { AD_m_record_amount = 20 }
@@ -189,7 +189,7 @@ fake_ai_market_preparing_for_war = { # TODO
 
 	random_list = {
 		var:prep_fake_ai_infantry_equipment = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -231,7 +231,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 		
 		var:prep_fake_ai_ATGM_equipment = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -273,7 +273,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 		
 		var:prep_fake_ai_mrap_equipment = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -315,7 +315,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 	
 		var:prep_fake_ai_light_tank_chassis = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -344,7 +344,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 		
 		var:prep_fake_ai_medium_tank_chassis = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -373,7 +373,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 	
 		var:prep_fake_infantry_carrying_armored_vehicle = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -405,7 +405,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 		
 		var:prep_fake_armored_support_vehicle_chassis = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -437,7 +437,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 	
 		var:prep_fake_light_plane = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_left_ideology = yes
@@ -476,7 +476,7 @@ fake_ai_market_preparing_for_war = { # TODO
 		}
 		
 		var:prep_fake_heavy_plane_plane = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					OR = { is_left_ideology = yes is_neutral_ideology = yes }
@@ -574,7 +574,7 @@ fake_ai_market_war = { # TODO
 
 	random_list = {
 		var:prep_fake_ai_infantry_equipment = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -616,7 +616,7 @@ fake_ai_market_war = { # TODO
 		}
 		
 		var:prep_fake_ai_ATGM_equipment = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -657,7 +657,7 @@ fake_ai_market_war = { # TODO
 			country_event = { id = market.1 days = 14 }
 		}
 		var:prep_fake_ai_mrap_equipment = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -698,7 +698,7 @@ fake_ai_market_war = { # TODO
 			country_event = { id = market.1 days = 14 }
 		}
 		var:prep_fake_ai_light_tank_chassis = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -727,7 +727,7 @@ fake_ai_market_war = { # TODO
 		}
 		
 		var:prep_fake_ai_medium_tank_chassis = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -756,7 +756,7 @@ fake_ai_market_war = { # TODO
 		}
 	
 		var:prep_fake_infantry_carrying_armored_vehicle = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -788,7 +788,7 @@ fake_ai_market_war = { # TODO
 		}
 		
 		var:prep_fake_armored_support_vehicle_chassis = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_democratic_ideology = yes
@@ -820,7 +820,7 @@ fake_ai_market_war = { # TODO
 		}
 	
 		var:prep_fake_light_plane = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					is_left_ideology = yes
@@ -859,7 +859,7 @@ fake_ai_market_war = { # TODO
 		}
 		
 		var:prep_fake_heavy_plane_plane = {
-			set_country_flag = buyed_weapons_not_delivered
+			set_country_flag = AD_m_buyed_weapons_not_delivered_flag
 			if = {
 				limit = {
 					OR = { is_left_ideology = yes is_neutral_ideology = yes }

@@ -1,0 +1,162 @@
+division_template = {
+	name = "Bataillon mobile"
+	priority = 0
+	regiments={
+		light_infantry_opol_on_guntruck={ x=0 y=0 }
+		light_infantry_opol_on_guntruck={ x=0 y=1 }
+		light_infantry_opol_on_guntruck={ x=0 y=2 }
+	}
+}
+
+division_template = {
+	name = "Milice rurale"
+	priority = 0
+	regiments={
+		light_infantry_opol={ x=0 y=0 }
+		light_infantry_opol={ x=0 y=1 }
+		light_infantry_opol={ x=0 y=2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Bataillon mobile de Abba"
+		location = 2125
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Amada-Gaza"
+		location = 3045
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Beloko"
+		location = 662
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Beloko"
+		location = 1795
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Nuem"
+		location = 2544
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Bozum"
+		location = 2402
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Bogangolo"
+		location = 2578
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Mbres"
+		location = 3273
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Mbres"
+		location = 2080
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Sibut"
+		location = 2536
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Yongoro"
+		location = 2188
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Zangba"
+		location = 2269
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Songba II"
+		location = 837
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Gambo"
+		location = 1675
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Rafai"
+		location = 3922
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon mobile de Bakala"
+		location = 2475
+		division_template = "Bataillon mobile"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon de Bossambel"
+		location = 3904
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+	division= {	
+		name = "Bataillon de Bosangoa"
+		location = 1399
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.34
+	}
+	division= {	
+		name = "Bataillon de Bosangoa"
+		location = 1399
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "Bataillon de Buka"
+		location = 1449
+		division_template = "Milice rurale"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.56
+	}
+}
